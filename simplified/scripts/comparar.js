@@ -107,10 +107,7 @@ async function run() {
   const newUrl = getNewUrl(options.page);
 
   if (!originUrl) {
-    log(
-      COLORS.red,
-      `✗ No se encontró la página original: ${options.page}.html`,
-    );
+    log(COLORS.red, `✗ No se encontró la página original: ${options.page}.html`);
     process.exit(1);
   }
 
@@ -128,7 +125,7 @@ async function run() {
 
   for (const vp of options.viewports) {
     console.log(
-      `\n${COLORS.cyan}📱 Viewport: ${vp.name} (${vp.width}x${vp.height})${COLORS.reset}`,
+      `\n${COLORS.cyan}📱 Viewport: ${vp.name} (${vp.width}x${vp.height})${COLORS.reset}`
     );
 
     const originalPath = buildScreenshotPath("original", vp.name, options.page);
@@ -167,7 +164,7 @@ async function run() {
 
       log(
         COLORS.reset,
-        `   ${status} Diferencias: ${result.diffPixels} pixeles (${result.percentDiff.toFixed(2)}%)`,
+        `   ${status} Diferencias: ${result.diffPixels} pixeles (${result.percentDiff.toFixed(2)}%)`
       );
 
       results.push({
@@ -209,10 +206,7 @@ async function run() {
   if (avgDiff < options.threshold) {
     log(COLORS.green, "\n🎉 ¡Excelente! Las páginas son casi idénticas.\n");
   } else if (avgDiff < options.threshold * 3) {
-    log(
-      COLORS.yellow,
-      "\n⚠️ Hay diferencias moderadas. Revisa las imágenes en /comparacion/\n",
-    );
+    log(COLORS.yellow, "\n⚠️ Hay diferencias moderadas. Revisa las imágenes en /comparacion/\n");
   } else {
     log(COLORS.red, "\n❌ Hay diferencias significativas. Necesita ajustes.\n");
   }

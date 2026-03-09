@@ -44,12 +44,7 @@ function resolveCommand(rawCommand) {
 function main() {
   const [, , rawCommand, ...args] = process.argv;
 
-  if (
-    !rawCommand ||
-    rawCommand === "help" ||
-    rawCommand === "--help" ||
-    rawCommand === "-h"
-  ) {
+  if (!rawCommand || rawCommand === "help" || rawCommand === "--help" || rawCommand === "-h") {
     showHelp();
     process.exit(0);
   }

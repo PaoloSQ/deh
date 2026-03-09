@@ -5,22 +5,14 @@ const puppeteer = require("puppeteer");
 const DEFAULT_VIEWPORT = { width: 1366, height: 900, deviceScaleFactor: 1 };
 const RESPONSIVE_BREAKPOINTS = [320, 375, 768, 1024, 1365, 1366, 1920];
 const OUTPUT_DIR = path.join(__dirname, "../comparacion");
-const MODES = new Set([
-  "summary",
-  "nav",
-  "components",
-  "hover",
-  "responsive",
-  "all",
-]);
+const MODES = new Set(["summary", "nav", "components", "hover", "responsive", "all"]);
 
 const TARGETS = [
   {
     name: "live",
     url: "https://www.dehonline.es/",
     selector: "#SITE_HEADER",
-    hoverSelector:
-      ".StylableHorizontalMenu3372578893__root .itemDepth02233374943__label",
+    hoverSelector: ".StylableHorizontalMenu3372578893__root .itemDepth02233374943__label",
   },
   {
     name: "local",
@@ -56,9 +48,7 @@ Examples:
 function parseViewport(value) {
   const match = /^(\d+)x(\d+)$/i.exec(value || "");
   if (!match) {
-    throw new Error(
-      "Viewport invalido. Usa el formato WIDTHxHEIGHT, por ejemplo 1366x900.",
-    );
+    throw new Error("Viewport invalido. Usa el formato WIDTHxHEIGHT, por ejemplo 1366x900.");
   }
 
   return {
@@ -209,11 +199,7 @@ async function openTarget(page, target, options, hover = false) {
     await sleep(250);
   }
 
-  if (
-    options.screenshot &&
-    !hover &&
-    (options.mode === "summary" || options.mode === "all")
-  ) {
+  if (options.screenshot && !hover && (options.mode === "summary" || options.mode === "all")) {
     await captureHeaderScreenshot(page, target.selector, target.name);
   }
 }
@@ -238,8 +224,7 @@ async function collectSnapshot(page, target, options, hover = false) {
       );
     };
 
-    const firstVisible = (elements) =>
-      elements.find((element) => visible(element)) || null;
+    const firstVisible = (elements) => elements.find((element) => visible(element)) || null;
 
     const rectData = (element) => {
       if (!element) {
@@ -261,7 +246,7 @@ async function collectSnapshot(page, target, options, hover = false) {
       }
 
       return Array.from(element.attributes).filter((attribute) =>
-        attribute.name.startsWith("data-"),
+        attribute.name.startsWith("data-")
       ).length;
     };
 
@@ -280,9 +265,7 @@ async function collectSnapshot(page, target, options, hover = false) {
 
     const findOne = (...selectors) => {
       for (const currentSelector of selectors) {
-        const match = firstVisible(
-          Array.from(header.querySelectorAll(currentSelector)),
-        );
+        const match = firstVisible(Array.from(header.querySelectorAll(currentSelector)));
         if (match) {
           return match;
         }
@@ -292,25 +275,18 @@ async function collectSnapshot(page, target, options, hover = false) {
 
     const headerStyle = getComputedStyle(header);
     const logo = findOne("img");
-    const navRoot = findOne(
-      ".StylableHorizontalMenu3372578893__root",
-      ".site-nav",
-      "nav",
-    );
+    const navRoot = findOne(".StylableHorizontalMenu3372578893__root", ".site-nav", "nav");
     const loginButton = findOne(".eUGVn8", ".header-login");
     const loginText = findOne(".LcZX5c", ".header-login__text");
-    const loginIconRoot = findOne(
-      ".wixui-login-social-bar__avatar-icon",
-      ".header-login__icon",
-    );
+    const loginIconRoot = findOne(".wixui-login-social-bar__avatar-icon", ".header-login__icon");
     const loginGraphic = loginButton
       ? firstVisible(Array.from(loginButton.querySelectorAll("svg")))
       : findOne("svg");
 
     const labelCandidates = Array.from(
       header.querySelectorAll(
-        ".itemDepth02233374943__label, .wixui-horizontal-menu__item-label, .site-nav a",
-      ),
+        ".itemDepth02233374943__label, .wixui-horizontal-menu__item-label, .site-nav a"
+      )
     ).filter((element) => visible(element));
 
     const navItems = labelCandidates.map((label, index) => {
@@ -364,12 +340,7 @@ async function collectSnapshot(page, target, options, hover = false) {
             "marginLeft",
             "cursor",
           ]),
-          before: pickStyles(beforeStyle, [
-            "backgroundColor",
-            "left",
-            "right",
-            "borderRadius",
-          ]),
+          before: pickStyles(beforeStyle, ["backgroundColor", "left", "right", "borderRadius"]),
         },
       };
     });
@@ -378,12 +349,8 @@ async function collectSnapshot(page, target, options, hover = false) {
     const navStyle = navRoot ? getComputedStyle(navRoot) : null;
     const loginButtonStyle = loginButton ? getComputedStyle(loginButton) : null;
     const loginTextStyle = loginText ? getComputedStyle(loginText) : null;
-    const loginIconRootStyle = loginIconRoot
-      ? getComputedStyle(loginIconRoot)
-      : null;
-    const loginGraphicStyle = loginGraphic
-      ? getComputedStyle(loginGraphic)
-      : null;
+    const loginIconRootStyle = loginIconRoot ? getComputedStyle(loginIconRoot) : null;
+    const loginGraphicStyle = loginGraphic ? getComputedStyle(loginGraphic) : null;
 
     return {
       header: {
@@ -528,9 +495,7 @@ async function collectResponsiveState(page, target, options, width) {
     };
 
     const logo = header.querySelector("img");
-    const nav = header.querySelector(
-      ".StylableHorizontalMenu3372578893__root, .site-nav, nav",
-    );
+    const nav = header.querySelector(".StylableHorizontalMenu3372578893__root, .site-nav, nav");
     const login = header.querySelector(".eUGVn8, .header-login");
 
     return {
@@ -561,7 +526,7 @@ function renderNavReport(snapshots) {
   console.log("LIVE");
   live.items.forEach((item) => {
     console.log(
-      `  [${item.index}] ${item.text} | x=${formatNumber(item.label.x)} | width=${formatNumber(item.label.w)} | rootWidth=${formatNumber(item.root.w)}`,
+      `  [${item.index}] ${item.text} | x=${formatNumber(item.label.x)} | width=${formatNumber(item.label.w)} | rootWidth=${formatNumber(item.root.w)}`
     );
   });
   console.log("  gaps=" + JSON.stringify(liveGaps));
@@ -569,31 +534,25 @@ function renderNavReport(snapshots) {
   console.log("\nLOCAL");
   local.items.forEach((item) => {
     console.log(
-      `  [${item.index}] ${item.text} | x=${formatNumber(item.label.x)} | width=${formatNumber(item.label.w)} | rootWidth=${formatNumber(item.root.w)}`,
+      `  [${item.index}] ${item.text} | x=${formatNumber(item.label.x)} | width=${formatNumber(item.label.w)} | rootWidth=${formatNumber(item.root.w)}`
     );
   });
   console.log("  gaps=" + JSON.stringify(localGaps));
 
   console.log("\nDIFFS");
-  for (
-    let index = 0;
-    index < Math.min(live.items.length, local.items.length);
-    index += 1
-  ) {
+  for (let index = 0; index < Math.min(live.items.length, local.items.length); index += 1) {
     const liveItem = live.items[index];
     const localItem = local.items[index];
     const xDiff = numericDiff(liveItem.label.x, localItem.label.x);
     const widthDiff = numericDiff(liveItem.label.w, localItem.label.w);
 
-    console.log(
-      `  [${index}] ${liveItem.text} | xDiff=${xDiff} | widthDiff=${widthDiff}`,
-    );
+    console.log(`  [${index}] ${liveItem.text} | xDiff=${xDiff} | widthDiff=${widthDiff}`);
   }
 
   liveGaps.forEach((gap, index) => {
     const diff = numericDiff(gap, localGaps[index]);
     console.log(
-      `  gap ${index}-${index + 1} | live=${gap} | local=${localGaps[index]} | diff=${diff}`,
+      `  gap ${index}-${index + 1} | live=${gap} | local=${localGaps[index]} | diff=${diff}`
     );
   });
 }
@@ -605,16 +564,16 @@ function renderComponentsReport(snapshots) {
   printSection("COMPONENTS");
 
   console.log(
-    `Header height | live=${formatNumber(live.header.h)} | local=${formatNumber(local.header.h)} | diff=${numericDiff(live.header.h, local.header.h)}`,
+    `Header height | live=${formatNumber(live.header.h)} | local=${formatNumber(local.header.h)} | diff=${numericDiff(live.header.h, local.header.h)}`
   );
   console.log(
-    `Logo        | live=${formatNumber(live.logo.w)}x${formatNumber(live.logo.h)} @ ${formatNumber(live.logo.x)},${formatNumber(live.logo.y)} | local=${formatNumber(local.logo.w)}x${formatNumber(local.logo.h)} @ ${formatNumber(local.logo.x)},${formatNumber(local.logo.y)}`,
+    `Logo        | live=${formatNumber(live.logo.w)}x${formatNumber(live.logo.h)} @ ${formatNumber(live.logo.x)},${formatNumber(live.logo.y)} | local=${formatNumber(local.logo.w)}x${formatNumber(local.logo.h)} @ ${formatNumber(local.logo.x)},${formatNumber(local.logo.y)}`
   );
   console.log(
-    `Login btn   | live=${formatNumber(live.login.button.w)}x${formatNumber(live.login.button.h)} | local=${formatNumber(local.login.button.w)}x${formatNumber(local.login.button.h)}`,
+    `Login btn   | live=${formatNumber(live.login.button.w)}x${formatNumber(live.login.button.h)} | local=${formatNumber(local.login.button.w)}x${formatNumber(local.login.button.h)}`
   );
   console.log(
-    `Login icon  | live=${formatNumber(live.login.graphic.w)}x${formatNumber(live.login.graphic.h)} | local=${formatNumber(local.login.graphic.w)}x${formatNumber(local.login.graphic.h)}`,
+    `Login icon  | live=${formatNumber(live.login.graphic.w)}x${formatNumber(live.login.graphic.h)} | local=${formatNumber(local.login.graphic.w)}x${formatNumber(local.login.graphic.h)}`
   );
 }
 
@@ -626,21 +585,21 @@ function renderHoverReport(snapshots) {
 
   console.log("LIVE first item");
   console.log(
-    `  labelWidth=${formatNumber(liveItem.label.w)} | rootWidth=${formatNumber(liveItem.root.w)} | bg=${liveItem.root.styles.backgroundColor} | color=${liveItem.label.styles.color}`,
+    `  labelWidth=${formatNumber(liveItem.label.w)} | rootWidth=${formatNumber(liveItem.root.w)} | bg=${liveItem.root.styles.backgroundColor} | color=${liveItem.label.styles.color}`
   );
   console.log(
-    `  padding=${liveItem.root.styles.paddingTop} ${liveItem.root.styles.paddingRight} ${liveItem.root.styles.paddingBottom} ${liveItem.root.styles.paddingLeft} | radius=${liveItem.root.styles.borderRadius}`,
+    `  padding=${liveItem.root.styles.paddingTop} ${liveItem.root.styles.paddingRight} ${liveItem.root.styles.paddingBottom} ${liveItem.root.styles.paddingLeft} | radius=${liveItem.root.styles.borderRadius}`
   );
 
   console.log("\nLOCAL first item");
   console.log(
-    `  labelWidth=${formatNumber(localItem.label.w)} | rootWidth=${formatNumber(localItem.root.w)} | effectivePillWidth=${formatNumber(getEffectiveRootWidth(localItem))}`,
+    `  labelWidth=${formatNumber(localItem.label.w)} | rootWidth=${formatNumber(localItem.root.w)} | effectivePillWidth=${formatNumber(getEffectiveRootWidth(localItem))}`
   );
   console.log(
-    `  textColor=${localItem.label.styles.color} | rootBg=${localItem.root.styles.backgroundColor} | beforeBg=${localItem.root.before.backgroundColor}`,
+    `  textColor=${localItem.label.styles.color} | rootBg=${localItem.root.styles.backgroundColor} | beforeBg=${localItem.root.before.backgroundColor}`
   );
   console.log(
-    `  padding=${localItem.root.styles.paddingTop} ${localItem.root.styles.paddingRight} ${localItem.root.styles.paddingBottom} ${localItem.root.styles.paddingLeft} | beforeLeft=${localItem.root.before.left} | beforeRight=${localItem.root.before.right}`,
+    `  padding=${localItem.root.styles.paddingTop} ${localItem.root.styles.paddingRight} ${localItem.root.styles.paddingBottom} ${localItem.root.styles.paddingLeft} | beforeLeft=${localItem.root.before.left} | beforeRight=${localItem.root.before.right}`
   );
 }
 
@@ -652,7 +611,7 @@ function renderResponsiveReport(responsiveData) {
     const local = responsiveData.local[index];
 
     console.log(
-      `${width}px | header live=${formatNumber(live.headerHeight)} local=${formatNumber(local.headerHeight)} | logo=${live.logoVisible}/${local.logoVisible} | nav=${live.navVisible}/${local.navVisible} | login=${live.loginVisible}/${local.loginVisible}`,
+      `${width}px | header live=${formatNumber(live.headerHeight)} local=${formatNumber(local.headerHeight)} | logo=${live.logoVisible}/${local.logoVisible} | nav=${live.navVisible}/${local.navVisible} | login=${live.loginVisible}/${local.loginVisible}`
     );
   });
 }
@@ -661,11 +620,7 @@ async function run() {
   const options = parseArgs();
   const browser = await puppeteer.launch({
     headless: "new",
-    args: [
-      "--no-sandbox",
-      "--disable-setuid-sandbox",
-      "--disable-dev-shm-usage",
-    ],
+    args: ["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage"],
   });
   const page = await browser.newPage();
 
@@ -676,23 +631,13 @@ async function run() {
 
     if (options.mode !== "responsive") {
       for (const target of TARGETS) {
-        snapshots[target.name] = await collectSnapshot(
-          page,
-          target,
-          options,
-          false,
-        );
+        snapshots[target.name] = await collectSnapshot(page, target, options, false);
       }
     }
 
     if (options.mode === "hover" || options.mode === "all") {
       for (const target of TARGETS) {
-        hoverSnapshots[target.name] = await collectSnapshot(
-          page,
-          target,
-          options,
-          true,
-        );
+        hoverSnapshots[target.name] = await collectSnapshot(page, target, options, true);
       }
     }
 
@@ -700,7 +645,7 @@ async function run() {
       for (const target of TARGETS) {
         for (const width of RESPONSIVE_BREAKPOINTS) {
           responsiveData[target.name].push(
-            await collectResponsiveState(page, target, options, width),
+            await collectResponsiveState(page, target, options, width)
           );
         }
       }

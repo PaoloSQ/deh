@@ -1,48 +1,46 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{title}} | DEH Online</title>
-  
+  <link rel="icon"
+    href='data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"%3E%3Crect width="64" height="64" rx="8" fill="%23004451"/%3E%3Ctext x="50%25" y="56%25" text-anchor="middle" font-family="Arial" font-size="34" fill="white"%3ED%3C/text%3E%3C/svg%3E'>
+
   <!-- CSS Común -->
   <link rel="stylesheet" href="/css/common.css">
   <link rel="stylesheet" href="/css/header.css">
   <link rel="stylesheet" href="/css/footer.css">
-  
+  <link rel="stylesheet" href="/css/chat.css">
+  <link rel="stylesheet" href="/css/cookie-bar.css">
+
   <!-- CSS de la página -->
-  <link rel="stylesheet" href="/css/home.css">
+  {{#if pageCSS}}
+    <link rel="stylesheet" href="/css/{{pageCSS}}.css">
+  {{else}}
+    <link rel="stylesheet" href="/css/home.css">
+  {{/if}}
 </head>
+
 <body>
   {{> header}}
-  
+
   <main>
     {{{body}}}
   </main>
 
   {{> footer}}
-  <div class="cookie-bar" role="region" aria-label="Aviso de cookies">
-    <div class="cookie-bar__inner">
-      <div class="cookie-bar__copy">
-        <p class="cookie-bar__title">Sobre las cookies en este sitio web</p>
-        <p class="cookie-bar__text">
-          DEH utiliza cookies propias y de terceros para registrar tus preferencias, analizar tu uso de la web y mostrar publicidad personalizada.
-        </p>
-      </div>
-      <div class="cookie-bar__actions">
-        <button type="button" class="cookie-bar__btn cookie-bar__btn--accept">Permitir todas las cookies</button>
-        <button type="button" class="cookie-bar__btn cookie-bar__btn--deny">Denegar todo</button>
-        <button type="button" class="cookie-bar__btn cookie-bar__btn--link">Configuracion de cookies</button>
-      </div>
-    </div>
-  </div>
+  {{> cookie-bar}}
 
   <!-- JS Común -->
   <script src="/js/common.js"></script>
-  
+  <script src="/js/chat.js" type="module"></script>
+
   <!-- JS de la página -->
   {{#if pageJS}}
     <script src="/js/{{pageJS}}.js"></script>
   {{/if}}
 </body>
+
 </html>

@@ -1,29 +1,29 @@
-const fs = require('fs');
-const path = require('path');
-const { exec } = require('child_process');
-const puppeteer = require('puppeteer');
-const { PNG } = require('pngjs');
-const pixelmatch = require('pixelmatch').default || require('pixelmatch');
+const fs = require("fs");
+const path = require("path");
+const { exec } = require("child_process");
+const puppeteer = require("puppeteer");
+const { PNG } = require("pngjs");
+const pixelmatch = require("pixelmatch").default || require("pixelmatch");
 
-const SIMPLIFIED_DIR = path.join(__dirname, '../..');
-const WORKSPACE_DIR = path.join(SIMPLIFIED_DIR, '..');
-const ORIGIN_DIR = path.join(WORKSPACE_DIR, 'descarga', 'www.dehonline.es');
-const OUTPUT_DIR = path.join(SIMPLIFIED_DIR, 'comparacion');
-const LIVE_URL = 'https://www.dehonline.es';
-const NEW_BASE_URL = 'http://localhost:3001';
+const SIMPLIFIED_DIR = path.join(__dirname, "../..");
+const WORKSPACE_DIR = path.join(SIMPLIFIED_DIR, "..");
+const ORIGIN_DIR = path.join(WORKSPACE_DIR, "descarga", "www.dehonline.es");
+const OUTPUT_DIR = path.join(SIMPLIFIED_DIR, "comparacion");
+const LIVE_URL = "https://www.dehonline.es";
+const NEW_BASE_URL = "http://localhost:3001";
 
 const DEFAULT_VIEWPORTS = [
-  { width: 1920, height: 1080, name: 'desktop' },
-  { width: 768, height: 1024, name: 'tablet' },
-  { width: 375, height: 667, name: 'mobile' },
+  { width: 1920, height: 1080, name: "desktop" },
+  { width: 768, height: 1024, name: "tablet" },
+  { width: 375, height: 667, name: "mobile" },
 ];
 
 const COLORS = {
-  green: '\x1b[32m',
-  cyan: '\x1b[36m',
-  yellow: '\x1b[33m',
-  red: '\x1b[31m',
-  reset: '\x1b[0m',
+  green: "\x1b[32m",
+  cyan: "\x1b[36m",
+  yellow: "\x1b[33m",
+  red: "\x1b[31m",
+  reset: "\x1b[0m",
 };
 
 function log(color, message) {
@@ -42,20 +42,20 @@ function sleep(ms) {
 
 function launchBrowser() {
   return puppeteer.launch({
-    headless: 'new',
-    args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage'],
+    headless: "new",
+    args: ["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage"],
   });
 }
 
 function parseViewportSelection(selection) {
   switch (selection) {
-    case 'desktop':
+    case "desktop":
       return [DEFAULT_VIEWPORTS[0]];
-    case 'tablet':
+    case "tablet":
       return [DEFAULT_VIEWPORTS[1]];
-    case 'mobile':
+    case "mobile":
       return [DEFAULT_VIEWPORTS[2]];
-    case 'all':
+    case "all":
     case undefined:
     case null:
       return DEFAULT_VIEWPORTS;
@@ -68,7 +68,7 @@ function getOriginUrl(pageName, options = {}) {
   const { live = false } = options;
 
   if (live) {
-    if (pageName === 'index') {
+    if (pageName === "index") {
       return `${LIVE_URL}/`;
     }
     return `${LIVE_URL}/${pageName}.html`;
@@ -79,7 +79,7 @@ function getOriginUrl(pageName, options = {}) {
     return `file://${htmlFile}`;
   }
 
-  const indexFile = path.join(ORIGIN_DIR, pageName, 'index.html');
+  const indexFile = path.join(ORIGIN_DIR, pageName, "index.html");
   if (fs.existsSync(indexFile)) {
     return `file://${indexFile}`;
   }
@@ -88,7 +88,7 @@ function getOriginUrl(pageName, options = {}) {
 }
 
 function getNewUrl(pageName) {
-  if (pageName === 'index') {
+  if (pageName === "index") {
     return `${NEW_BASE_URL}/`;
   }
   return `${NEW_BASE_URL}/${pageName}`;
@@ -101,12 +101,12 @@ function getAllPages() {
 
   const pages = fs
     .readdirSync(ORIGIN_DIR)
-    .filter((entry) => entry.endsWith('.html'))
-    .map((entry) => entry.replace(/\.html$/i, ''))
-    .filter((pageName) => pageName !== 'index')
+    .filter((entry) => entry.endsWith(".html"))
+    .map((entry) => entry.replace(/\.html$/i, ""))
+    .filter((pageName) => pageName !== "index")
     .sort();
 
-  return ['index', ...pages];
+  return ["index", ...pages];
 }
 
 function buildScreenshotPath(kind, viewportName, pageName) {
@@ -119,18 +119,18 @@ function buildDiffPath(viewportName, pageName) {
 
 async function navigateWithFallback(page, url, timeout) {
   try {
-    await page.goto(url, { waitUntil: 'networkidle2', timeout });
-    return 'networkidle2';
+    await page.goto(url, { waitUntil: "networkidle2", timeout });
+    return "networkidle2";
   } catch (error) {
     if (!/Navigation timeout/i.test(error.message)) {
       throw error;
     }
 
     await page.goto(url, {
-      waitUntil: 'domcontentloaded',
+      waitUntil: "domcontentloaded",
       timeout: Math.min(timeout, 15000),
     });
-    return 'domcontentloaded';
+    return "domcontentloaded";
   }
 }
 
@@ -156,14 +156,7 @@ async function waitForPageToSettle(page, waitMs) {
 }
 
 async function capturePageScreenshot(page, options) {
-  const {
-    url,
-    outputPath,
-    viewport,
-    fullPage = true,
-    waitMs = 0,
-    timeout = 30000,
-  } = options;
+  const { url, outputPath, viewport, fullPage = true, waitMs = 0, timeout = 30000 } = options;
 
   if (viewport) {
     await page.setViewport({
@@ -198,7 +191,7 @@ async function capturePageScreenshot(page, options) {
   await waitForPageToSettle(page, waitMs);
 
   ensureDir(path.dirname(outputPath));
-  await page.screenshot({ path: outputPath, fullPage, type: 'png' });
+  await page.screenshot({ path: outputPath, fullPage, type: "png" });
   return outputPath;
 }
 
@@ -221,12 +214,7 @@ function copyComparableArea(png, width, height) {
 }
 
 function comparePngFiles(firstPath, secondPath, options = {}) {
-  const {
-    pixelThreshold = 0.1,
-    writeDiffPath = null,
-    includeAA = true,
-    alpha = 0.1,
-  } = options;
+  const { pixelThreshold = 0.1, writeDiffPath = null, includeAA = true, alpha = 0.1 } = options;
 
   const firstPng = PNG.sync.read(fs.readFileSync(firstPath));
   const secondPng = PNG.sync.read(fs.readFileSync(secondPath));
@@ -245,7 +233,7 @@ function comparePngFiles(firstPath, secondPath, options = {}) {
       threshold: pixelThreshold,
       includeAA,
       alpha,
-    },
+    }
   );
 
   if (writeDiffPath) {

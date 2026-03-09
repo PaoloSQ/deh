@@ -1,0 +1,34 @@
+{
+  "sourceHtmlPath": "/workspaces/deh/descarga/www.dehonline.es/documbox-info.html",
+  "generatedAt": "2026-03-09T15:18:06.235Z",
+  "output": {
+    "rawCssPath": null,
+    "rawMainPath": null,
+    "rawInlineJsPath": null,
+    "rawExternalListPath": null,
+    "rawOriginalBackupPath": "/workspaces/deh/simplified/migration/documbox-info/raw/documbox-info.original.backup.html"
+  },
+  "cleanup": {
+    "runtimeRawArtifactsRemoved": true,
+    "removedAt": "2026-03-09"
+  },
+  "stats": {
+    "htmlChars": 1499300,
+    "mainChars": 92334,
+    "styleBlocks": 34,
+    "inlineScripts": 44,
+    "externalScripts": 23,
+    "ugdAssetsDetected": 4,
+    "ugdAssetsCopied": 4,
+    "ugdAssetsMissing": 0
+  },
+  "ugdAssets": {
+    "copied": [
+      "_files/ugd/7738b6_83518145a445425eb55171a5ff6a4e65.pdf",
+      "_files/ugd/45bf13_ccf5352a22054726bc4e9228a15af84d.pdf",
+      "_files/ugd/7738b6_a100532074d640c8b250fcc434d02432.pdf",
+      "_files/ugd/7738b6_49962a0111b14b9599bd2d56c636b9c2.pdf"
+    ],
+    "missing": []
+  }
+}

@@ -16,76 +16,6 @@
   max-width: 100%;
 }
 
-.cookie-bar {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 3000;
-  background: #ffffff;
-  border-top: 1px solid #d5d5d5;
-  box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.08);
-}
-
-.cookie-bar__inner {
-  max-width: 1920px;
-  margin: 0 auto;
-  min-height: 90px;
-  padding: 10px 14px;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: center;
-  gap: 16px;
-}
-
-.cookie-bar__copy {
-  min-width: 0;
-}
-
-.cookie-bar__title {
-  margin: 0;
-  font-family: "Montserrat", sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  color: #3f3f3f;
-}
-
-.cookie-bar__text {
-  margin: 4px 0 0;
-  max-width: 1220px;
-  font-size: 10px;
-  line-height: 1.35;
-  color: #6d6d6d;
-}
-
-.cookie-bar__actions {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.cookie-bar__btn {
-  min-height: 32px;
-  padding: 0 14px;
-  border: 0;
-  border-radius: 2px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 9px;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.cookie-bar__btn--accept,
-.cookie-bar__btn--deny {
-  background: #cf1a1a;
-  color: #ffffff;
-}
-
-.cookie-bar__btn--link {
-  background: transparent;
-  color: #555;
-}
-
 .home-section-title {
   margin: 0 auto 16px;
   width: fit-content;
@@ -129,37 +59,33 @@
 
 .home-hero {
   position: relative;
-  min-height: 358px;
+  min-height: 359px;
   overflow: hidden;
   background: #101330
-    url("/img/home/technology-concept-with-futuristic-element.jpg") center
-    center / cover no-repeat;
+    url("https://static.wixstatic.com/media/7738b6_01e6ece1b8784183a1b6970c60b1c397~mv2.jpg") 50%
+    50% / cover no-repeat;
 }
 
 .home-hero__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(3, 14, 36, 0.74) 0%,
-    rgba(3, 14, 36, 0.78) 100%
-  );
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .home-hero__content {
   position: relative;
   z-index: 1;
-  min-height: 358px;
+  width: 980px;
+  min-height: 359px;
+  margin: 0 auto;
   display: block;
-  padding-top: 0;
-  padding-left: 0;
-  color: #33343f;
+  color: #ffffff;
 }
 
 .home-hero__content > * {
   width: auto;
   position: absolute;
-  left: calc(50% + 11px);
+  left: 502px;
   transform: translateX(-50%);
   text-align: center;
 }
@@ -169,48 +95,49 @@
   font-family: "Saira", sans-serif;
   font-size: 22px;
   font-weight: 400;
-  line-height: 35px;
+  line-height: 1.2;
   letter-spacing: 0;
   text-transform: uppercase;
-  top: 57px;
+  top: 52px;
 }
 
 .home-hero__title {
   margin: 0;
   font-family: "Saira", sans-serif;
   font-size: 34px;
-  font-weight: 400;
-  line-height: 54px;
+  font-weight: 700;
+  line-height: 1.2;
   text-transform: uppercase;
-  top: 86px;
+  top: 84px;
 }
 
 .home-hero__kicker--secondary {
   margin: 0;
   font-size: 26px;
-  font-weight: 700;
-  line-height: 41px;
+  font-weight: 400;
+  line-height: 1.6;
   display: block;
-  top: 151px;
+  top: 134px;
 }
 
 .home-hero__title--main {
   margin: 0;
   font-size: 50px;
-  line-height: 79px;
+  line-height: 1.15;
+  font-weight: 700;
   display: block;
-  top: 190px;
+  top: 175px;
 }
 
 .home-hero__meta {
-  width: 367px;
+  width: 372px;
   margin: 0;
-  font-family: "Montserrat", sans-serif;
-  font-size: 18px;
+  font-family: "Saira", "Montserrat", sans-serif;
+  font-size: 20px;
   font-weight: 400;
-  line-height: 26px;
-  color: #8fc6eb;
-  top: 266px;
+  line-height: 1.35;
+  color: #a3d9f6;
+  top: 252px;
 }
 
 .home-audiences {
@@ -499,9 +426,8 @@
 .home-manifesto {
   position: relative;
   min-height: 337px;
-  background:
-    url("https://static.wixstatic.com/media/7738b6_1ac3e59e66ce47afb151cb07ac93dd57~mv2.jpeg/v1/fill/w_1792,h_315,al_c,q_85,enc_avif,quality_auto/7738b6_1ac3e59e66ce47afb151cb07ac93dd57~mv2.jpeg") center / cover
-      no-repeat;
+  background: url("https://static.wixstatic.com/media/7738b6_1ac3e59e66ce47afb151cb07ac93dd57~mv2.jpeg/v1/fill/w_1792,h_315,al_c,q_85,enc_avif,quality_auto/7738b6_1ac3e59e66ce47afb151cb07ac93dd57~mv2.jpeg")
+    center / cover no-repeat;
 }
 
 .home-manifesto .home-shell {
@@ -689,8 +615,7 @@
 
 .home-partners {
   padding: 26px 0 65px;
-  background:
-    #cc0000
+  background: #cc0000
     url("https://static.wixstatic.com/media/7738b6_1d94cd8424df412ca1438e2cb6faa193~mv2.jpg")
     center / cover no-repeat;
 }
@@ -746,8 +671,7 @@
   inset: 0;
   background:
     linear-gradient(180deg, rgba(182, 182, 184, 0.42), rgba(182, 182, 184, 0.42)),
-    url("/img/home/abstract-networking-concept-still-life-arrangement.jpg")
-      center / cover no-repeat;
+    url("/img/home/abstract-networking-concept-still-life-arrangement.jpg") center / cover no-repeat;
   filter: blur(2px);
   transform: scale(1.02);
 }
@@ -967,6 +891,18 @@
 }
 
 @media (max-width: 1200px) {
+  .home-shell {
+    width: calc(100% - 24px);
+  }
+
+  .home-hero__content {
+    width: 100%;
+  }
+
+  .home-hero__content > * {
+    left: 50%;
+  }
+
   .home-products__grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
@@ -975,9 +911,39 @@
   .home-metrics__secondary {
     grid-template-columns: 1fr;
   }
+
+  .home-partners__grid {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .home-agencies__grid {
+    width: 100%;
+    transform: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .home-section-title--agencies,
+  .home-metrics .home-section-title,
+  .home-partners .home-section-title {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 @media (max-width: 900px) {
+  .home-hero__content {
+    width: 100%;
+  }
+
+  .home-hero__content > * {
+    left: 50%;
+  }
+
   .home-audiences__grid,
   .home-solutions__grid,
   .home-products__grid,
@@ -988,15 +954,6 @@
 
   .home-community {
     grid-template-columns: 1fr;
-  }
-
-  .cookie-bar__inner {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-
-  .cookie-bar__actions {
-    flex-wrap: wrap;
   }
 
   .home-community__left {
@@ -1020,7 +977,14 @@
   }
 
   .home-hero__title--main {
-    font-size: 56px;
+    font-size: 42px;
+    top: 182px;
+  }
+
+  .home-hero__meta {
+    width: min(92vw, 372px);
+    font-size: 18px;
+    top: 252px;
   }
 
   .home-audiences__grid,
@@ -1035,23 +999,5 @@
   .home-manifesto .home-shell {
     justify-content: center;
     text-align: center;
-  }
-
-  .cookie-bar__inner {
-    min-height: 0;
-    padding: 10px;
-  }
-
-  .cookie-bar__title {
-    font-size: 13px;
-  }
-
-  .cookie-bar__text {
-    font-size: 9px;
-  }
-
-  .cookie-bar__btn {
-    min-height: 28px;
-    font-size: 8px;
   }
 }

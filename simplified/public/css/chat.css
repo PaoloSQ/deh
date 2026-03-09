@@ -24,8 +24,16 @@
 .chat-window-wrapper {
   left: 20px !important;
   right: auto !important;
-  bottom: 78px !important;
-  z-index: 1100 !important;
+  bottom: 130px !important;
+  z-index: 3300 !important;
+}
+
+.chat-window {
+  border: 2px solid #c2c5cc !important;
+}
+
+.chat-layout .chat-header {
+  background-color: white !important;
 }
 
 .chat-window-toggle {
@@ -70,6 +78,7 @@
   font-family: "Montserrat", sans-serif;
   font-size: 18px !important;
   font-weight: 400 !important;
+  color: #000000 !important;
 }
 
 .chat-body {
@@ -83,6 +92,7 @@
   justify-content: flex-start;
   gap: 15px;
   padding-left: 0 !important;
+  max-width: 270px;
 }
 
 .chat-message.chat-message-from-bot::before {
@@ -154,5 +164,54 @@
 
   .chat-window-toggle::after {
     font-size: 16px !important;
+  }
+}
+
+.deh-chat-fallback {
+  position: fixed;
+  left: 20px;
+  bottom: 74px;
+  z-index: 3300;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 56px;
+  padding: 0 20px;
+  border: 0;
+  border-radius: 999px;
+  background: #ff4040;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 34px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 18px 35px rgba(255, 64, 64, 0.2);
+}
+
+.deh-chat-fallback svg {
+  width: 28px;
+  height: 28px;
+  fill: #ffffff;
+  flex: 0 0 28px;
+}
+
+.deh-chat-fallback.is-hidden {
+  display: none;
+}
+
+.chat-powered-by {
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  text-align: center;
+  font-weight: 500;
+}
+
+@media (max-width: 640px) {
+  .deh-chat-fallback {
+    left: 12px;
+    bottom: 72px;
+    min-height: 50px;
+    padding: 0 16px;
+    font-size: 16px;
   }
 }

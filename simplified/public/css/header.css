@@ -1,33 +1,37 @@
 /* Fuentes exactas de Wix */
 @font-face {
-  font-family: 'poppins-semibold';
+  font-family: "poppins-semibold";
   font-style: normal;
   font-weight: 400;
-  src: url('https://static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/poppins/v5/9VWMTeb5jtXkNoTv949Npfk_vArhqVIZ0nv9q090hN8.woff2') format('woff2');
+  src: url("https://static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/poppins/v5/9VWMTeb5jtXkNoTv949Npfk_vArhqVIZ0nv9q090hN8.woff2")
+    format("woff2");
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'poppins-semibold';
+  font-family: "poppins-semibold";
   font-style: normal;
   font-weight: 700;
-  src: url('https://static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/poppins/v5/aDjpMND83pDErGXlVEr-Sfk_vArhqVIZ0nv9q090hN8.woff2') format('woff2');
+  src: url("https://static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/poppins/v5/aDjpMND83pDErGXlVEr-Sfk_vArhqVIZ0nv9q090hN8.woff2")
+    format("woff2");
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'poppins';
+  font-family: "poppins";
   font-style: normal;
   font-weight: 400;
-  src: url('https://static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/poppins/v21/pxiEyp8kv8JHgFVrJJfecnFHGPc.woff2') format('woff2');
+  src: url("https://static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/poppins/v21/pxiEyp8kv8JHgFVrJJfecnFHGPc.woff2")
+    format("woff2");
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'montserrat';
+  font-family: "montserrat";
   font-style: normal;
   font-weight: 400;
-  src: url('https://static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/montserrat/v14/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2') format('woff2');
+  src: url("https://static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/montserrat/v14/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2")
+    format("woff2");
   font-display: swap;
 }
 
@@ -94,7 +98,7 @@
 }
 
 .site-nav a::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   right: -15.45px;
@@ -143,7 +147,7 @@
   height: 40px;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 14px;
   padding-left: 14px;
   color: #fff;
   text-decoration: none;
@@ -182,9 +186,3 @@
 .header-login:hover {
   opacity: 0.8;
 }
-
-/*
-  Nota: para esta réplica se mantiene la geometría fija del header.
-  El sitio original capturado conserva altura y composición constantes
-  en los breakpoints validados durante la comparación visual.
-*/

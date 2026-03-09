@@ -96,9 +96,7 @@ async function generateReport() {
     }
 
     if (pageResults.length > 0) {
-      const avgDiff =
-        pageResults.reduce((sum, r) => sum + r.percentDiff, 0) /
-        pageResults.length;
+      const avgDiff = pageResults.reduce((sum, r) => sum + r.percentDiff, 0) / pageResults.length;
 
       results.push({
         page,
@@ -109,19 +107,12 @@ async function generateReport() {
   }
 
   if (results.length === 0) {
-    log(
-      COLORS.yellow,
-      "No se encontraron capturas suficientes para generar el reporte.",
-    );
-    log(
-      COLORS.yellow,
-      "Ejecuta primero `npm run visual:compare` o `npm run visual:batch`.",
-    );
+    log(COLORS.yellow, "No se encontraron capturas suficientes para generar el reporte.");
+    log(COLORS.yellow, "Ejecuta primero `npm run visual:compare` o `npm run visual:batch`.");
     return;
   }
 
-  const averageDiff =
-    results.reduce((sum, r) => sum + r.avgDiff, 0) / results.length;
+  const averageDiff = results.reduce((sum, r) => sum + r.avgDiff, 0) / results.length;
   const nearIdentical = results.filter((r) => r.avgDiff < 1).length;
   const needsFixes = results.filter((r) => r.avgDiff >= 5).length;
 
@@ -344,12 +335,12 @@ async function generateReport() {
                   </div>
                 </div>
               </div>
-            `,
+            `
               )
               .join("")}
           </div>
         </div>
-      `,
+      `
         )
         .join("")}
     </div>
@@ -370,12 +361,9 @@ async function generateReport() {
   log(COLORS.green, `✅ Passed (<1%): ${passed}`);
   log(
     COLORS.yellow,
-    `⚠️ Medium (1-5%): ${results.filter((r) => r.avgDiff >= 1 && r.avgDiff < 5).length}`,
+    `⚠️ Medium (1-5%): ${results.filter((r) => r.avgDiff >= 1 && r.avgDiff < 5).length}`
   );
-  log(
-    COLORS.red,
-    `❌ Need fixes (>5%): ${results.filter((r) => r.avgDiff >= 5).length}`,
-  );
+  log(COLORS.red, `❌ Need fixes (>5%): ${results.filter((r) => r.avgDiff >= 5).length}`);
 
   if (options.open) {
     openPath(REPORT_FILE);

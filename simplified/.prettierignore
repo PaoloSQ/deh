@@ -1,0 +1,11 @@
+node_modules
+public/images
+public/docs
+comparacion
+migration
+tmp
+
+# Archivos extraidos/autogenerados de documbox (mantener tal cual)
+public/css/documbox-info.css
+src/pages/documbox-info.handlebars
+public/css/variables-auto.css

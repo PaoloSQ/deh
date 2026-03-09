@@ -1,0 +1,8167 @@
+/*
+  JS extraido del HTML original de documbox-info.
+  Este archivo es de referencia y NO se inyecta automaticamente en la pagina.
+  Objetivo: tener el JS organizado para analisis y migracion progresiva.
+*/
+
+const pageName = "documbox-info";
+const externalScripts = [
+  "https://static.parastorage.com/unpkg/core-js-bundle@3.2.1/minified.js",
+  "https://static.parastorage.com/unpkg/focus-within-polyfill@5.0.9/dist/focus-within-polyfill.js",
+  "https://static.parastorage.com/services/form-app/1.2413.0/client-viewer/6522.chunk.min.js",
+  "https://static.parastorage.com/services/form-app/1.2413.0/client-viewer/1642.chunk.min.js",
+  "https://static.parastorage.com/services/form-app/1.2413.0/client-viewer/7197.chunk.min.js",
+  "https://static.parastorage.com/services/form-app/1.2413.0/client-viewer/6498.chunk.min.js",
+  "https://static.parastorage.com/services/form-app/1.2413.0/client-viewer/5803.chunk.min.js",
+  "https://static.parastorage.com/services/form-app/1.2413.0/client-viewer/7049.chunk.min.js",
+  "https://static.parastorage.com/services/form-app/1.2413.0/client-viewer/1257.chunk.min.js",
+  "https://static.parastorage.com/services/form-app/1.2413.0/client-viewer/form-app-contacts-phone.chunk.min.js",
+  "https://static.parastorage.com/services/form-app/1.2413.0/client-viewer/6454.chunk.min.js",
+  "https://static.parastorage.com/services/form-app/1.2413.0/client-viewer/form-app-checkbox.chunk.min.js",
+  "https://static.parastorage.com/services/form-app/1.2413.0/client-viewer/1882.chunk.min.js",
+  "https://static.parastorage.com/services/form-app/1.2413.0/client-viewer/form-app-wix-ricos-viewer.chunk.min.js",
+  "https://browser.sentry-cdn.com/7.120.3/modulemetadata.es5.min.js",
+  "https://static.parastorage.com/unpkg/react@18.3.1/umd/react.production.min.js",
+  "https://static.parastorage.com/unpkg/react-dom@18.3.1/umd/react-dom.production.min.js",
+  "https://static.parastorage.com/unpkg/lodash@4.17.21/lodash.min.js",
+  "https://static.parastorage.com/services/wix-thunderbolt/dist/thunderbolt-commons.ec9ba704.bundle.min.js",
+  "https://static.parastorage.com/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js",
+  "https://static.parastorage.com/services/wix-thunderbolt/dist/main.renderer.99fa8096.bundle.min.js",
+  "https://static.parastorage.com/services/wix-thunderbolt/dist/browser-deprecation.bundle.es5.js",
+  "https://static.parastorage.com/services/tag-manager-client/1.1028.0/siteTags.bundle.min.js",
+];
+const inlineScripts = [
+  String.raw`
+if (!window.Intl || !window.Intl.Segmenter) {
+  (function () {
+    var script = document.createElement("script");
+    script.src =
+      "https://static.parastorage.com/unpkg/@formatjs/intl-segmenter@11.7.10/polyfill.iife.js";
+    document.head.appendChild(script);
+  })();
+}
+  `,
+  String.raw`
+(function () {
+  var noop = function noop() {};
+  if ("performance" in window === false) {
+    window.performance = {};
+  }
+  window.performance.mark = performance.mark || noop;
+  window.performance.measure = performance.measure || noop;
+  if ("now" in window.performance === false) {
+    var nowOffset = Date.now();
+    if (performance.timing && performance.timing.navigationStart) {
+      nowOffset = performance.timing.navigationStart;
+    }
+    window.performance.now = function now() {
+      return Date.now() - nowOffset;
+    };
+  }
+})();
+  `,
+  String.raw`
+{"fleetConfig":{"fleetName":"thunderbolt-renderer-user-code","type":"GA","code":0},"mode":{"qa":false,"enableTestApi":false,"debug":false,"ssrIndicator":false,"ssrOnly":false,"siteAssetsFallback":"enable","versionIndicator":false},"componentsLibrariesTopology":[{"artifactId":"editor-elements","namespace":"wixui","url":"https:\/\/static.parastorage.com\/services\/editor-elements\/1.14949.0"},{"artifactId":"editor-elements","namespace":"dsgnsys","url":"https:\/\/static.parastorage.com\/services\/editor-elements\/1.14949.0"}],"siteFeaturesConfigs":{"sessionManager":{"isRunningInDifferentSiteContext":false}},"language":{"userLanguage":"es"},"siteAssets":{"clientTopology":{"mediaRootUrl":"https:\/\/static.wixstatic.com","scriptsUrl":"static.parastorage.com","staticMediaUrl":"https:\/\/static.wixstatic.com\/media","moduleRepoUrl":"https:\/\/static.parastorage.com\/unpkg","fileRepoUrl":"https:\/\/static.parastorage.com\/services","viewerAppsUrl":"https:\/\/viewer-apps.parastorage.com","viewerAssetsUrl":"https:\/\/viewer-assets.parastorage.com","siteAssetsUrl":"https:\/\/siteassets.parastorage.com","pageJsonServerUrls":["https:\/\/pages.parastorage.com","https:\/\/staticorigin.wixstatic.com","https:\/\/www.dehonline.es","https:\/\/fallback.wix.com\/wix-html-editor-pages-webapp\/page"],"pathOfTBModulesInFileRepoForFallback":"wix-thunderbolt\/dist\/"}},"siteFeatures":["accessibility","appMonitoring","assetsLoader","businessLogger","captcha","clickHandlerRegistrar","codeEmbed","commonConfig","componentsLoader","componentsRegistry","consentPolicy","contentReflow","cookiesManager","cyclicTabbing","domSelectors","domStore","dynamicPages","environmentWixCodeSdk","environment","lightbox","locationWixCodeSdk","mpaNavigation","multilingual","navigationManager","navigationPhases","ooi","pages","panorama","passwordProtectedPage","protectedPages","renderer","reporter","routerFetch","router","scrollRestoration","seoWixCodeSdk","seo","sessionManager","siteMembersWixCodeSdk","siteMembers","siteScrollBlocker","siteWixCodeSdk","speculationRules","ssrCache","stores","structureApi","thunderboltInitializer","tpaCommons","tpaWorkerFeature","translations","usedPlatformApis","warmupData","windowMessageRegistrar","windowWixCodeSdk","wixCustomElementComponent","wixEmbedsApi","componentsReact","platform"],"site":{"externalBaseUrl":"https:\/\/www.dehonline.es","isSEO":false},"media":{"staticMediaUrl":"https:\/\/static.wixstatic.com\/media","mediaRootUrl":"https:\/\/static.wixstatic.com\/","staticVideoUrl":"https:\/\/video.wixstatic.com\/"},"requestUrl":"https:\/\/www.dehonline.es\/documbox-info","rollout":{"siteAssetsVersionsRollout":false,"isDACRollout":0,"isTBRollout":false},"commonConfig":{"brand":"wix","host":"VIEWER","bsi":"","consentPolicy":{},"consentPolicyHeader":{},"siteRevision":"11177","renderingFlow":"NONE","language":"es","locale":"es-es"},"interactionSampleRatio":0.01,"accessTokensUrl":"https:\/\/www.dehonline.es\/_api\/v1\/access-tokens","experiments":{"specs.thunderbolt.hardenFetchAndXHR":true,"specs.thunderbolt.securityExperiments":true,"specs.thunderbolt.browserCacheReload":true,"specs.thunderbolt.removeDynamicModelTopology":true,"specs.thunderbolt.textScaleAdjust":true}}
+  `,
+  String.raw`
+window.viewerModel = JSON.parse(
+  document.getElementById("wix-essential-viewer-model").textContent,
+);
+  `,
+  String.raw`
+(function () {
+  var now = Date.now();
+  var activationStart = 0;
+  if (
+    window.viewerModel &&
+    window.viewerModel.experiments &&
+    window.viewerModel.experiments[
+      "specs.thunderbolt.adjustForPrerenderActivation"
+    ]
+  ) {
+    try {
+      var navEntry = performance.getEntriesByType("navigation")[0];
+      if (navEntry && navEntry.activationStart > 0) {
+        activationStart = navEntry.activationStart;
+      }
+    } catch (e) {}
+  }
+  window.initialTimestamps = {
+    initialTimestamp: now,
+    // initialRequestTimestamp approximates when the navigation started.
+    // activationStart is added to account for prerendered pages: the page may have been
+    // created well before the user actually navigated, and activationStart marks when
+    // the prerendered page was activated (made visible). Adding it shifts timeOrigin
+    // forward to reflect the real navigation time. For non-prerendered pages activationStart is 0.
+    initialRequestTimestamp: Math.round(
+      performance.timeOrigin
+        ? performance.timeOrigin + activationStart
+        : now - performance.now() + activationStart,
+    ),
+  };
+
+  window.thunderboltTag = "libs-releases-GA-local";
+  window.thunderboltVersion = "1.16956.0";
+})();
+  `,
+  String.raw`
+window.commonConfig = viewerModel.commonConfig;
+  `,
+  String.raw`
+(() => {
+  "use strict";
+  let e, t, r, o;
+  var n = {},
+    i = {};
+  function l(e) {
+    var t = i[e];
+    if (void 0 !== t) return t.exports;
+    var r = (i[e] = { exports: {} });
+    return (n[e](r, r.exports, l), r.exports);
+  }
+  function a(e) {
+    let { context: t, property: r, value: o, enumerable: n = !0 } = e,
+      i = e.get,
+      l = e.set;
+    if (!r || (void 0 === o && !i && !l))
+      return Error("property and value are required");
+    let a = t || globalThis,
+      s = a?.[r],
+      u = {};
+    if (void 0 !== o) u.value = o;
+    else {
+      if (i) {
+        let e = c(i);
+        e && (u.get = e);
+      }
+      if (l) {
+        let e = c(l);
+        e && (u.set = e);
+      }
+    }
+    let p = { ...u, enumerable: n || !1, configurable: !1 };
+    void 0 !== o && (p.writable = !1);
+    try {
+      Object.defineProperty(a, r, p);
+    } catch (e) {
+      return e instanceof TypeError ? s : e;
+    }
+    return s;
+  }
+  function c(e, t) {
+    return "function" == typeof e
+      ? e
+      : e?.async === !0 && "function" == typeof e.func
+        ? t
+          ? async function (t) {
+              return e.func(t);
+            }
+          : async function () {
+              return e.func();
+            }
+        : "function" == typeof e?.func
+          ? e.func
+          : void 0;
+  }
+  ((l.rv = () => "1.6.6"), (l.ruid = "bundler=rspack@1.6.6"));
+  try {
+    a({ property: "strictDefine", value: a });
+  } catch {}
+  try {
+    a({
+      property: "defineStrictObject",
+      value: function e(t) {
+        let {
+          context: r,
+          property: o,
+          propertiesToExclude: n = [],
+          skipPrototype: i = !1,
+          hardenPrototypePropertiesToExclude: l = [],
+        } = t;
+        if (!o) return Error("property is required");
+        let c = (r || globalThis)[o],
+          p = {},
+          f = u(r, o);
+        c &&
+          ("object" == typeof c || "function" == typeof c) &&
+          Reflect.ownKeys(c).forEach((e) => {
+            if (!n.includes(e) && !s.includes(e)) {
+              let t = u(c, e);
+              if (t && (t.writable || t.configurable)) {
+                let { value: r, get: o, set: n, enumerable: i = !1 } = t,
+                  l = {};
+                void 0 !== r
+                  ? (l.value = r)
+                  : o
+                    ? (l.get = o)
+                    : n && (l.set = n);
+                try {
+                  let t = a({ context: c, property: e, ...l, enumerable: i });
+                  p[e] = t;
+                } catch (r) {
+                  if (r instanceof TypeError)
+                    try {
+                      p[e] = t.value || t.get || t.set;
+                    } catch {}
+                  else throw r;
+                }
+              }
+            }
+          });
+        let d = { originalObject: c, originalProperties: p };
+        if (!i && c?.prototype !== void 0) {
+          let t = e({
+            context: c,
+            property: "prototype",
+            propertiesToExclude: l,
+            skipPrototype: !0,
+          });
+          t instanceof Error ||
+            ((d.originalPrototype = t?.originalObject),
+            (d.originalPrototypeProperties = t?.originalProperties));
+        }
+        return (
+          a({ context: r, property: o, value: c, enumerable: f?.enumerable }),
+          d
+        );
+      },
+    });
+  } catch {}
+  try {
+    a({
+      property: "defineStrictMethod",
+      value: function (e, t) {
+        let r = (t || globalThis)[e],
+          o = u(t || globalThis, e);
+        return r && o && (o.writable || o.configurable)
+          ? (Object.freeze(r),
+            a({ context: globalThis, property: e, value: r }))
+          : r;
+      },
+    });
+  } catch {}
+  var s = ["toString", "toLocaleString", "valueOf", "constructor", "prototype"];
+  function u(e, t) {
+    if (!(!e || !t))
+      try {
+        return Reflect.getOwnPropertyDescriptor(e, t);
+      } catch {
+        return;
+      }
+  }
+  function p(e) {
+    if ("string" != typeof e) return e;
+    try {
+      return decodeURIComponent(e).toLowerCase().trim();
+    } catch {
+      return e.toLowerCase().trim();
+    }
+  }
+  function f(e, t) {
+    let r = "";
+    if ("string" == typeof e) r = e.split("=")[0]?.trim() || "";
+    else {
+      if (!e || "string" != typeof e.name) return !1;
+      r = e.name;
+    }
+    return t.has(p(r) || "");
+  }
+  function d(e, t) {
+    return (
+      "string" == typeof e
+        ? e
+            .split(";")
+            .map((e) => e.trim())
+            .filter((e) => e.length > 0)
+        : e || []
+    ).filter((e) => !f(e, t));
+  }
+  var y = null;
+  function g() {
+    return (
+      null === y &&
+        (y =
+          typeof Document > "u"
+            ? void 0
+            : Object.getOwnPropertyDescriptor(Document.prototype, "cookie")),
+      y
+    );
+  }
+  let b = (e, t) => {
+      try {
+        let r = t ? t.get.call(document) : document.cookie;
+        return r
+          .split(";")
+          .map((e) => e.trim())
+          .filter((t) => t?.startsWith(e))[0]
+          ?.split("=")[1];
+      } catch (e) {
+        return "";
+      }
+    },
+    h = (e = "", t = "", r = "/") =>
+      \`\${e}=; \${t ? \`domain=\${t};\` : ""} max-age=0; path=\${r}; expires=Thu, 01 Jan 1970 00:00:01 GMT\`;
+  function m(e, t) {
+    try {
+      return sessionStorage[e]("reload", t || "");
+    } catch (e) {
+      console.error("ATS: Error calling sessionStorage:", e);
+    }
+  }
+  let v = "client-session-bind",
+    w = "sec-fetch-unsupported",
+    { experiments: T } = window.viewerModel,
+    { cookie: S } =
+      ((e = new Set(
+        [
+          v,
+          "client-binding",
+          w,
+          "svSession",
+          "smSession",
+          "server-session-bind",
+          "wixSession2",
+          "wixSession3",
+        ].map((e) => e.toLowerCase()),
+      )),
+      a({
+        context: document,
+        property: "cookie",
+        set: {
+          func: (t) => {
+            var r, o;
+            let n, i;
+            return (
+              (r = document),
+              (o = void 0),
+              (n = g()),
+              (i = p(t.split(";")[0] || "") || ""),
+              void ([...e].every((e) => !i.startsWith(e.toLowerCase())) &&
+              n?.set
+                ? n.set.call(r, t)
+                : o && console.warn(o))
+            );
+          },
+        },
+        get: {
+          func: () =>
+            (function (e, t) {
+              let r = g();
+              if (!r?.get)
+                throw Error("Cookie descriptor or getter not available");
+              return d(r.get.call(e), t).join("; ");
+            })(document, e),
+        },
+        enumerable: !0,
+      }),
+      {
+        cookieStore: (function (e, t) {
+          if (!globalThis?.cookieStore) return;
+          let r = globalThis.cookieStore.get.bind(globalThis.cookieStore),
+            o = globalThis.cookieStore.getAll.bind(globalThis.cookieStore),
+            n = globalThis.cookieStore.set.bind(globalThis.cookieStore),
+            i = globalThis.cookieStore.delete.bind(globalThis.cookieStore);
+          return (
+            a({
+              context: globalThis.CookieStore.prototype,
+              property: "get",
+              value: async function (t) {
+                return f(("string" == typeof t ? t : t.name) || "", e)
+                  ? null
+                  : r.call(this, t);
+              },
+              enumerable: !0,
+            }),
+            a({
+              context: globalThis.CookieStore.prototype,
+              property: "getAll",
+              value: async function () {
+                let t = await o.apply(this, Array.from(arguments));
+                return d(t, e);
+              },
+              enumerable: !0,
+            }),
+            a({
+              context: globalThis.CookieStore.prototype,
+              property: "set",
+              value: async function () {
+                let r = Array.from(arguments);
+                if (!f(1 === r.length ? r[0].name : r[0], e))
+                  return n.apply(this, r);
+                t && console.warn(t);
+              },
+              enumerable: !0,
+            }),
+            a({
+              context: globalThis.CookieStore.prototype,
+              property: "delete",
+              value: async function () {
+                let t = Array.from(arguments);
+                if (!f(1 === t.length ? t[0].name : t[0], e))
+                  return i.apply(this, t);
+              },
+              enumerable: !0,
+            }),
+            a({
+              context: globalThis.cookieStore,
+              property: "prototype",
+              value: globalThis.CookieStore.prototype,
+              enumerable: !1,
+            }),
+            a({
+              context: globalThis,
+              property: "cookieStore",
+              value: globalThis.cookieStore,
+              enumerable: !0,
+            }),
+            { get: r, getAll: o, set: n, delete: i }
+          );
+        })(e, void 0),
+        cookie: g(),
+      }),
+    k = "tbReady",
+    x = "security_overrideGlobals",
+    {
+      experiments: E,
+      siteFeaturesConfigs: P,
+      accessTokensUrl: C,
+    } = window.viewerModel,
+    D = {},
+    M =
+      ((t = b(v, S)),
+      T["specs.thunderbolt.browserCacheReload"] &&
+        (b(w, S) || t
+          ? m("removeItem")
+          : (function () {
+              if ("undefined" != typeof window) {
+                let e = performance.getEntriesByType("navigation")[0];
+                return "back_forward" === (e?.type || "");
+              }
+              return !1;
+            })() &&
+            (function () {
+              let { counter: e } = (function () {
+                let e = m("getItem");
+                if (e) {
+                  let [t, r] = e.split("-"),
+                    o = r ? parseInt(r, 10) : 0;
+                  if (o >= 3) {
+                    let e = t ? Number(t) : 0;
+                    if (Date.now() - e > 6e4) return { counter: 0 };
+                  }
+                  return { counter: o };
+                }
+                return { counter: 0 };
+              })();
+              e < 3
+                ? ((function (e = 1) {
+                    m("setItem", \`\${Date.now()}-\${e}\`);
+                  })(e + 1),
+                  window.location.reload())
+                : console.error("ATS: Max reload attempts reached");
+            })()),
+      (r = h(v)),
+      (o = h(v, location.hostname)),
+      S.set.call(document, r),
+      S.set.call(document, o),
+      t);
+  M && (D["client-binding"] = M);
+  let O = fetch;
+  (addEventListener(k, function e(t) {
+    let { logger: r } = t.detail;
+    try {
+      window.tb.init({ fetch: O, fetchHeaders: D });
+    } catch (t) {
+      let e = Error("TB003");
+      (r.meter(\`\${x}_\${e.message}\`, {
+        paramsOverrides: { errorType: x, eventString: e.message },
+      }),
+        window?.viewerModel?.mode.debug && console.error(t));
+    } finally {
+      removeEventListener(k, e);
+    }
+  }),
+    E["specs.thunderbolt.hardenFetchAndXHR"] ||
+      ((window.fetchDynamicModel = () =>
+        P.sessionManager.isRunningInDifferentSiteContext
+          ? Promise.resolve({})
+          : fetch(C, { credentials: "same-origin", headers: D }).then(
+              function (e) {
+                if (!e.ok) throw Error(\`[\${e.status}]\${e.statusText}\`);
+                return e.json();
+              },
+            )),
+      (window.dynamicModelPromise = window.fetchDynamicModel())));
+})();
+//# sourceMappingURL=handleAccessTokens.inline.dc220a1a.bundle.min.js.map
+  `,
+  String.raw`
+(() => {
+  "use strict";
+  var e = {},
+    t = {};
+  function r(o) {
+    var n = t[o];
+    if (void 0 !== n) return n.exports;
+    var i = (t[o] = { exports: {} });
+    return (e[o](i, i.exports, r), i.exports);
+  }
+  function o(e) {
+    let { context: t, property: r, value: o, enumerable: i = !0 } = e,
+      c = e.get,
+      a = e.set;
+    if (!r || (void 0 === o && !c && !a))
+      return Error("property and value are required");
+    let l = t || globalThis,
+      s = l?.[r],
+      u = {};
+    if (void 0 !== o) u.value = o;
+    else {
+      if (c) {
+        let e = n(c);
+        e && (u.get = e);
+      }
+      if (a) {
+        let e = n(a);
+        e && (u.set = e);
+      }
+    }
+    let p = { ...u, enumerable: i || !1, configurable: !1 };
+    void 0 !== o && (p.writable = !1);
+    try {
+      Object.defineProperty(l, r, p);
+    } catch (e) {
+      return e instanceof TypeError ? s : e;
+    }
+    return s;
+  }
+  function n(e, t) {
+    return "function" == typeof e
+      ? e
+      : e?.async === !0 && "function" == typeof e.func
+        ? t
+          ? async function (t) {
+              return e.func(t);
+            }
+          : async function () {
+              return e.func();
+            }
+        : "function" == typeof e?.func
+          ? e.func
+          : void 0;
+  }
+  ((r.rv = () => "1.6.6"), (r.ruid = "bundler=rspack@1.6.6"));
+  try {
+    o({ property: "strictDefine", value: o });
+  } catch {}
+  try {
+    o({ property: "defineStrictObject", value: c });
+  } catch {}
+  try {
+    o({ property: "defineStrictMethod", value: a });
+  } catch {}
+  var i = ["toString", "toLocaleString", "valueOf", "constructor", "prototype"];
+  function c(e) {
+    let {
+      context: t,
+      property: r,
+      propertiesToExclude: n = [],
+      skipPrototype: a = !1,
+      hardenPrototypePropertiesToExclude: s = [],
+    } = e;
+    if (!r) return Error("property is required");
+    let u = (t || globalThis)[r],
+      p = {},
+      f = l(t, r);
+    u &&
+      ("object" == typeof u || "function" == typeof u) &&
+      Reflect.ownKeys(u).forEach((e) => {
+        if (!n.includes(e) && !i.includes(e)) {
+          let t = l(u, e);
+          if (t && (t.writable || t.configurable)) {
+            let { value: r, get: n, set: i, enumerable: c = !1 } = t,
+              a = {};
+            void 0 !== r ? (a.value = r) : n ? (a.get = n) : i && (a.set = i);
+            try {
+              let t = o({ context: u, property: e, ...a, enumerable: c });
+              p[e] = t;
+            } catch (r) {
+              if (r instanceof TypeError)
+                try {
+                  p[e] = t.value || t.get || t.set;
+                } catch {}
+              else throw r;
+            }
+          }
+        }
+      });
+    let d = { originalObject: u, originalProperties: p };
+    if (!a && u?.prototype !== void 0) {
+      let e = c({
+        context: u,
+        property: "prototype",
+        propertiesToExclude: s,
+        skipPrototype: !0,
+      });
+      e instanceof Error ||
+        ((d.originalPrototype = e?.originalObject),
+        (d.originalPrototypeProperties = e?.originalProperties));
+    }
+    return (
+      o({ context: t, property: r, value: u, enumerable: f?.enumerable }),
+      d
+    );
+  }
+  function a(e, t) {
+    let r = (t || globalThis)[e],
+      n = l(t || globalThis, e);
+    return r && n && (n.writable || n.configurable)
+      ? (Object.freeze(r), o({ context: globalThis, property: e, value: r }))
+      : r;
+  }
+  function l(e, t) {
+    if (!(!e || !t))
+      try {
+        return Reflect.getOwnPropertyDescriptor(e, t);
+      } catch {
+        return;
+      }
+  }
+  function s(e) {
+    if ("string" != typeof e) return e;
+    try {
+      return decodeURIComponent(e).toLowerCase().trim();
+    } catch {
+      return e.toLowerCase().trim();
+    }
+  }
+  function u(e, t) {
+    return (
+      e instanceof Headers
+        ? e.forEach((r, o) => {
+            p(o, t) || e.delete(o);
+          })
+        : Object.keys(e).forEach((r) => {
+            p(r, t) || delete e[r];
+          }),
+      e
+    );
+  }
+  function p(e, t) {
+    return !t.has(s(e) || "");
+  }
+  function f(e, t) {
+    let r = !0,
+      o = s(
+        (function (e) {
+          let t, r;
+          if (globalThis.Request && e instanceof Request) t = e.url;
+          else if ("function" == typeof e?.toString) t = e.toString();
+          else throw Error("Unsupported type for url");
+          try {
+            return new URL(t).pathname;
+          } catch {
+            return (r = t.replace(/#.+/gi, "").split("?").shift()).startsWith(
+              "/",
+            )
+              ? r
+              : \`/\${r}\`;
+          }
+        })(e),
+      );
+    return (o && t.some((e) => o.includes(e)) && (r = !1), r);
+  }
+  performance.mark("overrideGlobals started");
+  let { experiments: d } = window.viewerModel,
+    y = d["specs.thunderbolt.securityExperiments"];
+  try {
+    let e,
+      t,
+      r,
+      n,
+      i,
+      l = globalThis.open,
+      h = document.open;
+    function b(e, t, r) {
+      var o;
+      let n = "string" != typeof e,
+        i = l.call(window, e, t, r);
+      return n ||
+        (e &&
+          ((o = e).startsWith("//") &&
+            /(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z0-9][a-z0-9-]{0,61}[a-z0-9]/g.test(
+              \`\${location.protocol}:\${o}\`,
+            ) &&
+            (o = \`\${location.protocol}\${o}\`),
+          !o.startsWith("http") || new URL(o).hostname === location.hostname))
+        ? {}
+        : i;
+    }
+    (o({ property: "open", value: b, context: globalThis, enumerable: !0 }),
+      o({
+        property: "open",
+        value: function (e, t, r) {
+          return e ? b(e, t, r) : h.call(document, e || "", t || "", r || "");
+        },
+        context: document,
+        enumerable: !0,
+      }),
+      y &&
+        ((e = document.createElement),
+        (t = Element.prototype.setAttribute),
+        (r = Element.prototype.setAttributeNS),
+        o({
+          property: "createElement",
+          context: document,
+          value: function (n, i) {
+            let c = e.call(document, n, i);
+            return (
+              "iframe" === s(n) &&
+                (o({
+                  property: "srcdoc",
+                  context: c,
+                  get: () => "",
+                  set: () => {
+                    console.warn("\`srcdoc\` is not allowed in iframe elements.");
+                  },
+                }),
+                (c.setAttribute = function (e, r) {
+                  "srcdoc" === e.toLowerCase()
+                    ? console.warn(
+                        "\`srcdoc\` attribute is not allowed to be set.",
+                      )
+                    : t.call(c, e, r);
+                }),
+                (c.setAttributeNS = function (e, t, o) {
+                  "srcdoc" === t.toLowerCase()
+                    ? console.warn(
+                        "\`srcdoc\` attribute is not allowed to be set.",
+                      )
+                    : r.call(c, e, t, o);
+                })),
+              c
+            );
+          },
+          enumerable: !0,
+        })),
+      d["specs.thunderbolt.hardenFetchAndXHR"] &&
+        y &&
+        (function (e, t, r) {
+          let n = fetch,
+            i = XMLHttpRequest,
+            c = new Set(t);
+          function a() {
+            let t = new i(),
+              o = t.open,
+              n = t.setRequestHeader;
+            return (
+              (t.open = function () {
+                let n = Array.from(arguments),
+                  i = n[1];
+                if (n.length < 2 || f(i, e)) return o.apply(t, n);
+                throw Error(r || \`Request not allowed for path \${i}\`);
+              }),
+              (t.setRequestHeader = function (e, r) {
+                p(decodeURIComponent(e), c) && n.call(t, e, r);
+              }),
+              t
+            );
+          }
+          (o({
+            property: "fetch",
+            value: function () {
+              var t;
+              let o =
+                ((t = arguments),
+                globalThis.Request && t[0] instanceof Request && t[0]?.headers
+                  ? u(t[0].headers, c)
+                  : t[1]?.headers && u(t[1].headers, c),
+                t);
+              return f(arguments[0], e)
+                ? n.apply(globalThis, Array.from(o))
+                : new Promise((e, t) => {
+                    let o = Error(
+                      r || \`Request not allowed for path \${arguments[0]}\`,
+                    );
+                    t(o);
+                  });
+            },
+            enumerable: !0,
+          }),
+            o({ property: "XMLHttpRequest", value: a, enumerable: !0 }),
+            Object.keys(i).forEach((e) => {
+              a[e] = i[e];
+            }));
+        })(
+          [
+            "/_api/v1/access-tokens",
+            "/_api/v2/dynamicmodel",
+            "/_api/one-app-session-web/v3/businesses",
+          ],
+          ["client-binding"],
+        ),
+      (function () {
+        if (navigator && "serviceWorker" in navigator)
+          (navigator.serviceWorker.register,
+            o({
+              context: navigator.serviceWorker,
+              property: "register",
+              value: function () {
+                console.log("Service worker registration is not allowed");
+              },
+              enumerable: !0,
+            }));
+      })(),
+      (n = []),
+      (i = (i = []).concat(["TextEncoder", "TextDecoder"])),
+      y && (i = i.concat(["XMLHttpRequestEventTarget", "EventTarget"])),
+      (i = i.concat(["URL", "JSON"])),
+      y && (n = n.concat(["addEventListener", "removeEventListener"])),
+      (n = n.concat([
+        "encodeURI",
+        "encodeURIComponent",
+        "decodeURI",
+        "decodeURIComponent",
+      ])),
+      (i = i.concat(["String", "Number"])),
+      y && i.push("Object"),
+      (i = i.concat(["Reflect"])),
+      n.forEach((e) => {
+        (a(e),
+          ["addEventListener", "removeEventListener"].includes(e) &&
+            a(e, document));
+      }),
+      i.forEach((e) => {
+        c({ property: e });
+      }),
+      y &&
+        (function () {
+          return (
+            e("setTimeout", 0, globalThis),
+            e("setInterval", 0, globalThis)
+          );
+          function e(e, t, r) {
+            let n = r || globalThis,
+              i = n[e];
+            if (!i || "function" != typeof i)
+              throw Error(\`Function \${e} not found or is not a function\`);
+            o({
+              property: e,
+              value: function () {
+                let r = Array.from(arguments);
+                if ("string" != typeof r[t]) return i.apply(n, r);
+                console.warn(
+                  \`Calling \${e} with a String Argument at index \${t} is not allowed\`,
+                );
+              },
+              context: r,
+              enumerable: !0,
+            });
+          }
+        })());
+  } catch (t) {
+    window?.viewerModel?.mode.debug && console.error(t);
+    let e = Error("TB006");
+    (window.fedops?.reportError(e, "security_overrideGlobals"),
+      window.Sentry
+        ? window.Sentry.captureException(e)
+        : globalThis.defineStrictProperty("sentryBuffer", [e], window, !1));
+  }
+  performance.mark("overrideGlobals ended");
+})();
+//# sourceMappingURL=overrideGlobals.inline.306e90d8.bundle.min.js.map
+  `,
+  String.raw`
+window.commonConfig = viewerModel.commonConfig;
+  `,
+  String.raw`
+_linkedin_partner_id = "8268169";
+window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+  `,
+  String.raw`
+(function (l) {
+  if (!l) {
+    window.lintrk = function (a, b) {
+      window.lintrk.q.push([a, b]);
+    };
+    window.lintrk.q = [];
+  }
+  var s = document.getElementsByTagName("script")[0];
+  var b = document.createElement("script");
+  b.type = "text/javascript";
+  b.async = true;
+  b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+  s.parentNode.insertBefore(b, s);
+})(window.lintrk);
+  `,
+  String.raw`
+{"prefetch":[{"tag":"mpa-prefetch-moderate","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/documbox-info"}}]},"eagerness":"moderate"}]}
+  `,
+  String.raw`
+[6522, 1642, 7197, 6498, 5803, 7049, 1257, 416, 6454, 8279, 1882, 256];
+  `,
+  String.raw`
+{"namedChunks":["form-app-contacts-phone","form-app-checkbox","form-app-wix-ricos-viewer"]}
+  `,
+  String.raw`
+var bodyCacheable = true;
+
+var exclusionReason = { shouldRender: true, forced: false };
+var ssrInfo = {
+  cacheExclusionReason: "",
+  renderBodyTime: 3459,
+  renderTimeStamp: 1772921029763,
+};
+  `,
+  String.raw`
+if (
+  window.ResizeObserver &&
+  (!window.PerformanceObserver ||
+    !PerformanceObserver.supportedEntryTypes ||
+    PerformanceObserver.supportedEntryTypes.indexOf("paint") === -1)
+) {
+  new ResizeObserver(function (entries, observer) {
+    entries.some(function (entry) {
+      var contentRect = entry.contentRect;
+      if (contentRect.width > 0 && contentRect.height > 0) {
+        requestAnimationFrame(function (now) {
+          window.wixFirstPaint = now;
+          dispatchEvent(new CustomEvent("wixFirstPaint"));
+        });
+        observer.disconnect();
+        return true;
+      }
+    });
+  }).observe(document.body);
+}
+  `,
+  String.raw`
+const div = document.createElement("div");
+div.style.overflowY = "scroll";
+div.style.width = "50px";
+div.style.height = "50px";
+div.style.visibility = "hidden";
+document.body.appendChild(div);
+const scrollbarWidth = div.offsetWidth - div.clientWidth;
+document.body.removeChild(div);
+if (scrollbarWidth > 0) {
+  document.body.style.setProperty("--scrollbar-width", \`\${scrollbarWidth}px\`);
+}
+  `,
+  String.raw`
+{"data":{"site":{"metaSiteId":"b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1","userId":"ccd8ffa2-1969-432d-b976-df5cde6967ca","siteId":"241dd6c7-7fb5-4c8d-b4d6-94e6afd31537","externalBaseUrl":"https:\/\/www.dehonline.es","siteRevision":11177,"siteType":"UGC","dc":"ireland-pub","isResponsive":false,"editorName":"Unknown","sessionId":"570e3d59-1cf2-4dbb-8c2e-ebe97f47fd2a","isSEO":false,"appNameForBiEvents":"thunderbolt"},"rollout":{"siteAssetsVersionsRollout":false,"isDACRollout":0,"isTBRollout":false},"fleetConfig":{"fleetName":"thunderbolt-renderer-user-code","type":"GA","code":0},"requestUrl":"https:\/\/www.dehonline.es\/documbox-info","isInSEO":false,"platformOnSite":true}}
+  `,
+  String.raw`
+window.fedops = JSON.parse(document.getElementById("wix-fedops").textContent);
+  `,
+  String.raw`
+(() => {
+  "use strict";
+  var e = {},
+    r = {};
+  function t(i) {
+    var o = r[i];
+    if (void 0 !== o) return o.exports;
+    var n = (r[i] = { exports: {} });
+    return (e[i](n, n.exports, t), n.exports);
+  }
+  ((t.rv = () => "1.6.6"), (t.ruid = "bundler=rspack@1.6.6"));
+  let i = "unknown",
+    o = (e) => {
+      let r,
+        t,
+        o = ((r = e.cache), (t = e.varnish), \`\${r || i},\${t || i}\`);
+      return {
+        caching: o,
+        isCached: o.includes("hit"),
+        ...(e.microPop ? { microPop: e.microPop } : {}),
+      };
+    };
+  function n() {
+    return "undefined" != typeof crypto &&
+      "function" == typeof crypto.randomUUID
+      ? crypto.randomUUID()
+      : "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (e) => {
+          let r = (16 * Math.random()) | 0;
+          return ("x" === e ? r : (3 & r) | 8).toString(16);
+        });
+  }
+  !(function () {
+    let {
+        site: e,
+        rollout: r,
+        fleetConfig: t,
+        requestUrl: a,
+        isInSEO: s,
+        shouldReportErrorOnlyInPanorama: c,
+      } = window.fedops.data,
+      d = window.fedops.data.adjustForPrerenderActivation,
+      p =
+        ((e) => {
+          let { userAgent: r } = e.navigator;
+          return /instagram.+google\/google/i.test(r)
+            ? ""
+            : /bot|google(?!play)|phantom|crawl|spider|headless|slurp|facebookexternal|Lighthouse|PTST|^mozilla\/4\.0$|^\s*$/i.test(
+                  r,
+                )
+              ? "ua"
+              : "";
+        })(window) ||
+        (() => {
+          try {
+            if (window.self === window.top) return "";
+          } catch {}
+          return "iframe";
+        })() ||
+        (() => {
+          if (!Function.prototype.bind) return "bind";
+          let { document: e, navigator: r } = window;
+          if (!e || !r) return "document";
+          let { webdriver: t, userAgent: i, plugins: o, languages: n } = r;
+          if (t) return "webdriver";
+          if (!o || Array.isArray(o)) return "plugins";
+          if (Object.getOwnPropertyDescriptor(o, "0")?.writable)
+            return "plugins-extra";
+          if (!i) return "userAgent";
+          if (i.indexOf("Snapchat") > 0 && e.hidden) return "Snapchat";
+          if (!n || 0 === n.length || !Object.isFrozen(n)) return "languages";
+          try {
+            throw Error();
+          } catch (e) {
+            if (e instanceof Error) {
+              let { stack: r } = e;
+              if (r && / (\(internal\/)|(\(?file:\/)/.test(r)) return "stack";
+            }
+          }
+          return "";
+        })() ||
+        (s ? "seo" : ""),
+      l = !!p,
+      {
+        isCached: m,
+        caching: u,
+        microPop: w,
+      } = ((e, r) => {
+        let t,
+          n = ((e) => {
+            let r;
+            try {
+              r = e();
+            } catch {
+              r = [];
+            }
+            let t = r.reduce((e, r) => ((e[r.name] = r.description), e), {});
+            return { cache: t.cache, varnish: t.varnish, microPop: t.dc };
+          })(r);
+        if (n.cache || n.varnish)
+          return o({
+            cache: n.cache || i,
+            varnish: n.varnish || i,
+            microPop: n.microPop,
+          });
+        let a =
+          (t = e.match(
+            /ssr-caching="?cache[,#]\s*desc=([\w-]+)(?:[,#]\s*varnish=(\w+))?(?:[,#]\s*dc[,#]\s*desc=([\w-]+))?(?:"|;|$)/,
+          )) && t.length
+            ? { cache: t[1], varnish: t[2] || i, microPop: t[3] }
+            : null;
+        return a ? o(a) : { caching: i, isCached: !1 };
+      })(
+        document.cookie,
+        () => performance.getEntriesByType("navigation")[0].serverTiming || [],
+      ),
+      f = { WixSite: 1, UGC: 2, Template: 3 }[e.siteType] || 0,
+      h = e.appNameForBiEvents,
+      { isDACRollout: g, siteAssetsVersionsRollout: v } = r,
+      x = +!!g,
+      y = +!!v,
+      S = 0 === t.code || 1 === t.code ? t.code : null,
+      I = 2 === t.code,
+      $ = Date.now() - window.initialTimestamps.initialTimestamp,
+      b = Math.round(
+        performance.now() -
+          (() => {
+            if (!d) return 0;
+            try {
+              let e = performance.getEntriesByType("navigation")[0];
+              if (
+                e &&
+                e.responseStart > 0 &&
+                e.responseStart < performance.now()
+              )
+                return e.activationStart ?? 0;
+            } catch {}
+            return 0;
+          })(),
+      ),
+      { visibilityState: _ } = document,
+      { fedops: P, addEventListener: T, thunderboltVersion: O } = window;
+    ((P.apps = P.apps || {}),
+      (P.apps[h] = { startLoadTime: b }),
+      (P.sessionId = e.sessionId),
+      (P.vsi = n()),
+      (P.is_cached = m),
+      (P.phaseStarted = E(28)),
+      (P.phaseEnded = E(22)),
+      performance.mark("[cache] " + u + (w ? " [" + w + "]" : "")),
+      (P.reportError = (e, r = "load") => {
+        let t = e?.reason || e?.message;
+        t
+          ? (c || A(26, \`&errorInfo=\${t}&errorType=\${r}\`),
+            R({ error: { name: r, message: t, stack: e?.stack } }))
+          : e.preventDefault();
+      }),
+      T("error", P.reportError),
+      T("unhandledrejection", P.reportError));
+    let k = !1;
+    function A(r, t = "") {
+      if (a.includes("suppressbi=true")) return;
+      var i =
+        "//frog.wix.com/bolt-performance?src=72&evid=" +
+        r +
+        "&appName=" +
+        h +
+        "&is_rollout=" +
+        S +
+        "&is_company_network=" +
+        I +
+        "&is_sav_rollout=" +
+        y +
+        "&is_dac_rollout=" +
+        x +
+        "&dc=" +
+        e.dc +
+        (w ? "&microPop=" + w : "") +
+        "&is_cached=" +
+        m +
+        "&msid=" +
+        e.metaSiteId +
+        "&session_id=" +
+        window.fedops.sessionId +
+        "&ish=" +
+        l +
+        "&isb=" +
+        l +
+        (l ? "&isbr=" + p : "") +
+        "&vsi=" +
+        window.fedops.vsi +
+        "&caching=" +
+        u +
+        (k ? ",browser_cache" : "") +
+        "&pv=" +
+        _ +
+        "&pn=1&v=" +
+        O +
+        "&url=" +
+        encodeURIComponent(a) +
+        "&st=" +
+        f +
+        \`&ts=\${$}&tsn=\${b}\` +
+        t;
+      let o = !1;
+      if (!/\(iP(hone|ad|od);/i.test(window?.navigator?.userAgent))
+        try {
+          o = navigator.sendBeacon(i);
+        } catch {}
+      o || (new Image().src = i);
+    }
+    function R({ transaction: r, error: t }) {
+      let i = [
+        {
+          fullArtifactId: "com.wixpress.html-client.wix-thunderbolt",
+          componentId: \`\${"Studio" === window.fedops.data.site.editorName ? "wix-studio" : \`thunderbolt\${window.fedops.data.site.isResponsive ? "-responsive" : ""}\`}\`,
+          platform: "viewer",
+          msid: window.fedops.data.site.metaSiteId,
+          sessionId: window.fedops.vsi,
+          sessionTime: Date.now() - window.initialTimestamps.initialTimestamp,
+          logLevel: t ? "ERROR" : "INFO",
+          message: t?.message ?? (r?.name && \`\${r.name} START\`),
+          errorName: t?.name,
+          errorStack: t?.stack,
+          transactionName: r?.name,
+          transactionAction: r && "START",
+          isSsr: !1,
+          dataCenter: e.dc,
+          isCached: !!m,
+          isRollout: !!S,
+          isHeadless: !!l,
+          isDacRollout: !!x,
+          isSavRollout: !!y,
+          isCompanyNetwork: !!I,
+        },
+      ];
+      try {
+        let e = JSON.stringify({ messages: i });
+        return navigator.sendBeacon(
+          "https://panorama.wixapps.net/api/v1/bulklog",
+          e,
+        );
+      } catch (e) {
+        console.error(e);
+      }
+    }
+    function E(e) {
+      return (r, t) => {
+        let i = Date.now() - $,
+          o = \`&name=\${r}&duration=\${i}\`,
+          n =
+            t && t.paramsOverrides
+              ? Object.keys(t.paramsOverrides)
+                  .map((e) => e + "=" + t.paramsOverrides[e])
+                  .join("&")
+              : "";
+        A(e, n ? \`\${o}&\${n}\` : o);
+      };
+    }
+    if (
+      (T(
+        "pageshow",
+        ({ persisted: e }) => {
+          e && !k && ((k = !0), (P.is_cached = !0));
+        },
+        !0,
+      ),
+      window.__browser_deprecation__)
+    )
+      return;
+    let M = document.referrer ? \`&document_referrer=\${document.referrer}\` : "",
+      N = window.sessionStorage.getItem("isMpa"),
+      D = N ? \`&isMpa=\${N}\` : "";
+    N && window.sessionStorage.removeItem("isMpa");
+    let C = window.sessionStorage.getItem("mpaSessionId");
+    (C || ((C = n()), window.sessionStorage.setItem("mpaSessionId", C)),
+      (window.fedops.mpaSessionId = C));
+    let B =
+      /Mobile|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent,
+      )
+        ? window.visualViewport?.scale || 1
+        : (window.devicePixelRatio || 1) /
+          (Math.trunc((window.devicePixelRatio || 1) * window.innerWidth) <=
+          window.outerWidth
+            ? 1
+            : 2);
+    (A(
+      21,
+      \`&platformOnSite=\${window.fedops.data.platformOnSite}&hasInitialZoom=\${B > 1}&mpaSessionId=\${C}\${M}\${D}\`,
+    ),
+      R({ transaction: { name: "PANORAMA_COMPONENT_LOAD" } }));
+  })();
+})();
+//# sourceMappingURL=sendFedopsLoadStarted.inline.56ddca59.bundle.min.js.map
+  `,
+  String.raw`
+if (
+  typeof Promise === "undefined" ||
+  typeof Set === "undefined" ||
+  typeof Object.assign === "undefined" ||
+  typeof Array.from === "undefined" ||
+  typeof Symbol === "undefined"
+) {
+  // send bi in order to detect the browsers in which polyfills are not working
+  window.fedops.phaseStarted("missing_polyfills");
+}
+  `,
+  String.raw`
+(() => {
+  "use strict";
+  var e,
+    r,
+    o,
+    a,
+    t,
+    c,
+    n,
+    i = {},
+    d = {};
+  function f(e) {
+    var r = d[e];
+    if (void 0 !== r) return r.exports;
+    var o = (d[e] = { id: e, loaded: !1, exports: {} });
+    return (i[e].call(o.exports, o, o.exports, f), (o.loaded = !0), o.exports);
+  }
+  if (
+    ((f.m = i),
+    (f.n = (e) => {
+      var r = e && e.__esModule ? () => e.default : () => e;
+      return (f.d(r, { a: r }), r);
+    }),
+    (r = Object.getPrototypeOf
+      ? (e) => Object.getPrototypeOf(e)
+      : (e) => e.__proto__),
+    (f.t = function (o, a) {
+      if (
+        (1 & a && (o = this(o)),
+        8 & a ||
+          ("object" == typeof o &&
+            o &&
+            ((4 & a && o.__esModule) ||
+              (16 & a && "function" == typeof o.then))))
+      )
+        return o;
+      var t = Object.create(null);
+      f.r(t);
+      var c = {};
+      e = e || [null, r({}), r([]), r(r)];
+      for (
+        var n = 2 & a && o;
+        ("object" == typeof n || "function" == typeof n) && !~e.indexOf(n);
+        n = r(n)
+      )
+        Object.getOwnPropertyNames(n).forEach((e) => {
+          c[e] = () => o[e];
+        });
+      return ((c.default = () => o), f.d(t, c), t);
+    }),
+    (f.d = (e, r) => {
+      for (var o in r)
+        f.o(r, o) &&
+          !f.o(e, o) &&
+          Object.defineProperty(e, o, { enumerable: !0, get: r[o] });
+    }),
+    (f.f = {}),
+    (f.e = (e) =>
+      Promise.all(Object.keys(f.f).reduce((r, o) => (f.f[o](e, r), r), []))),
+    (f.u = (e) =>
+      "6948" === e
+        ? "thunderbolt-commons.ec9ba704.bundle.min.js"
+        : "3033" === e
+          ? "fastdom.inline.58a6f94c.bundle.min.js"
+          : "1619" === e
+            ? "custom-element-utils.inline.56abf6e5.bundle.min.js"
+            : "5205" === e
+              ? "render-indicator.inline.74a8637b.bundle.min.js"
+              : "7151" === e
+                ? "version-indicator.inline.a3a08d5a.bundle.min.js"
+                : "6008" === e
+                  ? "bi-common.inline.fe86753d.bundle.min.js"
+                  : "" +
+                    ({
+                      1059: "santa-platform-utils",
+                      1090: "speculationRules",
+                      1116: "passwordProtectedPage",
+                      1122: "group_19",
+                      1278: "group_24",
+                      131: "siteThemeService",
+                      1353: "pageContextService",
+                      1374: "editorWixCodeSdk",
+                      1438: "sdkStateService",
+                      1479: "ooiTpaSharedConfig",
+                      1522: "builderContextProviders",
+                      1533: "merge-mappers",
+                      1538: "businessLogger",
+                      1611: "group_44",
+                      1638: "quickActionBar",
+                      1732: "aboveTheFoldService",
+                      1788: "qaApi",
+                      1791: "businessLoggerService",
+                      180: "urlService",
+                      1802: "provideCssService",
+                      1818: "Repeater_FixedColumns",
+                      182: "consentPolicy",
+                      1869: "windowScroll",
+                      1932: "customCss",
+                      1951: "group_45",
+                      1969: "wixEcomFrontendWixCodeSdk",
+                      2017: "debug",
+                      2031: "platformInteractionsService",
+                      2089: "group_47",
+                      2144: "group_30",
+                      2220: "group_31",
+                      2221: "anchorsService",
+                      2226: "translationsService",
+                      2242: "builderModuleLoader",
+                      2303: "externalServices",
+                      2304: "TPAModal",
+                      2442: "group_37",
+                      2570: "thunderbolt-components-registry",
+                      2609: "imagePlaceholder",
+                      2616: "linkUtilsService",
+                      2624: "group_2",
+                      2689: "TPABaseComponent",
+                      2735: "TPAPreloaderOverlay",
+                      28: "thunderbolt-components-registry-builder",
+                      2859: "platformEnvironmentService",
+                      2867: "namedSignalsService",
+                      2880: "environmentService",
+                      294: "stores",
+                      2996: "seoService",
+                      3026: "lightboxService",
+                      3187: "businessManager",
+                      3221: "multilingual",
+                      3370: "domSelectors",
+                      3407: "clientSdk",
+                      3531: "panorama",
+                      3607: "UnauthorizedComponent",
+                      3654: "ssrCache",
+                      3714: "seo-api-converters",
+                      3801: "wixDomSanitizer",
+                      3872: "siteMembers",
+                      3884: "tpaModuleProvider",
+                      3894: "protectedPages",
+                      3979: "dynamicPages",
+                      399: "searchBox",
+                      3992: "componentsqaapi",
+                      3996: "environmentWixCodeSdk",
+                      4134: "group_4",
+                      4183: "svgLoader",
+                      419: "TPAPopup",
+                      4217: "group_21",
+                      4218: "group_0",
+                      4310: "becky-css",
+                      4331: "platform",
+                      4345: "dashboardWixCodeSdk",
+                      4354: "editorElementsDynamicTheme",
+                      4499: "siteScrollBlockerService",
+                      4675: "stickyToComponent",
+                      4708: "reporter-api",
+                      477: "group_32",
+                      4819: "group_35",
+                      489: "platformNamedSignalsService",
+                      4990: "accessibility",
+                      5002: "group_28",
+                      5067: "accessibilityBrowserZoom",
+                      5154: "servicesManagerReact",
+                      5183: "renderIndicator",
+                      5187: "group_7",
+                      5213: "scrollToAnchor",
+                      5221: "containerSliderService",
+                      5238: "triggersAndReactions",
+                      5289: "SiteStyles",
+                      5296: "platformPubsub",
+                      5298: "assetsLoader",
+                      5363: "environment",
+                      5391: "widgetWixCodeSdk",
+                      5474: "platformPageContextService",
+                      5675: "group_41",
+                      569: "siteMembersService",
+                      572: "animationsWixCodeSdk",
+                      5745: "ByocStyles",
+                      5750: "platformSiteMembersService",
+                      5761: "group_10",
+                      5794: "seo-api",
+                      5837: "group_14",
+                      5863: "appMonitoring",
+                      5874: "navigation",
+                      5901: "group_5",
+                      5976: "AppPart",
+                      6095: "styleUtilsService",
+                      6103: "usedPlatformApis",
+                      6134: "routerService",
+                      6135: "customUrlMapper",
+                      6155: "imagePlaceholderService",
+                      6182: "motion",
+                      6218: "group_11",
+                      6258: "group_20",
+                      6285: "versionIndicator",
+                      6428: "ContentReflowBanner",
+                      6647: "mobileFullScreen",
+                      6715: "feedback",
+                      6749: "router",
+                      6753: "group_36",
+                      6839: "platformFedopsLoggerService",
+                      6891: "group_38",
+                      6979: "consentPolicyService",
+                      6992: "platformTranslationsService",
+                      700: "module-executor",
+                      7016: "externalComponent",
+                      7109: "group_43",
+                      7141: "group_50",
+                      7146: "serviceRegistrar",
+                      7200: "canvas",
+                      7233: "FontRulersContainer",
+                      7284: "widget",
+                      7356: "group_48",
+                      7360: "AppPart2",
+                      7482: "vsm-css",
+                      7502: "group_42",
+                      7538: "group_8",
+                      757: "tinyMenu",
+                      7575: "renderer",
+                      7644: "group_6",
+                      7716: "group_40",
+                      7726: "TPAUnavailableMessageOverlay",
+                      7729: "tpa",
+                      7796: "Repeater_FluidColumns",
+                      7801: "testApi",
+                      7859: "siteMembersWixCodeSdk",
+                      7921: "interactions",
+                      7981: "domStore",
+                      8051: "animations",
+                      8207: "FontFaces",
+                      821: "group_25",
+                      8211: "cyclicTabbingService",
+                      8255: "platformRouterService",
+                      8277: "pageAnchors",
+                      830: "remoteStructureRenderer",
+                      8332: "platformSiteThemeService",
+                      8339: "platformLinkUtilsService",
+                      8391: "seo",
+                      8428: "containerSlider",
+                      8547: "group_49",
+                      8559: "TPAWorker",
+                      8574: "builderComponent",
+                      858: "fedopsLoggerService",
+                      8656: "RemoteRefDeadComp",
+                      8662: "GhostComp",
+                      8678: "cyclicTabbing",
+                      87: "ooi",
+                      8729: "group_9",
+                      8742: "topologyService",
+                      8770: "platformStyleUtilsService",
+                      8919: "group_3",
+                      8932: "group_39",
+                      897: "group_29",
+                      8970: "contentReflow",
+                      898: "group_46",
+                      906: "onloadCompsBehaviors",
+                      9081: "group_18",
+                      9091: "platformTopologyService",
+                      9111: "BuilderComponentDeadComp",
+                      9182: "group_51",
+                      9270: "siteScrollBlocker",
+                      9387: "group_27",
+                      9395: "popups",
+                      9421: "provideComponentService",
+                      9467: "platformSdkStateService",
+                      95: "componentsLoader",
+                      959: "group_23",
+                      9740: "wix-seo-SEO_DEFAULT",
+                      9764: "platformConsentPolicyService",
+                      9768: "group_22",
+                      9779: "tslib.inline",
+                      9845: "routerFetch",
+                      9863: "tpaWidgetNativeDeadComp",
+                      9980: "mpaNavigation",
+                    }[e] || e) +
+                    "." +
+                    {
+                      1039: "ad0ce791",
+                      1055: "9485b888",
+                      1059: "430926d2",
+                      1090: "a14e95c6",
+                      1116: "aaab1d6c",
+                      1122: "d2bbfd21",
+                      1278: "f26389ca",
+                      131: "e5a5bdad",
+                      1353: "a695f1f0",
+                      1374: "01337762",
+                      1393: "16fb4c19",
+                      1394: "0c7a5f9c",
+                      1438: "eb3b64af",
+                      1479: "f99f86a0",
+                      1522: "805ee008",
+                      1533: "36b1c2e7",
+                      1538: "382014f6",
+                      1611: "5ab3e3b9",
+                      1638: "ce63b6e6",
+                      1732: "3bc8550b",
+                      1788: "cbefcacd",
+                      1791: "ecbc3c28",
+                      180: "489b5efc",
+                      1802: "d4d9166f",
+                      1818: "c804e125",
+                      182: "c7f0149b",
+                      1869: "b6975c2a",
+                      1932: "fdb12aa4",
+                      1951: "5471410a",
+                      1969: "9d5b0228",
+                      1995: "2b804c3e",
+                      2017: "aa57e4e1",
+                      2031: "3c90f03f",
+                      2089: "3f5c3883",
+                      2121: "d0644c33",
+                      2144: "2abbdf6f",
+                      2220: "0f878ed4",
+                      2221: "49c41eff",
+                      2226: "9a8c993d",
+                      2242: "579bbae2",
+                      2260: "b8b7f99f",
+                      2303: "1b897450",
+                      2304: "07b94870",
+                      2339: "c5aa1dd3",
+                      2442: "88bb3450",
+                      2516: "ef83e24e",
+                      2570: "0eba23b8",
+                      2609: "a5c38083",
+                      2616: "18007db9",
+                      2624: "d8c362f4",
+                      2689: "a461f98b",
+                      2735: "620dcc01",
+                      28: "52fc92b9",
+                      2859: "a4908de2",
+                      2867: "4ca01932",
+                      2870: "429becad",
+                      2880: "4a449188",
+                      294: "440a73ee",
+                      2996: "b2aa154d",
+                      3026: "cef2535b",
+                      3062: "b78f9359",
+                      3140: "ca28bd80",
+                      3187: "4e973509",
+                      3219: "bde14979",
+                      3221: "a6111055",
+                      324: "0be6a530",
+                      3334: "593cddc8",
+                      3370: "29dc4a3d",
+                      3407: "57bad276",
+                      3531: "d04cdd7c",
+                      3600: "29aeab52",
+                      3607: "62e6acbf",
+                      3654: "d2d14539",
+                      3714: "3e6995c4",
+                      3801: "abfa9346",
+                      3853: "489b42ef",
+                      3872: "10863b9d",
+                      3884: "564bfefd",
+                      3894: "777c247b",
+                      3979: "1b10d791",
+                      399: "01d83934",
+                      3992: "1aff0e6d",
+                      3996: "902114d4",
+                      4134: "e62c6eb2",
+                      4150: "d2fa0cad",
+                      4183: "a8f86082",
+                      419: "faf675fc",
+                      4217: "4936ccf6",
+                      4218: "5120b1c2",
+                      4275: "05ca363b",
+                      4310: "2b14bbac",
+                      4331: "e6d8a6c0",
+                      4345: "0d159ced",
+                      4354: "280918f0",
+                      4499: "6aa1acc6",
+                      4675: "d2a5835b",
+                      4708: "b7edb858",
+                      4711: "4ac0befc",
+                      4729: "1dedb855",
+                      477: "d7b1e236",
+                      4819: "affac707",
+                      489: "e526d577",
+                      4946: "87adedc3",
+                      4990: "e94728de",
+                      5002: "98f4bda8",
+                      5067: "d310f96e",
+                      5116: "a4f55897",
+                      5124: "4b9f053e",
+                      5144: "2670dce1",
+                      5154: "37d2f77a",
+                      5183: "702d93f9",
+                      5187: "3f50d5b2",
+                      5213: "c63ab772",
+                      5221: "4923ed9f",
+                      5238: "23ab777e",
+                      5289: "d59f5b27",
+                      5296: "bde4edad",
+                      5298: "bb96447e",
+                      5363: "a691c5ac",
+                      5391: "d30cc8d6",
+                      5474: "8e39cd65",
+                      5512: "e135fe4d",
+                      5675: "b4a59480",
+                      569: "cd335198",
+                      572: "726e9885",
+                      5745: "7d47f58f",
+                      5750: "e38669a7",
+                      5761: "9cf9d7be",
+                      5794: "3cf66927",
+                      5837: "8052a244",
+                      5863: "b017b1c9",
+                      5872: "a7577c5b",
+                      5874: "857097f4",
+                      5901: "86c84d65",
+                      5976: "6a428904",
+                      6009: "e473a503",
+                      603: "0eeaea83",
+                      6095: "3895e40c",
+                      6103: "3786bb1c",
+                      6134: "cd731c15",
+                      6135: "9a86364c",
+                      6155: "89106bcb",
+                      6182: "67312f86",
+                      6218: "175ebeff",
+                      6258: "4718ba51",
+                      628: "f6e197ba",
+                      6285: "420b23a1",
+                      6332: "c15d9cc4",
+                      6428: "b6c04000",
+                      6429: "ab15f46b",
+                      6464: "7cbbb90c",
+                      6636: "45310c7f",
+                      6647: "3c69b7f5",
+                      6690: "5654e183",
+                      6715: "d8a9bd68",
+                      6749: "07343d28",
+                      6753: "bc4eabb9",
+                      6839: "e0dabb65",
+                      6887: "64cadf7e",
+                      6891: "f505a622",
+                      6931: "ffa8b770",
+                      6979: "e8c84849",
+                      6992: "29d73340",
+                      6998: "980ba037",
+                      700: "a1243c72",
+                      7016: "21189c55",
+                      7109: "e013eaed",
+                      7127: "91757485",
+                      7141: "c5131fce",
+                      7146: "74029a0c",
+                      7188: "e2ef7e77",
+                      7200: "ae3d6e4c",
+                      7233: "6155f9ab",
+                      7284: "b6b33913",
+                      7356: "066a8368",
+                      7360: "e0ddba14",
+                      7482: "be2c4e4a",
+                      7502: "cb055ed7",
+                      7538: "c3da0496",
+                      757: "85244a8f",
+                      7575: "39ea181b",
+                      7587: "af05856f",
+                      759: "e260e6ee",
+                      7644: "fda20971",
+                      7716: "40ca4ef5",
+                      7726: "ee36d3f9",
+                      7729: "ad994b08",
+                      7796: "edc2952b",
+                      7801: "db1e362f",
+                      7859: "c31eca95",
+                      7921: "376e566e",
+                      7981: "ff009f48",
+                      8051: "49c55ede",
+                      814: "acfce97e",
+                      8207: "644da2dc",
+                      821: "c265649e",
+                      8211: "3774ac61",
+                      8255: "b63a9021",
+                      8277: "b16478c5",
+                      829: "9952ffcf",
+                      830: "a9e069ee",
+                      8332: "116a10ae",
+                      8339: "fa4bce12",
+                      8345: "e761da98",
+                      838: "3e3963ca",
+                      8391: "f4d216d8",
+                      8428: "07901925",
+                      8547: "20cc0412",
+                      8559: "42c00d38",
+                      8572: "3820983b",
+                      8574: "867b2e9e",
+                      858: "13d18d90",
+                      8656: "03c227d1",
+                      8662: "5b987681",
+                      8678: "7085d18c",
+                      8682: "9215ce4a",
+                      87: "db5c9c46",
+                      8708: "8faa9c6e",
+                      8729: "37866019",
+                      8742: "7de326e2",
+                      8770: "b1412238",
+                      8868: "6dcfb42f",
+                      8919: "04f212c5",
+                      8932: "08db7306",
+                      8968: "13549b34",
+                      897: "423b6407",
+                      8970: "99e69429",
+                      898: "0fac8368",
+                      906: "7e1bb591",
+                      9081: "5a1cc376",
+                      9091: "791178e8",
+                      9111: "65d7bfe9",
+                      9182: "4d5d9c39",
+                      9270: "d38ddc5a",
+                      9387: "24507aab",
+                      9395: "4f64a536",
+                      9421: "303b6efd",
+                      9467: "f0aea0dc",
+                      95: "5f983eb9",
+                      9578: "4d015869",
+                      959: "572bd6dc",
+                      9709: "a1e30118",
+                      9740: "37b5c7b3",
+                      9763: "cb780974",
+                      9764: "a838cb21",
+                      9768: "b5c20583",
+                      9779: "ca2949bb",
+                      9845: "51f72182",
+                      9863: "e9dcd877",
+                      9980: "ab26702b",
+                    }[e] +
+                    ".chunk.min.js"),
+    (f.miniCssF = (e) =>
+      "5205" === e
+        ? "render-indicator.inline.7af012a4.min.css"
+        : "7151" === e
+          ? "version-indicator.inline.4e01a025.min.css"
+          : "" +
+            {
+              1818: "Repeater_FixedColumns",
+              2304: "TPAModal",
+              2689: "TPABaseComponent",
+              2735: "TPAPreloaderOverlay",
+              419: "TPAPopup",
+              5187: "group_7",
+              5976: "AppPart",
+              6428: "ContentReflowBanner",
+              7233: "FontRulersContainer",
+              7360: "AppPart2",
+              7726: "TPAUnavailableMessageOverlay",
+              7796: "Repeater_FluidColumns",
+              9863: "tpaWidgetNativeDeadComp",
+            }[e] +
+            "." +
+            {
+              1818: "d6ea6918",
+              2304: "f424469d",
+              2689: "fc3eeaee",
+              2735: "3479478e",
+              419: "a095c4d4",
+              5187: "882d8423",
+              5976: "8f9b1745",
+              6428: "d13d26fb",
+              7233: "147dbd76",
+              7360: "2a44b2a3",
+              7726: "5f394027",
+              7796: "c7fbc499",
+              9863: "574e1682",
+            }[e] +
+            ".chunk.min.css"),
+    (f.g = (() => {
+      if ("object" == typeof globalThis) return globalThis;
+      try {
+        return this || Function("return this")();
+      } catch (e) {
+        if ("object" == typeof window) return window;
+      }
+    })()),
+    (f.o = (e, r) => Object.prototype.hasOwnProperty.call(e, r)),
+    (o = {}),
+    (f.l = function (e, r, a, t) {
+      if (o[e]) return void o[e].push(r);
+      if (void 0 !== a)
+        for (
+          var c, n, i = document.getElementsByTagName("script"), d = 0;
+          d < i.length;
+          d++
+        ) {
+          var s = i[d];
+          if (s.getAttribute("src") == e) {
+            c = s;
+            break;
+          }
+        }
+      (c ||
+        ((n = !0),
+        ((c = document.createElement("script")).timeout = 120),
+        f.nc && c.setAttribute("nonce", f.nc),
+        (c.src = e)),
+        (o[e] = [r]));
+      var l = function (r, a) {
+          ((c.onerror = c.onload = null), clearTimeout(b));
+          var t = o[e];
+          if (
+            (delete o[e],
+            c.parentNode && c.parentNode.removeChild(c),
+            t &&
+              t.forEach(function (e) {
+                return e(a);
+              }),
+            r)
+          )
+            return r(a);
+        },
+        b = setTimeout(
+          l.bind(null, void 0, { type: "timeout", target: c }),
+          12e4,
+        );
+      ((c.onerror = l.bind(null, c.onerror)),
+        (c.onload = l.bind(null, c.onload)),
+        n && document.head.appendChild(c));
+    }),
+    (f.r = (e) => {
+      ("undefined" != typeof Symbol &&
+        Symbol.toStringTag &&
+        Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }),
+        Object.defineProperty(e, "__esModule", { value: !0 }));
+    }),
+    (f.nmd = (e) => ((e.paths = []), e.children || (e.children = []), e)),
+    (a = []),
+    (f.O = (e, r, o, t) => {
+      if (r) {
+        t = t || 0;
+        for (var c = a.length; c > 0 && a[c - 1][2] > t; c--) a[c] = a[c - 1];
+        a[c] = [r, o, t];
+        return;
+      }
+      for (var n = 1 / 0, c = 0; c < a.length; c++) {
+        for (var [r, o, t] = a[c], i = !0, d = 0; d < r.length; d++)
+          (!1 & t || n >= t) && Object.keys(f.O).every((e) => f.O[e](r[d]))
+            ? r.splice(d--, 1)
+            : ((i = !1), t < n && (n = t));
+        if (i) {
+          a.splice(c--, 1);
+          var s = o();
+          void 0 !== s && (e = s);
+        }
+      }
+      return e;
+    }),
+    (f.p = "https://static.parastorage.com/services/wix-thunderbolt/dist/"),
+    (f.rv = () => "1.6.6"),
+    "undefined" != typeof document)
+  ) {
+    var s = function (e, r, o, a, t) {
+        var c = document.createElement("link");
+        return (
+          (c.rel = "stylesheet"),
+          (c.type = "text/css"),
+          f.nc && (c.nonce = f.nc),
+          (c.href = r),
+          (c.onerror = c.onload =
+            function (o) {
+              if (((c.onerror = c.onload = null), "load" === o.type)) a();
+              else {
+                var n = o && ("load" === o.type ? "missing" : o.type),
+                  i = (o && o.target && o.target.href) || r,
+                  d = Error(
+                    "Loading CSS chunk " + e + " failed.\\n(" + i + ")",
+                  );
+                ((d.code = "CSS_CHUNK_LOAD_FAILED"),
+                  (d.type = n),
+                  (d.request = i),
+                  c.parentNode && c.parentNode.removeChild(c),
+                  t(d));
+              }
+            }),
+          o
+            ? o.parentNode.insertBefore(c, o.nextSibling)
+            : document.head.appendChild(c),
+          c
+        );
+      },
+      l = function (e, r) {
+        for (
+          var o = document.getElementsByTagName("link"), a = 0;
+          a < o.length;
+          a++
+        ) {
+          var t = o[a],
+            c = t.getAttribute("data-href") || t.getAttribute("href");
+          if (
+            (c && (c = c.split("?")[0]),
+            "stylesheet" === t.rel && (c === e || c === r))
+          )
+            return t;
+        }
+        for (
+          var n = document.getElementsByTagName("style"), a = 0;
+          a < n.length;
+          a++
+        ) {
+          var t = n[a],
+            c = t.getAttribute("data-href");
+          if (c === e || c === r) return t;
+        }
+      },
+      b = { 404: 0 };
+    f.f.miniCss = function (e, r) {
+      if (b[e]) r.push(b[e]);
+      else
+        0 !== b[e] &&
+          {
+            1818: 1,
+            2304: 1,
+            2689: 1,
+            2735: 1,
+            419: 1,
+            5187: 1,
+            5205: 1,
+            5976: 1,
+            6428: 1,
+            7151: 1,
+            7233: 1,
+            7360: 1,
+            7726: 1,
+            7796: 1,
+            9863: 1,
+          }[e] &&
+          r.push(
+            (b[e] = new Promise(function (r, o) {
+              var a = f.miniCssF(e),
+                t = f.p + a;
+              if (l(a, t)) return r();
+              s(e, t, null, r, o);
+            }).then(
+              function () {
+                b[e] = 0;
+              },
+              function (r) {
+                throw (delete b[e], r);
+              },
+            )),
+          );
+    };
+  }
+  ((t = { 404: 0 }),
+    (f.f.j = function (e, r) {
+      var o = f.o(t, e) ? t[e] : void 0;
+      if (0 !== o)
+        if (o) r.push(o[2]);
+        else if (404 != e) {
+          var a = new Promise((r, a) => (o = t[e] = [r, a]));
+          r.push((o[2] = a));
+          var c = f.p + f.u(e),
+            n = Error();
+          f.l(
+            c,
+            function (r) {
+              if (f.o(t, e) && (0 !== (o = t[e]) && (t[e] = void 0), o)) {
+                var a = r && ("load" === r.type ? "missing" : r.type),
+                  c = r && r.target && r.target.src;
+                ((n.message =
+                  "Loading chunk " + e + " failed.\n(" + a + ": " + c + ")"),
+                  (n.name = "ChunkLoadError"),
+                  (n.type = a),
+                  (n.request = c),
+                  o[1](n));
+              }
+            },
+            "chunk-" + e,
+            e,
+          );
+        } else t[e] = 0;
+    }),
+    (f.O.j = (e) => 0 === t[e]),
+    (c = (e, r) => {
+      var o,
+        a,
+        [c, n, i] = r,
+        d = 0;
+      if (c.some((e) => 0 !== t[e])) {
+        for (o in n) f.o(n, o) && (f.m[o] = n[o]);
+        if (i) var s = i(f);
+      }
+      for (e && e(r); d < c.length; d++)
+        ((a = c[d]), f.o(t, a) && t[a] && t[a][0](), (t[a] = 0));
+      return f.O(s);
+    }),
+    (n = self.webpackJsonp__wix_thunderbolt_app =
+      self.webpackJsonp__wix_thunderbolt_app || []).forEach(c.bind(null, 0)),
+    (n.push = c.bind(null, n.push.bind(n))),
+    (f.ruid = "bundler=rspack@1.6.6"));
+})();
+//# sourceMappingURL=webpack-runtime.e2576bce.bundle.min.js.map
+  `,
+  String.raw`
+(self.webpackJsonp__wix_thunderbolt_app =
+  self.webpackJsonp__wix_thunderbolt_app || []).push([
+  ["3033"],
+  {
+    17709(t) {
+      !(function (e) {
+        "use strict";
+        var i = function () {},
+          n =
+            e.requestAnimationFrame ||
+            e.webkitRequestAnimationFrame ||
+            e.mozRequestAnimationFrame ||
+            e.msRequestAnimationFrame ||
+            function (t) {
+              return setTimeout(t, 16);
+            };
+        function s() {
+          ((this.reads = []),
+            (this.writes = []),
+            (this.raf = n.bind(e)),
+            i("initialized", this));
+        }
+        function r(t) {
+          t.scheduled ||
+            ((t.scheduled = !0), t.raf(a.bind(null, t)), i("flush scheduled"));
+        }
+        function a(t) {
+          i("flush");
+          var e,
+            n = t.writes,
+            s = t.reads;
+          try {
+            (i("flushing reads", s.length),
+              t.runTasks(s),
+              i("flushing writes", n.length),
+              t.runTasks(n));
+          } catch (t) {
+            e = t;
+          }
+          if (((t.scheduled = !1), (s.length || n.length) && r(t), e))
+            if ((i("task errored", e.message), t.catch)) t.catch(e);
+            else throw e;
+        }
+        function u(t, e) {
+          var i = t.indexOf(e);
+          return !!~i && !!t.splice(i, 1);
+        }
+        ((s.prototype = {
+          constructor: s,
+          runTasks: function (t) {
+            var e;
+            for (i("run tasks"); (e = t.shift()); ) e();
+          },
+          measure: function (t, e) {
+            i("measure");
+            var n = e ? t.bind(e) : t;
+            return (this.reads.push(n), r(this), n);
+          },
+          mutate: function (t, e) {
+            i("mutate");
+            var n = e ? t.bind(e) : t;
+            return (this.writes.push(n), r(this), n);
+          },
+          clear: function (t) {
+            return (i("clear", t), u(this.reads, t) || u(this.writes, t));
+          },
+          extend: function (t) {
+            if ((i("extend", t), "object" != typeof t))
+              throw Error("expected object");
+            var e = Object.create(this);
+            return (
+              (function (t, e) {
+                for (var i in e) e.hasOwnProperty(i) && (t[i] = e[i]);
+              })(e, t),
+              (e.fastdom = this),
+              e.initialize && e.initialize(),
+              e
+            );
+          },
+          catch: null,
+        }),
+          (t.exports = e.fastdom = e.fastdom || new s()));
+      })(
+        "undefined" != typeof window
+          ? window
+          : void 0 !== this
+            ? this
+            : globalThis,
+      );
+    },
+  },
+]);
+//# sourceMappingURL=fastdom.inline.58a6f94c.bundle.min.js.map
+  `,
+  String.raw`
+"use strict";
+(self.webpackJsonp__wix_thunderbolt_app =
+  self.webpackJsonp__wix_thunderbolt_app || []).push([
+  ["1619"],
+  {
+    26350(e, t, i) {
+      (i.r(t),
+        i.d(t, {
+          STATIC_MEDIA_URL: () => eB,
+          fileType: () => v,
+          fittingTypes: () => r,
+          getData: () => eR,
+          sdk: () => e$,
+          isWEBP: () => x,
+          alignTypes: () => h,
+          htmlTag: () => u,
+          getPlaceholder: () => eC,
+          getResponsiveImageProps: () => ek,
+          upscaleMethods: () => m,
+          getFileExtension: () => k,
+          populateGlobalFeatureSupport: () => q,
+        }));
+      let r = {
+          SCALE_TO_FILL: "fill",
+          SCALE_TO_FIT: "fit",
+          STRETCH: "stretch",
+          ORIGINAL_SIZE: "original_size",
+          TILE: "tile",
+          TILE_HORIZONTAL: "tile_horizontal",
+          TILE_VERTICAL: "tile_vertical",
+          FIT_AND_TILE: "fit_and_tile",
+          LEGACY_STRIP_TILE: "legacy_strip_tile",
+          LEGACY_STRIP_TILE_HORIZONTAL: "legacy_strip_tile_horizontal",
+          LEGACY_STRIP_TILE_VERTICAL: "legacy_strip_tile_vertical",
+          LEGACY_STRIP_SCALE_TO_FILL: "legacy_strip_fill",
+          LEGACY_STRIP_SCALE_TO_FIT: "legacy_strip_fit",
+          LEGACY_STRIP_FIT_AND_TILE: "legacy_strip_fit_and_tile",
+          LEGACY_STRIP_ORIGINAL_SIZE: "legacy_strip_original_size",
+          LEGACY_ORIGINAL_SIZE: "actual_size",
+          LEGACY_FIT_WIDTH: "fitWidth",
+          LEGACY_FIT_HEIGHT: "fitHeight",
+          LEGACY_FULL: "full",
+          LEGACY_BG_FIT_AND_TILE: "legacy_tile",
+          LEGACY_BG_FIT_AND_TILE_HORIZONTAL: "legacy_tile_horizontal",
+          LEGACY_BG_FIT_AND_TILE_VERTICAL: "legacy_tile_vertical",
+          LEGACY_BG_NORMAL: "legacy_normal",
+        },
+        n = "fill",
+        a = "fill_focal",
+        o = "crop",
+        s = "legacy_crop",
+        l = "legacy_fill",
+        h = {
+          CENTER: "center",
+          TOP: "top",
+          TOP_LEFT: "top_left",
+          TOP_RIGHT: "top_right",
+          BOTTOM: "bottom",
+          BOTTOM_LEFT: "bottom_left",
+          BOTTOM_RIGHT: "bottom_right",
+          LEFT: "left",
+          RIGHT: "right",
+        },
+        c = {
+          [h.CENTER]: { x: 0.5, y: 0.5 },
+          [h.TOP_LEFT]: { x: 0, y: 0 },
+          [h.TOP_RIGHT]: { x: 1, y: 0 },
+          [h.TOP]: { x: 0.5, y: 0 },
+          [h.BOTTOM_LEFT]: { x: 0, y: 1 },
+          [h.BOTTOM_RIGHT]: { x: 1, y: 1 },
+          [h.BOTTOM]: { x: 0.5, y: 1 },
+          [h.RIGHT]: { x: 1, y: 0.5 },
+          [h.LEFT]: { x: 0, y: 0.5 },
+        },
+        d = {
+          center: "c",
+          top: "t",
+          top_left: "tl",
+          top_right: "tr",
+          bottom: "b",
+          bottom_left: "bl",
+          bottom_right: "br",
+          left: "l",
+          right: "r",
+        },
+        u = { BG: "bg", IMG: "img", SVG: "svg" },
+        m = { AUTO: "auto", CLASSIC: "classic", SUPER: "super" },
+        g = { radius: "0.66", amount: "1.00", threshold: "0.01" },
+        p = {
+          uri: "",
+          css: { img: {}, container: {} },
+          attr: { img: {}, container: {} },
+          transformed: !1,
+        },
+        f = [1.5, 2, 4],
+        _ = {
+          HIGH: { size: 196e4, quality: 90, maxUpscale: 1 },
+          MEDIUM: { size: 36e4, quality: 85, maxUpscale: 1 },
+          LOW: { size: 16e4, quality: 80, maxUpscale: 1.2 },
+          TINY: { size: 0, quality: 80, maxUpscale: 1.4 },
+        },
+        b = "HIGH",
+        T = "MEDIUM",
+        I = "contrast",
+        E = "brightness",
+        w = "saturation",
+        L = "blur",
+        v = {
+          JPG: "jpg",
+          JPEG: "jpeg",
+          JPE: "jpe",
+          PNG: "png",
+          WEBP: "webp",
+          WIX_ICO_MP: "wix_ico_mp",
+          WIX_MP: "wix_mp",
+          GIF: "gif",
+          SVG: "svg",
+          AVIF: "avif",
+          UNRECOGNIZED: "unrecognized",
+        };
+      function A(e, ...t) {
+        return function (...i) {
+          let r = i[i.length - 1] || {},
+            n = [e[0]];
+          return (
+            t.forEach(function (t, a) {
+              let o = Number.isInteger(t) ? i[t] : r[t];
+              n.push(o, e[a + 1]);
+            }),
+            n.join("")
+          );
+        };
+      }
+      function y(e) {
+        return e[e.length - 1];
+      }
+      (v.JPG, v.JPEG, v.JPE, v.PNG, v.GIF, v.WEBP);
+      let O = [
+          v.PNG,
+          v.JPEG,
+          v.JPG,
+          v.JPE,
+          v.WIX_ICO_MP,
+          v.WIX_MP,
+          v.WEBP,
+          v.AVIF,
+        ],
+        C = [v.JPEG, v.JPG, v.JPE];
+      function R(e, t, i) {
+        var n;
+        return (
+          i &&
+          t &&
+          !(!(n = t.id) || !n.trim() || "none" === n.toLowerCase()) &&
+          Object.values(r).includes(e)
+        );
+      }
+      function M(e, t, i, r) {
+        var n;
+        if (
+          ((n = e),
+          /(^https?)|(^data)|(^\/\/)/.test(n) || ((x(e) || N(e)) && t && !i))
+        )
+          return !1;
+        let a = O.includes(k(e)),
+          o = !!G(e) && !!(i || r);
+        return a || o;
+      }
+      function S(e) {
+        return k(e) === v.PNG;
+      }
+      function x(e) {
+        return k(e) === v.WEBP;
+      }
+      function G(e) {
+        return k(e) === v.GIF;
+      }
+      function N(e) {
+        return k(e) === v.AVIF;
+      }
+      let P = ["/", "\\", "?", "<", ">", "|", "\u201C", ":", '"'].map(
+          encodeURIComponent,
+        ),
+        F = ["\\.", "\\*"];
+      function k(e) {
+        return (
+          (/[.]([^.]+)$/.exec(e) && /[.]([^.]+)$/.exec(e)[1]) ||
+          ""
+        ).toLowerCase();
+      }
+      function $(e, t, i, r, a) {
+        let o;
+        return (o =
+          a === n
+            ? Math.max(i / e, r / t)
+            : "fit" === a
+              ? Math.min(i / e, r / t)
+              : 1);
+      }
+      function B(e, t, i, r, a, o) {
+        let {
+          scaleFactor: s,
+          width: l,
+          height: h,
+        } = (function (e, t, i, r, n) {
+          let a,
+            o = i,
+            s = r;
+          if (
+            ((a = $(e, t, i, r, n)),
+            "fit" === n && ((o = e * a), (s = t * a)),
+            o && s && o * s > 25e6)
+          ) {
+            let i = Math.sqrt(25e6 / (o * s));
+            ((o *= i), (s *= i), (a = $(e, t, o, s, n)));
+          }
+          return { scaleFactor: a, width: o, height: s };
+        })(
+          (e = e || r.width),
+          (t = t || r.height),
+          r.width * a,
+          r.height * a,
+          i,
+        );
+        return (function (e, t, i, r, a, o, s) {
+          let {
+              optimizedScaleFactor: l,
+              upscaleMethodValue: h,
+              forceUSM: c,
+            } = (function (e, t, i, r) {
+              if ("auto" === r)
+                return {
+                  optimizedScaleFactor: _[W(e, t)].maxUpscale,
+                  upscaleMethodValue: 1,
+                  forceUSM: !1,
+                };
+              if ("super" === r)
+                return {
+                  optimizedScaleFactor: y(f),
+                  upscaleMethodValue: 2,
+                  forceUSM: !(f.includes(i) || i > y(f)),
+                };
+              return {
+                optimizedScaleFactor: _[W(e, t)].maxUpscale,
+                upscaleMethodValue: 1,
+                forceUSM: !1,
+              };
+            })(e, t, o, a),
+            d = i,
+            u = r;
+          if (o <= l)
+            return {
+              width: d,
+              height: u,
+              scaleFactor: o,
+              upscaleMethodValue: h,
+              forceUSM: c,
+              cssUpscaleNeeded: !1,
+            };
+          switch (s) {
+            case n:
+              ((d = (l / o) * i), (u = (l / o) * r));
+              break;
+            case "fit":
+              ((d = e * l), (u = t * l));
+          }
+          return {
+            width: d,
+            height: u,
+            scaleFactor: l,
+            upscaleMethodValue: h,
+            forceUSM: c,
+            cssUpscaleNeeded: !0,
+          };
+        })(e, t, l, h, o, s, i);
+      }
+      function H(e) {
+        return (e.alignment && d[e.alignment]) || d[h.CENTER];
+      }
+      function z(e) {
+        let t;
+        return (
+          !e ||
+            "number" != typeof e.x ||
+            isNaN(e.x) ||
+            "number" != typeof e.y ||
+            isNaN(e.y) ||
+            (t = {
+              x: U(Math.max(0, Math.min(100, e.x)) / 100, 2),
+              y: U(Math.max(0, Math.min(100, e.y)) / 100, 2),
+            }),
+          t
+        );
+      }
+      function W(e, t) {
+        let i = e * t;
+        return i > _[b].size
+          ? b
+          : i > _[T].size
+            ? T
+            : i > _.LOW.size
+              ? "LOW"
+              : "TINY";
+      }
+      function U(e, t) {
+        let i = Math.pow(10, t || 0);
+        return ((e * i) / i).toFixed(t);
+      }
+      let Y = { isMobile: !1 },
+        D = function (e, t) {
+          Y[e] = t;
+        };
+      function q() {
+        if ("undefined" != typeof window && "undefined" != typeof navigator) {
+          let e =
+              window.matchMedia &&
+              window.matchMedia("(max-width: 767px)").matches,
+            t =
+              /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+                navigator.userAgent,
+              );
+          D("isMobile", e && t);
+        }
+      }
+      function j(e, t) {
+        let i = { css: { container: {} } },
+          { css: n } = i,
+          { fittingType: a } = e;
+        switch (a) {
+          case r.ORIGINAL_SIZE:
+          case r.LEGACY_ORIGINAL_SIZE:
+          case r.LEGACY_STRIP_ORIGINAL_SIZE:
+            ((n.container.backgroundSize = "auto"),
+              (n.container.backgroundRepeat = "no-repeat"));
+            break;
+          case r.SCALE_TO_FIT:
+          case r.LEGACY_STRIP_SCALE_TO_FIT:
+            ((n.container.backgroundSize = "contain"),
+              (n.container.backgroundRepeat = "no-repeat"));
+            break;
+          case r.STRETCH:
+            ((n.container.backgroundSize = "100% 100%"),
+              (n.container.backgroundRepeat = "no-repeat"));
+            break;
+          case r.SCALE_TO_FILL:
+          case r.LEGACY_STRIP_SCALE_TO_FILL:
+            ((n.container.backgroundSize = "cover"),
+              (n.container.backgroundRepeat = "no-repeat"));
+            break;
+          case r.TILE_HORIZONTAL:
+          case r.LEGACY_STRIP_TILE_HORIZONTAL:
+            ((n.container.backgroundSize = "auto"),
+              (n.container.backgroundRepeat = "repeat-x"));
+            break;
+          case r.TILE_VERTICAL:
+          case r.LEGACY_STRIP_TILE_VERTICAL:
+            ((n.container.backgroundSize = "auto"),
+              (n.container.backgroundRepeat = "repeat-y"));
+            break;
+          case r.TILE:
+          case r.LEGACY_STRIP_TILE:
+            ((n.container.backgroundSize = "auto"),
+              (n.container.backgroundRepeat = "repeat"));
+            break;
+          case r.LEGACY_STRIP_FIT_AND_TILE:
+            ((n.container.backgroundSize = "contain"),
+              (n.container.backgroundRepeat = "repeat"));
+            break;
+          case r.FIT_AND_TILE:
+          case r.LEGACY_BG_FIT_AND_TILE:
+            ((n.container.backgroundSize = "auto"),
+              (n.container.backgroundRepeat = "repeat"));
+            break;
+          case r.LEGACY_BG_FIT_AND_TILE_HORIZONTAL:
+            ((n.container.backgroundSize = "auto"),
+              (n.container.backgroundRepeat = "repeat-x"));
+            break;
+          case r.LEGACY_BG_FIT_AND_TILE_VERTICAL:
+            ((n.container.backgroundSize = "auto"),
+              (n.container.backgroundRepeat = "repeat-y"));
+            break;
+          case r.LEGACY_BG_NORMAL:
+            ((n.container.backgroundSize = "auto"),
+              (n.container.backgroundRepeat = "no-repeat"));
+        }
+        switch (t.alignment) {
+          case h.CENTER:
+            n.container.backgroundPosition = "center center";
+            break;
+          case h.LEFT:
+            n.container.backgroundPosition = "left center";
+            break;
+          case h.RIGHT:
+            n.container.backgroundPosition = "right center";
+            break;
+          case h.TOP:
+            n.container.backgroundPosition = "center top";
+            break;
+          case h.BOTTOM:
+            n.container.backgroundPosition = "center bottom";
+            break;
+          case h.TOP_RIGHT:
+            n.container.backgroundPosition = "right top";
+            break;
+          case h.TOP_LEFT:
+            n.container.backgroundPosition = "left top";
+            break;
+          case h.BOTTOM_RIGHT:
+            n.container.backgroundPosition = "right bottom";
+            break;
+          case h.BOTTOM_LEFT:
+            n.container.backgroundPosition = "left bottom";
+        }
+        return i;
+      }
+      let V = {
+          [h.CENTER]: "center",
+          [h.TOP]: "top",
+          [h.TOP_LEFT]: "top left",
+          [h.TOP_RIGHT]: "top right",
+          [h.BOTTOM]: "bottom",
+          [h.BOTTOM_LEFT]: "bottom left",
+          [h.BOTTOM_RIGHT]: "bottom right",
+          [h.LEFT]: "left",
+          [h.RIGHT]: "right",
+        },
+        Z = {
+          position: "absolute",
+          top: "auto",
+          right: "auto",
+          bottom: "auto",
+          left: "auto",
+        };
+      function J(e, t) {
+        let i = { css: { container: {}, img: {} } },
+          { css: n } = i,
+          { fittingType: a } = e,
+          o = t.alignment;
+        switch (((n.container.position = "relative"), a)) {
+          case r.ORIGINAL_SIZE:
+          case r.LEGACY_ORIGINAL_SIZE:
+            e.parts && e.parts.length
+              ? ((n.img.width = e.parts[0].width),
+                (n.img.height = e.parts[0].height))
+              : ((n.img.width = e.src.width), (n.img.height = e.src.height));
+            break;
+          case r.SCALE_TO_FIT:
+          case r.LEGACY_FIT_WIDTH:
+          case r.LEGACY_FIT_HEIGHT:
+          case r.LEGACY_FULL:
+            ((n.img.width = t.width),
+              (n.img.height = t.height),
+              (n.img.objectFit = "contain"),
+              (n.img.objectPosition = V[o] || "unset"));
+            break;
+          case r.LEGACY_BG_NORMAL:
+            ((n.img.width = "100%"),
+              (n.img.height = "100%"),
+              (n.img.objectFit = "none"),
+              (n.img.objectPosition = V[o] || "unset"));
+            break;
+          case r.STRETCH:
+            ((n.img.width = t.width),
+              (n.img.height = t.height),
+              (n.img.objectFit = "fill"));
+            break;
+          case r.SCALE_TO_FILL:
+            ((n.img.width = t.width),
+              (n.img.height = t.height),
+              (n.img.objectFit = "cover"));
+        }
+        if (
+          "number" == typeof n.img.width &&
+          "number" == typeof n.img.height &&
+          (n.img.width !== t.width || n.img.height !== t.height)
+        ) {
+          let e = Math.round((t.height - n.img.height) / 2),
+            i = Math.round((t.width - n.img.width) / 2);
+          Object.assign(
+            n.img,
+            Z,
+            {
+              [h.TOP_LEFT]: { top: 0, left: 0 },
+              [h.TOP_RIGHT]: { top: 0, right: 0 },
+              [h.TOP]: { top: 0, left: i },
+              [h.BOTTOM_LEFT]: { bottom: 0, left: 0 },
+              [h.BOTTOM_RIGHT]: { bottom: 0, right: 0 },
+              [h.BOTTOM]: { bottom: 0, left: i },
+              [h.RIGHT]: { top: e, right: 0 },
+              [h.LEFT]: { top: e, left: 0 },
+              [h.CENTER]: {
+                width: t.width,
+                height: t.height,
+                objectFit: "none",
+              },
+            }[o],
+          );
+        }
+        return i;
+      }
+      function X(e, t) {
+        let i,
+          a = { css: { container: {} }, attr: { container: {}, img: {} } },
+          { css: o, attr: s } = a,
+          { fittingType: l } = e,
+          c = t.alignment,
+          { width: d, height: u } = e.src;
+        switch (((o.container.position = "relative"), l)) {
+          case r.ORIGINAL_SIZE:
+          case r.LEGACY_ORIGINAL_SIZE:
+          case r.TILE:
+            (e.parts && e.parts.length
+              ? ((s.img.width = e.parts[0].width),
+                (s.img.height = e.parts[0].height))
+              : ((s.img.width = d), (s.img.height = u)),
+              (s.img.preserveAspectRatio = "xMidYMid slice"));
+            break;
+          case r.SCALE_TO_FIT:
+          case r.LEGACY_FIT_WIDTH:
+          case r.LEGACY_FIT_HEIGHT:
+          case r.LEGACY_FULL:
+            ((s.img.width = "100%"),
+              (s.img.height = "100%"),
+              (s.img.transform = ""),
+              (s.img.preserveAspectRatio = ""));
+            break;
+          case r.STRETCH:
+            ((s.img.width = t.width),
+              (s.img.height = t.height),
+              (s.img.x = 0),
+              (s.img.y = 0),
+              (s.img.transform = ""),
+              (s.img.preserveAspectRatio = "none"));
+            break;
+          case r.SCALE_TO_FILL:
+            if (M(e.src.id))
+              ((s.img.width = t.width), (s.img.height = t.height));
+            else {
+              var m;
+              let e;
+              ((m = t.width),
+                (e = $(d, u, m, t.height, n)),
+                (i = { width: Math.round(d * e), height: Math.round(u * e) }),
+                (s.img.width = i.width),
+                (s.img.height = i.height));
+            }
+            ((s.img.x = 0),
+              (s.img.y = 0),
+              (s.img.transform = ""),
+              (s.img.preserveAspectRatio = "xMidYMid slice"));
+        }
+        if (
+          "number" == typeof s.img.width &&
+          "number" == typeof s.img.height &&
+          (s.img.width !== t.width || s.img.height !== t.height)
+        ) {
+          let e,
+            i,
+            n = 0,
+            a = 0;
+          l === r.TILE
+            ? ((e = t.width % s.img.width), (i = t.height % s.img.height))
+            : ((e = t.width - s.img.width), (i = t.height - s.img.height));
+          let o = Math.round(e / 2),
+            d = Math.round(i / 2);
+          switch (c) {
+            case h.TOP_LEFT:
+              ((n = 0), (a = 0));
+              break;
+            case h.TOP:
+              ((n = o), (a = 0));
+              break;
+            case h.TOP_RIGHT:
+              ((n = e), (a = 0));
+              break;
+            case h.LEFT:
+              ((n = 0), (a = d));
+              break;
+            case h.CENTER:
+              ((n = o), (a = d));
+              break;
+            case h.RIGHT:
+              ((n = e), (a = d));
+              break;
+            case h.BOTTOM_LEFT:
+              ((n = 0), (a = i));
+              break;
+            case h.BOTTOM:
+              ((n = o), (a = i));
+              break;
+            case h.BOTTOM_RIGHT:
+              ((n = e), (a = i));
+          }
+          ((s.img.x = n), (s.img.y = a));
+        }
+        return (
+          (s.container.width = t.width),
+          (s.container.height = t.height),
+          (s.container.viewBox = ["0 0", t.width, t.height].join(" ")),
+          a
+        );
+      }
+      function K(e, t) {
+        let i = B(
+          e.src.width,
+          e.src.height,
+          "fit",
+          t,
+          e.devicePixelRatio,
+          e.upscaleMethod,
+        );
+        return {
+          transformType: e.src.width && e.src.height ? n : "fit",
+          width: Math.round(i.width),
+          height: Math.round(i.height),
+          alignment: d.center,
+          upscale: i.scaleFactor > 1,
+          forceUSM: i.forceUSM,
+          scaleFactor: i.scaleFactor,
+          cssUpscaleNeeded: i.cssUpscaleNeeded,
+          upscaleMethodValue: i.upscaleMethodValue,
+        };
+      }
+      function Q(e) {
+        return {
+          transformType: o,
+          x: Math.round(e.x),
+          y: Math.round(e.y),
+          width: Math.round(e.width),
+          height: Math.round(e.height),
+          upscale: !1,
+          forceUSM: !1,
+          scaleFactor: 1,
+          cssUpscaleNeeded: !1,
+        };
+      }
+      function ee(e, t, i) {
+        return "number" == typeof e && !isNaN(e) && 0 !== e && e >= t && e <= i;
+      }
+      function et(e, t, i, o) {
+        var d, u, p, f, b, T, A;
+        let R,
+          Y = o?.isSEOBot ?? !1,
+          D = (function (e) {
+            if (C.includes(k(e))) return v.JPG;
+            if (S(e)) return v.PNG;
+            if (x(e)) return v.WEBP;
+            if (G(e)) return v.GIF;
+            if (N(e)) return v.AVIF;
+            return v.UNRECOGNIZED;
+          })(t.id),
+          q = (function (e, t) {
+            let i = /\.([^.]*)$/,
+              r = RegExp(\`(\${P.concat(F).join("|")})\`, "g");
+            if (t && t.length) {
+              let e = t,
+                n = t.match(i);
+              return (
+                n && O.includes(n[1]) && (e = t.replace(i, "")),
+                encodeURIComponent(e).replace(r, "_")
+              );
+            }
+            let n = e.match(/\/(.*?)$/);
+            return (n ? n[1] : e).replace(i, "");
+          })(t.id, t.name),
+          j = Y ? 1 : Math.min(i.pixelAspectRatio || 1, 2),
+          V = k(t.id),
+          Z = M(
+            t.id,
+            o?.hasAnimation,
+            o?.allowAnimatedTransform,
+            o?.allowFullGIFTransformation,
+          ),
+          J = {
+            fileName: q,
+            fileExtension: V,
+            fileType: D,
+            fittingType: e,
+            preferredExtension: V,
+            src: {
+              id: t.id,
+              width: t.width,
+              height: t.height,
+              isCropped: !1,
+              isAnimated:
+                ((d = t.id),
+                (u = o?.hasAnimation),
+                (R = x(d) || N(d)),
+                k(d) === v.GIF || (R && u)),
+            },
+            focalPoint: {
+              x: t.focalPoint && t.focalPoint.x,
+              y: t.focalPoint && t.focalPoint.y,
+            },
+            parts: [],
+            devicePixelRatio: j,
+            quality: 0,
+            upscaleMethod:
+              (o && o.upscaleMethod && m[o.upscaleMethod.toUpperCase()]) ||
+              m.AUTO,
+            progressive: !0,
+            watermark: "",
+            unsharpMask: {},
+            filters: {},
+            transformed: Z,
+            allowFullGIFTransformation: o?.allowFullGIFTransformation,
+            isPlaceholderFlow: o?.isPlaceholderFlow,
+          };
+        if (Z) {
+          let e, d, u, m, O, C;
+          (!(function (e, t, i) {
+            var o, d, u, m, g, p, f, _, b, T, I;
+            let E, w, L, v, A, y;
+            if (t.crop) {
+              let i, r;
+              ((o = t.crop),
+                (i = Math.max(
+                  0,
+                  Math.min(t.width, o.x + o.width) - Math.max(0, o.x),
+                )),
+                (r = Math.max(
+                  0,
+                  Math.min(t.height, o.y + o.height) - Math.max(0, o.y),
+                )),
+                (E =
+                  i && r && (t.width !== i || t.height !== r)
+                    ? {
+                        x: Math.max(0, o.x),
+                        y: Math.max(0, o.y),
+                        width: i,
+                        height: r,
+                      }
+                    : null) &&
+                  ((e.src.width = E.width),
+                  (e.src.height = E.height),
+                  (e.src.isCropped = !0),
+                  e.parts.push(Q(E))));
+            }
+            switch (e.fittingType) {
+              case r.SCALE_TO_FIT:
+              case r.LEGACY_FIT_WIDTH:
+              case r.LEGACY_FIT_HEIGHT:
+              case r.LEGACY_FULL:
+              case r.FIT_AND_TILE:
+              case r.LEGACY_BG_FIT_AND_TILE:
+              case r.LEGACY_BG_FIT_AND_TILE_HORIZONTAL:
+              case r.LEGACY_BG_FIT_AND_TILE_VERTICAL:
+              case r.LEGACY_BG_NORMAL:
+                e.parts.push(K(e, i));
+                break;
+              case r.SCALE_TO_FILL:
+                e.parts.push(
+                  ((g = e),
+                  (p = i),
+                  (w = B(
+                    g.src.width,
+                    g.src.height,
+                    n,
+                    p,
+                    g.devicePixelRatio,
+                    g.upscaleMethod,
+                  )),
+                  {
+                    transformType: (L = z(g.focalPoint)) ? a : n,
+                    width: Math.round(w.width),
+                    height: Math.round(w.height),
+                    alignment: H(p),
+                    focalPointX: L && L.x,
+                    focalPointY: L && L.y,
+                    upscale: w.scaleFactor > 1,
+                    forceUSM: w.forceUSM,
+                    scaleFactor: w.scaleFactor,
+                    cssUpscaleNeeded: w.cssUpscaleNeeded,
+                    upscaleMethodValue: w.upscaleMethodValue,
+                  }),
+                );
+                break;
+              case r.STRETCH:
+                e.parts.push(
+                  ((f = e),
+                  (_ = i),
+                  (v = $(f.src.width, f.src.height, _.width, _.height, n)),
+                  ((A = { ..._ }).width = f.src.width * v),
+                  (A.height = f.src.height * v),
+                  K(f, A)),
+                );
+                break;
+              case r.TILE_HORIZONTAL:
+              case r.TILE_VERTICAL:
+              case r.TILE:
+              case r.LEGACY_ORIGINAL_SIZE:
+              case r.ORIGINAL_SIZE:
+                ((d = e.src),
+                  (u = e.focalPoint),
+                  (m = i.alignment),
+                  (y =
+                    z(u) ||
+                    (function (e = h.CENTER) {
+                      return c[e];
+                    })(m)),
+                  (E = {
+                    x: Math.max(
+                      0,
+                      Math.min(d.width - i.width, y.x * d.width - i.width / 2),
+                    ),
+                    y: Math.max(
+                      0,
+                      Math.min(
+                        d.height - i.height,
+                        y.y * d.height - i.height / 2,
+                      ),
+                    ),
+                    width: Math.min(d.width, i.width),
+                    height: Math.min(d.height, i.height),
+                  }),
+                  e.src.isCropped
+                    ? (Object.assign(e.parts[0], E),
+                      (e.src.width = E.width),
+                      (e.src.height = E.height))
+                    : e.parts.push(Q(E)));
+                break;
+              case r.LEGACY_STRIP_TILE_HORIZONTAL:
+              case r.LEGACY_STRIP_TILE_VERTICAL:
+              case r.LEGACY_STRIP_TILE:
+              case r.LEGACY_STRIP_ORIGINAL_SIZE:
+                e.parts.push({
+                  transformType: s,
+                  width: Math.round((b = i).width),
+                  height: Math.round(b.height),
+                  alignment: H(b),
+                  upscale: !1,
+                  forceUSM: !1,
+                  scaleFactor: 1,
+                  cssUpscaleNeeded: !1,
+                });
+                break;
+              case r.LEGACY_STRIP_SCALE_TO_FIT:
+              case r.LEGACY_STRIP_FIT_AND_TILE:
+                e.parts.push({
+                  transformType: "fit",
+                  width: Math.round((T = i).width),
+                  height: Math.round(T.height),
+                  upscale: !1,
+                  forceUSM: !0,
+                  scaleFactor: 1,
+                  cssUpscaleNeeded: !1,
+                });
+                break;
+              case r.LEGACY_STRIP_SCALE_TO_FILL:
+                e.parts.push({
+                  transformType: l,
+                  width: Math.round((I = i).width),
+                  height: Math.round(I.height),
+                  alignment: H(I),
+                  upscale: !1,
+                  forceUSM: !0,
+                  scaleFactor: 1,
+                  cssUpscaleNeeded: !1,
+                });
+            }
+          })(J, t, i),
+            (J.quality = (function (e, t) {
+              let i = e.fileType === v.PNG,
+                r = e.fileType === v.JPG,
+                n = e.fileType === v.WEBP,
+                a = e.fileType === v.AVIF;
+              if (r || i || n || a) {
+                let r = y(e.parts),
+                  n = _[W(r.width, r.height)].quality,
+                  a =
+                    t.quality && t.quality >= 5 && t.quality <= 90
+                      ? t.quality
+                      : n;
+                return i ? a + 5 : a;
+              }
+              return 0;
+            })(J, (p = (p = o) || {}))),
+            (J.progressive = !1 !== p.progressive),
+            (J.watermark = p.watermark),
+            (J.autoEncode = p.autoEncode ?? !0),
+            (J.encoding = p?.encoding),
+            (f = J),
+            (e =
+              "number" == typeof (T = (T = (b = p).unsharpMask) || {}).radius &&
+              !isNaN(T.radius) &&
+              T.radius >= 0.1 &&
+              T.radius <= 500),
+            (d =
+              "number" == typeof T.amount &&
+              !isNaN(T.amount) &&
+              T.amount >= 0 &&
+              T.amount <= 10),
+            (u =
+              "number" == typeof T.threshold &&
+              !isNaN(T.threshold) &&
+              T.threshold >= 0 &&
+              T.threshold <= 255),
+            (J.unsharpMask =
+              e && d && u
+                ? {
+                    radius: U(b.unsharpMask?.radius, 2),
+                    amount: U(b.unsharpMask?.amount, 2),
+                    threshold: U(b.unsharpMask?.threshold, 2),
+                  }
+                : ("number" == typeof (A = (A = b.unsharpMask) || {}).radius &&
+                      !isNaN(A.radius) &&
+                      0 === A.radius &&
+                      "number" == typeof A.amount &&
+                      !isNaN(A.amount) &&
+                      0 === A.amount &&
+                      "number" == typeof A.threshold &&
+                      !isNaN(A.threshold) &&
+                      0 === A.threshold) ||
+                    ((m = y(f.parts)).scaleFactor >= 1 &&
+                      !m.forceUSM &&
+                      "fit" !== m.transformType)
+                  ? void 0
+                  : g),
+            (O = p.filters || {}),
+            (C = {}),
+            ee(O[I], -100, 100) && (C[I] = O[I]),
+            ee(O[E], -100, 100) && (C[E] = O[E]),
+            ee(O[w], -100, 100) && (C[w] = O[w]),
+            ee(O.hue, -180, 180) && (C.hue = O.hue),
+            ee(O[L], 0, 100) && (C[L] = O[L]),
+            (J.filters = C));
+        }
+        return J;
+      }
+      function ei(e, t, i) {
+        let n = { ...i },
+          a = Y.isMobile;
+        switch (e) {
+          case r.LEGACY_BG_FIT_AND_TILE:
+          case r.LEGACY_BG_FIT_AND_TILE_HORIZONTAL:
+          case r.LEGACY_BG_FIT_AND_TILE_VERTICAL:
+          case r.LEGACY_BG_NORMAL:
+            ((n.width = Math.min(a ? 1e3 : 1920, t.width)),
+              (n.height = Math.min(
+                a ? 1e3 : 1920,
+                Math.round(n.width / (t.width / t.height)),
+              )),
+              (n.pixelAspectRatio = 1));
+        }
+        return n;
+      }
+      let er = A\`fit/w_\${"width"},h_\${"height"}\`,
+        en = A\`fill/w_\${"width"},h_\${"height"},al_\${"alignment"}\`,
+        ea = A\`fill/w_\${"width"},h_\${"height"},fp_\${"focalPointX"}_\${"focalPointY"}\`,
+        eo = A\`crop/x_\${"x"},y_\${"y"},w_\${"width"},h_\${"height"}\`,
+        es = A\`crop/w_\${"width"},h_\${"height"},al_\${"alignment"}\`,
+        el = A\`fill/w_\${"width"},h_\${"height"},al_\${"alignment"}\`,
+        eh = A\`,lg_\${"upscaleMethodValue"}\`,
+        ec = A\`,q_\${"quality"}\`,
+        ed = A\`,quality_auto\`,
+        eu = A\`,usm_\${"radius"}_\${"amount"}_\${"threshold"}\`,
+        em = A\`,bl\`,
+        eg = A\`,wm_\${"watermark"}\`,
+        ep = {
+          [I]: A\`,con_\${"contrast"}\`,
+          [E]: A\`,br_\${"brightness"}\`,
+          [w]: A\`,sat_\${"saturation"}\`,
+          hue: A\`,hue_\${"hue"}\`,
+          [L]: A\`,blur_\${"blur"}\`,
+        },
+        ef = A\`,enc_auto\`,
+        e_ = A\`,enc_avif\`,
+        eb = A\`,enc_pavif\`,
+        eT = A\`,pstr\`,
+        eI = A\`,anm_all\`;
+      function eE(e, t, i, r = {}, h) {
+        if (
+          M(
+            t.id,
+            r?.hasAnimation,
+            r?.allowAnimatedTransform,
+            r?.allowFullGIFTransformation,
+          )
+        ) {
+          if (x(t.id) || N(t.id)) {
+            let { alignment: n, ...a } = i;
+            ((t.focalPoint = { x: void 0, y: void 0 }),
+              delete t?.crop,
+              (h = et(e, t, a, r)));
+          } else h = h || et(e, t, i, r);
+          return (function (e) {
+            let t = [];
+            e.parts.forEach((e) => {
+              switch (e.transformType) {
+                case o:
+                  t.push(eo(e));
+                  break;
+                case s:
+                  t.push(es(e));
+                  break;
+                case l:
+                  let i = el(e);
+                  (e.upscale && (i += eh(e)), t.push(i));
+                  break;
+                case "fit":
+                  let r = er(e);
+                  (e.upscale && (r += eh(e)), t.push(r));
+                  break;
+                case n:
+                  let h = en(e);
+                  (e.upscale && (h += eh(e)), t.push(h));
+                  break;
+                case a:
+                  let c = ea(e);
+                  (e.upscale && (c += eh(e)), t.push(c));
+              }
+            });
+            let i = t.join("/");
+            if (
+              (e.quality && (i += ec(e)),
+              e.unsharpMask && (i += eu(e.unsharpMask)),
+              e.progressive || (i += em(e)),
+              e.watermark && (i += eg(e)),
+              e.filters &&
+                (i += Object.keys(e.filters)
+                  .map((t) => ep[t](e.filters))
+                  .join("")),
+              e.fileType !== v.GIF &&
+                ("AVIF" === e.encoding
+                  ? ((i += e_(e)), (i += ed(e)))
+                  : "PAVIF" === e.encoding
+                    ? ((i += eb(e)), (i += ed(e)))
+                    : e.autoEncode && (i += ef(e))),
+              e.src?.isAnimated && e.transformed)
+            ) {
+              let t = G(e.src.id),
+                r = !0 === e.isPlaceholderFlow,
+                n = !0 === e.allowFullGIFTransformation;
+              r ? (i += eT(e)) : t && n && (i += eI(e));
+            }
+            return \`\${e.src.id}/v1/\${i}/\${e.fileName}.\${e.preferredExtension}\`;
+          })(h);
+        }
+        return t.id;
+      }
+      let ew = {
+          [h.CENTER]: "50% 50%",
+          [h.TOP_LEFT]: "0% 0%",
+          [h.TOP_RIGHT]: "100% 0%",
+          [h.TOP]: "50% 0%",
+          [h.BOTTOM_LEFT]: "0% 100%",
+          [h.BOTTOM_RIGHT]: "100% 100%",
+          [h.BOTTOM]: "50% 100%",
+          [h.RIGHT]: "100% 50%",
+          [h.LEFT]: "0% 50%",
+        },
+        eL = Object.entries(ew).reduce((e, [t, i]) => ((e[i] = t), e), {}),
+        ev = [
+          r.TILE,
+          r.TILE_HORIZONTAL,
+          r.TILE_VERTICAL,
+          r.LEGACY_BG_FIT_AND_TILE,
+          r.LEGACY_BG_FIT_AND_TILE_HORIZONTAL,
+          r.LEGACY_BG_FIT_AND_TILE_VERTICAL,
+        ],
+        eA = [r.LEGACY_ORIGINAL_SIZE, r.ORIGINAL_SIZE, r.LEGACY_BG_NORMAL];
+      function ey(e, t, { width: i, height: n }) {
+        return e === r.TILE && t.width > i && t.height > n;
+      }
+      let eO = { width: "100%", height: "100%" };
+      function eC(e, t, i, n = {}) {
+        var a;
+        let o,
+          {
+            autoEncode: s = !0,
+            isSEOBot: l,
+            shouldLoadHQImage: h,
+            hasAnimation: c,
+            allowAnimatedTransform: d,
+            encoding: u,
+          } = n;
+        if (!R(e, t, i)) return p;
+        let m = d ?? !0,
+          g = M(t.id, c, m);
+        if (!g || h) return eR(e, t, i, { ...n, autoEncode: s, useSrcset: g });
+        let f = {
+            ...i,
+            ...(function (e, { width: t, height: i }) {
+              if (!t || !i) {
+                let r = t || Math.min(980, e.width),
+                  n = r / e.width;
+                return { width: r, height: i || e.height * n };
+              }
+              return { width: t, height: i };
+            })(t, i),
+          },
+          { alignment: _, htmlTag: b } = f,
+          T = ey(e, t, f),
+          I = (function (e, t, { width: i, height: r }, n = !1) {
+            var a, o;
+            if (n) return { width: i, height: r };
+            let s = !eA.includes(e),
+              l = ey(e, t, { width: i, height: r }),
+              h = !l && ev.includes(e),
+              c = h ? t.width : i,
+              d = h ? t.height : r,
+              u = s
+                ? ((a = c),
+                  (o = S(t.id)),
+                  a > 900
+                    ? o
+                      ? 0.05
+                      : 0.15
+                    : a > 500
+                      ? o
+                        ? 0.1
+                        : 0.18
+                      : a > 200
+                        ? 0.25
+                        : 1)
+                : 1;
+            return { width: l ? 1920 : c * u, height: d * u };
+          })(e, t, f, l),
+          E = ((a = f.width), l ? 0 : ev.includes(e) ? 1 : a > 200 ? 2 : 3),
+          w =
+            ((o = ev.includes(e) && !T),
+            e === r.SCALE_TO_FILL || o ? r.SCALE_TO_FIT : e),
+          L = (function (e, t, i, n = "center") {
+            let a = { img: {}, container: {} };
+            if (e === r.SCALE_TO_FILL) {
+              var o;
+              let e =
+                t.focalPoint &&
+                ((o = t.focalPoint), eL[\`\${o.x}% \${o.y}%\`] || "");
+              t.focalPoint && !e
+                ? (a.img = {
+                    objectPosition: (function (e, t, i) {
+                      let { width: r, height: n } = e,
+                        { width: a, height: o } = t,
+                        { x: s, y: l } = i;
+                      if (!a || !o) return \`\${s}% \${l}%\`;
+                      let h = Math.max(a / r, o / n),
+                        c = r * h,
+                        d = n * h,
+                        u = Math.max(0, Math.min(c - a, (s / 100) * c - a / 2)),
+                        m = Math.max(0, Math.min(d - o, (l / 100) * d - o / 2)),
+                        g = u && Math.floor((u / (c - a)) * 100),
+                        p = m && Math.floor((m / (d - o)) * 100);
+                      return \`\${g}% \${p}%\`;
+                    })(t, i, t.focalPoint),
+                  })
+                : (a.img = { objectPosition: ew[e || n] });
+            } else
+              [r.LEGACY_ORIGINAL_SIZE, r.ORIGINAL_SIZE].includes(e)
+                ? (a.img = {
+                    objectFit: "none",
+                    top: "auto",
+                    left: "auto",
+                    right: "auto",
+                    bottom: "auto",
+                  })
+                : ev.includes(e) &&
+                  (a.container = {
+                    backgroundSize: \`\${t.width}px \${t.height}px\`,
+                  });
+            return a;
+          })(e, t, i, _),
+          { uri: v } = eR(
+            w,
+            t,
+            { ...I, alignment: _, htmlTag: b },
+            {
+              autoEncode: s,
+              filters: E ? { blur: E } : {},
+              hasAnimation: c,
+              allowAnimatedTransform: m,
+              encoding: u,
+              isPlaceholderFlow: !0,
+            },
+          ),
+          { attr: A = {}, css: y } = eR(
+            e,
+            t,
+            { ...f, alignment: _, htmlTag: b },
+            {},
+          );
+        return (
+          (y.img = y.img || {}),
+          (y.container = y.container || {}),
+          Object.assign(y.img, L.img, eO),
+          Object.assign(y.container, L.container),
+          { uri: v, css: y, attr: A, transformed: !0 }
+        );
+      }
+      function eR(e, t, i, r) {
+        let n = {};
+        if (R(e, t, i)) {
+          var a;
+          let o,
+            s = ei(e, t, i),
+            l = et(e, t, s, r);
+          ((n.uri = eE(e, t, s, r, l)),
+            r?.useSrcset &&
+              (n.srcset =
+                ((a = n),
+                (o = s.pixelAspectRatio || 1),
+                {
+                  dpr: [
+                    \`\${1 === o ? a.uri : eE(e, t, { ...s, pixelAspectRatio: 1 }, r)} 1x\`,
+                    \`\${2 === o ? a.uri : eE(e, t, { ...s, pixelAspectRatio: 2 }, r)} 2x\`,
+                  ],
+                })),
+            Object.assign(
+              n,
+              (s.htmlTag === u.BG ? j : s.htmlTag === u.SVG ? X : J)(l, s),
+              { transformed: l.transformed },
+            ));
+        } else n = p;
+        return n;
+      }
+      function eM(e, t, i, r) {
+        if (R(e, t, i)) {
+          let n = ei(e, t, i),
+            a = et(e, t, n, r);
+          return { uri: eE(e, t, n, r || {}, a) };
+        }
+        return { uri: "" };
+      }
+      let eS = "https://static.wixstatic.com/media/",
+        ex = /^media\//i,
+        eG = "undefined" != typeof window ? window.devicePixelRatio : 1,
+        eN = (e, t) => {
+          let i = t && t.baseHostURL;
+          return i
+            ? \`\${i}\${e}\`
+            : ex.test(e)
+              ? \`https://static.wixstatic.com/\${e}\`
+              : \`\${eS}\${e}\`;
+        };
+      q();
+      let eP = "center",
+        eF = [1920, 1536, 1366, 1280, 980],
+        ek = (e, t, i) => {
+          let {
+            displayMode: r,
+            uri: n,
+            width: a,
+            height: o,
+            name: s,
+            crop: l,
+            focalPoint: h,
+            alignType: c,
+            quality: d,
+            upscaleMethod: u,
+            hasAnimation: m,
+            allowAnimatedTransform: g,
+            encoding: p,
+            siteMargin: f,
+            widthProportion: _,
+            allowFullGIFTransformation: b,
+            baseHostURL: T,
+          } = e;
+          if (_) {
+            let e,
+              g,
+              I = ((e = "original_size" === r),
+              (g = a / o),
+              eF.map((r, I) => {
+                let E = 980 === r,
+                  w = (e) => (E ? t : (_ / 100) * (e - 2 * (f || 0))),
+                  L = w(eF[I + 1]),
+                  v = w(r),
+                  A = L / i,
+                  y =
+                    !(e || E) &&
+                    ((e, t, i, r, n, a, o, s = eP) => {
+                      if (e > t) {
+                        let e = Math.round(r / (a / n)),
+                          t = Math.round(i / 2 - e / 2);
+                        return (
+                          s.includes("top")
+                            ? (t = 0)
+                            : s.includes("bottom") && (t = i - e),
+                          { width: r, height: e, x: 0, y: t }
+                        );
+                      }
+                      {
+                        let e = Math.round(i / (n / o)),
+                          t = Math.round(r / 2 - e / 2);
+                        return (
+                          s.includes("left")
+                            ? (t = 0)
+                            : s.includes("right") && (t = r - e),
+                          { width: e, height: i, x: t, y: 0 }
+                        );
+                      }
+                    })(A, g, o, a, i, L, v, c),
+                  {
+                    srcset: O,
+                    fallbackSrc: C,
+                    css: R,
+                  } = ek(
+                    {
+                      displayMode: e ? "original_size" : E ? "fill" : "fit",
+                      uri: n,
+                      width: a,
+                      height: o,
+                      crop: l || y,
+                      name: s,
+                      focalPoint: h,
+                      alignType: c,
+                      quality: d,
+                      upscaleMethod: u,
+                      hasAnimation: m,
+                      encoding: p,
+                      allowFullGIFTransformation: b,
+                      baseHostURL: T,
+                    },
+                    v,
+                    i,
+                  );
+                return (
+                  e && R && (R.img.objectFit = "cover"),
+                  {
+                    srcset: O || "",
+                    sizes: E ? \`\${_}vw\` : \`\${v}px\`,
+                    media: \`(max-width: \${r}px)\`,
+                    fallbackSrc: C,
+                    imgStyle: R?.img,
+                  }
+                );
+              }))
+                .filter(Boolean)
+                .reverse();
+            return {
+              fallbackSrc: I[0].fallbackSrc,
+              sources: I,
+              css: I[0].imgStyle,
+            };
+          }
+          {
+            let {
+                srcset: e,
+                css: f,
+                uri: _,
+              } = eR(
+                r,
+                { id: n, width: a, height: o, name: s, crop: l, focalPoint: h },
+                { width: t, height: i, alignment: c },
+                {
+                  focalPoint: h,
+                  name: s,
+                  quality: d?.quality,
+                  upscaleMethod: u,
+                  hasAnimation: m,
+                  allowAnimatedTransform: g,
+                  useSrcset: !0,
+                  encoding: p,
+                  allowFullGIFTransformation: b,
+                },
+              ),
+              I = T || eB,
+              E = e?.dpr?.map((e) => (/^[a-z]+:/.test(e) ? e : \`\${I}\${e}\`));
+            return {
+              fallbackSrc: \`\${I}\${_}\`,
+              srcset: E?.join(", ") || "",
+              css: f,
+            };
+          }
+        };
+      q();
+      let e$ = {
+          getScaleToFitImageURL: function (e, t, i, n, a, o) {
+            return eN(
+              eM(
+                r.SCALE_TO_FIT,
+                { id: e, width: t, height: i, name: o && o.name },
+                {
+                  width: n,
+                  height: a,
+                  htmlTag: u.IMG,
+                  alignment: h.CENTER,
+                  pixelAspectRatio: o?.devicePixelRatio ?? eG,
+                },
+                o,
+              ).uri,
+              o,
+            );
+          },
+          getScaleToFillImageURL: function (e, t, i, n, a, o) {
+            return eN(
+              eM(
+                r.SCALE_TO_FILL,
+                {
+                  id: e,
+                  width: t,
+                  height: i,
+                  name: o && o.name,
+                  focalPoint: {
+                    x: o && o.focalPoint && o.focalPoint.x,
+                    y: o && o.focalPoint && o.focalPoint.y,
+                  },
+                },
+                {
+                  width: n,
+                  height: a,
+                  htmlTag: u.IMG,
+                  alignment: h.CENTER,
+                  pixelAspectRatio: o?.devicePixelRatio ?? eG,
+                },
+                o,
+              ).uri,
+              o,
+            );
+          },
+          getCropImageURL: function (e, t, i, n, a, o, s, l, c, d) {
+            return eN(
+              eM(
+                r.SCALE_TO_FILL,
+                {
+                  id: e,
+                  width: t,
+                  height: i,
+                  name: d && d.name,
+                  crop: { x: n, y: a, width: o, height: s },
+                },
+                {
+                  width: l,
+                  height: c,
+                  htmlTag: u.IMG,
+                  alignment: h.CENTER,
+                  pixelAspectRatio: d?.devicePixelRatio ?? eG,
+                },
+                d,
+              ).uri,
+              d,
+            );
+          },
+        },
+        eB = eS;
+    },
+    55901(e, t, i) {
+      (0, i(16858).Rr)();
+    },
+    19787(e, t, i) {
+      var r = i(16858),
+        n = i(99090);
+      (((e = window) => {
+        let {
+          mediaServices: t,
+          environmentConsts: i,
+          requestUrl: a,
+          staticVideoUrl: o,
+        } = e.customElementNamespace;
+        ((0, r.EH)(e, t, {
+          ...i,
+          prefersReducedMotion: (0, n.O)(window, a),
+          staticVideoUrl: o,
+        }),
+          (0, r.jh)(e),
+          (0, r.p7)(e, t, i));
+      })(),
+        window.resolveExternalsRegistryModule("imageClientApi"));
+    },
+    16858(e, t, i) {
+      i.d(t, {
+        _o: () => s,
+        NL: () => y,
+        yO: () => w,
+        vk: () => c,
+        EH: () => k,
+        KU: () => l,
+        Rr: () => S,
+        jh: () => G,
+        p7: () => A,
+        Aq: () => h,
+      });
+      var r = i(17709),
+        n = i.n(r);
+      let a = (e, t, i) => {
+        let r = 1,
+          n = 0;
+        for (let a = 0; a < e.length; a++) {
+          let o = e[a];
+          if (o > t || ((n += o) > t && (r++, (n = o), r > i))) return !1;
+        }
+        return !0;
+      };
+      function o(e, t, i) {
+        return (
+          t in e
+            ? Object.defineProperty(e, t, {
+                value: i,
+                enumerable: !0,
+                configurable: !0,
+                writable: !0,
+              })
+            : (e[t] = i),
+          e
+        );
+      }
+      function s() {
+        class e extends HTMLElement {
+          setContainerHeight(e) {
+            this.style.setProperty("--flex-columns-height", \`\${e}px\`);
+          }
+          removeContainerHeight() {
+            this.style.removeProperty("--flex-columns-height");
+          }
+          getColumnCount(e) {
+            return parseInt(e.getPropertyValue("--flex-column-count"), 10);
+          }
+          getRowGap(e) {
+            return parseInt(e.getPropertyValue("row-gap") || "0", 10);
+          }
+          activate() {
+            ((this.isActive = !0), this.attachObservers(), this.recalcHeight());
+          }
+          deactivate() {
+            ((this.isActive = !1),
+              this.detachHeightCalcObservers(),
+              this.removeContainerHeight());
+          }
+          calcActive() {
+            return (
+              "multi-column-layout" ===
+              getComputedStyle(this).getPropertyValue("--container-layout-type")
+            );
+          }
+          get itemsHeights() {
+            return Array.from(this.children).map((e) => {
+              let t = getComputedStyle(e),
+                i = parseFloat(t.height || "0");
+              return (
+                (i += parseFloat(t.marginTop || "0")),
+                { height: (i += parseFloat(t.marginBottom || "0")) }
+              );
+            });
+          }
+          setIsActive() {
+            let e = this.calcActive();
+            this.isActive !== e && (e ? this.activate() : this.deactivate());
+          }
+          connectedCallback() {
+            (this.cleanUp(),
+              this.createObservers(),
+              this.setIsActive(),
+              window.document.body &&
+                this.isActiveObserver?.observe(window.document.body));
+          }
+          disconnectedCallback() {
+            this.cleanUp();
+          }
+          constructor(...e) {
+            (super(...e),
+              o(this, "containerWidthObserver", void 0),
+              o(this, "mutationObserver", void 0),
+              o(this, "isActiveObserver", void 0),
+              o(this, "childResizeObserver", void 0),
+              o(this, "containerWidth", 0),
+              o(this, "isActive", !1),
+              o(this, "isDuringCalc", !1),
+              o(this, "attachObservers", () => {
+                (this.mutationObserver?.observe(this, {
+                  childList: !0,
+                  subtree: !0,
+                }),
+                  this.containerWidthObserver?.observe(this),
+                  Array.from(this.children).forEach((e) => {
+                    this.handleItemAdded(e);
+                  }));
+              }),
+              o(this, "detachHeightCalcObservers", () => {
+                (this.mutationObserver?.disconnect(),
+                  this.containerWidthObserver?.disconnect(),
+                  this.childResizeObserver?.disconnect());
+              }),
+              o(this, "recalcHeight", () => {
+                this.isActive &&
+                  n().measure(() => {
+                    if (!this.isActive || this.isDuringCalc) return;
+                    this.isDuringCalc = !0;
+                    let e = getComputedStyle(this),
+                      t = ((e, t, i) => {
+                        let r = -1 / 0,
+                          n = e.map(
+                            (e) => (
+                              e.height + t > r && (r = e.height + t),
+                              e.height + t
+                            ),
+                          ),
+                          o = r,
+                          s = r * e.length,
+                          l = r;
+                        for (; o < s; ) {
+                          let e = Math.floor((o + s) / 2);
+                          (a(n, e, i) ? (s = e) : (o = e + 1), (l = o));
+                        }
+                        return l - t;
+                      })(
+                        this.itemsHeights,
+                        this.getRowGap(e),
+                        this.getColumnCount(e),
+                      );
+                    ((this.isDuringCalc = !1),
+                      n().mutate(() => {
+                        (this.setContainerHeight(t),
+                          this.style.setProperty("visibility", null));
+                      }));
+                  });
+              }),
+              o(this, "cleanUp", () => {
+                (this.detachHeightCalcObservers(),
+                  this.removeContainerHeight(),
+                  this.isActiveObserver?.disconnect());
+              }),
+              o(this, "handleItemAdded", (e) => {
+                e instanceof window.HTMLElement &&
+                  this.childResizeObserver?.observe(e);
+              }),
+              o(this, "handleItemRemoved", (e) => {
+                e instanceof window.HTMLElement &&
+                  this.childResizeObserver?.unobserve(e);
+              }),
+              o(this, "createObservers", () => {
+                ((this.containerWidthObserver = new ResizeObserver((e) => {
+                  let t = e[0];
+                  if (t.contentRect.width !== this.containerWidth) {
+                    if (0 === this.containerWidth) {
+                      this.containerWidth = t.contentRect.width;
+                      return;
+                    }
+                    ((this.containerWidth = t.contentRect.width),
+                      this.recalcHeight());
+                  }
+                })),
+                  (this.mutationObserver = new MutationObserver((e) => {
+                    (e.forEach((e) => {
+                      (Array.from(e.removedNodes).forEach(
+                        this.handleItemRemoved,
+                      ),
+                        Array.from(e.addedNodes).forEach(this.handleItemAdded));
+                    }),
+                      this.recalcHeight());
+                  })),
+                  (this.childResizeObserver = new ResizeObserver(() => {
+                    this.recalcHeight();
+                  })),
+                  (this.isActiveObserver = new ResizeObserver(() => {
+                    this.setIsActive();
+                  })));
+              }));
+          }
+        }
+        return e;
+      }
+      let l = "multi-column-layouter",
+        h = () => {
+          let e = {
+              observedElementToRelayoutTarget: new Map(),
+              getLayoutTargets(t) {
+                let i = new Set();
+                return (
+                  t.forEach((t) =>
+                    i.add(e.observedElementToRelayoutTarget.get(t)),
+                  ),
+                  i
+                );
+              },
+              observe: (i) => {
+                (e.observedElementToRelayoutTarget.set(i, i), t.observe(i));
+              },
+              unobserve: (i) => {
+                (e.observedElementToRelayoutTarget.delete(i), t.unobserve(i));
+              },
+              observeChild: (i, r) => {
+                (e.observedElementToRelayoutTarget.set(i, r), t.observe(i));
+              },
+              unobserveChild: (i) => {
+                (e.observedElementToRelayoutTarget.delete(i), t.unobserve(i));
+              },
+            },
+            t = new window.ResizeObserver((t) => {
+              e.getLayoutTargets(t.map((e) => e.target)).forEach((e) =>
+                e.reLayout(),
+              );
+            });
+          return e;
+        },
+        c = (e, t = window) => {
+          let i = !1;
+          return (...r) => {
+            i ||
+              ((i = !0),
+              t.requestAnimationFrame(() => {
+                ((i = !1), e(...r));
+              }));
+          };
+        };
+      function d(...e) {
+        let t = e[0];
+        for (let i = 1; i < e.length; ++i)
+          t = \`\${t.replace(/\/$/, "")}/\${e[i].replace(/^\//, "")}\`;
+        return t;
+      }
+      var u = i(26350);
+      let m = {
+          columnCount: 1,
+          columns: 1,
+          fontWeight: 1,
+          lineHeight: 1,
+          opacity: 1,
+          zIndex: 1,
+          zoom: 1,
+        },
+        g = (e, t) =>
+          e && t && Object.keys(t).forEach((i) => e.setAttribute(i, t[i])),
+        p = (e, t) =>
+          e &&
+          t &&
+          Object.keys(t).forEach((i) => {
+            let r = t[i];
+            if (void 0 !== r)
+              e.style[i] = "number" != typeof r || m[i] ? r : \`\${r}px\`;
+            else e.style.removeProperty(i);
+          }),
+        f = (e, t, i = !0) => {
+          var r;
+          return e && i
+            ? (r = e.dataset[t])
+              ? "true" === r ||
+                ("false" !== r &&
+                  ("null" === r ? null : \`\${+r}\` === r ? +r : r))
+              : r
+            : e.dataset[t];
+        },
+        _ = (e, t) => e && t && Object.assign(e.dataset, t),
+        b = (e) =>
+          e || document.documentElement.clientHeight || window.innerHeight || 0,
+        T = { fit: "contain", fill: "cover" };
+      var I = i(69654);
+      let E = (e, t, i) => {
+        void 0 === e.customElements.get(t) && e.customElements.define(t, i);
+      };
+      function w(e, t = window) {
+        class i extends t.HTMLElement {
+          reLayout() {}
+          connectedCallback() {
+            (this.observeResize(), this.reLayout());
+          }
+          disconnectedCallback() {
+            (this.unobserveResize(), this.unobserveChildren());
+          }
+          observeResize() {
+            e.resizeService.observe(this);
+          }
+          unobserveResize() {
+            e.resizeService.unobserve(this);
+          }
+          observeChildren(e) {
+            (this.childListObserver ||
+              (this.childListObserver = new t.MutationObserver(() =>
+                this.reLayout(),
+              )),
+              this.childListObserver.observe(e, { childList: !0 }));
+          }
+          observeChildAttributes(e, i = []) {
+            this.childrenAttributesObservers ||
+              (this.childrenAttributesObservers = []);
+            let r = new t.MutationObserver(() => this.reLayout());
+            (r.observe(e, { attributeFilter: i }),
+              this.childrenAttributesObservers.push(r));
+          }
+          observeChildResize(t) {
+            (this.childrenResizeObservers ||
+              (this.childrenResizeObservers = []),
+              e.resizeService.observeChild(t, this),
+              this.childrenResizeObservers.push(t));
+          }
+          unobserveChildrenResize() {
+            this.childrenResizeObservers &&
+              (this.childrenResizeObservers.forEach((t) => {
+                e.resizeService.unobserveChild(t);
+              }),
+              (this.childrenResizeObservers = null));
+          }
+          unobserveChildren() {
+            if (
+              (this.childListObserver &&
+                (this.childListObserver.disconnect(),
+                (this.childListObserver = null)),
+              this.childrenAttributesObservers)
+            ) {
+              for (let e of this.childrenAttributesObservers)
+                (e.disconnect(), (e = null));
+              this.childrenAttributesObservers = null;
+            }
+            this.unobserveChildrenResize();
+          }
+          constructor() {
+            super();
+          }
+        }
+        return i;
+      }
+      let L = (e) => {
+          if (
+            (e.customElementNamespace || (e.customElementNamespace = {}),
+            void 0 === e.customElementNamespace.WixElement)
+          ) {
+            let t = w({ resizeService: h() }, e);
+            return ((e.customElementNamespace.WixElement = t), t);
+          }
+          return e.customElementNamespace.WixElement;
+        },
+        v = "wix-bg-image",
+        A = (e = globalThis.window, t = {}, i = { experiments: {} }) => {
+          if (e && void 0 === e.customElements.get(v)) {
+            let r = (function (e, t, i, r = window) {
+              let n = ((e = window) => ({
+                measure: function (
+                  e,
+                  t,
+                  i,
+                  { containerId: r, bgEffectName: n },
+                  a,
+                ) {
+                  let o = i[e],
+                    s = i[r],
+                    { width: l, height: h } = a.getMediaDimensionsByEffect(
+                      n,
+                      s.offsetWidth,
+                      s.offsetHeight,
+                      b(a.getScreenHeightOverride?.()),
+                    );
+                  ((t.width = l),
+                    (t.height = h),
+                    (t.currentSrc = o.style.backgroundImage),
+                    (t.bgEffectName = o.dataset.bgEffectName));
+                },
+                patch: function (t, i, r, n, a) {
+                  let o = r[t];
+                  ((n.targetWidth = i.width), (n.targetHeight = i.height));
+                  let s = ((e, t, i) => {
+                    var r;
+                    let n,
+                      {
+                        targetWidth: a,
+                        targetHeight: o,
+                        imageData: s,
+                        filters: l,
+                        displayMode: h = u.fittingTypes.SCALE_TO_FILL,
+                      } = e;
+                    if (!a || !o || !s.uri) return { uri: "", css: {} };
+                    let {
+                        width: c,
+                        height: d,
+                        crop: m,
+                        name: g,
+                        focalPoint: p,
+                        upscaleMethod: f,
+                        quality: _,
+                        devicePixelRatio: b = t.devicePixelRatio,
+                      } = s,
+                      T = {
+                        filters: l,
+                        upscaleMethod: f,
+                        ..._,
+                        hasAnimation: e?.hasAnimation || s?.hasAnimation,
+                      },
+                      I =
+                        ((r = b),
+                        ((n = window.location.search
+                          .split("&")
+                          .map((e) => e.split("="))
+                          .find((e) =>
+                            e[0].toLowerCase().includes("devicepixelratio"),
+                          ))
+                          ? Number(n[1])
+                          : null) ||
+                          r ||
+                          1),
+                      E = {
+                        id: s.uri,
+                        width: c,
+                        height: d,
+                        ...(m && { crop: m }),
+                        ...(p && { focalPoint: p }),
+                        ...(g && { name: g }),
+                      },
+                      w = {
+                        width: a,
+                        height: o,
+                        htmlTag: "bg",
+                        pixelAspectRatio: I,
+                        alignment: e.alignType || u.alignTypes.CENTER,
+                      },
+                      L = (0, u.getData)(h, E, w, T),
+                      v = s.baseHostURL || t.staticMediaUrl;
+                    return (
+                      (L.uri = ((e, t, i) => {
+                        if (/(^https?)|(^data)|(^blob)|(^\/\/)/.test(e))
+                          return e;
+                        let r = \`\${t}/\`;
+                        return (
+                          e &&
+                            (/^micons\//.test(e)
+                              ? (r = i)
+                              : "ico" === /[^.]+$/.exec(e)[0] &&
+                                (r = r.replace("media", "ficons"))),
+                          r + e
+                        );
+                      })(L.uri, v, t.mediaRootUrl)),
+                      L
+                    );
+                  })(n, a, 0);
+                  if (
+                    (function (e = "", t) {
+                      return !e.includes(t) || !!e != !!t;
+                    })(i.currentSrc, s.uri)
+                  ) {
+                    let t, i;
+                    ((t = {
+                      backgroundImage: \`url("\${s.uri}")\`,
+                      ...s.css.container,
+                    }),
+                      ((i = new e.Image()).onload = p.bind(null, o, t)),
+                      (i.src = s.uri));
+                  } else p(o, s.css.container);
+                },
+              }))(r);
+              return class extends e {
+                reLayout() {
+                  if (
+                    t.isExperimentOpen(
+                      "specs.thunderbolt.tb_stop_client_images",
+                    ) ||
+                    t.isExperimentOpen("specs.thunderbolt.final_force_webp") ||
+                    t.isExperimentOpen("specs.thunderbolt.final_force_no_webp")
+                  )
+                    return;
+                  let e = {},
+                    a = {},
+                    o = (0, I.ZH)(this, {
+                      experiments: i.experiments,
+                      logger: i.logger,
+                      document: r.document,
+                    }),
+                    s = JSON.parse(this.dataset.tiledImageInfo),
+                    { bgEffectName: l } = this.dataset,
+                    { containerId: h } = s,
+                    c = (0, I.qc)(h, {
+                      experiments: i.experiments,
+                      logger: i.logger,
+                      document: r.document,
+                    });
+                  ((e[o] = this),
+                    (e[h] = c),
+                    (s.displayMode = s.imageData.displayMode),
+                    t.mutationService.measure(() => {
+                      n.measure(
+                        o,
+                        a,
+                        e,
+                        { containerId: h, bgEffectName: l },
+                        t,
+                      );
+                    }),
+                    t.mutationService.mutate(() => {
+                      n.patch(o, a, e, s, i, t);
+                    }));
+                }
+                attributeChangedCallback(e, t) {
+                  t && this.reLayout();
+                }
+                disconnectedCallback() {
+                  super.disconnectedCallback();
+                }
+                static get observedAttributes() {
+                  return ["data-tiled-image-info"];
+                }
+                constructor() {
+                  super();
+                }
+              };
+            })(L(e), t, i, e);
+            E(e, v, r);
+          }
+        };
+      function y(e, t, i, r = window) {
+        let n = { width: void 0, height: void 0, left: void 0 };
+        return class extends e {
+          reLayout() {
+            let {
+                containerId: e,
+                pageId: a,
+                useCssVars: o,
+                bgEffectName: s,
+              } = this.dataset,
+              l =
+                (0, I.hW)(this, e) ||
+                (0, I.qc)(\`\${e}\`, {
+                  experiments: i.experiments,
+                  logger: i.logger,
+                  document: r.document,
+                }),
+              h =
+                (0, I.hW)(this, a) ||
+                (0, I.qc)(\`\${a}\`, {
+                  experiments: i.experiments,
+                  logger: i.logger,
+                  document: r.document,
+                }),
+              c = {};
+            (t.mutationService.measure(() => {
+              let e = "fixed" === r.getComputedStyle(this).position,
+                i = b(t.getScreenHeightOverride?.()),
+                n = l.getBoundingClientRect(),
+                a = t.getMediaDimensionsByEffect(s, n.width, n.height, i),
+                { hasParallax: d } = a,
+                u =
+                  h &&
+                  (r.getComputedStyle(h).transition || "").includes(
+                    "transform",
+                  ),
+                { width: m, height: g } = a,
+                p = \`\${m}px\`,
+                f = \`\${g}px\`,
+                _ = \`\${(n.width - m) / 2}px\`;
+              if (e) {
+                let e = r.document.documentElement.clientLeft;
+                _ = u ? \`\${l.offsetLeft - e}px\` : \`\${n.left - e}px\`;
+              }
+              let T = e || d ? 0 : \`\${(n.height - g) / 2}px\`;
+              Object.assign(
+                c,
+                o
+                  ? {
+                      "--containerW": p,
+                      "--containerH": f,
+                      "--containerL": _,
+                      "--screenH_val": \`\${i}\`,
+                    }
+                  : { width: p, height: f, left: _, top: T },
+              );
+            }),
+              t.mutationService.mutate(() => {
+                if (o) {
+                  let e;
+                  (p(this, n),
+                    (e = this),
+                    e &&
+                      c &&
+                      Object.keys(c).forEach((t) => {
+                        e.style.setProperty(t, c[t]);
+                      }));
+                } else p(this, c);
+              }));
+          }
+          connectedCallback() {
+            (super.connectedCallback(), t.windowResizeService.observe(this));
+          }
+          disconnectedCallback() {
+            (super.disconnectedCallback(),
+              t.windowResizeService.unobserve(this));
+          }
+          attributeChangedCallback(e, t) {
+            t && this.reLayout();
+          }
+          static get observedAttributes() {
+            return ["data-is-full-height", "data-container-size"];
+          }
+          constructor() {
+            super();
+          }
+        };
+      }
+      let O = "__more__",
+        C = "moreContainer";
+      function R(e, t, i) {
+        return (
+          t in e
+            ? Object.defineProperty(e, t, {
+                value: i,
+                enumerable: !0,
+                configurable: !0,
+                writable: !0,
+              })
+            : (e[t] = i),
+          e
+        );
+      }
+      let M = "wix-dropdown-menu",
+        S = (e = globalThis.window) => {
+          if (e && void 0 === e.customElements.get(M)) {
+            let t = h(),
+              i = (function (e, t, i = window) {
+                let r = ((e = window) => {
+                  let t = (e, t, i, r, n, a, o, s) => {
+                      if (
+                        ((e -= n * (o ? r.length : r.length - 1)),
+                        (e -= s.left + s.right),
+                        t && (r = r.map(() => a)),
+                        r.some((e) => 0 === e))
+                      )
+                        return null;
+                      let l = 0,
+                        h = r.reduce((e, t) => e + t, 0);
+                      if (h > e) return null;
+                      if (t) {
+                        if (i) {
+                          let t = Math.floor(e / r.length),
+                            i = r.map(() => t);
+                          if ((l = t * r.length) < e) {
+                            let t = Math.floor(e - l);
+                            r.forEach((e, r) => {
+                              r <= t - 1 && i[r]++;
+                            });
+                          }
+                          return i;
+                        }
+                        return r;
+                      }
+                      if (i) {
+                        let t = Math.floor((e - h) / r.length);
+                        l = 0;
+                        let i = r.map((e) => ((l += e + t), e + t));
+                        if (l < e) {
+                          let t = Math.floor(e - l);
+                          r.forEach((e, r) => {
+                            r <= t - 1 && i[r]++;
+                          });
+                        }
+                        return i;
+                      }
+                      return r;
+                    },
+                    i = (e) => {
+                      let t = parseFloat(e);
+                      return isFinite(t) ? t : 0;
+                    },
+                    r = (e) => !isNaN(parseFloat(e)) && isFinite(e);
+                  return {
+                    measure: (r, n) => {
+                      var a;
+                      let o,
+                        s,
+                        l,
+                        h,
+                        c,
+                        d,
+                        u,
+                        m,
+                        g,
+                        p,
+                        _ = {},
+                        b = {};
+                      b[r] = n;
+                      let T = 1,
+                        I = n.getRootNode().querySelector("[id^=site-root]");
+                      I &&
+                        (T = I.getBoundingClientRect().width / I.offsetWidth);
+                      let E =
+                          (o = +f(b[r], "numItems")) <= 0 ||
+                          o > Number.MAX_SAFE_INTEGER
+                            ? []
+                            : Array(o)
+                                .fill(0)
+                                .map((e, t) => String(t)),
+                        w = [
+                          "moreContainer",
+                          "itemsContainer",
+                          "dropWrapper",
+                        ].concat(E, [O]);
+                      (w.forEach((e) => {
+                        let t = \`\${r}\${e}\`;
+                        b[t] = n.getRootNode().getElementById(\`\${t}\`);
+                      }),
+                        (a = T),
+                        (s = {}),
+                        w.forEach((e) => {
+                          let t = \`\${r}\${e}\`,
+                            i = b[t];
+                          i &&
+                            (s[t] = {
+                              width: i.offsetWidth,
+                              boundingClientRectWidth: Math.round(
+                                i.getBoundingClientRect().width / a,
+                              ),
+                              height: i.offsetHeight,
+                            });
+                        }),
+                        (_.children = s));
+                      let L = b[r],
+                        v = b[\`\${r}itemsContainer\`],
+                        A = v.childNodes,
+                        y = b[\`\${r}moreContainer\`],
+                        C = y.childNodes,
+                        R = f(L, "stretchButtonsToMenuWidth"),
+                        M = f(L, "sameWidthButtons");
+                      ((_.absoluteLeft = L.getBoundingClientRect().left),
+                        (_.bodyClientWidth = e.document.body.clientWidth),
+                        (_.alignButtons = f(L, "dropalign")),
+                        (_.hoverListPosition = f(L, "drophposition")),
+                        (_.menuBorderY = parseInt(f(L, "menuborderY"), 10)),
+                        (_.ribbonExtra = parseInt(f(L, "ribbonExtra"), 10)),
+                        (_.ribbonEls = parseInt(f(L, "ribbonEls"), 10)),
+                        (_.labelPad = parseInt(f(L, "labelPad"), 10)),
+                        (_.menuButtonBorder = parseInt(
+                          f(L, "menubtnBorder"),
+                          10,
+                        )),
+                        (l = v.lastChild),
+                        (_.menuItemContainerMargins =
+                          (parseInt(
+                            (h = e.getComputedStyle(l)).marginLeft,
+                            10,
+                          ) || 0) + (parseInt(h.marginRight, 10) || 0)),
+                        (d =
+                          i((c = e.getComputedStyle(v)).borderTopWidth) +
+                          i(c.paddingTop)),
+                        (u = i(c.borderBottomWidth) + i(c.paddingBottom)),
+                        (m = i(c.borderLeftWidth) + i(c.paddingLeft)),
+                        (g = i(c.borderRightWidth) + i(c.paddingRight)),
+                        (d += i(c.marginTop)),
+                        (u += i(c.marginBottom)),
+                        (m += i(c.marginLeft)),
+                        (g += i(c.marginRight)),
+                        (_.menuItemContainerExtraPixels = {
+                          top: d,
+                          bottom: u,
+                          left: m,
+                          right: g,
+                          height: d + u,
+                          width: m + g,
+                        }),
+                        (_.needToOpenMenuUp =
+                          L.getBoundingClientRect().top > e.innerHeight / 2),
+                        (_.menuItemMarginForAllChildren =
+                          !R ||
+                          "false" !== v.getAttribute("data-marginAllChildren")),
+                        (_.moreSubItem = []),
+                        (_.labelWidths = {}),
+                        (_.linkIds = {}),
+                        (_.parentId = {}),
+                        (_.menuItems = {}),
+                        (_.labels = {}),
+                        C.forEach((t, i) => {
+                          _.parentId[t.id] = f(t, "parentId");
+                          let r = f(t, "dataId");
+                          ((_.menuItems[r] = {
+                            dataId: r,
+                            parentId: f(t, "parentId"),
+                            moreDOMid: t.id,
+                            moreIndex: i,
+                          }),
+                            (b[t.id] = t));
+                          let n = t.querySelector("p");
+                          ((b[n.id] = n),
+                            (_.labels[n.id] = {
+                              width: n.offsetWidth,
+                              height: n.offsetHeight,
+                              left: n.offsetLeft,
+                              lineHeight: parseInt(
+                                e.getComputedStyle(n).fontSize,
+                                10,
+                              ),
+                            }),
+                            _.moreSubItem.push(t.id));
+                        }),
+                        A.forEach((e, t) => {
+                          let i,
+                            r,
+                            n = f(e, "dataId");
+                          ((_.menuItems[n] = _.menuItems[n] || {}),
+                            (_.menuItems[n].menuIndex = t),
+                            (_.menuItems[n].menuDOMid = e.id),
+                            (_.children[e.id].left = e.offsetLeft));
+                          let a = e.querySelector("p");
+                          ((b[a.id] = a),
+                            (_.labelWidths[a.id] =
+                              ((i = a),
+                              (r = T),
+                              Math.round(
+                                i.getBoundingClientRect().width / r,
+                              ))));
+                          let o = e.querySelector("p");
+                          ((b[o.id] = o), (_.linkIds[e.id] = o.id));
+                        }));
+                      let S = L.offsetHeight;
+                      ((_.height = S),
+                        (_.width = L.offsetWidth),
+                        (p =
+                          S -
+                          _.menuBorderY -
+                          _.labelPad -
+                          _.ribbonEls -
+                          _.menuButtonBorder -
+                          _.ribbonExtra),
+                        (_.lineHeight = \`\${p}px\`));
+                      let x = ((e, i, r, n, a) => {
+                        let o = i.width;
+                        ((i.hasOriginalGapData = {}),
+                          (i.originalGapBetweenTextAndBtn = {}));
+                        let s = a.map((t) => {
+                            let r,
+                              a = f(n[e + t], "originalGapBetweenTextAndBtn");
+                            return (void 0 === a
+                              ? ((i.hasOriginalGapData[t] = !1),
+                                (r =
+                                  i.children[e + t].boundingClientRectWidth -
+                                  i.labelWidths[\`\${e + t}label\`]),
+                                (i.originalGapBetweenTextAndBtn[e + t] = r))
+                              : ((i.hasOriginalGapData[t] = !0),
+                                (r = parseFloat(a))),
+                            i.children[e + t].width > 0)
+                              ? Math.floor(i.labelWidths[\`\${e + t}label\`] + r)
+                              : 0;
+                          }),
+                          l = s.pop(),
+                          h = r.sameWidthButtons,
+                          c = r.stretchButtonsToMenuWidth,
+                          d = !1,
+                          u = i.menuItemContainerMargins,
+                          m = i.menuItemMarginForAllChildren,
+                          g = i.menuItemContainerExtraPixels,
+                          p = s.reduce((e, t) => (e > t ? e : t), -1 / 0),
+                          _ = t(o, h, c, s, u, p, m, g);
+                        if (!_) {
+                          for (let e = 1; e <= s.length; e++)
+                            if (
+                              (_ = t(
+                                o,
+                                h,
+                                c,
+                                s.slice(0, -1 * e).concat(l),
+                                u,
+                                p,
+                                m,
+                                g,
+                              ))
+                            ) {
+                              d = !0;
+                              break;
+                            }
+                          _ || ((d = !0), (_ = [l]));
+                        }
+                        if (d) {
+                          let e = _[_.length - 1];
+                          for (_ = _.slice(0, -1); _.length < a.length; )
+                            _.push(0);
+                          _[_.length - 1] = e;
+                        }
+                        return { realWidths: _, moreShown: d };
+                      })(
+                        r,
+                        _,
+                        { sameWidthButtons: M, stretchButtonsToMenuWidth: R },
+                        b,
+                        E.concat(O),
+                      );
+                      return (
+                        (_.realWidths = x.realWidths),
+                        (_.isMoreShown = x.moreShown),
+                        (_.menuItemIds = E),
+                        (_.hoverState = f(y, "hover", !1)),
+                        { measures: _, domNodes: b }
+                      );
+                    },
+                    patch: (e, t, i) => {
+                      let n = i[e];
+                      p(n, { overflowX: "visible" });
+                      let { menuItemIds: a, needToOpenMenuUp: o } = t,
+                        s = a.concat(O);
+                      _(n, { dropmode: o ? "dropUp" : "dropDown" });
+                      let l = 0;
+                      if (t.hoverState === O) {
+                        let e,
+                          r,
+                          n = t.realWidths.indexOf(0),
+                          o =
+                            t.menuItems[
+                              ((e = t.menuItems),
+                              (r = (e) => e.menuIndex === n),
+                              Object.keys(e).find((t) => r(e[t], t)))
+                            ],
+                          s = o.moreIndex,
+                          h = s === a.length - 1;
+                        (o.moreDOMid &&
+                          g(i[o.moreDOMid], {
+                            "data-listposition": h ? "dropLonely" : "top",
+                          }),
+                          Object.values(t.menuItems)
+                            .filter((e) => !!e.moreDOMid)
+                            .forEach((e) => {
+                              if (e.moreIndex < s)
+                                p(i[e.moreDOMid], { display: "none" });
+                              else {
+                                let i = \`\${e.moreDOMid}label\`;
+                                l = Math.max(t.labels[i].width, l);
+                              }
+                            }));
+                      } else
+                        t.hoverState &&
+                          t.moreSubItem.forEach((i, r) => {
+                            let n = \`\${e + C + r}label\`;
+                            l = Math.max(t.labels[n].width, l);
+                          });
+                      (((e, t, i, n) => {
+                        let { hoverState: a } = t;
+                        if ("-1" !== a) {
+                          let { menuItemIds: o } = t,
+                            s = o.indexOf(a);
+                          if (r(t.hoverState) || a === O) {
+                            if (!t.realWidths) return;
+                            let a = Math.max(
+                                n,
+                                t.children[-1 !== s ? e + s : e + O].width,
+                              ),
+                              o = Math.max(
+                                n,
+                                t.children[\`\${e}dropWrapper\`].width,
+                              ),
+                              l =
+                                (0 !== t.moreSubItem.length
+                                  ? t.labels[\`\${t.moreSubItem[0]}label\`]
+                                      .lineHeight
+                                  : 0) +
+                                15 +
+                                t.menuBorderY +
+                                t.labelPad +
+                                t.menuButtonBorder;
+                            t.moreSubItem.forEach((e) => {
+                              (p(i[e], { minWidth: \`\${a}px\` }),
+                                p(i[\`\${e}label\`], {
+                                  minWidth: "0px",
+                                  lineHeight: \`\${l}px\`,
+                                }));
+                            });
+                            let h = r(t.hoverState) ? t.hoverState : "__more__",
+                              c = {
+                                width: t.children[e + h].width,
+                                left: t.children[e + h].left,
+                              },
+                              d = ((e, t, i, r, n) => {
+                                let {
+                                    width: a,
+                                    height: o,
+                                    alignButtons: s,
+                                    hoverListPosition: l,
+                                    menuItemContainerExtraPixels: h,
+                                  } = t,
+                                  c = t.absoluteLeft,
+                                  d = ((e, t, i, r, n, a, o, s, l, h) => {
+                                    let c = "0px",
+                                      d = "auto",
+                                      u = a.left,
+                                      m = a.width;
+                                    if (
+                                      ("left" === t
+                                        ? (c =
+                                            "left" === n
+                                              ? 0
+                                              : \`\${u + e.left}px\`)
+                                        : "right" === t
+                                          ? ((d =
+                                              "right" === n
+                                                ? 0
+                                                : \`\${r - u - m - e.right}px\`),
+                                            (c = "auto"))
+                                          : "left" === n
+                                            ? (c = \`\${u + (m + e.left - i) / 2}px\`)
+                                            : "right" === n
+                                              ? ((c = "auto"),
+                                                (d = \`\${(m + e.right - (i + e.width)) / 2}px\`))
+                                              : (c = \`\${e.left + u + (m - (i + e.width)) / 2}px\`),
+                                      "auto" !== c)
+                                    ) {
+                                      let e = o + parseInt(c, 10);
+                                      e + h > l
+                                        ? ((c = "auto"), (d = 0))
+                                        : (c = e < 0 ? 0 : c);
+                                    }
+                                    return (
+                                      "auto" !== d &&
+                                        (d = s - parseInt(d, 10) > l ? 0 : d),
+                                      {
+                                        moreContainerLeft: c,
+                                        moreContainerRight: d,
+                                      }
+                                    );
+                                  })(
+                                    h,
+                                    s,
+                                    r,
+                                    a,
+                                    l,
+                                    i,
+                                    c,
+                                    c + a,
+                                    t.bodyClientWidth,
+                                    n,
+                                  );
+                                return {
+                                  left: d.moreContainerLeft,
+                                  right: d.moreContainerRight,
+                                  top: t.needToOpenMenuUp ? "auto" : \`\${o}px\`,
+                                  bottom: t.needToOpenMenuUp
+                                    ? \`\${o}px\`
+                                    : "auto",
+                                };
+                              })(0, t, c, a, o);
+                            (p(i[\`\${e}\${C}\`], { left: d.left, right: d.right }),
+                              p(i[\`\${e}dropWrapper\`], {
+                                left: d.left,
+                                right: d.right,
+                                top: d.top,
+                                bottom: d.bottom,
+                              }));
+                          }
+                        }
+                      })(e, t, i, l),
+                        t.originalGapBetweenTextAndBtn &&
+                          s.forEach((r) => {
+                            t.hasOriginalGapData[r] ||
+                              _(i[\`\${e}\${r}\`], {
+                                originalGapBetweenTextAndBtn:
+                                  t.originalGapBetweenTextAndBtn[\`\${e}\${r}\`],
+                              });
+                          }),
+                        ((e, t, i, r) => {
+                          let {
+                              realWidths: n,
+                              height: a,
+                              menuItemContainerExtraPixels: o,
+                            } = i,
+                            s = 0,
+                            l = null,
+                            h = null,
+                            c = i.lineHeight,
+                            d = a - o.height;
+                          for (let a = 0; a < r.length; a++) {
+                            let o = n[a],
+                              u = o > 0,
+                              m = e + r[a];
+                            ((h = i.linkIds[m]),
+                              u
+                                ? (s++,
+                                  (l = m),
+                                  p(t[m], {
+                                    width: \`\${o}px\`,
+                                    height: \`\${d}px\`,
+                                    position: "relative",
+                                    "box-sizing": "border-box",
+                                    overflow: "visible",
+                                    visibility: "inherit",
+                                  }),
+                                  p(t[\`\${m}label\`], { "line-height": c }),
+                                  g(t[m], { "aria-hidden": !1 }))
+                                : (p(t[m], {
+                                    height: "0px",
+                                    overflow: "hidden",
+                                    position: "absolute",
+                                    visibility: "hidden",
+                                  }),
+                                  g(t[m], { "aria-hidden": !0 }),
+                                  g(t[h], { tabIndex: -1 })));
+                          }
+                          1 === s &&
+                            (_(t[\`\${e}moreContainer\`], {
+                              listposition: "lonely",
+                            }),
+                            _(t[l], { listposition: "lonely" }));
+                        })(e, i, t, s));
+                    },
+                  };
+                })(i);
+                return class extends e {
+                  static get observedAttributes() {
+                    return ["data-hovered-item"];
+                  }
+                  attributeChangedCallback() {
+                    this._isVisible() && this.reLayout();
+                  }
+                  connectedCallback() {
+                    ((this._id = this.getAttribute("id")),
+                      this._hideElement(),
+                      this._waitForDomLoad().then(() => {
+                        (super.observeResize(),
+                          this._observeChildrenResize(),
+                          this.reLayout());
+                      }));
+                  }
+                  disconnectedCallback() {
+                    (t.mutationService.clear(this._mutationIds.read),
+                      t.mutationService.clear(this._mutationIds.write),
+                      super.disconnectedCallback());
+                  }
+                  _waitForDomLoad() {
+                    let e,
+                      t = new Promise((t) => {
+                        e = t;
+                      });
+                    return (
+                      this._isDomReady()
+                        ? e()
+                        : ((this._waitForDomReadyObserver =
+                            new i.MutationObserver(() =>
+                              this._onRootMutate(e),
+                            )),
+                          this._waitForDomReadyObserver.observe(this, {
+                            childList: !0,
+                            subtree: !0,
+                          })),
+                      t
+                    );
+                  }
+                  _isDomReady() {
+                    return (
+                      (this._itemsContainer = this.getRootNode().getElementById(
+                        \`\${this._id}itemsContainer\`,
+                      )),
+                      (this._dropContainer = this.getRootNode().getElementById(
+                        \`\${this._id}dropWrapper\`,
+                      )),
+                      this._itemsContainer && this._dropContainer
+                    );
+                  }
+                  _onRootMutate(e) {
+                    this._isDomReady() &&
+                      (this._waitForDomReadyObserver.disconnect(), e());
+                  }
+                  _observeChildrenResize() {
+                    let e = Array.from(this._itemsContainer.childNodes);
+                    ((this._labelItems = e.map((e) =>
+                      this.getRootNode().getElementById(
+                        \`\${e.getAttribute("id")}label\`,
+                      ),
+                    )),
+                      this._labelItems.forEach((e) =>
+                        super.observeChildResize(e),
+                      ));
+                  }
+                  _setVisibility(e) {
+                    ((this._visible = e),
+                      (this.style.visibility = e ? "inherit" : "hidden"));
+                  }
+                  _isVisible() {
+                    return this._visible;
+                  }
+                  _hideElement() {
+                    this._setVisibility(!1);
+                  }
+                  _showElement() {
+                    this._setVisibility(!0);
+                  }
+                  reLayout() {
+                    let e, i;
+                    (t.mutationService.clear(this._mutationIds.read),
+                      t.mutationService.clear(this._mutationIds.write),
+                      (this._mutationIds.read = t.mutationService.measure(
+                        () => {
+                          let t = r.measure(this._id, this);
+                          ((e = t.measures), (i = t.domNodes));
+                        },
+                      )),
+                      (this._mutationIds.write = t.mutationService.mutate(
+                        () => {
+                          (r.patch(this._id, e, i), this._showElement());
+                        },
+                      )));
+                  }
+                  constructor(...e) {
+                    (super(...e),
+                      R(this, "_visible", !1),
+                      R(this, "_mutationIds", { read: null, write: null }),
+                      R(this, "_itemsContainer", null),
+                      R(this, "_dropContainer", null),
+                      R(this, "_labelItems", []));
+                  }
+                };
+              })(L(e), { resizeService: t, mutationService: n() }, e);
+            e.customElements.define(M, i);
+          }
+        },
+        x = "wix-iframe",
+        G = (e = globalThis.window) => {
+          if (e && void 0 === e.customElements.get(x)) {
+            var t;
+            let i =
+              ((t = L(e)),
+              class extends t {
+                reLayout() {
+                  let e = this.querySelector("iframe");
+                  if (e) {
+                    let t = e.dataset.src;
+                    t &&
+                      e.src !== t &&
+                      ((e.src = t),
+                      (e.dataset.src = ""),
+                      (this.dataset.src = ""));
+                  }
+                }
+                attributeChangedCallback(e, t, i) {
+                  i && this.reLayout();
+                }
+                static get observedAttributes() {
+                  return ["data-src"];
+                }
+                constructor() {
+                  super();
+                }
+              });
+            E(e, x, i);
+          }
+        },
+        N = {
+          measure(
+            e,
+            t,
+            {
+              hasBgScrollEffect: i,
+              videoWidth: r,
+              videoHeight: n,
+              fittingType: a,
+              alignType: o = "center",
+              qualities: s,
+              staticVideoUrl: l,
+              videoId: h,
+              videoFormat: c,
+              focalPoint: m,
+            },
+          ) {
+            var g, p, f, _, b, I, E, w, L, v;
+            let A,
+              y,
+              O,
+              C = i ? t.offsetWidth : e.parentElement.offsetWidth,
+              R = e.parentElement.offsetHeight,
+              M = parseInt(r, 10),
+              S = parseInt(n, 10),
+              x =
+                ((g = a),
+                (p = { wScale: C / M, hScale: R / S }),
+                (f = M),
+                (_ = S),
+                {
+                  width: Math.round(
+                    f *
+                      (A =
+                        g === u.fittingTypes.SCALE_TO_FIT
+                          ? Math.min(p.wScale, p.hScale)
+                          : Math.max(p.wScale, p.hScale)),
+                  ),
+                  height: Math.round(_ * A),
+                }),
+              G =
+                ((b = (function (e, { width: t, height: i }) {
+                  var r;
+                  return (
+                    ((r = (e) => e.size),
+                    Object.values(
+                      e.reduce((e, t) => ((e[r(t)] = t), e), {}),
+                    )).find((e) => e.size > t * i) || e[e.length - 1]
+                  );
+                })(s, x)),
+                (I = l),
+                (E = h),
+                "mp4" === (w = c)
+                  ? b.url
+                    ? d(I, b.url)
+                    : d(I, E, b.quality, w, "file.mp4")
+                  : ""),
+              N =
+                ((L = e),
+                (v = G),
+                (y = L.networkState === L.NETWORK_NO_SOURCE),
+                (O = !L.currentSrc.endsWith(v)),
+                v && (O || y)),
+              P = T[a] || "cover",
+              F = m
+                ? (function (e, t, i) {
+                    let { width: r, height: n } = e,
+                      { width: a, height: o } = t,
+                      { x: s, y: l } = i;
+                    if (!a || !o) return \`\${s}% \${l}%\`;
+                    let h = Math.max(a / r, o / n),
+                      c = r * h,
+                      d = n * h,
+                      u = Math.max(0, Math.min(c - a, (s / 100) * c - a / 2)),
+                      m = Math.max(0, Math.min(d - o, (l / 100) * d - o / 2)),
+                      g = u && Math.floor((u / (c - a)) * 100),
+                      p = m && Math.floor((m / (d - o)) * 100);
+                    return \`\${g}% \${p}%\`;
+                  })(x, { width: C, height: R }, m)
+                : "",
+              k = o.replace("_", " ");
+            return {
+              videoSourceUrl: G,
+              needsSrcUpdate: N,
+              videoStyle: {
+                height: "100%",
+                width: "100%",
+                objectFit: P,
+                objectPosition: F || k,
+              },
+            };
+          },
+          mutate(e, t, i, r, n, a, o, s, l, h, c) {
+            var d, u, m;
+            if (
+              (n
+                ? i.setAttribute("autoplay", "")
+                : i.removeAttribute("autoplay"),
+              t)
+            ) {
+              let { width: e, height: i, ...n } = r;
+              p(t, n);
+            } else
+              ((function (e, t, i, r, n, a) {
+                a &&
+                  t.paused &&
+                  ((i.style.opacity = "1"), (t.style.opacity = "0"));
+                let o = t.paused || "" === t.currentSrc;
+                if ((e || a) && o)
+                  if (
+                    ((t.ontimeupdate = null),
+                    (t.onseeked = null),
+                    (t.onplay = null),
+                    !a && n)
+                  ) {
+                    let e = t.muted;
+                    ((t.muted = !0),
+                      (t.ontimeupdate = () => {
+                        t.currentTime > 0 &&
+                          ((t.ontimeupdate = null),
+                          (t.onseeked = () => {
+                            ((t.onseeked = null), (t.muted = e), P(t, i, r));
+                          }),
+                          (t.currentTime = 0));
+                      }));
+                  } else
+                    t.onplay = () => {
+                      (a || (t.onplay = null), P(t, i, r));
+                    };
+              })(o, i, e, s, n, c),
+                p(i, r));
+            ((d = o),
+              (u = i),
+              (m = a),
+              d && ((u.src = m), u.load()),
+              (i.playbackRate = h));
+          },
+        };
+      function P(e, t, i) {
+        ("fade" === i && (t.style.transition = "opacity 1.6s ease-out"),
+          (t.style.opacity = "0"),
+          (e.style.opacity = "1"));
+      }
+      let F = "wix-video",
+        k = (e = globalThis.window, t, i = { experiments: {} }) => {
+          if (e && void 0 === e.customElements.get(F)) {
+            var r, n;
+            let a = L(e),
+              o = new IntersectionObserver(
+                (e) =>
+                  e.map((e) => {
+                    if (e.isIntersecting) {
+                      let t = e.target;
+                      (t.unobserveIntersect(), t.observeResize());
+                    }
+                    return e;
+                  }),
+                { rootMargin: "50% 100%" },
+              );
+            E(
+              e,
+              F,
+              ((r = a),
+              (n = { ...t, intersectionObserver: o }),
+              class extends r {
+                connectedCallback() {
+                  i.disableImagesLazyLoading
+                    ? this.reLayout()
+                    : n.intersectionObserver.observe(this);
+                }
+                disconnectedCallback() {
+                  (this.unobserveResize(),
+                    this.unobserveIntersect(),
+                    this.unobserveChildren());
+                }
+                unobserveIntersect() {
+                  n.intersectionObserver?.unobserve(this);
+                }
+                reLayout() {
+                  let {
+                    isVideoDataExists: e,
+                    videoWidth: t,
+                    videoHeight: r,
+                    qualities: a,
+                    videoId: o,
+                    videoFormat: s,
+                    alignType: l,
+                    fittingType: h,
+                    focalPoint: c,
+                    hasBgScrollEffect: d,
+                    autoPlay: u,
+                    animatePoster: m,
+                    containerId: g,
+                    isEditorMode: p,
+                    playbackRate: f,
+                    hasAlpha: _,
+                  } = JSON.parse(this.dataset.videoInfo);
+                  if (!e) return;
+                  let b = !i.prefersReducedMotion && u,
+                    T = this.querySelector(\`video[id^="\${g}"]\`),
+                    E = this.querySelector(\`.bgVideoposter[id^="\${g}"]\`);
+                  if ((this.unobserveChildren(), !(T && E)))
+                    return void this.observeChildren(this);
+                  let w = (0, I.qc)(g, {
+                      document: this.getRootNode(),
+                      experiments: i.experiments,
+                      logger: i.logger,
+                    }),
+                    L = (0, I.iT)(\`.webglcanvas[id^="\${g}"]\`, {
+                      element: w,
+                      experiments: i.experiments,
+                      logger: i.logger,
+                    });
+                  (_ || "true" === w.dataset.hasAlpha) && !L
+                    ? requestAnimationFrame(() => this.reLayout())
+                    : n.mutationService.measure(() => {
+                        let {
+                          videoSourceUrl: e,
+                          needsSrcUpdate: u,
+                          videoStyle: g,
+                        } = N.measure(T, w, {
+                          hasBgScrollEffect: d,
+                          videoWidth: t,
+                          videoHeight: r,
+                          fittingType: h,
+                          alignType: l,
+                          qualities: a,
+                          staticVideoUrl: i.staticVideoUrl,
+                          videoId: o,
+                          videoFormat: s,
+                          focalPoint: c,
+                        });
+                        n.mutationService.mutate(() => {
+                          N.mutate(E, L, T, g, b, e, u, m, s, f, p);
+                        });
+                      });
+                }
+                attributeChangedCallback(e, t) {
+                  t && this.reLayout();
+                }
+                static get observedAttributes() {
+                  return ["data-video-info"];
+                }
+                constructor() {
+                  super();
+                }
+              }),
+            );
+          }
+        };
+    },
+    46418(e, t, i) {
+      var r = i(17709),
+        n = i.n(r),
+        a = i(33842),
+        o = i(26350),
+        s = i(16858);
+      let l = o,
+        h = function (e, t = window) {
+          !(function (e) {
+            if (
+              void 0 === e.Reflect ||
+              void 0 === e.customElements ||
+              e.customElements.hasOwnProperty("polyfillWrapFlushCallback")
+            )
+              return;
+            let t = e.HTMLElement;
+            ((e.HTMLElement = function () {
+              return e.Reflect.construct(t, [], this.constructor);
+            }),
+              (e.HTMLElement.prototype = t.prototype),
+              (e.HTMLElement.prototype.constructor = e.HTMLElement),
+              e.Object.setPrototypeOf(e.HTMLElement, t),
+              e.Object.defineProperty(e.HTMLElement, "name", {
+                value: t.name,
+              }));
+          })(t);
+          let i = {
+            registry: new Set(),
+            observe(e) {
+              i.registry.add(e);
+            },
+            unobserve(e) {
+              i.registry.delete(e);
+            },
+          };
+          e.windowResizeService.init(
+            (0, s.vk)(() => i.registry.forEach((e) => e.reLayout())),
+            t,
+          );
+          let r = (0, s.Aq)(),
+            n = (e, i) => {
+              void 0 === t.customElements.get(e) &&
+                t.customElements.define(e, i);
+            },
+            a = (0, s.yO)({ resizeService: r }, t);
+          return (
+            (t.customElementNamespace = { WixElement: a }),
+            n("wix-element", a),
+            {
+              contextWindow: t,
+              defineWixBgMedia: (e) => {
+                n(
+                  "wix-bg-media",
+                  (0, s.NL)(a, { windowResizeService: i, ...e }, t),
+                );
+              },
+              defineMultiColumnRepeaterElement: () => {
+                let e = (0, s._o)();
+                n(s.KU, e);
+              },
+            }
+          );
+        };
+      var c = i(91534);
+      let d = () => ({
+          getSiteScale: () => {
+            let e = document.querySelector("#site-root");
+            return e ? e.getBoundingClientRect().width / e.offsetWidth : 1;
+          },
+        }),
+        u = (e, t, i, r) => {
+          let { getMediaDimensions: n, ...o } = a[e] || {};
+          return n ? { ...n(t, i, r), ...o } : { width: t, height: i, ...o };
+        },
+        { experiments: m, media: g, requestUrl: p } = window.viewerModel;
+      ((e, t, i, r) => {
+        var a, o, s;
+        let m,
+          g,
+          p,
+          f,
+          _,
+          b,
+          {
+            environmentConsts: T,
+            wixCustomElements: I,
+            media: E,
+            requestUrl: w,
+            mediaServices: L,
+          } = ((a = void 0),
+          (o = void 0),
+          (s = void 0),
+          (g = {
+            "specs.thunderbolt.useClassSelectorsForLookup": (m = (t) =>
+              !!e.experiments[t])(
+              "specs.thunderbolt.useClassSelectorsForLookup",
+            ),
+            "specs.thunderbolt.addIdAsClassName": m(
+              "specs.thunderbolt.addIdAsClassName",
+            ),
+          }),
+          (p = {
+            staticMediaUrl: e.media.staticMediaUrl,
+            mediaRootUrl: e.media.mediaRootUrl,
+            experiments: g,
+            isViewerMode: !0,
+            devicePixelRatio: /iemobile/i.test(navigator.userAgent)
+              ? Math.round(
+                  window.screen.availWidth /
+                    (window.screen.width ||
+                      window.document.documentElement.clientWidth),
+                )
+              : window.devicePixelRatio,
+            ...s,
+          }),
+          (_ = {
+            getMediaDimensionsByEffect: u,
+            ...(f = {
+              mutationService: n(),
+              isExperimentOpen: m,
+              siteService: d(),
+            }),
+            ...o,
+          }),
+          {
+            ...e,
+            wixCustomElements:
+              a ||
+              ((b = d()),
+              h({
+                resizeService: { init: (e) => new ResizeObserver(e) },
+                windowResizeService: {
+                  init: (e) => window.addEventListener("resize", e),
+                },
+                siteService: b,
+              })),
+            services: f,
+            environmentConsts: p,
+            mediaServices: _,
+          }),
+          v = I?.contextWindow || window;
+        ((v.wixCustomElements = I),
+          Object.assign(v.customElementNamespace, {
+            mediaServices: L,
+            environmentConsts: T,
+            requestUrl: w,
+            staticVideoUrl: E.staticVideoUrl,
+          }),
+          (0, c.g)({ ...L }, I.contextWindow, T),
+          I.defineWixBgMedia(L),
+          I.defineMultiColumnRepeaterElement(),
+          (window.__imageClientApi__ = l));
+      })({ experiments: m, media: g, requestUrl: p });
+    },
+    13176(e, t, i) {
+      i.d(t, { z: () => r });
+      let r = [
+        "MENU_AS_CONTAINER_TOGGLE",
+        "MENU_AS_CONTAINER_EXPANDABLE_MENU",
+        "BACK_TO_TOP_BUTTON",
+        "SCROLL_TO_",
+        "TPAMultiSection_",
+        "TPASection_",
+        "comp-",
+        "TINY_MENU",
+        "MENU_AS_CONTAINER",
+        "SITE_HEADER",
+        "SITE_FOOTER",
+        "SITE_PAGES",
+        "PAGES_CONTAINER",
+        "BACKGROUND_GROUP",
+        "POPUPS_ROOT",
+      ];
+    },
+    69654(e, t, i) {
+      i.d(t, {
+        C5: () => h,
+        Xx: () => c,
+        ZH: () => l,
+        hW: () => m,
+        iT: () => d,
+        kp: () => g,
+        qc: () => s,
+        vP: () => u,
+      });
+      var r = i(13176);
+      function n(e = {}) {
+        let t = e?.experiments;
+        if (!t && "undefined" != typeof window)
+          try {
+            let e = window;
+            t = e.viewerModel?.experiments;
+          } catch {}
+        if (!t) return !1;
+        let i = t["specs.thunderbolt.useClassSelectorsForLookup"],
+          r = t["specs.thunderbolt.addIdAsClassName"];
+        return !!(i && r);
+      }
+      function a(e = {}) {
+        return e.document || ("undefined" != typeof document ? document : null);
+      }
+      function o(e, t, i) {
+        (e &&
+          "function" == typeof e.meter &&
+          e.meter("dom_selector_id_fallback", {
+            customParams: { compId: t, selectorType: i },
+          }),
+          "undefined" != typeof console &&
+            console.warn &&
+            console.warn(\`[DOM Selectors] Fallback to ID for '\${t}' (\${i}).\`));
+      }
+      function s(e, t = {}) {
+        let i = a(t);
+        if (!i || !e || "string" != typeof e) return null;
+        let r = n(t);
+        if (r) {
+          let t = i.querySelector(\`.\${e}\`);
+          if (t) return t;
+        }
+        let l = i.getElementById(e);
+        return (l && r && o(t?.logger, e, "getElementById"), l);
+      }
+      function l(e, t = {}) {
+        if (!e) return "";
+        if (!n(t)) return e.id;
+        let i = Array.from(e.classList || []),
+          a = t.experiments?.["specs.thunderbolt.preserveWixSelectClass"];
+        if (t.isEditor && a && !i.includes("wix-select")) return "";
+        if (t.componentIds?.size) {
+          let e = null;
+          for (let r of i) {
+            if (t.componentIds.has(r)) return r;
+            if (!e) {
+              let i = r.indexOf("__");
+              if (i > 0) {
+                let n = r.substring(0, i);
+                t.componentIds.has(n) && (e = r);
+              }
+            }
+          }
+          if (e) return e;
+        }
+        let s = null;
+        for (let e of i)
+          if (r.z.some((t) => e.startsWith(t))) {
+            if (e.includes("__")) return e;
+            (!s || e.length < s.length) && (s = e);
+          }
+        return s || (e.id && o(t.logger, e.id, "getElementCompId"), e.id || "");
+      }
+      function h(e) {
+        return e
+          .replace(/#([a-zA-Z0-9_-]+)/g, ".$1")
+          .replace(/\[id="([^"]+)"\]/g, '[class~="$1"]')
+          .replace(/\[id\^="([^"]+)"\]/g, ':is([class^="$1"],[class*=" $1"])')
+          .replace(/\[id\*="([^"]+)"\]/g, '[class*="$1"]')
+          .replace(/\[id\$="([^"]+)"\]/g, '[class$="$1"]');
+      }
+      function c(e, t) {
+        if (!t) return e;
+        let i = h(e);
+        return \`:is(\${i}, \${e})\`;
+      }
+      function d(e, t = {}) {
+        let i = t.element || a(t);
+        if (!i || !e || "string" != typeof e) return null;
+        let r = n(t);
+        if (r) {
+          let t = h(e),
+            r = i.querySelector(t);
+          if (r) return r;
+        }
+        let s = i.querySelector(e);
+        return (s && r && o(t.logger, e, "querySelector"), s);
+      }
+      function u(e, t = {}) {
+        let i = t.element || a(t);
+        if (!i || !e || "string" != typeof e) return [];
+        let r = n(t);
+        if (r) {
+          let t = h(e),
+            r = Array.from(i.querySelectorAll(t));
+          if (r.length > 0) return r;
+        }
+        let s = Array.from(i.querySelectorAll(e));
+        return (s.length > 0 && r && o(t.logger, e, "querySelectorAll"), s);
+      }
+      function m(e, t, i = {}) {
+        if (!t || "string" != typeof t) return null;
+        let r = n(i);
+        if (r) {
+          let i = e.closest(\`.\${t}\`);
+          if (i) return i;
+        }
+        let a = e.closest(\`#\${t}\`);
+        return (a && r && o(i.logger, t, "getClosestByCompId"), a);
+      }
+      function g(e, t, i = {}) {
+        if (!t || "string" != typeof t) return null;
+        let r = n(i);
+        if (r) {
+          let i = h(t),
+            r = e.closest(i);
+          if (r) return r;
+        }
+        let a = e.closest(t);
+        return (a && r && o(i.logger, t, "closest"), a);
+      }
+    },
+  },
+]);
+//# sourceMappingURL=custom-element-utils.inline.56abf6e5.bundle.min.js.map
+  `,
+  String.raw`
+"use strict";
+(self.webpackJsonp__wix_thunderbolt_app =
+  self.webpackJsonp__wix_thunderbolt_app || []).push([
+  ["6901"],
+  {
+    33842(e, t, i) {
+      (i.r(t),
+        i.d(t, {
+          BackgroundParallax: () => n,
+          BackgroundParallaxZoom: () => o,
+          BackgroundReveal: () => l,
+          BgCloseUp: () => c,
+          BgExpand: () => d,
+          BgFabeBack: () => h,
+          BgFadeIn: () => u,
+          BgFadeOut: () => g,
+          BgFake3D: () => m,
+          BgPanLeft: () => f,
+          BgPanRight: () => b,
+          BgParallax: () => p,
+          BgPullBack: () => v,
+          BgReveal: () => w,
+          BgRotate: () => y,
+          BgShrink: () => M,
+          BgSkew: () => x,
+          BgUnwind: () => I,
+          BgZoomIn: () => P,
+          BgZoomOut: () => L,
+          ImageParallax: () => S,
+          ImageReveal: () => D,
+        }));
+      var a = i(16956);
+      let s = (e, t) => ({ width: e, height: t }),
+        r = (e, t, i) => ({ width: e, height: Math.max(t, i) }),
+        n = { hasParallax: !0, getMediaDimensions: r },
+        o = { hasParallax: !0, getMediaDimensions: r },
+        l = { hasParallax: !0, getMediaDimensions: r },
+        c = { getMediaDimensions: s },
+        d = { getMediaDimensions: s },
+        h = { getMediaDimensions: s },
+        u = { getMediaDimensions: s },
+        g = { getMediaDimensions: s },
+        m = { hasParallax: !0, getMediaDimensions: r },
+        f = { getMediaDimensions: (e, t) => ({ width: 1.2 * e, height: t }) },
+        b = { getMediaDimensions: (e, t) => ({ width: 1.2 * e, height: t }) },
+        p = { hasParallax: !0, getMediaDimensions: r },
+        v = { getMediaDimensions: s },
+        w = { hasParallax: !0, getMediaDimensions: r },
+        y = {
+          getMediaDimensions: (e, t) => {
+            let i, s, r, n, o;
+            return (
+              (i = (0, a.kU)(22)),
+              (s = Math.hypot(e, t) / 2),
+              (r = Math.acos(e / 2 / s)),
+              (n = e * Math.abs(Math.cos(i)) + t * Math.abs(Math.sin(i))),
+              (o = e * Math.abs(Math.sin(i)) + t * Math.abs(Math.cos(i))),
+              {
+                width: Math.ceil(i < r ? n : 2 * s),
+                height: Math.ceil(i < (0, a.kU)(90) - r ? o : 2 * s),
+              }
+            );
+          },
+        },
+        M = { getMediaDimensions: s },
+        x = {
+          getMediaDimensions: (e, t) => ({
+            width: e,
+            height: e * Math.tan((0, a.kU)(20)) + t,
+          }),
+        },
+        I = { getMediaDimensions: s },
+        P = { hasParallax: !0, getMediaDimensions: r },
+        L = {
+          getMediaDimensions: (e, t) => ({ width: 1.15 * e, height: 1.15 * t }),
+        },
+        S = { getMediaDimensions: (e, t) => ({ width: e, height: 1.5 * t }) },
+        D = { getMediaDimensions: (e, t, i) => ({ width: e, height: i }) };
+    },
+    16956(e, t, i) {
+      function a(e, t, i, a, s) {
+        return ((s - e) * (a - i)) / (t - e) + i;
+      }
+      function s(e, t) {
+        let [i, a] = e,
+          [s, r] = t;
+        return Math.sqrt((s - i) ** 2 + (r - a) ** 2);
+      }
+      function r(e) {
+        return (e * Math.PI) / 180;
+      }
+      function n(e, t, i) {
+        return (
+          void 0 === e && (e = [0, 0]),
+          void 0 === t && (t = [0, 0]),
+          void 0 === i && (i = 0),
+          (360 + i + (180 * Math.atan2(t[1] - e[1], t[0] - e[0])) / Math.PI) %
+            360
+        );
+      }
+      i.d(t, { Io: () => s, Rb: () => n, _b: () => a, kU: () => r });
+    },
+    91534(e, t, i) {
+      i.d(t, { g: () => f });
+      var a = i(26350);
+      let s = {
+          columnCount: 1,
+          columns: 1,
+          fontWeight: 1,
+          lineHeight: 1,
+          opacity: 1,
+          zIndex: 1,
+          zoom: 1,
+        },
+        r = (e, t) =>
+          (Array.isArray(t) ? t : [t]).reduce((t, i) => {
+            let a = e[i];
+            return void 0 !== a ? Object.assign(t, { [i]: a }) : t;
+          }, {}),
+        n = (e, t) =>
+          e &&
+          t &&
+          Object.keys(t).forEach((i) => {
+            let a = t[i];
+            if (void 0 !== a)
+              e.style[i] =
+                "number" != typeof a || s[i] ? a.toString() : \`\${a}px\`;
+            else e.style.removeProperty(i);
+          }),
+        o = (e, t, i) => {
+          if (!e.targetWidth || !e.targetHeight || !e.imageData.uri)
+            return { uri: "", css: {}, transformed: !1 };
+          let { imageData: s } = e,
+            n = e.displayMode || a.fittingTypes.SCALE_TO_FILL,
+            o = Object.assign(
+              r(s, ["upscaleMethod"]),
+              r(e, ["filters", "encoding", "allowFullGIFTransformation"]),
+              e.quality || s.quality,
+              { hasAnimation: e?.hasAnimation || s?.hasAnimation },
+            ),
+            d = c(e.imageData.devicePixelRatio || t.devicePixelRatio),
+            h = Object.assign(
+              r(s, ["width", "height", "crop", "name", "focalPoint"]),
+              { id: s.uri },
+            ),
+            u = {
+              width: e.targetWidth,
+              height: e.targetHeight,
+              htmlTag: i || "img",
+              pixelAspectRatio: d,
+              alignment: e.alignType || a.alignTypes.CENTER,
+            },
+            g = (0, a.getData)(n, h, u, o);
+          return ((g.uri = l(g.uri, t.staticMediaUrl, t.mediaRootUrl)), g);
+        },
+        l = (e, t, i) => {
+          if (/(^https?)|(^data)|(^blob)|(^\/\/)/.test(e)) return e;
+          let a = \`\${t}/\`;
+          return (
+            e &&
+              (/^micons\//.test(e)
+                ? (a = i)
+                : /[^.]+$/.exec(e)?.[0] === "ico" &&
+                  (a = a.replace("media", "ficons"))),
+            a + e
+          );
+        },
+        c = (e) => {
+          let t = window.location.search
+            .split("&")
+            .map((e) => e.split("="))
+            .find((e) => e[0]?.toLowerCase().includes("devicepixelratio"));
+          return (t?.[1] ? Number(t[1]) : null) || e || 1;
+        },
+        d = function (
+          e,
+          t,
+          i,
+          { containerElm: a, bgEffect: s = "none", sourceSets: r },
+          n,
+        ) {
+          var o, l;
+          let c,
+            d = i.image,
+            h = i[e],
+            u =
+              n.getScreenHeightOverride?.() ||
+              document.documentElement.clientHeight ||
+              window.innerHeight ||
+              0,
+            g = a?.dataset.mediaHeightOverrideType,
+            m = (s && "none" !== s) || (r && r.some((e) => e.scrollEffect)),
+            f = a && m ? a : h,
+            b = window
+              .getComputedStyle(h)
+              .getPropertyValue("--bg-scrub-effect"),
+            { width: p, height: v } = n.getMediaDimensionsByEffect?.(
+              b || s,
+              f.offsetWidth,
+              f.offsetHeight,
+              u,
+            ) || { width: h.offsetWidth, height: h.offsetHeight };
+          if (
+            (r &&
+              ((o = f.offsetWidth),
+              (l = f.offsetHeight),
+              (c = {}),
+              r.forEach(({ mediaQuery: e, scrollEffect: t }) => {
+                c[e] = n.getMediaDimensionsByEffect?.(t, o, l, u).height || l;
+              }),
+              (t.sourceSetsTargetHeights = c)),
+            !d)
+          )
+            return;
+          let w = d.getAttribute("src");
+          (b &&
+            ((t.top = 0.5 * (h.offsetHeight - v)),
+            (t.left = 0.5 * (h.offsetWidth - p))),
+            (t.width = p),
+            (t.height =
+              "fixed" === g || "viewport" === g
+                ? document.documentElement.clientHeight + 80
+                : v),
+            (t.screenHeight = u),
+            (t.imgSrc = w),
+            (t.boundingRect = h.getBoundingClientRect()),
+            (t.mediaHeightOverrideType = g),
+            (t.srcset = d.srcset));
+        },
+        h = function (e, t, i, s, r, l, c, d, h, u) {
+          if (!Object.keys(t).length) return;
+          let { imageData: g } = s,
+            m = i[e],
+            f = i.image;
+          h && (g.devicePixelRatio = 1);
+          let b = s.targetScale || 1,
+            p = r.isExperimentOpen?.(
+              "specs.thunderbolt.allowFullGIFTransformation",
+            ),
+            v = {
+              ...s,
+              ...(!s.skipMeasure && {
+                targetWidth: (t.width || 0) * b,
+                targetHeight: (t.height || 0) * b,
+              }),
+              displayMode: g.displayMode,
+              allowFullGIFTransformation: p,
+            },
+            w = o(v, l, "img"),
+            y = w?.css?.img || {};
+          (n(
+            f,
+            (function (e, t, i, a, s) {
+              let r = (function (e, t = 1) {
+                return 1 !== t ? { ...e, width: "100%", height: "100%" } : e;
+              })(t, a);
+              if ((s && (delete r.height, (r.width = "100%")), !e)) return r;
+              let n = { ...r };
+              return (
+                "fill" === i
+                  ? ((n.position = "absolute"), (n.top = "0"))
+                  : "fit" === i && (n.height = "100%"),
+                "fixed" === e && (n["will-change"] = "transform"),
+                n.objectPosition &&
+                  (n.objectPosition = t.objectPosition.replace(
+                    /(center|bottom)$/,
+                    "top",
+                  )),
+                n
+              );
+            })(t.mediaHeightOverrideType, y, g.displayMode, b, d),
+          ),
+            (t.top || t.left) &&
+              n(m, { top: \`\${t.top}px\`, left: \`\${t.left}px\` }));
+          let M = w?.uri || "",
+            x = g?.hasAnimation || s?.hasAnimation,
+            I = (function (e, t, i) {
+              let { sourceSets: a } = t;
+              if (!a || !a.length) return;
+              let s = {};
+              return (
+                a.forEach(({ mediaQuery: a, crop: r, focalPoint: n }) => {
+                  let l = o(
+                    {
+                      ...t,
+                      targetHeight: (e.sourceSetsTargetHeights || {})[a] || 0,
+                      imageData: { ...t.imageData, crop: r, focalPoint: n },
+                    },
+                    i,
+                    "img",
+                  );
+                  s[a] = l.uri || "";
+                }),
+                s
+              );
+            })(t, v, l);
+          if (
+            (u && (f.dataset.ssrSrcDone = "true"),
+            !s.isLQIP ||
+              !s.lqipTransition ||
+              "transitioned" in m.dataset ||
+              ((m.dataset.transitioned = ""),
+              f.complete
+                ? (f.onload = function () {
+                    f.dataset.loadDone = "";
+                  })
+                : (f.onload = function () {
+                    f.complete
+                      ? (f.dataset.loadDone = "")
+                      : (f.onload = function () {
+                          f.dataset.loadDone = "";
+                        });
+                  })),
+            c)
+          ) {
+            let e;
+            (((e = g.uri),
+            (0, a.getFileExtension)(e) === a.fileType.GIF ||
+              ((0, a.getFileExtension)(e) === a.fileType.WEBP && x))
+              ? (f.setAttribute("fetchpriority", "low"),
+                f.setAttribute("loading", "lazy"),
+                f.setAttribute("decoding", "async"))
+              : f.setAttribute("fetchpriority", "high"),
+              f.currentSrc !== M && f.setAttribute("src", M),
+              t.srcset &&
+                !t.srcset.split(", ").some((e) => e.split(" ")[0] === M) &&
+                f.setAttribute("srcset", M),
+              i.picture &&
+                v.sourceSets &&
+                Array.from(i.picture.querySelectorAll("source")).forEach(
+                  (e) => {
+                    let t = e.media || "",
+                      i = I?.[t];
+                    e.srcset !== i && e.setAttribute("srcset", i || "");
+                  },
+                ));
+          }
+        },
+        u = { parallax: "ImageParallax", fixed: "ImageReveal" };
+      var g = i(17709),
+        m = i.n(g);
+      function f(e = {}, t = null, i = {}) {
+        if ("undefined" == typeof window) return;
+        let a = {
+            staticMediaUrl: "https://static.wixstatic.com/media",
+            mediaRootUrl: "https://static.wixstatic.com",
+            experiments: {},
+            devicePixelRatio: /iemobile/i.test(navigator.userAgent)
+              ? Math.round(
+                  window.screen.availWidth /
+                    (window.screen.width ||
+                      window.document.documentElement.clientWidth),
+                )
+              : window.devicePixelRatio,
+            disableImagesLazyLoading: (() => {
+              try {
+                return (
+                  "true" ===
+                  new URL(window.location.href).searchParams.get(
+                    "disableLazyLoading",
+                  )
+                );
+              } catch {
+                return !1;
+              }
+            })(),
+            ...i,
+          },
+          s = (function (e, t) {
+            let i = "wow-image";
+            if (void 0 === (e = e || window).customElements.get(i)) {
+              let a, s;
+              return (
+                e.ResizeObserver &&
+                  (a = new e.ResizeObserver((e) =>
+                    e.map((e) => e.target.reLayout()),
+                  )),
+                e.IntersectionObserver &&
+                  (s = new IntersectionObserver(
+                    (e) =>
+                      e.map((e) => {
+                        if (e.isIntersecting) {
+                          let t = e.target;
+                          (t.unobserveIntersect(), t.observeResize());
+                        }
+                        return e;
+                      }),
+                    { rootMargin: "150% 100%" },
+                  )),
+                function (r) {
+                  var n, o;
+                  let l =
+                    ((n = {
+                      resizeService: a,
+                      intersectionService: s,
+                      mutationService: m(),
+                      ...t,
+                    }),
+                    (o = e),
+                    class extends o.HTMLElement {
+                      constructor() {
+                        (super(),
+                          (this.childListObserver = null),
+                          (this.timeoutId = null));
+                      }
+                      attributeChangedCallback(e, t) {
+                        t && this.reLayout();
+                      }
+                      connectedCallback() {
+                        r.disableImagesLazyLoading
+                          ? this.reLayout()
+                          : this.observeIntersect();
+                      }
+                      disconnectedCallback() {
+                        (this.unobserveResize(),
+                          this.unobserveIntersect(),
+                          this.unobserveChildren());
+                      }
+                      static get observedAttributes() {
+                        return ["data-image-info"];
+                      }
+                      reLayout() {
+                        let e = {},
+                          t = {},
+                          i = this.getAttribute("id"),
+                          a = JSON.parse(this.dataset.imageInfo || ""),
+                          s = "true" === this.dataset.isResponsive,
+                          { bgEffectName: l } = this.dataset,
+                          { scrollEffect: c } = a.imageData,
+                          { sourceSets: g } = a,
+                          m = l || (c && u[c]);
+                        (g &&
+                          g.length &&
+                          g.forEach((e) => {
+                            e.scrollEffect &&
+                              (e.scrollEffect = u[e.scrollEffect]);
+                          }),
+                          (e[i] = this),
+                          a.containerId &&
+                            (e[a.containerId] = o.document.getElementById(
+                              \`\${a.containerId}\`,
+                            )));
+                        let f = a.containerId ? e[a.containerId] : void 0;
+                        if (
+                          ((e.image = this.querySelector("img")),
+                          (e.picture = this.querySelector("picture")),
+                          !e.image)
+                        )
+                          return void this.observeChildren(this);
+                        (this.unobserveChildren(),
+                          this.observeChildren(this),
+                          n.mutationService.measure(() => {
+                            d(
+                              i,
+                              t,
+                              e,
+                              { containerElm: f, bgEffect: m, sourceSets: g },
+                              n,
+                            );
+                          }));
+                        let b = (o, l) => {
+                            n.mutationService.mutate(() => {
+                              h(i, t, e, a, n, r, o, s, m, l);
+                            });
+                          },
+                          p = e.image,
+                          v = this.dataset.hasSsrSrc && !p.dataset.ssrSrcDone;
+                        !p.getAttribute("src") || v
+                          ? b(!0, !0)
+                          : this.debounceImageLoad(b);
+                      }
+                      debounceImageLoad(e) {
+                        (clearTimeout(this.timeoutId),
+                          (this.timeoutId = o.setTimeout(() => {
+                            e(!0);
+                          }, 250)),
+                          e(!1));
+                      }
+                      observeResize() {
+                        n.resizeService?.observe(this);
+                      }
+                      unobserveResize() {
+                        n.resizeService?.unobserve(this);
+                      }
+                      observeIntersect() {
+                        n.intersectionService?.observe(this);
+                      }
+                      unobserveIntersect() {
+                        n.intersectionService?.unobserve(this);
+                      }
+                      observeChildren(e) {
+                        (this.childListObserver ||
+                          (this.childListObserver = new o.MutationObserver(
+                            () => {
+                              this.reLayout();
+                            },
+                          )),
+                          this.childListObserver.observe(e, { childList: !0 }));
+                      }
+                      unobserveChildren() {
+                        this.childListObserver &&
+                          (this.childListObserver.disconnect(),
+                          (this.childListObserver = null));
+                      }
+                    });
+                  e.customElements.define(i, l);
+                }
+              );
+            }
+          })(t, e);
+        s && s(a);
+      }
+    },
+  },
+  function (e) {
+    (e.O(0, ["1619", "3033"], function () {
+      return e((e.s = 46418));
+    }),
+      e.O());
+  },
+]);
+//# sourceMappingURL=initCustomElements.inline.25987d64.bundle.min.js.map
+  `,
+  String.raw`
+function _extends() {
+  _extends =
+    Object.assign ||
+    function (target) {
+      for (var i = 1; i < arguments.length; i++) {
+        var source = arguments[i];
+        for (var key in source) {
+          if (Object.prototype.hasOwnProperty.call(source, key)) {
+            target[key] = source[key];
+          }
+        }
+      }
+      return target;
+    };
+  return _extends.apply(this, arguments);
+}
+(function () {
+  var SENTRY_REROUTED_MARK_KEY = "_REROUTED";
+  var SENTRY_IS_NON_WIX_TPA_MARK_KEY = "_isTPA";
+  var SENTRY_REROUTE_DATA_KEY = "_ROUTE_TO";
+  var addRerouteDataToSentryEvent = function (event) {
+    var _event_extra,
+      _event_exception_values__stacktrace,
+      _event_exception_values,
+      _event_exception;
+    if (
+      event == null
+        ? void 0
+        : (_event_extra = event.extra) == null
+          ? void 0
+          : _event_extra[SENTRY_REROUTE_DATA_KEY]
+    ) {
+      return;
+    }
+    if (
+      event == null
+        ? void 0
+        : (_event_exception = event.exception) == null
+          ? void 0
+          : (_event_exception_values = _event_exception.values) == null
+            ? void 0
+            : (_event_exception_values__stacktrace =
+                  _event_exception_values[0].stacktrace) == null
+              ? void 0
+              : _event_exception_values__stacktrace.frames
+    ) {
+      var frames = event.exception.values[0].stacktrace.frames;
+      var framesModuleMetadata = frames
+        .filter(function (frame) {
+          return frame.module_metadata && frame.module_metadata.appId;
+        })
+        .map(function (v) {
+          return {
+            appId: v.module_metadata.appId,
+            release: v.module_metadata.release,
+            dsn: v.module_metadata.dsn,
+          };
+        });
+      var routeTo = framesModuleMetadata.slice(-1);
+      if (routeTo.length) {
+        var _window_wixEmbedsAPI,
+          _app_monitoringComponent_monitoring,
+          _app_monitoringComponent;
+        var appId = routeTo[0].appId;
+        var app =
+          (_window_wixEmbedsAPI = window.wixEmbedsAPI) == null
+            ? void 0
+            : _window_wixEmbedsAPI.getMonitoringConfig(appId);
+        if (
+          (app == null
+            ? void 0
+            : (_app_monitoringComponent = app.monitoringComponent) == null
+              ? void 0
+              : (_app_monitoringComponent_monitoring =
+                    _app_monitoringComponent.monitoring) == null
+                ? void 0
+                : _app_monitoringComponent_monitoring.type) === "SENTRY"
+        ) {
+          var _app_monitoringComponent_monitoring_sentryOptions,
+            _app_monitoringComponent_monitoring1,
+            _app_monitoringComponent1;
+          var dsn =
+            app == null
+              ? void 0
+              : (_app_monitoringComponent1 = app.monitoringComponent) == null
+                ? void 0
+                : (_app_monitoringComponent_monitoring1 =
+                      _app_monitoringComponent1.monitoring) == null
+                  ? void 0
+                  : (_app_monitoringComponent_monitoring_sentryOptions =
+                        _app_monitoringComponent_monitoring1.sentryOptions) ==
+                      null
+                    ? void 0
+                    : _app_monitoringComponent_monitoring_sentryOptions.dsn;
+          if (dsn) {
+            if (!routeTo[0].dsn && dsn) {
+              routeTo[0].dsn = dsn;
+            }
+          }
+        }
+        if (app) {
+          var _obj;
+          event.extra = _extends(
+            {},
+            event.extra,
+            ((_obj = {}),
+            (_obj[SENTRY_IS_NON_WIX_TPA_MARK_KEY] = !app.isWixTPA),
+            _obj),
+          );
+        }
+        var _obj1;
+        event.extra = _extends(
+          {},
+          event.extra,
+          ((_obj1 = {}),
+          (_obj1[SENTRY_REROUTE_DATA_KEY] = routeTo),
+          (_obj1[SENTRY_REROUTED_MARK_KEY] = true),
+          _obj1),
+        );
+      }
+    }
+  };
+  function overrideSentryInitOptions() {
+    var Sentry = window.Sentry;
+    var makeMultiplexedTransport = Sentry.makeMultiplexedTransport,
+      makeFetchTransport = Sentry.makeFetchTransport;
+    var transport = makeMultiplexedTransport
+      ? makeMultiplexedTransport(makeFetchTransport, function (args) {
+          var event = args.getEvent();
+          if (
+            event &&
+            event.extra &&
+            event.extra[SENTRY_REROUTE_DATA_KEY] &&
+            Array.isArray(event.extra[SENTRY_REROUTE_DATA_KEY])
+          ) {
+            return event.extra[SENTRY_REROUTE_DATA_KEY];
+          }
+          return [];
+        })
+      : makeFetchTransport;
+    Sentry.init({
+      transport: transport,
+      integrations: [
+        Sentry.browserTracingIntegration({
+          instrumentNavigation: false,
+          instrumentPageLoad: false,
+        }),
+      ],
+      tracePropagationTargets: [/^https:\/\/[a-zA-Z0-9-]+\.wix-app\.run\/.*/],
+      attachStacktrace: true,
+      beforeSend: function (event, hint) {
+        var customEvent = new CustomEvent("sentry-error", {
+          cancelable: true,
+          detail: { sentryEvent: event, sentryHint: hint },
+        });
+        var dispatchEventRes = window.dispatchEvent(customEvent);
+        if (!dispatchEventRes) {
+          return null;
+        }
+        if (event.extra) {
+          if (event.extra[SENTRY_REROUTED_MARK_KEY]) {
+            delete event.extra[SENTRY_REROUTED_MARK_KEY];
+          }
+          if (event.extra[SENTRY_IS_NON_WIX_TPA_MARK_KEY]) {
+            delete event.extra[SENTRY_IS_NON_WIX_TPA_MARK_KEY];
+          }
+        }
+        return event;
+      },
+    });
+    if (Sentry.moduleMetadataIntegration) {
+      Sentry.addIntegration(Sentry.moduleMetadataIntegration());
+      Sentry.addGlobalEventProcessor(function (event) {
+        addRerouteDataToSentryEvent(event);
+        return event;
+      });
+    }
+  }
+  window.sentryOnLoad = overrideSentryInitOptions;
+})();
+  `,
+  String.raw`
+!(function (n, e, r, t, o, i, a, c, s) {
+  for (var u = s, f = 0; f < document.scripts.length; f++)
+    if (document.scripts[f].src.indexOf(i) > -1) {
+      u && "no" === document.scripts[f].getAttribute("data-lazy") && (u = !1);
+      break;
+    }
+  var p = [];
+  function l(n) {
+    return "e" in n;
+  }
+  function d(n) {
+    return "p" in n;
+  }
+  function _(n) {
+    return "f" in n;
+  }
+  var v = [];
+  function y(n) {
+    (u &&
+      (l(n) ||
+        d(n) ||
+        (_(n) && n.f.indexOf("capture") > -1) ||
+        (_(n) && n.f.indexOf("showReportDialog") > -1)) &&
+      L(),
+      v.push(n));
+  }
+  function h() {
+    y({ e: [].slice.call(arguments) });
+  }
+  function g(n) {
+    y({ p: n });
+  }
+  function E() {
+    try {
+      n.SENTRY_SDK_SOURCE = "loader";
+      var e = n[o],
+        i = e.init;
+      ((e.init = function (o) {
+        (n.removeEventListener(r, h), n.removeEventListener(t, g));
+        var a = c;
+        for (var s in o)
+          Object.prototype.hasOwnProperty.call(o, s) && (a[s] = o[s]);
+        (!(function (n, e) {
+          var r = n.integrations || [];
+          if (!Array.isArray(r)) return;
+          var t = r.map(function (n) {
+            return n.name;
+          });
+          n.tracesSampleRate &&
+            -1 === t.indexOf("BrowserTracing") &&
+            (e.browserTracingIntegration
+              ? r.push(e.browserTracingIntegration({ enableInp: !0 }))
+              : e.BrowserTracing && r.push(new e.BrowserTracing()));
+          (n.replaysSessionSampleRate || n.replaysOnErrorSampleRate) &&
+            -1 === t.indexOf("Replay") &&
+            (e.replayIntegration
+              ? r.push(e.replayIntegration())
+              : e.Replay && r.push(new e.Replay()));
+          n.integrations = r;
+        })(a, e),
+          i(a));
+      }),
+        setTimeout(function () {
+          return (function (e) {
+            try {
+              "function" == typeof n.sentryOnLoad &&
+                (n.sentryOnLoad(), (n.sentryOnLoad = void 0));
+            } catch (n) {
+              (console.error("Error while calling \`sentryOnLoad\` handler:"),
+                console.error(n));
+            }
+            try {
+              for (var r = 0; r < p.length; r++)
+                "function" == typeof p[r] && p[r]();
+              p.splice(0);
+              for (r = 0; r < v.length; r++) {
+                _((i = v[r])) && "init" === i.f && e.init.apply(e, i.a);
+              }
+              m() || e.init();
+              var t = n.onerror,
+                o = n.onunhandledrejection;
+              for (r = 0; r < v.length; r++) {
+                var i;
+                if (_((i = v[r]))) {
+                  if ("init" === i.f) continue;
+                  e[i.f].apply(e, i.a);
+                } else
+                  l(i) && t ? t.apply(n, i.e) : d(i) && o && o.apply(n, [i.p]);
+              }
+            } catch (n) {
+              console.error(n);
+            }
+          })(e);
+        }));
+    } catch (n) {
+      console.error(n);
+    }
+  }
+  var O = !1;
+  function L() {
+    if (!O) {
+      O = !0;
+      var n = e.scripts[0],
+        r = e.createElement("script");
+      ((r.src = a),
+        (r.crossOrigin = "anonymous"),
+        r.addEventListener("load", E, { once: !0, passive: !0 }),
+        n.parentNode.insertBefore(r, n));
+    }
+  }
+  function m() {
+    var e = n.__SENTRY__,
+      r = void 0 !== e && e.version;
+    return r ? !!e[r] : !(void 0 === e || !e.hub || !e.hub.getClient());
+  }
+  ((n[o] = n[o] || {}),
+    (n[o].onLoad = function (n) {
+      m() ? n() : p.push(n);
+    }),
+    (n[o].forceLoad = function () {
+      setTimeout(function () {
+        L();
+      });
+    }),
+    [
+      "init",
+      "addBreadcrumb",
+      "captureMessage",
+      "captureException",
+      "captureEvent",
+      "configureScope",
+      "withScope",
+      "showReportDialog",
+    ].forEach(function (e) {
+      n[o][e] = function () {
+        y({ f: e, a: arguments });
+      };
+    }),
+    n.addEventListener(r, h),
+    n.addEventListener(t, g),
+    u ||
+      setTimeout(function () {
+        L();
+      }));
+})(
+  window,
+  document,
+  "error",
+  "unhandledrejection",
+  "Sentry",
+  "605a7baede844d278b89dc95ae0a9123",
+  "https://browser.sentry-cdn.com/7.120.3/bundle.tracing.es5.min.js",
+  {
+    dsn: "https://605a7baede844d278b89dc95ae0a9123@sentry-next.wixpress.com/68",
+    tracesSampleRate: 1,
+  },
+  true,
+);
+  `,
+  String.raw`
+!(function (n) {
+  var r = {},
+    t = function () {
+      return (
+        (t =
+          Object.assign ||
+          function (n) {
+            for (var r, t = 1, e = arguments.length; t < e; t++)
+              for (var o in (r = arguments[t]))
+                Object.prototype.hasOwnProperty.call(r, o) && (n[o] = r[o]);
+            return n;
+          }),
+        t.apply(this, arguments)
+      );
+    };
+  function e(n, r, t, e) {
+    return new (t || (t = Promise))(function (o, i) {
+      function u(n) {
+        try {
+          f(e.next(n));
+        } catch (n) {
+          i(n);
+        }
+      }
+      function c(n) {
+        try {
+          f(e.throw(n));
+        } catch (n) {
+          i(n);
+        }
+      }
+      function f(n) {
+        var r;
+        n.done
+          ? o(n.value)
+          : ((r = n.value),
+            r instanceof t
+              ? r
+              : new t(function (n) {
+                  n(r);
+                })).then(u, c);
+      }
+      f((e = e.apply(n, r || [])).next());
+    });
+  }
+  function o(n, r) {
+    var t,
+      e,
+      o,
+      i,
+      u = {
+        label: 0,
+        sent: function () {
+          if (1 & o[0]) throw o[1];
+          return o[1];
+        },
+        trys: [],
+        ops: [],
+      };
+    return (
+      (i = { next: c(0), throw: c(1), return: c(2) }),
+      "function" == typeof Symbol &&
+        (i[Symbol.iterator] = function () {
+          return this;
+        }),
+      i
+    );
+    function c(c) {
+      return function (f) {
+        return (function (c) {
+          if (t) throw new TypeError("Generator is already executing.");
+          for (; i && ((i = 0), c[0] && (u = 0)), u; )
+            try {
+              if (
+                ((t = 1),
+                e &&
+                  (o =
+                    2 & c[0]
+                      ? e.return
+                      : c[0]
+                        ? e.throw || ((o = e.return) && o.call(e), 0)
+                        : e.next) &&
+                  !(o = o.call(e, c[1])).done)
+              )
+                return o;
+              switch (((e = 0), o && (c = [2 & c[0], o.value]), c[0])) {
+                case 0:
+                case 1:
+                  o = c;
+                  break;
+                case 4:
+                  return (u.label++, { value: c[1], done: !1 });
+                case 5:
+                  (u.label++, (e = c[1]), (c = [0]));
+                  continue;
+                case 7:
+                  ((c = u.ops.pop()), u.trys.pop());
+                  continue;
+                default:
+                  if (
+                    !((o = u.trys),
+                    (o = o.length > 0 && o[o.length - 1]) ||
+                      (6 !== c[0] && 2 !== c[0]))
+                  ) {
+                    u = 0;
+                    continue;
+                  }
+                  if (3 === c[0] && (!o || (c[1] > o[0] && c[1] < o[3]))) {
+                    u.label = c[1];
+                    break;
+                  }
+                  if (6 === c[0] && u.label < o[1]) {
+                    ((u.label = o[1]), (o = c));
+                    break;
+                  }
+                  if (o && u.label < o[2]) {
+                    ((u.label = o[2]), u.ops.push(c));
+                    break;
+                  }
+                  (o[2] && u.ops.pop(), u.trys.pop());
+                  continue;
+              }
+              c = r.call(n, u);
+            } catch (n) {
+              ((c = [6, n]), (e = 0));
+            } finally {
+              t = o = 0;
+            }
+          if (5 & c[0]) throw c[1];
+          return { value: c[0] ? c[1] : void 0, done: !0 };
+        })([c, f]);
+      };
+    }
+  }
+  function i(n) {
+    var r = "function" == typeof Symbol && Symbol.iterator,
+      t = r && n[r],
+      e = 0;
+    if (t) return t.call(n);
+    if (n && "number" == typeof n.length)
+      return {
+        next: function () {
+          return (
+            n && e >= n.length && (n = void 0),
+            { value: n && n[e++], done: !n }
+          );
+        },
+      };
+    throw new TypeError(
+      r ? "Object is not iterable." : "Symbol.iterator is not defined.",
+    );
+  }
+  function u(n, r) {
+    var t = "function" == typeof Symbol && n[Symbol.iterator];
+    if (!t) return n;
+    var e,
+      o,
+      i = t.call(n),
+      u = [];
+    try {
+      for (; (void 0 === r || r-- > 0) && !(e = i.next()).done; )
+        u.push(e.value);
+    } catch (n) {
+      o = { error: n };
+    } finally {
+      try {
+        e && !e.done && (t = i.return) && t.call(i);
+      } finally {
+        if (o) throw o.error;
+      }
+    }
+    return u;
+  }
+  function c(n) {
+    return n && n.Math == Math ? n : void 0;
+  }
+  var f =
+      ("object" == typeof globalThis && c(globalThis)) ||
+      ("object" == typeof window && c(window)) ||
+      ("object" == typeof self && c(self)) ||
+      ("object" == typeof global && c(global)) ||
+      (function () {
+        return this;
+      })() ||
+      {},
+    a = {};
+  var s = /^(?:(\w+):)\/\/(?:(\w+)(?::(\w+)?)?@)([\w.-]+)(?::(\d+))?\/(.+)/;
+  function v(n) {
+    var r = s.exec(n);
+    if (r) {
+      var t,
+        e = u(r.slice(1), 6),
+        o = e[0],
+        i = e[1],
+        c = e[2],
+        v = void 0 === c ? "" : c,
+        l = e[3],
+        y = e[4],
+        d = void 0 === y ? "" : y,
+        p = "",
+        h = e[5],
+        b = h.split("/");
+      if (
+        (b.length > 1 && ((p = b.slice(0, -1).join("/")), (h = b.pop())), h)
+      ) {
+        var w = h.match(/^\d+/);
+        w && (h = w[0]);
+      }
+      return {
+        protocol: (t = {
+          host: l,
+          pass: v,
+          path: p,
+          projectId: h,
+          port: d,
+          protocol: o,
+          publicKey: i,
+        }).protocol,
+        publicKey: t.publicKey || "",
+        pass: t.pass || "",
+        host: t.host,
+        port: t.port || "",
+        path: t.path || "",
+        projectId: t.projectId,
+      };
+    }
+    !(function (n) {
+      if (!("console" in f)) return n();
+      var r = f.console,
+        t = {},
+        e = Object.keys(a);
+      e.forEach(function (n) {
+        var e = a[n];
+        ((t[n] = r[n]), (r[n] = e));
+      });
+      try {
+        n();
+      } finally {
+        e.forEach(function (n) {
+          r[n] = t[n];
+        });
+      }
+    })(function () {
+      console.error("Invalid Sentry Dsn: ".concat(n));
+    });
+  }
+  function l(n, r) {
+    return (
+      (e = t(
+        { sentry_key: n.publicKey, sentry_version: "7" },
+        r && { sentry_client: "".concat(r.name, "/").concat(r.version) },
+      )),
+      Object.keys(e)
+        .map(function (n) {
+          return ""
+            .concat(encodeURIComponent(n), "=")
+            .concat(encodeURIComponent(e[n]));
+        })
+        .join("&")
+    );
+    var e;
+  }
+  function y(n, r) {
+    var t;
+    return (
+      (function (n, r) {
+        var t,
+          e,
+          o = n[1];
+        try {
+          for (var u = i(o), c = u.next(); !c.done; c = u.next()) {
+            var f = c.value;
+            if (r(f, f[0].type)) return !0;
+          }
+        } catch (n) {
+          t = { error: n };
+        } finally {
+          try {
+            c && !c.done && (e = u.return) && e.call(u);
+          } finally {
+            if (t) throw t.error;
+          }
+        }
+      })(n, function (n, e) {
+        return (r.includes(e) && (t = Array.isArray(n) ? n[1] : void 0), !!t);
+      }),
+      t
+    );
+  }
+  for (var d in ((r.makeMultiplexedTransport = function (n, r) {
+    return function (c) {
+      var f = n(c),
+        a = new Map();
+      function s(r, i) {
+        var u = i ? "".concat(r, ":").concat(i) : r,
+          f = a.get(u);
+        if (!f) {
+          var s = v(r);
+          if (!s) return;
+          var d = (function (n, r) {
+            void 0 === r && (r = {});
+            var t = "string" == typeof r ? r : r.tunnel,
+              e = "string" != typeof r && r.t ? r.t.sdk : void 0;
+            return (
+              t ||
+              ""
+                .concat(
+                  (function (n) {
+                    return ""
+                      .concat(
+                        (function (n) {
+                          var r = n.protocol ? "".concat(n.protocol, ":") : "",
+                            t = n.port ? ":".concat(n.port) : "";
+                          return ""
+                            .concat(r, "//")
+                            .concat(n.host)
+                            .concat(t)
+                            .concat(n.path ? "/".concat(n.path) : "", "/api/");
+                        })(n),
+                      )
+                      .concat(n.projectId, "/envelope/");
+                  })(n),
+                  "?",
+                )
+                .concat(l(n, e))
+            );
+          })(s, c.tunnel);
+          ((f = i
+            ? (function (n, r) {
+                var i = this;
+                return function (u) {
+                  var c = n(u);
+                  return t(t({}, c), {
+                    send: function (n) {
+                      return e(i, void 0, void 0, function () {
+                        var t;
+                        return o(this, function (e) {
+                          return (
+                            (t = y(n, [
+                              "event",
+                              "transaction",
+                              "profile",
+                              "replay_event",
+                            ])) && (t.release = r),
+                            [2, c.send(n)]
+                          );
+                        });
+                      });
+                    },
+                  });
+                };
+              })(
+                n,
+                i,
+              )(t(t({}, c), { url: d }))
+            : n(t(t({}, c), { url: d }))),
+            a.set(u, f));
+        }
+        return [r, f];
+      }
+      return {
+        send: function (n) {
+          return e(this, void 0, void 0, function () {
+            function e(r) {
+              var t = r && r.length ? r : ["event"];
+              return y(n, t);
+            }
+            var i;
+            return o(this, function (o) {
+              switch (o.label) {
+                case 0:
+                  return (
+                    0 ===
+                      (i = r({ envelope: n, getEvent: e })
+                        .map(function (n) {
+                          return "string" == typeof n
+                            ? s(n, void 0)
+                            : s(n.dsn, n.release);
+                        })
+                        .filter(function (n) {
+                          return !!n;
+                        })).length && i.push(["", f]),
+                    [
+                      4,
+                      Promise.all(
+                        i.map(function (r) {
+                          var e = u(r, 2),
+                            o = e[0];
+                          return e[1].send(
+                            (function (n, r) {
+                              return (
+                                (e = r ? t(t({}, n[0]), { dsn: r }) : n[0]),
+                                void 0 === (o = n[1]) && (o = []),
+                                [e, o]
+                              );
+                              var e, o;
+                            })(n, o),
+                          );
+                        }),
+                      ),
+                    ]
+                  );
+                case 1:
+                  return [2, o.sent()[0]];
+              }
+            });
+          });
+        },
+        flush: function (n) {
+          return e(this, void 0, void 0, function () {
+            var r, t, e, c, s, v, l, y, d, p;
+            return o(this, function (o) {
+              switch (o.label) {
+                case 0:
+                  return [4, f.flush(n)];
+                case 1:
+                  ((r = [o.sent()]), (o.label = 2));
+                case 2:
+                  (o.trys.push([2, 7, 8, 9]),
+                    (t = i(a)),
+                    (e = t.next()),
+                    (o.label = 3));
+                case 3:
+                  return e.done
+                    ? [3, 6]
+                    : ((c = u(e.value, 2)),
+                      (s = c[1]),
+                      (l = (v = r).push),
+                      [4, s.flush(n)]);
+                case 4:
+                  (l.apply(v, [o.sent()]), (o.label = 5));
+                case 5:
+                  return ((e = t.next()), [3, 3]);
+                case 6:
+                  return [3, 9];
+                case 7:
+                  return ((y = o.sent()), (d = { error: y }), [3, 9]);
+                case 8:
+                  try {
+                    e && !e.done && (p = t.return) && p.call(t);
+                  } finally {
+                    if (d) throw d.error;
+                  }
+                  return [7];
+                case 9:
+                  return [
+                    2,
+                    r.every(function (n) {
+                      return n;
+                    }),
+                  ];
+              }
+            });
+          });
+        },
+      };
+    };
+  }),
+  (n.Sentry = n.Sentry || {}),
+  (n.Sentry.Integrations = n.Sentry.Integrations || {}),
+  r))
+    Object.prototype.hasOwnProperty.call(r, d) &&
+      ((n.Sentry.Integrations[d] = r[d]), (n.Sentry[d] = r[d]));
+})(window);
+  `,
+  String.raw`
+window.resolveExternalsRegistryPromise = null;
+const externalRegistryPromise = new Promise(
+  (r) => (window.resolveExternalsRegistryPromise = r),
+);
+window.resolveExternalsRegistryModule = (name) =>
+  externalRegistryPromise.then(() => window.externalsRegistry[name].onload());
+  `,
+  String.raw`
+(self.webpackJsonp__wix_thunderbolt_app =
+  self.webpackJsonp__wix_thunderbolt_app || []).push([
+  ["7101"],
+  {
+    78635() {
+      window.__imageClientApi__ = window.__imageClientApi__ || { sdk: {} };
+      let {
+        lodash: e,
+        react: o,
+        reactDOM: n,
+        imageClientApi: d,
+        clientSdk: a,
+      } = (window.externalsRegistry = {
+        lodash: {},
+        react: {},
+        reactDOM: {},
+        imageClientApi: {},
+        clientSdk: {},
+      });
+      ((d.loaded = new Promise((e) => {
+        d.onload = e;
+      })),
+        (e.loaded = new Promise((o) => {
+          e.onload = o;
+        })),
+        (a.loaded = new Promise((e) => {
+          a.onload = e;
+        })),
+        window.ReactDOM ||
+          (window.reactDOMReference = window.ReactDOM = { loading: !0 }),
+        (n.loaded = new Promise((e) => {
+          n.onload = () => {
+            (Object.assign(window.reactDOMReference || {}, window.ReactDOM, {
+              loading: !1,
+            }),
+              e());
+          };
+        })),
+        window.React ||
+          (window.reactReference = window.React = { loading: !0 }),
+        (o.loaded = new Promise((e) => {
+          o.onload = () => {
+            (Object.assign(window.reactReference || {}, window.React, {
+              loading: !1,
+            }),
+              e());
+          };
+        })),
+        (window.reactAndReactDOMLoaded = Promise.all([o.loaded, n.loaded])),
+        window.resolveExternalsRegistryPromise());
+    },
+  },
+  function (e) {
+    e((e.s = 78635));
+  },
+]);
+//# sourceMappingURL=externals-registry.inline.2c3a9b6e.bundle.min.js.map
+  `,
+  String.raw`
+{"siteAssetsTestModuleVersion":"1.334.0","requestUrl":"https:\/\/www.dehonline.es\/documbox-info","siteFeatures":["accessibility","appMonitoring","assetsLoader","businessLogger","captcha","clickHandlerRegistrar","codeEmbed","commonConfig","componentsLoader","componentsRegistry","consentPolicy","contentReflow","cookiesManager","cyclicTabbing","domSelectors","domStore","dynamicPages","environmentWixCodeSdk","environment","lightbox","locationWixCodeSdk","mpaNavigation","multilingual","navigationManager","navigationPhases","ooi","pages","panorama","passwordProtectedPage","protectedPages","renderer","reporter","routerFetch","router","scrollRestoration","seoWixCodeSdk","seo","sessionManager","siteMembersWixCodeSdk","siteMembers","siteScrollBlocker","siteWixCodeSdk","speculationRules","ssrCache","stores","structureApi","thunderboltInitializer","tpaCommons","tpaWorkerFeature","translations","usedPlatformApis","warmupData","windowMessageRegistrar","windowWixCodeSdk","wixCustomElementComponent","wixEmbedsApi","componentsReact","platform"],"site":{"metaSiteId":"b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1","userId":"ccd8ffa2-1969-432d-b976-df5cde6967ca","siteId":"241dd6c7-7fb5-4c8d-b4d6-94e6afd31537","externalBaseUrl":"https:\/\/www.dehonline.es","siteRevision":11177,"siteType":"UGC","dc":"ireland-pub","isResponsive":false,"editorName":"Unknown","sessionId":"570e3d59-1cf2-4dbb-8c2e-ebe97f47fd2a","isSEO":false,"appNameForBiEvents":"thunderbolt"},"isMobileDevice":false,"viewMode":"desktop","formFactor":"desktop","deviceInfo":{"deviceClass":"Desktop"},"media":{"staticMediaUrl":"https:\/\/static.wixstatic.com\/media","mediaRootUrl":"https:\/\/static.wixstatic.com\/","staticVideoUrl":"https:\/\/video.wixstatic.com\/"},"language":{"userLanguage":"es","userLanguageResolutionMethod":"QueryParam","siteLanguage":"es","isMultilingualEnabled":true,"directionByLanguage":"ltr"},"mode":{"qa":false,"enableTestApi":false,"debug":false,"ssrIndicator":false,"ssrOnly":false,"siteAssetsFallback":"enable","versionIndicator":false},"siteFeaturesConfigs":{"appMonitoring":{"appsWithMonitoring":[{"appId":"1380b703-ce81-ff05-f115-39571d94dfcd","isWixTPA":true,"monitoringComponent":{"monitoring":{"type":"PANORAMA","panoramaOptions":{"project":{"groupId":"com.wixpress","artifactId":"abandoned-carts-bm","fingerprint":"909b259b270821e3e228d7e504707c813c4cc1c542858c1ae0eee6fa"}}}}},{"appId":"14cc59bc-f0b7-15b8-e1c7-89ce41d0e0c9","isWixTPA":true,"monitoringComponent":{"monitoring":{"type":"PANORAMA","panoramaOptions":{"project":{"groupId":"com.wixpress.npm","artifactId":"members-area-components","fingerprint":"7400066558f9747f393e29c58bf7d8196c3b9837cf60739ee7580491"}}}}},{"appId":"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130","isWixTPA":true,"monitoringComponent":{"monitoring":{"type":"PANORAMA","panoramaOptions":{"project":{"groupId":"com.wixpress","artifactId":"portfolio-cli-app","fingerprint":"07dd4cb584ef2da465355357b357b6a45905a0e53f7e526a8a13fd0b"}}}}}]},"assetsLoader":{"isStylableComponentInStructure":true,"hasBuilderComponents":false},"businessLogger":{"isBuilderComponentModel":false},"codeEmbed":{"htmlEmbeds":[{"id":"5f60ab1b-a31f-451c-ab80-99ebf9d6359a","embedType":"custom","position":"head","loadOnce":true,"content":{"type":"custom","html":"<meta name=\"facebook-domain-verification\" content=\"52rv4clh210e3i99zwhbb0nk4c6ucy\" \/>","category":{"enumClass":"com.wixpress.live.site.data.types.CustomContentCategory","value":"ESSENTIAL"}},"domain":"dehonline.es","name":"Facebook"},{"id":"8f6752e7-a5c2-400b-b2a8-a0dce96d957e","embedType":"custom","position":"head","loadOnce":true,"content":{"type":"custom","html":"<script type=\"text\/javascript\"> _linkedin_partner_id = \"8268169\"; window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || []; window._linkedin_data_partner_ids.push(_linkedin_partner_id); <\/script><script type=\"text\/javascript\"> (function(l) { if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])}; window.lintrk.q=[]} var s = document.getElementsByTagName(\"script\")[0]; var b = document.createElement(\"script\"); b.type = \"text\/javascript\";b.async = true; b.src = \"https:\/\/snap.licdn.com\/li.lms-analytics\/insight.min.js\"; s.parentNode.insertBefore(b, s);})(window.lintrk); <\/script> <noscript> <img height=\"1\" width=\"1\" style=\"display:none;\" alt=\"\" src=\"https:\/\/px.ads.linkedin.com\/collect\/?pid=8268169&fmt=gif\" \/> <\/noscript>","category":{"enumClass":"com.wixpress.live.site.data.types.CustomContentCategory","value":"ESSENTIAL"}},"domain":"dehonline.es","name":"Pixel LinkedIn"},{"id":"d39fd9af-fe28-4b34-84e2-d90b07f5433e","embedType":"custom","pages":["fswyo","reoxc","ocq3p","vpfah","zuzg7","nt31n","uf8q2","hxib1","hfva2","sxzjx","ikonk","ov49r","steae","uafvx","iwat5","skvoa","i0g2n","xq2tw","cmksk","wmg2n","smgyu"],"position":"head","loadOnce":false,"content":{"type":"custom","html":"<!DOCTYPE html>\n<html lang=\"es\">\n\n<body>\n\t<link rel=\"preconnect\" href=\"https:\/\/fonts.googleapis.com\">\n\t<link rel=\"preconnect\" href=\"https:\/\/fonts.gstatic.com\" crossorigin>\n\t<link href=\"https:\/\/fonts.googleapis.com\/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap\" rel=\"stylesheet\">\n\t<link href=\"https:\/\/cdn.jsdelivr.net\/gh\/SoporteSquads\/SquadsChat@main\/style.css\" rel=\"stylesheet\" \/>\n\t<script type=\"module\">\n\t\timport { createChat } from 'https:\/\/cdn.jsdelivr.net\/gh\/SoporteSquads\/SquadsChat@main\/chat.bundle.es.js';\n\n\t\t\/\/ Inyectamos el CSS directamente en el documento mediante JavaScript\n\t\tconst style = document.createElement('style');\n\t\tstyle.innerHTML = \`\n\t\t\t:root {\n\t\t\t\t--chat--color-primary: #ff4040; \/* Rojo DEH *\/\n\t\t\t\t--chat--color-primary-shade-50: #db4061;\n\t\t\t\t--chat--color-primary-shade-100: #cf3c5c;\n\t\t\t\t--chat--color-secondary: #20b69e;\n\t\t\t\t--chat--color-white: #ffffff;\n\t\t\t\t--chat--color-light: #f1f1f1; \/* Gris claro *\/\n\t\t\t\t--chat--color-medium: #d2d4d9;\n\t\t\t\t--chat--color-dark: #101330;\n\t\t\t\t--chat--color-disabled: #777980;\n\t\t\t\t--chat--border-radius: 1.5rem!important;\n\t\t\t\t--chat--window--width: 350px!important; \/* Ajusta el ancho *\/\n\t\t\t\t--chat--window--height: 600px; \/* Ajusta la altura *\/\n\t\t\t\t--chat--header--background: #ffffff; \/* Blanco en el encabezado *\/\n\t\t\t\t--chat--header--color: black; \/* Color negro para el texto *\/\n\t\t\t\t--chat--header--font-size: 19px;\n\t\t\t\t--chat--header--padding: 1rem;\n\t\t\t\t--chat--header--padding-left: 1rem;\n\t\t\t\t--chat--heading--font-size: 1em!important;\n\t\t\t\t--chat--message--font-size: 12px; \/* Tamaño de fuente para los mensajes *\/\n\t\t\t\t--chat--toggle--size: 56px!important;\n\t\t\t\t\n\t\t\t}\n\t\t.chat-window-wrapper{\n\t\t\tleft:20px!important;\n\t\t\tright:auto!important;\n\t\t\tbottom: 65px!important;\n\t\t}\n\t\t.chat-window-toggle{\n\t\t\tdisplay: flex;\n\t\t\tpadding: 0 20px;\n\t\t\tborder-radius: 50px !important;\n\t\t\tgap: 5px;\n\t\t\twidth: auto !important;\n\t\t\tmargin-left:0px!important;\n\t\t\tmargin-right:auto;\n\t\t\tbackground: #ff4040!important;\n\t\t}\n\t\t.chat-window-toggle:after {\n\t\t\tcontent: \"¡Vamos a chatear!\";\n\t\t\tfont-family: \"Montserrat\";\n\t\t\tfont-size: 18px!important;\n\t\t}\n\t\t.chat-header {\n\t\t\t\n\t\t\tdisplay: flex!important;\n\t\t\tflex-direction: row!important;\n\t\t\talign-items: center!important;\n\t\t\tjustify-content: flex-start!important;\n\t\t\tz-index: 1;\n\t\t\tbox-shadow: 0 10px 10px rgba(0,0,0,0.03)\n\t\t\n\t\t}\n\t\t.chat-header:before {\n\t\t\tcontent:\"\";\n\t\t\tbackground:url('https:\/\/static.wixstatic.com\/media\/45bf13_56a9539094414f40ae3327e35ea694ca~mv2.png');\n\t\t\twidth:50px;\n\t\t\theight:50px;\n\t\t\tbackground-repeat:no-repeat;\n\t\t\tbackground-size:cover;\n\t\t\tborder-radius: 100%;\n\t\t}\n\t\t.chat-header h1{\n\t\t\tfont-weight:normal!important;\n\t\t\tfont-family: \"Montserrat\";\n\t\t\tfont-size: 18px!important;\n\t\t}\n\t\t.chat-body {\n\t\t\tbackground: #fbfbfb!important;\n\t\t}\n\t\t.chat-message.chat-message-from-bot{\n\t\tpadding-left:0px!important;\n\t\t\tgap:15px;\n\t\t\tdisplay:flex;\n\t\t\tflex-direction:row;\n\t\t\talign-items:end;\n\t\t\tjustify-content:flex-start;\n\t\t}\n\t\t.chat-message.chat-message-from-bot:before{\n\t\tcontent:\"\";\n\t\t\tbackground:url('https:\/\/static.wixstatic.com\/media\/45bf13_56a9539094414f40ae3327e35ea694ca~mv2.png');\n\t\t\tmin-width:30px;\n\t\t\theight:30px;\n\t\t\tbackground-repeat:no-repeat;\n\t\t\tbackground-size:cover;\n\t\t\tborder-radius: 100%;\n\t\t}\n\t\t.chat-message-from-user{\n\t\t\tbackground-color:#FF4040!important;\n \t\t    border-radius: 50px!important;\n\t\t}\n\t\t.chat-message-markdown p {\n\t\t    font-family: \"Montserrat\";\n\t\t}\n\t\t.chat-inputs {\n\t\t    height: 55px;\n\t\t    background: white;\n\t\t}\n\t\t.chat-inputs textarea {\n\t\t    overflow: hidden;\n\t\t    margin-bottom: 0px;\n\t\t    font-size: 16px!important;\n            font-family: 'Montserrat'!important;\n\t\t}\n\t\ttextarea::placeholder {\n            font-weight: 200 !important;\n            font-size: 16px;\n        }\n        .chat-legal {\n\t\t\t\tfont-family:\"Montserrat\";\n\t\t\t\tfont-size:11px;\n\t\t\t\tcolor:#777980;\n\t\t\t\tbackground:#f9f9f9;\n\t\t\t\tpadding:10px 16px;\n\t\t\t\tborder-radius:10px;\n\t\t\t\tmargin:10px 15px;\n\t\t\t\tline-height:1.4;\n\t\t\t\ttext-align:left;\n\t\t\t}\n\n\t\t\t.chat-legal a {\n\t\t\t\tcolor:#ff4040;\n\t\t\t\ttext-decoration:none;\n\t\t\t\tfont-weight:500;\n\t\t\t}\n\n\t\t\t.chat-legal a:hover {\n\t\t\t\ttext-decoration:underline;\n\t\t\t}\n\t\t\`;\n\t\tdocument.head.appendChild(style);\n\n\t\t\/\/ Función para guardar los mensajes en el Local Storage\n\t\tfunction saveMessage(message) {\n\t\t\tconsole.log(\"Guardando mensaje:\", message);  \/\/ Agregar esta línea\n\t\t\tlet chatHistory = JSON.parse(localStorage.getItem('chatHistory')) || [];\n\t\t\tchatHistory.push(message);\n\t\t\tlocalStorage.setItem('chatHistory', JSON.stringify(chatHistory));\n\t\t}\n\n\n\t\t\/\/ Función para cargar los mensajes previos del Local Storage\n\t\tfunction loadMessages() {\n\t\t\tlet chatHistory = JSON.parse(localStorage.getItem('chatHistory')) || [];\n\t\t\treturn chatHistory;\n\t\t}\n\n\t\t\/\/ Crear el chat\n\t\tconst chat = createChat({\n\t\t\twebhookUrl: 'https:\/\/auto.srv791713.hstgr.cloud\/webhook\/c20da08e-c54a-4997-8971-a877ca5fc12c\/chat',\n\t\t\tshowWelcomeScreen: false,\n\t\t\tdefaultLanguage: 'es',\n\t\t\tinitialMessages: loadMessages().length > 0 ? loadMessages() : [\n\t\t\t\t'¡Bienvenido a Deh Online! 👋',' Me llamo Celia','¿En qué puedo ayudarte hoy? 😊'\n\t\t\t],\n\t\t\ti18n: {\n\t\t\t\tes: {\n\t\t\t\t\ttitle: \" ¡Vamos a chatear!\",\n\t\t\t\t\tsubtitle: \"\",\n\t\t\t\t\tfooter: '',\n\t\t\t\t\tgetStarted: 'Nuevo Chat',\n\t\t\t\t\tinputPlaceholder: 'Aqui tu consulta',\n\t\t\t\t},\n\t\t\t},\n\t\t\tonSendMessage: (message) => {\n\t\t\t\tsaveMessage(message); \/\/ Guardar cada mensaje enviado en Local Storage\n\t\t\t}\n\t\t});\n\n\t\t\/\/ Cargar mensajes previos\n\t\tconst previousMessages = loadMessages();\n\t\tpreviousMessages.forEach(msg => {\n\t\t\tchat.addMessage(msg); \/\/ Añadir los mensajes previos al chat\n\t\t});\n\n        \/\/ Añadir el aviso legal una vez que el chat esté cargado\n\t\tconst interval = setInterval(() => {\n\t\t\tconst chatBody = document.querySelector('.chat-body');\n\t\t\tif (chatBody && !document.querySelector('.chat-legal')) {\n\t\t\t\tconst legalNotice = document.createElement('div');\n\t\t\t\tlegalNotice.className = 'chat-legal';\n\t\t\t\tlegalNotice.innerHTML = \`\n\t\t\t\t\tAl continuar, aceptas que los datos facilitados sean tratados por DEH Online para atender tu solicitud.\n\t\t\t\t\tPuedes ejercer tus derechos en <a href=\"mailto:rgpd@dehonline.es\">rgpd@dehonline.es<\/a>.\n\t\t\t\t\tMás info <a href=\"https:\/\/www.dehonline.es\/politica-de-privacidad\" target=\"_blank\" rel=\"noopener noreferrer\">aquí<\/a>.\n\t\t\t\t\`;\n\t\t\t\tchatBody.appendChild(legalNotice);\n\t\t\t\tclearInterval(interval);\n\t\t\t}\n\t\t}, 800);\n\t<\/script>\n<\/body>\n<\/html>","category":{"enumClass":"com.wixpress.live.site.data.types.CustomContentCategory","value":"ESSENTIAL"}},"domain":"dehonline.es","name":"CELIA"},{"id":"ced4babc-e16e-450a-8fcb-6ccf051de9bd","embedType":"custom","position":"head","loadOnce":true,"content":{"type":"custom","html":"<link rel=\"preconnect\" href=\"https:\/\/fonts.googleapis.com\">\n<link rel=\"preconnect\" href=\"https:\/\/fonts.gstatic.com\" crossorigin>\n<link href=\"https:\/\/fonts.googleapis.com\/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap\" rel=\"stylesheet\">","category":{"enumClass":"com.wixpress.live.site.data.types.CustomContentCategory","value":"ESSENTIAL"}},"domain":"dehonline.es","name":"Inter"}],"shouldLoadRequireJS":true},"componentsRegistry":{"librariesTopology":[{"artifactId":"editor-elements","namespace":"wixui","url":"https:\/\/static.parastorage.com\/services\/editor-elements\/1.14949.0"},{"artifactId":"editor-elements","namespace":"dsgnsys","url":"https:\/\/static.parastorage.com\/services\/editor-elements\/1.14949.0"}]},"consentPolicy":{"siteConsentPolicy":{"essential":true,"functional":true,"analytics":true,"advertising":true,"dataToThirdParty":true},"isWixSite":false,"isBuilderComponentModel":false},"cookiesManager":{"cookieSitePath":"\/","cookieSiteDomain":"www.dehonline.es"},"cyclicTabbing":{"isBuilderComponentModel":false},"dataWixCodeSdk":{"gridAppId":"5fa8ac08-adbb-498d-8d2c-f4685175922b","environment":"LIVE","cloudDataUrlWithExternalBase":"https:\/\/www.dehonline.es\/_api\/cloud-data"},"dynamicPages":{"prefixToRouterFetchData":{"account":{"urlData":{"basePath":"https:\/\/www.dehonline.es\/_api\/members\/v1\/santa-members","queryParams":"viewMode=site","appDefinitionId":"14cc59bc-f0b7-15b8-e1c7-89ce41d0e0c9","fetchUsingGet":false,"compressPayload":false,"encodeURI":true},"optionsData":{"bodyData":{"pageRoles":{"cfe08b5e-852d-4a74-b28c-53cd2d18a0f9":{"id":"pkvic","title":"Mis pedidos","pageUriSEO":"my-orders"},"221dd5b5-a7e8-483e-92bc-c8aefef82fb4":{"id":"wrmtp","title":"Mis reservas","pageUriSEO":"my-bookings"},"ad16ce05-02eb-4802-86ef-e3f6cb5d2056":{"id":"yp7a1","title":"Notificaciones","pageUriSEO":"notifications"},"e223a1f4-3ce9-44de-bbf3-c7e77c21e6ab":{"id":"tpqog","title":"Mi billetera","pageUriSEO":"my-wallet"},"380936b6-70ca-4254-8474-31bedebcd7e4":{"id":"wpgmi","title":"Mis suscripciones","pageUriSEO":"my-subscriptions"},"541a5cc2-d6f6-4cd8-8a90-312ce207e850":{"id":"in5n9","title":"Mis direcciones","pageUriSEO":"my-addresses"},"ede32970-5e9c-406c-9950-09655f962869":{"id":"v760n","title":"Mi cuenta","pageUriSEO":"my-account"},"9869a6f2-b478-4cf3-8fbc-0b8979b85e04":{"id":"u305p","title":"My Groups","pageUriSEO":"my-groups"},"4403c30c-a1ec-497e-9056-d87d7ffae212":{"id":"muzu0","title":"Opciones","pageUriSEO":"settings"}},"routerPrefix":"\/account","config":{"type":"private","patterns":{"\/my-account":{"socialHome":false,"appData":{"appDefinitionId":"14cffd81-5215-0a7f-22f8-074b0e2401fb","appPageId":"member_info","menuOrder":3,"visibleForRoles":[]},"page":"ede32970-5e9c-406c-9950-09655f962869","seoData":{"title":"Mi cuenta","description":"","keywords":"","noIndex":"true"},"title":"Mi cuenta"},"\/my-subscriptions":{"socialHome":false,"appData":{"numbers":{},"appDefinitionId":"2bef2abe-7abe-43da-889c-53c1500a328c","appPageId":"My Subscriptions","menuOrder":2,"visibleForRoles":[]},"page":"380936b6-70ca-4254-8474-31bedebcd7e4","seoData":{"title":"Mis suscripciones","description":"","keywords":"","noIndex":"true"},"title":"Mis suscripciones"},"\/my-addresses":{"socialHome":false,"appData":{"numbers":{},"appDefinitionId":"1505b775-e885-eb1b-b665-1e485d9bf90e","appPageId":"my_addresses","menuOrder":2,"visibleForRoles":[]},"page":"541a5cc2-d6f6-4cd8-8a90-312ce207e850","seoData":{"title":"Mis direcciones","description":"","keywords":"","noIndex":"true"},"title":"Mis direcciones"},"\/my-wallet":{"socialHome":false,"appData":{"numbers":{},"appDefinitionId":"4aebd0cb-fbdb-4da7-b5d1-d05660a30172","appPageId":"my_wallet","menuOrder":2,"visibleForRoles":[]},"page":"e223a1f4-3ce9-44de-bbf3-c7e77c21e6ab","seoData":{"title":"Mi billetera","description":"","keywords":"","noIndex":"true"},"title":"Mi billetera"},"\/settings":{"socialHome":false,"appData":{"numbers":{},"appDefinitionId":"14f25dc5-6af3-5420-9568-f9c5ed98c9b1","appPageId":"settings","menuOrder":4,"visibleForRoles":[]},"page":"4403c30c-a1ec-497e-9056-d87d7ffae212","seoData":{"title":"Opciones","description":"","keywords":"","noIndex":"true"},"title":"Opciones"},"\/notifications":{"socialHome":false,"appData":{"numbers":{"key":"notificationsCount","default":0},"appDefinitionId":"14f25924-5664-31b2-9568-f9c5ed98c9b1","appPageId":"notifications_app","menuOrder":4,"visibleForRoles":[]},"page":"ad16ce05-02eb-4802-86ef-e3f6cb5d2056","seoData":{"title":"Notificaciones","description":"","keywords":"","noIndex":"true"},"title":"Notificaciones"},"\/my-orders":{"socialHome":false,"appData":{"numbers":{},"appDefinitionId":"1380b703-ce81-ff05-f115-39571d94dfcd","appPageId":"order_history","menuOrder":2,"visibleForRoles":[]},"page":"cfe08b5e-852d-4a74-b28c-53cd2d18a0f9","seoData":{"title":"Mis pedidos","description":"","keywords":"","noIndex":"true"},"title":"Mis pedidos"},"\/my-bookings":{"socialHome":false,"appData":{"numbers":{},"appDefinitionId":"13d21c63-b5ec-5912-8397-c3a5ddb27a97","appPageId":"bookings_member_area","menuOrder":2,"visibleForRoles":[]},"page":"221dd5b5-a7e8-483e-92bc-c8aefef82fb4","seoData":{"title":"Mis reservas","description":"","keywords":"","noIndex":"true"},"title":"Mis reservas"},"\/my-groups":{"socialHome":false,"appData":{"numbers":{},"appDefinitionId":"148c2287-c669-d849-d153-463c7486a694","appPageId":"My Groups","menuOrder":2,"visibleForRoles":[]},"page":"9869a6f2-b478-4cf3-8fbc-0b8979b85e04","seoData":{"title":"My Groups","description":"","keywords":"","noIndex":"true"},"title":"My Groups"}}},"roleVariations":{}},"headers":{"Content-Type":"application\/json","X-XSRF-TOKEN":""}},"wixCodeAppDefinitionId":"675bbcef-18d8-41f5-800e-131ec9e08762"},"partners":{"urlData":{"basePath":"https:\/\/www.dehonline.es\/_api\/dynamic-pages-router\/v1","queryParams":"gridAppId=5fa8ac08-adbb-498d-8d2c-f4685175922b&viewMode=site","fetchUsingGet":true,"compressPayload":true,"appDefinitionId":"e593b0bd-b783-45b8-97c2-873d42aacaf4","encodeURI":false},"optionsData":{"bodyData":{"pageRoles":{"a52dca6c-d625-428a-bfc6-ba31939fd9d2":{"id":"n1mgf","title":"Partners (Title)","pageUriSEO":"blank"}},"routerPrefix":"\/partners","config":{"patterns":{"\/{title}":{"seoMetaTags":{"description":"{_id}","robots":"index","keywords":"","og:image":""},"pageRole":"a52dca6c-d625-428a-bfc6-ba31939fd9d2","title":"{title}","config":{"collection":"Partners","pageSize":26,"lowercase":true,"seoV2":true}}}},"roleVariations":{}},"headers":{"Content-Type":"application\/json","X-XSRF-TOKEN":"","x-wix-grid-app-id":"5fa8ac08-adbb-498d-8d2c-f4685175922b"}},"wixCodeAppDefinitionId":"675bbcef-18d8-41f5-800e-131ec9e08762"},"logs-api-panel":{"urlData":{"basePath":"https:\/\/www.dehonline.es\/_api\/dynamic-pages-router\/v1","queryParams":"gridAppId=5fa8ac08-adbb-498d-8d2c-f4685175922b&viewMode=site","fetchUsingGet":true,"compressPayload":true,"appDefinitionId":"e593b0bd-b783-45b8-97c2-873d42aacaf4","encodeURI":false},"optionsData":{"bodyData":{"pageRoles":{"62d1cbe7-edd5-4013-9ffd-4b33b0101891":{"id":"uv3a3","title":"Logs API Panel (List)","pageUriSEO":"blank-1"}},"routerPrefix":"\/logs-api-panel","config":{"patterns":{"\/":{"seoMetaTags":{"description":"{request}","robots":"index"},"pageRole":"62d1cbe7-edd5-4013-9ffd-4b33b0101891","title":"LogsAPIPanel","config":{"collection":"LogsAPIPanel","pageSize":1,"lowercase":true,"seoV2":true}}}},"roleVariations":{}},"headers":{"Content-Type":"application\/json","X-XSRF-TOKEN":"","x-wix-grid-app-id":"5fa8ac08-adbb-498d-8d2c-f4685175922b"}},"wixCodeAppDefinitionId":"675bbcef-18d8-41f5-800e-131ec9e08762"},"profile":{"urlData":{"basePath":"https:\/\/www.dehonline.es\/_api\/members\/v1\/santa-members","queryParams":"viewMode=site","appDefinitionId":"14cc59bc-f0b7-15b8-e1c7-89ce41d0e0c9","fetchUsingGet":false,"compressPayload":false,"encodeURI":true},"optionsData":{"bodyData":{"pageRoles":{"296fd1b2-b2d3-43e1-8485-54b566155d9b":{"id":"a7c5z","title":"Perfil","pageUriSEO":"profile-1"}},"routerPrefix":"\/profile","config":{"type":"public","patterns":{"\/{userName}\/profile":{"socialHome":true,"appData":{"numbers":{},"appDefinitionId":"14dbef06-cc42-5583-32a7-3abd44da4908","appPageId":"about","menuOrder":1,"visibleForRoles":[]},"page":"296fd1b2-b2d3-43e1-8485-54b566155d9b","seoData":{"title":"{userName} | Perfil","description":"","keywords":"","noIndex":"true"},"title":"Perfil"}}},"roleVariations":{}},"headers":{"Content-Type":"application\/json","X-XSRF-TOKEN":""}},"wixCodeAppDefinitionId":"675bbcef-18d8-41f5-800e-131ec9e08762"}},"routerPagesSeoToIdMap":{"my-orders":"pkvic","my-bookings":"wrmtp","notifications":"yp7a1","my-wallet":"tpqog","my-subscriptions":"wpgmi","my-addresses":"in5n9","my-account":"v760n","my-groups":"u305p","settings":"muzu0","blank":"n1mgf","blank-1":"uv3a3","profile-1":"a7c5z"},"externalBaseUrl":"https:\/\/www.dehonline.es"},"editorWixCodeSdk":{"isBuilderComponentModel":false},"elementorySupportWixCodeSdk":{"baseUrl":"https:\/\/www.dehonline.es\/_api\/wix-code-public-dispatcher-ng\/siteview","relativePath":"\/\/_api\/wix-code-public-dispatcher-ng\/siteview","gridAppId":"5fa8ac08-adbb-498d-8d2c-f4685175922b","viewMode":"site","siteRevision":11177},"environmentWixCodeSdk":{},"environment":{"editorType":"","domain":"dehonline.es","previewMode":false,"isBuilderComponentModel":false},"fedopsWixCodeSdk":{"isWixSite":false,"shouldReportFedops":false},"lightbox":{"prefixToRouterFetchData":{"account":{"urlData":{"basePath":"https:\/\/www.dehonline.es\/_api\/members\/v1\/santa-members","queryParams":"viewMode=site","appDefinitionId":"14cc59bc-f0b7-15b8-e1c7-89ce41d0e0c9","fetchUsingGet":false,"compressPayload":false,"encodeURI":true},"optionsData":{"bodyData":{"pageRoles":{"cfe08b5e-852d-4a74-b28c-53cd2d18a0f9":{"id":"pkvic","title":"Mis pedidos","pageUriSEO":"my-orders"},"221dd5b5-a7e8-483e-92bc-c8aefef82fb4":{"id":"wrmtp","title":"Mis reservas","pageUriSEO":"my-bookings"},"ad16ce05-02eb-4802-86ef-e3f6cb5d2056":{"id":"yp7a1","title":"Notificaciones","pageUriSEO":"notifications"},"e223a1f4-3ce9-44de-bbf3-c7e77c21e6ab":{"id":"tpqog","title":"Mi billetera","pageUriSEO":"my-wallet"},"380936b6-70ca-4254-8474-31bedebcd7e4":{"id":"wpgmi","title":"Mis suscripciones","pageUriSEO":"my-subscriptions"},"541a5cc2-d6f6-4cd8-8a90-312ce207e850":{"id":"in5n9","title":"Mis direcciones","pageUriSEO":"my-addresses"},"ede32970-5e9c-406c-9950-09655f962869":{"id":"v760n","title":"Mi cuenta","pageUriSEO":"my-account"},"9869a6f2-b478-4cf3-8fbc-0b8979b85e04":{"id":"u305p","title":"My Groups","pageUriSEO":"my-groups"},"4403c30c-a1ec-497e-9056-d87d7ffae212":{"id":"muzu0","title":"Opciones","pageUriSEO":"settings"}},"routerPrefix":"\/account","config":{"type":"private","patterns":{"\/my-account":{"socialHome":false,"appData":{"appDefinitionId":"14cffd81-5215-0a7f-22f8-074b0e2401fb","appPageId":"member_info","menuOrder":3,"visibleForRoles":[]},"page":"ede32970-5e9c-406c-9950-09655f962869","seoData":{"title":"Mi cuenta","description":"","keywords":"","noIndex":"true"},"title":"Mi cuenta"},"\/my-subscriptions":{"socialHome":false,"appData":{"numbers":{},"appDefinitionId":"2bef2abe-7abe-43da-889c-53c1500a328c","appPageId":"My Subscriptions","menuOrder":2,"visibleForRoles":[]},"page":"380936b6-70ca-4254-8474-31bedebcd7e4","seoData":{"title":"Mis suscripciones","description":"","keywords":"","noIndex":"true"},"title":"Mis suscripciones"},"\/my-addresses":{"socialHome":false,"appData":{"numbers":{},"appDefinitionId":"1505b775-e885-eb1b-b665-1e485d9bf90e","appPageId":"my_addresses","menuOrder":2,"visibleForRoles":[]},"page":"541a5cc2-d6f6-4cd8-8a90-312ce207e850","seoData":{"title":"Mis direcciones","description":"","keywords":"","noIndex":"true"},"title":"Mis direcciones"},"\/my-wallet":{"socialHome":false,"appData":{"numbers":{},"appDefinitionId":"4aebd0cb-fbdb-4da7-b5d1-d05660a30172","appPageId":"my_wallet","menuOrder":2,"visibleForRoles":[]},"page":"e223a1f4-3ce9-44de-bbf3-c7e77c21e6ab","seoData":{"title":"Mi billetera","description":"","keywords":"","noIndex":"true"},"title":"Mi billetera"},"\/settings":{"socialHome":false,"appData":{"numbers":{},"appDefinitionId":"14f25dc5-6af3-5420-9568-f9c5ed98c9b1","appPageId":"settings","menuOrder":4,"visibleForRoles":[]},"page":"4403c30c-a1ec-497e-9056-d87d7ffae212","seoData":{"title":"Opciones","description":"","keywords":"","noIndex":"true"},"title":"Opciones"},"\/notifications":{"socialHome":false,"appData":{"numbers":{"key":"notificationsCount","default":0},"appDefinitionId":"14f25924-5664-31b2-9568-f9c5ed98c9b1","appPageId":"notifications_app","menuOrder":4,"visibleForRoles":[]},"page":"ad16ce05-02eb-4802-86ef-e3f6cb5d2056","seoData":{"title":"Notificaciones","description":"","keywords":"","noIndex":"true"},"title":"Notificaciones"},"\/my-orders":{"socialHome":false,"appData":{"numbers":{},"appDefinitionId":"1380b703-ce81-ff05-f115-39571d94dfcd","appPageId":"order_history","menuOrder":2,"visibleForRoles":[]},"page":"cfe08b5e-852d-4a74-b28c-53cd2d18a0f9","seoData":{"title":"Mis pedidos","description":"","keywords":"","noIndex":"true"},"title":"Mis pedidos"},"\/my-bookings":{"socialHome":false,"appData":{"numbers":{},"appDefinitionId":"13d21c63-b5ec-5912-8397-c3a5ddb27a97","appPageId":"bookings_member_area","menuOrder":2,"visibleForRoles":[]},"page":"221dd5b5-a7e8-483e-92bc-c8aefef82fb4","seoData":{"title":"Mis reservas","description":"","keywords":"","noIndex":"true"},"title":"Mis reservas"},"\/my-groups":{"socialHome":false,"appData":{"numbers":{},"appDefinitionId":"148c2287-c669-d849-d153-463c7486a694","appPageId":"My Groups","menuOrder":2,"visibleForRoles":[]},"page":"9869a6f2-b478-4cf3-8fbc-0b8979b85e04","seoData":{"title":"My Groups","description":"","keywords":"","noIndex":"true"},"title":"My Groups"}}},"roleVariations":{}},"headers":{"Content-Type":"application\/json","X-XSRF-TOKEN":""}},"wixCodeAppDefinitionId":"675bbcef-18d8-41f5-800e-131ec9e08762"},"profile":{"urlData":{"basePath":"https:\/\/www.dehonline.es\/_api\/members\/v1\/santa-members","queryParams":"viewMode=site","appDefinitionId":"14cc59bc-f0b7-15b8-e1c7-89ce41d0e0c9","fetchUsingGet":false,"compressPayload":false,"encodeURI":true},"optionsData":{"bodyData":{"pageRoles":{"296fd1b2-b2d3-43e1-8485-54b566155d9b":{"id":"a7c5z","title":"Perfil","pageUriSEO":"profile-1"}},"routerPrefix":"\/profile","config":{"type":"public","patterns":{"\/{userName}\/profile":{"socialHome":true,"appData":{"numbers":{},"appDefinitionId":"14dbef06-cc42-5583-32a7-3abd44da4908","appPageId":"about","menuOrder":1,"visibleForRoles":[]},"page":"296fd1b2-b2d3-43e1-8485-54b566155d9b","seoData":{"title":"{userName} | Perfil","description":"","keywords":"","noIndex":"true"},"title":"Perfil"}}},"roleVariations":{}},"headers":{"Content-Type":"application\/json","X-XSRF-TOKEN":""}},"wixCodeAppDefinitionId":"675bbcef-18d8-41f5-800e-131ec9e08762"}},"pageIdToPrefix":{"pkvic":"account","wrmtp":"account","yp7a1":"account","tpqog":"account","wpgmi":"account","in5n9":"account","v760n":"account","u305p":"account","muzu0":"account","a7c5z":"profile"},"isBuilderComponentModel":false},"locationWixCodeSdk":{"routersConfigMap":{"routers-lpdz75mh":{"prefix":"account","appDefinitionId":"14cc59bc-f0b7-15b8-e1c7-89ce41d0e0c9","config":"{\"type\":\"private\",\"patterns\":{\"\/my-account\":{\"socialHome\":false,\"appData\":{\"appDefinitionId\":\"14cffd81-5215-0a7f-22f8-074b0e2401fb\",\"appPageId\":\"member_info\",\"menuOrder\":3,\"visibleForRoles\":[]},\"page\":\"ede32970-5e9c-406c-9950-09655f962869\",\"seoData\":{\"title\":\"Mi cuenta\",\"description\":\"\",\"keywords\":\"\",\"noIndex\":\"true\"},\"title\":\"Mi cuenta\"},\"\/my-subscriptions\":{\"socialHome\":false,\"appData\":{\"numbers\":{},\"appDefinitionId\":\"2bef2abe-7abe-43da-889c-53c1500a328c\",\"appPageId\":\"My Subscriptions\",\"menuOrder\":2,\"visibleForRoles\":[]},\"page\":\"380936b6-70ca-4254-8474-31bedebcd7e4\",\"seoData\":{\"title\":\"Mis suscripciones\",\"description\":\"\",\"keywords\":\"\",\"noIndex\":\"true\"},\"title\":\"Mis suscripciones\"},\"\/my-addresses\":{\"socialHome\":false,\"appData\":{\"numbers\":{},\"appDefinitionId\":\"1505b775-e885-eb1b-b665-1e485d9bf90e\",\"appPageId\":\"my_addresses\",\"menuOrder\":2,\"visibleForRoles\":[]},\"page\":\"541a5cc2-d6f6-4cd8-8a90-312ce207e850\",\"seoData\":{\"title\":\"Mis direcciones\",\"description\":\"\",\"keywords\":\"\",\"noIndex\":\"true\"},\"title\":\"Mis direcciones\"},\"\/my-wallet\":{\"socialHome\":false,\"appData\":{\"numbers\":{},\"appDefinitionId\":\"4aebd0cb-fbdb-4da7-b5d1-d05660a30172\",\"appPageId\":\"my_wallet\",\"menuOrder\":2,\"visibleForRoles\":[]},\"page\":\"e223a1f4-3ce9-44de-bbf3-c7e77c21e6ab\",\"seoData\":{\"title\":\"Mi billetera\",\"description\":\"\",\"keywords\":\"\",\"noIndex\":\"true\"},\"title\":\"Mi billetera\"},\"\/settings\":{\"socialHome\":false,\"appData\":{\"numbers\":{},\"appDefinitionId\":\"14f25dc5-6af3-5420-9568-f9c5ed98c9b1\",\"appPageId\":\"settings\",\"menuOrder\":4,\"visibleForRoles\":[]},\"page\":\"4403c30c-a1ec-497e-9056-d87d7ffae212\",\"seoData\":{\"title\":\"Opciones\",\"description\":\"\",\"keywords\":\"\",\"noIndex\":\"true\"},\"title\":\"Opciones\"},\"\/notifications\":{\"socialHome\":false,\"appData\":{\"numbers\":{\"key\":\"notificationsCount\",\"default\":0},\"appDefinitionId\":\"14f25924-5664-31b2-9568-f9c5ed98c9b1\",\"appPageId\":\"notifications_app\",\"menuOrder\":4,\"visibleForRoles\":[]},\"page\":\"ad16ce05-02eb-4802-86ef-e3f6cb5d2056\",\"seoData\":{\"title\":\"Notificaciones\",\"description\":\"\",\"keywords\":\"\",\"noIndex\":\"true\"},\"title\":\"Notificaciones\"},\"\/my-orders\":{\"socialHome\":false,\"appData\":{\"numbers\":{},\"appDefinitionId\":\"1380b703-ce81-ff05-f115-39571d94dfcd\",\"appPageId\":\"order_history\",\"menuOrder\":2,\"visibleForRoles\":[]},\"page\":\"cfe08b5e-852d-4a74-b28c-53cd2d18a0f9\",\"seoData\":{\"title\":\"Mis pedidos\",\"description\":\"\",\"keywords\":\"\",\"noIndex\":\"true\"},\"title\":\"Mis pedidos\"},\"\/my-bookings\":{\"socialHome\":false,\"appData\":{\"numbers\":{},\"appDefinitionId\":\"13d21c63-b5ec-5912-8397-c3a5ddb27a97\",\"appPageId\":\"bookings_member_area\",\"menuOrder\":2,\"visibleForRoles\":[]},\"page\":\"221dd5b5-a7e8-483e-92bc-c8aefef82fb4\",\"seoData\":{\"title\":\"Mis reservas\",\"description\":\"\",\"keywords\":\"\",\"noIndex\":\"true\"},\"title\":\"Mis reservas\"},\"\/my-groups\":{\"socialHome\":false,\"appData\":{\"numbers\":{},\"appDefinitionId\":\"148c2287-c669-d849-d153-463c7486a694\",\"appPageId\":\"My Groups\",\"menuOrder\":2,\"visibleForRoles\":[]},\"page\":\"9869a6f2-b478-4cf3-8fbc-0b8979b85e04\",\"seoData\":{\"title\":\"My Groups\",\"description\":\"\",\"keywords\":\"\",\"noIndex\":\"true\"},\"title\":\"My Groups\"}}}","group":"members","pages":{"cfe08b5e-852d-4a74-b28c-53cd2d18a0f9":"pkvic","221dd5b5-a7e8-483e-92bc-c8aefef82fb4":"wrmtp","ad16ce05-02eb-4802-86ef-e3f6cb5d2056":"yp7a1","e223a1f4-3ce9-44de-bbf3-c7e77c21e6ab":"tpqog","380936b6-70ca-4254-8474-31bedebcd7e4":"wpgmi","541a5cc2-d6f6-4cd8-8a90-312ce207e850":"in5n9","ede32970-5e9c-406c-9950-09655f962869":"v760n","9869a6f2-b478-4cf3-8fbc-0b8979b85e04":"u305p","4403c30c-a1ec-497e-9056-d87d7ffae212":"muzu0"},"roleVariations":{}},"routers-lsx0bfnn":{"prefix":"partners","appDefinitionId":"dataBinding","config":"{\"patterns\":{\"\/{title}\":{\"seoMetaTags\":{\"description\":\"{_id}\",\"robots\":\"index\",\"keywords\":\"\",\"og:image\":\"\"},\"pageRole\":\"a52dca6c-d625-428a-bfc6-ba31939fd9d2\",\"title\":\"{title}\",\"config\":{\"collection\":\"Partners\",\"pageSize\":26,\"lowercase\":true,\"seoV2\":true}}}}","group":"","pages":{"a52dca6c-d625-428a-bfc6-ba31939fd9d2":"n1mgf"},"roleVariations":{}},"routers-m7krxodo":{"prefix":"logs-api-panel","appDefinitionId":"dataBinding","config":"{\"patterns\":{\"\/\":{\"seoMetaTags\":{\"description\":\"{request}\",\"robots\":\"index\"},\"pageRole\":\"62d1cbe7-edd5-4013-9ffd-4b33b0101891\",\"title\":\"LogsAPIPanel\",\"config\":{\"collection\":\"LogsAPIPanel\",\"pageSize\":1,\"lowercase\":true,\"seoV2\":true}}}}","group":"","pages":{"62d1cbe7-edd5-4013-9ffd-4b33b0101891":"uv3a3"},"roleVariations":{}},"routers-lpdz75mh1":{"prefix":"profile","appDefinitionId":"14cc59bc-f0b7-15b8-e1c7-89ce41d0e0c9","config":"{\"type\":\"public\",\"patterns\":{\"\/{userName}\/profile\":{\"socialHome\":true,\"appData\":{\"numbers\":{},\"appDefinitionId\":\"14dbef06-cc42-5583-32a7-3abd44da4908\",\"appPageId\":\"about\",\"menuOrder\":1,\"visibleForRoles\":[]},\"page\":\"296fd1b2-b2d3-43e1-8485-54b566155d9b\",\"seoData\":{\"title\":\"{userName} | Perfil\",\"description\":\"\",\"keywords\":\"\",\"noIndex\":\"true\"},\"title\":\"Perfil\"}}}","group":"members","pages":{"296fd1b2-b2d3-43e1-8485-54b566155d9b":"a7c5z"},"roleVariations":{}}},"urlMappings":null},"mpaNavigation":{"forceMpaNavigation":false,"isRunningInDifferentSiteContext":false,"hasFeedbackQueryParam":false},"multilingual":{"originalLanguage":{"languageCode":"es","locale":"es-es","countryCode":"ESP","resolutionMethod":"Subdirectory","url":"https:\/\/www.dehonline.es\/documbox-info","name":"Spanish","seoLang":"es-es","localizedName":"Español","isPrimaryLanguage":true},"isOriginalLanguage":true,"currentLanguage":{"languageCode":"es","locale":"es-es","countryCode":"ESP","resolutionMethod":"Subdirectory","url":"https:\/\/www.dehonline.es\/documbox-info","name":"Spanish","seoLang":"es-es","localizedName":"Español","isPrimaryLanguage":true},"siteLanguages":[{"languageCode":"es","locale":"es-es","countryCode":"ESP","resolutionMethod":"Subdirectory","url":"https:\/\/www.dehonline.es\/documbox-info","name":"Spanish","seoLang":"es-es","localizedName":"Español","isPrimaryLanguage":true,"status":"Active"}],"hasLanguageSelector":false,"isEnabled":true,"baseUrl":"https:\/\/www.dehonline.es","domain":"dehonline.es","isPremiumDomain":true,"flagsUrl":"https:\/\/static.parastorage.com\/services\/linguist-flags\/1.969.0"},"ooiTpaSharedConfig":{"imageSpriteUrl":"https:\/\/static.parastorage.com\/services\/santa-resources\/resources\/viewer\/editorUI\/fonts.v19.png","wixStaticFontsLinks":["https:\/\/static.parastorage.com\/services\/fonts-data\/dist\/fonts.hz267ac7fkkfb3a18o8z.css","https:\/\/static.parastorage.com\/services\/fonts-data\/dist\/wixMadefor.j95mkaziqjnrn77aekr8.css","https:\/\/static.parastorage.com\/services\/fonts-data\/dist\/google.kuw5gk7jh0nwy00zmif1.css"]},"ooi":{"ooiComponentsData":{"13a94f09-2766-3c40-4a32-8edb5acdd8bc":{"componentUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-product-page\/1.4206.0\/ProductPageViewerWidget.bundle.min.js","widgetId":"13a94f09-2766-3c40-4a32-8edb5acdd8bc","noCssComponentUrl":"","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-cart-ooi\/1.5988.0\/","isLoadable":true,"isServerBundled":false,"loadStaticCssWithLink":true,"isModuleFederated":false},"49dbb2d9-d9e5-4605-a147-e926605bf164":{"componentUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-cart-ooi\/1.5988.0\/SideCartViewerWidget.bundle.min.js","widgetId":"49dbb2d9-d9e5-4605-a147-e926605bf164","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-cart-ooi\/1.5988.0\/SideCartViewerWidgetNoCss.bundle.min.js","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-cart-ooi\/1.5988.0\/","isLoadable":false,"isServerBundled":false,"loadStaticCssWithLink":true,"isModuleFederated":false},"14666402-0bc7-b763-e875-e99840d131bd":{"sentryDsn":"https:\/\/8c4075d5481d476e945486754f783364@sentry.io\/1865790","componentUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-add-to-cart\/1.1496.0\/addToCart.bundle.min.js","widgetId":"14666402-0bc7-b763-e875-e99840d131bd","noCssComponentUrl":"","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-cart-ooi\/1.5988.0\/","isLoadable":false,"isServerBundled":false,"loadStaticCssWithLink":false,"isModuleFederated":false},"a63a5215-8aa6-42af-96b1-583bfd74cff5":{"componentUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-gallery\/1.5848.0\/WishlistViewerWidget.bundle.min.js","widgetId":"a63a5215-8aa6-42af-96b1-583bfd74cff5","noCssComponentUrl":"","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-cart-ooi\/1.5988.0\/","isLoadable":true,"isServerBundled":false,"loadStaticCssWithLink":true,"isModuleFederated":false},"13afb094-84f9-739f-44fd-78d036adb028":{"componentUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-gallery\/1.5848.0\/GridGalleryViewerWidget.bundle.min.js","widgetId":"13afb094-84f9-739f-44fd-78d036adb028","noCssComponentUrl":"","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-cart-ooi\/1.5988.0\/","isLoadable":true,"isServerBundled":false,"loadStaticCssWithLink":true,"isModuleFederated":false},"1380bbab-4da3-36b0-efb4-2e0599971d14":{"componentUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-cart-ooi\/1.5988.0\/cartViewerWidget.bundle.min.js","widgetId":"1380bbab-4da3-36b0-efb4-2e0599971d14","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-cart-ooi\/1.5988.0\/cartViewerWidgetNoCss.bundle.min.js","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-cart-ooi\/1.5988.0\/","isLoadable":false,"isServerBundled":false,"loadStaticCssWithLink":false,"isModuleFederated":false},"139a41fd-0b1d-975f-6f67-e8cbdf8ccc82":{"componentUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-gallery\/1.5848.0\/SliderGalleryViewerWidget.bundle.min.js","widgetId":"139a41fd-0b1d-975f-6f67-e8cbdf8ccc82","noCssComponentUrl":"","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-cart-ooi\/1.5988.0\/","isLoadable":true,"isServerBundled":false,"loadStaticCssWithLink":true,"isModuleFederated":false},"1380bbb4-8df0-fd38-a235-88821cf3f8a4":{"componentUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-thank-you-page-ooi\/1.3451.0\/thankYouPageViewerWidget.bundle.min.js","widgetId":"1380bbb4-8df0-fd38-a235-88821cf3f8a4","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-thank-you-page-ooi\/1.3451.0\/thankYouPageViewerWidgetNoCss.bundle.min.js","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-cart-ooi\/1.5988.0\/","isLoadable":false,"isServerBundled":false,"loadStaticCssWithLink":false,"isModuleFederated":false},"1380bba0-253e-a800-a235-88821cf3f8a4":{"componentUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-gallery\/1.5848.0\/GridGalleryViewerWidget.bundle.min.js","widgetId":"1380bba0-253e-a800-a235-88821cf3f8a4","noCssComponentUrl":"","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-cart-ooi\/1.5988.0\/","isLoadable":true,"isServerBundled":false,"loadStaticCssWithLink":true,"isModuleFederated":false},"1380bbc4-1485-9d44-4616-92e36b1ead6b":{"componentUrl":"https:\/\/static.parastorage.com\/services\/ecom-platform-cart-icon\/1.2228.0\/CartIconViewerWidget.bundle.min.js","widgetId":"1380bbc4-1485-9d44-4616-92e36b1ead6b","noCssComponentUrl":"","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-cart-ooi\/1.5988.0\/","isLoadable":false,"isServerBundled":false,"loadStaticCssWithLink":true,"isModuleFederated":false},"244576c9-d856-49b9-af14-216071924e3b":{"componentUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-gallery\/1.5848.0\/SearchModalGalleryViewerWidget.bundle.min.js","widgetId":"244576c9-d856-49b9-af14-216071924e3b","noCssComponentUrl":"","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-cart-ooi\/1.5988.0\/","isLoadable":true,"isServerBundled":false,"loadStaticCssWithLink":true,"isModuleFederated":false},"abcd87fe-c51f-4538-848d-2902a2f50d2d":{"componentUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-gallery\/1.5848.0\/SearchResultsPageGalleryViewerWidget.bundle.min.js","widgetId":"abcd87fe-c51f-4538-848d-2902a2f50d2d","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-gallery\/1.5848.0\/SearchResultsPageGalleryViewerWidgetNoCss.bundle.min.js","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-cart-ooi\/1.5988.0\/","isLoadable":false,"isServerBundled":false,"loadStaticCssWithLink":true,"isModuleFederated":false},"4425f8e8-51fb-457b-9123-fdb7b1cef94a":{"componentUrl":"https:\/\/static.parastorage.com\/services\/ecom-platform-checkout\/1.6787.0\/PaymentRequestViewerWidget.bundle.min.js","widgetId":"4425f8e8-51fb-457b-9123-fdb7b1cef94a","noCssComponentUrl":"","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-cart-ooi\/1.5988.0\/","isLoadable":false,"isServerBundled":false,"loadStaticCssWithLink":false,"isModuleFederated":false},"bda15dc1-816d-4ff3-8dcb-1172d5343cce":{"componentUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-gallery\/1.5848.0\/CategoryPageViewerWidget.bundle.min.js","widgetId":"bda15dc1-816d-4ff3-8dcb-1172d5343cce","noCssComponentUrl":"","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-cart-ooi\/1.5988.0\/","isLoadable":true,"isServerBundled":false,"loadStaticCssWithLink":true,"isModuleFederated":false},"14fd5970-8072-c276-1246-058b79e70c1a":{"componentUrl":"https:\/\/static.parastorage.com\/services\/ecom-platform-checkout\/1.6787.0\/CheckoutViewerWidget.bundle.min.js","widgetId":"14fd5970-8072-c276-1246-058b79e70c1a","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/ecom-platform-checkout\/1.6787.0\/CheckoutViewerWidgetNoCss.bundle.min.js","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-cart-ooi\/1.5988.0\/","isLoadable":false,"isServerBundled":false,"loadStaticCssWithLink":false,"isModuleFederated":false},"13ec3e79-e668-cc0c-2d48-e99d53a213dd":{"componentUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-product-widget\/1.2052.0\/productWidget.bundle.min.js","widgetId":"13ec3e79-e668-cc0c-2d48-e99d53a213dd","noCssComponentUrl":"","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-cart-ooi\/1.5988.0\/","isLoadable":false,"isServerBundled":false,"loadStaticCssWithLink":false,"isModuleFederated":false},"deaaaab0-f5bd-4b7a-a652-3845efcb546a":{"componentUrl":"https:\/\/static.parastorage.com\/services\/ecom-platform-checkout\/1.6787.0\/BundleBundleViewerWidget.bundle.min.js","widgetId":"deaaaab0-f5bd-4b7a-a652-3845efcb546a","noCssComponentUrl":"","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-cart-ooi\/1.5988.0\/","isLoadable":false,"isServerBundled":false,"loadStaticCssWithLink":false,"isModuleFederated":false},"14c92de1-0e02-cbe5-98e9-c3de44d63a55":{"sentryDsn":"https:\/\/79baaa8e09c746d2b7401643b99792e0@sentry.wixpress.com\/6001","componentUrl":"https:\/\/static.parastorage.com\/services\/faq-ooi\/1.592.0\/FaqOoiViewerWidget.bundle.min.js","widgetId":"14c92de1-0e02-cbe5-98e9-c3de44d63a55","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/faq-ooi\/1.592.0\/FaqOoiViewerWidgetNoCss.bundle.min.js","isLoadable":false,"isServerBundled":false,"loadStaticCssWithLink":true,"isModuleFederated":false},"14dd1af6-3e02-63db-0ef2-72fbc7cc3136":{"componentUrl":"https:\/\/static.parastorage.com\/services\/my-account-ooi\/1.2783.0\/MyAccountViewerWidget.bundle.min.js","widgetId":"14dd1af6-3e02-63db-0ef2-72fbc7cc3136","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/my-account-ooi\/1.2783.0\/MyAccountViewerWidgetNoCss.bundle.min.js","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/my-account-ooi\/1.2783.0\/","isLoadable":true,"isServerBundled":false,"loadStaticCssWithLink":true,"isModuleFederated":false},"14cefc05-d163-dbb7-e4ec-cd4f2c4d6ddd":{"componentUrl":"https:\/\/static.parastorage.com\/services\/profile-card-tpa-ooi\/1.2887.0\/ProfileCardViewerWidget.bundle.min.js","widgetId":"14cefc05-d163-dbb7-e4ec-cd4f2c4d6ddd","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/profile-card-tpa-ooi\/1.2887.0\/ProfileCardViewerWidgetNoCss.bundle.min.js","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/profile-card-tpa-ooi\/1.2887.0\/","isLoadable":true,"isServerBundled":false,"loadStaticCssWithLink":true,"isModuleFederated":false},"6467c15e-af3c-4e8d-b167-41bfb8efc32a":{"sentryDsn":"https:\/\/9a65e97ebe8141fca0c4fd686f70996b@sentry.wixpress.com\/5894","componentUrl":"https:\/\/static.parastorage.com\/services\/payments-my-wallet\/1.1131.0\/MyWalletViewerWidget.bundle.min.js","widgetId":"6467c15e-af3c-4e8d-b167-41bfb8efc32a","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/payments-my-wallet\/1.1131.0\/MyWalletViewerWidgetNoCss.bundle.min.js","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/payments-my-wallet\/1.1131.0\/","isLoadable":false,"isServerBundled":false,"loadStaticCssWithLink":true,"isModuleFederated":false},"b29db04a-a8f2-4bfe-bbad-21c99c1054b5":{"componentUrl":"https:\/\/static.parastorage.com\/services\/subscriptions-tpa\/1.1199.0\/MySubscriptionsViewerWidget.bundle.min.js","widgetId":"b29db04a-a8f2-4bfe-bbad-21c99c1054b5","noCssComponentUrl":"","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/subscriptions-tpa\/1.1199.0\/","isLoadable":false,"isServerBundled":false,"loadStaticCssWithLink":false,"isModuleFederated":false},"44c66af6-4d25-485a-ad9d-385f5460deef":{"componentUrl":"https:\/\/static.parastorage.com\/services\/search-app\/1.3961.0\/SearchResultsViewerWidget.bundle.min.js","widgetId":"44c66af6-4d25-485a-ad9d-385f5460deef","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/search-app\/1.3961.0\/SearchResultsViewerWidgetNoCss.bundle.min.js","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/search-app\/1.3961.0\/","isLoadable":true,"isServerBundled":false,"loadStaticCssWithLink":true,"isModuleFederated":false},"04462ba4-2137-41bd-9460-0814554aae07":{"sentryDsn":"https:\/\/ed436f5053144538958ad06a5005e99a@sentry.wixpress.com\/6142","componentUrl":"https:\/\/static.parastorage.com\/services\/members-area-notifications-preferences\/1.63.0\/PreferencesOoiViewerWidget.bundle.min.js","widgetId":"04462ba4-2137-41bd-9460-0814554aae07","noCssComponentUrl":"","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/members-area-notifications-preferences\/1.63.0","isLoadable":false,"isServerBundled":false,"loadStaticCssWithLink":false,"isModuleFederated":false},"14f25dd2-f9b0-edc2-f38e-eded5da094aa":{"sentryDsn":"https:\/\/ed436f5053144538958ad06a5005e99a@sentry.wixpress.com\/6142","componentUrl":"https:\/\/static.parastorage.com\/services\/members-area-notifications-preferences\/1.63.0\/PreferencesOoiViewerWidget.bundle.min.js","widgetId":"14f25dd2-f9b0-edc2-f38e-eded5da094aa","noCssComponentUrl":"","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/members-area-notifications-preferences\/1.63.0","isLoadable":false,"isServerBundled":false,"loadStaticCssWithLink":false,"isModuleFederated":false},"14dbefb9-3b7b-c4e9-53e8-766defd30587":{"componentUrl":"https:\/\/static.parastorage.com\/services\/members-about-ooi\/1.2646.0\/ProfileViewerWidget.bundle.min.js","widgetId":"14dbefb9-3b7b-c4e9-53e8-766defd30587","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/members-about-ooi\/1.2646.0\/ProfileViewerWidgetNoCss.bundle.min.js","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/members-about-ooi\/1.2646.0\/","isLoadable":true,"isServerBundled":false,"loadStaticCssWithLink":true,"isModuleFederated":false},"14f2595a-a352-3ff1-9b3c-4d21861fe58f":{"sentryDsn":"https:\/\/460ff4620fa44cba8df530afde949785@sentry.wixpress.com\/5803","componentUrl":"https:\/\/static.parastorage.com\/services\/members-area-notifications\/1.134.0\/OoiNotificationsViewerWidget.bundle.min.js","widgetId":"14f2595a-a352-3ff1-9b3c-4d21861fe58f","noCssComponentUrl":"","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/members-area-notifications\/1.134.0","isLoadable":false,"isServerBundled":false,"loadStaticCssWithLink":false,"isModuleFederated":false},"6ca9273a-a775-407c-87e1-9685588c9aa7":{"sentryDsn":"https:\/\/460ff4620fa44cba8df530afde949785@sentry.wixpress.com\/5803","componentUrl":"https:\/\/static.parastorage.com\/services\/members-area-notifications\/1.134.0\/OoiNotificationsViewerWidget.bundle.min.js","widgetId":"6ca9273a-a775-407c-87e1-9685588c9aa7","noCssComponentUrl":"","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/members-area-notifications\/1.134.0","isLoadable":false,"isServerBundled":false,"loadStaticCssWithLink":false,"isModuleFederated":false},"47a7e7bb-f412-4093-9155-1ff5adbc4dae":{"sentryDsn":"https:\/\/f36cc48fb72b4d298c835f2793cf3b84@sentry-next.wixpress.com\/1058","componentUrl":"https:\/\/static.parastorage.com\/services\/social-groups-ooi\/5.780.0\/SideBySideViewerWidget.bundle.min.js","widgetId":"47a7e7bb-f412-4093-9155-1ff5adbc4dae","noCssComponentUrl":"","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/social-groups-ooi\/5.780.0\/","isLoadable":true,"isServerBundled":false,"loadStaticCssWithLink":true,"isModuleFederated":false},"0a9f687f-7e00-4576-a8e1-9415844b8f44":{"sentryDsn":"https:\/\/f36cc48fb72b4d298c835f2793cf3b84@sentry-next.wixpress.com\/1058","componentUrl":"https:\/\/static.parastorage.com\/services\/social-groups-ooi\/5.780.0\/GroupsListWidgetViewerWidget.bundle.min.js","widgetId":"0a9f687f-7e00-4576-a8e1-9415844b8f44","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/social-groups-ooi\/5.780.0\/GroupsListWidgetViewerWidgetNoCss.bundle.min.js","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/social-groups-ooi\/5.780.0\/","isLoadable":true,"isServerBundled":false,"loadStaticCssWithLink":true,"isModuleFederated":false},"8cce2b9e-8549-46c7-8ad2-f75bf28534ac":{"sentryDsn":"https:\/\/f36cc48fb72b4d298c835f2793cf3b84@sentry-next.wixpress.com\/1058","componentUrl":"https:\/\/static.parastorage.com\/services\/social-groups-ooi\/5.780.0\/FeedWidgetViewerWidget.bundle.min.js","widgetId":"8cce2b9e-8549-46c7-8ad2-f75bf28534ac","noCssComponentUrl":"","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/social-groups-ooi\/5.780.0\/","isLoadable":true,"isServerBundled":false,"loadStaticCssWithLink":true,"isModuleFederated":false},"a7dcdfcb-8abd-4008-af19-fed5fcd12b40":{"sentryDsn":"https:\/\/f36cc48fb72b4d298c835f2793cf3b84@sentry-next.wixpress.com\/1058","componentUrl":"https:\/\/static.parastorage.com\/services\/social-groups-ooi\/5.780.0\/GroupsViewerWidget.bundle.min.js","widgetId":"a7dcdfcb-8abd-4008-af19-fed5fcd12b40","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/social-groups-ooi\/5.780.0\/GroupsViewerWidgetNoCss.bundle.min.js","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/social-groups-ooi\/5.780.0\/","isLoadable":true,"isServerBundled":false,"loadStaticCssWithLink":true,"isModuleFederated":false},"83b2af08-c021-40c8-a3a5-b329a959ec2b":{"sentryDsn":"https:\/\/f36cc48fb72b4d298c835f2793cf3b84@sentry-next.wixpress.com\/1058","componentUrl":"https:\/\/static.parastorage.com\/services\/social-groups-ooi\/5.780.0\/GroupsListWidgetViewerWidget.bundle.min.js","widgetId":"83b2af08-c021-40c8-a3a5-b329a959ec2b","noCssComponentUrl":"","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/social-groups-ooi\/5.780.0\/","isLoadable":true,"isServerBundled":false,"loadStaticCssWithLink":true,"isModuleFederated":false},"e018cc55-7b1c-4500-a2e5-969f22c8a33a":{"sentryDsn":"https:\/\/f36cc48fb72b4d298c835f2793cf3b84@sentry-next.wixpress.com\/1058","componentUrl":"https:\/\/static.parastorage.com\/services\/social-groups-ooi\/5.780.0\/MembersAreaGroupsViewerWidget.bundle.min.js","widgetId":"e018cc55-7b1c-4500-a2e5-969f22c8a33a","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/social-groups-ooi\/5.780.0\/MembersAreaGroupsViewerWidgetNoCss.bundle.min.js","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/social-groups-ooi\/5.780.0\/","isLoadable":true,"isServerBundled":false,"loadStaticCssWithLink":true,"isModuleFederated":false},"513a5d84-3ebb-4ca6-a5aa-83effd2123b9":{"sentryDsn":"https:\/\/f36cc48fb72b4d298c835f2793cf3b84@sentry-next.wixpress.com\/1058","componentUrl":"https:\/\/static.parastorage.com\/services\/social-groups-ooi\/5.780.0\/GroupViewerWidget.bundle.min.js","widgetId":"513a5d84-3ebb-4ca6-a5aa-83effd2123b9","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/social-groups-ooi\/5.780.0\/GroupViewerWidgetNoCss.bundle.min.js","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/social-groups-ooi\/5.780.0\/","isLoadable":true,"isServerBundled":false,"loadStaticCssWithLink":true,"isModuleFederated":false},"aa86b56d-3c49-44fd-9976-963695e7815d":{"sentryDsn":"https:\/\/1eeb89147c984dc6bc3ffafd9e6cd089@sentry.wixpress.com\/809","componentUrl":"https:\/\/static.parastorage.com\/services\/ricos-viewer-ooi\/10.150.8\/ricosviewerViewerWidget.bundle.min.js","widgetId":"aa86b56d-3c49-44fd-9976-963695e7815d","noCssComponentUrl":"","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/ricos-viewer-ooi\/10.150.8\/","isLoadable":true,"isServerBundled":false,"loadStaticCssWithLink":false,"isModuleFederated":false},"a91a0543-d4bd-4e6b-b315-9410aa27bcde":{"componentUrl":"https:\/\/static.parastorage.com\/services\/bookings-service-details-widget\/1.3436.0\/BookingServicePageViewerWidget.bundle.min.js","widgetId":"a91a0543-d4bd-4e6b-b315-9410aa27bcde","noCssComponentUrl":"","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/bookings-widget-viewer\/1.1757.0\/","isLoadable":false,"isServerBundled":false,"loadStaticCssWithLink":false,"isModuleFederated":false},"3c675d25-41c7-437e-b13d-d0f99328e347":{"componentUrl":"https:\/\/static.parastorage.com\/services\/bookings-calendar-widget\/1.3539.0\/WeeklyTimetableViewerWidget.bundle.min.js","widgetId":"3c675d25-41c7-437e-b13d-d0f99328e347","noCssComponentUrl":"","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/bookings-widget-viewer\/1.1757.0\/","isLoadable":false,"isServerBundled":false,"loadStaticCssWithLink":true,"isModuleFederated":false},"14edb332-fdb9-2fe6-0fd1-e6293322b83b":{"sentryDsn":"https:\/\/c183baa23371454f99f417f6616b724d@sentry.wixpress.com\/5557","componentUrl":"https:\/\/static.parastorage.com\/services\/bookings-my-bookings-widget\/1.638.0\/MyBookingsViewerWidget.bundle.min.js","widgetId":"14edb332-fdb9-2fe6-0fd1-e6293322b83b","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/bookings-my-bookings-widget\/1.638.0\/MyBookingsViewerWidgetNoCss.bundle.min.js","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/bookings-widget-viewer\/1.1757.0\/","isLoadable":false,"isServerBundled":false,"loadStaticCssWithLink":true,"isModuleFederated":false},"e86ab26e-a14f-46d1-9d74-7243b686923b":{"componentUrl":"https:\/\/static.parastorage.com\/services\/bookings-calendar-widget\/1.3539.0\/DailyAgendaViewerWidget.bundle.min.js","widgetId":"e86ab26e-a14f-46d1-9d74-7243b686923b","noCssComponentUrl":"","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/bookings-widget-viewer\/1.1757.0\/","isLoadable":false,"isServerBundled":false,"loadStaticCssWithLink":true,"isModuleFederated":false},"621bc837-5943-4c76-a7ce-a0e38185301f":{"componentUrl":"https:\/\/static.parastorage.com\/services\/bookings-service-list-widget\/1.2175.0\/BookOnlineViewerWidget.bundle.min.js","widgetId":"621bc837-5943-4c76-a7ce-a0e38185301f","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/bookings-service-list-widget\/1.2175.0\/BookOnlineViewerWidgetNoCss.bundle.min.js","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/bookings-widget-viewer\/1.1757.0\/","isLoadable":true,"isServerBundled":false,"loadStaticCssWithLink":true,"isModuleFederated":false},"cc882051-73c9-41a6-8f90-f6ebc9f10fe1":{"componentUrl":"https:\/\/static.parastorage.com\/services\/bookings-service-list-widget\/1.2175.0\/ServiceListWidgetViewerWidget.bundle.min.js","widgetId":"cc882051-73c9-41a6-8f90-f6ebc9f10fe1","noCssComponentUrl":"","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/bookings-widget-viewer\/1.1757.0\/","isLoadable":true,"isServerBundled":false,"loadStaticCssWithLink":true,"isModuleFederated":false},"0eadb76d-b167-4f19-88d1-496a8207e92b":{"componentUrl":"https:\/\/static.parastorage.com\/services\/bookings-calendar-widget\/1.3539.0\/BookingCalendarWidgetViewerWidget.bundle.min.js","widgetId":"0eadb76d-b167-4f19-88d1-496a8207e92b","noCssComponentUrl":"","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/bookings-widget-viewer\/1.1757.0\/","isLoadable":false,"isServerBundled":false,"loadStaticCssWithLink":true,"isModuleFederated":false},"985e6fc8-ce3f-4cf8-9b85-714c73f48695":{"componentUrl":"https:\/\/static.parastorage.com\/services\/bookings-form-widget\/1.2349.0\/BookingsFormViewerWidget.bundle.min.js","widgetId":"985e6fc8-ce3f-4cf8-9b85-714c73f48695","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/bookings-form-widget\/1.2349.0\/BookingsFormViewerWidgetNoCss.bundle.min.js","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/bookings-widget-viewer\/1.1757.0\/","isLoadable":false,"isServerBundled":false,"loadStaticCssWithLink":true,"isModuleFederated":false},"2f22f475-3ed1-41fd-90b7-221e92134f3c":{"componentUrl":"https:\/\/static.parastorage.com\/services\/bookings-daily-agenda-widget\/1.605.0\/DailyAgendaViewerWidget.bundle.min.js","widgetId":"2f22f475-3ed1-41fd-90b7-221e92134f3c","noCssComponentUrl":"","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/bookings-widget-viewer\/1.1757.0\/","isLoadable":false,"isServerBundled":false,"loadStaticCssWithLink":true,"isModuleFederated":false},"e1339b7c-0c95-43fe-89f6-be037ad29ea9":{"sentryDsn":"https:\/\/c183baa23371454f99f417f6616b724d@sentry.wixpress.com\/5557","componentUrl":"https:\/\/static.parastorage.com\/services\/bookings-my-bookings-widget\/1.638.0\/MyBookingsViewerWidget.bundle.min.js","widgetId":"e1339b7c-0c95-43fe-89f6-be037ad29ea9","noCssComponentUrl":"","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/bookings-widget-viewer\/1.1757.0\/","isLoadable":false,"isServerBundled":false,"loadStaticCssWithLink":true,"isModuleFederated":false},"14756c3d-f10a-45fc-4df1-808f22aabe80":{"componentUrl":"https:\/\/static.parastorage.com\/services\/bookings-widget-viewer\/1.1757.0\/component.bundle.min.js","widgetId":"14756c3d-f10a-45fc-4df1-808f22aabe80","noCssComponentUrl":"","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/bookings-widget-viewer\/1.1757.0\/","isLoadable":false,"isServerBundled":false,"loadStaticCssWithLink":false,"isModuleFederated":false},"54d912c5-52cb-4657-b8fa-e1a4cda8ed01":{"componentUrl":"https:\/\/static.parastorage.com\/services\/bookings-calendar-widget\/1.3539.0\/BookingCalendarViewerWidget.bundle.min.js","widgetId":"54d912c5-52cb-4657-b8fa-e1a4cda8ed01","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/bookings-calendar-widget\/1.3539.0\/BookingCalendarViewerWidgetNoCss.bundle.min.js","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/bookings-widget-viewer\/1.1757.0\/","isLoadable":false,"isServerBundled":false,"loadStaticCssWithLink":true,"isModuleFederated":false},"371ee199-389c-4a93-849e-e35b8a15b7ca":{"sentryDsn":"https:\/\/18d2f96d279149989b95faf0a4b41882@sentry-next.wixpress.com\/1784","componentUrl":"https:\/\/static.parastorage.com\/services\/form-app\/1.2413.0\/FormViewerWidget.bundle.min.js","widgetId":"371ee199-389c-4a93-849e-e35b8a15b7ca","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/form-app\/1.2413.0\/FormViewerWidgetNoCss.bundle.min.js","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/form-app\/1.2413.0","isLoadable":true,"isServerBundled":false,"loadStaticCssWithLink":true,"isModuleFederated":false},"142bb34d-3439-576a-7118-683e690a1e0d":{"sentryDsn":"https:\/\/8eb368c655b84e029ed79ad7a5c1718e@sentry.wixpress.com\/3427","componentUrl":"https:\/\/static.parastorage.com\/services\/pro-gallery-tpa\/1.1509.0\/WixProGalleryViewerWidget.bundle.min.js","widgetId":"142bb34d-3439-576a-7118-683e690a1e0d","noCssComponentUrl":"","isLoadable":false,"isServerBundled":false,"loadStaticCssWithLink":false,"isModuleFederated":false},"14c1462a-97f2-9f6a-7bb7-f5541f23caa6":{"sentryDsn":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643","componentUrl":"https:\/\/static.parastorage.com\/services\/communities-blog-ooi\/1.3112.0\/BlogViewerWidget.bundle.min.js","widgetId":"14c1462a-97f2-9f6a-7bb7-f5541f23caa6","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/communities-blog-ooi\/1.3112.0\/BlogViewerWidgetNoCss.bundle.min.js","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/communities-blog-ooi\/1.3112.0\/","isLoadable":true,"isServerBundled":false,"loadStaticCssWithLink":false,"isModuleFederated":false},"46a9e991-c1cc-47c9-b19a-e99d3be1e2c9":{"sentryDsn":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643","componentUrl":"https:\/\/static.parastorage.com\/services\/communities-blog-ooi\/1.3112.0\/RelatedPostsViewerWidget.bundle.min.js","widgetId":"46a9e991-c1cc-47c9-b19a-e99d3be1e2c9","noCssComponentUrl":"","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/communities-blog-ooi\/1.3112.0\/","isLoadable":false,"isServerBundled":false,"loadStaticCssWithLink":false,"isModuleFederated":false},"a0d7808c-0d7d-4a40-8cf0-911a9f0de96f":{"sentryDsn":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643","componentUrl":"https:\/\/static.parastorage.com\/services\/communities-blog-ooi\/1.3112.0\/CategoryMenuViewerWidget.bundle.min.js","widgetId":"a0d7808c-0d7d-4a40-8cf0-911a9f0de96f","noCssComponentUrl":"","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/communities-blog-ooi\/1.3112.0\/","isLoadable":false,"isServerBundled":false,"loadStaticCssWithLink":true,"isModuleFederated":false},"c0a125b8-2311-451e-99c5-89b6bba02b22":{"sentryDsn":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643","componentUrl":"https:\/\/static.parastorage.com\/services\/communities-blog-ooi\/1.3112.0\/TagCloudViewerWidget.bundle.min.js","widgetId":"c0a125b8-2311-451e-99c5-89b6bba02b22","noCssComponentUrl":"","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/communities-blog-ooi\/1.3112.0\/","isLoadable":false,"isServerBundled":false,"loadStaticCssWithLink":true,"isModuleFederated":false},"1515a9e7-b579-fbbb-43fc-0e3051c14803":{"sentryDsn":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643","componentUrl":"https:\/\/static.parastorage.com\/services\/communities-blog-ooi\/1.3112.0\/RssButtonViewerWidget.bundle.min.js","widgetId":"1515a9e7-b579-fbbb-43fc-0e3051c14803","noCssComponentUrl":"","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/communities-blog-ooi\/1.3112.0\/","isLoadable":false,"isServerBundled":false,"loadStaticCssWithLink":true,"isModuleFederated":false},"2f3d2c69-2bc4-4519-bd72-0a63dd92577f":{"sentryDsn":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643","componentUrl":"https:\/\/static.parastorage.com\/services\/communities-blog-ooi\/1.3112.0\/ArchiveViewerWidget.bundle.min.js","widgetId":"2f3d2c69-2bc4-4519-bd72-0a63dd92577f","noCssComponentUrl":"","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/communities-blog-ooi\/1.3112.0\/","isLoadable":false,"isServerBundled":false,"loadStaticCssWithLink":true,"isModuleFederated":false},"211b5287-14e2-4690-bb71-525908938c81":{"sentryDsn":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643","componentUrl":"https:\/\/static.parastorage.com\/services\/communities-blog-ooi\/1.3112.0\/PostViewerWidget.bundle.min.js","widgetId":"211b5287-14e2-4690-bb71-525908938c81","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/communities-blog-ooi\/1.3112.0\/PostViewerWidgetNoCss.bundle.min.js","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/communities-blog-ooi\/1.3112.0\/","isLoadable":true,"isServerBundled":false,"loadStaticCssWithLink":true,"isModuleFederated":false},"478911c3-de0c-469e-90e3-304f2f8cd6a7":{"sentryDsn":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643","componentUrl":"https:\/\/static.parastorage.com\/services\/communities-blog-ooi\/1.3112.0\/PostTitleViewerWidget.bundle.min.js","widgetId":"478911c3-de0c-469e-90e3-304f2f8cd6a7","noCssComponentUrl":"","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/communities-blog-ooi\/1.3112.0\/","isLoadable":false,"isServerBundled":false,"loadStaticCssWithLink":false,"isModuleFederated":false},"813eb645-c6bd-4870-906d-694f30869fd9":{"sentryDsn":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643","componentUrl":"https:\/\/static.parastorage.com\/services\/communities-blog-ooi\/1.3112.0\/PostListViewerWidget.bundle.min.js","widgetId":"813eb645-c6bd-4870-906d-694f30869fd9","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/communities-blog-ooi\/1.3112.0\/PostListViewerWidgetNoCss.bundle.min.js","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/communities-blog-ooi\/1.3112.0\/","isLoadable":false,"isServerBundled":false,"loadStaticCssWithLink":false,"isModuleFederated":false},"e5a2773b-0e6b-4cbb-a012-3b4a69e92046":{"sentryDsn":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643","componentUrl":"https:\/\/static.parastorage.com\/services\/communities-blog-ooi\/1.3112.0\/MyPostsViewerWidget.bundle.min.js","widgetId":"e5a2773b-0e6b-4cbb-a012-3b4a69e92046","noCssComponentUrl":"","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/communities-blog-ooi\/1.3112.0\/","isLoadable":false,"isServerBundled":false,"loadStaticCssWithLink":false,"isModuleFederated":false}},"viewMode":"Site","formFactor":"Desktop","blogMobileComponentUrl":"https:\/\/static.parastorage.com\/services\/communities-blog-ooi\/1.3112.0\/feed-page-mobile-viewer.bundle.min.js"},"passwordProtectedPage":{"protectedPageResolverUrl":"https:\/\/site-pages.wix.com\/_api\/wix-public-html-info-webapp\/resolve_protected_page_urls","homePageId":"fswyo"},"protectedPages":{"passwordProtected":{"ytqdg":"ytqdg"},"publicPageIds":["zuzg7","nhshd","quxst","pm5m6","hxib1","mrxoe","txodm","ol5if","nt31m","olhdo","nt31l","o0l10","nd8j7","syyvq","pcxzv","popoq","hpgql","nt31g","cim8a","qetce","dsocb","hfva2","fqdy2","ik1hh","q5qha","zxmy1","shn4f","i2evc","p9srv","v5m3j","ocq3p","qurwf","vl0d0","gji5q","njh83","y59yq","errqt","h10oq","kphfo","bpx3c","tcuwq","nt31j","qn9b9","wrsv8","fc4zp","rwy8r","kjy2o","qbfxr","nt31h","p60vc","qjepe","thsrc","k9yj1","wi4q4","nt31f","cenyi","xg7qg","cmksk","j8k8e","p3s3p","fd425","mmdw4","hw5bv","rl147","xgxhy","iwat5","z7jn0","nh8xj","x555j","tejf5","sxzjx","zt28q","ot0oq","smykc","zzhwm","l8mal","af52d","nt31n","wi29w","y73hn","nt31d","w8duu","izzed","sbcjh","mwl8s","uv3a3","vmhii","gpbxw","x29nv","cg9jn","d8prw","nt31e","z7nph","lmhhf","u6bhj","wu4cm","knhbr","c0ser","e5c1j","dytx1","yp7vs","d5r14","k3136","steae","obu7v","ikonk","l9mx3","qofog","xx429","kz0lr","js15o","u6k6f","zsvm8","nt31i","uwoq0","reoxc","nt31k","ydcn0","o8zx5","khd1a","n1mgf","ypkkv","ibjpe","uf8q2","htqpi","a7c5z","vvs4y","a67ag","pkewe","redrq","fswyo","sbgdt","skelz","slmag","zsmlf","bc8kx","xc5ju","t1as7","i0g2n","vpfah","m0mic","nvapc","uafvx","tajgd","lspga","hydos","mkray","tdhex","rc4o6","vvsrw","unlm7","yzt11","ic0g7","dk9q2","ume87"],"pageUriSeoToRouterPrefix":{"my-orders":"account","my-bookings":"account","notifications":"account","my-wallet":"account","my-subscriptions":"account","my-addresses":"account","my-account":"account","my-groups":"account","settings":"account","blank":"partners","blank-1":"logs-api-panel","profile-1":"profile"}},"renderer":{"disabledComponents":{},"isBuilderComponentModel":false},"reporter":{"userId":"ccd8ffa2-1969-432d-b976-df5cde6967ca","metaSiteId":"b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1","isPremium":true,"isFBServerEventsAppProvisioned":true,"dynamicPagesIds":["pkvic","wrmtp","yp7a1","tpqog","wpgmi","in5n9","v760n","u305p","muzu0","n1mgf","uv3a3","a7c5z"]},"routerFetch":{"externalBaseUrl":"https:\/\/www.dehonline.es","viewMode":"desktop"},"router":{"baseUrl":"https:\/\/www.dehonline.es","mainPageId":"fswyo","pagesMap":{"in5n9":{"pageId":"in5n9","title":"Mis direcciones","pageUriSEO":"my-addresses"},"zuzg7":{"pageId":"zuzg7","title":"HomologacionProv","pageUriSEO":"homologacionproveedores","pageJsonFileName":"ccd8ff_5a765fa3be5afc95807800d4981f373b_11056"},"nhshd":{"pageId":"nhshd","title":"AD_comunidad","pageUriSEO":"ad-comunidad","pageJsonFileName":"ccd8ff_201094f7ad64058474599a3122175e85_11063"},"quxst":{"pageId":"quxst","title":"360_home_services","pageUriSEO":"360homeservice","pageJsonFileName":"ccd8ff_f779e3af23b0d2a1e97db555a1cb46e8_11060"},"pm5m6":{"pageId":"pm5m6","title":"TestingQA no tocar","pageUriSEO":"testingqa","pageJsonFileName":"ccd8ff_bb516a36ef4d942b056acd0aa9afdb44_11055"},"hxib1":{"pageId":"hxib1","title":"Aún no eres cliente","pageUriSEO":"contacto","pageJsonFileName":"ccd8ff_7cb4a9bd18397c7a0da434cf0d4eb9e1_11060"},"mrxoe":{"pageId":"mrxoe","title":"Planes AF","pageUriSEO":"planes-af","pageJsonFileName":"ccd8ff_e992d5fcda054148bf820b5a15dd48d6_11092"},"txodm":{"pageId":"txodm","title":"AF MKT","pageUriSEO":"administracion-fincas","pageJsonFileName":"ccd8ff_bd9dc4ded08cbe51d80616d0ed971f89_11070"},"ol5if":{"pageId":"ol5if","title":"FAQ 2","pageUriSEO":"copia-de-faq-1-1","pageJsonFileName":"ccd8ff_d25a3a8b6db48192aa810c8eb823be32_11051"},"yp7a1":{"pageId":"yp7a1","title":"Notificaciones","pageUriSEO":"notifications"},"nt31m":{"pageId":"nt31m","title":"Mas info DocumBox","pageUriSEO":"copia-de-mas-info-certibox-1","pageJsonFileName":"ccd8ff_f941fd510d2220094814e88efa21571e_11051"},"olhdo":{"pageId":"olhdo","title":"Confirmación IBAN","pageUriSEO":"copia-de-confirmación-cuenta-panel","pageJsonFileName":"ccd8ff_86b89d9ffd363eced05759f57d20949e_11051"},"nt31l":{"pageId":"nt31l","title":"VDComercial","pageUriSEO":"popup-nt31l","pageJsonFileName":"ccd8ff_bd5a73821416a88371ee5d7a15e53223_11051"},"o0l10":{"pageId":"o0l10","title":"Canal de denuncias","pageUriSEO":"canaldedenuncias","pageJsonFileName":"ccd8ff_759f4e3da440c2df6eb98352087e1b37_11051"},"nd8j7":{"pageId":"nd8j7","title":"Comunidad DEH","pageUriSEO":"comunidad","pageJsonFileName":"ccd8ff_a201f6e811463f24974a2d20bca8133e_11051"},"syyvq":{"pageId":"syyvq","title":"Más info At Premium","pageUriSEO":"copia-de-mas-info-certibox-3","pageJsonFileName":"ccd8ff_aaede83908aebaf7fcf9330a41e9260d_11051"},"pcxzv":{"pageId":"pcxzv","title":"BajaParrilla","pageUriSEO":"popup-pcxzv","pageJsonFileName":"ccd8ff_3d5921ea41d9e0f2ae9d9043e924a189_11051"},"popoq":{"pageId":"popoq","title":"Solicitud de Centralización CD","pageUriSEO":"popup-popoq","pageJsonFileName":"ccd8ff_7e568a63c68e8cf1be0c0ab66a1f63e0_11051"},"u305p":{"pageId":"u305p","title":"My Groups","pageUriSEO":"my-groups"},"hpgql":{"pageId":"hpgql","title":"Com. propietarios por comunidades","pageUriSEO":"datos-com-propietarios-comunidades","pageJsonFileName":"ccd8ff_3621b19b8b56b5ce84c2e7297bb3c416_11051"},"muzu0":{"pageId":"muzu0","title":"Opciones","pageUriSEO":"settings"},"nt31g":{"pageId":"nt31g","title":"Mas info CertiBox","pageUriSEO":"copia-de-firma-telemática","pageJsonFileName":"ccd8ff_655c6faaf91d465849e706e1cf31aa65_11051"},"cim8a":{"pageId":"cim8a","title":"AS MKT","pageUriSEO":"asesorias-despachos-profesionales","pageJsonFileName":"ccd8ff_529b7fa8fc4a3d49def47d3e473d9987_11177"},"qetce":{"pageId":"qetce","title":"Onzane","pageUriSEO":"onzane","pageJsonFileName":"ccd8ff_a04fb81240220455483fe0c3ec7adcfa_11051"},"dsocb":{"pageId":"dsocb","title":"Notificaciones electrónicas","pageUriSEO":"notificacioneselectronicas","pageJsonFileName":"ccd8ff_1c91ce176b76dcd0b9201381255860e8_11051"},"hfva2":{"pageId":"hfva2","title":"AF Nuevo Servicios","pageUriSEO":"af-nuevo-servicios","pageJsonFileName":"ccd8ff_0ef72eef7979b4f9222f9b7ef1713f44_11060"},"fqdy2":{"pageId":"fqdy2","title":"Guía CEN 6","pageUriSEO":"copia-de-guía-cen-5","pageJsonFileName":"ccd8ff_01e8a98775fe8b24b5baf9c41a5028f3_11051"},"ik1hh":{"pageId":"ik1hh","title":"Formulario de Contacto","pageUriSEO":"copia-de-mas-info-homologación-1","pageJsonFileName":"ccd8ff_47882fef4597fb55f659c6ec2a8e7ee1_11051"},"q5qha":{"pageId":"q5qha","title":"Claúsula de privacidad encuestas","pageUriSEO":"clausula-de-privacidad","pageJsonFileName":"ccd8ff_3f67fcb6f0d6edf97a069679b7ee3a9f_11051"},"zxmy1":{"pageId":"zxmy1","title":"Autónomos por comunidades","pageUriSEO":"datos-autonomos-comunidades","pageJsonFileName":"ccd8ff_de8db80aeedb7a600f791e84dcdf6d00_11060"},"shn4f":{"pageId":"shn4f","title":"DocumBox info","pageUriSEO":"documbox-info","pageJsonFileName":"ccd8ff_af1bd866f57d981e339c93de1734298e_11092"},"i2evc":{"pageId":"i2evc","title":"Finalización de compra","pageUriSEO":"checkout","pageJsonFileName":"ccd8ff_65df3bfc5141d36c164df9e111742b63_11051"},"p9srv":{"pageId":"p9srv","title":"Gracias n","pageUriSEO":"thankyou-lexbox-prl-n","pageJsonFileName":"ccd8ff_08ff3d2477873e0ec376625bfbe9db7e_11060"},"pkvic":{"pageId":"pkvic","title":"Mis pedidos","pageUriSEO":"my-orders"},"v5m3j":{"pageId":"v5m3j","title":"Campaña Norte","pageUriSEO":"popup-v5m3j","pageJsonFileName":"ccd8ff_fda94af02f13c617b667243fa18a79f8_11051"},"ocq3p":{"pageId":"ocq3p","title":"Confirmación Cuenta Panel","pageUriSEO":"copia-de-ir-a-soporte-1","pageJsonFileName":"ccd8ff_d18c75c61b7d5f55b9a5c167d694fea4_11051"},"qurwf":{"pageId":"qurwf","title":"Guía Inicio 1","pageUriSEO":"popup-qurwf","pageJsonFileName":"ccd8ff_b2d7e0ddaaa2acb64bcd0c9d930c455d_11146"},"tpqog":{"pageId":"tpqog","title":"Mi billetera","pageUriSEO":"my-wallet"},"xq2tw":{"pageId":"xq2tw","title":"Venta Recurrente","pageUriSEO":"venta-recurrente"},"vl0d0":{"pageId":"vl0d0","title":"Certificado eidas","pageUriSEO":"certificado-eidas","pageJsonFileName":"ccd8ff_039673da5e58025c713e6d24992631ef_11051"},"gji5q":{"pageId":"gji5q","title":"Mas remuneraciones","pageUriSEO":"mas-ingresos","pageJsonFileName":"ccd8ff_33bd2c8e67284aa9ae7fe589ffa64eea_11060"},"njh83":{"pageId":"njh83","title":"Sedes electrónicas vigiladas","pageUriSEO":"sedes","pageJsonFileName":"ccd8ff_a5471243a54e1553476cd4e128d026d3_11060"},"y59yq":{"pageId":"y59yq","title":"Pólitica de privacidad para webinars","pageUriSEO":"clausula-privacidad-webinars","pageJsonFileName":"ccd8ff_1a725d7d691a1a3808e18c62ac78db47_11082"},"errqt":{"pageId":"errqt","title":"Servicio sellado de tiempo","pageUriSEO":"tsa","pageJsonFileName":"ccd8ff_abac7bbeae9fd1fb5a66de65e1746b3c_11051"},"h10oq":{"pageId":"h10oq","title":"AF Girona","pageUriSEO":"af-girona","pageJsonFileName":"ccd8ff_6430a1e1b3926d4b76c91543de772d1c_11055"},"kphfo":{"pageId":"kphfo","title":"Guía CEN 8","pageUriSEO":"copia-de-guía-cen-7","pageJsonFileName":"ccd8ff_2840964641b54bc8fd08a87882291b4f_11051"},"bpx3c":{"pageId":"bpx3c","title":"FAQ grupos","pageUriSEO":"copia-de-faq-email-notif-1","pageJsonFileName":"ccd8ff_013903206300554e0d9a06d87c49a2a9_11051"},"tcuwq":{"pageId":"tcuwq","title":"CertiBox contratar","pageUriSEO":"certibox-form-contratar","pageJsonFileName":"ccd8ff_c2be338c7d693ff09e49589d90b71b25_11060"},"nt31j":{"pageId":"nt31j","title":"PopUp AS No Cliente","pageUriSEO":"popup-nt31j","pageJsonFileName":"ccd8ff_9db64beee282cf096a9ed5073e06b662_11051"},"qn9b9":{"pageId":"qn9b9","title":"Valoraciones","pageUriSEO":"valoraciones","pageJsonFileName":"ccd8ff_f8dd30b348333281dd55dba5a8fdde68_11056"},"wrsv8":{"pageId":"wrsv8","title":"Guía CEN 3","pageUriSEO":"copia-de-guía-cen-2","pageJsonFileName":"ccd8ff_86d786ad8761e76e75e70b493079b367_11051"},"fc4zp":{"pageId":"fc4zp","title":"Soluciones","pageUriSEO":"soluciones","pageJsonFileName":"ccd8ff_a85b858d8382a0281d31ff16363d8ef8_11051"},"rwy8r":{"pageId":"rwy8r","title":"Emovili","pageUriSEO":"emovili","pageJsonFileName":"ccd8ff_7adadba4419368e4887862e697dc448b_11051"},"kjy2o":{"pageId":"kjy2o","title":"Acuerdo ecPF","pageUriSEO":"acuerdo-ecpf","pageJsonFileName":"ccd8ff_74001c918761978947d259018e0bd8bf_11051"},"qbfxr":{"pageId":"qbfxr","title":"FAQ recogida Notificacion","pageUriSEO":"copia-de-faq-centralizacion","pageJsonFileName":"ccd8ff_a52f80d9ca09060924294d3ba22b476b_11051"},"wmg2n":{"pageId":"wmg2n","title":"Servicios AS Nuevo","pageUriSEO":"servicios-as"},"nt31h":{"pageId":"nt31h","title":"Mas info RGPD","pageUriSEO":"copia-de-mas-info-certibox","pageJsonFileName":"ccd8ff_b983bb2d7acba9bcca3a4874d154e5a4_11051"},"p60vc":{"pageId":"p60vc","title":"PYMEs por comunidades","pageUriSEO":"pymes-por-comunidades","pageJsonFileName":"ccd8ff_5f4a69496476a50416a931375058ce54_11060"},"qjepe":{"pageId":"qjepe","title":"Página del carrito","pageUriSEO":"cart-page","pageJsonFileName":"ccd8ff_13317c6eb40fb9ed05b57e7ac72fc537_11051"},"thsrc":{"pageId":"thsrc","title":"Creando usuario","pageUriSEO":"copia-de-vdcomercial","pageJsonFileName":"ccd8ff_f322c7930c4716fd10cf9c56291f1c52_11051"},"k9yj1":{"pageId":"k9yj1","title":"Suscriptores_semana","pageUriSEO":"suscriptores-semana","pageJsonFileName":"ccd8ff_c916b41079ee4777a06c03f3a7c235f9_11051"},"wi4q4":{"pageId":"wi4q4","title":"FAQ email Notif","pageUriSEO":"copia-de-faq-centralizacion-1","pageJsonFileName":"ccd8ff_1a3de6c619b0a344a70a78226b521f62_11051"},"nt31f":{"pageId":"nt31f","title":"popup1","pageUriSEO":"popup-nt31f","pageJsonFileName":"ccd8ff_4d695f24260e30b8d2e4b3c3181b508b_11051"},"cenyi":{"pageId":"cenyi","title":"FAQ Centralizacion","pageUriSEO":"copia-de-faq-1-2","pageJsonFileName":"ccd8ff_9bb4e5f284d607253b433fcfd478e798_11051"},"xg7qg":{"pageId":"xg7qg","title":"Más Info CEN","pageUriSEO":"popup-xg7qg","pageJsonFileName":"ccd8ff_7abf1378ae27933bd8d5c14b52ad1df3_11051"},"d48k3":{"pageId":"d48k3","title":"Parrilla Nuevo","pageUriSEO":"parrilla-pruebas"},"cmksk":{"pageId":"cmksk","title":"LexBox","pageUriSEO":"lexbox","pageJsonFileName":"ccd8ff_25c793206570ee517502b355b9b64598_11051"},"j8k8e":{"pageId":"j8k8e","title":"Página de agradecimiento","pageUriSEO":"thank-you-page","pageJsonFileName":"ccd8ff_266bc687d0681c3150108a449d915e21_11051"},"skvoa":{"pageId":"skvoa","title":"Compra finalizada AF","pageUriSEO":"compra-finalizada-af"},"qmhcs":{"pageId":"qmhcs","title":"VD Comercial NEW","pageUriSEO":"comercial-vd"},"p3s3p":{"pageId":"p3s3p","title":"FAQ Cortesia","pageUriSEO":"copia-de-faq-email-notif","pageJsonFileName":"ccd8ff_26672058a3e25c882a77c266407901ff_11051"},"fd425":{"pageId":"fd425","title":"Carrito lateral","pageUriSEO":"popup-fd425","pageJsonFileName":"ccd8ff_49b6348a4dfdc838634280b119e84ca4_11051"},"mmdw4":{"pageId":"mmdw4","title":"Onzane_vecinos","pageUriSEO":"onzane-app","pageJsonFileName":"ccd8ff_db067411f7a092acb698273d08a33a2d_11051"},"hw5bv":{"pageId":"hw5bv","title":"AF Gerona Finalizada","pageUriSEO":"af-girona-finalizada","pageJsonFileName":"ccd8ff_9678072e0db7caa570defc1bd9134879_11051"},"rl147":{"pageId":"rl147","title":"DocumBox Redirect","pageUriSEO":"popup-rl147","pageJsonFileName":"ccd8ff_acdfd35d60a96a678a9ec91e3bbcd12c_11051"},"xgxhy":{"pageId":"xgxhy","title":"Certificado CSQA","pageUriSEO":"popup-xgxhy","pageJsonFileName":"ccd8ff_0da8427d60ac72d8c71aab808dca7515_11051"},"iwat5":{"pageId":"iwat5","title":"Carpetas Financieras","pageUriSEO":"carpetas-financieras","pageJsonFileName":"ccd8ff_24debed06be12a1180b2f503c218f785_11060"},"wrmtp":{"pageId":"wrmtp","title":"Mis reservas","pageUriSEO":"my-bookings"},"z7jn0":{"pageId":"z7jn0","title":"Error 404","pageUriSEO":"error404","pageJsonFileName":"ccd8ff_5b1ddbc83e97c4c907a2292d1e892e1d_11051"},"nh8xj":{"pageId":"nh8xj","title":"Mas info PRL","pageUriSEO":"copia-de-mas-info-rgpd-1","pageJsonFileName":"ccd8ff_966e66e861eda8eb2244dbc859a2e129_11051"},"x555j":{"pageId":"x555j","title":"CEN info","pageUriSEO":"info-control-exp-notificaciones","pageJsonFileName":"ccd8ff_b69fa2f2eaf53a4132355cfc0d5448e2_11051"},"tejf5":{"pageId":"tejf5","title":"Fullscreen Page","pageUriSEO":"fullscreen-page","pageJsonFileName":"ccd8ff_0b05ba6881ce49f8fa6f2c5fa91623f2_11158"},"sxzjx":{"pageId":"sxzjx","title":"Acuerdo PJ Servicios","pageUriSEO":"copia-de-acuerdo-pj-1","pageJsonFileName":"ccd8ff_42362a13a786cf5b91cab510627ff055_11051"},"zt28q":{"pageId":"zt28q","title":"Onzane_acceso","pageUriSEO":"onzane-acceso","pageJsonFileName":"ccd8ff_36ebece37e0d6624af467cdfda2803b3_11051"},"ot0oq":{"pageId":"ot0oq","title":"Política de privacidad para redes social","pageUriSEO":"política-de-privacidad-para-redes-sociales","pageJsonFileName":"ccd8ff_0ec56b712054d8f53cf4ec6380cce166_11051"},"smykc":{"pageId":"smykc","title":"Contacto Whatsapp","pageUriSEO":"popup-smykc","pageJsonFileName":"ccd8ff_4ffc97d82cb722178bc7b54d228513a9_11051"},"zzhwm":{"pageId":"zzhwm","title":"Entrada","pageUriSEO":"post","pageJsonFileName":"ccd8ff_1d50f9db25773a97730976317e34c5ed_11051"},"l8mal":{"pageId":"l8mal","title":"Admin. fincas por comunidades","pageUriSEO":"admin-fincas-comunidades","pageJsonFileName":"ccd8ff_3844934e030be601e8d5ee61213a4747_11051"},"af52d":{"pageId":"af52d","title":"Acuerdo ecPJ","pageUriSEO":"acuerdo-ecpj","pageJsonFileName":"ccd8ff_3bbc34b05cca62e971790383a7a75e10_11051"},"nt31n":{"pageId":"nt31n","title":"Mas info AD Comunidad","pageUriSEO":"copia-de-mas-info-homologación","pageJsonFileName":"ccd8ff_46d55e507e14d0a2f6e6f371bdfe9b5b_11051"},"wi29w":{"pageId":"wi29w","title":"FAQ video No disponible","pageUriSEO":"copia-de-faq-1","pageJsonFileName":"ccd8ff_eca2c07265a2edb0ab20d55f95d35e1e_11051"},"y73hn":{"pageId":"y73hn","title":"ASESORLEX","pageUriSEO":"asesorlex","pageJsonFileName":"ccd8ff_e10b380660527c777ce1a4f7048ad3cd_11170"},"nt31d":{"pageId":"nt31d","title":"Firma Telemática","pageUriSEO":"popup-nt31d","pageJsonFileName":"ccd8ff_afec459926e11c33d034ff68901b2548_11051"},"w8duu":{"pageId":"w8duu","title":"Form","pageUriSEO":"copia-de-formulario-más-información-1","pageJsonFileName":"ccd8ff_215b2481df090bc07264bc2eef2ccdcd_11051"},"izzed":{"pageId":"izzed","title":"TUIO Vecinos","pageUriSEO":"tuio-vecinos","pageJsonFileName":"ccd8ff_16e5ac7156cfa272beee8d5a522c85ac_11051"},"sbcjh":{"pageId":"sbcjh","title":"Acuerdo PF Servicios","pageUriSEO":"copia-de-acuerdo-pf-1","pageJsonFileName":"ccd8ff_40ec516f406146821051d95e4f58ebc2_11051"},"mwl8s":{"pageId":"mwl8s","title":"TUIO","pageUriSEO":"tuio","pageJsonFileName":"ccd8ff_00dac8dc083b9a1ff3bee39b3c46b8af_11051"},"uv3a3":{"pageId":"uv3a3","title":"Logs API Panel (List)","pageUriSEO":"blank-1","pageJsonFileName":"ccd8ff_5626b43ee098ad6bccadb03765ed9266_11051"},"vmhii":{"pageId":"vmhii","title":"Orama","pageUriSEO":"orama","pageJsonFileName":"ccd8ff_1d3a81ecd8e4accf1011308212d6ce09_11051"},"gpbxw":{"pageId":"gpbxw","title":"Ir a Soporte","pageUriSEO":"copia-de-mas-info-prl","pageJsonFileName":"ccd8ff_e65681b9fbce2f259324f9c128be9b78_11051"},"ytqdg":{"pageId":"ytqdg","title":"test parrilla","pageUriSEO":"test-parrilla"},"x29nv":{"pageId":"x29nv","title":"Planes AS","pageUriSEO":"planes-as","pageJsonFileName":"ccd8ff_46801823dabe2c6eb6d56074e623fb65_11107"},"cg9jn":{"pageId":"cg9jn","title":"Guía Inicio 2","pageUriSEO":"copia-de-guía-inicio-1","pageJsonFileName":"ccd8ff_8a0207d7dfc6e3eb2c552ea11416988a_11051"},"d8prw":{"pageId":"d8prw","title":"Guía CEN 4","pageUriSEO":"copia-de-guía-cen-3","pageJsonFileName":"ccd8ff_010d59c1ae4e1613120ca04267ed3d39_11051"},"nt31e":{"pageId":"nt31e","title":"Registro personalizado","pageUriSEO":"blank-ncx68","pageJsonFileName":"ccd8ff_1605ae6422ba0aa84c298a1adff2b518_11051"},"z7nph":{"pageId":"z7nph","title":"Promo-autoconsumo","pageUriSEO":"comunidad-solar","pageJsonFileName":"ccd8ff_0926ee05a79e68be6d004937d8e8cfec_11051"},"wpgmi":{"pageId":"wpgmi","title":"Mis suscripciones","pageUriSEO":"my-subscriptions"},"lmhhf":{"pageId":"lmhhf","title":"FAQ","pageUriSEO":"faq","pageJsonFileName":"ccd8ff_4b1f71f015bfc4e5f5c4bc75a97b9513_11055"},"u6bhj":{"pageId":"u6bhj","title":"Asesores por comunidades","pageUriSEO":"asesores-comunidades","pageJsonFileName":"ccd8ff_39d95debf4206f3f6d3647df42fe5abc_11051"},"wu4cm":{"pageId":"wu4cm","title":"Habilitar CEN","pageUriSEO":"copia-de-guía-cen-1-1","pageJsonFileName":"ccd8ff_5f81aede2377ac81e094231e85b72c43_11160"},"knhbr":{"pageId":"knhbr","title":"Encuesta ERP","pageUriSEO":"encuesta-erp","pageJsonFileName":"ccd8ff_6578179e07711c77db1e35d594ca5997_11056"},"c0ser":{"pageId":"c0ser","title":"Certificado Aenor","pageUriSEO":"popup-c0ser","pageJsonFileName":"ccd8ff_cc60f065a1eeddf664e63571d329ee94_11051"},"wcsyo":{"pageId":"wcsyo","title":"AF Datos Girona v2","pageUriSEO":"af-datos-gironav2"},"e5c1j":{"pageId":"e5c1j","title":"Formulario de reserva","pageUriSEO":"booking-form","pageJsonFileName":"ccd8ff_beba0201be8ad55e174932e0b9719eac_11051"},"dytx1":{"pageId":"dytx1","title":"Redireccion Parrilla","pageUriSEO":"redireccion-parrilla","pageJsonFileName":"ccd8ff_14d633eb2dfd27e95de18e1f54708755_11055"},"oujlx":{"pageId":"oujlx","title":"Plataforma CEN","pageUriSEO":"plataforma-control-exp-notificaciones"},"yp7vs":{"pageId":"yp7vs","title":"Política de Cookies","pageUriSEO":"politica-de-cookies","pageJsonFileName":"ccd8ff_07b2c298a6263fb88c38cc911b93f8d0_11051"},"d5r14":{"pageId":"d5r14","title":"Guía CEN 2","pageUriSEO":"copia-de-guía-cen-1","pageJsonFileName":"ccd8ff_8b8d7927c284cf549091f3a496e175b1_11051"},"k3136":{"pageId":"k3136","title":"Onboarding Videoconferencia","pageUriSEO":"copia-de-onboarding-whatsapp","pageJsonFileName":"ccd8ff_59ad3beab4e853323e3faaf7b91c77ed_11051"},"steae":{"pageId":"steae","title":"CertiBox","pageUriSEO":"certibox","pageJsonFileName":"ccd8ff_c135fa4498cbb18da5185b0fed7002d7_11060"},"obu7v":{"pageId":"obu7v","title":"AF Alicante","pageUriSEO":"af-alicante","pageJsonFileName":"ccd8ff_491ce352a23f08786e99a2787683443f_11059"},"ikonk":{"pageId":"ikonk","title":"Gracias","pageUriSEO":"gracias","pageJsonFileName":"ccd8ff_f793021f3a6e54b59f0c83d5b18ada47_11060","pageFullPath":"venta-digital\/gracias"},"l9mx3":{"pageId":"l9mx3","title":"Guía CEN 1","pageUriSEO":"copia-de-más-info-cen","pageJsonFileName":"ccd8ff_692644d80f0a6394a609909554dc0163_11146"},"ga5jw":{"pageId":"ga5jw","title":"Venta Digital","pageUriSEO":"venta-digital"},"qofog":{"pageId":"qofog","title":"PYMES MKT","pageUriSEO":"servicios-pymes","pageJsonFileName":"ccd8ff_03e410b8ad7b6ea55ae9abcf3fcaf9e5_11061"},"xx429":{"pageId":"xx429","title":"Landing_comunidad","pageUriSEO":"landing-comunidad","pageJsonFileName":"ccd8ff_f9a34c7d37b1cd957887a5657f0e8934_11060"},"kz0lr":{"pageId":"kz0lr","title":"Guía Inicio 3","pageUriSEO":"copia-de-guía-inicio-2","pageJsonFileName":"ccd8ff_c416f3ccf4d14bc47444eb016878889d_11051"},"js15o":{"pageId":"js15o","title":"Mi Comunidad Gesfincas","pageUriSEO":"facturas-deh-tucomunidad","pageJsonFileName":"ccd8ff_5b25627c4e46ac3539700179095afd1b_11069"},"u6k6f":{"pageId":"u6k6f","title":"Promoción-checkit","pageUriSEO":"promo-checkit","pageJsonFileName":"ccd8ff_2aeff3dfc4a91070dc548e82b9094e8c_11051"},"zsvm8":{"pageId":"zsvm8","title":"Política de privacidad","pageUriSEO":"politica-de-privacidad","pageJsonFileName":"ccd8ff_bf8f8d8d75c7406491e41bf098722e25_11060"},"nt31i":{"pageId":"nt31i","title":"Mas info MAX","pageUriSEO":"copia-de-mas-info-rgpd","pageJsonFileName":"ccd8ff_07226b46bb0ee3bb590060c4dbfd5de5_11051"},"uwoq0":{"pageId":"uwoq0","title":"Acuerdo Girona PJ","pageUriSEO":"acuerdo-girona-pj","pageJsonFileName":"ccd8ff_cb80eb0d45957f17f82b000690430208_11051"},"reoxc":{"pageId":"reoxc","title":"Confirmación Parrilla","pageUriSEO":"confirmacion","pageJsonFileName":"ccd8ff_8003951114a879a2f298b205c87975b2_11051","pageFullPath":"venta-digital\/confirmacion"},"nt31k":{"pageId":"nt31k","title":"Inicio de sesión personalizado","pageUriSEO":"popup-nt31k","pageJsonFileName":"ccd8ff_c9ac61856e8f7385a727c5575ed1e220_11051"},"ydcn0":{"pageId":"ydcn0","title":"Onboarding Whatsapp","pageUriSEO":"copia-de-ir-a-soporte","pageJsonFileName":"ccd8ff_36e6b268522b41c7de63d5407058574f_11051"},"o8zx5":{"pageId":"o8zx5","title":"Evolución de suscriptores","pageUriSEO":"evolucion-suscriptores","pageJsonFileName":"ccd8ff_3847eee8145aa0aaf59b5a0ac32fe190_11060"},"khd1a":{"pageId":"khd1a","title":"Blog","pageUriSEO":"blog","pageJsonFileName":"ccd8ff_f488f07d259ac77e2832c27b54ae1cc7_11157"},"je6hc":{"pageId":"je6hc","title":"AF Datos","pageUriSEO":"af-datos"},"n1mgf":{"pageId":"n1mgf","title":"Partners (Title)","pageUriSEO":"blank","pageJsonFileName":"ccd8ff_12a90926cfb9dbafd17388dc4056664a_11051"},"v760n":{"pageId":"v760n","title":"Mi cuenta","pageUriSEO":"my-account"},"wm3z0":{"pageId":"wm3z0","title":"backup plan viejo","pageUriSEO":"copia-de-servicios-as-nuevo"},"ypkkv":{"pageId":"ypkkv","title":"baja-sms-deh","pageUriSEO":"baja-sms-deh","pageJsonFileName":"ccd8ff_fb1c82f4fb64d8ab2c34976f91bae320_11060"},"ibjpe":{"pageId":"ibjpe","title":"Asesoria no registrada","pageUriSEO":"popup-ibjpe","pageJsonFileName":"ccd8ff_2aefc8264203e2c09993356b4acda931_11051"},"uf8q2":{"pageId":"uf8q2","title":"BankBox","pageUriSEO":"bankbox","pageJsonFileName":"ccd8ff_36c04f67a21ff4a6bfac6683e516aceb_11051"},"htqpi":{"pageId":"htqpi","title":"BankBox Demo Form","pageUriSEO":"bankbox-demo-form","pageJsonFileName":"ccd8ff_77c6de767163962b95f26d66c04461f8_11051"},"a7c5z":{"pageId":"a7c5z","title":"Perfil","pageUriSEO":"profile-1","pageJsonFileName":"ccd8ff_d2221e4c3c22fbfd1045021a9eba510f_11051"},"vvs4y":{"pageId":"vvs4y","title":"Aviso legal y condiciones de uso","pageUriSEO":"condiciones-de-uso","pageJsonFileName":"ccd8ff_dccf4e7174c2fcec2e5aa48781dca91d_11051"},"a67ag":{"pageId":"a67ag","title":"Guía CEN 5","pageUriSEO":"copia-de-guía-cen-4","pageJsonFileName":"ccd8ff_37fd45f0652c2734aef4d21dbe4d1a34_11051"},"pkewe":{"pageId":"pkewe","title":"Promo Amigo","pageUriSEO":"copia-de-campaña-norte","pageJsonFileName":"ccd8ff_0c145256fddb66cbfa46c902a0cafe99_11051"},"redrq":{"pageId":"redrq","title":"msj error V. móvil","pageUriSEO":"popup-redrq","pageJsonFileName":"ccd8ff_3e99fda2e4185999ab6b7e6476f52a21_11051"},"fswyo":{"pageId":"fswyo","title":"Inicio","pageUriSEO":"nuevo-inicio","pageJsonFileName":"ccd8ff_bbc7a4b4b04ccd0f7b6d2210c282beb5_11159"},"sbgdt":{"pageId":"sbgdt","title":"Politica de compliance","pageUriSEO":"politica-de-compliance","pageJsonFileName":"ccd8ff_74b49bca0e1f6feb94b6b15de7ad8217_11051"},"skelz":{"pageId":"skelz","title":"Reserva Online","pageUriSEO":"book-online","pageJsonFileName":"ccd8ff_1476e140c42da98981b54126e25803fe_11051"},"slmag":{"pageId":"slmag","title":"AAPP vigiladas","pageUriSEO":"app-vigiladas","pageJsonFileName":"ccd8ff_0badf3930ed373b92b55f621a033eaf9_11051"},"zsmlf":{"pageId":"zsmlf","title":"FAQ alta Asesoria","pageUriSEO":"popup-zsmlf","pageJsonFileName":"ccd8ff_3648e4d8379c6cdfff9f0ed4bc3a9035_11051"},"bc8kx":{"pageId":"bc8kx","title":"Contratar Pack MAX AF","pageUriSEO":"copia-de-formulario-más-información","pageJsonFileName":"ccd8ff_b83c9ad9a6bb7a818bc5436a31e28630_11051"},"xc5ju":{"pageId":"xc5ju","title":"Guía CEN 7","pageUriSEO":"copia-de-guía-cen-3-1","pageJsonFileName":"ccd8ff_bcfa94f26f7c767d01d66470a9f75df1_11051"},"t1as7":{"pageId":"t1as7","title":"Lista de subencargados","pageUriSEO":"listadesubencargados","pageJsonFileName":"ccd8ff_e54058395ecec400dd84c9df4a2ee886_11060"},"i0g2n":{"pageId":"i0g2n","title":"PYMES","pageUriSEO":"pymes","pageJsonFileName":"ccd8ff_4c1d16826df042a491e3b062c57b84f5_11059"},"vpfah":{"pageId":"vpfah","title":"Más Info Parrilla","pageUriSEO":"popup-vpfah","pageJsonFileName":"ccd8ff_f21a02027543656c1f555e6d889fc51b_11051"},"m0mic":{"pageId":"m0mic","title":"Página del grupo","pageUriSEO":"grupos","pageJsonFileName":"ccd8ff_7cb66e195966407122c6f579bffa80d8_11051"},"nvapc":{"pageId":"nvapc","title":"Página de servicio","pageUriSEO":"service-page","pageJsonFileName":"ccd8ff_ffdfdb139d78013e9a1eeefbd5ad7bcc_11051"},"uafvx":{"pageId":"uafvx","title":"CertiBox información","pageUriSEO":"certibox-informacion","pageJsonFileName":"ccd8ff_0adb6bab588d799c55772f29101aacff_11060"},"tajgd":{"pageId":"tajgd","title":"APttCB","pageUriSEO":"apttcb","pageJsonFileName":"ccd8ff_6fa97a8a24cda899a0e944b89c6569ec_11061"},"lspga":{"pageId":"lspga","title":"Acceso Clientes","pageUriSEO":"acceso-clientes","pageJsonFileName":"ccd8ff_e5400bc8a604b06a2cdca5e0f90a8ef7_11051"},"hydos":{"pageId":"hydos","title":"Datos Asesoria","pageUriSEO":"popup-hydos","pageJsonFileName":"ccd8ff_9f4a4f09fe12973c5aefd87a91efa1ce_11076"},"mkray":{"pageId":"mkray","title":"Acuerdo Girona PF","pageUriSEO":"acuerdo-girona-pf","pageJsonFileName":"ccd8ff_980819a87acc632a5ab30077665699ca_11051"},"tdhex":{"pageId":"tdhex","title":"FAQ Windows","pageUriSEO":"copia-de-faq-1-3","pageJsonFileName":"ccd8ff_4626da7f335e4072f58f98e4ca1061c8_11051"},"rc4o6":{"pageId":"rc4o6","title":"LexBox_n_promo_septiembre","pageUriSEO":"lexbox-prl-n","pageJsonFileName":"ccd8ff_b2af851b856a208c7ada978370462fc3_11060"},"vvsrw":{"pageId":"vvsrw","title":"BankBox Demo","pageUriSEO":"bankbox-demo","pageJsonFileName":"ccd8ff_165d2b0091a64f8ec8fc0f95b442bd04_11051"},"unlm7":{"pageId":"unlm7","title":"Resultados de la búsqueda","pageUriSEO":"search","pageJsonFileName":"ccd8ff_707f081ecf3881a36ed57a81604af6b0_11051"},"yzt11":{"pageId":"yzt11","title":"BANNERS","pageUriSEO":"popup-yzt11","pageJsonFileName":"ccd8ff_5a9919011c77b0646ada97050c28c8eb_11051"},"ic0g7":{"pageId":"ic0g7","title":"Mas info CertiBox Girona","pageUriSEO":"copia-de-mas-info-certibox-2","pageJsonFileName":"ccd8ff_b05d5d0bc3915e0afd5c7f044c875027_11051"},"dk9q2":{"pageId":"dk9q2","title":"Calendario de reservas","pageUriSEO":"booking-calendar","pageJsonFileName":"ccd8ff_17228a6ea461f7a90f443cfbea2d6665_11051"},"ume87":{"pageId":"ume87","title":"FAQ vigilancia","pageUriSEO":"copia-de-faq-centralizacion-2","pageJsonFileName":"ccd8ff_35f1ea1a612e57422b1806a70d168586_11051"}},"disableStaticPagesUrlHierarchy":false,"routes":{".\/homologacionproveedores":{"type":"Static","pageId":"zuzg7"},".\/ad-comunidad":{"type":"Static","pageId":"nhshd"},".\/360homeservice":{"type":"Static","pageId":"quxst"},".\/testingqa":{"type":"Static","pageId":"pm5m6"},".\/contacto":{"type":"Static","pageId":"hxib1"},".\/planes-af":{"type":"Static","pageId":"mrxoe"},".\/administracion-fincas":{"type":"Static","pageId":"txodm"},".\/copia-de-faq-1-1":{"type":"Static","pageId":"ol5if"},".\/copia-de-mas-info-certibox-1":{"type":"Static","pageId":"nt31m"},".\/copia-de-confirmación-cuenta-panel":{"type":"Static","pageId":"olhdo"},".\/popup-nt31l":{"type":"Static","pageId":"nt31l"},".\/canaldedenuncias":{"type":"Static","pageId":"o0l10"},".\/comunidad":{"type":"Static","pageId":"nd8j7"},".\/copia-de-mas-info-certibox-3":{"type":"Static","pageId":"syyvq"},".\/popup-pcxzv":{"type":"Static","pageId":"pcxzv"},".\/popup-popoq":{"type":"Static","pageId":"popoq"},".\/datos-com-propietarios-comunidades":{"type":"Static","pageId":"hpgql"},".\/copia-de-firma-telemática":{"type":"Static","pageId":"nt31g"},".\/asesorias-despachos-profesionales":{"type":"Static","pageId":"cim8a"},".\/onzane":{"type":"Static","pageId":"qetce"},".\/notificacioneselectronicas":{"type":"Static","pageId":"dsocb"},".\/af-nuevo-servicios":{"type":"Static","pageId":"hfva2"},".\/copia-de-guía-cen-5":{"type":"Static","pageId":"fqdy2"},".\/copia-de-mas-info-homologación-1":{"type":"Static","pageId":"ik1hh"},".\/clausula-de-privacidad":{"type":"Static","pageId":"q5qha"},".\/datos-autonomos-comunidades":{"type":"Static","pageId":"zxmy1"},".\/documbox-info":{"type":"Static","pageId":"shn4f"},".\/checkout":{"type":"Static","pageId":"i2evc"},".\/thankyou-lexbox-prl-n":{"type":"Static","pageId":"p9srv"},".\/popup-v5m3j":{"type":"Static","pageId":"v5m3j"},".\/copia-de-ir-a-soporte-1":{"type":"Static","pageId":"ocq3p"},".\/popup-qurwf":{"type":"Static","pageId":"qurwf"},".\/venta-recurrente":{"type":"Static","pageId":"xq2tw"},".\/certificado-eidas":{"type":"Static","pageId":"vl0d0"},".\/mas-ingresos":{"type":"Static","pageId":"gji5q"},".\/sedes":{"type":"Static","pageId":"njh83"},".\/clausula-privacidad-webinars":{"type":"Static","pageId":"y59yq"},".\/tsa":{"type":"Static","pageId":"errqt"},".\/af-girona":{"type":"Static","pageId":"h10oq"},".\/copia-de-guía-cen-7":{"type":"Static","pageId":"kphfo"},".\/copia-de-faq-email-notif-1":{"type":"Static","pageId":"bpx3c"},".\/certibox-form-contratar":{"type":"Static","pageId":"tcuwq"},".\/popup-nt31j":{"type":"Static","pageId":"nt31j"},".\/valoraciones":{"type":"Static","pageId":"qn9b9"},".\/copia-de-guía-cen-2":{"type":"Static","pageId":"wrsv8"},".\/soluciones":{"type":"Static","pageId":"fc4zp"},".\/emovili":{"type":"Static","pageId":"rwy8r"},".\/acuerdo-ecpf":{"type":"Static","pageId":"kjy2o"},".\/copia-de-faq-centralizacion":{"type":"Static","pageId":"qbfxr"},".\/servicios-as":{"type":"Static","pageId":"wmg2n"},".\/copia-de-mas-info-certibox":{"type":"Static","pageId":"nt31h"},".\/pymes-por-comunidades":{"type":"Static","pageId":"p60vc"},".\/cart-page":{"type":"Static","pageId":"qjepe"},".\/copia-de-vdcomercial":{"type":"Static","pageId":"thsrc"},".\/suscriptores-semana":{"type":"Static","pageId":"k9yj1"},".\/copia-de-faq-centralizacion-1":{"type":"Static","pageId":"wi4q4"},".\/popup-nt31f":{"type":"Static","pageId":"nt31f"},".\/copia-de-faq-1-2":{"type":"Static","pageId":"cenyi"},".\/popup-xg7qg":{"type":"Static","pageId":"xg7qg"},".\/parrilla-pruebas":{"type":"Static","pageId":"d48k3"},".\/lexbox":{"type":"Static","pageId":"cmksk"},".\/thank-you-page":{"type":"Static","pageId":"j8k8e"},".\/compra-finalizada-af":{"type":"Static","pageId":"skvoa"},".\/comercial-vd":{"type":"Static","pageId":"qmhcs"},".\/copia-de-faq-email-notif":{"type":"Static","pageId":"p3s3p"},".\/popup-fd425":{"type":"Static","pageId":"fd425"},".\/onzane-app":{"type":"Static","pageId":"mmdw4"},".\/af-girona-finalizada":{"type":"Static","pageId":"hw5bv"},".\/popup-rl147":{"type":"Static","pageId":"rl147"},".\/popup-xgxhy":{"type":"Static","pageId":"xgxhy"},".\/carpetas-financieras":{"type":"Static","pageId":"iwat5"},".\/error404":{"type":"Static","pageId":"z7jn0"},".\/copia-de-mas-info-rgpd-1":{"type":"Static","pageId":"nh8xj"},".\/info-control-exp-notificaciones":{"type":"Static","pageId":"x555j"},".\/fullscreen-page":{"type":"Static","pageId":"tejf5"},".\/copia-de-acuerdo-pj-1":{"type":"Static","pageId":"sxzjx"},".\/onzane-acceso":{"type":"Static","pageId":"zt28q"},".\/política-de-privacidad-para-redes-sociales":{"type":"Static","pageId":"ot0oq"},".\/popup-smykc":{"type":"Static","pageId":"smykc"},".\/post":{"type":"Static","pageId":"zzhwm"},".\/admin-fincas-comunidades":{"type":"Static","pageId":"l8mal"},".\/acuerdo-ecpj":{"type":"Static","pageId":"af52d"},".\/copia-de-mas-info-homologación":{"type":"Static","pageId":"nt31n"},".\/copia-de-faq-1":{"type":"Static","pageId":"wi29w"},".\/asesorlex":{"type":"Static","pageId":"y73hn"},".\/popup-nt31d":{"type":"Static","pageId":"nt31d"},".\/copia-de-formulario-más-información-1":{"type":"Static","pageId":"w8duu"},".\/tuio-vecinos":{"type":"Static","pageId":"izzed"},".\/copia-de-acuerdo-pf-1":{"type":"Static","pageId":"sbcjh"},".\/tuio":{"type":"Static","pageId":"mwl8s"},".\/orama":{"type":"Static","pageId":"vmhii"},".\/copia-de-mas-info-prl":{"type":"Static","pageId":"gpbxw"},".\/test-parrilla":{"type":"Static","pageId":"ytqdg"},".\/planes-as":{"type":"Static","pageId":"x29nv"},".\/copia-de-guía-inicio-1":{"type":"Static","pageId":"cg9jn"},".\/copia-de-guía-cen-3":{"type":"Static","pageId":"d8prw"},".\/blank-ncx68":{"type":"Static","pageId":"nt31e"},".\/comunidad-solar":{"type":"Static","pageId":"z7nph"},".\/faq":{"type":"Static","pageId":"lmhhf"},".\/asesores-comunidades":{"type":"Static","pageId":"u6bhj"},".\/copia-de-guía-cen-1-1":{"type":"Static","pageId":"wu4cm"},".\/encuesta-erp":{"type":"Static","pageId":"knhbr"},".\/popup-c0ser":{"type":"Static","pageId":"c0ser"},".\/af-datos-gironav2":{"type":"Static","pageId":"wcsyo"},".\/booking-form":{"type":"Static","pageId":"e5c1j"},".\/redireccion-parrilla":{"type":"Static","pageId":"dytx1"},".\/plataforma-control-exp-notificaciones":{"type":"Static","pageId":"oujlx"},".\/politica-de-cookies":{"type":"Static","pageId":"yp7vs"},".\/copia-de-guía-cen-1":{"type":"Static","pageId":"d5r14"},".\/copia-de-onboarding-whatsapp":{"type":"Static","pageId":"k3136"},".\/certibox":{"type":"Static","pageId":"steae"},".\/af-alicante":{"type":"Static","pageId":"obu7v"},".\/venta-digital\/gracias":{"type":"Static","pageId":"ikonk"},".\/copia-de-más-info-cen":{"type":"Static","pageId":"l9mx3"},".\/venta-digital":{"type":"Static","pageId":"ga5jw"},".\/servicios-pymes":{"type":"Static","pageId":"qofog"},".\/landing-comunidad":{"type":"Static","pageId":"xx429"},".\/copia-de-guía-inicio-2":{"type":"Static","pageId":"kz0lr"},".\/facturas-deh-tucomunidad":{"type":"Static","pageId":"js15o"},".\/promo-checkit":{"type":"Static","pageId":"u6k6f"},".\/politica-de-privacidad":{"type":"Static","pageId":"zsvm8"},".\/copia-de-mas-info-rgpd":{"type":"Static","pageId":"nt31i"},".\/acuerdo-girona-pj":{"type":"Static","pageId":"uwoq0"},".\/venta-digital\/confirmacion":{"type":"Static","pageId":"reoxc"},".\/popup-nt31k":{"type":"Static","pageId":"nt31k"},".\/copia-de-ir-a-soporte":{"type":"Static","pageId":"ydcn0"},".\/evolucion-suscriptores":{"type":"Static","pageId":"o8zx5"},".\/blog":{"type":"Static","pageId":"khd1a"},".\/af-datos":{"type":"Static","pageId":"je6hc"},".\/copia-de-servicios-as-nuevo":{"type":"Static","pageId":"wm3z0"},".\/baja-sms-deh":{"type":"Static","pageId":"ypkkv"},".\/popup-ibjpe":{"type":"Static","pageId":"ibjpe"},".\/bankbox":{"type":"Static","pageId":"uf8q2"},".\/bankbox-demo-form":{"type":"Static","pageId":"htqpi"},".\/condiciones-de-uso":{"type":"Static","pageId":"vvs4y"},".\/copia-de-guía-cen-4":{"type":"Static","pageId":"a67ag"},".\/copia-de-campaña-norte":{"type":"Static","pageId":"pkewe"},".\/popup-redrq":{"type":"Static","pageId":"redrq"},".\/nuevo-inicio":{"type":"Static","pageId":"fswyo"},".\/politica-de-compliance":{"type":"Static","pageId":"sbgdt"},".\/book-online":{"type":"Static","pageId":"skelz"},".\/app-vigiladas":{"type":"Static","pageId":"slmag"},".\/popup-zsmlf":{"type":"Static","pageId":"zsmlf"},".\/copia-de-formulario-más-información":{"type":"Static","pageId":"bc8kx"},".\/copia-de-guía-cen-3-1":{"type":"Static","pageId":"xc5ju"},".\/listadesubencargados":{"type":"Static","pageId":"t1as7"},".\/pymes":{"type":"Static","pageId":"i0g2n"},".\/popup-vpfah":{"type":"Static","pageId":"vpfah"},".\/grupos":{"type":"Static","pageId":"m0mic"},".\/service-page":{"type":"Static","pageId":"nvapc"},".\/certibox-informacion":{"type":"Static","pageId":"uafvx"},".\/apttcb":{"type":"Static","pageId":"tajgd"},".\/acceso-clientes":{"type":"Static","pageId":"lspga"},".\/popup-hydos":{"type":"Static","pageId":"hydos"},".\/acuerdo-girona-pf":{"type":"Static","pageId":"mkray"},".\/copia-de-faq-1-3":{"type":"Static","pageId":"tdhex"},".\/lexbox-prl-n":{"type":"Static","pageId":"rc4o6"},".\/bankbox-demo":{"type":"Static","pageId":"vvsrw"},".\/search":{"type":"Static","pageId":"unlm7"},".\/popup-yzt11":{"type":"Static","pageId":"yzt11"},".\/copia-de-mas-info-certibox-2":{"type":"Static","pageId":"ic0g7"},".\/booking-calendar":{"type":"Static","pageId":"dk9q2"},".\/copia-de-faq-centralizacion-2":{"type":"Static","pageId":"ume87"},".\/account":{"type":"Dynamic","pageIds":["pkvic","wrmtp","yp7a1","tpqog","wpgmi","in5n9","v760n","u305p","muzu0"]},".\/partners":{"type":"Dynamic","pageIds":["n1mgf"]},".\/logs-api-panel":{"type":"Dynamic","pageIds":["uv3a3"]},".\/profile":{"type":"Dynamic","pageIds":["a7c5z"]},".\/":{"type":"Static","pageId":"fswyo"}},"pageIdToPrefix":{"pkvic":"account","wrmtp":"account","yp7a1":"account","tpqog":"account","wpgmi":"account","in5n9":"account","v760n":"account","u305p":"account","muzu0":"account","n1mgf":"partners","uv3a3":"logs-api-panel","a7c5z":"profile"},"isWixSite":false,"partialRouteMatchingAllowed":true,"isBuilderComponentModel":false,"customNotFoundPage":{"pageId":"z7jn0","pageRoute":".\/error404"}},"searchWixCodeSdk":{"language":"es"},"seo":{"context":{"siteName":"DEH Online","siteUrl":"https:\/\/www.dehonline.es","domain":"dehonline.es","indexSite":true,"defaultUrl":"https:\/\/www.dehonline.es\/documbox-info","currLangIsOriginal":true,"siteOgImage":"https:\/\/static.wixstatic.com\/media\/45bf13_56a9539094414f40ae3327e35ea694ca%7Emv2.png","homePageTitle":"Inicio","facebookAdminId":"DEHinnovacion","businessName":"DEH Online","businesDescription":"La soluciones de DEH Online permite a las empresas implementar tecnologías innovadoras para la automatización y digitalización de sus procesos.","businesLocale":"es-es","businesLogo":"https:\/\/static.wixstatic.com\/media\/45bf13_56a9539094414f40ae3327e35ea694ca~mv2.png","businessLocationCountry":"ES","businessLocationFormatted":"EDIFICIO ELITE, Edificio ELITE, Calle Sierra de Cazorla, 1, 28290 Las Rozas, Madrid, Madrid, España","businesLocationsState":"MD","businessLocationCity":"Las Rozas de Madrid","businesLocationsStreet":"Calle Sierra de Cazorla","businessLocationsStreetNumber":"1","businessPostalCode":"28290","businessLocationCoordinates":{"latitude":40.5525652,"longitude":-3.899048400000001},"currency":"EUR","experiments":{"specs.seo.EnableFaqSD":"false","specs.seo.EnableOnlineProgramsVideoSD":"true","specs.seo.enableLangCheck":"true"},"platformAppsExperiments":{"14f25924-5664-31b2-9568-f9c5ed98c9b1":{"specs.ping.membersAreaNotifications.useIntlInsteadOfMoment":"true","specs.ping.MANotifications.useMAWidgetPluginService":"true"},"225dd912-7dea-4738-8688-4b8c6955ffc2":{"specs.forms.LocalPhoneNumbers":"true","specs.form-app.AiFormAssistantTypingEffect":"false","specs.forms.MultilineAddressInTemplates":"true","specs.forms.FetchFormsInEditor":"false","specs.forms.SettingsButtonTextFormatting":"true","specs.forms.RemoveFalsyValues":"false","specs.forms.FixControllerActions":"true","specs.forms.WixServicesInstallation":"true","specs.forms.UseFieldsV2":"true","specs.forms.WdsOpacityColorPicker":"false","specs.bookings.BIFInstallOnlyMeetings":"false","specs.form-app.AiFormAssistantV2":"false","specs.forms.ImportFilesToMediaManagerExperiment":"true","specs.form-app.AiFormAssistantOptionsButtons":"true","specs.forms.EnableNewPhoneFieldValidation":"true","specs.forms.CreateFormFromPreset":"true","specs.bookings.InstallMeetingsForBIF":"false","specs.forms.EnablePhoneField":"true","specs.services.RemoveBookingsDependency":"true","specs.forms.SignatureFieldV2":"true","specs.forms.BoxlessTextStyles":"true","specs.forms.EnablePresetTab":"false"},"14271d6f-ba62-d045-549b-ab972ae1f70e":{"specs.pro-gallery.displayPreset14":"true","specs.pro-gallery.removeUseOfCounterApi":"true","specs.pro-gallery.horizontalScrollAnimations":"true","specs.pro-gallery.useImageAvifFormat":"true","specs.pro-gallery.EnableAlbumsStorePremiumValidation":"true","specs.pro-gallery.removePgStoreTab":"true","specs.pro-gallery.backgroundDesignFullscreen":"true","specs.pro-gallery.useMotherSiteAppInstance":"true","specs.pro-gallery.addSEOVideoMetaTags":"false","specs.pro-gallery.enableMainLightroomSettingsButton":"true","specs.pro-gallery.displayPreset17":"false","specs.pro-gallery.slideTransition":"true","specs.proGallery.shouldShowNewPanels":"false","specs.pro-gallery.displayProGalleryPresets":"true","specs.pro-gallery.navigationArrowsDrawer":"true","specs.pro-gallery.horizontalTitlePlacementOptions":"true","specs.pro-gallery.artstoreShowDeprecationMessageInSettings":"false","specs.pro-gallery.navArrowsVericalPositionController":"true","specs.pro-gallery.enablePGRenderIndicator":"false","specs.pro-gallery.excludeFromWarmupData":"false","specs.pro-gallery.customNavigationArrows":"true","specs.pro-gallery.fixedGalleryRatio":"true","specs.pro-gallery.displayProGalleryNewPreset":"true","specs.pro-gallery.useReactionService":"true","specs.pro-gallery.textBoxWidthControllers":"true","specs.pro-gallery.allowOverlayGradient":"true","specs.pro-gallery.excludeFromLayoutFixer":"false","specs.pro-gallery.useIsInFirstFold":"false","specs.pro-gallery.dontRenderGalleryBelowFoldOnLoad":"false","specs.pro-gallery.enableLightroomSettingsButton":"true","specs.pro-gallery.displayPreset16":"true","specs.pro-gallery.displayProGallerySEOSettings":"false","specs.pro-gallery.imageEditing":"b","specs.pro-gallery.useWowImageRenderer":"false","specs.pro-gallery.useWarmupData":"true","specs.pro-gallery.enableFullResFeature":"true","specs.pro-gallery.slideAnimationDeck":"true","specs.pro-gallery.useReactPortalInArtStore":"true","specs.pro-gallery.blockOAP":"false","specs.pro-gallery.useServerBlueprints-viewer":"false","specs.pro-gallery.excludeFromThinLinesFix":"false","specs.pro-gallery.excludeFromHlsVideosOnIphone":"true","specs.pro-gallery.removeRoleApplication":"true","specs.pro-gallery.tryCentralizedConduction":"false","specs.pro-gallery.organizeMediaMultiTypes":"true","specs.pro-gallery.useServerBlueprints-preview":"false","specs.pro-gallery.displayPreset15":"true","specs.pro-gallery.enableVideoPlaceholder":"true","specs.pro-gallery.organizeMediaAltText":"b","specs.pro-gallery.overlayDesign":"true","specs.pro-gallery.shouldUseVirtualization":"true","specs.pro-gallery.disableImagePreload":"true","specs.pro-gallery.excludeFromPrerenderPerformance":"false","specs.pro-gallery.appSettings":"true"},"2bef2abe-7abe-43da-889c-53c1500a328c":{"specs.subscriptionsTpa.ShowLastNextCharge":"true","specs.premium.subscriptions-tpa.VerifyGracePeriodBeforePayNow":"true","specs.premium.subscriptions-tpa.enablePagnination":"true","specs.premium.subscriptions-tpa.UseInitiatePaymentMethodSetup":"true","specs.premium.subscriptions-tpa.fixSessionsOnEcom":"true","specs.EnableAllowedActionsIsAllowedIndicator":"true","specs.premium.subscriptions-tpa.advancedPauseResume":"false","specs.subscriptionsTpa.UseBassAPI":"true"},"949cfcc9-2a3f-4a96-bd6c-11d9d82763a4":{"specs.ricos.newFormattingToolbar":"true","specs.ricos.newVideoVerticalAndSocialModals":"true","specs.wixRicos.withWixStyles":"true","specs.ricos-server.resolveParentPagePath":"true","specs.ricos.enablePages":"false","specs.ricos.removeUsmFromImageUrls":"true","specs.ricos.fixedTabSize":"true","specs.ricos.encAutoImageUrls":"true","specs.ricos.tiptapEditor":"false","specs.ricos.newSettingsModals":"true"},"1505b775-e885-eb1b-b665-1e485d9bf90e":{"specs.stores.UseLatestSubdivisionsClient":"true","specs.addresses.SupportBIForHIPPA":"true"},"14cc59bc-f0b7-15b8-e1c7-89ce41d0e0c9":{"specs.ping.membersAreaUseNotificationsV2Api":"true","specs.membersArea.enableNotificationsOnV2":"true","specs.membersArea.addStandalonePageRoutesToPublicAppData":"true","specs.membersArea.useScalableDimensionsForLoginBarOnE3":"true","specs.membersArea.addNavigationIntentParams":"true","specs.membersArea.enableAppData":"true","specs.membersArea.normalizeMenuItemsLinkMetaData":"true"},"14dbef06-cc42-5583-32a7-3abd44da4908":{"specs.UouSubscriptionServiceUseApiGatewayClient":"true","specs.membersArea.DoNotWaitInstallNavigation":"true","specs.membersArea.UseMembersNgApiUpdate":"false","specs.members.FollowersAudienceProvider":"false","specs.media.MediaManager3":"true","specs.ricos.newFormattingToolbar":"true","specs.membersArea.showCascadingIndicators":"true","specs.membersArea.HideMemberSortField":"true","specs.membersArea.DisableLivePreviewRefreshes":"true","specs.membersArea.CheckUserContributorPermissions":"true","specs.membersArea.CheckIsAppActiveBeforeInstallV1":"true","specs.membersArea.HandleMembersNgUpdateDomainEvents":"true","specs.membersArea.UseGetMyMemberInMemberHandler":"true","specs.membersArea.EnableMembersAreaContextCheck":"true","specs.profileCardOOI.ReorganizeActionButtons":"true","specs.membersArea.SplitCustomPageTranslations":"true","specs.membersArea.AddSuspendedFilter":"true","specs.membersfollow.ActivityCounters":"true","specs.profileCardOOI.TitleForAll":"true","specs.membersArea.ShowPageRedirectNote":"true","specs.membersArea.ExtendedUninstallMASubApps":"true","specs.membersArea.UseViewedMemberBlocked":"true","specs.membersArea.UseFollowersV3":"true","specs.members.enableMuteMembersSkill":"true","specs.ricos.newVideoVerticalAndSocialModals":"true","specs.myAccount.ShowBlockedMembersModalEmptyState":"true","specs.membersArea.enableTimeoutLogs":"false","specs.badges.useBadgesV3":"true","specs.membersArea.GetRoutesUseGlobal":"true","specs.membersArea.ShouldOpenPropertyInDevCenter":"false","specs.membersApi.UseProfilesApiForTitleAndCoverWrites":"true","specs.membersArea.EnableLoginBarComponentExtension":"true","specs.members.enableUpdateCustomFieldSkill":"true","specs.membersArea.ShowNewFFBorderSettings":"true","specs.membersArea.AddNotificationsIconOnV2":"true","specs.membersAbout.EnableWDSPanels":"true","specs.members.enableHideCustomFieldSkill":"true","specs.membersArea.installationSourceOfTruth":"true","specs.membersAreaV2.HidePermissionsPanelOnPrivateMA":"false","specs.wixRicos.withWixStyles":"true","specs.responsive-editor.NoMeasureInstall":"true","specs.members.enableDeleteCustomFieldSkill":"true","specs.membersArea.SkipTemplateHandlerForSettings":"false","specs.membersArea.UsePopoverDynamicPositioning":"true","specs.membersArea.MemberHandlerUseMembersNgApi":"true","specs.membersArea.EnableMyAccountParallelInstall":"true","specs.membersArea.UseIsPermittedOnAppData":"true","specs.membersArea.UseMembersNgApi":"true","specs.membersArea.ResolveMemberDuplication":"true","specs.membersArea.DoNotCreateTeamMember":"false","specs.membersArea.NotificationsIconFixerOnV2":"true","specs.ricos-server.resolveParentPagePath":"true","specs.membersArea.ConsumeMembersPiiExchangeDomainEvents":"true","specs.membersArea.handleMobileComponentsDeletion":"true","specs.membersAbout.UseResponsivePostsCover":"true","specs.membersArea.PrivateMemberIndicator":"false","specs.membersAbout.UseNewPostsCoverDefaults":"true","specs.membersArea.ShowMoreMembersWithBadge":"false","specs.membersAbout.EnableAboutContainerStyles":"true","specs.membersAboutOOI.DisableButtonOnPublish":"true","specs.ricos.enablePages":"false","specs.membersArea.AddRevisionField":"true","specs.membersArea.EnableTpaPageLinksDataFixerForV2MenuItems":"true","specs.membersArea.AddManageMemberAccessAction":"true","specs.membersArea.EnableTpaPageLinksDataFixerForV3MenuItems":"true","specs.ident.SiteMembersSocialDisclaimer":"true","specs.membersAbout.EnablePostListInSEO":"true","specs.ricos.removeUsmFromImageUrls":"true","specs.membersArea.UseQueryMembersTextSearch":"true","specs.membersAreaV2.EnablePageInfoPanelCustomPage":"false","specs.myAccount.showBlockedMembersModalRedesign":"true","specs.membersArea.MetaSiteSpecialConsumerV2":"true","specs.members.enableUnmuteMembersSkill":"true","specs.membersArea.UseMembersAboutV2":"true","specs.members.enableCreateBadgeSkill":"true","specs.membersArea.HideSuspendedLabelForNonOwners":"true","specs.membersArea.UseApplyChangeToAllLanguagesForMaV2":"true","specs.membersArea.SortByNumbersInElastic":"true","specs.myAccount.ShowPrivacySettingsMessageForSiteOwners":"true","specs.membersArea.MembersApiUseMembersNgApiQueryForSortBy":"true","specs.membersArea.UninstallMASubApps":"true","specs.membersArea.UseAppDataForRoutes":"true","specs.membersArea.CreateMissingMember":"true","specs.membersArea.EnableMenusDataFixer":"true","specs.members.usePlatformizedServicesForUpdate":"true","specs.badges.shouldUseBadgesV3InEdm":"true","specs.membersArea.HideSuspendedLabelForNonOwnersFFBox":"true","specs.membersArea.EnableMemberPagePermissions":"false","specs.ricos.fixedTabSize":"true","specs.profileCardOOI.EnableProfileDetailsEdit":"true","specs.membersArea.UseIsPermittedOnMediaCredentials":"true","specs.membersArea.fixLoginBarResponsiveLayout":"true","specs.membersAbout.EnableAccessibleRCE":"true","specs.membersArea.EnableV2SilentInstall":"true","specs.membersAbout.EnableAboutMiddleware":"true","specs.members.enableManageMemberPrivacySkill":"true","specs.membersAreaV3.ReAddPageWorkaround":"true","specs.membersArea.OptimizeVerticalDeletion":"true","specs.membersAbout.EnableCSSIndicators":"true","specs.membersArea.EnableFollowersAsLightbox":"true","specs.membersArea.UseGetOrCreateMemberV2":"true","specs.membersAboutOOI.EnablePluralStatisticFix":"true","specs.ricos.encAutoImageUrls":"true","specs.members.enableCreateCustomFieldSkill":"true","specs.ricos.tiptapEditor":"false","specs.membersArea.migrateToV2":"false","specs.membersArea.ClearSettings":"true","specs.membersAbout.EnableHtmlTagSettings":"true","specs.ricos.newSettingsModals":"true","specs.membersArea.CallGetMyMemberForCreatingMember":"true","specs.membersArea.ShowHeadingLevelSettings":"true"},"dataBinding":{"specs.wixDataViewer.NewCoreImageStaticBinding":"false","specs.wixDataViewer.useGetForSchemaBulk":"false","specs.wixDataViewer.fetchOnlyConnectedFields":"true","specs.wixDataViewer.deferredIsDead":"true","specs.wixDataViewer.NewCoreFormatters":"false"},"14cffd81-5215-0a7f-22f8-074b0e2401fb":{"specs.UouSubscriptionServiceUseApiGatewayClient":"true","specs.membersArea.DoNotWaitInstallNavigation":"true","specs.membersArea.UseMembersNgApiUpdate":"false","specs.members.FollowersAudienceProvider":"false","specs.media.MediaManager3":"true","specs.membersArea.showCascadingIndicators":"true","specs.membersArea.HideMemberSortField":"true","specs.membersArea.DisableLivePreviewRefreshes":"true","specs.membersArea.CheckUserContributorPermissions":"true","specs.membersArea.CheckIsAppActiveBeforeInstallV1":"true","specs.membersArea.HandleMembersNgUpdateDomainEvents":"true","specs.membersArea.UseGetMyMemberInMemberHandler":"true","specs.membersArea.EnableMembersAreaContextCheck":"true","specs.profileCardOOI.ReorganizeActionButtons":"true","specs.membersArea.SplitCustomPageTranslations":"true","specs.membersArea.AddSuspendedFilter":"true","specs.membersfollow.ActivityCounters":"true","specs.profileCardOOI.TitleForAll":"true","specs.membersArea.ShowPageRedirectNote":"true","specs.membersArea.ExtendedUninstallMASubApps":"true","specs.membersArea.ChangeLoginInfo":"true","specs.membersArea.UseViewedMemberBlocked":"true","specs.membersArea.UseFollowersV3":"true","specs.members.enableMuteMembersSkill":"true","specs.myAccount.UseNewSettings":"true","specs.myAccount.ShowBlockedMembersModalEmptyState":"true","specs.membersArea.enableTimeoutLogs":"false","specs.badges.useBadgesV3":"true","specs.membersArea.GetRoutesUseGlobal":"true","specs.membersArea.ShouldOpenPropertyInDevCenter":"false","specs.myAccount.EnablePhoneNumberValidation":"true","specs.membersApi.UseProfilesApiForTitleAndCoverWrites":"true","specs.membersArea.EnableLoginBarComponentExtension":"true","specs.members.enableUpdateCustomFieldSkill":"true","specs.membersArea.ShowNewFFBorderSettings":"true","specs.membersArea.AddNotificationsIconOnV2":"true","specs.members.enableHideCustomFieldSkill":"true","specs.myAccount.EnableCSSIndicators":"true","specs.membersArea.installationSourceOfTruth":"true","specs.membersAreaV2.HidePermissionsPanelOnPrivateMA":"false","specs.myAccount.EnableDatePickerStyling":"true","specs.responsive-editor.NoMeasureInstall":"true","specs.members.enableDeleteCustomFieldSkill":"true","specs.membersArea.SkipTemplateHandlerForSettings":"false","specs.membersArea.UsePopoverDynamicPositioning":"true","specs.membersArea.MemberHandlerUseMembersNgApi":"true","specs.membersArea.EnableMyAccountParallelInstall":"true","specs.membersArea.UseIsPermittedOnAppData":"true","specs.membersArea.UseMembersNgApi":"true","specs.membersArea.ResolveMemberDuplication":"true","specs.membersArea.DoNotCreateTeamMember":"false","specs.membersArea.NotificationsIconFixerOnV2":"true","specs.myAccount.EnableHtmlTagSettings":"true","specs.membersArea.ConsumeMembersPiiExchangeDomainEvents":"true","specs.membersArea.handleMobileComponentsDeletion":"true","specs.membersArea.PrivateMemberIndicator":"false","specs.membersArea.ShowMoreMembersWithBadge":"false","specs.membersArea.AddRevisionField":"true","specs.membersArea.EnableTpaPageLinksDataFixerForV2MenuItems":"true","specs.membersArea.AddManageMemberAccessAction":"true","specs.membersArea.EnableTpaPageLinksDataFixerForV3MenuItems":"true","specs.ident.SiteMembersSocialDisclaimer":"true","specs.membersArea.UseQueryMembersTextSearch":"true","specs.membersAreaV2.EnablePageInfoPanelCustomPage":"false","specs.myAccount.showBlockedMembersModalRedesign":"true","specs.membersArea.MetaSiteSpecialConsumerV2":"true","specs.myAccount.EnableMyAccountMiddleware":"true","specs.members.enableUnmuteMembersSkill":"true","specs.membersArea.UseMembersAboutV2":"true","specs.members.enableCreateBadgeSkill":"true","specs.myAccount.EnableUrlEditNote":"true","specs.membersArea.HideSuspendedLabelForNonOwners":"true","specs.membersArea.UseApplyChangeToAllLanguagesForMaV2":"true","specs.myAccount.ShowButtonTextSetting":"true","specs.membersArea.SortByNumbersInElastic":"true","specs.myAccount.ShowPrivacySettingsMessageForSiteOwners":"true","specs.membersArea.MembersApiUseMembersNgApiQueryForSortBy":"true","specs.membersArea.UninstallMASubApps":"true","specs.membersArea.UseAppDataForRoutes":"true","specs.membersArea.CreateMissingMember":"true","specs.membersArea.EnableMenusDataFixer":"true","specs.members.usePlatformizedServicesForUpdate":"true","specs.badges.shouldUseBadgesV3InEdm":"true","specs.membersArea.HideSuspendedLabelForNonOwnersFFBox":"true","specs.membersArea.EnableMemberPagePermissions":"false","specs.profileCardOOI.EnableProfileDetailsEdit":"true","specs.membersArea.UseIsPermittedOnMediaCredentials":"true","specs.membersArea.fixLoginBarResponsiveLayout":"true","specs.membersArea.EnableV2SilentInstall":"true","specs.members.enableManageMemberPrivacySkill":"true","specs.membersAreaV3.ReAddPageWorkaround":"true","specs.membersArea.OptimizeVerticalDeletion":"true","specs.myAccount.EnableDesignTabResetButtonPerPage":"true","specs.myAccount.EnableLoginAndAddressInTextsTab":"true","specs.membersArea.EnableFollowersAsLightbox":"true","specs.membersArea.UseGetOrCreateMemberV2":"true","specs.members.enableCreateCustomFieldSkill":"true","specs.myAccount.EnableWDSPanels":"true","specs.membersArea.migrateToV2":"false","specs.membersArea.ClearSettings":"true","specs.myAccount.EnableAllSubdivisionsInAddressForm":"true","specs.membersArea.CallGetMyMemberForCreatingMember":"true","specs.membersArea.ShowHeadingLevelSettings":"true"},"148c2287-c669-d849-d153-463c7486a694":{"specs.groups.CustomTabContentType":"RICH_CONTENT","specs.groups.UpdateSidebarLayout":"true","specs.ricos.newFormattingToolbar":"true","specs.groups.PublicGroupRestriction":"true","specs.groups.UpdatedMemberPermissions":"true","specs.ricos.newVideoVerticalAndSocialModals":"true","specs.groups.cssPBI":"true","specs.groups.TopicsLayoutRedesign":"true","specs.groups.SEO-subtitle":"true","specs.groups.ResizeTopics":"true","specs.wixRicos.withWixStyles":"true","specs.groups.events-by-uou":"true","specs.ricos-server.resolveParentPagePath":"true","specs.groups.EnableMembersAreaFeedItemComments":"true","specs.groups.newNotificationsScreens":"true","spec.groups.TitlesAddOns":"true","specs.ricos.enablePages":"false","specs.groups.CentralFeedContentType":"RICH_CONTENT","specs.groups.FeedItemViews":"true","specs.ricos.removeUsmFromImageUrls":"true","specs.groups.GroupFeedContentType":"RICH_CONTENT","specs.groups.AllowToAddImageAltText":"false","specs.groups.GroupPrivacyLabel":"true","specs.groups.MemberOnboarding":"true","specs.groups.EnablePostTitle":"true","specs.groups.SiteMembersSsrCaching":"false","specs.ricos.fixedTabSize":"true","specs.groups.SupportRicosCollapsibleList":"true","specs.groups.GroupDescriptionContentType":"RICH_CONTENT","specs.groups.OOIOptimization":"true","specs.groups.GroupSearch":"true","specs.ricos.encAutoImageUrls":"true","specs.ricos.tiptapEditor":"false","specs.ricos.newSettingsModals":"true"},"215238eb-22a5-4c36-9e7b-e7c08025e04e":{"specs.stores.UseAddToCurrentCart":"true","specs.stores.AddTrackDataOnAddProducts":"true"},"14f25dc5-6af3-5420-9568-f9c5ed98c9b1":{"specs.ping.errorHandlerInUou":"true","specs.ping.MAPreferences.useMAWidgetPluginService":"true"},"14ce1214-b278-a7e4-1373-00cebd1bef7c":{"specs.forms.RemoveFalsyValues":"false","specs.forms.EnableFormsInBlog":"true"},"14bcded7-0066-7c35-14d7-466cb3f09103":{"specs.wixBlog.ImportFromWordPressInsideMenu":"false","specs.wixBlog.FixMultipleColors":"true","specs.media.MediaManager3":"true","specs.wixBlog.CollectMetrics":"false","specs.ricos.newFormattingToolbar":"true","specs.wixBlog.UseWarmupStateInOldPostPage":"false","specs.wixBlog.PreInstalledAuthorChanged":"true","specs.wixBlog.UseBlogSettingsAllPostsFeedLabels":"true","specs.ricos.newVideoVerticalAndSocialModals":"true","specs.wixBlog.BlogSausageMenu":"false","specs.wixBlog.SausageMenuFeed":"false","specs.wixBlog.BMMergePendingReviewTab":"false","specs.wixBlog.ImportUseDraftPostApiProxy":"true","specs.wixBlog.RemoveMainTab":"true","specs.wixBlog.NewBlogPostComment":"false","specs.wixBlog.DontCallDbOnBadSlug":"false","specs.wixRicos.withWixStyles":"true","specs.wixBlog.UseWarmupStateInPostList":"true","specs.wixBlog.UseWarmupStateInNewPostPage":"true","specs.wixBlog.BlockViewCountUpdates":"false","specs.ricos-server.resolveParentPagePath":"true","specs.wixBlog.HashtagPageUseFeedPage":"true","specs.wixBlog.PostRatings":"true","specs.wixBlog.DisplayPostComposerError":"false","specs.wixBlog.ScrollPostListToTop":"true","specs.wixBlog.PreInstalledPostSubmittedForReview":"true","specs.ricos.enablePages":"false","specs.wixBlog.UseBlogPermissionCacheService":"true","specs.blogImporter.EnableRollbackOfMigrationsBM":"false","specs.wixBlog.UseWarmupStateInFeed":"true","specs.wixBlog.UseLayoutFixer":"true","specs.ricos.removeUsmFromImageUrls":"true","specs.forms.EnableFormsInBlog":"true","specs.wixBlog.DisableBlogInjectGenie":"false","specs.wixBlog.UseTranslationCreditsApi":"true","specs.membersArea.BlogCommentsFromCommentsSerivice":"true","specs.wixBlog.UseFilesusrDomain":"false","specs.wixBlog.UsePromptHubForImageGeneration":"true","specs.wixBlog.MigrateCustomFeedOnEditorReady":"false","specs.wixBlog.SettingsFromParastorage":"false","specs.wixBlog.NewBlogPostPublishedAutomation":"true","specs.ricos.fixedTabSize":"true","specs.wixBlog.UseBlogLikeNinjaService":"true","specs.wixBlog.BMManagePendingReviews":"true","specs.wixBlog.PreInstalledPostSubmissionStatus":"true","specs.wixBlog.EnableDiscoveryIngestion":"true","specs.wixBlog.UseAiServiceCreateDraftPost":"true","specs.wixBlog.PreInstalledScheduledPostPublished":"true","specs.ricos.encAutoImageUrls":"true","specs.ricos.tiptapEditor":"false","specs.ricos.newSettingsModals":"true"},"1484cb44-49cd-5b39-9681-75188ab429de":{"specs.siteSearch.ChangeSelectedTabInEditorOnEdit":"true","specs.siteSearch.UseWarmupData":"true","specs.siteSearch.NewSearchOnClassicEditor":"true","specs.siteSearch.CSSPerBreakpointIndications":"true","specs.siteSearch.ResponsiveSearchBoxSkin":"true","specs.siteSearch.ShowStudioUpdateFlow":"true"},"1380b703-ce81-ff05-f115-39571d94dfcd":{"specs.ecom.ShouldRenderStepContentWithCallback":"true","specs.stores.FixFilterColorWithMultipleNames":"true","specs.ecom.SupportManualPaymentsOnPaymentRequest":"false","specs.stores.FixQuickViewNavigationToProductPage":"true","specs.stores.GalleryMigrateRowsToProductsCountViewer":"true","specs.ecom.CheckoutUIRevampOrderSummary":"true","specs.ecom.ShowMultipleLineItemActions":"true","specs.stores.AddMobileClassesToSliderGalleryRoot":"true","specs.ecom.ShowCheckoutPoliciesPage":"true","specs.stores.DisableFocusProductOnInfiniteScroll":"true","specs.ecom.HidePointerOnNotClickableHeader":"true","specs.forms.LocalPhoneNumbers":"true","specs.stores.GalleryProductOptionMobileNativeDropdown":"true","specs.stores.AllowAddToCartButtonOnImageInViewer":"true","specs.ecom.FixImageDimensionsOnCart":"true","specs.forms.JapanAutocompleteEnabled":"true","specs.stores.GalleryFetchAppSettingsOnce":"false","specs.stores.ReturnCartIdNullInsteadOfDeprecatedForExpressService":"true","specs.stores.ImageSettingsInViewer":"true","specs.stores.EnableDynamicSizeDefaultImage":"true","specs.ecom.PricesIncludeTaxFromCheckoutInExpress":"true","specs.stores.AllowResponsiveLayoutMaxWidth":"true","specs.stores.ThumbnailsDesignViewer":"true","specs.stores.ProductPageNewWixCodeApi":"true","specs.stores.ProductPageFixReflowSausageNavigation":"true","specs.stores.ShowAutomaticDiscountDataOnGallery":"true","specs.stores.HideBillingFormForPayPalAndManualNotBrazil":"true","specs.stores.GalleryProductOptionsAndQuantityWidth":"true","specs.stores.ProductPageUpliftProductOptionsViewer":"true","specs.ecom.violationBasedOnDeliveryOption":"true","specs.ecom.FixDeliveryTaxExemption":"true","specs.ecom.deliveryOptionsSetFirstAsDefault":"true","specs.stores.InfoSectionTabsTPAComponent":"true","specs.stores.ProductPageBreadcrumbsAfterHydration":"true","specs.stores.GalleryColorPickerA11yReflowKeyboardFix":"true","specs.stores.GalleryDontFetchFilteredProductsWithoutActiveFilters":"true","specs.ecom.PlatformFeeOnCartAndCheckout":"true","specs.stores.ShouldUseCommonDiscountPricingMethods":"true","specs.ecom.FixTotalPriceCSSSideCart":"true","specs.stores.UseNewFiltersQueryParamEncoder":"true","specs.stores.GalleryEnableLoadMoreHoverUnderline":"true","specs.stores.allowProductPageButtonsOption":"true","specs.stores.TYPUpdateOrderModelWithSubscriptionInfo":"true","specs.forms.MoveEcomLabelTranslations":"true","specs.stores.FixWishlistPageLiveTextEditing":"true","specs.ecom.separateAdditionalFee":"true","specs.ecom.PreloadOnCartCheckoutButton":"true","specs.stores.SliderGalleryInfiniteLoopToggleViewer":"true","specs.stores.UseProductThumbnailWithWowImage":"true","specs.stores.GalleryPriceFilterClientTicksCalculation":"true","ecomTestFedOwnerScope":"false","specs.stores.ProductPageBreadcrumbsDesignViewer":"true","specs.stores.GalleryEditableGridTemplateRepeatOption":"true","specs.stores.ProductPageRemovePagination":"true","specs.stores.AddHasDiscountToVariantsItemsQueries":"true","specs.stores.FixVerticalThumbnailsPosition":"true","specs.stores.ShowAutomaticDiscountDataOnProductWidget":"true","specs.stores.FixCheckoutAddressTemplateMandatoryZipCode":"true","specs.ecom.MoveCartToViewerContext":"true","specs.stores.FixVariantIdCalculationInBuyNowFlow":"false","specs.stores.OnlineStoresSessionStorageWithTTL":"true","specs.forms.MultilineAddressInTemplates":"true","specs.stores.FixCartIconOnEditor":"true","specs.stores.ResponsiveGalleryMigration":"true","specs.ecom.MergeExpressDeliveryRateWithHandlingFee":"false","specs.stores.ShowAddToCartWithSubscription":"true","specs.stores.ProductPageSlotsAddMoreProps":"true","specs.stores.ProductPageBuyNowFromEcomSdk":"true","specs.stores.GalleryFixWarmUpDataCacheKeyWithQueryParams":"true","specs.ecom.CheckoutHeaderContinueBrowsingDisplayCheckout":"true","specs.stores.FixAnnounceNotDefinedBug":"true","specs.stores.RefactorFormServiceToCalcExtendedFields":"true","specs.stores.FixQuickViewForSubscriptionsInWishlist":"true","specs.stores.ShowGiftCardAddToCartSettings":"true","specs.stores.ProductPageVideoPosterOptimization":"true","specs.ecom.fixGroupedDeliveryOptionSelection":"false","specs.stores.LoadClientConfigInController":"true","specs.stores.MainMediaWrapperAsAnchorElement":"true","specs.stores.AllowGalleryProductRoundCornersInViewer":"false","specs.stores.ResponsiveEditorBreadcrumbsToggle":"true","specs.ecom.MigrateAddressFormToV2":"true","specs.stores.SupportFreeTrialTYP":"true","usingStoresViewerScriptAddToCart":"false","specs.stores.SwitchMainMediaSlickToSwiper":"true","specs.stores.FixFilterKeySpecialCharacter":"true","specs.forms.RemoveFalsyValues":"false","specs.stores.StorefrontLegacyEnablePanoramaIntegration":"true","specs.stores.ProductNameHtmlTag":"true","specs.stores.UseUndefinedAsDefaultBillingAddressInCheckout":"true","specs.stores.GalleryA11yReflowFilterModalFix":"true","specs.stores.EnableDiscountAndRegularPriceSwapViewer":"true","specs.ecom.CheckoutHeaderAdditionalCustomizationsCheckout":"true","specs.ecom.CacheGetClientConfigInSiteStore":"true","specs.stores.GalleryFiltersClassicMobileHorizontalOrientationFix":"true","specs.stores.ShowWishlistInGallery":"true","specs.ecom.ShowCheckoutOnEditorPreview":"true","specs.ecom.ShowVoidedErrorMessage":"true","specs.stores.UseOpenSideCartApi":"true","specs.stores.UsingStoresViewerScriptAddToCart":"true","specs.stores.ShowAutomaticDiscountDataOnProductPage":"true","specs.stores.ProductPageWaitForWarmupData":"true","specs.stores.ProductMediaNavigationDots":"false","specs.stores.UseNewSubscriptionView":"true","specs.stores.AddSlotToCheckoutPolicies":"true","specs.forms.FixControllerActions":"true","specs.ecom.ImprovePerformanceByParallelPromises":"true","specs.ecom.FixDebouncedUpdateItemQuantity":"true","specs.ecom.AddCheckoutCountryToDeliveryCountries":"true","specs.stores.GalleryAddMissingAddProductImpressionEvent":"true","specs.stores.ProductPageUplift":"true","specs.stores.ProductPageUpliftNewFeaturesSF":"true","specs.ecom.NewThankYouPage":"false","specs.stores.ProductPageUpliftProductOptions":"true","specs.stores.SubscriptionPlanNewDesign":"false","specs.stores.GallerySlotsPOC":"false","specs.stores.AllowGalleryIntervalNavigation":"true","specs.stores.navigateToRelativeUrlWithCustomizedUrl":"true","specs.ecom.UsePaymentStatusV2":"true","specs.stores.enableUnitedStatesMilitaryAddresses":"true","specs.stores.GalleryNewErrorState":"true","specs.ecom.ShowTwoDescriptionLinesOnCartAndCheckout":"true","specs.ecom.showPriceWithFreeShippingCoupon":"true","specs.ecom.FixOutOfStockOnCart":"true","specs.stores.GalleryPriceSliderA11yFixKeyboardFocus":"true","specs.stores.ProductPageSsrInvalidationTags":"true","specs.stores.AllowGalleryContainerPadding":"true","specs.stores.ConfigureGalleryViewStates":"true","specs.stores.ShouldHandlePaylinksRedirectError":"true","specs.ecom.FixCartNavigationOnPreview":"false","specs.stores.GalleryWaitForWarmupData":"true","specs.stores.ShouldProductPageUseNewSocialIcons":"true","specs.stores.SliderGalleryExposeOptionsViewer":"true","specs.ecom.DontUseViewerStorageOnPreview":"true","specs.stores.Set404ForSeoWhenPageHasNoProducts":"true","specs.stores.SliderGalleryFixSwiperIndex":"true","specs.stores.DontRedirectToSiteOnFailedFetch":"true","specs.stores.SupportMitEnabledFieldInCheckoutPage":"true","specs.stores.ConfigureSlotsInEditorSDK":"true","ecomTestFed":"false","specs.ecom.useFallbackInPreviewLoader":"true","specs.ecom.UsePartialLineItemUrlInCart":"true","specs.stores.GalleryProductOptionsLimit":"true","specs.stores.ProductPageSlots":"true","specs.stores.newClearFiltersHoverState":"true","specs.stores.UseGalleryNewApplyFilterQueryParams":"false","specs.stores.tpaRouterShouldQueryProductsV3":"true","specs.ecom.showDeliveryOptionPreviewError":"true","specs.ecom.MoveCheckoutToViewerContext":"true","specs.stores.ProductPageConsumePublicDataFromBothScopes":"true","storesFTGalleryEnableLoadMoreHoverUnderline":"false","specs.forms.EnableNewPhoneFieldValidation":"true","specs.ecom.RichTextPoliciesCheckout":"true","specs.stores.GallerySeoTags":"true","specs.stores.GalleryMoveDiscountNameUnderPrice":"true","specs.stores.SliderGallery200Limit":"true","specs.stores.ProductPageBlocksFixAddToCartOnSecondaryLang":"true","specs.stores.AllowStickySidebarInViewer":"true","specs.ecom.CallCartV2FromCheckout":"true","specs.stores.RangeFilterRefactor":"true","specs.stores.ProductPageLocationOnChangePathChangeForEditorSausage":"true","specs.ecom.SendPaymentTokenUndefinedFallback":"true","specs.stores.SubscriptionPlansNewDesignViewer":"true","specs.stores.AllowAddToCartButtonContentTypesInViewer":"true","specs.ecom.OrdersModifiers":"true","specs.ecom.loadDeliverySectionsDataOnReadOnly":"true","specs.ecom.AddProjectionsTYPQuery":"true","specs.ecom.EcomPlatformWidgetsBFCache":"true","specs.stores.EnableOutOfStockAlignment":"true","specs.forms.EnablePhoneField":"true","specs.stores.UseNewQueriesOnWishlistWithDiscount":"true","specs.stores.FixGalleryBorderRadiusOnZoomHover":"true","specs.stores.UseExperimentsFromPlatformFlowApiLegacyProjects":"true","specs.ecom.ShowMultipleSubscriptions":"true","specs.stores.FixBackInStockButtonValidation":"true","specs.stores.RemoveControllerFactory":"true","specs.stores.FixGalleryNotToShowQueryPageFor1":"true","specs.stores.FixSliderGalleryRelatedProductsEmptyRender":"true","specs.ecom.StopFocusOnCart":"true","specs.ecom.hideShippingOptionAvailibilityBadgeOnMobile":"true","specs.ecom.HideMissingLineItemImagesInPaymentRequest":"true","specs.stores.GalleryProductOptionsAndQuantityRoundCornersInViewer":"true","specs.forms.SignatureFieldV2":"true","specs.ecom.SideCartEditor3SettingsPanel":"true","specs.stores.GalleryQuickBuyViewer":"true","specs.stores.RenderSlotsInGallery":"true","specs.ecom.StopSendingOriginInCheckoutUrl":"true","specs.stores.PriceFilterClientTicksCalculation":"true","specs.ecom.TopCheckoutButtonSkeletonOnCart":"true","specs.stores.UseNewQueriesWithProductDiscount":"true","specs.stores.AlignProductCountAndSort":"true","specs.stores.GalleryOptionButtonsGrid":"true","specs.ecom.TaxExemptionOnTYP":"true","specs.ecom.AddExemptTextToTaxNameWhenPartiallyExempt":"true","specs.stores.UseNewFiltersQueryParamDecoder":"true","specs.stores.ResponsiveTYPCss":"true","specs.ecom.InitCustomUrlApiOnlyInProductPage":"true","specs.stores.ShouldSplitBillingInfoPrefill":"true","specs.stores.UseExperimentsFromPlatformFlowApi":"true","specs.ecom.UsePaymentRequestTitleInThankYou":"true","specs.stores.ShouldShowFirstProductOptionInGallery":"true","specs.stores.GalleryColorOptionAlignment":"true","specs.stores.AllowGalleryFreeModeNavigationInViewer":"true","specs.stores.GalleryProductItemResetQuantityUponSelectionChange":"true","specs.stores.EnableQualityOptionsStylingChanges":"false","specs.stores.AddingOverflowHiddenToFilterTitleMobile":"true","specs.stores.ProductPageSupportGridLayout":"true","specs.stores.ShouldSeparateQuantityAndOptionsStyleParams":"true","specs.stores.UseProductLineItemFromTYP":"true","specs.stores.AddSliderGalleryTitleToGlobalPropsContext":"true","specs.ecom.FixCouponErrorInCart":"true","specs.ecom.FixCartCountOverlap":"true","specs.stores.EnableWarmUpDataCaching":"true","specs.stores.FixGalleryRenderingWhenUrlChanges":"false","specs.stores.ProductPageNotifyEmailOnCheckout":"true","specs.ecom.UseIsMobileForOneColumnView":"true","specs.stores.PreventGalleryFullRefreshOnUrlChange":"true","specs.ecom.CallShowPaymentErrorModalAfterValidation":"true","specs.stores.ProductPageRicoDescription":"true","specs.stores.increaseGqlGetLimit":"true","specs.stores.CategoryPageFooterDescriptionSF":"true"},"675bbcef-18d8-41f5-800e-131ec9e08762":{"specs.wixCode.LoadWithImportAMDModule":"true","specs.wixCode.LoadNamespacesPerPage":"false","specs.wixcode.ViewerExperimentOwnerScopeTest":"true","specs.wixCode.resolveMissingPlatformNamespaces":"false","specs.wixcode.ViewerExperimentTest":"false"},"14ce28f7-7eb0-3745-22f8-074b0e2401fb":{"specs.UouSubscriptionServiceUseApiGatewayClient":"true","specs.membersArea.DoNotWaitInstallNavigation":"true","specs.membersArea.UseMembersNgApiUpdate":"false","specs.members.FollowersAudienceProvider":"false","specs.media.MediaManager3":"true","specs.membersArea.showCascadingIndicators":"true","specs.membersArea.HideMemberSortField":"true","specs.profileCardOOI.MakeProfileCardRemovableInNewMA":"true","specs.membersArea.DisableLivePreviewRefreshes":"true","specs.membersArea.CheckUserContributorPermissions":"true","specs.profileCard.EnableHtmlTagSettings":"true","specs.membersArea.CheckIsAppActiveBeforeInstallV1":"true","specs.membersArea.HandleMembersNgUpdateDomainEvents":"true","specs.membersArea.UseGetMyMemberInMemberHandler":"true","specs.membersArea.EnableMembersAreaContextCheck":"true","specs.profileCardOOI.ReorganizeActionButtons":"true","specs.profileCardOOI.NewResetSettings":"true","specs.membersArea.SplitCustomPageTranslations":"true","specs.membersArea.AddSuspendedFilter":"true","specs.membersfollow.ActivityCounters":"true","specs.profileCardOOI.TitleForAll":"true","specs.membersArea.ShowPageRedirectNote":"true","specs.membersArea.ExtendedUninstallMASubApps":"true","specs.membersArea.UseViewedMemberBlocked":"true","specs.membersArea.UseFollowersV3":"true","specs.members.enableMuteMembersSkill":"true","specs.myAccount.ShowBlockedMembersModalEmptyState":"true","specs.membersArea.enableTimeoutLogs":"false","specs.badges.useBadgesV3":"true","specs.membersArea.GetRoutesUseGlobal":"true","specs.membersArea.ShouldOpenPropertyInDevCenter":"false","specs.membersApi.UseProfilesApiForTitleAndCoverWrites":"true","specs.profileCardOOI.UseMiddlewareForGlobalSettingsGetter":"true","specs.membersArea.EnableLoginBarComponentExtension":"true","specs.members.enableUpdateCustomFieldSkill":"true","specs.membersArea.ShowNewFFBorderSettings":"true","specs.membersArea.AddNotificationsIconOnV2":"true","specs.members.enableHideCustomFieldSkill":"true","specs.membersArea.installationSourceOfTruth":"true","specs.membersAreaV2.HidePermissionsPanelOnPrivateMA":"false","specs.responsive-editor.NoMeasureInstall":"true","specs.members.enableDeleteCustomFieldSkill":"true","specs.membersArea.SkipTemplateHandlerForSettings":"false","specs.membersArea.UsePopoverDynamicPositioning":"true","specs.membersArea.MemberHandlerUseMembersNgApi":"true","specs.membersArea.EnableMyAccountParallelInstall":"true","specs.profileCardOOI.UseMiddlewareForMemberGetter":"true","specs.membersArea.UseIsPermittedOnAppData":"true","specs.membersArea.UseMembersNgApi":"true","specs.membersArea.ResolveMemberDuplication":"true","specs.membersArea.DoNotCreateTeamMember":"false","specs.membersArea.NotificationsIconFixerOnV2":"true","specs.profileCardOOI.EnableAvifEncoding":"true","specs.membersArea.ConsumeMembersPiiExchangeDomainEvents":"true","specs.membersArea.handleMobileComponentsDeletion":"true","specs.membersArea.PrivateMemberIndicator":"false","specs.membersArea.ShowMoreMembersWithBadge":"false","specs.membersArea.AddRevisionField":"true","specs.membersArea.EnableTpaPageLinksDataFixerForV2MenuItems":"true","specs.membersArea.AddManageMemberAccessAction":"true","specs.membersArea.EnableTpaPageLinksDataFixerForV3MenuItems":"true","specs.ident.SiteMembersSocialDisclaimer":"true","specs.profileCardOOI.EnableProfileAlignmentCssVars":"true","specs.membersArea.UseQueryMembersTextSearch":"true","specs.membersAreaV2.EnablePageInfoPanelCustomPage":"false","specs.profileCardOOI.usePlaceholderLoaders":"true","specs.profileCardOOI.UseBlockedCheckFollowButton":"true","specs.myAccount.showBlockedMembersModalRedesign":"true","specs.membersArea.MetaSiteSpecialConsumerV2":"true","specs.members.enableUnmuteMembersSkill":"true","specs.membersArea.UseMembersAboutV2":"true","specs.members.enableCreateBadgeSkill":"true","specs.membersArea.HideSuspendedLabelForNonOwners":"true","specs.membersArea.UseApplyChangeToAllLanguagesForMaV2":"true","specs.membersArea.SortByNumbersInElastic":"true","specs.myAccount.ShowPrivacySettingsMessageForSiteOwners":"true","specs.membersArea.MembersApiUseMembersNgApiQueryForSortBy":"true","specs.profileCardOOI.showNewNotificationsContent":"true","specs.membersArea.UninstallMASubApps":"true","specs.membersArea.UseAppDataForRoutes":"true","specs.membersArea.CreateMissingMember":"true","specs.membersArea.EnableMenusDataFixer":"true","specs.members.usePlatformizedServicesForUpdate":"true","specs.badges.shouldUseBadgesV3InEdm":"true","specs.membersArea.HideSuspendedLabelForNonOwnersFFBox":"true","specs.profileCardOOI.EnableCSSIndicators":"true","specs.membersArea.EnableMemberPagePermissions":"false","specs.profileCardOOI.EnableProfileDetailsEdit":"true","specs.membersArea.UseIsPermittedOnMediaCredentials":"true","specs.profileCardOOI.UseMiddlewareForRolesMapGetter":"true","specs.membersArea.fixLoginBarResponsiveLayout":"true","specs.membersArea.EnableV2SilentInstall":"true","specs.profileCard.UseMigratedEditor3StylesParams":"true","specs.members.enableManageMemberPrivacySkill":"true","specs.membersAreaV3.ReAddPageWorkaround":"true","specs.membersArea.OptimizeVerticalDeletion":"true","specs.membersArea.EnableFollowersAsLightbox":"true","specs.membersArea.UseGetOrCreateMemberV2":"true","specs.members.enableCreateCustomFieldSkill":"true","specs.membersArea.migrateToV2":"false","specs.membersArea.ClearSettings":"true","specs.membersArea.CallGetMyMemberForCreatingMember":"true","specs.membersArea.ShowHeadingLevelSettings":"true"},"13d21c63-b5ec-5912-8397-c3a5ddb27a97":{"specs.bookings.PreventDoubleBookingCourse":"true","specs.bookings.stripLayoutMultiColumn":"true","specs.bookings.AddBookingMadeEvent":"true","specs.forms.LocalPhoneNumbers":"true","specs.bookings.serviceListMenuLayout":"true","specs.bookings.TimezoneAwareSlotMatching":"true","specs.bookings.paidByClasspassIndication":"true","specs.bookings.idanExperimentTest":"true","specs.bookings.AlignDateAndTime":"true","specs.bookings.StaffQueryParamInCalendar":"true","specs.bookings.CalendarIntervalsImprovement":"true","specs.bookings.MyBookingsCssPBPIndication":"true","specs.bookings.DeepLinkAddonsUOU":"false","specs.bookings.daily-agenda.staff-image-view":"true","specs.bookings.UoUMultiLocationV1":"true","specs.bookings.members-area-lazy-load":"true","specs.bookings.KibanaInfoLogs":"false","specs.bookings.TimezoneIndicatorImprovementCalendars":"true","specs.bookings.AddonsAndPlanOnlyUOU":"true","specs.bookings.SitePropertiesFacadeMigration":"true","specs.bookings.consultants.dynamicPricingPerStaff":"true","specs.ImagePixelDensityFactorSpecs":"1.5","specs.bookings.EcomRendererHidePriceForMembershipAndFree":"true","specs.bookings.consultants.dynamicPricingCustom":"true","specs.bookings.RemoveViewPricingFromCalendarSettings":"true","specs.bookings.migrateServiceDetailsToStyleParm":"true","specs.bookings.dev.UseBusinessInfoMapper":"true","specs.bookings.OutOfModalScrollFix":"true","specs.bookings.ShowUnavailableSlotForm":"true","specs.wossm.EnableMultiLocation":"true","specs.bookings.FormNewErrorHandling":"true","specs.bookings.calendarFixLoadingButtonSize":"true","specs.bookings.BookAnotherText":"true","specs.bookings.agendaWarmupDataForServices":"true","specs.bookings.initSlotsToShow":"true","specs.bookings.AddPaymentAmountToCashier":"true","specs.bookings.RedesignA1":"true","specs.bookings.AdditionalTimeSlotsInFormPlugin":"true","specs.bookings.updateFemToWixFormsPopulation":"false","specs.bookings.ClearButtonAnyStaffMember":"false","specs.bookings.ResetNavigatingStatusOnBack":"true","specs.bookings.FormAddH1HeaderForA11y":"true","specs.bookings.DeprecateCatalogServicesSlotAvailability":"true","specs.bookings.agendaWarmupDataForStaffMembers":"true","specs.bookings.servicesPagesBreadcrumbs":"true","specs.bookings.WixFormsMigration":"true","specs.bookings.timeQueryParamAutoSelect":"true","specs.bookings.supportServicesChoices":"false","specs.bookings.Editor3":"true","specs.bookings.DisableOldMembersArea":"true","specs.bookings.daily-agenda.session-items.overlay-view":"true","specs.bookings.UouZoomV2":"true","specs.bookings.ShowPriceTextInFormIfServiceIsWithPPAndCustomPrice":"true","specs.bookings.addNotificationTogglesToBoxes":"true","specs.bookings.migrateCalendarSettingsToServicesV2":"true","specs.bookings.warnOnShowAllServicesFilterOption":"true","specs.bookings.CalendarAndServiceListShowDiscount":"false","specs.bookings.removeExtraReloadCalendar":"true","specs.bookings.HandleMembershipErrorInCheckoutUoU":"true","specs.bookings.TimezoneIndicatorImprovementOfferingPage":"true","specs.DevCenter.IncludeAppointmentWaitlistInSSR":"true","specs.bookings.BookOnBehalf":"false","specs.bookings.warmupDataCachingForCalendar":"true","specs.bookings.OnConfirmationPageRemoveScheduleForCourse":"true","specs.forms.FixControllerActions":"true","specs.bookings.removeCategoryQueryParamOnNavigation":"true","specs.bookings.servicesPerLoadInServiceListSettings":"true","specs.bookings.ResetNavigatingStatusOnServicePage":"true","specs.bookings.UserTimezoneFirstSlotWithDifferentWeek":"true","specs.bookings.FiveNines":"false","specs.bookings.ShouldDisplayTaxAddressField":"true","specs.ValidateBookingCongratulationsSpecs":"true","specs.bookings.AppBuilderUseServicesV2":"true","specs.bookings.FormEditorKBContent":"false","specs.bookings.MyBookingsShowFormSubmission":"true","specs.bookings.translatePages":"false","specs.bookings.CalendarFailedErrorMessageUOU":"true","specs.bookings.MoveToMetroMembershipSpiHostUoU":"true","specs.bookings.FixApplyingCouponExperience":"true","specs.bookings.UoUMultiLocationAllLocations":"true","specs.bookings.AccessibilityImprovements":"true","specs.bookings.useBookingsViewerCache":"false","specs.bookings.useQueryEventsInServicePage":"true","specs.bookings.FormUseAutomationsForSMS":"true","specs.bookings.UOUIntakeFormsIntegration":"true","specs.bookings.SingleLineItemPreviewPrice":"true","specs.bookings.RescheduleDefaultLocation":"true","specs.bookings.calendar-summary":"true","specs.bookings.ServiceV2ServicePage":"true","specs.bookings.CheckIsMemberAreaInstalledUsingPublicAPI":"true","specs.bookings.fetchOnlyTenStaffMembers":"false","specs.bookings.RemovePPErrorMessageUponLoginInMobile":"true","specs.bookings.CancellationFeesUoU":"true","specs.bookings.daily-agenda.display-preferences.categories-filter":"false","specs.bookings.calendarA11YChanges":"true","specs.bookings.MultiServiceA1Model":"true","specs.bookings.BookFlowSettings":"true","specs.bookings.DisableDatesAfterReschedulePlanExpiration":"true","specs.bookings.updateFemToWixForms":"true","specs.bookings.noTpaSettingsProviderInList":"true","specs.bookings.AddParticipantShortcut":"true","specs.bookings.bookAgainController":"true","specs.bookings.CartConflictEnableSlotsTimezoneConversion":"true","spec.bookings.owner-fes.DeprecateCatalogWriter":"false","specs.bookings.AutomaticDiscountsUoU":"true","specs.bookings.agendaServiceFilterByLocationSettings":"true","specs.bookings.FixPresetIdInitialization":"true","specs.bookings.bookButtonDestination":"true","specs.bookings.fetchTabsInServiceList":"true","specs.bookings.AnonymousReschedule":"true","specs.bookings.A11YCalendarLabel":"true","specs.bookings.migrateUoUAvailability2":"true","specs.bookings.removeSkipPreferencesModalParam":"true","specs.bookings.FormPaymentOptionNewDropdown":"true","specs.bookings.allowRescheduleWithDynamicPricing":"false","specs.bookings.BookOnlyOneSlotUsingPP":"true","specs.bookings.CheckForExistingBooking":"true","specs.bookings.withErrorHandlerCheckout":"true","spec.bookings.owner-fes.RemoveOldEndpoints":"true","specs.bookings.UseQueryBySessionStartForContactBookings":"true","specs.bookings.EnforcePolicyOnCourse":"true","specs.bookings.DynamicPricingResilientUOU":"false","specs.bookings.UseGetAvailabilityForCourse":"true","specs.bookings.RemoveCalendarLinkFromBookingsCheckoutSettingsPanel":"true","specs.bookings.DetachNumberOfParticipantsFieldFromForm":"true","specs.bookings.AddonsUOU":"true","specs.bookings.MultiLocationUoU":"true","specs.bookings.UseNewBenefitsAPIUoU":"false","specs.bookings.FormReplaceArray":"true","specs.bookings.ServiceXV3CourseService":"true","specs.bookings.DepositeOrFullAmountUoU":"true","specs.bookings.QueryServicesInBatches":"false","specs.bookings.DatacapsuleMigration":"true","specs.bookings.AlwaysShowComplexPhoneField":"false","specs.bookings.ResilientBusinessInfo":"true","specs.bookings.boMultilocation":"true","specs.wos.KillWixSMS":"false","specs.bookings.fineGrainPermissionsModelWithWOA":"true","specs.bookings.ReportBookingAttemptBlockedAutomationOnly":"true","specs.bookings.AppInstanceOnCashierConfg":"true","specs.bookings.FixPricingPlanNavigation":"true","specs.bookings.QueryAvailabilityFromNow":"true","specs.bookings.showWorkingDaysForBookableClass":"true"}},"siteLanguages":[{"languageCode":"x-default","locale":"es-es","countryCode":"ESP","resolutionMethod":"Subdirectory","url":"https:\/\/www.dehonline.es\/documbox-info","name":"Spanish","seoLang":"es-es","localizedName":"Español","isPrimaryLanguage":false,"status":"Active"},{"languageCode":"es","locale":"es-es","countryCode":"ESP","resolutionMethod":"Subdirectory","url":"https:\/\/www.dehonline.es\/documbox-info","name":"Spanish","seoLang":"es-es","localizedName":"Español","isPrimaryLanguage":true,"status":"Active"}],"currLangCode":"es","seoLang":"es-es","currLangResolutionMethod":"Subdirectory"},"userPatterns":[{"patternType":"WIX_DATA_PAGE_ITEM-n1mgf","content":"{\"tags\":[{\"type\":\"meta\",\"props\":{\"name\":\"description\",\"content\":\"{{wix-data-page-item.Partners._id}}\"}},{\"type\":\"meta\",\"props\":{\"name\":\"robots\",\"content\":\"index\"}},{\"type\":\"title\",\"children\":\"{{wix-data-page-item.Partners.title}}\"}]}"}],"metaTags":[{"name":"fb_admins_meta_tag","value":"DEHinnovacion","property":false},{"name":"google-site-verification","value":"28n1jDnvywGL0CXlMdYZIy00ZTGKpXghObyJ1h94Ltc","property":false}],"customHeadTags":"","isInSEO":false,"hasBlogAmp":false,"mainPageId":"fswyo"},"serviceRegistrar":{},"sessionManager":{"isRunningInDifferentSiteContext":false,"expiryTimeoutOverride":0,"appsInstances":{},"sessionModel":{}},"siteMembersWixCodeSdk":{"isPreviewMode":false,"isEditMode":false,"smToken":"","smcollectionId":"b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1"},"siteMembers":{"collectionExposure":"Public","smcollectionId":"b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1","smToken":"","protectedHomepage":false,"isTemplate":false,"loginSocialBarOnSite":true,"routerPrefix":"","isCommunityInstalled":true,"baseUrl":"https:\/\/www.dehonline.es","memberInfoAppId":8290},"siteScrollBlocker":{"isBuilderComponentModel":false},"siteWixCodeSdk":{"fontFaceServerUrl":"https:\/\/serverless.parastorage.com\/_serverless\/site-sdk-server\/v1\/style","siteDisplayName":"DEH Online","siteRevision":11177,"regionalSettings":"es-es","language":"es","currency":"EUR","mainPageId":"fswyo","pageIdToPrefix":{"pkvic":"account","wrmtp":"account","yp7a1":"account","tpqog":"account","wpgmi":"account","in5n9":"account","v760n":"account","u305p":"account","muzu0":"account","n1mgf":"partners","uv3a3":"logs-api-panel","a7c5z":"profile"},"routerPrefixes":{"cfe08b5e-852d-4a74-b28c-53cd2d18a0f9":{"name":"account","prefix":"\/account","type":"dynamicPages"},"221dd5b5-a7e8-483e-92bc-c8aefef82fb4":{"name":"account","prefix":"\/account","type":"dynamicPages"},"ad16ce05-02eb-4802-86ef-e3f6cb5d2056":{"name":"account","prefix":"\/account","type":"dynamicPages"},"e223a1f4-3ce9-44de-bbf3-c7e77c21e6ab":{"name":"account","prefix":"\/account","type":"dynamicPages"},"380936b6-70ca-4254-8474-31bedebcd7e4":{"name":"account","prefix":"\/account","type":"dynamicPages"},"541a5cc2-d6f6-4cd8-8a90-312ce207e850":{"name":"account","prefix":"\/account","type":"dynamicPages"},"ede32970-5e9c-406c-9950-09655f962869":{"name":"account","prefix":"\/account","type":"dynamicPages"},"9869a6f2-b478-4cf3-8fbc-0b8979b85e04":{"name":"account","prefix":"\/account","type":"dynamicPages"},"4403c30c-a1ec-497e-9056-d87d7ffae212":{"name":"account","prefix":"\/account","type":"dynamicPages"},"a52dca6c-d625-428a-bfc6-ba31939fd9d2":{"name":"partners","prefix":"\/partners","type":"dynamicPages"},"62d1cbe7-edd5-4013-9ffd-4b33b0101891":{"name":"logs-api-panel","prefix":"\/logs-api-panel","type":"dynamicPages"},"296fd1b2-b2d3-43e1-8485-54b566155d9b":{"name":"profile","prefix":"\/profile","type":"dynamicPages"}},"timezone":"Europe\/Madrid","pageIdToTitle":{"in5n9":"Mis direcciones","zuzg7":"HomologacionProv","nhshd":"AD_comunidad","quxst":"360_home_services","pm5m6":"TestingQA no tocar","hxib1":"Aún no eres cliente","mrxoe":"Planes AF","txodm":"AF MKT","ol5if":"FAQ 2","yp7a1":"Notificaciones","nt31m":"Mas info DocumBox","olhdo":"Confirmación IBAN","nt31l":"VDComercial","o0l10":"Canal de denuncias","nd8j7":"Comunidad DEH","syyvq":"Más info At Premium","pcxzv":"BajaParrilla","popoq":"Solicitud de Centralización CD","u305p":"My Groups","hpgql":"Com. propietarios por comunidades","muzu0":"Opciones","nt31g":"Mas info CertiBox","cim8a":"AS MKT","qetce":"Onzane","dsocb":"Notificaciones electrónicas","hfva2":"AF Nuevo Servicios","fqdy2":"Guía CEN 6","ik1hh":"Formulario de Contacto","q5qha":"Claúsula de privacidad encuestas","zxmy1":"Autónomos por comunidades","shn4f":"DocumBox info","i2evc":"Finalización de compra","p9srv":"Gracias n","pkvic":"Mis pedidos","v5m3j":"Campaña Norte","ocq3p":"Confirmación Cuenta Panel","qurwf":"Guía Inicio 1","tpqog":"Mi billetera","xq2tw":"Venta Recurrente","vl0d0":"Certificado eidas","gji5q":"Mas remuneraciones","njh83":"Sedes electrónicas vigiladas","y59yq":"Pólitica de privacidad para webinars","errqt":"Servicio sellado de tiempo","h10oq":"AF Girona","kphfo":"Guía CEN 8","bpx3c":"FAQ grupos","tcuwq":"CertiBox contratar","nt31j":"PopUp AS No Cliente","qn9b9":"Valoraciones","wrsv8":"Guía CEN 3","fc4zp":"Soluciones","rwy8r":"Emovili","kjy2o":"Acuerdo ecPF","qbfxr":"FAQ recogida Notificacion","wmg2n":"Servicios AS Nuevo","nt31h":"Mas info RGPD","p60vc":"PYMEs por comunidades","qjepe":"Página del carrito","thsrc":"Creando usuario","k9yj1":"Suscriptores_semana","wi4q4":"FAQ email Notif","nt31f":"popup1","cenyi":"FAQ Centralizacion","xg7qg":"Más Info CEN","d48k3":"Parrilla Nuevo","cmksk":"LexBox","j8k8e":"Página de agradecimiento","skvoa":"Compra finalizada AF","qmhcs":"VD Comercial NEW","p3s3p":"FAQ Cortesia","fd425":"Carrito lateral","mmdw4":"Onzane_vecinos","hw5bv":"AF Gerona Finalizada","rl147":"DocumBox Redirect","xgxhy":"Certificado CSQA","iwat5":"Carpetas Financieras","wrmtp":"Mis reservas","z7jn0":"Error 404","nh8xj":"Mas info PRL","x555j":"CEN info","tejf5":"Fullscreen Page","sxzjx":"Acuerdo PJ Servicios","zt28q":"Onzane_acceso","ot0oq":"Política de privacidad para redes social","smykc":"Contacto Whatsapp","zzhwm":"Entrada","l8mal":"Admin. fincas por comunidades","af52d":"Acuerdo ecPJ","nt31n":"Mas info AD Comunidad","wi29w":"FAQ video No disponible","y73hn":"ASESORLEX","nt31d":"Firma Telemática","w8duu":"Form","izzed":"TUIO Vecinos","sbcjh":"Acuerdo PF Servicios","mwl8s":"TUIO","uv3a3":"Logs API Panel (List)","vmhii":"Orama","gpbxw":"Ir a Soporte","ytqdg":"test parrilla","x29nv":"Planes AS","cg9jn":"Guía Inicio 2","d8prw":"Guía CEN 4","nt31e":"Registro personalizado","z7nph":"Promo-autoconsumo","wpgmi":"Mis suscripciones","lmhhf":"FAQ","u6bhj":"Asesores por comunidades","wu4cm":"Habilitar CEN","knhbr":"Encuesta ERP","c0ser":"Certificado Aenor","wcsyo":"AF Datos Girona v2","e5c1j":"Formulario de reserva","dytx1":"Redireccion Parrilla","oujlx":"Plataforma CEN","yp7vs":"Política de Cookies","d5r14":"Guía CEN 2","k3136":"Onboarding Videoconferencia","steae":"CertiBox","obu7v":"AF Alicante","ikonk":"Gracias","l9mx3":"Guía CEN 1","ga5jw":"Venta Digital","qofog":"PYMES MKT","xx429":"Landing_comunidad","kz0lr":"Guía Inicio 3","js15o":"Mi Comunidad Gesfincas","u6k6f":"Promoción-checkit","zsvm8":"Política de privacidad","nt31i":"Mas info MAX","uwoq0":"Acuerdo Girona PJ","reoxc":"Confirmación Parrilla","nt31k":"Inicio de sesión personalizado","ydcn0":"Onboarding Whatsapp","o8zx5":"Evolución de suscriptores","khd1a":"Blog","je6hc":"AF Datos","n1mgf":"Partners (Title)","v760n":"Mi cuenta","wm3z0":"backup plan viejo","ypkkv":"baja-sms-deh","ibjpe":"Asesoria no registrada","uf8q2":"BankBox","htqpi":"BankBox Demo Form","a7c5z":"Perfil","vvs4y":"Aviso legal y condiciones de uso","a67ag":"Guía CEN 5","pkewe":"Promo Amigo","redrq":"msj error V. móvil","fswyo":"Inicio","sbgdt":"Politica de compliance","skelz":"Reserva Online","slmag":"AAPP vigiladas","zsmlf":"FAQ alta Asesoria","bc8kx":"Contratar Pack MAX AF","xc5ju":"Guía CEN 7","t1as7":"Lista de subencargados","i0g2n":"PYMES","vpfah":"Más Info Parrilla","m0mic":"Página del grupo","nvapc":"Página de servicio","uafvx":"CertiBox información","tajgd":"APttCB","lspga":"Acceso Clientes","hydos":"Datos Asesoria","mkray":"Acuerdo Girona PF","tdhex":"FAQ Windows","rc4o6":"LexBox_n_promo_septiembre","vvsrw":"BankBox Demo","unlm7":"Resultados de la búsqueda","yzt11":"BANNERS","ic0g7":"Mas info CertiBox Girona","dk9q2":"Calendario de reservas","ume87":"FAQ vigilancia"},"urlMappings":null,"viewMode":"Site"},"speculationRules":{"currentPagePath":"\/documbox-info"},"ssrCache":{},"tpaCommons":{"widgetsClientSpecMapData":{"27f9a78c-9f69-402e-8e2c-1d00f26fcf41":{"widgetUrl":"\/","appPage":{},"applicationId":9,"appDefinitionName":"Cookie Policy Banner","appDefinitionId":"f105ba16-6b7a-4b52-a2e5-712bdc749f76","isWixTPA":true,"allowScrolling":false},"13a94f09-2766-3c40-4a32-8edb5acdd8bc":{"widgetUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/wixstores-client-product-page\/1.4206.0\/ProductPage","mobileUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/wixstores-client-product-page\/1.4206.0\/ProductPage","appPage":{"id":"product_page","name":"Product Page","defaultPage":"","hidden":true,"multiInstanceEnabled":false,"order":2,"indexable":true,"fullPage":false,"landingPageInMobile":false,"hideFromMenu":false},"applicationId":10,"appDefinitionName":"Checkout & Orders","appDefinitionId":"1380b703-ce81-ff05-f115-39571d94dfcd","isWixTPA":true,"allowScrolling":false},"49dbb2d9-d9e5-4605-a147-e926605bf164":{"widgetUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/wixstores-client-cart-ooi\/1.5988.0\/SideCart","mobileUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/wixstores-client-cart-ooi\/1.5988.0\/SideCart","tpaWidgetId":"49dbb2d9-d9e5-4605-a147-e926605bf164","appPage":{"id":"Side Cart","name":"Side Cart","defaultPage":"","hidden":true,"multiInstanceEnabled":false,"order":1,"indexable":true,"fullPage":false,"landingPageInMobile":false,"hideFromMenu":false},"applicationId":10,"appDefinitionName":"Checkout & Orders","appDefinitionId":"1380b703-ce81-ff05-f115-39571d94dfcd","isWixTPA":true,"allowScrolling":false},"14666402-0bc7-b763-e875-e99840d131bd":{"widgetUrl":"https:\/\/ecom.wix.com\/storefront\/add-to-cart","mobileUrl":"https:\/\/ecom.wix.com\/storefront\/add-to-cart","tpaWidgetId":"add_to_cart_button","appPage":{},"applicationId":10,"appDefinitionName":"Checkout & Orders","appDefinitionId":"1380b703-ce81-ff05-f115-39571d94dfcd","isWixTPA":true,"allowScrolling":false},"a63a5215-8aa6-42af-96b1-583bfd74cff5":{"widgetUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/wixstores-client-gallery\/1.5848.0\/Wishlist","mobileUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/wixstores-client-gallery\/1.5848.0\/Wishlist","appPage":{"id":"wishlist","name":"My Wishlist","defaultPage":"","hidden":true,"multiInstanceEnabled":false,"order":7,"indexable":true,"fullPage":false,"landingPageInMobile":false,"hideFromMenu":false},"applicationId":10,"appDefinitionName":"Checkout & Orders","appDefinitionId":"1380b703-ce81-ff05-f115-39571d94dfcd","isWixTPA":true,"allowScrolling":false},"13afb094-84f9-739f-44fd-78d036adb028":{"widgetUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/wixstores-client-gallery\/1.5848.0\/GridGallery","mobileUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/wixstores-client-gallery\/1.5848.0\/GridGallery","tpaWidgetId":"grid_gallery","appPage":{},"applicationId":10,"appDefinitionName":"Checkout & Orders","appDefinitionId":"1380b703-ce81-ff05-f115-39571d94dfcd","isWixTPA":true,"allowScrolling":false},"1380bbab-4da3-36b0-efb4-2e0599971d14":{"widgetUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/wixstores-client-cart-ooi\/1.5988.0\/cart","mobileUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/wixstores-client-cart-ooi\/1.5988.0\/cart","appPage":{"id":"shopping_cart","name":"Cart Page","defaultPage":"","hidden":true,"multiInstanceEnabled":false,"order":3,"indexable":false,"fullPage":false,"landingPageInMobile":false,"hideFromMenu":false},"applicationId":10,"appDefinitionName":"Checkout & Orders","appDefinitionId":"1380b703-ce81-ff05-f115-39571d94dfcd","isWixTPA":true,"allowScrolling":false},"139a41fd-0b1d-975f-6f67-e8cbdf8ccc82":{"widgetUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/wixstores-client-gallery\/1.5848.0\/SliderGallery","mobileUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/wixstores-client-gallery\/1.5848.0\/SliderGallery","tpaWidgetId":"slider_gallery","appPage":{},"applicationId":10,"appDefinitionName":"Checkout & Orders","appDefinitionId":"1380b703-ce81-ff05-f115-39571d94dfcd","isWixTPA":true,"allowScrolling":false},"1380bbb4-8df0-fd38-a235-88821cf3f8a4":{"widgetUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/wixstores-client-thank-you-page-ooi\/1.3451.0\/thankYouPage","mobileUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/wixstores-client-thank-you-page-ooi\/1.3451.0\/thankYouPage","appPage":{"id":"thank_you_page","name":"Thank You Page","defaultPage":"","hidden":true,"multiInstanceEnabled":false,"order":4,"indexable":false,"fullPage":false,"landingPageInMobile":false,"hideFromMenu":false},"applicationId":10,"appDefinitionName":"Checkout & Orders","appDefinitionId":"1380b703-ce81-ff05-f115-39571d94dfcd","isWixTPA":true,"allowScrolling":false},"14e121c8-00a3-f7cc-6156-2c82a2ba8fcb":{"widgetUrl":"https:\/\/ecom.wix.com\/storefront\/order-history","mobileUrl":"https:\/\/ecom.wix.com\/storefront\/order-history","appPage":{"id":"order_history","name":"My Orders","defaultPage":"","hidden":true,"multiInstanceEnabled":false,"order":5,"indexable":false,"fullPage":false,"landingPageInMobile":false,"hideFromMenu":false},"applicationId":10,"appDefinitionName":"Checkout & Orders","appDefinitionId":"1380b703-ce81-ff05-f115-39571d94dfcd","isWixTPA":true,"allowScrolling":false},"1380bba0-253e-a800-a235-88821cf3f8a4":{"widgetUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/wixstores-client-gallery\/1.5848.0\/GridGallery","mobileUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/wixstores-client-gallery\/1.5848.0\/GridGallery","appPage":{"id":"product_gallery","name":"Shop","defaultPage":"","hidden":false,"multiInstanceEnabled":true,"order":1,"indexable":true,"fullPage":false,"landingPageInMobile":false,"hideFromMenu":false},"applicationId":10,"appDefinitionName":"Checkout & Orders","appDefinitionId":"1380b703-ce81-ff05-f115-39571d94dfcd","isWixTPA":true,"allowScrolling":false},"1380bbc4-1485-9d44-4616-92e36b1ead6b":{"widgetUrl":"https:\/\/ecom.wix.com\/storefront\/cartwidget","mobileUrl":"https:\/\/ecom.wix.com\/storefront\/cartwidget","tpaWidgetId":"shopping_cart_icon","appPage":{},"applicationId":10,"appDefinitionName":"Checkout & Orders","appDefinitionId":"1380b703-ce81-ff05-f115-39571d94dfcd","isWixTPA":true,"allowScrolling":false},"244576c9-d856-49b9-af14-216071924e3b":{"widgetUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/wixstores-client-gallery\/1.4501.0\/SearchModalGallery","mobileUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/wixstores-client-gallery\/1.4501.0\/SearchModalGallery","tpaWidgetId":"244576c9-d856-49b9-af14-216071924e3b","appPage":{},"applicationId":10,"appDefinitionName":"Checkout & Orders","appDefinitionId":"1380b703-ce81-ff05-f115-39571d94dfcd","isWixTPA":true,"allowScrolling":false},"abcd87fe-c51f-4538-848d-2902a2f50d2d":{"widgetUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/wixstores-client-gallery\/1.4501.0\/SearchResultsPageGallery","mobileUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/wixstores-client-gallery\/1.4501.0\/SearchResultsPageGallery","tpaWidgetId":"abcd87fe-c51f-4538-848d-2902a2f50d2d","appPage":{},"applicationId":10,"appDefinitionName":"Checkout & Orders","appDefinitionId":"1380b703-ce81-ff05-f115-39571d94dfcd","isWixTPA":true,"allowScrolling":false},"4425f8e8-51fb-457b-9123-fdb7b1cef94a":{"widgetUrl":"\/","tpaWidgetId":"4425f8e8-51fb-457b-9123-fdb7b1cef94a","appPage":{"id":"Payment Request Page","name":"Payment Request Page","defaultPage":"","hidden":true,"multiInstanceEnabled":false,"order":1,"indexable":true,"fullPage":false,"landingPageInMobile":true,"hideFromMenu":true},"applicationId":10,"appDefinitionName":"Checkout & Orders","appDefinitionId":"1380b703-ce81-ff05-f115-39571d94dfcd","isWixTPA":true,"allowScrolling":true},"bda15dc1-816d-4ff3-8dcb-1172d5343cce":{"widgetUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/wixstores-client-gallery\/1.5848.0\/CategoryPage","mobileUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/wixstores-client-gallery\/1.5848.0\/CategoryPage","tpaWidgetId":"bda15dc1-816d-4ff3-8dcb-1172d5343cce","appPage":{"id":"Category Page","name":"Category Page","defaultPage":"","hidden":false,"multiInstanceEnabled":true,"order":1,"indexable":true,"fullPage":false,"landingPageInMobile":false,"hideFromMenu":false},"applicationId":10,"appDefinitionName":"Checkout & Orders","appDefinitionId":"1380b703-ce81-ff05-f115-39571d94dfcd","isWixTPA":true,"allowScrolling":false},"14fd5970-8072-c276-1246-058b79e70c1a":{"widgetUrl":"https:\/\/ecom.wixapps.net\/storefront\/checkout","mobileUrl":"https:\/\/ecom.wixapps.net\/storefront\/checkout","appPage":{"id":"checkout","name":"Checkout","defaultPage":"","hidden":true,"multiInstanceEnabled":false,"order":6,"indexable":false,"fullPage":false,"landingPageInMobile":true,"hideFromMenu":true},"applicationId":10,"appDefinitionName":"Checkout & Orders","appDefinitionId":"1380b703-ce81-ff05-f115-39571d94dfcd","isWixTPA":true,"allowScrolling":true},"13ec3e79-e668-cc0c-2d48-e99d53a213dd":{"widgetUrl":"https:\/\/ecom.wix.com\/storefront\/product-widget-view","mobileUrl":"https:\/\/ecom.wix.com\/storefront\/product-widget-view","tpaWidgetId":"product_widget","appPage":{},"applicationId":10,"appDefinitionName":"Checkout & Orders","appDefinitionId":"1380b703-ce81-ff05-f115-39571d94dfcd","isWixTPA":true,"allowScrolling":false},"deaaaab0-f5bd-4b7a-a652-3845efcb546a":{"widgetUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/ecom-platform-checkout\/1.0.0\/BundleBundle","mobileUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/ecom-platform-checkout\/1.0.0\/BundleBundle","tpaWidgetId":"deaaaab0-f5bd-4b7a-a652-3845efcb546a","appPage":{},"applicationId":10,"appDefinitionName":"Checkout & Orders","appDefinitionId":"1380b703-ce81-ff05-f115-39571d94dfcd","isWixTPA":true,"allowScrolling":false},"215f8ab7-97c3-4838-a6d0-ad4a61747158":{"widgetUrl":"\/","appPage":{},"applicationId":10,"appDefinitionName":"Checkout & Orders","appDefinitionId":"1380b703-ce81-ff05-f115-39571d94dfcd","isWixTPA":true,"allowScrolling":false},"14b2d589-33e5-af98-ec53-a386bbb29a4f":{"widgetUrl":"https:\/\/statcounter.va-endpoint.com\/widget.html","mobileUrl":"https:\/\/statcounter.va-endpoint.com\/widget.html","tpaWidgetId":"visitor_analytics_stat_counter","appPage":{},"applicationId":12,"appDefinitionName":"TWIPLA Website Intelligence","appDefinitionId":"13ee53b4-2343-b641-c84d-056d2e6ed2e6","isWixTPA":false,"allowScrolling":false},"0034db53-7a4c-415f-a375-0beec4764c0f":{"widgetUrl":"\/","appPage":{},"applicationId":12,"appDefinitionName":"TWIPLA Website Intelligence","appDefinitionId":"13ee53b4-2343-b641-c84d-056d2e6ed2e6","isWixTPA":false,"allowScrolling":false},"147ce056-e1f1-42ae-8e33-95f9865d63c8":{"widgetUrl":"https:\/\/app.visitor-analytics.io\/empty_widget.html","mobileUrl":"https:\/\/app.visitor-analytics.io\/empty_widget.html","tpaWidgetId":"","appPage":{},"applicationId":12,"appDefinitionName":"TWIPLA Website Intelligence","appDefinitionId":"13ee53b4-2343-b641-c84d-056d2e6ed2e6","isWixTPA":false,"allowScrolling":false},"1303d480-69c5-d069-6fd7-4a93da37c38b":{"widgetUrl":"https:\/\/www.commoninja.com\/charts\/wix\/viewer","mobileUrl":"https:\/\/www.commoninja.com\/charts\/wix\/viewer","tpaWidgetId":"charts_ninja","appPage":{},"applicationId":13,"appDefinitionName":"Common Ninja Charts & Graphs","appDefinitionId":"12fc302b-c751-84e8-8a69-46cb05ce0b2c","isWixTPA":false,"allowScrolling":false},"f32eee9c-7a0e-4d2d-b907-53762023aba7":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":18,"appDefinitionName":"Numbers: Show Animated Stats","appDefinitionId":"5c047089-b4af-4395-bd58-139524a3da1d","isWixTPA":false,"allowScrolling":false},"c4a8a2b7-48a0-40b4-b494-6903f3e5113a":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":18,"appDefinitionName":"Numbers: Show Animated Stats","appDefinitionId":"5c047089-b4af-4395-bd58-139524a3da1d","isWixTPA":false,"allowScrolling":false},"141995eb-c700-8487-6366-a482f7432e2b":{"widgetUrl":"https:\/\/so-feed.codev.wixapps.net\/widget","mobileUrl":"https:\/\/so-feed.codev.wixapps.net\/widget","tpaWidgetId":"shoutout_feed","appPage":{},"applicationId":27,"appDefinitionName":"ShoutOut (Legacy)","appDefinitionId":"135c3d92-0fea-1f9d-2ba5-2a1dfb04297e","isWixTPA":true,"allowScrolling":false},"3f1cd43a-87ec-4b1f-b07f-8a443a683fbd":{"widgetUrl":"\/","appPage":{},"applicationId":41,"appDefinitionName":"Facebook Server Side Events","appDefinitionId":"cf06bdf3-5bab-4f20-b165-97fb723dac6a","isWixTPA":true,"allowScrolling":false},"da89e8fc-e6bc-49e2-b874-8230639269d3":{"widgetUrl":"https:\/\/www.closeby.co\/wix_embeds","mobileUrl":"https:\/\/www.closeby.co\/wix_embeds\/mobile","tpaWidgetId":"da89e8fc-e6bc-49e2-b874-8230639269d3","appPage":{"id":"Store Locator","name":"Store Locator","defaultPage":"","hidden":false,"multiInstanceEnabled":false,"order":1,"indexable":true,"fullPage":false,"landingPageInMobile":false,"hideFromMenu":false},"applicationId":42,"appDefinitionName":"Closeby - Store Locator Map","appDefinitionId":"19d00b84-644d-40cf-a21e-58da93c1211b","isWixTPA":false,"allowScrolling":false},"62b926a5-a54c-441d-8f49-48381c523406":{"widgetUrl":"\/","appPage":{},"applicationId":43,"appDefinitionName":"HubSpot by SyncSmart","appDefinitionId":"ed02abe7-222c-44f6-ae68-8901c9bd5f7e","isWixTPA":false,"allowScrolling":false},"e2bc0d55-ae43-40cf-aec1-37dc3ec2f07f":{"widgetUrl":"\/","appPage":{},"applicationId":53,"appDefinitionName":"Microsoft Clarity","appDefinitionId":"ab9894d4-6685-4565-91bf-e0c0b849728e","isWixTPA":false,"allowScrolling":false},"142bb34d-3439-576a-7118-683e690a1e0d":{"widgetUrl":"https:\/\/progallery.wixapps.net\/gallery.html","mobileUrl":"https:\/\/progallery.wixapps.net\/gallery.html","tpaWidgetId":"pro-gallery","appPage":{},"applicationId":1212,"appDefinitionName":"Wix Pro Gallery","appDefinitionId":"14271d6f-ba62-d045-549b-ab972ae1f70e","isWixTPA":true,"allowScrolling":false},"144f04b9-aab4-fde7-179b-780c11da4f46":{"widgetUrl":"https:\/\/progallery.wixapps.net\/fullscreen","mobileUrl":"https:\/\/progallery.wixapps.net\/fullscreen","appPage":{"id":"fullscreen_page","name":"Fullscreen Page","defaultPage":"","hidden":true,"multiInstanceEnabled":false,"order":1,"indexable":true,"fullPage":true,"landingPageInMobile":false,"hideFromMenu":true},"applicationId":1212,"appDefinitionName":"Wix Pro Gallery","appDefinitionId":"14271d6f-ba62-d045-549b-ab972ae1f70e","isWixTPA":true,"allowScrolling":true},"14c92de1-0e02-cbe5-98e9-c3de44d63a55":{"widgetUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/faq-ooi\/1.592.0\/FaqOoi","mobileUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/faq-ooi\/1.592.0\/FaqOoi","tpaWidgetId":"faq_widget","appPage":{},"applicationId":1531,"appDefinitionName":"Wix FAQ","appDefinitionId":"14c92d28-031e-7910-c9a8-a670011e062d","isWixTPA":true,"allowScrolling":false},"12d04441-850d-362d-cc17-e86f47fa427d":{"widgetUrl":"https:\/\/wixlabs-drive.appspot.com\/widget","mobileUrl":"https:\/\/wixlabs-drive.appspot.com\/widget","tpaWidgetId":"google_drive_share_tool","appPage":{},"applicationId":3205,"appDefinitionName":"Google Drive","appDefinitionId":"12d0391f-f7a2-9f43-153d-883f9017e252","isWixTPA":true,"allowScrolling":false},"13413a43-5f07-2918-9924-bc7506a64d36":{"widgetUrl":"https:\/\/wix-visual-data.appspot.com\/index","mobileUrl":"https:\/\/wix-visual-data.appspot.com\/mobile","tpaWidgetId":"visual_data","appPage":{},"applicationId":5520,"appDefinitionName":"Table Master","appDefinitionId":"134139f3-f2a0-2c2c-693c-ed22165cfd84","isWixTPA":true,"allowScrolling":false},"e53d6a92-5acc-4a00-9d4d-f46c86a49c2e":{"widgetUrl":"\/","appPage":{},"applicationId":7405,"appDefinitionName":"Wix Members Area","appDefinitionId":"14cc59bc-f0b7-15b8-e1c7-89ce41d0e0c9","isWixTPA":true,"allowScrolling":false},"14dd1af6-3e02-63db-0ef2-72fbc7cc3136":{"widgetUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/my-account-ooi\/1.2783.0\/MyAccount","mobileUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/my-account-ooi\/1.2783.0\/MyAccount","appPage":{"id":"member_info","name":"My Account","defaultPage":"","hidden":false,"multiInstanceEnabled":false,"order":1,"indexable":true,"fullPage":false,"landingPageInMobile":false,"hideFromMenu":false},"applicationId":8290,"appDefinitionName":"Member Account Info","appDefinitionId":"14cffd81-5215-0a7f-22f8-074b0e2401fb","isWixTPA":true,"allowScrolling":false},"14cefc05-d163-dbb7-e4ec-cd4f2c4d6ddd":{"widgetUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/profile-card-tpa-ooi\/1.2884.0\/ProfileCard","mobileUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/profile-card-tpa-ooi\/1.2884.0\/ProfileCard","tpaWidgetId":"profile","appPage":{},"applicationId":8304,"appDefinitionName":"Profile Card","appDefinitionId":"14ce28f7-7eb0-3745-22f8-074b0e2401fb","isWixTPA":true,"allowScrolling":false},"6467c15e-af3c-4e8d-b167-41bfb8efc32a":{"widgetUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/payments-my-wallet\/1.1131.0\/MyWallet","mobileUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/payments-my-wallet\/1.1131.0\/MyWallet","appPage":{"id":"my_wallet","name":"My Wallet","defaultPage":"","hidden":false,"multiInstanceEnabled":false,"order":1,"indexable":true,"fullPage":false,"landingPageInMobile":false,"hideFromMenu":false},"applicationId":8842,"appDefinitionName":"My Wallet","appDefinitionId":"4aebd0cb-fbdb-4da7-b5d1-d05660a30172","isWixTPA":true,"allowScrolling":false},"151290e1-62a2-0775-6fbc-02182fad5dec":{"widgetUrl":"https:\/\/addresses.wixapps.net\/addresses\/address-book","mobileUrl":"https:\/\/addresses.wixapps.net\/addresses\/address-book","appPage":{"id":"my_addresses","name":"My Addresses","defaultPage":"","hidden":false,"multiInstanceEnabled":false,"order":1,"indexable":true,"fullPage":false,"landingPageInMobile":false,"hideFromMenu":false},"applicationId":9305,"appDefinitionName":"My Addresses","appDefinitionId":"1505b775-e885-eb1b-b665-1e485d9bf90e","isWixTPA":true,"allowScrolling":false},"b29db04a-a8f2-4bfe-bbad-21c99c1054b5":{"widgetUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/subscriptions-tpa\/1.1199.0\/MySubscriptions","mobileUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/subscriptions-tpa\/1.1199.0\/MySubscriptions","tpaWidgetId":"","appPage":{"id":"My Subscriptions","name":"My Subscriptions","defaultPage":"","hidden":false,"multiInstanceEnabled":false,"order":1,"indexable":true,"fullPage":false,"landingPageInMobile":false,"hideFromMenu":false},"applicationId":10442,"appDefinitionName":"My Subscriptions","appDefinitionId":"2bef2abe-7abe-43da-889c-53c1500a328c","isWixTPA":true,"allowScrolling":false},"14517f3f-ffc5-eced-f592-980aaa0bbb5c":{"widgetUrl":"https:\/\/engage.wixapps.net\/chat-widget-server\/renderChatWidget\/index","tpaWidgetId":"wix_visitors","appPage":{},"applicationId":12939,"appDefinitionName":"Wix Chat","appDefinitionId":"14517e1a-3ff0-af98-408e-2bd6953c36a2","isWixTPA":true,"allowScrolling":false},"ea40bb32-ddfc-4f68-a163-477bd0e97c8e":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":14292,"appDefinitionName":"Wix Blog","appDefinitionId":"14bcded7-0066-7c35-14d7-466cb3f09103","isWixTPA":true,"allowScrolling":false},"14f260f9-c2eb-50e8-9b3c-4d21861fe58f":{"widgetUrl":"https:\/\/social-blog.wix.com\/member-comments-page","mobileUrl":"https:\/\/social-blog.wix.com\/member-comments-page","appPage":{"id":"member-comments-page","name":"Blog Comments ","defaultPage":"","hidden":true,"multiInstanceEnabled":false,"order":3,"indexable":false,"fullPage":false,"landingPageInMobile":false,"hideFromMenu":true},"applicationId":14292,"appDefinitionName":"Wix Blog","appDefinitionId":"14bcded7-0066-7c35-14d7-466cb3f09103","isWixTPA":true,"allowScrolling":false},"6e2b3a80-dc83-4ce3-adc2-82ce48ff2ed6":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":14292,"appDefinitionName":"Wix Blog","appDefinitionId":"14bcded7-0066-7c35-14d7-466cb3f09103","isWixTPA":true,"allowScrolling":false},"14e5b36b-e545-88a0-1475-2487df7e9206":{"widgetUrl":"https:\/\/social-blog.wix.com\/recent-posts-widget","mobileUrl":"https:\/\/social-blog.wix.com\/recent-posts-widget","tpaWidgetId":"recent-posts-widget","appPage":{},"applicationId":14292,"appDefinitionName":"Wix Blog","appDefinitionId":"14bcded7-0066-7c35-14d7-466cb3f09103","isWixTPA":true,"allowScrolling":false},"14c1462a-97f2-9f6a-7bb7-f5541f23caa6":{"widgetUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/communities-blog-ooi\/1.3114.0\/Blog","mobileUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/communities-blog-ooi\/1.3114.0\/Blog","appPage":{"id":"blog","name":"Blog","defaultPage":"","hidden":false,"multiInstanceEnabled":false,"order":1,"indexable":true,"fullPage":false,"landingPageInMobile":false,"hideFromMenu":false},"applicationId":14292,"appDefinitionName":"Wix Blog","appDefinitionId":"14bcded7-0066-7c35-14d7-466cb3f09103","isWixTPA":true,"allowScrolling":false},"5fdc6c03-080d-4872-b567-24146c82fae5":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":14292,"appDefinitionName":"Wix Blog","appDefinitionId":"14bcded7-0066-7c35-14d7-466cb3f09103","isWixTPA":true,"allowScrolling":false},"7183995a-bf0b-4a2f-a9b4-a1b7ef96b6fa":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":14292,"appDefinitionName":"Wix Blog","appDefinitionId":"14bcded7-0066-7c35-14d7-466cb3f09103","isWixTPA":true,"allowScrolling":false},"ff5bffc0-5d09-4b31-b140-be6d8ffa2c03":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":14292,"appDefinitionName":"Wix Blog","appDefinitionId":"14bcded7-0066-7c35-14d7-466cb3f09103","isWixTPA":true,"allowScrolling":false},"2d4ed2d3-75f8-4942-9787-71e3d182e256":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":14292,"appDefinitionName":"Wix Blog","appDefinitionId":"14bcded7-0066-7c35-14d7-466cb3f09103","isWixTPA":true,"allowScrolling":false},"46a9e991-c1cc-47c9-b19a-e99d3be1e2c9":{"widgetUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/communities-blog-ooi\/1.3114.0\/RelatedPosts","mobileUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/communities-blog-ooi\/1.3114.0\/RelatedPosts","tpaWidgetId":"46a9e991-c1cc-47c9-b19a-e99d3be1e2c9","appPage":{},"applicationId":14292,"appDefinitionName":"Wix Blog","appDefinitionId":"14bcded7-0066-7c35-14d7-466cb3f09103","isWixTPA":true,"allowScrolling":false},"a0d7808c-0d7d-4a40-8cf0-911a9f0de96f":{"widgetUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/communities-blog-ooi\/1.3114.0\/CategoryMenu","mobileUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/communities-blog-ooi\/1.3114.0\/CategoryMenu","tpaWidgetId":"a0d7808c-0d7d-4a40-8cf0-911a9f0de96f","appPage":{},"applicationId":14292,"appDefinitionName":"Wix Blog","appDefinitionId":"14bcded7-0066-7c35-14d7-466cb3f09103","isWixTPA":true,"allowScrolling":false},"5940091f-797c-4e86-9c57-73fcfd87425f":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":14292,"appDefinitionName":"Wix Blog","appDefinitionId":"14bcded7-0066-7c35-14d7-466cb3f09103","isWixTPA":true,"allowScrolling":false},"e5520a99-1725-4b88-a85f-c439916890c8":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":14292,"appDefinitionName":"Wix Blog","appDefinitionId":"14bcded7-0066-7c35-14d7-466cb3f09103","isWixTPA":true,"allowScrolling":false},"1b5b448c-a39f-4515-9445-c6b4ceace1c2":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":14292,"appDefinitionName":"Wix Blog","appDefinitionId":"14bcded7-0066-7c35-14d7-466cb3f09103","isWixTPA":true,"allowScrolling":false},"68a2d745-328b-475d-9e36-661f678daa31":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":14292,"appDefinitionName":"Wix Blog","appDefinitionId":"14bcded7-0066-7c35-14d7-466cb3f09103","isWixTPA":true,"allowScrolling":false},"5e123a45-f3aa-4157-a47a-e58d8cb246eb":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":14292,"appDefinitionName":"Wix Blog","appDefinitionId":"14bcded7-0066-7c35-14d7-466cb3f09103","isWixTPA":true,"allowScrolling":false},"c0a125b8-2311-451e-99c5-89b6bba02b22":{"widgetUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/communities-blog-ooi\/1.3114.0\/TagCloud","mobileUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/communities-blog-ooi\/1.3114.0\/TagCloud","tpaWidgetId":"c0a125b8-2311-451e-99c5-89b6bba02b22","appPage":{},"applicationId":14292,"appDefinitionName":"Wix Blog","appDefinitionId":"14bcded7-0066-7c35-14d7-466cb3f09103","isWixTPA":true,"allowScrolling":false},"b27ea74b-1c6f-4bdb-bda7-8242323ba20b":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":14292,"appDefinitionName":"Wix Blog","appDefinitionId":"14bcded7-0066-7c35-14d7-466cb3f09103","isWixTPA":true,"allowScrolling":false},"25ab36f9-f8bd-4799-a887-f10b6822fc2e":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":14292,"appDefinitionName":"Wix Blog","appDefinitionId":"14bcded7-0066-7c35-14d7-466cb3f09103","isWixTPA":true,"allowScrolling":false},"14f26109-514f-f9a8-9b3c-4d21861fe58f":{"widgetUrl":"https:\/\/social-blog.wix.com\/member-likes-page","mobileUrl":"https:\/\/social-blog.wix.com\/member-likes-page","appPage":{"id":"member-likes-page","name":"Blog Likes","defaultPage":"","hidden":true,"multiInstanceEnabled":false,"order":4,"indexable":false,"fullPage":false,"landingPageInMobile":false,"hideFromMenu":true},"applicationId":14292,"appDefinitionName":"Wix Blog","appDefinitionId":"14bcded7-0066-7c35-14d7-466cb3f09103","isWixTPA":true,"allowScrolling":false},"76359954-edd4-4c46-ad14-a7c5e65cc30c":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":14292,"appDefinitionName":"Wix Blog","appDefinitionId":"14bcded7-0066-7c35-14d7-466cb3f09103","isWixTPA":true,"allowScrolling":false},"14e5b39b-6d47-99c3-3ee5-cee1c2574c89":{"widgetUrl":"https:\/\/social-blog.wix.com\/custom-feed-widget","mobileUrl":"https:\/\/social-blog.wix.com\/custom-feed-widget","tpaWidgetId":"custom-feed-widget","appPage":{},"applicationId":14292,"appDefinitionName":"Wix Blog","appDefinitionId":"14bcded7-0066-7c35-14d7-466cb3f09103","isWixTPA":true,"allowScrolling":false},"26858b64-aad8-42ab-8c63-f19009198c7b":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":14292,"appDefinitionName":"Wix Blog","appDefinitionId":"14bcded7-0066-7c35-14d7-466cb3f09103","isWixTPA":true,"allowScrolling":false},"129259f6-06e4-42a3-9877-81a1fa9de95c":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":14292,"appDefinitionName":"Wix Blog","appDefinitionId":"14bcded7-0066-7c35-14d7-466cb3f09103","isWixTPA":true,"allowScrolling":false},"d134b0c9-8085-415a-9479-b555374ba958":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":14292,"appDefinitionName":"Wix Blog","appDefinitionId":"14bcded7-0066-7c35-14d7-466cb3f09103","isWixTPA":true,"allowScrolling":false},"1515a9e7-b579-fbbb-43fc-0e3051c14803":{"widgetUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/communities-blog-ooi\/1.3114.0\/RssButton","mobileUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/communities-blog-ooi\/1.3114.0\/RssButton","tpaWidgetId":"rss-feed-widget","appPage":{},"applicationId":14292,"appDefinitionName":"Wix Blog","appDefinitionId":"14bcded7-0066-7c35-14d7-466cb3f09103","isWixTPA":true,"allowScrolling":false},"2f3d2c69-2bc4-4519-bd72-0a63dd92577f":{"widgetUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/communities-blog-ooi\/1.3114.0\/Archive","mobileUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/communities-blog-ooi\/1.3114.0\/Archive","tpaWidgetId":"2f3d2c69-2bc4-4519-bd72-0a63dd92577f","appPage":{},"applicationId":14292,"appDefinitionName":"Wix Blog","appDefinitionId":"14bcded7-0066-7c35-14d7-466cb3f09103","isWixTPA":true,"allowScrolling":false},"75eefde7-6159-4e4c-aafd-2aaf5a27ebbd":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":14292,"appDefinitionName":"Wix Blog","appDefinitionId":"14bcded7-0066-7c35-14d7-466cb3f09103","isWixTPA":true,"allowScrolling":false},"211b5287-14e2-4690-bb71-525908938c81":{"widgetUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/communities-blog-ooi\/1.3114.0\/Post","mobileUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/communities-blog-ooi\/1.3114.0\/Post","appPage":{"id":"post","name":"Post","defaultPage":"","hidden":true,"multiInstanceEnabled":false,"order":6,"indexable":true,"fullPage":false,"landingPageInMobile":false,"hideFromMenu":false},"applicationId":14292,"appDefinitionName":"Wix Blog","appDefinitionId":"14bcded7-0066-7c35-14d7-466cb3f09103","isWixTPA":true,"allowScrolling":false},"478911c3-de0c-469e-90e3-304f2f8cd6a7":{"widgetUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/communities-blog-ooi\/1.3114.0\/PostTitle","mobileUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/communities-blog-ooi\/1.3114.0\/PostTitle","tpaWidgetId":"478911c3-de0c-469e-90e3-304f2f8cd6a7","appPage":{},"applicationId":14292,"appDefinitionName":"Wix Blog","appDefinitionId":"14bcded7-0066-7c35-14d7-466cb3f09103","isWixTPA":true,"allowScrolling":false},"f43a5e97-d70d-4906-a56e-45fdfc0f5bb7":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":14292,"appDefinitionName":"Wix Blog","appDefinitionId":"14bcded7-0066-7c35-14d7-466cb3f09103","isWixTPA":true,"allowScrolling":false},"ce8e832b-c34f-4b80-b2a6-6cfd6d573751":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":14292,"appDefinitionName":"Wix Blog","appDefinitionId":"14bcded7-0066-7c35-14d7-466cb3f09103","isWixTPA":true,"allowScrolling":false},"0cc51cdc-4a4f-4054-9284-6cfb0dc5a22a":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":14292,"appDefinitionName":"Wix Blog","appDefinitionId":"14bcded7-0066-7c35-14d7-466cb3f09103","isWixTPA":true,"allowScrolling":false},"813eb645-c6bd-4870-906d-694f30869fd9":{"widgetUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/communities-blog-ooi\/1.3114.0\/PostList","mobileUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/communities-blog-ooi\/1.3114.0\/PostList","tpaWidgetId":"813eb645-c6bd-4870-906d-694f30869fd9","appPage":{},"applicationId":14292,"appDefinitionName":"Wix Blog","appDefinitionId":"14bcded7-0066-7c35-14d7-466cb3f09103","isWixTPA":true,"allowScrolling":false},"bc7fa914-015b-4c32-a323-e5472563a798":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":14292,"appDefinitionName":"Wix Blog","appDefinitionId":"14bcded7-0066-7c35-14d7-466cb3f09103","isWixTPA":true,"allowScrolling":false},"7466726a-84cf-41c8-be6b-1694445dc539":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":14292,"appDefinitionName":"Wix Blog","appDefinitionId":"14bcded7-0066-7c35-14d7-466cb3f09103","isWixTPA":true,"allowScrolling":false},"14f260e4-ea13-f861-b0ba-4577df99b961":{"widgetUrl":"https:\/\/social-blog.wix.com\/member-drafts-page","mobileUrl":"https:\/\/social-blog.wix.com\/member-drafts-page","appPage":{"id":"member-drafts-page","name":"My Drafts","defaultPage":"","hidden":true,"multiInstanceEnabled":false,"order":2,"indexable":false,"fullPage":false,"landingPageInMobile":false,"hideFromMenu":true},"applicationId":14292,"appDefinitionName":"Wix Blog","appDefinitionId":"14bcded7-0066-7c35-14d7-466cb3f09103","isWixTPA":true,"allowScrolling":false},"091d05b7-f44d-4a76-9163-0c7ed5312769":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":14292,"appDefinitionName":"Wix Blog","appDefinitionId":"14bcded7-0066-7c35-14d7-466cb3f09103","isWixTPA":true,"allowScrolling":false},"763aa9a8-0531-426f-a4b1-61a7291ce292":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":14292,"appDefinitionName":"Wix Blog","appDefinitionId":"14bcded7-0066-7c35-14d7-466cb3f09103","isWixTPA":true,"allowScrolling":false},"e5a2773b-0e6b-4cbb-a012-3b4a69e92046":{"widgetUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/communities-blog-ooi\/1.3114.0\/MyPosts","mobileUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/communities-blog-ooi\/1.3114.0\/MyPosts","tpaWidgetId":"e5a2773b-0e6b-4cbb-a012-3b4a69e92046","appPage":{"id":"My Posts","name":"My Posts","defaultPage":"","hidden":true,"multiInstanceEnabled":false,"order":1,"indexable":true,"fullPage":false,"landingPageInMobile":false,"hideFromMenu":false},"applicationId":14292,"appDefinitionName":"Wix Blog","appDefinitionId":"14bcded7-0066-7c35-14d7-466cb3f09103","isWixTPA":true,"allowScrolling":false},"14f26118-b65b-b1c1-b6db-34d5da9dd623":{"widgetUrl":"https:\/\/social-blog.wix.com\/member-posts-page","mobileUrl":"https:\/\/social-blog.wix.com\/member-posts-page","appPage":{"id":"member-posts-page","name":"Blog Posts","defaultPage":"","hidden":true,"multiInstanceEnabled":false,"order":5,"indexable":false,"fullPage":false,"landingPageInMobile":false,"hideFromMenu":true},"applicationId":14292,"appDefinitionName":"Wix Blog","appDefinitionId":"14bcded7-0066-7c35-14d7-466cb3f09103","isWixTPA":true,"allowScrolling":false},"44c66af6-4d25-485a-ad9d-385f5460deef":{"widgetUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/search-app\/1.3961.0\/SearchResults","mobileUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/search-app\/1.3961.0\/SearchResults","appPage":{"id":"search_results","name":"Search Results","defaultPage":"","hidden":false,"multiInstanceEnabled":false,"order":1,"indexable":true,"fullPage":false,"landingPageInMobile":false,"hideFromMenu":false},"applicationId":14737,"appDefinitionName":"Wix Site Search","appDefinitionId":"1484cb44-49cd-5b39-9681-75188ab429de","isWixTPA":true,"allowScrolling":false},"04462ba4-2137-41bd-9460-0814554aae07":{"widgetUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/members-area-notifications-preferences\/1.63.0\/PreferencesOoi","mobileUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/members-area-notifications-preferences\/1.63.0\/PreferencesOoi","tpaWidgetId":"04462ba4-2137-41bd-9460-0814554aae07","appPage":{"id":"Settings","name":"Settings","defaultPage":"","hidden":false,"multiInstanceEnabled":false,"order":1,"indexable":true,"fullPage":false,"landingPageInMobile":false,"hideFromMenu":false},"applicationId":15464,"appDefinitionName":"Members Notifications Settings","appDefinitionId":"14f25dc5-6af3-5420-9568-f9c5ed98c9b1","isWixTPA":true,"allowScrolling":false},"14f25dd2-f9b0-edc2-f38e-eded5da094aa":{"widgetUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/members-area-notifications-preferences\/1.63.0\/PreferencesOoi","mobileUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/members-area-notifications-preferences\/1.63.0\/PreferencesOoi","appPage":{"id":"settings","name":"Settings","defaultPage":"","hidden":false,"multiInstanceEnabled":false,"order":1,"indexable":false,"fullPage":false,"landingPageInMobile":false,"hideFromMenu":false},"applicationId":15464,"appDefinitionName":"Members Notifications Settings","appDefinitionId":"14f25dc5-6af3-5420-9568-f9c5ed98c9b1","isWixTPA":true,"allowScrolling":false},"14dbefb9-3b7b-c4e9-53e8-766defd30587":{"widgetUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/members-about-ooi\/1.2643.0\/Profile","mobileUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/members-about-ooi\/1.2643.0\/Profile","appPage":{"id":"about","name":"Profile","defaultPage":"","hidden":false,"multiInstanceEnabled":false,"order":1,"indexable":false,"fullPage":false,"landingPageInMobile":false,"hideFromMenu":false},"applicationId":15673,"appDefinitionName":"Members About","appDefinitionId":"14dbef06-cc42-5583-32a7-3abd44da4908","isWixTPA":true,"allowScrolling":false},"14f2595a-a352-3ff1-9b3c-4d21861fe58f":{"widgetUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/members-area-notifications\/1.134.0\/OoiNotifications","mobileUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/members-area-notifications\/1.134.0\/OoiNotifications","appPage":{"id":"notifications_app","name":"Notifications","defaultPage":"","hidden":false,"multiInstanceEnabled":false,"order":1,"indexable":false,"fullPage":false,"landingPageInMobile":false,"hideFromMenu":false},"applicationId":15747,"appDefinitionName":"Wix Members Area Notifications","appDefinitionId":"14f25924-5664-31b2-9568-f9c5ed98c9b1","isWixTPA":true,"allowScrolling":false},"6ca9273a-a775-407c-87e1-9685588c9aa7":{"widgetUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/members-area-notifications\/1.134.0\/OoiNotifications","mobileUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/members-area-notifications\/1.134.0\/OoiNotifications","tpaWidgetId":"6ca9273a-a775-407c-87e1-9685588c9aa7","appPage":{"id":"Notifications","name":"Notifications","defaultPage":"","hidden":false,"multiInstanceEnabled":false,"order":1,"indexable":true,"fullPage":false,"landingPageInMobile":false,"hideFromMenu":false},"applicationId":15747,"appDefinitionName":"Wix Members Area Notifications","appDefinitionId":"14f25924-5664-31b2-9568-f9c5ed98c9b1","isWixTPA":true,"allowScrolling":false},"47a7e7bb-f412-4093-9155-1ff5adbc4dae":{"widgetUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/social-groups-ooi\/5.780.0\/SideBySide","mobileUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/social-groups-ooi\/5.780.0\/SideBySide","tpaWidgetId":"47a7e7bb-f412-4093-9155-1ff5adbc4dae","appPage":{},"applicationId":16214,"appDefinitionName":"Wix Groups","appDefinitionId":"148c2287-c669-d849-d153-463c7486a694","isWixTPA":true,"allowScrolling":false},"0a9f687f-7e00-4576-a8e1-9415844b8f44":{"widgetUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/social-groups-ooi\/5.780.0\/GroupsListWidget","mobileUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/social-groups-ooi\/5.780.0\/GroupsListWidget","tpaWidgetId":"0a9f687f-7e00-4576-a8e1-9415844b8f44","appPage":{},"applicationId":16214,"appDefinitionName":"Wix Groups","appDefinitionId":"148c2287-c669-d849-d153-463c7486a694","isWixTPA":true,"allowScrolling":false},"8cce2b9e-8549-46c7-8ad2-f75bf28534ac":{"widgetUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/social-groups-ooi\/5.780.0\/FeedWidget","mobileUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/social-groups-ooi\/5.780.0\/FeedWidget","tpaWidgetId":"8cce2b9e-8549-46c7-8ad2-f75bf28534ac","appPage":{},"applicationId":16214,"appDefinitionName":"Wix Groups","appDefinitionId":"148c2287-c669-d849-d153-463c7486a694","isWixTPA":true,"allowScrolling":false},"a7dcdfcb-8abd-4008-af19-fed5fcd12b40":{"widgetUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/social-groups-ooi\/5.780.0\/Groups","mobileUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/social-groups-ooi\/5.780.0\/Groups","appPage":{"id":"groups","name":"Groups","defaultPage":"","hidden":false,"multiInstanceEnabled":false,"order":1,"indexable":true,"fullPage":false,"landingPageInMobile":false,"hideFromMenu":false},"applicationId":16214,"appDefinitionName":"Wix Groups","appDefinitionId":"148c2287-c669-d849-d153-463c7486a694","isWixTPA":true,"allowScrolling":false},"83b2af08-c021-40c8-a3a5-b329a959ec2b":{"widgetUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/social-groups-ooi\/5.780.0\/GroupsListWidget","mobileUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/social-groups-ooi\/5.780.0\/GroupsListWidget","tpaWidgetId":"83b2af08-c021-40c8-a3a5-b329a959ec2b","appPage":{},"applicationId":16214,"appDefinitionName":"Wix Groups","appDefinitionId":"148c2287-c669-d849-d153-463c7486a694","isWixTPA":true,"allowScrolling":false},"e018cc55-7b1c-4500-a2e5-969f22c8a33a":{"widgetUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/social-groups-ooi\/5.780.0\/MembersAreaGroups","mobileUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/social-groups-ooi\/5.780.0\/MembersAreaGroups","tpaWidgetId":"e018cc55-7b1c-4500-a2e5-969f22c8a33a","appPage":{"id":"My Groups","name":"My Groups","defaultPage":"","hidden":true,"multiInstanceEnabled":false,"order":1,"indexable":true,"fullPage":false,"landingPageInMobile":false,"hideFromMenu":false},"applicationId":16214,"appDefinitionName":"Wix Groups","appDefinitionId":"148c2287-c669-d849-d153-463c7486a694","isWixTPA":true,"allowScrolling":false},"513a5d84-3ebb-4ca6-a5aa-83effd2123b9":{"widgetUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/social-groups-ooi\/5.780.0\/Group","mobileUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/social-groups-ooi\/5.780.0\/Group","appPage":{"id":"group","name":"Group","defaultPage":"","hidden":true,"multiInstanceEnabled":false,"order":2,"indexable":true,"fullPage":false,"landingPageInMobile":false,"hideFromMenu":false},"applicationId":16214,"appDefinitionName":"Wix Groups","appDefinitionId":"148c2287-c669-d849-d153-463c7486a694","isWixTPA":true,"allowScrolling":false},"cee9250f-6d1b-4792-9c89-92ad9331a14c":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":18934,"appDefinitionName":"Wix Portfolio","appDefinitionId":"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130","isWixTPA":true,"allowScrolling":false},"2aab0194-002b-49b0-96b0-14023fe80a51":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":18934,"appDefinitionName":"Wix Portfolio","appDefinitionId":"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130","isWixTPA":true,"allowScrolling":false},"0c69860e-22af-4e7d-afb5-8688f8a62810":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":18934,"appDefinitionName":"Wix Portfolio","appDefinitionId":"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130","isWixTPA":true,"allowScrolling":false},"d6c045f0-5d83-4c6c-845e-9059ca159990":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":18934,"appDefinitionName":"Wix Portfolio","appDefinitionId":"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130","isWixTPA":true,"allowScrolling":false},"a9d4e3aa-646a-4318-8cd1-142bf9dcbcc6":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":18934,"appDefinitionName":"Wix Portfolio","appDefinitionId":"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130","isWixTPA":true,"allowScrolling":false},"19c2c23c-bee0-46d5-89a8-aa218df193c9":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":18934,"appDefinitionName":"Wix Portfolio","appDefinitionId":"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130","isWixTPA":true,"allowScrolling":false},"dce5b630-279d-48fe-ad36-d4689446f8b8":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":18934,"appDefinitionName":"Wix Portfolio","appDefinitionId":"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130","isWixTPA":true,"allowScrolling":false},"dafd3feb-14fb-4e16-af79-43fa6e7757d6":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":18934,"appDefinitionName":"Wix Portfolio","appDefinitionId":"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130","isWixTPA":true,"allowScrolling":false},"8170e65e-9571-4936-8d8c-87b20e86983e":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":18934,"appDefinitionName":"Wix Portfolio","appDefinitionId":"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130","isWixTPA":true,"allowScrolling":false},"e0a0078d-0b7b-448b-8286-634343625929":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":18934,"appDefinitionName":"Wix Portfolio","appDefinitionId":"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130","isWixTPA":true,"allowScrolling":false},"90e98c69-d7e4-4735-ae70-8f865f447492":{"widgetUrl":"\/","appPage":{},"applicationId":18934,"appDefinitionName":"Wix Portfolio","appDefinitionId":"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130","isWixTPA":true,"allowScrolling":false},"5801308f-1c6e-484c-afaa-f5f002a0f05a":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":18934,"appDefinitionName":"Wix Portfolio","appDefinitionId":"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130","isWixTPA":true,"allowScrolling":false},"dcb496ce-09a9-4ad8-b376-8b95516767e4":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":18934,"appDefinitionName":"Wix Portfolio","appDefinitionId":"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130","isWixTPA":true,"allowScrolling":false},"a0ad8ad7-c3d5-49d1-afd4-21d5bd73e727":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":18934,"appDefinitionName":"Wix Portfolio","appDefinitionId":"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130","isWixTPA":true,"allowScrolling":false},"d88f5910-8e5f-430d-9a33-ead698c6a601":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":18934,"appDefinitionName":"Wix Portfolio","appDefinitionId":"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130","isWixTPA":true,"allowScrolling":false},"3f41d62e-4f48-4ba5-a2f4-54cc7b6a412f":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":18934,"appDefinitionName":"Wix Portfolio","appDefinitionId":"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130","isWixTPA":true,"allowScrolling":false},"18c27451-20c4-4b32-817a-cec90ef4cf6a":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":18934,"appDefinitionName":"Wix Portfolio","appDefinitionId":"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130","isWixTPA":true,"allowScrolling":false},"94473845-b8a0-44cb-9b46-3be017b18139":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":18934,"appDefinitionName":"Wix Portfolio","appDefinitionId":"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130","isWixTPA":true,"allowScrolling":false},"83f9f884-6bc1-40fe-9507-0caf491eb30a":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":18934,"appDefinitionName":"Wix Portfolio","appDefinitionId":"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130","isWixTPA":true,"allowScrolling":false},"21044b85-8044-4a6a-9f6e-b60b6b8b8240":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":18934,"appDefinitionName":"Wix Portfolio","appDefinitionId":"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130","isWixTPA":true,"allowScrolling":false},"e824d6ec-80ef-42ea-bb34-a345716451c6":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":18934,"appDefinitionName":"Wix Portfolio","appDefinitionId":"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130","isWixTPA":true,"allowScrolling":false},"85ed03d7-7cab-44cf-b261-956cf77078d7":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":18934,"appDefinitionName":"Wix Portfolio","appDefinitionId":"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130","isWixTPA":true,"allowScrolling":false},"c6a5ef1c-92b9-4523-b0cf-f5f86e18b63f":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":18934,"appDefinitionName":"Wix Portfolio","appDefinitionId":"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130","isWixTPA":true,"allowScrolling":false},"34f0a4f4-6ffe-4e9b-a144-0ad7c1ab8c80":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":18934,"appDefinitionName":"Wix Portfolio","appDefinitionId":"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130","isWixTPA":true,"allowScrolling":false},"54160040-d8c6-47a0-b9cb-2023c59e5f72":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":18934,"appDefinitionName":"Wix Portfolio","appDefinitionId":"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130","isWixTPA":true,"allowScrolling":false},"60c9bfbb-a162-45a3-a1f3-66fea3e3e4ed":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":18934,"appDefinitionName":"Wix Portfolio","appDefinitionId":"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130","isWixTPA":true,"allowScrolling":false},"8a95c2ad-d49b-4a5c-8b7d-5a90a2e5cd18":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":18934,"appDefinitionName":"Wix Portfolio","appDefinitionId":"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130","isWixTPA":true,"allowScrolling":false},"94749934-1639-4306-84db-7149978a0562":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":18934,"appDefinitionName":"Wix Portfolio","appDefinitionId":"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130","isWixTPA":true,"allowScrolling":false},"e90b63c1-7f1b-48c5-b046-391f2478d2aa":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":18934,"appDefinitionName":"Wix Portfolio","appDefinitionId":"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130","isWixTPA":true,"allowScrolling":false},"7ba61b91-d50d-4b14-ab40-0e5e9220919c":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":18934,"appDefinitionName":"Wix Portfolio","appDefinitionId":"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130","isWixTPA":true,"allowScrolling":false},"7286ccdf-e28c-4ad8-a243-f90d09949ca3":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":18934,"appDefinitionName":"Wix Portfolio","appDefinitionId":"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130","isWixTPA":true,"allowScrolling":false},"830c75f8-dbe6-4bf9-bc08-7e39828a6301":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":18934,"appDefinitionName":"Wix Portfolio","appDefinitionId":"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130","isWixTPA":true,"allowScrolling":false},"cb811972-44c1-44b5-8fc9-c9508659c54e":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":18934,"appDefinitionName":"Wix Portfolio","appDefinitionId":"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130","isWixTPA":true,"allowScrolling":false},"ec526bfa-27bd-40a7-80c5-2deabcbaf204":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":18934,"appDefinitionName":"Wix Portfolio","appDefinitionId":"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130","isWixTPA":true,"allowScrolling":false},"c5a464fa-7892-47d5-b23e-f11e9ac1d694":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":18934,"appDefinitionName":"Wix Portfolio","appDefinitionId":"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130","isWixTPA":true,"allowScrolling":false},"c6b2e7c1-46ed-4cc5-8dbd-50ddb1b1e9ad":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":18934,"appDefinitionName":"Wix Portfolio","appDefinitionId":"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130","isWixTPA":true,"allowScrolling":false},"5ec17c5e-c01b-4d4f-9ffe-ab6282146654":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":18934,"appDefinitionName":"Wix Portfolio","appDefinitionId":"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130","isWixTPA":true,"allowScrolling":false},"ceecd61c-3aec-4639-b32c-cbfe1400e819":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":18934,"appDefinitionName":"Wix Portfolio","appDefinitionId":"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130","isWixTPA":true,"allowScrolling":false},"e86110ad-890a-4b7a-abe3-6e8dc8bb15cf":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":18934,"appDefinitionName":"Wix Portfolio","appDefinitionId":"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130","isWixTPA":true,"allowScrolling":false},"437cf52e-f57d-449e-af48-96791677e471":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":18934,"appDefinitionName":"Wix Portfolio","appDefinitionId":"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130","isWixTPA":true,"allowScrolling":false},"ccd857ff-153e-452c-8cea-3f3a8aafeb86":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":18934,"appDefinitionName":"Wix Portfolio","appDefinitionId":"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130","isWixTPA":true,"allowScrolling":false},"43ae5824-a10b-4baf-9584-775920339ec7":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":18934,"appDefinitionName":"Wix Portfolio","appDefinitionId":"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130","isWixTPA":true,"allowScrolling":false},"43f58330-cdf6-4381-b1f4-e0d571533f51":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":18934,"appDefinitionName":"Wix Portfolio","appDefinitionId":"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130","isWixTPA":true,"allowScrolling":false},"1a280e59-fe91-46e5-9a08-66000a7becbe":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":18934,"appDefinitionName":"Wix Portfolio","appDefinitionId":"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130","isWixTPA":true,"allowScrolling":false},"26616003-ec67-46bf-93f3-eb1c1476a581":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":18934,"appDefinitionName":"Wix Portfolio","appDefinitionId":"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130","isWixTPA":true,"allowScrolling":false},"aa86b56d-3c49-44fd-9976-963695e7815d":{"widgetUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/ricos-viewer-ooi\/10.126.11\/ricosviewer","mobileUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/ricos-viewer-ooi\/10.126.11\/ricosviewer","tpaWidgetId":"","appPage":{},"applicationId":19263,"appDefinitionName":"ricos-viewer-ooi","appDefinitionId":"949cfcc9-2a3f-4a96-bd6c-11d9d82763a4","isWixTPA":true,"allowScrolling":false},"136089b1-dac6-af6f-aa6e-bddf74b577ff":{"widgetUrl":"https:\/\/app-two.rolloverfx.com\/widget","mobileUrl":"https:\/\/app-two.rolloverfx.com\/widget","tpaWidgetId":"rollover","appPage":{},"applicationId":21242,"appDefinitionName":"Rollover Image Effects","appDefinitionId":"1360889d-0155-11cf-7146-19284f5addc2","isWixTPA":false,"allowScrolling":false},"c7fddce1-ebf5-46b0-a309-7865384ba63f":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":22329,"appDefinitionName":"Wix Bookings","appDefinitionId":"13d21c63-b5ec-5912-8397-c3a5ddb27a97","isWixTPA":true,"allowScrolling":false},"169204d8-21be-4b45-b263-a997d31723dc":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":22329,"appDefinitionName":"Wix Bookings","appDefinitionId":"13d21c63-b5ec-5912-8397-c3a5ddb27a97","isWixTPA":true,"allowScrolling":false},"a91a0543-d4bd-4e6b-b315-9410aa27bcde":{"widgetUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/bookings-service-details-widget\/1.3436.0\/BookingServicePage","mobileUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/bookings-service-details-widget\/1.3436.0\/BookingServicePage","appPage":{"id":"Booking Service Page","name":"Service Page","defaultPage":"","hidden":true,"multiInstanceEnabled":false,"order":1,"indexable":true,"fullPage":false,"landingPageInMobile":false,"hideFromMenu":false},"applicationId":22329,"appDefinitionName":"Wix Bookings","appDefinitionId":"13d21c63-b5ec-5912-8397-c3a5ddb27a97","isWixTPA":true,"allowScrolling":false},"3c675d25-41c7-437e-b13d-d0f99328e347":{"widgetUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/bookings-calendar-widget\/1.3539.0\/WeeklyTimetable","mobileUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/bookings-calendar-widget\/1.3539.0\/WeeklyTimetable","tpaWidgetId":"3c675d25-41c7-437e-b13d-d0f99328e347","appPage":{},"applicationId":22329,"appDefinitionName":"Wix Bookings","appDefinitionId":"13d21c63-b5ec-5912-8397-c3a5ddb27a97","isWixTPA":true,"allowScrolling":false},"14edb332-fdb9-2fe6-0fd1-e6293322b83b":{"widgetUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/bookings-my-bookings-widget\/1.638.0\/MyBookings","mobileUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/bookings-my-bookings-widget\/1.638.0\/MyBookings","appPage":{"id":"bookings_member_area","name":"My Bookings","defaultPage":"","hidden":true,"multiInstanceEnabled":false,"order":2,"indexable":true,"fullPage":false,"landingPageInMobile":false,"hideFromMenu":false},"applicationId":22329,"appDefinitionName":"Wix Bookings","appDefinitionId":"13d21c63-b5ec-5912-8397-c3a5ddb27a97","isWixTPA":true,"allowScrolling":false},"13d27016-697f-b82f-7512-8e20854c09f6":{"widgetUrl":"https:\/\/bookings.wixapps.net\/_api\/bookings-viewer\/index","mobileUrl":"https:\/\/bookings.wixapps.net\/_api\/bookings-viewer\/mobile","appPage":{"id":"scheduler","name":"Services","defaultPage":"","hidden":true,"multiInstanceEnabled":false,"order":1,"indexable":true,"fullPage":false,"landingPageInMobile":false,"hideFromMenu":false},"applicationId":22329,"appDefinitionName":"Wix Bookings","appDefinitionId":"13d21c63-b5ec-5912-8397-c3a5ddb27a97","isWixTPA":true,"allowScrolling":false},"713f72a2-7a32-47e9-b5e4-6024ee57d277":{"widgetUrl":"https:\/\/bookings.wixapps.net\/_api\/bookings-viewer\/index","mobileUrl":"https:\/\/bookings.wixapps.net\/_api\/bookings-viewer\/mobile","appPage":{"id":"book_checkout","name":"Bookings Checkout","defaultPage":"","hidden":true,"multiInstanceEnabled":false,"order":3,"indexable":true,"fullPage":false,"landingPageInMobile":false,"hideFromMenu":false},"applicationId":22329,"appDefinitionName":"Wix Bookings","appDefinitionId":"13d21c63-b5ec-5912-8397-c3a5ddb27a97","isWixTPA":true,"allowScrolling":false},"e86ab26e-a14f-46d1-9d74-7243b686923b":{"widgetUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/bookings-calendar-widget\/1.3539.0\/DailyAgenda","mobileUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/bookings-calendar-widget\/1.3539.0\/DailyAgenda","tpaWidgetId":"e86ab26e-a14f-46d1-9d74-7243b686923b","appPage":{},"applicationId":22329,"appDefinitionName":"Wix Bookings","appDefinitionId":"13d21c63-b5ec-5912-8397-c3a5ddb27a97","isWixTPA":true,"allowScrolling":false},"621bc837-5943-4c76-a7ce-a0e38185301f":{"widgetUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/bookings-service-list-widget\/1.2175.0\/BookOnline","mobileUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/bookings-service-list-widget\/1.2175.0\/BookOnline","appPage":{"id":"bookings_list","name":"Book Online","defaultPage":"","hidden":false,"multiInstanceEnabled":false,"order":4,"indexable":true,"fullPage":false,"landingPageInMobile":false,"hideFromMenu":false},"applicationId":22329,"appDefinitionName":"Wix Bookings","appDefinitionId":"13d21c63-b5ec-5912-8397-c3a5ddb27a97","isWixTPA":true,"allowScrolling":false},"cc882051-73c9-41a6-8f90-f6ebc9f10fe1":{"widgetUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/bookings-service-list-widget\/1.2175.0\/ServiceListWidget","mobileUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/bookings-service-list-widget\/1.2175.0\/ServiceListWidget","tpaWidgetId":"service_list_widget","appPage":{},"applicationId":22329,"appDefinitionName":"Wix Bookings","appDefinitionId":"13d21c63-b5ec-5912-8397-c3a5ddb27a97","isWixTPA":true,"allowScrolling":false},"0eadb76d-b167-4f19-88d1-496a8207e92b":{"widgetUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/bookings-calendar-widget\/1.3539.0\/BookingCalendarWidget","mobileUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/bookings-calendar-widget\/1.3539.0\/BookingCalendarWidget","tpaWidgetId":"0eadb76d-b167-4f19-88d1-496a8207e92b","appPage":{},"applicationId":22329,"appDefinitionName":"Wix Bookings","appDefinitionId":"13d21c63-b5ec-5912-8397-c3a5ddb27a97","isWixTPA":true,"allowScrolling":false},"89c4023a-027e-4d2a-b6b7-0b9d345b508d":{"widgetUrl":"https:\/\/editor.wix.com\/","tpaWidgetId":"bookings_timetable_daily","appPage":{},"applicationId":22329,"appDefinitionName":"Wix Bookings","appDefinitionId":"13d21c63-b5ec-5912-8397-c3a5ddb27a97","isWixTPA":true,"allowScrolling":false},"985e6fc8-ce3f-4cf8-9b85-714c73f48695":{"widgetUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/bookings-form-widget\/1.2349.0\/BookingsForm","mobileUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/bookings-form-widget\/1.2349.0\/BookingsForm","tpaWidgetId":"985e6fc8-ce3f-4cf8-9b85-714c73f48695","appPage":{"id":"Booking Form","name":"Booking Form","defaultPage":"","hidden":true,"multiInstanceEnabled":false,"order":1,"indexable":true,"fullPage":false,"landingPageInMobile":false,"hideFromMenu":false},"applicationId":22329,"appDefinitionName":"Wix Bookings","appDefinitionId":"13d21c63-b5ec-5912-8397-c3a5ddb27a97","isWixTPA":true,"allowScrolling":false},"2f22f475-3ed1-41fd-90b7-221e92134f3c":{"widgetUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/bookings-daily-agenda-widget\/1.605.0\/DailyAgenda","mobileUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/bookings-daily-agenda-widget\/1.605.0\/DailyAgenda","tpaWidgetId":"2f22f475-3ed1-41fd-90b7-221e92134f3c","appPage":{},"applicationId":22329,"appDefinitionName":"Wix Bookings","appDefinitionId":"13d21c63-b5ec-5912-8397-c3a5ddb27a97","isWixTPA":true,"allowScrolling":false},"3dc66bc5-5354-4ce6-a436-bd8394c09b0e":{"widgetUrl":"https:\/\/editor.wix.com\/","appPage":{},"applicationId":22329,"appDefinitionName":"Wix Bookings","appDefinitionId":"13d21c63-b5ec-5912-8397-c3a5ddb27a97","isWixTPA":true,"allowScrolling":false},"e1339b7c-0c95-43fe-89f6-be037ad29ea9":{"widgetUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/bookings-my-bookings-widget\/1.580.0\/MyBookings","mobileUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/bookings-my-bookings-widget\/1.580.0\/MyBookings","tpaWidgetId":"e1339b7c-0c95-43fe-89f6-be037ad29ea9","appPage":{"id":"My Bookings","name":"My Bookings","defaultPage":"","hidden":true,"multiInstanceEnabled":false,"order":1,"indexable":true,"fullPage":false,"landingPageInMobile":false,"hideFromMenu":false},"applicationId":22329,"appDefinitionName":"Wix Bookings","appDefinitionId":"13d21c63-b5ec-5912-8397-c3a5ddb27a97","isWixTPA":true,"allowScrolling":false},"14756c3d-f10a-45fc-4df1-808f22aabe80":{"widgetUrl":"https:\/\/bookings.wixapps.net\/_api\/bookings-viewer\/widget\/index","mobileUrl":"https:\/\/bookings.wixapps.net\/_api\/bookings-viewer\/widget\/index","tpaWidgetId":"widget","appPage":{},"applicationId":22329,"appDefinitionName":"Wix Bookings","appDefinitionId":"13d21c63-b5ec-5912-8397-c3a5ddb27a97","isWixTPA":true,"allowScrolling":false},"54d912c5-52cb-4657-b8fa-e1a4cda8ed01":{"widgetUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/bookings-calendar-widget\/1.3539.0\/BookingCalendar","mobileUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/bookings-calendar-widget\/1.3539.0\/BookingCalendar","tpaWidgetId":"54d912c5-52cb-4657-b8fa-e1a4cda8ed01","appPage":{"id":"Booking Calendar","name":"Booking Calendar","defaultPage":"","hidden":true,"multiInstanceEnabled":false,"order":1,"indexable":true,"fullPage":false,"landingPageInMobile":false,"hideFromMenu":false},"applicationId":22329,"appDefinitionName":"Wix Bookings","appDefinitionId":"13d21c63-b5ec-5912-8397-c3a5ddb27a97","isWixTPA":true,"allowScrolling":false},"145134d5-e592-3311-21c4-178d519ba2b9":{"widgetUrl":"https:\/\/site-menu.light-tech.online\/widgetView","tpaWidgetId":"impressive_side_menu","appPage":{},"applicationId":24687,"appDefinitionName":"Impressive Site Menu","appDefinitionId":"14206e6f-4e6d-eecd-f424-86531c98386c","isWixTPA":false,"allowScrolling":false},"12f8ef92-de51-9506-6fd7-4a93da37c38b":{"widgetUrl":"https:\/\/www.fyrebox.com\/wix\/game","mobileUrl":"https:\/\/www.fyrebox.com\/wix\/game\/m","tpaWidgetId":"fyrebox_quizzes_and_games","appPage":{},"applicationId":26384,"appDefinitionName":"Fyrebox Quiz Maker","appDefinitionId":"12f8c2b1-02f6-16bd-a8b7-7c6df8e8414d","isWixTPA":false,"allowScrolling":false},"1514b184-bb0d-2336-704b-976633cb5fe5":{"widgetUrl":"https:\/\/static.parastorage.com\/services\/dbsm-editor-app\/1.369.0\/connectionConfig.js","tpaWidgetId":"admin_pages","appPage":{},"applicationId":27208,"appDefinitionName":"Admin Pages","appDefinitionId":"1514b01b-cb08-41b4-8582-0a88551ac769","isWixTPA":true,"allowScrolling":false},"371ee199-389c-4a93-849e-e35b8a15b7ca":{"widgetUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/form-app\/1.2413.0\/Form","mobileUrl":"https:\/\/editor.wixapps.net\/render\/prod\/editor\/form-app\/1.2413.0\/Form","tpaWidgetId":"371ee199-389c-4a93-849e-e35b8a15b7ca","appPage":{},"applicationId":28085,"appDefinitionName":"Wix Forms","appDefinitionId":"225dd912-7dea-4738-8688-4b8c6955ffc2","isWixTPA":true,"allowScrolling":false}},"appsClientSpecMapData":{"f105ba16-6b7a-4b52-a2e5-712bdc749f76":{"applicationId":9,"appDefinitionName":"Cookie Policy Banner","appFields":{"permissionsEnforced":false,"blocksPermissionsEnforced":false,"isStandalone":true,"semanticVersion":"^0.0.0"},"isWixTPA":true},"1380b703-ce81-ff05-f115-39571d94dfcd":{"applicationId":10,"appDefinitionName":"Checkout & Orders","appFields":{"platform":{"baseUrls":{"staticsBaseUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-cart-ooi\/1.5988.0\/","addToCartBaseUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-add-to-cart\/1.1496.0\/","cartIconBaseUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-cart-icon\/1.2290.0\/","productWidgetBaseUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-product-widget\/1.2052.0\/","galleryBaseUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-gallery\/1.5848.0\/","wishlistBaseUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-wishlist\/1.2322.0\/","productPageBaseUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-product-page\/1.4206.0\/"},"margins":{"desktop":{"top":{"type":"PX","value":0},"right":{"type":"PX","value":0},"bottom":{"type":"PX","value":0},"left":{"type":"PX","value":0}},"tablet":{"top":{},"right":{},"bottom":{},"left":{}},"mobile":{"top":{},"right":{},"bottom":{},"left":{}}},"height":{"desktop":{},"tablet":{},"mobile":{}},"editorScriptUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-worker\/1.4706.0\/editor.bundle.min.js","routerServiceUrl":"\/_serverless\/wixstores-tpa-router","docking":{"desktop":{"horizontal":"HCENTER","vertical":"TOP_DOCKING"},"tablet":{},"mobile":{}},"viewerScriptUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-worker\/1.4706.0\/viewerScript.bundle.min.js","errorReporting":{},"platformOnly":true,"width":{"desktop":{},"tablet":{},"mobile":{}},"viewer":{"errorReporting":{}}},"appConfig":{"siteConfig":{"siteStructureApi":"wixArtifactId:serverless.wixstores-tpa-site-structure-service"}},"permissionsEnforced":false,"blocksPermissionsEnforced":false,"isStandalone":true,"semanticVersion":"^0.6103.0"},"isWixTPA":true},"13ee53b4-2343-b641-c84d-056d2e6ed2e6":{"applicationId":12,"appDefinitionName":"TWIPLA Website Intelligence","appFields":{"featuresForNewPackagePicker":[],"packagePickerV2":[{"model":{"features":[{"description":"Add Visitors Analytics, publish your site and you're set. You'll see all your stats in your dashboard.","name":"Get Started Easily","id":"d701f65c-c03e-4142-90d6-6a9e743ca907"},{"description":"See where visitors come from, who's live on your site right now, what days you get the most traffic and more.","name":"View All Your Stats","id":"ac2a22aa-45cf-481a-9b4a-5af84062b2e1"},{"description":"Easy to follow charts and graphs make viewing all your stats a breeze.","name":"Track Everything at a Glance","id":"4c01a0e3-681d-4b4e-952d-932f1bc7bbbc"},{"description":"Find out more about your visitors like the browsers they use, their operating systems, IP addresses, etc.","name":"Get Advanced Insights ","id":"9e1dc3c3-7049-4f39-a19f-066736e21a3d"},{"description":"Proudly display how many visitors you get with a traffic counter on your site.","name":"Show Off Your Visits ","id":"3622d6b3-7359-4bfb-ab57-4b138dde489d"},{"description":"Get an overview of your important stats right to your inbox. Set the frequency - daily, weekly or monthly, then sit back and enjoy.","name":"Set Email Notifications ","id":"d6bbeacd-f956-446f-9882-1b41289be8f1"},{"description":"Visitor Analytics' click path graphs show you how visitors navigate your site, so you can better optimize your content. ","name":"Find Out Where Visitors Go ","id":"9b95e7bc-62d9-4145-a47b-61feda9a1157"},{"description":"Quickly export your stats to Excel, so you can save them to a datasheet for offline use. ","name":"Easily Export Your Data ","id":"e7916eef-e534-4c4d-aa68-935fe1eae513"},{"description":"Visitor Analytics puts your traffic on the map, so you can easily pinpoint the country and city where each visitor comes from. ","name":"Map Your Visitors ","id":"0d9c8917-d401-4434-a455-61f3385d4e97"},{"description":"Exclude your own site visits from the data, so your stats are as accurate as can be. ","name":"Filter Your Site Visits","id":"914da81f-b6fe-49fa-961a-052905e0c602"},{"description":"Get access to detailed information for all your visitors. without being limited to 1000 page visits per month.","name":"Unlimited Stats","id":"6367b257-3a82-4b2f-be06-a48b62d5a01b"}],"isExternalPricing":false,"languageCode":"en","isInAppPurchase":false,"freeTrialDays":0,"plans":[{"name":"Free","featureList":{"d701f65c-c03e-4142-90d6-6a9e743ca907":"","4c01a0e3-681d-4b4e-952d-932f1bc7bbbc":"","3622d6b3-7359-4bfb-ab57-4b138dde489d":""},"id":"01622543-6a93-4256-a3cb-7599559548cb","mostPopular":false,"billing":{"oneTimePrice":0,"yearlyDiscountPercent":0,"monthlyPrice":0,"yearlyPrice":0}},{"name":"Premium","vendorId":"lmozwcvuly","featureList":{"9e1dc3c3-7049-4f39-a19f-066736e21a3d":"","4c01a0e3-681d-4b4e-952d-932f1bc7bbbc":"","914da81f-b6fe-49fa-961a-052905e0c602":"","9b95e7bc-62d9-4145-a47b-61feda9a1157":"","d6bbeacd-f956-446f-9882-1b41289be8f1":"","3622d6b3-7359-4bfb-ab57-4b138dde489d":"","e7916eef-e534-4c4d-aa68-935fe1eae513":"","ac2a22aa-45cf-481a-9b4a-5af84062b2e1":"","0d9c8917-d401-4434-a455-61f3385d4e97":"","6367b257-3a82-4b2f-be06-a48b62d5a01b":"","d701f65c-c03e-4142-90d6-6a9e743ca907":""},"id":"d155fd2c-e82c-4764-bf2d-56206a2d5ea3","mostPopular":false,"billing":{"oneTimePrice":0,"yearlyDiscountPercent":17,"monthlyPrice":5.9899997711182,"yearlyPrice":4.9899997711182}}],"businessModel":"FREEMIUM"},"appId":"8ef06506-5675-40a3-917b-db1817d9576d","languageCode":"en"}],"excludeFromAutoRevoke":true,"permissionsEnforced":false,"blocksPermissionsEnforced":false,"isStandalone":true,"semanticVersion":"^2.19.0","installedVersion":"^2.0.0"},"isWixTPA":false},"12fc302b-c751-84e8-8a69-46cb05ce0b2c":{"applicationId":13,"appDefinitionName":"Common Ninja Charts & Graphs","appFields":{"featuresForNewPackagePicker":[],"packagePickerV2":[{"model":{"features":[{"description":"Remove all ads, ribbons, labels, and other references to Charts Ninja.","name":"Automatic Ads Removal","id":"f43ff365-2652-451d-8929-625cfcc3b9c4"},{"description":"Convert your CSV files into professional animated charts & graphs with zero effort.","name":"CSV to Charts Converter","id":"40a60adb-4a94-450c-9514-cacba4f6c5ab"},{"description":"Add unlimited data rows and columns to your chart.","name":"Unlimited Data","id":"6b124f94-00d2-4b26-83ba-8ed64221c602"},{"description":"Charts Ninja allows everyone to create beautiful HTML5 Graphs & Charts for their website for free! With our unique charts creator wizard you'll be able to create charts on-the-fly without any prior knowledge.","name":"Charts & Graphs for eveyone!","id":"202f9c33-b5fe-4865-930b-a882719cadb4"},{"description":"Charts Ninja's charts are super flexible when it comes to design. You can choose colors, play with the chart elements and control the width & height of your chart.","name":"Customizable Design","id":"2c1c5c04-56d3-4988-92ea-64daad97924e"},{"description":"We're using HTML5 and the most advanced web technologies exist today to create charts in Charts Ninja. Charts Ninja is compatible and supported on all today's web browsers.","name":"HTML5 Technology","id":"b04a5e3c-4dbd-47b6-8162-4f35ca6b39ae"}],"isExternalPricing":false,"languageCode":"en","isInAppPurchase":false,"freeTrialDays":0,"plans":[{"name":"Free","featureList":{"202f9c33-b5fe-4865-930b-a882719cadb4":"","2c1c5c04-56d3-4988-92ea-64daad97924e":"","b04a5e3c-4dbd-47b6-8162-4f35ca6b39ae":""},"id":"2449f287-1726-4731-889b-aff1559316e1","mostPopular":false,"billing":{"oneTimePrice":0,"yearlyDiscountPercent":0,"monthlyPrice":0,"yearlyPrice":0}},{"name":"Premium Ninja","vendorId":"cn_charts_ninja","featureList":{"6b124f94-00d2-4b26-83ba-8ed64221c602":"","202f9c33-b5fe-4865-930b-a882719cadb4":"","f43ff365-2652-451d-8929-625cfcc3b9c4":"","40a60adb-4a94-450c-9514-cacba4f6c5ab":"","b04a5e3c-4dbd-47b6-8162-4f35ca6b39ae":"","2c1c5c04-56d3-4988-92ea-64daad97924e":""},"id":"17e0de31-1f89-49e3-843f-bf7f4b94bc0e","mostPopular":false,"billing":{"oneTimePrice":0,"yearlyDiscountPercent":17,"monthlyPrice":3.9900000095367,"yearlyPrice":3.3299999237061}}],"businessModel":"FREEMIUM"},"appId":"643828c7-e537-4f79-b2ec-6c869eea2c47","languageCode":"en"}],"excludeFromAutoRevoke":true,"permissionsEnforced":false,"blocksPermissionsEnforced":false,"isStandalone":true,"semanticVersion":"^2.2.0","installedVersion":"^2.0.0"},"isWixTPA":false},"5c047089-b4af-4395-bd58-139524a3da1d":{"applicationId":18,"appDefinitionName":"Numbers: Show Animated Stats","appFields":{"platform":{"baseUrls":{"siteAssets":"{urlTemplate: {siteAssets}?siteId=172947f9-15bc-4571-a252-8ae7f2a57293&metaSiteId=1aa49903-e8d8-4c08-b1af-b6bf77cba1da&siteRevision=33","blocks_devSiteUrl":"https:\/\/certifiedcode.editorx.io\/1ijlzopc41i3zb28yf5m"},"editorScriptUrl":"{urlTemplate:{universalEditorApp:*}}","viewerScriptUrl":"{urlTemplate:{appStudioBundler:*}}","studio":{"siteHeaderUrl":"84c902403352614d513cfa84fd6b1eae_r3.json","wixCodeGridId":"de11cb8d-1ed2-4ef4-a07a-2ab788c19320","wixCodeInstanceId":"6d851d06-b8e0-42a5-aa0a-3283b65257f9"}},"permissionsEnforced":false,"blocksPermissionsEnforced":false,"isStandalone":true,"semanticVersion":"^3.9.0","installedVersion":"^3.0.0"},"isWixTPA":false},"135c3d92-0fea-1f9d-2ba5-2a1dfb04297e":{"applicationId":27,"appDefinitionName":"ShoutOut (Legacy)","appFields":{"premiumBundle":{"parentAppSlug":"ee21fe60-48c5-45e9-95f4-6ca8f9b1c9d9","parentAppId":"ee21fe60-48c5-45e9-95f4-6ca8f9b1c9d9"},"permissionsEnforced":false,"blocksPermissionsEnforced":false,"isStandalone":true,"semanticVersion":"^0.3462.0"},"isWixTPA":true},"cf06bdf3-5bab-4f20-b165-97fb723dac6a":{"applicationId":41,"appDefinitionName":"Facebook Server Side Events","appFields":{"permissionsEnforced":false,"blocksPermissionsEnforced":false,"isStandalone":true,"semanticVersion":"^0.13.0","installedVersion":"^0.0.0"},"isWixTPA":true},"19d00b84-644d-40cf-a21e-58da93c1211b":{"applicationId":42,"appDefinitionName":"Closeby - Store Locator Map","appFields":{"permissionsEnforced":false,"blocksPermissionsEnforced":false,"isStandalone":true,"semanticVersion":"^1.4.0","installedVersion":"^1.0.0"},"isWixTPA":false},"ed02abe7-222c-44f6-ae68-8901c9bd5f7e":{"applicationId":43,"appDefinitionName":"HubSpot by SyncSmart","appFields":{"permissionsEnforced":true,"blocksPermissionsEnforced":false,"isStandalone":true,"semanticVersion":"^9.1.0","installedVersion":"^9.0.0"},"isWixTPA":false},"ab9894d4-6685-4565-91bf-e0c0b849728e":{"applicationId":53,"appDefinitionName":"Microsoft Clarity","appFields":{"permissionsEnforced":true,"blocksPermissionsEnforced":false,"isStandalone":true,"semanticVersion":"^3.4.0","installedVersion":"^3.0.0"},"isWixTPA":false},"14271d6f-ba62-d045-549b-ab972ae1f70e":{"applicationId":1212,"appDefinitionName":"Wix Pro Gallery","appFields":{"platform":{"baseUrls":{"siteAssets":"{urlTemplate: {siteAssets}?siteId=ce7fd828-85c4-4b73-a390-d293eae32cec&metaSiteId=5af77ffc-cae0-4550-8a1e-4a85ff049a48&siteRevision=25","blocks_widgetManifestsUrl":"\/manifests\/14271d6f-ba62-d045-549b-ab972ae1f70e\/25\/manifests.json","santaWrapperBaseUrl":"https:\/\/static.parastorage.com\/services\/pro-gallery-tpa\/1.1509.0\/"},"margins":{"desktop":{"top":{},"right":{},"bottom":{},"left":{}},"tablet":{"top":{},"right":{},"bottom":{},"left":{}},"mobile":{"top":{},"right":{},"bottom":{},"left":{}}},"height":{"desktop":{},"tablet":{},"mobile":{}},"cloneAppDataUrl":"https:\/\/progallery.wixapps.net\/_api\/gallery\/clone","editorScriptUrl":"https:\/\/static.parastorage.com\/services\/pro-gallery-tpa\/1.1509.0\/editorScript.bundle.min.js","docking":{"desktop":{},"tablet":{},"mobile":{}},"viewerScriptUrl":"https:\/\/static.parastorage.com\/services\/pro-gallery-tpa\/1.1509.0\/viewerScript.bundle.min.js","errorReporting":{"url":"https:\/\/8eb368c655b84e029ed79ad7a5c1718e@sentry.wixpress.com\/3427"},"width":{"desktop":{},"tablet":{},"mobile":{}},"shouldCloneDataPerComponent":true,"viewer":{"errorReporting":{"url":"https:\/\/8eb368c655b84e029ed79ad7a5c1718e@sentry.wixpress.com\/3427"}},"studio":{"siteHeaderUrl":"a7dbf879980a8e90e03d649b6f48fac4_r3.json","wixCodeGridId":"71869e96-79b7-49b9-b6f9-e32bcf00ac52","wixCodeInstanceId":"4655355b-4814-4846-b82a-e057f0df94a3"}},"permissionsEnforced":false,"blocksPermissionsEnforced":false,"isStandalone":true,"semanticVersion":"^0.967.0"},"isWixTPA":true},"14c92d28-031e-7910-c9a8-a670011e062d":{"applicationId":1531,"appDefinitionName":"Wix FAQ","appFields":{"platform":{"editorScriptUrl":"https:\/\/static.parastorage.com\/services\/faq-ooi\/1.592.0\/editorScript.bundle.min.js","viewerScriptUrl":"https:\/\/static.parastorage.com\/services\/faq-ooi\/1.592.0\/viewerScript.bundle.min.js"},"permissionsEnforced":false,"blocksPermissionsEnforced":false,"isStandalone":true,"semanticVersion":"^5.298.0","installedVersion":"^5.0.0"},"isWixTPA":true},"12d0391f-f7a2-9f43-153d-883f9017e252":{"applicationId":3205,"appDefinitionName":"Google Drive","appFields":{"permissionsEnforced":false,"blocksPermissionsEnforced":false,"isStandalone":true,"semanticVersion":"^0.0.0"},"isWixTPA":true},"134139f3-f2a0-2c2c-693c-ed22165cfd84":{"applicationId":5520,"appDefinitionName":"Table Master","appFields":{"permissionsEnforced":false,"blocksPermissionsEnforced":false,"isStandalone":true,"semanticVersion":"^0.20.0","installedVersion":"^0.0.0"},"isWixTPA":true},"14cc59bc-f0b7-15b8-e1c7-89ce41d0e0c9":{"applicationId":7405,"appDefinitionName":"Wix Members Area","appFields":{"platform":{"routerServiceUrl":"\/_api\/members\/v1\/santa-members","viewerScriptUrl":"https:\/\/static.parastorage.com\/services\/santa-members-viewer-app\/1.2819.0\/viewerScript.bundle.min.js","editorScriptUrl":"https:\/\/static.parastorage.com\/services\/santa-members-editor-app\/1.4356.0\/editorAppModule.bundle.min.js","margins":{"desktop":{"top":{},"right":{},"bottom":{},"left":{}},"tablet":{"top":{},"right":{},"bottom":{},"left":{}},"mobile":{"top":{},"right":{},"bottom":{},"left":{}}},"height":{"desktop":{},"tablet":{},"mobile":{}},"docking":{"desktop":{},"tablet":{},"mobile":{}},"errorReporting":{},"editorScriptUrlTemplate":"<%= serviceUrl('santa-members-editor-app', 'editorAppModule.bundle.min.js') %>","width":{"desktop":{},"tablet":{},"mobile":{}},"viewer":{"errorReporting":{}}},"appConfig":{"siteConfig":{"siteStructureApi":"wixArtifactId:com.wixpress.members.members-area-site-structure-api"}},"permissionsEnforced":false,"blocksPermissionsEnforced":false,"isStandalone":true,"semanticVersion":"^0.968.0"},"isWixTPA":true},"14cffd81-5215-0a7f-22f8-074b0e2401fb":{"applicationId":8290,"appDefinitionName":"Member Account Info","appFields":{"platform":{"baseUrls":{"staticsBaseUrl":"https:\/\/static.parastorage.com\/services\/my-account-ooi\/1.2783.0\/","staticsEditorBaseUrl":"https:\/\/static.parastorage.com\/services\/my-account-ooi\/1.2783.0"},"margins":{"desktop":{"top":{},"right":{},"bottom":{},"left":{}},"tablet":{"top":{},"right":{},"bottom":{},"left":{}},"mobile":{"top":{},"right":{},"bottom":{},"left":{}}},"height":{"desktop":{},"tablet":{},"mobile":{}},"editorScriptUrl":"https:\/\/static.parastorage.com\/services\/my-account-ooi\/1.2783.0\/editorScript.bundle.min.js","docking":{"desktop":{},"tablet":{},"mobile":{}},"viewerScriptUrl":"https:\/\/static.parastorage.com\/services\/my-account-ooi\/1.2783.0\/viewerScript.bundle.min.js","errorReporting":{},"width":{"desktop":{},"tablet":{},"mobile":{}},"viewer":{"errorReporting":{}}},"permissionsEnforced":false,"blocksPermissionsEnforced":false,"isStandalone":true,"semanticVersion":"^0.253.0"},"isWixTPA":true},"14ce28f7-7eb0-3745-22f8-074b0e2401fb":{"applicationId":8304,"appDefinitionName":"Profile Card","appFields":{"platform":{"baseUrls":{"staticsBaseUrl":"https:\/\/static.parastorage.com\/services\/profile-card-tpa-ooi\/1.2887.0\/","staticsEditorBaseUrl":"https:\/\/static.parastorage.com\/services\/profile-card-tpa-ooi\/1.2884.0"},"margins":{"desktop":{"top":{"type":"PX","value":0},"right":{"type":"PX","value":0},"bottom":{"type":"PX","value":0},"left":{"type":"PX","value":0}},"tablet":{"top":{},"right":{},"bottom":{},"left":{}},"mobile":{"top":{},"right":{},"bottom":{},"left":{}}},"height":{"desktop":{},"tablet":{},"mobile":{}},"editorScriptUrl":"https:\/\/static.parastorage.com\/services\/profile-card-tpa-ooi\/1.2887.0\/editorScript.bundle.min.js","docking":{"desktop":{"horizontal":"HCENTER","vertical":"TOP_DOCKING"},"tablet":{},"mobile":{}},"viewerScriptUrl":"https:\/\/static.parastorage.com\/services\/profile-card-tpa-ooi\/1.2887.0\/viewerScript.bundle.min.js","errorReporting":{},"width":{"desktop":{},"tablet":{},"mobile":{}},"viewer":{"errorReporting":{}}},"permissionsEnforced":false,"blocksPermissionsEnforced":false,"isStandalone":true,"semanticVersion":"^0.278.0"},"isWixTPA":true},"4aebd0cb-fbdb-4da7-b5d1-d05660a30172":{"applicationId":8842,"appDefinitionName":"My Wallet","appFields":{"platform":{"baseUrls":{"staticsBaseUrl":"https:\/\/static.parastorage.com\/services\/payments-my-wallet\/1.1131.0\/","staticsEditorBaseUrl":"https:\/\/static.parastorage.com\/services\/payments-my-wallet\/1.1131.0"},"editorScriptUrl":"https:\/\/static.parastorage.com\/services\/payments-my-wallet\/1.1131.0\/editorScript.bundle.min.js","viewerScriptUrl":"https:\/\/static.parastorage.com\/services\/payments-my-wallet\/1.1131.0\/viewerScript.bundle.min.js","errorReporting":{"url":"https:\/\/9a65e97ebe8141fca0c4fd686f70996b@sentry.wixpress.com\/5894"},"viewer":{"errorReporting":{"url":"https:\/\/9a65e97ebe8141fca0c4fd686f70996b@sentry.wixpress.com\/5894"}}},"permissionsEnforced":false,"blocksPermissionsEnforced":false,"isStandalone":true,"semanticVersion":"^0.73.0"},"isWixTPA":true},"1505b775-e885-eb1b-b665-1e485d9bf90e":{"applicationId":9305,"appDefinitionName":"My Addresses","appFields":{"permissionsEnforced":false,"blocksPermissionsEnforced":false,"isStandalone":true,"semanticVersion":"^0.0.0"},"isWixTPA":true},"2bef2abe-7abe-43da-889c-53c1500a328c":{"applicationId":10442,"appDefinitionName":"My Subscriptions","appFields":{"platform":{"baseUrls":{"staticsBaseUrl":"https:\/\/static.parastorage.com\/services\/subscriptions-tpa\/1.1199.0\/","staticsEditorBaseUrl":"https:\/\/static.parastorage.com\/services\/subscriptions-tpa\/1.1199.0"},"margins":{"desktop":{"top":{},"right":{},"bottom":{},"left":{}},"tablet":{"top":{},"right":{},"bottom":{},"left":{}},"mobile":{"top":{},"right":{},"bottom":{},"left":{}}},"height":{"desktop":{},"tablet":{},"mobile":{}},"editorScriptUrl":"https:\/\/static.parastorage.com\/services\/subscriptions-tpa\/1.1199.0\/editorScript.bundle.min.js","docking":{"desktop":{},"tablet":{},"mobile":{}},"viewerScriptUrl":"https:\/\/static.parastorage.com\/services\/subscriptions-tpa\/1.1199.0\/viewerScript.bundle.min.js","errorReporting":{},"width":{"desktop":{},"tablet":{},"mobile":{}},"viewer":{"errorReporting":{}}},"permissionsEnforced":false,"blocksPermissionsEnforced":false,"isStandalone":true,"semanticVersion":"^0.136.0"},"isWixTPA":true},"14517e1a-3ff0-af98-408e-2bd6953c36a2":{"applicationId":12939,"appDefinitionName":"Wix Chat","appFields":{"platform":{"optionalApplication":true,"viewerScriptUrl":"https:\/\/static.parastorage.com\/services\/chat-worker\/1.1239.0\/viewer-script.bundle.min.js","margins":{"desktop":{"top":{},"right":{},"bottom":{},"left":{}},"tablet":{"top":{},"right":{},"bottom":{},"left":{}},"mobile":{"top":{},"right":{},"bottom":{},"left":{}}},"height":{"desktop":{},"tablet":{},"mobile":{}},"editorScriptUrl":"https:\/\/static.parastorage.com\/services\/chat-worker\/1.1239.0\/editor-script.bundle.min.js","isStretched":{},"docking":{"desktop":{},"tablet":{},"mobile":{}},"errorReporting":{},"width":{"desktop":{},"tablet":{},"mobile":{}},"viewer":{"errorReporting":{}}},"mostPopularPackage":"Sales","premiumBundle":{"parentAppSlug":"ee21fe60-48c5-45e9-95f4-6ca8f9b1c9d9","parentAppId":"ee21fe60-48c5-45e9-95f4-6ca8f9b1c9d9"},"featuresForNewPackagePicker":[{"forPackages":[{"value":"50","packageId":"Professional"},{"value":"150","packageId":"Sales"},{"value":"Unlimited","packageId":"Teams"}]},{"forPackages":[{"value":"true","packageId":"Professional"},{"value":"true","packageId":"Sales"},{"value":"true","packageId":"Teams"}]},{"forPackages":[{"value":"true","packageId":"Professional"},{"value":"true","packageId":"Sales"},{"value":"true","packageId":"Teams"}]},{"forPackages":[{"value":"true","packageId":"Professional"},{"value":"true","packageId":"Sales"},{"value":"true","packageId":"Teams"}]},{"forPackages":[{"value":"true","packageId":"Professional"},{"value":"true","packageId":"Sales"},{"value":"true","packageId":"Teams"}]},{"forPackages":[{"value":"true","packageId":"Professional"},{"value":"true","packageId":"Sales"},{"value":"true","packageId":"Teams"}]},{"forPackages":[{"value":"true","packageId":"Professional"},{"value":"true","packageId":"Sales"},{"value":"true","packageId":"Teams"}]},{"forPackages":[{"value":"true","packageId":"Professional"},{"value":"true","packageId":"Sales"},{"value":"true","packageId":"Teams"}]},{"forPackages":[{"value":"true","packageId":"Sales"},{"value":"true","packageId":"Teams"}]},{"forPackages":[{"value":"true","packageId":"Teams"}]}],"permissionsEnforced":false,"blocksPermissionsEnforced":false,"isStandalone":true,"semanticVersion":"^0.184.0","installedVersion":"^0.0.0"},"isWixTPA":true},"14bcded7-0066-7c35-14d7-466cb3f09103":{"applicationId":14292,"appDefinitionName":"Wix Blog","appFields":{"platform":{"viewerScriptUrl":"https:\/\/static.parastorage.com\/services\/communities-blog-ooi\/1.3112.0\/viewerScript.bundle.min.js","editorScriptUrl":"https:\/\/static.parastorage.com\/services\/communities-blog-ooi\/1.3112.0\/editorScript.bundle.min.js","baseUrls":{"mediaImageHost":"static.wixstatic.com","staticsBaseUrl":"https:\/\/static.parastorage.com\/services\/communities-blog-ooi\/1.3112.0\/","duplexerUrl":"duplexer.wix.com","apiBaseUrlClient":"\/_api\/communities-blog-node-api","translationsBaseUrl":"https:\/\/static.parastorage.com\/services\/communities-blog-translations\/1.4450.0\/","siteAssets":"{urlTemplate: {siteAssets}?siteId=f2343010-d1f3-4080-a98e-3d82976a671d&metaSiteId=2b9fa616-1dde-46d3-a1a3-d715ebc1d57d&siteRevision=1335","apiPlatformizedBaseUrl":"https:\/\/www.wix.com\/_api\/communities-blog-api-web","mediaVideoHost":"video.wixstatic.com","apiPlatformizedBaseUrlClient":"\/_api\/communities-blog-api-web","apiBaseUrl":"https:\/\/apps.wix.com\/_api\/communities-blog-node-api","apiExperimentsBaseUrlClient":"\/_api\/wix-laboratory-server","blocks_devSiteUrl":"https:\/\/zanass1.editorx.io\/2w5loeiwuf2frneevn6m","blocks_widgetManifestsUrl":"\/manifests\/14bcded7-0066-7c35-14d7-466cb3f09103\/1335\/manifests.json","useArchiveWidgetAdapter":"false","disableDuplexerForInstanceIds":"671e6bcb-a0a9-4ae0-98f2-f81a607bf167","provisioningModalUrl":"https:\/\/www.wix.com\/_partials\/communities-blog-provisioning-modal\/1.1107.0\/modal.html","apiAggregatorBaseUrl":"\/blog-frontend-adapter-public","apiPaywallBaseUrl":"\/_api\/paywall-server","categoryLabel":"false"},"margins":{"desktop":{"top":{"type":"PX","value":0},"right":{"type":"PX","value":0},"bottom":{"type":"PX","value":0},"left":{"type":"PX","value":0}},"tablet":{"top":{},"right":{},"bottom":{},"left":{}},"mobile":{"top":{},"right":{},"bottom":{},"left":{}}},"migratedToNewPlatformApi":true,"height":{"desktop":{},"tablet":{},"mobile":{}},"editorTranslationUrl":"https:\/\/static.parastorage.com\/services\/communities-blog-ooi\/1.2252.0\/assets\/locales\/messages_%7B%7Blng%7D%7D.json","docking":{"desktop":{"horizontal":"HCENTER","vertical":"TOP_DOCKING"},"tablet":{},"mobile":{}},"errorReporting":{"url":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643"},"width":{"desktop":{},"tablet":{},"mobile":{}},"viewer":{"errorReporting":{"url":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643"}},"studio":{"siteHeaderUrl":"ae7beb322e32912fccc688a488a3de89_r3.json","wixCodeGridId":"21056c2c-144a-488f-912d-5fb0e1262beb","wixCodeInstanceId":"c520f32b-7cd2-44bd-a087-e5c72fd7af4c"}},"appConfig":{"siteConfig":{"siteStructureApi":"wixArtifactId:com.wixpress.npm.communities-blog-node-api"}},"excludeFromAutoRevoke":true,"permissionsEnforced":false,"blocksPermissionsEnforced":false,"isStandalone":true,"semanticVersion":"^0.5118.0","installedVersion":"^0.0.0"},"isWixTPA":true},"1484cb44-49cd-5b39-9681-75188ab429de":{"applicationId":14737,"appDefinitionName":"Wix Site Search","appFields":{"platform":{"viewerScriptUrl":"https:\/\/static.parastorage.com\/services\/search-app\/1.3961.0\/viewerScript.bundle.min.js","editorScriptUrl":"https:\/\/static.parastorage.com\/services\/search-app\/1.3961.0\/editorScript.bundle.min.js","baseUrls":{"staticsBaseUrl":"https:\/\/static.parastorage.com\/services\/search-app\/1.3961.0\/"},"baseUrlsTemplate":{"staticsBaseUrl":"https:\/\/static.parastorage.com\/services\/search-app\/1.3961.0\/"},"margins":{"desktop":{"top":{},"right":{},"bottom":{},"left":{}},"tablet":{"top":{},"right":{},"bottom":{},"left":{}},"mobile":{"top":{},"right":{},"bottom":{},"left":{}}},"height":{"desktop":{},"tablet":{},"mobile":{}},"editorTranslationUrl":"https:\/\/static.parastorage.com\/services\/search-app\/1.3605.0\/assets\/locales\/messages_%7B%7Blng%7D%7D.json","docking":{"desktop":{},"tablet":{},"mobile":{}},"errorReporting":{},"width":{"desktop":{},"tablet":{},"mobile":{}},"viewer":{"errorReporting":{}}},"permissionsEnforced":false,"blocksPermissionsEnforced":false,"isStandalone":true,"semanticVersion":"^0.434.0"},"isWixTPA":true},"14f25dc5-6af3-5420-9568-f9c5ed98c9b1":{"applicationId":15464,"appDefinitionName":"Members Notifications Settings","appFields":{"platform":{"baseUrls":{"staticsBaseUrl":"https:\/\/static.parastorage.com\/services\/members-area-notifications-preferences\/1.63.0","staticsEditorBaseUrl":"https:\/\/static.parastorage.com\/services\/members-area-notifications-preferences\/1.63.0"},"editorScriptUrl":"https:\/\/static.parastorage.com\/services\/members-area-notifications-preferences\/1.63.0\/editorScript.bundle.min.js","viewerScriptUrlTemplate":"<%= serviceUrl('members-area-notifications-preferences', 'viewerScript.bundle.min.js') %>","viewerScriptUrl":"https:\/\/static.parastorage.com\/services\/members-area-notifications-preferences\/1.63.0\/viewerScript.bundle.min.js","errorReporting":{"url":"https:\/\/271e9fa3230b4eec94b02bf95780f5f2@sentry.wixpress.com\/6097"},"viewer":{"errorReporting":{"url":"https:\/\/271e9fa3230b4eec94b02bf95780f5f2@sentry.wixpress.com\/6097"}}},"permissionsEnforced":false,"blocksPermissionsEnforced":false,"isStandalone":true,"semanticVersion":"^0.22.0"},"isWixTPA":true},"14dbef06-cc42-5583-32a7-3abd44da4908":{"applicationId":15673,"appDefinitionName":"Members About","appFields":{"platform":{"baseUrls":{"staticsBaseUrl":"https:\/\/static.parastorage.com\/services\/members-about-ooi\/1.2646.0\/","staticsEditorBaseUrl":"https:\/\/static.parastorage.com\/services\/members-about-ooi\/1.2643.0"},"margins":{"desktop":{"top":{"type":"PX","value":0},"right":{"type":"PX","value":0},"bottom":{"type":"PX","value":0},"left":{"type":"PX","value":0}},"tablet":{"top":{},"right":{},"bottom":{},"left":{}},"mobile":{"top":{},"right":{},"bottom":{},"left":{}}},"height":{"desktop":{},"tablet":{},"mobile":{}},"editorScriptUrl":"https:\/\/static.parastorage.com\/services\/members-about-ooi\/1.2646.0\/editorScript.bundle.min.js","docking":{"desktop":{"horizontal":"HCENTER","vertical":"TOP_DOCKING"},"tablet":{},"mobile":{}},"viewerScriptUrl":"https:\/\/static.parastorage.com\/services\/members-about-ooi\/1.2646.0\/viewerScript.bundle.min.js","errorReporting":{},"width":{"desktop":{},"tablet":{},"mobile":{}},"viewer":{"errorReporting":{}}},"permissionsEnforced":false,"blocksPermissionsEnforced":false,"isStandalone":true,"semanticVersion":"^0.214.0"},"isWixTPA":true},"14f25924-5664-31b2-9568-f9c5ed98c9b1":{"applicationId":15747,"appDefinitionName":"Wix Members Area Notifications","appFields":{"platform":{"baseUrls":{"staticsBaseUrl":"https:\/\/static.parastorage.com\/services\/members-area-notifications\/1.134.0","staticsEditorBaseUrl":"https:\/\/static.parastorage.com\/services\/members-area-notifications\/1.134.0"},"editorScriptUrl":"https:\/\/static.parastorage.com\/services\/members-area-notifications\/1.134.0\/editorScript.bundle.min.js","viewerScriptUrlTemplate":"<%= serviceUrl('members-area-notifications', 'viewerScript.bundle.min.js') %>","viewerScriptUrl":"https:\/\/static.parastorage.com\/services\/members-area-notifications\/1.134.0\/viewerScript.bundle.min.js","errorReporting":{"url":"https:\/\/460ff4620fa44cba8df530afde949785@sentry.wixpress.com\/5803"},"viewer":{"errorReporting":{"url":"https:\/\/460ff4620fa44cba8df530afde949785@sentry.wixpress.com\/5803"}}},"permissionsEnforced":false,"blocksPermissionsEnforced":false,"isStandalone":true,"semanticVersion":"^0.29.0"},"isWixTPA":true},"148c2287-c669-d849-d153-463c7486a694":{"applicationId":16214,"appDefinitionName":"Wix Groups","appFields":{"platform":{"viewerScriptUrl":"https:\/\/static.parastorage.com\/services\/social-groups-ooi\/5.780.0\/viewerScript.bundle.min.js","editorScriptUrl":"https:\/\/static.parastorage.com\/services\/social-groups-ooi\/5.780.0\/editorScript.bundle.min.js","baseUrls":{"staticsGroupBaseUrl":"https:\/\/static.parastorage.com\/services\/social-groups-ooi\/5.780.0\/","staticsEditorBaseUrl":"https:\/\/static.parastorage.com\/services\/social-groups-ooi\/5.780.0\/","staticsBaseUrl":"https:\/\/static.parastorage.com\/services\/social-groups-ooi\/5.780.0\/"},"baseUrlsTemplate":{"staticsGroupBaseUrl":"<%= serviceUrl('social-group-ooi', '\/') %>"},"margins":{"desktop":{"top":{"type":"PX","value":0},"right":{"type":"PX","value":0},"bottom":{"type":"PX","value":0},"left":{"type":"PX","value":0}},"tablet":{"top":{"type":"PX","value":0},"right":{"type":"PX","value":0},"bottom":{"type":"PX","value":0},"left":{"type":"PX","value":0}},"mobile":{"top":{"type":"PX","value":0},"right":{"type":"PX","value":0},"bottom":{"type":"PX","value":0},"left":{"type":"PX","value":0}}},"height":{"desktop":{},"tablet":{},"mobile":{}},"isStretched":{"desktop":true,"tablet":true,"mobile":true},"docking":{"desktop":{"vertical":"TOP_DOCKING"},"tablet":{},"mobile":{}},"errorReporting":{"url":"https:\/\/f36cc48fb72b4d298c835f2793cf3b84@sentry-next.wixpress.com\/1058"},"width":{"desktop":{"type":"PERCENTAGE","value":100},"tablet":{"type":"PERCENTAGE","value":100},"mobile":{"type":"PERCENTAGE","value":100}},"viewer":{"errorReporting":{"url":"https:\/\/f36cc48fb72b4d298c835f2793cf3b84@sentry-next.wixpress.com\/1058"}}},"appConfig":{"siteConfig":{"siteStructureApi":"wixArtifactId:com.wixpress.groups.social-groups-web"},"namespace":"wix.groups"},"permissionsEnforced":false,"blocksPermissionsEnforced":false,"isStandalone":true,"semanticVersion":"^0.2773.0","installedVersion":"^0.0.0"},"isWixTPA":true},"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130":{"applicationId":18934,"appDefinitionName":"Wix Portfolio","appFields":{"platform":{"baseUrls":{"siteAssets":"{urlTemplate: {siteAssets}?siteId=eddaf1fb-7444-4866-abf5-b6147d2eb578&metaSiteId=3b797846-5b17-4d50-aa76-817ae872bd80&siteRevision=9292","blocks_devSiteUrl":"https:\/\/exposure4.editorx.io\/i8oyrsuu6sw43bmv723c","blocks_widgetManifestsUrl":"\/manifests\/d90652a2-f5a1-4c7c-84c4-d4cdcc41f130\/9292\/manifests.json","staticsBaseUrl":"https:\/\/static.parastorage.com\/services\/portfolio-bob\/1.1224.0","staticsEditorBaseUrl":"https:\/\/static.parastorage.com\/services\/portfolio-bob\/1.1224.0"},"baseUrlsTemplate":{"staticsBaseUrl":"<%= serviceUrl('portfolio-bob', '\/') %>"},"margins":{"desktop":{"top":{"type":"PX","value":0},"right":{"type":"PX","value":0},"bottom":{"type":"PX","value":0},"left":{"type":"PX","value":0}},"tablet":{"top":{},"right":{},"bottom":{},"left":{}},"mobile":{"top":{},"right":{},"bottom":{},"left":{}}},"height":{"desktop":{},"tablet":{},"mobile":{}},"editorScriptUrl":"https:\/\/static.parastorage.com\/services\/portfolio-bob\/1.1224.0\/editorScript.bundle.min.js","viewerScriptUrlTemplate":"<%= serviceUrl('portfolio-bob', 'viewerScript.bundle.min.js') %>","isStretched":{"desktop":true},"routerServiceUrl":"\/_serverless\/portfolio-router","docking":{"desktop":{"horizontal":"HCENTER","vertical":"TOP_DOCKING"},"tablet":{},"mobile":{}},"viewerScriptUrl":"https:\/\/static.parastorage.com\/services\/portfolio-bob\/1.1224.0\/viewerScript.bundle.min.js","errorReporting":{"url":"https:\/\/bfb679c754744c58a7374ee6e25cfc13@sentry.wixpress.com\/2954"},"editorScriptUrlTemplate":"<%= serviceUrl('portfolio-bob', 'editorScript.bundle.min.js') %>","width":{"desktop":{},"tablet":{},"mobile":{}},"viewer":{"errorReporting":{"url":"https:\/\/bfb679c754744c58a7374ee6e25cfc13@sentry.wixpress.com\/2954"}},"studio":{"siteHeaderUrl":"f512fcdec26704c7da6a309d7b11c311_r3.json","wixCodeGridId":"2122ce2b-e7c2-40bf-a898-a6aa6f852c52","wixCodeInstanceId":"61d54d44-4efd-4c52-a518-f54563d97c37"}},"appConfig":{"siteConfig":{"siteStructureApi":"wixArtifactId:com.wixpress.portfolio-bob"}},"permissionsEnforced":false,"blocksPermissionsEnforced":false,"isStandalone":true,"semanticVersion":"^40.310.0","installedVersion":"^40.0.0"},"isWixTPA":true},"949cfcc9-2a3f-4a96-bd6c-11d9d82763a4":{"applicationId":19263,"appDefinitionName":"ricos-viewer-ooi","appFields":{"platform":{"baseUrls":{"staticsBaseUrl":"https:\/\/static.parastorage.com\/services\/ricos-viewer-ooi\/10.150.8\/","staticsEditorBaseUrl":"https:\/\/static.parastorage.com\/services\/ricos-viewer-ooi\/10.126.11"},"margins":{"desktop":{"top":{},"right":{},"bottom":{},"left":{}},"tablet":{"top":{},"right":{},"bottom":{},"left":{}},"mobile":{"top":{},"right":{},"bottom":{},"left":{}}},"height":{"desktop":{},"tablet":{},"mobile":{}},"editorScriptUrl":"https:\/\/static.parastorage.com\/services\/ricos-viewer-ooi\/10.150.8\/editorScript.bundle.min.js","docking":{"desktop":{},"tablet":{},"mobile":{}},"viewerScriptUrl":"https:\/\/static.parastorage.com\/services\/ricos-viewer-ooi\/10.150.8\/viewerScript.bundle.min.js","errorReporting":{"url":"https:\/\/1eeb89147c984dc6bc3ffafd9e6cd089@sentry.wixpress.com\/809"},"width":{"desktop":{},"tablet":{},"mobile":{}},"viewer":{"errorReporting":{"url":"https:\/\/1eeb89147c984dc6bc3ffafd9e6cd089@sentry.wixpress.com\/809"}}},"permissionsEnforced":false,"blocksPermissionsEnforced":false,"isStandalone":true,"semanticVersion":"^0.199.0"},"isWixTPA":true},"1360889d-0155-11cf-7146-19284f5addc2":{"applicationId":21242,"appDefinitionName":"Rollover Image Effects","appFields":{"featuresForNewPackagePicker":[],"packagePickerV2":[{"model":{"features":[{"description":"We've done everything we can to ensure an incredible mobile experience. Customise how your effects are triggered, define mobile specific elements of your site, customise fonts and widget size. ","name":"Go Mobile First","id":"2139be97-6636-48fc-8cba-fdb65c143326"},{"description":"From cutting edge to classic effects  all fully customisable. You have a suite of 30+ effects to choose from to bring your Wix site to life","name":"Customise Dozens of Effects","id":"5411fb68-6717-4d79-b18b-bd617806b2dd"},{"description":"Create full width responsive Rollovers! Beautiful, stunning animated strips and backgrounds for your Wix Site","name":"Full Width Responsive Strips","id":"859175d8-da19-48d8-8e79-0301cb734bbb"},{"description":"Use Wix's advanced Link Picker tool to link to anything, documents, email, anchors, other websites, and make Rollover an integrated part of your website","name":"Link to Anything ","id":"41a37c53-7d0d-4fb2-abc6-118e2d5fb7c7"},{"description":"You can adjust the position of your text to suit your needs, with our pixel perfect alignment tools","name":"Use Advanced Layout Tools","id":"8e323be2-aef9-40d0-a5c6-e7836cf4809b"},{"description":"We've added tap \/ touch support to Rollover to give your users more ways to interact with Rollover","name":"Run Effects with Touch","id":"8ddfa07c-5ec7-4b96-8dc4-5d79512cb447"},{"description":"Style your text your way with Rollover, using our WYSIWYG interface","name":" Add Paragraph Text","id":"85a3974e-ca34-42d3-8c4e-1061e52da589"},{"description":"Embed Soundcloud, You Tube and more, You can now style your paragraph text inline using   and more","name":"Use HTML","id":"22d91f86-9ab2-4b30-aa04-bf1421305b28"},{"description":"Rollover effects use scalable vector graphics, meaning your Rollovers scale up and down with super-sharp clarity","name":"Use Super Sharp SVGs","id":"664c6512-637c-455e-9132-fc4c3dffb67d"},{"description":"You can upload images of up to 25mb, thanks to Wix's advanced image compression tools take care of the rest. We also resize the images you use, so no matter what size of screen they are viewed on","name":"Smart Image Optimisation","id":"1ee4123e-7abe-4f24-84e4-47f11e4272c6"},{"description":"Now, the effects run to completion with a single touch, no more half-run effects. Plus, we sped up how the images load with pre-loading tools to ensure fast mobile animations every time.","name":"Improved Mobile Performance","id":"09a63d2f-2662-42e8-b0ab-5a99c66531e3"},{"description":"Beautify images with Dual-Colour filters Use the dual colour filters on your images to match your brand colours, correct any imperfections with the original photographs","name":"Use Dual-Colour Filters","id":"ce8b2346-a2d0-4576-933f-f2e65e1b8503"},{"description":"Premium users are guaranteed a response within 24 hours, they can also request specific effects from the developers.  ","name":"Get Help and Support","id":"e68eb6e2-2827-4671-a6b2-9b34dc9fa0af"},{"description":"Easily link up your social media accounts so you can access your images and use them in Rollover","name":"Connect Social accounts","id":"07a2dc6d-7e98-425f-b046-96726fa50e0d"}],"isExternalPricing":false,"languageCode":"en","isInAppPurchase":false,"freeTrialDays":14,"plans":[{"name":"Premium","vendorId":"Premiem","featureList":{"1ee4123e-7abe-4f24-84e4-47f11e4272c6":"","2139be97-6636-48fc-8cba-fdb65c143326":"","07a2dc6d-7e98-425f-b046-96726fa50e0d":"","09a63d2f-2662-42e8-b0ab-5a99c66531e3":"","5411fb68-6717-4d79-b18b-bd617806b2dd":"","8e323be2-aef9-40d0-a5c6-e7836cf4809b":"","664c6512-637c-455e-9132-fc4c3dffb67d":"","859175d8-da19-48d8-8e79-0301cb734bbb":"","e68eb6e2-2827-4671-a6b2-9b34dc9fa0af":"","85a3974e-ca34-42d3-8c4e-1061e52da589":"","ce8b2346-a2d0-4576-933f-f2e65e1b8503":"","8ddfa07c-5ec7-4b96-8dc4-5d79512cb447":"","22d91f86-9ab2-4b30-aa04-bf1421305b28":"","41a37c53-7d0d-4fb2-abc6-118e2d5fb7c7":""},"id":"d87b07ee-c75a-4859-a416-71dfc94052c6","mostPopular":false,"billing":{"oneTimePrice":0,"yearlyDiscountPercent":20,"monthlyPrice":2.9900000095367,"yearlyPrice":2.3900001049042}}],"businessModel":"PREMIUM"}}],"permissionsEnforced":false,"blocksPermissionsEnforced":false,"isStandalone":true,"semanticVersion":"^1.0.0","installedVersion":"^1.0.0"},"isWixTPA":false},"13d21c63-b5ec-5912-8397-c3a5ddb27a97":{"applicationId":22329,"appDefinitionName":"Wix Bookings","appFields":{"platform":{"viewerScriptUrl":"https:\/\/static.parastorage.com\/services\/bookings-viewer-script\/1.3960.0\/bookingsViewerScript.bundle.min.js","editorScriptUrl":"https:\/\/static.parastorage.com\/services\/bookings-viewer-script\/1.3960.0\/bookingsEditorScript.bundle.min.js","baseUrls":{"siteHeaderUrl":"7f734527084d412f3491e0aceb1d2265_r3.json","staticsBaseUrl":"https:\/\/static.parastorage.com\/services\/bookings-widget-viewer\/1.1757.0\/","platformAppsBaseUrl":"https:\/\/static.parastorage.com\/services\/bookings-app-builder-controllers\/1.1922.0\/","serverBaseUrl":"https:\/\/bookings.wixapps.net\/","siteAssets":"{urlTemplate: {siteAssets}}?siteId=dbf7e8f2-9695-4f3f-b258-5282eeff4580&metaSiteId=8b2114a9-339e-4562-bdc4-01621e2f84cb&siteRevision=440}","serviceListStaticsBaseUrl":"https:\/\/static.parastorage.com\/services\/bookings-widget\/1.5494.0\/","staticEditorBaseUrl":"https:\/\/static.parastorage.com\/services\/bookings-widget-viewer\/1.1748.0\/","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/bookings-viewer-script\/1.3960.0\/bookingsEditorScript.bundle.min.js"},"margins":{"desktop":{"top":{"type":"PX","value":0},"right":{"type":"PX","value":0},"bottom":{"type":"PX","value":0},"left":{"type":"PX","value":0}},"tablet":{"top":{},"right":{},"bottom":{},"left":{}},"mobile":{"top":{},"right":{},"bottom":{},"left":{}}},"height":{"desktop":{},"tablet":{},"mobile":{}},"routerServiceUrl":"\/_serverless\/bookings-viewer-router","docking":{"desktop":{"horizontal":"HCENTER","vertical":"TOP_DOCKING"},"tablet":{},"mobile":{}},"errorReporting":{},"width":{"desktop":{},"tablet":{},"mobile":{}},"viewer":{"errorReporting":{}}},"appConfig":{"siteConfig":{"siteStructureApi":"wixArtifactId:com.wixpress.bookings.services-2"}},"permissionsEnforced":false,"blocksPermissionsEnforced":false,"isStandalone":true,"semanticVersion":"^0.9235.0","installedVersion":""},"isWixTPA":true},"14206e6f-4e6d-eecd-f424-86531c98386c":{"applicationId":24687,"appDefinitionName":"Impressive Site Menu","appFields":{"featuresForNewPackagePicker":[],"packagePickerV2":[{"model":{"features":[{"description":"Choose from different menu styles that pop in from the top or bounce in from the side and fits the look of your site.","name":"Variety of Menu Styles","id":"19fe52a1-624b-4efa-bcdf-22bee1b9129d"},{"description":"Connect your social media accounts so they appear on your site menu.","name":"Add Your Social Media","id":"84c1e15b-f8cf-4276-a505-736a43589e30"},{"description":"Choose from over 600 fully customizable icons that you can  include on your menu.","name":"Variety of Icons ","id":"9b3d0cae-581e-4a37-9e07-0d5ecd446f34"},{"description":"Customize the font, color, images and more for the perfect look on your site.","name":"Fully Customizable ","id":"b9624971-71af-4bd6-9806-d2036d58542f"},{"description":"With an easy-to-use grid you can pinpoint where you want your menu to appear on your site.","name":"Menu Positioning ","id":"59a988f2-ef26-46bd-9fae-7a42f81e1bb8"},{"description":"Show off your logo by adding it to your site menu.","name":"Brand Your Site Menu ","id":"bfe1ba82-b5a0-4a33-8f63-9d2ad9b5192b"}],"isExternalPricing":false,"languageCode":"en","isInAppPurchase":false,"freeTrialDays":1,"plans":[{"name":"Free","featureList":{"9b3d0cae-581e-4a37-9e07-0d5ecd446f34":"2","19fe52a1-624b-4efa-bcdf-22bee1b9129d":"2","84c1e15b-f8cf-4276-a505-736a43589e30":"1","b9624971-71af-4bd6-9806-d2036d58542f":""},"id":"bb4b4f44-2656-48c1-b691-4659fd21fbcf","mostPopular":false,"billing":{"oneTimePrice":0,"yearlyDiscountPercent":0,"monthlyPrice":0,"yearlyPrice":0}},{"name":"Premium Package","vendorId":"Premium-Package","featureList":{"bfe1ba82-b5a0-4a33-8f63-9d2ad9b5192b":"","19fe52a1-624b-4efa-bcdf-22bee1b9129d":"10","84c1e15b-f8cf-4276-a505-736a43589e30":"Unlimited","59a988f2-ef26-46bd-9fae-7a42f81e1bb8":"","b9624971-71af-4bd6-9806-d2036d58542f":"","9b3d0cae-581e-4a37-9e07-0d5ecd446f34":"Up to 600"},"id":"8b46375b-92c0-4535-a5db-0d5ea97b8b92","mostPopular":false,"billing":{"oneTimePrice":0,"yearlyDiscountPercent":33,"monthlyPrice":2.9900000095367,"yearlyPrice":1.9900000095367}}],"businessModel":"FREEMIUM"}}],"permissionsEnforced":false,"blocksPermissionsEnforced":false,"isStandalone":true,"semanticVersion":"^1.12.0","installedVersion":"^1.0.0"},"isWixTPA":false},"12f8c2b1-02f6-16bd-a8b7-7c6df8e8414d":{"applicationId":26384,"appDefinitionName":"Fyrebox Quiz Maker","appFields":{"featuresForNewPackagePicker":[],"packagePickerV2":[{"model":{"features":[{"description":"Get contact info from site visitors by displaying a contact form at the beginning or end of your quiz.","name":"Collect Leads","id":"40e86fc0-31a0-4287-a626-aabc3549109c"},{"description":"Give your quiz a more professional look by removing Fyrebox branding. ","name":"Remove Fyrebox Logo","id":"864130d3-3a58-4779-ad7e-1ded164c6361"},{"description":"Customize colors, fonts and more to get the look you want.","name":"Customize Your Quiz","id":"ba3ba2ee-966b-48f1-89bd-5614295c1cae"},{"description":"Add images for different questions in your quiz","name":"Create an Image Quiz","id":"bce56418-2d38-40fa-940f-26da4bad07cb"},{"description":"Create rules based on the score of the player to capture leads, redirect them to other pages and more.","name":"Create Your Own Rules","id":"b947aadc-fc2d-40a3-9ceb-bb3a2bf62924"},{"description":"Export data directly to Mailchimp, Campaign Monitor, Constant Contact or Vertical Response so you can easily manage your new leads and contact them.","name":"Integrations with Mailchimp & more","id":"876094bf-4941-4f76-9524-3c3923e4445b"},{"description":"See how many visitors took your quiz. You can also see which answers were the most popular. ","name":"View Quiz Stats","id":"8ceea71a-239d-4839-96ef-11da97d72d71"},{"description":"Every time visitors complete a quiz on your site, you’ll get notified to your email.","name":"Get Notification Emails","id":"4fc821db-2a40-4070-8888-1ea53d3c27a1"},{"description":"Customize an email players get every time they finish a quiz on your site.","name":"Send Your Players Emails","id":"891fa2a3-4fad-4a66-9963-a3470ae1b0e9"},{"description":"See where your site visitors are coming from and how long they spend on your site with Google Analytics.","name":"Google Analytics Integration","id":"b0d14fea-1c7f-4c4e-96c3-6af663290858"},{"description":"Fyrebox quiz is integrated with supported Zapier apps so you can export your participants automatically to more than 500 applications.","name":"Zapier Integrated","id":"d4b127ad-8d03-4385-ac14-0bea19eb890a"}],"isExternalPricing":false,"languageCode":"en","isInAppPurchase":false,"freeTrialDays":0,"plans":[{"name":"Fyrebox Basic","vendorId":"FyreBoxYesNo","featureList":{"864130d3-3a58-4779-ad7e-1ded164c6361":"","40e86fc0-31a0-4287-a626-aabc3549109c":"","d4b127ad-8d03-4385-ac14-0bea19eb890a":"","ba3ba2ee-966b-48f1-89bd-5614295c1cae":"","4fc821db-2a40-4070-8888-1ea53d3c27a1":""},"id":"41720796-b39a-40e6-844b-fe50b3ea5139","mostPopular":false,"billing":{"oneTimePrice":0,"yearlyDiscountPercent":17,"monthlyPrice":5,"yearlyPrice":4.1700000762939}},{"name":"Fyrebox Standard","vendorId":"FyreBoxYesNo_s","featureList":{"864130d3-3a58-4779-ad7e-1ded164c6361":"","40e86fc0-31a0-4287-a626-aabc3549109c":"","b947aadc-fc2d-40a3-9ceb-bb3a2bf62924":"","d4b127ad-8d03-4385-ac14-0bea19eb890a":"","bce56418-2d38-40fa-940f-26da4bad07cb":"","ba3ba2ee-966b-48f1-89bd-5614295c1cae":"","4fc821db-2a40-4070-8888-1ea53d3c27a1":""},"id":"e8e9a5de-a0db-49d9-8318-8c80c4463aa8","mostPopular":true,"billing":{"oneTimePrice":0,"yearlyDiscountPercent":17,"monthlyPrice":15,"yearlyPrice":12.5}},{"name":"Fyrebox Pro","vendorId":"FyreBoxYesNo_p","featureList":{"864130d3-3a58-4779-ad7e-1ded164c6361":"","8ceea71a-239d-4839-96ef-11da97d72d71":"","40e86fc0-31a0-4287-a626-aabc3549109c":"","b947aadc-fc2d-40a3-9ceb-bb3a2bf62924":"","876094bf-4941-4f76-9524-3c3923e4445b":"","d4b127ad-8d03-4385-ac14-0bea19eb890a":"","891fa2a3-4fad-4a66-9963-a3470ae1b0e9":"","bce56418-2d38-40fa-940f-26da4bad07cb":"","ba3ba2ee-966b-48f1-89bd-5614295c1cae":"","4fc821db-2a40-4070-8888-1ea53d3c27a1":"","b0d14fea-1c7f-4c4e-96c3-6af663290858":""},"id":"25c85350-fe19-4df2-abe3-1bfd332b3b2c","mostPopular":false,"billing":{"oneTimePrice":0,"yearlyDiscountPercent":17,"monthlyPrice":35,"yearlyPrice":29.170000076294}}],"businessModel":"FREEMIUM"},"appId":"a32d29f2-7c1b-4233-979b-95212e57569d","languageCode":"en"}],"excludeFromAutoRevoke":true,"permissionsEnforced":false,"blocksPermissionsEnforced":false,"isStandalone":true,"semanticVersion":"^1.5.0","installedVersion":"^1.0.0"},"isWixTPA":false},"1514b01b-cb08-41b4-8582-0a88551ac769":{"applicationId":27208,"appDefinitionName":"Admin Pages","appFields":{"platform":{"viewerScriptUrl":"https:\/\/static.parastorage.com\/services\/admin-pages-editor-app\/1.718.0\/viewerScript.bundle.min.js","editorScriptUrl":"https:\/\/static.parastorage.com\/services\/admin-pages-editor-app\/1.718.0\/editorScript.bundle.min.js","margins":{"desktop":{"top":{"type":"PX","value":0},"right":{"type":"PX","value":0},"bottom":{"type":"PX","value":0},"left":{"type":"PX","value":0}},"tablet":{"top":{},"right":{},"bottom":{},"left":{}},"mobile":{"top":{},"right":{},"bottom":{},"left":{}}},"height":{"desktop":{},"tablet":{},"mobile":{}},"isStretched":{},"docking":{"desktop":{"horizontal":"HCENTER","vertical":"TOP_DOCKING"},"tablet":{},"mobile":{}},"errorReporting":{},"width":{"desktop":{},"tablet":{},"mobile":{}},"viewer":{"errorReporting":{}}},"permissionsEnforced":false,"blocksPermissionsEnforced":false,"isStandalone":true,"semanticVersion":"^0.0.0"},"isWixTPA":true},"225dd912-7dea-4738-8688-4b8c6955ffc2":{"applicationId":28085,"appDefinitionName":"Wix Forms","appFields":{"platform":{"baseUrls":{"staticsBaseUrl":"https:\/\/static.parastorage.com\/services\/form-app\/1.2413.0","staticsEditorBaseUrl":"https:\/\/static.parastorage.com\/services\/form-app\/1.2413.0"},"baseUrlsTemplate":{"staticsBaseUrl":"https:\/\/static.parastorage.com\/services\/form-app\/1.2413.0"},"editorScriptUrl":"https:\/\/static.parastorage.com\/services\/form-app\/1.2413.0\/editorScript.bundle.min.js","viewerScriptUrl":"https:\/\/static.parastorage.com\/services\/form-app\/1.2413.0\/viewerScript.bundle.min.js","errorReporting":{"url":"https:\/\/5d1795a2db124a268f1e1bd88f503500@sentry.wixpress.com\/4615"},"viewer":{"errorReporting":{"url":"https:\/\/5d1795a2db124a268f1e1bd88f503500@sentry.wixpress.com\/4615"}},"ooiInEditor":true},"permissionsEnforced":false,"blocksPermissionsEnforced":false,"isStandalone":true,"semanticVersion":"^0.1144.0"},"isWixTPA":true}},"previewMode":false,"siteRevision":11177,"userFileDomainUrl":"filesusr.com","metaSiteId":"b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1","isPremiumDomain":true,"routersConfig":{"routers-lpdz75mh":{"prefix":"account","appDefinitionId":"14cc59bc-f0b7-15b8-e1c7-89ce41d0e0c9","config":"{\"type\":\"private\",\"patterns\":{\"\/my-account\":{\"socialHome\":false,\"appData\":{\"appDefinitionId\":\"14cffd81-5215-0a7f-22f8-074b0e2401fb\",\"appPageId\":\"member_info\",\"menuOrder\":3,\"visibleForRoles\":[]},\"page\":\"ede32970-5e9c-406c-9950-09655f962869\",\"seoData\":{\"title\":\"Mi cuenta\",\"description\":\"\",\"keywords\":\"\",\"noIndex\":\"true\"},\"title\":\"Mi cuenta\"},\"\/my-subscriptions\":{\"socialHome\":false,\"appData\":{\"numbers\":{},\"appDefinitionId\":\"2bef2abe-7abe-43da-889c-53c1500a328c\",\"appPageId\":\"My Subscriptions\",\"menuOrder\":2,\"visibleForRoles\":[]},\"page\":\"380936b6-70ca-4254-8474-31bedebcd7e4\",\"seoData\":{\"title\":\"Mis suscripciones\",\"description\":\"\",\"keywords\":\"\",\"noIndex\":\"true\"},\"title\":\"Mis suscripciones\"},\"\/my-addresses\":{\"socialHome\":false,\"appData\":{\"numbers\":{},\"appDefinitionId\":\"1505b775-e885-eb1b-b665-1e485d9bf90e\",\"appPageId\":\"my_addresses\",\"menuOrder\":2,\"visibleForRoles\":[]},\"page\":\"541a5cc2-d6f6-4cd8-8a90-312ce207e850\",\"seoData\":{\"title\":\"Mis direcciones\",\"description\":\"\",\"keywords\":\"\",\"noIndex\":\"true\"},\"title\":\"Mis direcciones\"},\"\/my-wallet\":{\"socialHome\":false,\"appData\":{\"numbers\":{},\"appDefinitionId\":\"4aebd0cb-fbdb-4da7-b5d1-d05660a30172\",\"appPageId\":\"my_wallet\",\"menuOrder\":2,\"visibleForRoles\":[]},\"page\":\"e223a1f4-3ce9-44de-bbf3-c7e77c21e6ab\",\"seoData\":{\"title\":\"Mi billetera\",\"description\":\"\",\"keywords\":\"\",\"noIndex\":\"true\"},\"title\":\"Mi billetera\"},\"\/settings\":{\"socialHome\":false,\"appData\":{\"numbers\":{},\"appDefinitionId\":\"14f25dc5-6af3-5420-9568-f9c5ed98c9b1\",\"appPageId\":\"settings\",\"menuOrder\":4,\"visibleForRoles\":[]},\"page\":\"4403c30c-a1ec-497e-9056-d87d7ffae212\",\"seoData\":{\"title\":\"Opciones\",\"description\":\"\",\"keywords\":\"\",\"noIndex\":\"true\"},\"title\":\"Opciones\"},\"\/notifications\":{\"socialHome\":false,\"appData\":{\"numbers\":{\"key\":\"notificationsCount\",\"default\":0},\"appDefinitionId\":\"14f25924-5664-31b2-9568-f9c5ed98c9b1\",\"appPageId\":\"notifications_app\",\"menuOrder\":4,\"visibleForRoles\":[]},\"page\":\"ad16ce05-02eb-4802-86ef-e3f6cb5d2056\",\"seoData\":{\"title\":\"Notificaciones\",\"description\":\"\",\"keywords\":\"\",\"noIndex\":\"true\"},\"title\":\"Notificaciones\"},\"\/my-orders\":{\"socialHome\":false,\"appData\":{\"numbers\":{},\"appDefinitionId\":\"1380b703-ce81-ff05-f115-39571d94dfcd\",\"appPageId\":\"order_history\",\"menuOrder\":2,\"visibleForRoles\":[]},\"page\":\"cfe08b5e-852d-4a74-b28c-53cd2d18a0f9\",\"seoData\":{\"title\":\"Mis pedidos\",\"description\":\"\",\"keywords\":\"\",\"noIndex\":\"true\"},\"title\":\"Mis pedidos\"},\"\/my-bookings\":{\"socialHome\":false,\"appData\":{\"numbers\":{},\"appDefinitionId\":\"13d21c63-b5ec-5912-8397-c3a5ddb27a97\",\"appPageId\":\"bookings_member_area\",\"menuOrder\":2,\"visibleForRoles\":[]},\"page\":\"221dd5b5-a7e8-483e-92bc-c8aefef82fb4\",\"seoData\":{\"title\":\"Mis reservas\",\"description\":\"\",\"keywords\":\"\",\"noIndex\":\"true\"},\"title\":\"Mis reservas\"},\"\/my-groups\":{\"socialHome\":false,\"appData\":{\"numbers\":{},\"appDefinitionId\":\"148c2287-c669-d849-d153-463c7486a694\",\"appPageId\":\"My Groups\",\"menuOrder\":2,\"visibleForRoles\":[]},\"page\":\"9869a6f2-b478-4cf3-8fbc-0b8979b85e04\",\"seoData\":{\"title\":\"My Groups\",\"description\":\"\",\"keywords\":\"\",\"noIndex\":\"true\"},\"title\":\"My Groups\"}}}","group":"members","pages":{"cfe08b5e-852d-4a74-b28c-53cd2d18a0f9":"pkvic","221dd5b5-a7e8-483e-92bc-c8aefef82fb4":"wrmtp","ad16ce05-02eb-4802-86ef-e3f6cb5d2056":"yp7a1","e223a1f4-3ce9-44de-bbf3-c7e77c21e6ab":"tpqog","380936b6-70ca-4254-8474-31bedebcd7e4":"wpgmi","541a5cc2-d6f6-4cd8-8a90-312ce207e850":"in5n9","ede32970-5e9c-406c-9950-09655f962869":"v760n","9869a6f2-b478-4cf3-8fbc-0b8979b85e04":"u305p","4403c30c-a1ec-497e-9056-d87d7ffae212":"muzu0"},"roleVariations":{}},"routers-lsx0bfnn":{"prefix":"partners","appDefinitionId":"dataBinding","config":"{\"patterns\":{\"\/{title}\":{\"seoMetaTags\":{\"description\":\"{_id}\",\"robots\":\"index\",\"keywords\":\"\",\"og:image\":\"\"},\"pageRole\":\"a52dca6c-d625-428a-bfc6-ba31939fd9d2\",\"title\":\"{title}\",\"config\":{\"collection\":\"Partners\",\"pageSize\":26,\"lowercase\":true,\"seoV2\":true}}}}","group":"","pages":{"a52dca6c-d625-428a-bfc6-ba31939fd9d2":"n1mgf"},"roleVariations":{}},"routers-m7krxodo":{"prefix":"logs-api-panel","appDefinitionId":"dataBinding","config":"{\"patterns\":{\"\/\":{\"seoMetaTags\":{\"description\":\"{request}\",\"robots\":\"index\"},\"pageRole\":\"62d1cbe7-edd5-4013-9ffd-4b33b0101891\",\"title\":\"LogsAPIPanel\",\"config\":{\"collection\":\"LogsAPIPanel\",\"pageSize\":1,\"lowercase\":true,\"seoV2\":true}}}}","group":"","pages":{"62d1cbe7-edd5-4013-9ffd-4b33b0101891":"uv3a3"},"roleVariations":{}},"routers-lpdz75mh1":{"prefix":"profile","appDefinitionId":"14cc59bc-f0b7-15b8-e1c7-89ce41d0e0c9","config":"{\"type\":\"public\",\"patterns\":{\"\/{userName}\/profile\":{\"socialHome\":true,\"appData\":{\"numbers\":{},\"appDefinitionId\":\"14dbef06-cc42-5583-32a7-3abd44da4908\",\"appPageId\":\"about\",\"menuOrder\":1,\"visibleForRoles\":[]},\"page\":\"296fd1b2-b2d3-43e1-8485-54b566155d9b\",\"seoData\":{\"title\":\"{userName} | Perfil\",\"description\":\"\",\"keywords\":\"\",\"noIndex\":\"true\"},\"title\":\"Perfil\"}}}","group":"members","pages":{"296fd1b2-b2d3-43e1-8485-54b566155d9b":"a7c5z"},"roleVariations":{}}},"routerByPrefix":{"account":"routers-lpdz75mh","partners":"routers-lsx0bfnn","logs-api-panel":"routers-m7krxodo","profile":"routers-lpdz75mh1"},"pageIdToPrefix":{"pkvic":"account","wrmtp":"account","yp7a1":"account","tpqog":"account","wpgmi":"account","in5n9":"account","v760n":"account","u305p":"account","muzu0":"account","n1mgf":"partners","uv3a3":"logs-api-panel","a7c5z":"profile"},"viewMode":"site","editorOrSite":"site","externalBaseUrl":"https:\/\/www.dehonline.es","tpaModalConfig":{"wixTPAs":{"14ce1214-b278-a7e4-1373-00cebd1bef7c":true,"94bc563b-675f-41ad-a2a6-5494f211c47b":true,"14e12b04-943e-fd32-456d-70b1820a2ff2":true,"14d84998-ae09-1abf-c6fc-3f3cace5bf19":true,"f105ba16-6b7a-4b52-a2e5-712bdc749f76":true,"1380b703-ce81-ff05-f115-39571d94dfcd":true,"e4b5f1bc-c77a-4319-a60d-a46acb17f6fc":true,"14bca956-e09f-f4d6-14d7-466cb3f09103":true,"35aec784-bbec-4e6e-abcb-d3d724af52cf":true,"150ae7ee-c74a-eecd-d3d7-2112895b988a":true,"141fbfae-511e-6817-c9f0-48993a7547d1":true,"13ee94c1-b635-8505-3391-97919052c16f":true,"55cd9036-36bb-480b-8ddc-afda3cb2eb8d":true,"f123e8f1-4350-4c9b-b269-04adfadda977":true,"9bead16f-1c73-4cda-b6c4-28cff46988db":true,"1480c568-5cbd-9392-5604-1148f5faffa0":true,"d70b68e2-8d77-4e0c-9c00-c292d6e0025e":true,"14b89688-9b25-5214-d1cb-a3fb9683618b":true,"135c3d92-0fea-1f9d-2ba5-2a1dfb04297e":true,"146c0d71-352e-4464-9a03-2e868aabe7b9":true,"139ef4fa-c108-8f9a-c7be-d5f492a2c939":true,"307ba931-689c-4b55-bb1d-6a382bad9222":true,"4b10fcce-732d-4be3-9d46-801d271acda9":true,"ea2821fc-7d97-40a9-9f75-772f29178430":true,"8725b255-2aa2-4a53-b76d-7d3c363aaeea":true,"8ea9df15-9ff6-4acf-bbb8-8d3a69ae5841":true,"6580b7e9-4031-4a62-a0a5-8e2fa92e8e18":true,"14d7032a-0a65-5270-cca7-30f599708fed":true,"7516f85b-0868-4c23-9fcb-cea7784243df":true,"57d13128-4a4c-494b-80b3-a6fb2e28018d":true,"eec3496e-44a8-45ac-9581-868a67345be8":true,"cf06bdf3-5bab-4f20-b165-97fb723dac6a":true,"338b722e-f5fa-4e0d-8315-659e8c03123e":true,"1973457f-c021-4da5-941f-58444ff761d4":true,"45c44b27-ca7b-4891-8c0d-1747d588b835":true,"fc9314bc-a317-4a2b-a9d4-5ad21cc57856":true,"50d8c12f-715e-41ad-be25-d0f61375dbee":true,"f4d83b06-b408-4f3b-afd4-de8db311d7d8":true,"c5abc3eb-299c-4e3e-8aff-3c674d2ede83":true,"2f70e2b4-ff36-472e-bdb9-ce393b13669e":true,"e593b0bd-b783-45b8-97c2-873d42aacaf4":true,"14271d6f-ba62-d045-549b-ab972ae1f70e":true,"14c92d28-031e-7910-c9a8-a670011e062d":true,"12d0391f-f7a2-9f43-153d-883f9017e252":true,"134139f3-f2a0-2c2c-693c-ed22165cfd84":true,"215238eb-22a5-4c36-9e7b-e7c08025e04e":true,"14cc59bc-f0b7-15b8-e1c7-89ce41d0e0c9":true,"14cffd81-5215-0a7f-22f8-074b0e2401fb":true,"14ce28f7-7eb0-3745-22f8-074b0e2401fb":true,"4aebd0cb-fbdb-4da7-b5d1-d05660a30172":true,"1505b775-e885-eb1b-b665-1e485d9bf90e":true,"2bef2abe-7abe-43da-889c-53c1500a328c":true,"14517e1a-3ff0-af98-408e-2bd6953c36a2":true,"14bcded7-0066-7c35-14d7-466cb3f09103":true,"1484cb44-49cd-5b39-9681-75188ab429de":true,"14f25dc5-6af3-5420-9568-f9c5ed98c9b1":true,"14dbef06-cc42-5583-32a7-3abd44da4908":true,"14f25924-5664-31b2-9568-f9c5ed98c9b1":true,"148c2287-c669-d849-d153-463c7486a694":true,"bcf2aea9-53d2-4139-9a63-3ad7ecc93d28":true,"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130":true,"949cfcc9-2a3f-4a96-bd6c-11d9d82763a4":true,"13d21c63-b5ec-5912-8397-c3a5ddb27a97":true,"1514b01b-cb08-41b4-8582-0a88551ac769":true,"225dd912-7dea-4738-8688-4b8c6955ffc2":true,"bbe1406a-31f5-4f3f-9e0a-b39dfd25274f":true}},"appSectionParams":{},"requestUrl":"https:\/\/www.dehonline.es\/documbox-info","isMobileView":false,"deviceType":"desktop","isMobileDevice":false,"extras":{"currency":"EUR"},"tpaDebugParams":{"debugApp":null,"petri_ovr":null},"locale":"es","timeZone":"Europe\/Madrid","shouldRenderTPAsIframe":true,"debug":false,"regionalLanguage":"es","isBuilderComponentModel":false},"tpaWorkerFeature":{"tpaWorkers":{"12":{"appWorkerUrl":"https:\/\/loadbalancer.visitor-analytics.io\/worker","appDefinitionName":"TWIPLA Website Intelligence","appDefinitionId":"13ee53b4-2343-b641-c84d-056d2e6ed2e6"}}},"widgetWixCodeSdk":{"isBuilderComponentModel":false},"windowWixCodeSdk":{"locale":"es-es","isMobileFriendly":true,"formFactor":"Desktop","pageIdToRouterAppDefinitionId":{"pkvic":"14cc59bc-f0b7-15b8-e1c7-89ce41d0e0c9","wrmtp":"14cc59bc-f0b7-15b8-e1c7-89ce41d0e0c9","yp7a1":"14cc59bc-f0b7-15b8-e1c7-89ce41d0e0c9","tpqog":"14cc59bc-f0b7-15b8-e1c7-89ce41d0e0c9","wpgmi":"14cc59bc-f0b7-15b8-e1c7-89ce41d0e0c9","in5n9":"14cc59bc-f0b7-15b8-e1c7-89ce41d0e0c9","v760n":"14cc59bc-f0b7-15b8-e1c7-89ce41d0e0c9","u305p":"14cc59bc-f0b7-15b8-e1c7-89ce41d0e0c9","muzu0":"14cc59bc-f0b7-15b8-e1c7-89ce41d0e0c9","n1mgf":"dataBinding","uv3a3":"dataBinding","a7c5z":"14cc59bc-f0b7-15b8-e1c7-89ce41d0e0c9"}},"wixCustomElementComponent":{"shouldLoadAllExternalScripts":true,"widgetsToRenderOnFreeSites":{"0034db53-7a4c-415f-a375-0beec4764c0f":true,"e2bc0d55-ae43-40cf-aec1-37dc3ec2f07f":true,"5c047089-b4af-4395-bd58-139524a3da1d-q97rx":true,"5c047089-b4af-4395-bd58-139524a3da1d-v2irl":true,"14bcded7-0066-7c35-14d7-466cb3f09103-sw47o":true,"14bcded7-0066-7c35-14d7-466cb3f09103-ak2wd":true,"14bcded7-0066-7c35-14d7-466cb3f09103-q8dzf":true,"14bcded7-0066-7c35-14d7-466cb3f09103-u5w25":true,"14bcded7-0066-7c35-14d7-466cb3f09103-hoxv1":true,"14bcded7-0066-7c35-14d7-466cb3f09103-pit6d":true,"14bcded7-0066-7c35-14d7-466cb3f09103-prihd":true,"14bcded7-0066-7c35-14d7-466cb3f09103-dqjva":true,"14bcded7-0066-7c35-14d7-466cb3f09103-nz8hi":true,"14bcded7-0066-7c35-14d7-466cb3f09103-e9hqn":true,"14bcded7-0066-7c35-14d7-466cb3f09103-e3jvn":true,"14bcded7-0066-7c35-14d7-466cb3f09103-gcv5t":true,"14bcded7-0066-7c35-14d7-466cb3f09103-ghrxf":true,"14bcded7-0066-7c35-14d7-466cb3f09103-liy9s":true,"14bcded7-0066-7c35-14d7-466cb3f09103-eii64":true,"14bcded7-0066-7c35-14d7-466cb3f09103-u61rq":true,"14bcded7-0066-7c35-14d7-466cb3f09103-pzdqd":true,"14bcded7-0066-7c35-14d7-466cb3f09103-yrjyo":true,"14bcded7-0066-7c35-14d7-466cb3f09103-wzdp6":true,"14bcded7-0066-7c35-14d7-466cb3f09103-y3apm":true,"14bcded7-0066-7c35-14d7-466cb3f09103-bu1xw":true,"14bcded7-0066-7c35-14d7-466cb3f09103-pz2i2":true,"14bcded7-0066-7c35-14d7-466cb3f09103-e25z0":true,"14bcded7-0066-7c35-14d7-466cb3f09103-b0z74":true,"14bcded7-0066-7c35-14d7-466cb3f09103-h77jn":true,"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130-n4kxq":true,"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130-fs0dm":true,"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130-vvhj5":true,"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130-voiu8":true,"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130-r1fnu":true,"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130-kqw5u":true,"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130-o34ka":true,"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130-zmzxw":true,"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130-ojo5l":true,"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130-vp33g":true,"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130-e0nv3":true,"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130-cmkcv":true,"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130-a88xg":true,"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130-rb9ev":true,"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130-rtfl6":true,"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130-fm689":true,"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130-yufgs":true,"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130-szewz":true,"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130-a41im":true,"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130-loeuo":true,"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130-pnw72":true,"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130-itb6f":true,"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130-u8zs5":true,"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130-jk3m4":true,"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130-ifjtt":true,"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130-fzkgi":true,"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130-g3w3b":true,"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130-lfhru":true,"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130-spm0i":true,"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130-rnjwx":true,"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130-yxdba":true,"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130-xi4az":true,"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130-a5206":true,"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130-umlly":true,"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130-waybk":true,"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130-os5sm":true,"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130-jqcf0":true,"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130-ec6h7":true,"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130-yaafe":true,"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130-n0thf":true,"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130-egi36":true,"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130-r7t9v":true,"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130-aob4e":true,"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130-gnamo":true,"13d21c63-b5ec-5912-8397-c3a5ddb27a97-flb7a":true,"13d21c63-b5ec-5912-8397-c3a5ddb27a97-cv54f":true,"13d21c63-b5ec-5912-8397-c3a5ddb27a97-drzkv":true,"13d21c63-b5ec-5912-8397-c3a5ddb27a97-cyng5":true},"wixCodeBundlersUrlData":{"url":"https:\/\/bundler.wix-code.com\/b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/cd8308c8-d8e2-44bc-aa5e-f2a62a9bc2d6\/5fa8ac08-adbb-498d-8d2c-f4685175922b\/","queryParams":"init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","parastorageUrl":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_","appDefIdToWixCodeBundlerUrlData":{"5c047089-b4af-4395-bd58-139524a3da1d":{"url":"https:\/\/bundler.wix-code.com\/b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/cd8308c8-d8e2-44bc-aa5e-f2a62a9bc2d6\/de11cb8d-1ed2-4ef4-a07a-2ab788c19320\/","parastorageUrl":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_de11cb8d-1ed2-4ef4-a07a-2ab788c19320\/filePath_\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_","queryParams":"init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false"},"14271d6f-ba62-d045-549b-ab972ae1f70e":{"url":"https:\/\/bundler.wix-code.com\/b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/cd8308c8-d8e2-44bc-aa5e-f2a62a9bc2d6\/71869e96-79b7-49b9-b6f9-e32bcf00ac52\/","parastorageUrl":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_71869e96-79b7-49b9-b6f9-e32bcf00ac52\/filePath_\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_","queryParams":"init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false"},"14bcded7-0066-7c35-14d7-466cb3f09103":{"url":"https:\/\/bundler.wix-code.com\/b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/cd8308c8-d8e2-44bc-aa5e-f2a62a9bc2d6\/21056c2c-144a-488f-912d-5fb0e1262beb\/","parastorageUrl":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_21056c2c-144a-488f-912d-5fb0e1262beb\/filePath_\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_","queryParams":"init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false"},"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130":{"url":"https:\/\/bundler.wix-code.com\/b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/cd8308c8-d8e2-44bc-aa5e-f2a62a9bc2d6\/2122ce2b-e7c2-40bf-a898-a6aa6f852c52\/","parastorageUrl":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_2122ce2b-e7c2-40bf-a898-a6aa6f852c52\/filePath_\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_","queryParams":"init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false"}}},"customElementWidgets":{}},"wixEmbedsApi":{"isAdminPage":false},"platform":{"sdksStaticPaths":{"mainSdks":"https:\/\/static.parastorage.com\/services\/wix-thunderbolt\/dist\/mainSdks.0b1ed80a.chunk.min.js","nonMainSdks":"https:\/\/static.parastorage.com\/services\/wix-thunderbolt\/dist\/nonMainSdks.b8fced9e.chunk.min.js"},"landingPageId":"shn4f","clientWorkerUrl":"https:\/\/static.parastorage.com\/services\/wix-thunderbolt\/dist\/clientWorker.94d0f5f9.bundle.min.js","bootstrapData":{"isMobileView":false,"isMobileAppBuilder":false,"appsSpecData":{"14ce1214-b278-a7e4-1373-00cebd1bef7c":{"appDefinitionId":"14ce1214-b278-a7e4-1373-00cebd1bef7c","type":"public","instanceId":"a8ab26ce-f1d7-406f-ad1e-a055eb9a6cb1","appDefinitionName":"Old Wix Forms and Payments","isWixTPA":true,"isIdentityTokenAppSpec":false,"isModuleFederated":false},"675bbcef-18d8-41f5-800e-131ec9e08762":{"appDefinitionId":"675bbcef-18d8-41f5-800e-131ec9e08762","type":"siteextension","instanceId":"cd8308c8-d8e2-44bc-aa5e-f2a62a9bc2d6","isIdentityTokenAppSpec":false,"isModuleFederated":false},"1380b703-ce81-ff05-f115-39571d94dfcd":{"appDefinitionId":"1380b703-ce81-ff05-f115-39571d94dfcd","type":"public","instanceId":"4d7c91d1-f366-46e9-9b94-38c57faa0141","appDefinitionName":"Checkout & Orders","isWixTPA":true,"isIdentityTokenAppSpec":false,"isModuleFederated":false},"5c047089-b4af-4395-bd58-139524a3da1d":{"appDefinitionId":"5c047089-b4af-4395-bd58-139524a3da1d","type":"public","instanceId":"7fa9e062-2718-400b-b580-df6d937e76a6","appDefinitionName":"Numbers: Show Animated Stats","isWixTPA":false,"isIdentityTokenAppSpec":false,"isModuleFederated":false},"14271d6f-ba62-d045-549b-ab972ae1f70e":{"appDefinitionId":"14271d6f-ba62-d045-549b-ab972ae1f70e","type":"public","instanceId":"be0cac85-d368-4920-bbf2-4942752de712","appDefinitionName":"Wix Pro Gallery","isWixTPA":true,"isIdentityTokenAppSpec":false,"isModuleFederated":false},"14c92d28-031e-7910-c9a8-a670011e062d":{"appDefinitionId":"14c92d28-031e-7910-c9a8-a670011e062d","type":"public","instanceId":"b501903d-4c9f-410c-a68a-7fca1dfd9378","appDefinitionName":"Wix FAQ","isWixTPA":true,"isIdentityTokenAppSpec":false,"isModuleFederated":false},"215238eb-22a5-4c36-9e7b-e7c08025e04e":{"appDefinitionId":"215238eb-22a5-4c36-9e7b-e7c08025e04e","type":"public","instanceId":"b02eb083-9ba2-460d-a948-89b82fda0c43","appDefinitionName":"Wix Stores","isWixTPA":true,"isIdentityTokenAppSpec":false,"isModuleFederated":false},"14cc59bc-f0b7-15b8-e1c7-89ce41d0e0c9":{"appDefinitionId":"14cc59bc-f0b7-15b8-e1c7-89ce41d0e0c9","type":"public","instanceId":"ab492a4b-9a3f-46ba-8b64-29fa126356ed","appDefinitionName":"Wix Members Area","isWixTPA":true,"isIdentityTokenAppSpec":false,"isModuleFederated":false},"14cffd81-5215-0a7f-22f8-074b0e2401fb":{"appDefinitionId":"14cffd81-5215-0a7f-22f8-074b0e2401fb","type":"public","instanceId":"80ae33f3-fcd4-4c3e-8b31-142715bf4687","appDefinitionName":"Member Account Info","isWixTPA":true,"isIdentityTokenAppSpec":false,"isModuleFederated":false},"14ce28f7-7eb0-3745-22f8-074b0e2401fb":{"appDefinitionId":"14ce28f7-7eb0-3745-22f8-074b0e2401fb","type":"public","instanceId":"abce3a13-0080-40d0-bb76-264c4dddfeb5","appDefinitionName":"Profile Card","isWixTPA":true,"isIdentityTokenAppSpec":false,"isModuleFederated":false},"4aebd0cb-fbdb-4da7-b5d1-d05660a30172":{"appDefinitionId":"4aebd0cb-fbdb-4da7-b5d1-d05660a30172","type":"public","instanceId":"37066576-ae41-45e6-bdb1-16281e4131cf","appDefinitionName":"My Wallet","isWixTPA":true,"isIdentityTokenAppSpec":false,"isModuleFederated":false},"2bef2abe-7abe-43da-889c-53c1500a328c":{"appDefinitionId":"2bef2abe-7abe-43da-889c-53c1500a328c","type":"public","instanceId":"894f1779-5f7a-473e-9f48-affee6dc6510","appDefinitionName":"My Subscriptions","isWixTPA":true,"isIdentityTokenAppSpec":false,"isModuleFederated":false},"14517e1a-3ff0-af98-408e-2bd6953c36a2":{"appDefinitionId":"14517e1a-3ff0-af98-408e-2bd6953c36a2","type":"public","instanceId":"a6094cbd-2181-4bd8-bdf7-445230dfd2e5","appDefinitionName":"Wix Chat","isWixTPA":true,"isIdentityTokenAppSpec":false,"isModuleFederated":false},"14bcded7-0066-7c35-14d7-466cb3f09103":{"appDefinitionId":"14bcded7-0066-7c35-14d7-466cb3f09103","type":"public","instanceId":"821c5ca5-d74c-4c95-9448-f18d84ae503f","appDefinitionName":"Wix Blog","isWixTPA":true,"isIdentityTokenAppSpec":false,"isModuleFederated":false},"1484cb44-49cd-5b39-9681-75188ab429de":{"appDefinitionId":"1484cb44-49cd-5b39-9681-75188ab429de","type":"public","instanceId":"08e7f76b-4df0-4599-ad9b-681cce0df8c9","appDefinitionName":"Wix Site Search","isWixTPA":true,"isIdentityTokenAppSpec":false,"isModuleFederated":false},"14f25dc5-6af3-5420-9568-f9c5ed98c9b1":{"appDefinitionId":"14f25dc5-6af3-5420-9568-f9c5ed98c9b1","type":"public","instanceId":"560da035-d45f-42e9-9ce1-f8a46175dfa3","appDefinitionName":"Members Notifications Settings","isWixTPA":true,"isIdentityTokenAppSpec":false,"isModuleFederated":false},"14dbef06-cc42-5583-32a7-3abd44da4908":{"appDefinitionId":"14dbef06-cc42-5583-32a7-3abd44da4908","type":"public","instanceId":"17ca0a5f-2e56-48e7-81c7-7d9af6ec4660","appDefinitionName":"Members About","isWixTPA":true,"isIdentityTokenAppSpec":false,"isModuleFederated":false},"14f25924-5664-31b2-9568-f9c5ed98c9b1":{"appDefinitionId":"14f25924-5664-31b2-9568-f9c5ed98c9b1","type":"public","instanceId":"5c48f98e-aad1-4366-8e1b-ec5453cd1622","appDefinitionName":"Wix Members Area Notifications","isWixTPA":true,"isIdentityTokenAppSpec":false,"isModuleFederated":false},"148c2287-c669-d849-d153-463c7486a694":{"appDefinitionId":"148c2287-c669-d849-d153-463c7486a694","type":"public","instanceId":"a81f6c1b-80b3-4462-8567-3a4aff63b848","appDefinitionName":"Wix Groups","isWixTPA":true,"isIdentityTokenAppSpec":false,"isModuleFederated":false},"bcf2aea9-53d2-4139-9a63-3ad7ecc93d28":{"appDefinitionId":"bcf2aea9-53d2-4139-9a63-3ad7ecc93d28","type":"public","instanceId":"a1b30afc-bdff-46b8-8218-1ee4fe761682","appDefinitionName":"Wix Chat Button","isWixTPA":true,"isIdentityTokenAppSpec":false,"isModuleFederated":false},"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130":{"appDefinitionId":"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130","type":"public","instanceId":"3f4d84aa-7e06-463d-b62f-8c971bb949ea","appDefinitionName":"Wix Portfolio","isWixTPA":true,"isIdentityTokenAppSpec":false,"isModuleFederated":false},"949cfcc9-2a3f-4a96-bd6c-11d9d82763a4":{"appDefinitionId":"949cfcc9-2a3f-4a96-bd6c-11d9d82763a4","type":"public","instanceId":"dbaf3704-70fe-44f4-bd8c-e9107663b64b","appDefinitionName":"ricos-viewer-ooi","isWixTPA":true,"isIdentityTokenAppSpec":false,"isModuleFederated":false},"13d21c63-b5ec-5912-8397-c3a5ddb27a97":{"appDefinitionId":"13d21c63-b5ec-5912-8397-c3a5ddb27a97","type":"public","instanceId":"e4407115-9c91-444a-85da-da31257c1a0f","appDefinitionName":"Wix Bookings","isWixTPA":true,"isIdentityTokenAppSpec":false,"isModuleFederated":false},"1514b01b-cb08-41b4-8582-0a88551ac769":{"appDefinitionId":"1514b01b-cb08-41b4-8582-0a88551ac769","type":"public","instanceId":"8c9af9c0-28e2-4b56-bc65-5d338bde275c","appDefinitionName":"Admin Pages","isWixTPA":true,"isIdentityTokenAppSpec":false,"isModuleFederated":false},"225dd912-7dea-4738-8688-4b8c6955ffc2":{"appDefinitionId":"225dd912-7dea-4738-8688-4b8c6955ffc2","type":"public","instanceId":"983ce87b-0a46-4a58-9564-a3f3f9a58f36","appDefinitionName":"Wix Forms","isWixTPA":true,"isIdentityTokenAppSpec":false,"isModuleFederated":false},"bbe1406a-31f5-4f3f-9e0a-b39dfd25274f":{"appDefinitionId":"bbe1406a-31f5-4f3f-9e0a-b39dfd25274f","type":"public","instanceId":"c0c4984f-f293-498d-9050-44cfe273212b","appDefinitionName":"sm-platform-app","isWixTPA":true,"isIdentityTokenAppSpec":false,"isModuleFederated":false},"dataBinding":{"appDefinitionId":"dataBinding","type":"application","instanceId":"cd8308c8-d8e2-44bc-aa5e-f2a62a9bc2d6","appDefinitionName":"Data Binding","isWixTPA":true,"isIdentityTokenAppSpec":false,"isModuleFederated":false}},"appsUrlData":{"14ce1214-b278-a7e4-1373-00cebd1bef7c":{"appDefId":"14ce1214-b278-a7e4-1373-00cebd1bef7c","appDefName":"Old Wix Forms and Payments","viewerScriptUrl":"https:\/\/static.parastorage.com\/services\/forms-viewer\/1.883.0\/viewerScript.bundle.min.js","baseUrls":{},"widgets":{}},"1380b703-ce81-ff05-f115-39571d94dfcd":{"appDefId":"1380b703-ce81-ff05-f115-39571d94dfcd","appDefName":"Checkout & Orders","viewerScriptUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-worker\/1.4706.0\/viewerScript.bundle.min.js","baseUrls":{"staticsBaseUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-cart-ooi\/1.5988.0\/","addToCartBaseUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-add-to-cart\/1.1496.0\/","cartIconBaseUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-cart-icon\/1.2290.0\/","productWidgetBaseUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-product-widget\/1.2052.0\/","galleryBaseUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-gallery\/1.5848.0\/","wishlistBaseUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-wishlist\/1.2322.0\/","productPageBaseUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-product-page\/1.4206.0\/"},"widgets":{"13a94f09-2766-3c40-4a32-8edb5acdd8bc":{"controllerUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-product-page\/1.4206.0\/ProductPageController.bundle.min.js","componentUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-product-page\/1.4206.0\/ProductPageViewerWidget.bundle.min.js","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-product-page\/1.4206.0\/ProductPageViewerWidgetNoCss.bundle.min.js","widgetId":"13a94f09-2766-3c40-4a32-8edb5acdd8bc","cssPerBreakpoint":true},"49dbb2d9-d9e5-4605-a147-e926605bf164":{"controllerUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-cart-ooi\/1.5988.0\/SideCartController.bundle.min.js","componentUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-cart-ooi\/1.5988.0\/SideCartViewerWidget.bundle.min.js","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-cart-ooi\/1.5988.0\/SideCartViewerWidgetNoCss.bundle.min.js","widgetId":"49dbb2d9-d9e5-4605-a147-e926605bf164","cssPerBreakpoint":true},"14666402-0bc7-b763-e875-e99840d131bd":{"controllerUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-add-to-cart\/1.1496.0\/addToCartController.bundle.min.js","componentUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-add-to-cart\/1.1496.0\/addToCart.bundle.min.js","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-add-to-cart\/1.1496.0\/addToCartNoCss.bundle.min.js","errorReportingUrl":"https:\/\/8c4075d5481d476e945486754f783364@sentry.io\/1865790","widgetId":"14666402-0bc7-b763-e875-e99840d131bd"},"a63a5215-8aa6-42af-96b1-583bfd74cff5":{"controllerUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-gallery\/1.5848.0\/WishlistController.bundle.min.js","componentUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-gallery\/1.5848.0\/WishlistViewerWidget.bundle.min.js","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-gallery\/1.5848.0\/WishlistViewerWidgetNoCss.bundle.min.js","widgetId":"a63a5215-8aa6-42af-96b1-583bfd74cff5","cssPerBreakpoint":true},"13afb094-84f9-739f-44fd-78d036adb028":{"controllerUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-gallery\/1.5848.0\/GridGalleryController.bundle.min.js","componentUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-gallery\/1.5848.0\/GridGalleryViewerWidget.bundle.min.js","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-gallery\/1.5848.0\/GridGalleryViewerWidgetNoCss.bundle.min.js","widgetId":"13afb094-84f9-739f-44fd-78d036adb028","cssPerBreakpoint":true},"1380bbab-4da3-36b0-efb4-2e0599971d14":{"controllerUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-cart-ooi\/1.5988.0\/cartController.bundle.min.js","componentUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-cart-ooi\/1.5988.0\/cartViewerWidget.bundle.min.js","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-cart-ooi\/1.5988.0\/cartViewerWidgetNoCss.bundle.min.js","widgetId":"1380bbab-4da3-36b0-efb4-2e0599971d14"},"139a41fd-0b1d-975f-6f67-e8cbdf8ccc82":{"controllerUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-gallery\/1.5848.0\/SliderGalleryController.bundle.min.js","componentUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-gallery\/1.5848.0\/SliderGalleryViewerWidget.bundle.min.js","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-gallery\/1.5848.0\/SliderGalleryViewerWidgetNoCss.bundle.min.js","widgetId":"139a41fd-0b1d-975f-6f67-e8cbdf8ccc82","cssPerBreakpoint":true},"1380bbb4-8df0-fd38-a235-88821cf3f8a4":{"controllerUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-thank-you-page-ooi\/1.3451.0\/thankYouPageController.bundle.min.js","componentUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-thank-you-page-ooi\/1.3451.0\/thankYouPageViewerWidget.bundle.min.js","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-thank-you-page-ooi\/1.3451.0\/thankYouPageViewerWidgetNoCss.bundle.min.js","widgetId":"1380bbb4-8df0-fd38-a235-88821cf3f8a4"},"14e121c8-00a3-f7cc-6156-2c82a2ba8fcb":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","widgetId":"14e121c8-00a3-f7cc-6156-2c82a2ba8fcb"},"1380bba0-253e-a800-a235-88821cf3f8a4":{"controllerUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-gallery\/1.5848.0\/GridGalleryController.bundle.min.js","componentUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-gallery\/1.5848.0\/GridGalleryViewerWidget.bundle.min.js","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-gallery\/1.5848.0\/GridGalleryViewerWidgetNoCss.bundle.min.js","widgetId":"1380bba0-253e-a800-a235-88821cf3f8a4","cssPerBreakpoint":true},"1380bbc4-1485-9d44-4616-92e36b1ead6b":{"controllerUrl":"https:\/\/static.parastorage.com\/services\/ecom-platform-cart-icon\/1.2228.0\/CartIconController.bundle.min.js","componentUrl":"https:\/\/static.parastorage.com\/services\/ecom-platform-cart-icon\/1.2228.0\/CartIconViewerWidget.bundle.min.js","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/ecom-platform-cart-icon\/1.2228.0\/CartIconViewerWidgetNoCss.bundle.min.js","widgetId":"1380bbc4-1485-9d44-4616-92e36b1ead6b","cssPerBreakpoint":true},"244576c9-d856-49b9-af14-216071924e3b":{"controllerUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-gallery\/1.5848.0\/SearchModalGalleryController.bundle.min.js","componentUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-gallery\/1.5848.0\/SearchModalGalleryViewerWidget.bundle.min.js","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-gallery\/1.5848.0\/SearchModalGalleryViewerWidgetNoCss.bundle.min.js","widgetId":"244576c9-d856-49b9-af14-216071924e3b","cssPerBreakpoint":true},"abcd87fe-c51f-4538-848d-2902a2f50d2d":{"controllerUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-gallery\/1.5848.0\/SearchResultsPageGalleryController.bundle.min.js","componentUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-gallery\/1.5848.0\/SearchResultsPageGalleryViewerWidget.bundle.min.js","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-gallery\/1.5848.0\/SearchResultsPageGalleryViewerWidgetNoCss.bundle.min.js","widgetId":"abcd87fe-c51f-4538-848d-2902a2f50d2d","cssPerBreakpoint":true},"4425f8e8-51fb-457b-9123-fdb7b1cef94a":{"controllerUrl":"https:\/\/static.parastorage.com\/services\/ecom-platform-checkout\/1.6787.0\/PaymentRequestController.bundle.min.js","componentUrl":"https:\/\/static.parastorage.com\/services\/ecom-platform-checkout\/1.6787.0\/PaymentRequestViewerWidget.bundle.min.js","noCssComponentUrl":"","widgetId":"4425f8e8-51fb-457b-9123-fdb7b1cef94a"},"bda15dc1-816d-4ff3-8dcb-1172d5343cce":{"controllerUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-gallery\/1.5848.0\/CategoryPageController.bundle.min.js","componentUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-gallery\/1.5848.0\/CategoryPageViewerWidget.bundle.min.js","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-gallery\/1.5848.0\/CategoryPageViewerWidgetNoCss.bundle.min.js","widgetId":"bda15dc1-816d-4ff3-8dcb-1172d5343cce","cssPerBreakpoint":true},"14fd5970-8072-c276-1246-058b79e70c1a":{"controllerUrl":"https:\/\/static.parastorage.com\/services\/ecom-platform-checkout\/1.6787.0\/CheckoutController.bundle.min.js","componentUrl":"https:\/\/static.parastorage.com\/services\/ecom-platform-checkout\/1.6787.0\/CheckoutViewerWidget.bundle.min.js","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/ecom-platform-checkout\/1.6787.0\/CheckoutViewerWidgetNoCss.bundle.min.js","widgetId":"14fd5970-8072-c276-1246-058b79e70c1a"},"13ec3e79-e668-cc0c-2d48-e99d53a213dd":{"controllerUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-product-widget\/1.2052.0\/productWidgetController.bundle.min.js","componentUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-product-widget\/1.2052.0\/productWidget.bundle.min.js","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-product-widget\/1.2052.0\/productWidgetNoCss.bundle.min.js","widgetId":"13ec3e79-e668-cc0c-2d48-e99d53a213dd"},"deaaaab0-f5bd-4b7a-a652-3845efcb546a":{"controllerUrl":"https:\/\/static.parastorage.com\/services\/ecom-platform-checkout\/1.6787.0\/BundleBundleController.bundle.min.js","componentUrl":"https:\/\/static.parastorage.com\/services\/ecom-platform-checkout\/1.6787.0\/BundleBundleViewerWidget.bundle.min.js","noCssComponentUrl":"","widgetId":"deaaaab0-f5bd-4b7a-a652-3845efcb546a"},"215f8ab7-97c3-4838-a6d0-ad4a61747158":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","widgetId":"215f8ab7-97c3-4838-a6d0-ad4a61747158"}}},"14c92d28-031e-7910-c9a8-a670011e062d":{"appDefId":"14c92d28-031e-7910-c9a8-a670011e062d","appDefName":"Wix FAQ","viewerScriptUrl":"https:\/\/static.parastorage.com\/services\/faq-ooi\/1.592.0\/viewerScript.bundle.min.js","baseUrls":{},"widgets":{"14c92de1-0e02-cbe5-98e9-c3de44d63a55":{"controllerUrl":"https:\/\/static.parastorage.com\/services\/faq-ooi\/1.592.0\/FaqOoiController.bundle.min.js","componentUrl":"https:\/\/static.parastorage.com\/services\/faq-ooi\/1.592.0\/FaqOoiViewerWidget.bundle.min.js","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/faq-ooi\/1.592.0\/FaqOoiViewerWidgetNoCss.bundle.min.js","errorReportingUrl":"https:\/\/79baaa8e09c746d2b7401643b99792e0@sentry.wixpress.com\/6001","widgetId":"14c92de1-0e02-cbe5-98e9-c3de44d63a55","cssPerBreakpoint":true}}},"215238eb-22a5-4c36-9e7b-e7c08025e04e":{"appDefId":"215238eb-22a5-4c36-9e7b-e7c08025e04e","appDefName":"Wix Stores","viewerScriptUrl":"https:\/\/static.parastorage.com\/services\/wixstores-client-worker\/1.4706.0\/storesViewerScript.bundle.min.js","baseUrls":{},"widgets":{}},"14cc59bc-f0b7-15b8-e1c7-89ce41d0e0c9":{"appDefId":"14cc59bc-f0b7-15b8-e1c7-89ce41d0e0c9","appDefName":"Wix Members Area","viewerScriptUrl":"https:\/\/static.parastorage.com\/services\/santa-members-viewer-app\/1.2819.0\/viewerScript.bundle.min.js","baseUrls":{},"widgets":{"e53d6a92-5acc-4a00-9d4d-f46c86a49c2e":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","widgetId":"e53d6a92-5acc-4a00-9d4d-f46c86a49c2e"}}},"14cffd81-5215-0a7f-22f8-074b0e2401fb":{"appDefId":"14cffd81-5215-0a7f-22f8-074b0e2401fb","appDefName":"Member Account Info","viewerScriptUrl":"https:\/\/static.parastorage.com\/services\/my-account-ooi\/1.2783.0\/viewerScript.bundle.min.js","baseUrls":{"staticsBaseUrl":"https:\/\/static.parastorage.com\/services\/my-account-ooi\/1.2783.0\/","staticsEditorBaseUrl":"https:\/\/static.parastorage.com\/services\/my-account-ooi\/1.2783.0"},"widgets":{"14dd1af6-3e02-63db-0ef2-72fbc7cc3136":{"controllerUrl":"https:\/\/static.parastorage.com\/services\/my-account-ooi\/1.2783.0\/MyAccountController.bundle.min.js","componentUrl":"https:\/\/static.parastorage.com\/services\/my-account-ooi\/1.2783.0\/MyAccountViewerWidget.bundle.min.js","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/my-account-ooi\/1.2783.0\/MyAccountViewerWidgetNoCss.bundle.min.js","widgetId":"14dd1af6-3e02-63db-0ef2-72fbc7cc3136","cssPerBreakpoint":true}}},"14ce28f7-7eb0-3745-22f8-074b0e2401fb":{"appDefId":"14ce28f7-7eb0-3745-22f8-074b0e2401fb","appDefName":"Profile Card","viewerScriptUrl":"https:\/\/static.parastorage.com\/services\/profile-card-tpa-ooi\/1.2887.0\/viewerScript.bundle.min.js","baseUrls":{"staticsBaseUrl":"https:\/\/static.parastorage.com\/services\/profile-card-tpa-ooi\/1.2887.0\/","staticsEditorBaseUrl":"https:\/\/static.parastorage.com\/services\/profile-card-tpa-ooi\/1.2884.0"},"widgets":{"14cefc05-d163-dbb7-e4ec-cd4f2c4d6ddd":{"controllerUrl":"https:\/\/static.parastorage.com\/services\/profile-card-tpa-ooi\/1.2887.0\/ProfileCardController.bundle.min.js","componentUrl":"https:\/\/static.parastorage.com\/services\/profile-card-tpa-ooi\/1.2887.0\/ProfileCardViewerWidget.bundle.min.js","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/profile-card-tpa-ooi\/1.2887.0\/ProfileCardViewerWidgetNoCss.bundle.min.js","widgetId":"14cefc05-d163-dbb7-e4ec-cd4f2c4d6ddd","cssPerBreakpoint":true}}},"4aebd0cb-fbdb-4da7-b5d1-d05660a30172":{"appDefId":"4aebd0cb-fbdb-4da7-b5d1-d05660a30172","appDefName":"My Wallet","viewerScriptUrl":"https:\/\/static.parastorage.com\/services\/payments-my-wallet\/1.1131.0\/viewerScript.bundle.min.js","baseUrls":{"staticsBaseUrl":"https:\/\/static.parastorage.com\/services\/payments-my-wallet\/1.1131.0\/","staticsEditorBaseUrl":"https:\/\/static.parastorage.com\/services\/payments-my-wallet\/1.1131.0"},"errorReportingUrl":"https:\/\/9a65e97ebe8141fca0c4fd686f70996b@sentry.wixpress.com\/5894","widgets":{"6467c15e-af3c-4e8d-b167-41bfb8efc32a":{"controllerUrl":"https:\/\/static.parastorage.com\/services\/payments-my-wallet\/1.1131.0\/MyWalletController.bundle.min.js","componentUrl":"https:\/\/static.parastorage.com\/services\/payments-my-wallet\/1.1131.0\/MyWalletViewerWidget.bundle.min.js","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/payments-my-wallet\/1.1131.0\/MyWalletViewerWidgetNoCss.bundle.min.js","errorReportingUrl":"https:\/\/9a65e97ebe8141fca0c4fd686f70996b@sentry.wixpress.com\/5894","widgetId":"6467c15e-af3c-4e8d-b167-41bfb8efc32a","cssPerBreakpoint":true}}},"2bef2abe-7abe-43da-889c-53c1500a328c":{"appDefId":"2bef2abe-7abe-43da-889c-53c1500a328c","appDefName":"My Subscriptions","viewerScriptUrl":"https:\/\/static.parastorage.com\/services\/subscriptions-tpa\/1.1199.0\/viewerScript.bundle.min.js","baseUrls":{"staticsBaseUrl":"https:\/\/static.parastorage.com\/services\/subscriptions-tpa\/1.1199.0\/","staticsEditorBaseUrl":"https:\/\/static.parastorage.com\/services\/subscriptions-tpa\/1.1199.0"},"widgets":{"b29db04a-a8f2-4bfe-bbad-21c99c1054b5":{"controllerUrl":"https:\/\/static.parastorage.com\/services\/subscriptions-tpa\/1.1199.0\/MySubscriptionsController.bundle.min.js","componentUrl":"https:\/\/static.parastorage.com\/services\/subscriptions-tpa\/1.1199.0\/MySubscriptionsViewerWidget.bundle.min.js","noCssComponentUrl":"","widgetId":"b29db04a-a8f2-4bfe-bbad-21c99c1054b5"}}},"14517e1a-3ff0-af98-408e-2bd6953c36a2":{"appDefId":"14517e1a-3ff0-af98-408e-2bd6953c36a2","appDefName":"Wix Chat","viewerScriptUrl":"https:\/\/static.parastorage.com\/services\/chat-worker\/1.1239.0\/viewer-script.bundle.min.js","baseUrls":{},"widgets":{"14517f3f-ffc5-eced-f592-980aaa0bbb5c":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","widgetId":"14517f3f-ffc5-eced-f592-980aaa0bbb5c"}}},"1484cb44-49cd-5b39-9681-75188ab429de":{"appDefId":"1484cb44-49cd-5b39-9681-75188ab429de","appDefName":"Wix Site Search","viewerScriptUrl":"https:\/\/static.parastorage.com\/services\/search-app\/1.3961.0\/viewerScript.bundle.min.js","baseUrls":{"staticsBaseUrl":"https:\/\/static.parastorage.com\/services\/search-app\/1.3961.0\/"},"widgets":{"44c66af6-4d25-485a-ad9d-385f5460deef":{"controllerUrl":"","componentUrl":"https:\/\/static.parastorage.com\/services\/search-app\/1.3961.0\/SearchResultsViewerWidget.bundle.min.js","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/search-app\/1.3961.0\/SearchResultsViewerWidgetNoCss.bundle.min.js","widgetId":"44c66af6-4d25-485a-ad9d-385f5460deef","cssPerBreakpoint":true}}},"14f25dc5-6af3-5420-9568-f9c5ed98c9b1":{"appDefId":"14f25dc5-6af3-5420-9568-f9c5ed98c9b1","appDefName":"Members Notifications Settings","viewerScriptUrl":"https:\/\/static.parastorage.com\/services\/members-area-notifications-preferences\/1.63.0\/viewerScript.bundle.min.js","baseUrls":{"staticsBaseUrl":"https:\/\/static.parastorage.com\/services\/members-area-notifications-preferences\/1.63.0","staticsEditorBaseUrl":"https:\/\/static.parastorage.com\/services\/members-area-notifications-preferences\/1.63.0"},"errorReportingUrl":"https:\/\/271e9fa3230b4eec94b02bf95780f5f2@sentry.wixpress.com\/6097","widgets":{"04462ba4-2137-41bd-9460-0814554aae07":{"controllerUrl":"https:\/\/static.parastorage.com\/services\/members-area-notifications-preferences\/1.63.0\/PreferencesOoiController.bundle.min.js","componentUrl":"https:\/\/static.parastorage.com\/services\/members-area-notifications-preferences\/1.63.0\/PreferencesOoiViewerWidget.bundle.min.js","noCssComponentUrl":"","errorReportingUrl":"https:\/\/ed436f5053144538958ad06a5005e99a@sentry.wixpress.com\/6142","widgetId":"04462ba4-2137-41bd-9460-0814554aae07","cssPerBreakpoint":false},"14f25dd2-f9b0-edc2-f38e-eded5da094aa":{"controllerUrl":"https:\/\/static.parastorage.com\/services\/members-area-notifications-preferences\/1.63.0\/PreferencesOoiController.bundle.min.js","componentUrl":"https:\/\/static.parastorage.com\/services\/members-area-notifications-preferences\/1.63.0\/PreferencesOoiViewerWidget.bundle.min.js","noCssComponentUrl":"","errorReportingUrl":"https:\/\/ed436f5053144538958ad06a5005e99a@sentry.wixpress.com\/6142","widgetId":"14f25dd2-f9b0-edc2-f38e-eded5da094aa","cssPerBreakpoint":false}}},"14dbef06-cc42-5583-32a7-3abd44da4908":{"appDefId":"14dbef06-cc42-5583-32a7-3abd44da4908","appDefName":"Members About","viewerScriptUrl":"https:\/\/static.parastorage.com\/services\/members-about-ooi\/1.2646.0\/viewerScript.bundle.min.js","baseUrls":{"staticsBaseUrl":"https:\/\/static.parastorage.com\/services\/members-about-ooi\/1.2646.0\/","staticsEditorBaseUrl":"https:\/\/static.parastorage.com\/services\/members-about-ooi\/1.2643.0"},"widgets":{"14dbefb9-3b7b-c4e9-53e8-766defd30587":{"controllerUrl":"https:\/\/static.parastorage.com\/services\/members-about-ooi\/1.2646.0\/ProfileController.bundle.min.js","componentUrl":"https:\/\/static.parastorage.com\/services\/members-about-ooi\/1.2646.0\/ProfileViewerWidget.bundle.min.js","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/members-about-ooi\/1.2646.0\/ProfileViewerWidgetNoCss.bundle.min.js","widgetId":"14dbefb9-3b7b-c4e9-53e8-766defd30587","cssPerBreakpoint":true}}},"14f25924-5664-31b2-9568-f9c5ed98c9b1":{"appDefId":"14f25924-5664-31b2-9568-f9c5ed98c9b1","appDefName":"Wix Members Area Notifications","viewerScriptUrl":"https:\/\/static.parastorage.com\/services\/members-area-notifications\/1.134.0\/viewerScript.bundle.min.js","baseUrls":{"staticsBaseUrl":"https:\/\/static.parastorage.com\/services\/members-area-notifications\/1.134.0","staticsEditorBaseUrl":"https:\/\/static.parastorage.com\/services\/members-area-notifications\/1.134.0"},"errorReportingUrl":"https:\/\/460ff4620fa44cba8df530afde949785@sentry.wixpress.com\/5803","widgets":{"14f2595a-a352-3ff1-9b3c-4d21861fe58f":{"controllerUrl":"https:\/\/static.parastorage.com\/services\/members-area-notifications\/1.134.0\/OoiNotificationsController.bundle.min.js","componentUrl":"https:\/\/static.parastorage.com\/services\/members-area-notifications\/1.134.0\/OoiNotificationsViewerWidget.bundle.min.js","noCssComponentUrl":"","errorReportingUrl":"https:\/\/460ff4620fa44cba8df530afde949785@sentry.wixpress.com\/5803","widgetId":"14f2595a-a352-3ff1-9b3c-4d21861fe58f"},"6ca9273a-a775-407c-87e1-9685588c9aa7":{"controllerUrl":"https:\/\/static.parastorage.com\/services\/members-area-notifications\/1.134.0\/OoiNotificationsController.bundle.min.js","componentUrl":"https:\/\/static.parastorage.com\/services\/members-area-notifications\/1.134.0\/OoiNotificationsViewerWidget.bundle.min.js","noCssComponentUrl":"","errorReportingUrl":"https:\/\/460ff4620fa44cba8df530afde949785@sentry.wixpress.com\/5803","widgetId":"6ca9273a-a775-407c-87e1-9685588c9aa7"}}},"148c2287-c669-d849-d153-463c7486a694":{"appDefId":"148c2287-c669-d849-d153-463c7486a694","appDefName":"Wix Groups","viewerScriptUrl":"https:\/\/static.parastorage.com\/services\/social-groups-ooi\/5.780.0\/viewerScript.bundle.min.js","baseUrls":{"staticsGroupBaseUrl":"https:\/\/static.parastorage.com\/services\/social-groups-ooi\/5.780.0\/","staticsEditorBaseUrl":"https:\/\/static.parastorage.com\/services\/social-groups-ooi\/5.780.0\/","staticsBaseUrl":"https:\/\/static.parastorage.com\/services\/social-groups-ooi\/5.780.0\/"},"errorReportingUrl":"https:\/\/f36cc48fb72b4d298c835f2793cf3b84@sentry-next.wixpress.com\/1058","widgets":{"47a7e7bb-f412-4093-9155-1ff5adbc4dae":{"controllerUrl":"https:\/\/static.parastorage.com\/services\/social-groups-ooi\/5.780.0\/SideBySideController.bundle.min.js","componentUrl":"https:\/\/static.parastorage.com\/services\/social-groups-ooi\/5.780.0\/SideBySideViewerWidget.bundle.min.js","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/social-groups-ooi\/5.780.0\/SideBySideViewerWidgetNoCss.bundle.min.js","errorReportingUrl":"https:\/\/f36cc48fb72b4d298c835f2793cf3b84@sentry-next.wixpress.com\/1058","widgetId":"47a7e7bb-f412-4093-9155-1ff5adbc4dae","cssPerBreakpoint":true},"0a9f687f-7e00-4576-a8e1-9415844b8f44":{"controllerUrl":"https:\/\/static.parastorage.com\/services\/social-groups-ooi\/5.780.0\/GroupsListWidgetController.bundle.min.js","componentUrl":"https:\/\/static.parastorage.com\/services\/social-groups-ooi\/5.780.0\/GroupsListWidgetViewerWidget.bundle.min.js","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/social-groups-ooi\/5.780.0\/GroupsListWidgetViewerWidgetNoCss.bundle.min.js","errorReportingUrl":"https:\/\/f36cc48fb72b4d298c835f2793cf3b84@sentry-next.wixpress.com\/1058","widgetId":"0a9f687f-7e00-4576-a8e1-9415844b8f44","cssPerBreakpoint":true},"8cce2b9e-8549-46c7-8ad2-f75bf28534ac":{"controllerUrl":"https:\/\/static.parastorage.com\/services\/social-groups-ooi\/5.780.0\/FeedWidgetController.bundle.min.js","componentUrl":"https:\/\/static.parastorage.com\/services\/social-groups-ooi\/5.780.0\/FeedWidgetViewerWidget.bundle.min.js","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/social-groups-ooi\/5.780.0\/FeedWidgetViewerWidgetNoCss.bundle.min.js","errorReportingUrl":"https:\/\/f36cc48fb72b4d298c835f2793cf3b84@sentry-next.wixpress.com\/1058","widgetId":"8cce2b9e-8549-46c7-8ad2-f75bf28534ac","cssPerBreakpoint":true},"a7dcdfcb-8abd-4008-af19-fed5fcd12b40":{"controllerUrl":"https:\/\/static.parastorage.com\/services\/social-groups-ooi\/5.780.0\/GroupsController.bundle.min.js","componentUrl":"https:\/\/static.parastorage.com\/services\/social-groups-ooi\/5.780.0\/GroupsViewerWidget.bundle.min.js","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/social-groups-ooi\/5.780.0\/GroupsViewerWidgetNoCss.bundle.min.js","errorReportingUrl":"https:\/\/f36cc48fb72b4d298c835f2793cf3b84@sentry-next.wixpress.com\/1058","widgetId":"a7dcdfcb-8abd-4008-af19-fed5fcd12b40","cssPerBreakpoint":true},"83b2af08-c021-40c8-a3a5-b329a959ec2b":{"controllerUrl":"https:\/\/static.parastorage.com\/services\/social-groups-ooi\/5.780.0\/GroupsListWidgetController.bundle.min.js","componentUrl":"https:\/\/static.parastorage.com\/services\/social-groups-ooi\/5.780.0\/GroupsListWidgetViewerWidget.bundle.min.js","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/social-groups-ooi\/5.780.0\/GroupsListWidgetViewerWidgetNoCss.bundle.min.js","errorReportingUrl":"https:\/\/f36cc48fb72b4d298c835f2793cf3b84@sentry-next.wixpress.com\/1058","widgetId":"83b2af08-c021-40c8-a3a5-b329a959ec2b","cssPerBreakpoint":true},"e018cc55-7b1c-4500-a2e5-969f22c8a33a":{"controllerUrl":"https:\/\/static.parastorage.com\/services\/social-groups-ooi\/5.780.0\/MembersAreaGroupsController.bundle.min.js","componentUrl":"https:\/\/static.parastorage.com\/services\/social-groups-ooi\/5.780.0\/MembersAreaGroupsViewerWidget.bundle.min.js","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/social-groups-ooi\/5.780.0\/MembersAreaGroupsViewerWidgetNoCss.bundle.min.js","errorReportingUrl":"https:\/\/f36cc48fb72b4d298c835f2793cf3b84@sentry-next.wixpress.com\/1058","widgetId":"e018cc55-7b1c-4500-a2e5-969f22c8a33a","cssPerBreakpoint":true},"513a5d84-3ebb-4ca6-a5aa-83effd2123b9":{"controllerUrl":"https:\/\/static.parastorage.com\/services\/social-groups-ooi\/5.780.0\/GroupController.bundle.min.js","componentUrl":"https:\/\/static.parastorage.com\/services\/social-groups-ooi\/5.780.0\/GroupViewerWidget.bundle.min.js","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/social-groups-ooi\/5.780.0\/GroupViewerWidgetNoCss.bundle.min.js","errorReportingUrl":"https:\/\/f36cc48fb72b4d298c835f2793cf3b84@sentry-next.wixpress.com\/1058","widgetId":"513a5d84-3ebb-4ca6-a5aa-83effd2123b9","cssPerBreakpoint":true}}},"bcf2aea9-53d2-4139-9a63-3ad7ecc93d28":{"appDefId":"bcf2aea9-53d2-4139-9a63-3ad7ecc93d28","appDefName":"Wix Chat Button","viewerScriptUrl":"https:\/\/static.parastorage.com\/services\/wix-chat-button\/1.176.0\/viewer.bundle.min.js","baseUrls":{},"widgets":{}},"949cfcc9-2a3f-4a96-bd6c-11d9d82763a4":{"appDefId":"949cfcc9-2a3f-4a96-bd6c-11d9d82763a4","appDefName":"ricos-viewer-ooi","viewerScriptUrl":"https:\/\/static.parastorage.com\/services\/ricos-viewer-ooi\/10.150.8\/viewerScript.bundle.min.js","baseUrls":{"staticsBaseUrl":"https:\/\/static.parastorage.com\/services\/ricos-viewer-ooi\/10.150.8\/","staticsEditorBaseUrl":"https:\/\/static.parastorage.com\/services\/ricos-viewer-ooi\/10.126.11"},"errorReportingUrl":"https:\/\/1eeb89147c984dc6bc3ffafd9e6cd089@sentry.wixpress.com\/809","widgets":{"aa86b56d-3c49-44fd-9976-963695e7815d":{"controllerUrl":"https:\/\/static.parastorage.com\/services\/ricos-viewer-ooi\/10.150.8\/ricosviewerController.bundle.min.js","componentUrl":"https:\/\/static.parastorage.com\/services\/ricos-viewer-ooi\/10.150.8\/ricosviewerViewerWidget.bundle.min.js","noCssComponentUrl":"","errorReportingUrl":"https:\/\/1eeb89147c984dc6bc3ffafd9e6cd089@sentry.wixpress.com\/809","widgetId":"aa86b56d-3c49-44fd-9976-963695e7815d"}}},"13d21c63-b5ec-5912-8397-c3a5ddb27a97":{"appDefId":"13d21c63-b5ec-5912-8397-c3a5ddb27a97","appDefName":"Wix Bookings","viewerScriptUrl":"https:\/\/static.parastorage.com\/services\/bookings-viewer-script\/1.3960.0\/bookingsViewerScript.bundle.min.js","baseUrls":{"siteHeaderUrl":"7f734527084d412f3491e0aceb1d2265_r3.json","staticsBaseUrl":"https:\/\/static.parastorage.com\/services\/bookings-widget-viewer\/1.1757.0\/","platformAppsBaseUrl":"https:\/\/static.parastorage.com\/services\/bookings-app-builder-controllers\/1.1922.0\/","serverBaseUrl":"https:\/\/bookings.wixapps.net\/","siteAssets":"{urlTemplate: {siteAssets}}?siteId=dbf7e8f2-9695-4f3f-b258-5282eeff4580&metaSiteId=8b2114a9-339e-4562-bdc4-01621e2f84cb&siteRevision=440}","serviceListStaticsBaseUrl":"https:\/\/static.parastorage.com\/services\/bookings-widget\/1.5494.0\/","staticEditorBaseUrl":"https:\/\/static.parastorage.com\/services\/bookings-widget-viewer\/1.1748.0\/","staticBaseUrl":"https:\/\/static.parastorage.com\/services\/bookings-viewer-script\/1.3960.0\/bookingsEditorScript.bundle.min.js"},"widgets":{"c7fddce1-ebf5-46b0-a309-7865384ba63f":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","widgetId":"c7fddce1-ebf5-46b0-a309-7865384ba63f"},"169204d8-21be-4b45-b263-a997d31723dc":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","widgetId":"169204d8-21be-4b45-b263-a997d31723dc"},"a91a0543-d4bd-4e6b-b315-9410aa27bcde":{"controllerUrl":"https:\/\/static.parastorage.com\/services\/bookings-service-details-widget\/1.3436.0\/BookingServicePageController.bundle.min.js","componentUrl":"https:\/\/static.parastorage.com\/services\/bookings-service-details-widget\/1.3436.0\/BookingServicePageViewerWidget.bundle.min.js","noCssComponentUrl":"","widgetId":"a91a0543-d4bd-4e6b-b315-9410aa27bcde"},"3c675d25-41c7-437e-b13d-d0f99328e347":{"controllerUrl":"https:\/\/static.parastorage.com\/services\/bookings-calendar-widget\/1.3539.0\/WeeklyTimetableController.bundle.min.js","componentUrl":"https:\/\/static.parastorage.com\/services\/bookings-calendar-widget\/1.3539.0\/WeeklyTimetableViewerWidget.bundle.min.js","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/bookings-calendar-widget\/1.3539.0\/WeeklyTimetableViewerWidgetNoCss.bundle.min.js","widgetId":"3c675d25-41c7-437e-b13d-d0f99328e347","cssPerBreakpoint":true},"14edb332-fdb9-2fe6-0fd1-e6293322b83b":{"controllerUrl":"https:\/\/static.parastorage.com\/services\/bookings-my-bookings-widget\/1.638.0\/MyBookingsController.bundle.min.js","componentUrl":"https:\/\/static.parastorage.com\/services\/bookings-my-bookings-widget\/1.638.0\/MyBookingsViewerWidget.bundle.min.js","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/bookings-my-bookings-widget\/1.638.0\/MyBookingsViewerWidgetNoCss.bundle.min.js","errorReportingUrl":"https:\/\/c183baa23371454f99f417f6616b724d@sentry.wixpress.com\/5557","widgetId":"14edb332-fdb9-2fe6-0fd1-e6293322b83b","cssPerBreakpoint":true},"13d27016-697f-b82f-7512-8e20854c09f6":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","widgetId":"13d27016-697f-b82f-7512-8e20854c09f6"},"713f72a2-7a32-47e9-b5e4-6024ee57d277":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","widgetId":"713f72a2-7a32-47e9-b5e4-6024ee57d277"},"e86ab26e-a14f-46d1-9d74-7243b686923b":{"controllerUrl":"https:\/\/static.parastorage.com\/services\/bookings-calendar-widget\/1.3539.0\/DailyAgendaController.bundle.min.js","componentUrl":"https:\/\/static.parastorage.com\/services\/bookings-calendar-widget\/1.3539.0\/DailyAgendaViewerWidget.bundle.min.js","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/bookings-calendar-widget\/1.3539.0\/DailyAgendaViewerWidgetNoCss.bundle.min.js","widgetId":"e86ab26e-a14f-46d1-9d74-7243b686923b","cssPerBreakpoint":true},"621bc837-5943-4c76-a7ce-a0e38185301f":{"controllerUrl":"https:\/\/static.parastorage.com\/services\/bookings-service-list-widget\/1.2175.0\/BookOnlineController.bundle.min.js","componentUrl":"https:\/\/static.parastorage.com\/services\/bookings-service-list-widget\/1.2175.0\/BookOnlineViewerWidget.bundle.min.js","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/bookings-service-list-widget\/1.2175.0\/BookOnlineViewerWidgetNoCss.bundle.min.js","widgetId":"621bc837-5943-4c76-a7ce-a0e38185301f","cssPerBreakpoint":true},"cc882051-73c9-41a6-8f90-f6ebc9f10fe1":{"controllerUrl":"https:\/\/static.parastorage.com\/services\/bookings-service-list-widget\/1.2175.0\/ServiceListWidgetController.bundle.min.js","componentUrl":"https:\/\/static.parastorage.com\/services\/bookings-service-list-widget\/1.2175.0\/ServiceListWidgetViewerWidget.bundle.min.js","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/bookings-service-list-widget\/1.2175.0\/ServiceListWidgetViewerWidgetNoCss.bundle.min.js","widgetId":"cc882051-73c9-41a6-8f90-f6ebc9f10fe1","cssPerBreakpoint":true},"0eadb76d-b167-4f19-88d1-496a8207e92b":{"controllerUrl":"https:\/\/static.parastorage.com\/services\/bookings-calendar-widget\/1.3539.0\/BookingCalendarWidgetController.bundle.min.js","componentUrl":"https:\/\/static.parastorage.com\/services\/bookings-calendar-widget\/1.3539.0\/BookingCalendarWidgetViewerWidget.bundle.min.js","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/bookings-calendar-widget\/1.3539.0\/BookingCalendarWidgetViewerWidgetNoCss.bundle.min.js","widgetId":"0eadb76d-b167-4f19-88d1-496a8207e92b","cssPerBreakpoint":true},"89c4023a-027e-4d2a-b6b7-0b9d345b508d":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","widgetId":"89c4023a-027e-4d2a-b6b7-0b9d345b508d"},"985e6fc8-ce3f-4cf8-9b85-714c73f48695":{"controllerUrl":"https:\/\/static.parastorage.com\/services\/bookings-form-widget\/1.2349.0\/BookingsFormController.bundle.min.js","componentUrl":"https:\/\/static.parastorage.com\/services\/bookings-form-widget\/1.2349.0\/BookingsFormViewerWidget.bundle.min.js","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/bookings-form-widget\/1.2349.0\/BookingsFormViewerWidgetNoCss.bundle.min.js","widgetId":"985e6fc8-ce3f-4cf8-9b85-714c73f48695","cssPerBreakpoint":true},"2f22f475-3ed1-41fd-90b7-221e92134f3c":{"controllerUrl":"https:\/\/static.parastorage.com\/services\/bookings-daily-agenda-widget\/1.605.0\/DailyAgendaController.bundle.min.js","componentUrl":"https:\/\/static.parastorage.com\/services\/bookings-daily-agenda-widget\/1.605.0\/DailyAgendaViewerWidget.bundle.min.js","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/bookings-daily-agenda-widget\/1.605.0\/DailyAgendaViewerWidgetNoCss.bundle.min.js","widgetId":"2f22f475-3ed1-41fd-90b7-221e92134f3c","cssPerBreakpoint":true},"3dc66bc5-5354-4ce6-a436-bd8394c09b0e":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","widgetId":"3dc66bc5-5354-4ce6-a436-bd8394c09b0e"},"e1339b7c-0c95-43fe-89f6-be037ad29ea9":{"controllerUrl":"https:\/\/static.parastorage.com\/services\/bookings-my-bookings-widget\/1.638.0\/MyBookingsController.bundle.min.js","componentUrl":"https:\/\/static.parastorage.com\/services\/bookings-my-bookings-widget\/1.638.0\/MyBookingsViewerWidget.bundle.min.js","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/bookings-my-bookings-widget\/1.638.0\/MyBookingsViewerWidgetNoCss.bundle.min.js","errorReportingUrl":"https:\/\/c183baa23371454f99f417f6616b724d@sentry.wixpress.com\/5557","widgetId":"e1339b7c-0c95-43fe-89f6-be037ad29ea9","cssPerBreakpoint":true},"14756c3d-f10a-45fc-4df1-808f22aabe80":{"controllerUrl":"","componentUrl":"https:\/\/static.parastorage.com\/services\/bookings-widget-viewer\/1.1757.0\/component.bundle.min.js","noCssComponentUrl":"","widgetId":"14756c3d-f10a-45fc-4df1-808f22aabe80"},"54d912c5-52cb-4657-b8fa-e1a4cda8ed01":{"controllerUrl":"https:\/\/static.parastorage.com\/services\/bookings-calendar-widget\/1.3539.0\/BookingCalendarController.bundle.min.js","componentUrl":"https:\/\/static.parastorage.com\/services\/bookings-calendar-widget\/1.3539.0\/BookingCalendarViewerWidget.bundle.min.js","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/bookings-calendar-widget\/1.3539.0\/BookingCalendarViewerWidgetNoCss.bundle.min.js","widgetId":"54d912c5-52cb-4657-b8fa-e1a4cda8ed01","cssPerBreakpoint":true}}},"1514b01b-cb08-41b4-8582-0a88551ac769":{"appDefId":"1514b01b-cb08-41b4-8582-0a88551ac769","appDefName":"Admin Pages","viewerScriptUrl":"https:\/\/static.parastorage.com\/services\/admin-pages-editor-app\/1.718.0\/viewerScript.bundle.min.js","baseUrls":{},"widgets":{"1514b184-bb0d-2336-704b-976633cb5fe5":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","widgetId":"1514b184-bb0d-2336-704b-976633cb5fe5"}}},"225dd912-7dea-4738-8688-4b8c6955ffc2":{"appDefId":"225dd912-7dea-4738-8688-4b8c6955ffc2","appDefName":"Wix Forms","viewerScriptUrl":"https:\/\/static.parastorage.com\/services\/form-app\/1.2413.0\/viewerScript.bundle.min.js","baseUrls":{"staticsBaseUrl":"https:\/\/static.parastorage.com\/services\/form-app\/1.2413.0","staticsEditorBaseUrl":"https:\/\/static.parastorage.com\/services\/form-app\/1.2413.0"},"errorReportingUrl":"https:\/\/5d1795a2db124a268f1e1bd88f503500@sentry.wixpress.com\/4615","widgets":{"371ee199-389c-4a93-849e-e35b8a15b7ca":{"controllerUrl":"","componentUrl":"https:\/\/static.parastorage.com\/services\/form-app\/1.2413.0\/FormViewerWidget.bundle.min.js","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/form-app\/1.2413.0\/FormViewerWidgetNoCss.bundle.min.js","errorReportingUrl":"https:\/\/18d2f96d279149989b95faf0a4b41882@sentry-next.wixpress.com\/1784","widgetId":"371ee199-389c-4a93-849e-e35b8a15b7ca","cssPerBreakpoint":true}}},"bbe1406a-31f5-4f3f-9e0a-b39dfd25274f":{"appDefId":"bbe1406a-31f5-4f3f-9e0a-b39dfd25274f","appDefName":"sm-platform-app","viewerScriptUrl":"https:\/\/static.parastorage.com\/services\/sm-platform-app\/1.628.413\/viewerScript.bundle.min.js","baseUrls":{},"widgets":{}},"5c047089-b4af-4395-bd58-139524a3da1d":{"appDefId":"5c047089-b4af-4395-bd58-139524a3da1d","appDefName":"Numbers: Show Animated Stats","viewerScriptUrl":"https:\/\/static.parastorage.com\/services\/blocks-client-viewer-app\/1.2554.0\/viewerApp.umd.min.js","baseUrls":{"siteAssets":"{urlTemplate: {siteAssets}?siteId=172947f9-15bc-4571-a252-8ae7f2a57293&metaSiteId=1aa49903-e8d8-4c08-b1af-b6bf77cba1da&siteRevision=33","blocks_devSiteUrl":"https:\/\/certifiedcode.editorx.io\/1ijlzopc41i3zb28yf5m"},"widgets":{"f32eee9c-7a0e-4d2d-b907-53762023aba7":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","widgetId":"f32eee9c-7a0e-4d2d-b907-53762023aba7"},"c4a8a2b7-48a0-40b4-b494-6903f3e5113a":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","widgetId":"c4a8a2b7-48a0-40b4-b494-6903f3e5113a"}}},"14271d6f-ba62-d045-549b-ab972ae1f70e":{"appDefId":"14271d6f-ba62-d045-549b-ab972ae1f70e","appDefName":"Wix Pro Gallery","viewerScriptUrl":"https:\/\/static.parastorage.com\/services\/pro-gallery-tpa\/1.1509.0\/viewerScript.bundle.min.js","baseUrls":{"siteAssets":"{urlTemplate: {siteAssets}?siteId=ce7fd828-85c4-4b73-a390-d293eae32cec&metaSiteId=5af77ffc-cae0-4550-8a1e-4a85ff049a48&siteRevision=25","blocks_widgetManifestsUrl":"\/manifests\/14271d6f-ba62-d045-549b-ab972ae1f70e\/25\/manifests.json","santaWrapperBaseUrl":"https:\/\/static.parastorage.com\/services\/pro-gallery-tpa\/1.1509.0\/"},"errorReportingUrl":"https:\/\/8eb368c655b84e029ed79ad7a5c1718e@sentry.wixpress.com\/3427","widgets":{"142bb34d-3439-576a-7118-683e690a1e0d":{"controllerUrl":"https:\/\/static.parastorage.com\/services\/pro-gallery-tpa\/1.1509.0\/WixProGalleryController.bundle.min.js","componentUrl":"https:\/\/static.parastorage.com\/services\/pro-gallery-tpa\/1.1509.0\/WixProGalleryViewerWidget.bundle.min.js","noCssComponentUrl":"","errorReportingUrl":"https:\/\/8eb368c655b84e029ed79ad7a5c1718e@sentry.wixpress.com\/3427","widgetId":"142bb34d-3439-576a-7118-683e690a1e0d"},"144f04b9-aab4-fde7-179b-780c11da4f46":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/8eb368c655b84e029ed79ad7a5c1718e@sentry.wixpress.com\/3427","widgetId":"144f04b9-aab4-fde7-179b-780c11da4f46"}}},"14bcded7-0066-7c35-14d7-466cb3f09103":{"appDefId":"14bcded7-0066-7c35-14d7-466cb3f09103","appDefName":"Wix Blog","viewerScriptUrl":"https:\/\/static.parastorage.com\/services\/communities-blog-ooi\/1.3112.0\/viewerScript.bundle.min.js","baseUrls":{"mediaImageHost":"static.wixstatic.com","staticsBaseUrl":"https:\/\/static.parastorage.com\/services\/communities-blog-ooi\/1.3112.0\/","duplexerUrl":"duplexer.wix.com","apiBaseUrlClient":"\/_api\/communities-blog-node-api","translationsBaseUrl":"https:\/\/static.parastorage.com\/services\/communities-blog-translations\/1.4450.0\/","siteAssets":"{urlTemplate: {siteAssets}?siteId=f2343010-d1f3-4080-a98e-3d82976a671d&metaSiteId=2b9fa616-1dde-46d3-a1a3-d715ebc1d57d&siteRevision=1335","apiPlatformizedBaseUrl":"https:\/\/www.wix.com\/_api\/communities-blog-api-web","mediaVideoHost":"video.wixstatic.com","apiPlatformizedBaseUrlClient":"\/_api\/communities-blog-api-web","apiBaseUrl":"https:\/\/apps.wix.com\/_api\/communities-blog-node-api","apiExperimentsBaseUrlClient":"\/_api\/wix-laboratory-server","blocks_devSiteUrl":"https:\/\/zanass1.editorx.io\/2w5loeiwuf2frneevn6m","blocks_widgetManifestsUrl":"\/manifests\/14bcded7-0066-7c35-14d7-466cb3f09103\/1335\/manifests.json","useArchiveWidgetAdapter":"false","disableDuplexerForInstanceIds":"671e6bcb-a0a9-4ae0-98f2-f81a607bf167","provisioningModalUrl":"https:\/\/www.wix.com\/_partials\/communities-blog-provisioning-modal\/1.1107.0\/modal.html","apiAggregatorBaseUrl":"\/blog-frontend-adapter-public","apiPaywallBaseUrl":"\/_api\/paywall-server","categoryLabel":"false"},"errorReportingUrl":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643","widgets":{"ea40bb32-ddfc-4f68-a163-477bd0e97c8e":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643","widgetId":"ea40bb32-ddfc-4f68-a163-477bd0e97c8e"},"14f260f9-c2eb-50e8-9b3c-4d21861fe58f":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643","widgetId":"14f260f9-c2eb-50e8-9b3c-4d21861fe58f"},"6e2b3a80-dc83-4ce3-adc2-82ce48ff2ed6":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643","widgetId":"6e2b3a80-dc83-4ce3-adc2-82ce48ff2ed6"},"14e5b36b-e545-88a0-1475-2487df7e9206":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643","widgetId":"14e5b36b-e545-88a0-1475-2487df7e9206"},"14c1462a-97f2-9f6a-7bb7-f5541f23caa6":{"controllerUrl":"","componentUrl":"https:\/\/static.parastorage.com\/services\/communities-blog-ooi\/1.3112.0\/BlogViewerWidget.bundle.min.js","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/communities-blog-ooi\/1.3112.0\/BlogViewerWidgetNoCss.bundle.min.js","errorReportingUrl":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643","widgetId":"14c1462a-97f2-9f6a-7bb7-f5541f23caa6"},"5fdc6c03-080d-4872-b567-24146c82fae5":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643","widgetId":"5fdc6c03-080d-4872-b567-24146c82fae5"},"7183995a-bf0b-4a2f-a9b4-a1b7ef96b6fa":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643","widgetId":"7183995a-bf0b-4a2f-a9b4-a1b7ef96b6fa"},"ff5bffc0-5d09-4b31-b140-be6d8ffa2c03":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643","widgetId":"ff5bffc0-5d09-4b31-b140-be6d8ffa2c03"},"2d4ed2d3-75f8-4942-9787-71e3d182e256":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643","widgetId":"2d4ed2d3-75f8-4942-9787-71e3d182e256"},"46a9e991-c1cc-47c9-b19a-e99d3be1e2c9":{"controllerUrl":"","componentUrl":"https:\/\/static.parastorage.com\/services\/communities-blog-ooi\/1.3112.0\/RelatedPostsViewerWidget.bundle.min.js","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/communities-blog-ooi\/1.3112.0\/RelatedPostsViewerWidgetNoCss.bundle.min.js","errorReportingUrl":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643","widgetId":"46a9e991-c1cc-47c9-b19a-e99d3be1e2c9"},"a0d7808c-0d7d-4a40-8cf0-911a9f0de96f":{"controllerUrl":"","componentUrl":"https:\/\/static.parastorage.com\/services\/communities-blog-ooi\/1.3112.0\/CategoryMenuViewerWidget.bundle.min.js","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/communities-blog-ooi\/1.3112.0\/CategoryMenuViewerWidgetNoCss.bundle.min.js","errorReportingUrl":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643","widgetId":"a0d7808c-0d7d-4a40-8cf0-911a9f0de96f","cssPerBreakpoint":true},"5940091f-797c-4e86-9c57-73fcfd87425f":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643","widgetId":"5940091f-797c-4e86-9c57-73fcfd87425f"},"e5520a99-1725-4b88-a85f-c439916890c8":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643","widgetId":"e5520a99-1725-4b88-a85f-c439916890c8"},"1b5b448c-a39f-4515-9445-c6b4ceace1c2":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643","widgetId":"1b5b448c-a39f-4515-9445-c6b4ceace1c2"},"68a2d745-328b-475d-9e36-661f678daa31":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643","widgetId":"68a2d745-328b-475d-9e36-661f678daa31"},"5e123a45-f3aa-4157-a47a-e58d8cb246eb":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643","widgetId":"5e123a45-f3aa-4157-a47a-e58d8cb246eb"},"c0a125b8-2311-451e-99c5-89b6bba02b22":{"controllerUrl":"","componentUrl":"https:\/\/static.parastorage.com\/services\/communities-blog-ooi\/1.3112.0\/TagCloudViewerWidget.bundle.min.js","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/communities-blog-ooi\/1.3112.0\/TagCloudViewerWidgetNoCss.bundle.min.js","errorReportingUrl":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643","widgetId":"c0a125b8-2311-451e-99c5-89b6bba02b22","cssPerBreakpoint":true},"b27ea74b-1c6f-4bdb-bda7-8242323ba20b":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643","widgetId":"b27ea74b-1c6f-4bdb-bda7-8242323ba20b"},"25ab36f9-f8bd-4799-a887-f10b6822fc2e":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643","widgetId":"25ab36f9-f8bd-4799-a887-f10b6822fc2e"},"14f26109-514f-f9a8-9b3c-4d21861fe58f":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643","widgetId":"14f26109-514f-f9a8-9b3c-4d21861fe58f"},"76359954-edd4-4c46-ad14-a7c5e65cc30c":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643","widgetId":"76359954-edd4-4c46-ad14-a7c5e65cc30c"},"14e5b39b-6d47-99c3-3ee5-cee1c2574c89":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643","widgetId":"14e5b39b-6d47-99c3-3ee5-cee1c2574c89"},"26858b64-aad8-42ab-8c63-f19009198c7b":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643","widgetId":"26858b64-aad8-42ab-8c63-f19009198c7b"},"129259f6-06e4-42a3-9877-81a1fa9de95c":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643","widgetId":"129259f6-06e4-42a3-9877-81a1fa9de95c"},"d134b0c9-8085-415a-9479-b555374ba958":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643","widgetId":"d134b0c9-8085-415a-9479-b555374ba958"},"1515a9e7-b579-fbbb-43fc-0e3051c14803":{"controllerUrl":"","componentUrl":"https:\/\/static.parastorage.com\/services\/communities-blog-ooi\/1.3112.0\/RssButtonViewerWidget.bundle.min.js","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/communities-blog-ooi\/1.3112.0\/RssButtonViewerWidgetNoCss.bundle.min.js","errorReportingUrl":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643","widgetId":"1515a9e7-b579-fbbb-43fc-0e3051c14803","cssPerBreakpoint":true},"2f3d2c69-2bc4-4519-bd72-0a63dd92577f":{"controllerUrl":"","componentUrl":"https:\/\/static.parastorage.com\/services\/communities-blog-ooi\/1.3112.0\/ArchiveViewerWidget.bundle.min.js","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/communities-blog-ooi\/1.3112.0\/ArchiveViewerWidgetNoCss.bundle.min.js","errorReportingUrl":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643","widgetId":"2f3d2c69-2bc4-4519-bd72-0a63dd92577f","cssPerBreakpoint":true},"75eefde7-6159-4e4c-aafd-2aaf5a27ebbd":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643","widgetId":"75eefde7-6159-4e4c-aafd-2aaf5a27ebbd"},"211b5287-14e2-4690-bb71-525908938c81":{"controllerUrl":"","componentUrl":"https:\/\/static.parastorage.com\/services\/communities-blog-ooi\/1.3112.0\/PostViewerWidget.bundle.min.js","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/communities-blog-ooi\/1.3112.0\/PostViewerWidgetNoCss.bundle.min.js","errorReportingUrl":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643","widgetId":"211b5287-14e2-4690-bb71-525908938c81","cssPerBreakpoint":true},"478911c3-de0c-469e-90e3-304f2f8cd6a7":{"controllerUrl":"","componentUrl":"https:\/\/static.parastorage.com\/services\/communities-blog-ooi\/1.3112.0\/PostTitleViewerWidget.bundle.min.js","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/communities-blog-ooi\/1.3114.0\/PostTitleViewerWidgetNoCss.bundle.min.js","errorReportingUrl":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643","widgetId":"478911c3-de0c-469e-90e3-304f2f8cd6a7"},"f43a5e97-d70d-4906-a56e-45fdfc0f5bb7":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643","widgetId":"f43a5e97-d70d-4906-a56e-45fdfc0f5bb7"},"ce8e832b-c34f-4b80-b2a6-6cfd6d573751":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643","widgetId":"ce8e832b-c34f-4b80-b2a6-6cfd6d573751"},"0cc51cdc-4a4f-4054-9284-6cfb0dc5a22a":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643","widgetId":"0cc51cdc-4a4f-4054-9284-6cfb0dc5a22a"},"813eb645-c6bd-4870-906d-694f30869fd9":{"controllerUrl":"","componentUrl":"https:\/\/static.parastorage.com\/services\/communities-blog-ooi\/1.3112.0\/PostListViewerWidget.bundle.min.js","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/communities-blog-ooi\/1.3112.0\/PostListViewerWidgetNoCss.bundle.min.js","errorReportingUrl":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643","widgetId":"813eb645-c6bd-4870-906d-694f30869fd9"},"bc7fa914-015b-4c32-a323-e5472563a798":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643","widgetId":"bc7fa914-015b-4c32-a323-e5472563a798"},"7466726a-84cf-41c8-be6b-1694445dc539":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643","widgetId":"7466726a-84cf-41c8-be6b-1694445dc539"},"14f260e4-ea13-f861-b0ba-4577df99b961":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643","widgetId":"14f260e4-ea13-f861-b0ba-4577df99b961"},"091d05b7-f44d-4a76-9163-0c7ed5312769":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643","widgetId":"091d05b7-f44d-4a76-9163-0c7ed5312769"},"763aa9a8-0531-426f-a4b1-61a7291ce292":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643","widgetId":"763aa9a8-0531-426f-a4b1-61a7291ce292"},"e5a2773b-0e6b-4cbb-a012-3b4a69e92046":{"controllerUrl":"","componentUrl":"https:\/\/static.parastorage.com\/services\/communities-blog-ooi\/1.3112.0\/MyPostsViewerWidget.bundle.min.js","noCssComponentUrl":"https:\/\/static.parastorage.com\/services\/communities-blog-ooi\/1.3112.0\/MyPostsViewerWidgetNoCss.bundle.min.js","errorReportingUrl":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643","widgetId":"e5a2773b-0e6b-4cbb-a012-3b4a69e92046"},"14f26118-b65b-b1c1-b6db-34d5da9dd623":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com\/1643","widgetId":"14f26118-b65b-b1c1-b6db-34d5da9dd623"}}},"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130":{"appDefId":"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130","appDefName":"Wix Portfolio","viewerScriptUrl":"https:\/\/static.parastorage.com\/services\/portfolio-bob\/1.1224.0\/viewerScript.bundle.min.js","baseUrls":{"siteAssets":"{urlTemplate: {siteAssets}?siteId=eddaf1fb-7444-4866-abf5-b6147d2eb578&metaSiteId=3b797846-5b17-4d50-aa76-817ae872bd80&siteRevision=9292","blocks_devSiteUrl":"https:\/\/exposure4.editorx.io\/i8oyrsuu6sw43bmv723c","blocks_widgetManifestsUrl":"\/manifests\/d90652a2-f5a1-4c7c-84c4-d4cdcc41f130\/9292\/manifests.json","staticsBaseUrl":"https:\/\/static.parastorage.com\/services\/portfolio-bob\/1.1224.0","staticsEditorBaseUrl":"https:\/\/static.parastorage.com\/services\/portfolio-bob\/1.1224.0"},"errorReportingUrl":"https:\/\/bfb679c754744c58a7374ee6e25cfc13@sentry.wixpress.com\/2954","widgets":{"cee9250f-6d1b-4792-9c89-92ad9331a14c":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/bfb679c754744c58a7374ee6e25cfc13@sentry.wixpress.com\/2954","widgetId":"cee9250f-6d1b-4792-9c89-92ad9331a14c"},"2aab0194-002b-49b0-96b0-14023fe80a51":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/bfb679c754744c58a7374ee6e25cfc13@sentry.wixpress.com\/2954","widgetId":"2aab0194-002b-49b0-96b0-14023fe80a51"},"0c69860e-22af-4e7d-afb5-8688f8a62810":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/bfb679c754744c58a7374ee6e25cfc13@sentry.wixpress.com\/2954","widgetId":"0c69860e-22af-4e7d-afb5-8688f8a62810"},"d6c045f0-5d83-4c6c-845e-9059ca159990":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/bfb679c754744c58a7374ee6e25cfc13@sentry.wixpress.com\/2954","widgetId":"d6c045f0-5d83-4c6c-845e-9059ca159990"},"a9d4e3aa-646a-4318-8cd1-142bf9dcbcc6":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/bfb679c754744c58a7374ee6e25cfc13@sentry.wixpress.com\/2954","widgetId":"a9d4e3aa-646a-4318-8cd1-142bf9dcbcc6"},"19c2c23c-bee0-46d5-89a8-aa218df193c9":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/bfb679c754744c58a7374ee6e25cfc13@sentry.wixpress.com\/2954","widgetId":"19c2c23c-bee0-46d5-89a8-aa218df193c9"},"dce5b630-279d-48fe-ad36-d4689446f8b8":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/bfb679c754744c58a7374ee6e25cfc13@sentry.wixpress.com\/2954","widgetId":"dce5b630-279d-48fe-ad36-d4689446f8b8"},"dafd3feb-14fb-4e16-af79-43fa6e7757d6":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/bfb679c754744c58a7374ee6e25cfc13@sentry.wixpress.com\/2954","widgetId":"dafd3feb-14fb-4e16-af79-43fa6e7757d6"},"8170e65e-9571-4936-8d8c-87b20e86983e":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/bfb679c754744c58a7374ee6e25cfc13@sentry.wixpress.com\/2954","widgetId":"8170e65e-9571-4936-8d8c-87b20e86983e"},"e0a0078d-0b7b-448b-8286-634343625929":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/bfb679c754744c58a7374ee6e25cfc13@sentry.wixpress.com\/2954","widgetId":"e0a0078d-0b7b-448b-8286-634343625929"},"90e98c69-d7e4-4735-ae70-8f865f447492":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/bfb679c754744c58a7374ee6e25cfc13@sentry.wixpress.com\/2954","widgetId":"90e98c69-d7e4-4735-ae70-8f865f447492"},"5801308f-1c6e-484c-afaa-f5f002a0f05a":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/bfb679c754744c58a7374ee6e25cfc13@sentry.wixpress.com\/2954","widgetId":"5801308f-1c6e-484c-afaa-f5f002a0f05a"},"dcb496ce-09a9-4ad8-b376-8b95516767e4":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/bfb679c754744c58a7374ee6e25cfc13@sentry.wixpress.com\/2954","widgetId":"dcb496ce-09a9-4ad8-b376-8b95516767e4"},"a0ad8ad7-c3d5-49d1-afd4-21d5bd73e727":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/bfb679c754744c58a7374ee6e25cfc13@sentry.wixpress.com\/2954","widgetId":"a0ad8ad7-c3d5-49d1-afd4-21d5bd73e727"},"d88f5910-8e5f-430d-9a33-ead698c6a601":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/bfb679c754744c58a7374ee6e25cfc13@sentry.wixpress.com\/2954","widgetId":"d88f5910-8e5f-430d-9a33-ead698c6a601"},"3f41d62e-4f48-4ba5-a2f4-54cc7b6a412f":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/bfb679c754744c58a7374ee6e25cfc13@sentry.wixpress.com\/2954","widgetId":"3f41d62e-4f48-4ba5-a2f4-54cc7b6a412f"},"18c27451-20c4-4b32-817a-cec90ef4cf6a":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/bfb679c754744c58a7374ee6e25cfc13@sentry.wixpress.com\/2954","widgetId":"18c27451-20c4-4b32-817a-cec90ef4cf6a"},"94473845-b8a0-44cb-9b46-3be017b18139":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/bfb679c754744c58a7374ee6e25cfc13@sentry.wixpress.com\/2954","widgetId":"94473845-b8a0-44cb-9b46-3be017b18139"},"83f9f884-6bc1-40fe-9507-0caf491eb30a":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/bfb679c754744c58a7374ee6e25cfc13@sentry.wixpress.com\/2954","widgetId":"83f9f884-6bc1-40fe-9507-0caf491eb30a"},"21044b85-8044-4a6a-9f6e-b60b6b8b8240":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/bfb679c754744c58a7374ee6e25cfc13@sentry.wixpress.com\/2954","widgetId":"21044b85-8044-4a6a-9f6e-b60b6b8b8240"},"e824d6ec-80ef-42ea-bb34-a345716451c6":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/bfb679c754744c58a7374ee6e25cfc13@sentry.wixpress.com\/2954","widgetId":"e824d6ec-80ef-42ea-bb34-a345716451c6"},"85ed03d7-7cab-44cf-b261-956cf77078d7":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/bfb679c754744c58a7374ee6e25cfc13@sentry.wixpress.com\/2954","widgetId":"85ed03d7-7cab-44cf-b261-956cf77078d7"},"c6a5ef1c-92b9-4523-b0cf-f5f86e18b63f":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/bfb679c754744c58a7374ee6e25cfc13@sentry.wixpress.com\/2954","widgetId":"c6a5ef1c-92b9-4523-b0cf-f5f86e18b63f"},"34f0a4f4-6ffe-4e9b-a144-0ad7c1ab8c80":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/bfb679c754744c58a7374ee6e25cfc13@sentry.wixpress.com\/2954","widgetId":"34f0a4f4-6ffe-4e9b-a144-0ad7c1ab8c80"},"54160040-d8c6-47a0-b9cb-2023c59e5f72":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/bfb679c754744c58a7374ee6e25cfc13@sentry.wixpress.com\/2954","widgetId":"54160040-d8c6-47a0-b9cb-2023c59e5f72"},"60c9bfbb-a162-45a3-a1f3-66fea3e3e4ed":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/bfb679c754744c58a7374ee6e25cfc13@sentry.wixpress.com\/2954","widgetId":"60c9bfbb-a162-45a3-a1f3-66fea3e3e4ed"},"8a95c2ad-d49b-4a5c-8b7d-5a90a2e5cd18":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/bfb679c754744c58a7374ee6e25cfc13@sentry.wixpress.com\/2954","widgetId":"8a95c2ad-d49b-4a5c-8b7d-5a90a2e5cd18"},"94749934-1639-4306-84db-7149978a0562":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/bfb679c754744c58a7374ee6e25cfc13@sentry.wixpress.com\/2954","widgetId":"94749934-1639-4306-84db-7149978a0562"},"e90b63c1-7f1b-48c5-b046-391f2478d2aa":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/bfb679c754744c58a7374ee6e25cfc13@sentry.wixpress.com\/2954","widgetId":"e90b63c1-7f1b-48c5-b046-391f2478d2aa"},"7ba61b91-d50d-4b14-ab40-0e5e9220919c":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/bfb679c754744c58a7374ee6e25cfc13@sentry.wixpress.com\/2954","widgetId":"7ba61b91-d50d-4b14-ab40-0e5e9220919c"},"7286ccdf-e28c-4ad8-a243-f90d09949ca3":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/bfb679c754744c58a7374ee6e25cfc13@sentry.wixpress.com\/2954","widgetId":"7286ccdf-e28c-4ad8-a243-f90d09949ca3"},"830c75f8-dbe6-4bf9-bc08-7e39828a6301":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/bfb679c754744c58a7374ee6e25cfc13@sentry.wixpress.com\/2954","widgetId":"830c75f8-dbe6-4bf9-bc08-7e39828a6301"},"cb811972-44c1-44b5-8fc9-c9508659c54e":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/bfb679c754744c58a7374ee6e25cfc13@sentry.wixpress.com\/2954","widgetId":"cb811972-44c1-44b5-8fc9-c9508659c54e"},"ec526bfa-27bd-40a7-80c5-2deabcbaf204":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/bfb679c754744c58a7374ee6e25cfc13@sentry.wixpress.com\/2954","widgetId":"ec526bfa-27bd-40a7-80c5-2deabcbaf204"},"c5a464fa-7892-47d5-b23e-f11e9ac1d694":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/bfb679c754744c58a7374ee6e25cfc13@sentry.wixpress.com\/2954","widgetId":"c5a464fa-7892-47d5-b23e-f11e9ac1d694"},"c6b2e7c1-46ed-4cc5-8dbd-50ddb1b1e9ad":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/bfb679c754744c58a7374ee6e25cfc13@sentry.wixpress.com\/2954","widgetId":"c6b2e7c1-46ed-4cc5-8dbd-50ddb1b1e9ad"},"5ec17c5e-c01b-4d4f-9ffe-ab6282146654":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/bfb679c754744c58a7374ee6e25cfc13@sentry.wixpress.com\/2954","widgetId":"5ec17c5e-c01b-4d4f-9ffe-ab6282146654"},"ceecd61c-3aec-4639-b32c-cbfe1400e819":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/bfb679c754744c58a7374ee6e25cfc13@sentry.wixpress.com\/2954","widgetId":"ceecd61c-3aec-4639-b32c-cbfe1400e819"},"e86110ad-890a-4b7a-abe3-6e8dc8bb15cf":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/bfb679c754744c58a7374ee6e25cfc13@sentry.wixpress.com\/2954","widgetId":"e86110ad-890a-4b7a-abe3-6e8dc8bb15cf"},"437cf52e-f57d-449e-af48-96791677e471":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/bfb679c754744c58a7374ee6e25cfc13@sentry.wixpress.com\/2954","widgetId":"437cf52e-f57d-449e-af48-96791677e471"},"ccd857ff-153e-452c-8cea-3f3a8aafeb86":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/bfb679c754744c58a7374ee6e25cfc13@sentry.wixpress.com\/2954","widgetId":"ccd857ff-153e-452c-8cea-3f3a8aafeb86"},"43ae5824-a10b-4baf-9584-775920339ec7":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/bfb679c754744c58a7374ee6e25cfc13@sentry.wixpress.com\/2954","widgetId":"43ae5824-a10b-4baf-9584-775920339ec7"},"43f58330-cdf6-4381-b1f4-e0d571533f51":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/bfb679c754744c58a7374ee6e25cfc13@sentry.wixpress.com\/2954","widgetId":"43f58330-cdf6-4381-b1f4-e0d571533f51"},"1a280e59-fe91-46e5-9a08-66000a7becbe":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/bfb679c754744c58a7374ee6e25cfc13@sentry.wixpress.com\/2954","widgetId":"1a280e59-fe91-46e5-9a08-66000a7becbe"},"26616003-ec67-46bf-93f3-eb1c1476a581":{"controllerUrl":"","componentUrl":"","noCssComponentUrl":"","errorReportingUrl":"https:\/\/bfb679c754744c58a7374ee6e25cfc13@sentry.wixpress.com\/2954","widgetId":"26616003-ec67-46bf-93f3-eb1c1476a581"}}},"dataBinding":{"appDefId":"dataBinding","appDefName":"Data Binding","viewerScriptUrl":"https:\/\/static.parastorage.com\/services\/dbsm-viewer-app\/1.9023.0\/app.js","baseUrls":{},"widgets":{}},"675bbcef-18d8-41f5-800e-131ec9e08762":{"appDefId":"675bbcef-18d8-41f5-800e-131ec9e08762","viewerScriptUrl":"https:\/\/static.parastorage.com\/services\/wix-code-viewer-app\/1.1479.745\/app.js","baseUrls":{},"widgets":{}}},"builderComponentsImportMapSdkUrls":{},"builderComponentsCompTypeSdkUrls":{},"builderPublicPackagesUrls":{"esm":{},"umd":{}},"blocksBootstrapData":{"blocksAppsData":{"5c047089-b4af-4395-bd58-139524a3da1d":{"siteHeaderUrl":"84c902403352614d513cfa84fd6b1eae_r3.json","wixCodeGridId":"de11cb8d-1ed2-4ef4-a07a-2ab788c19320","wixCodeInstanceId":"6d851d06-b8e0-42a5-aa0a-3283b65257f9"},"14271d6f-ba62-d045-549b-ab972ae1f70e":{"siteHeaderUrl":"a7dbf879980a8e90e03d649b6f48fac4_r3.json","wixCodeGridId":"71869e96-79b7-49b9-b6f9-e32bcf00ac52","wixCodeInstanceId":"4655355b-4814-4846-b82a-e057f0df94a3"},"14bcded7-0066-7c35-14d7-466cb3f09103":{"siteHeaderUrl":"ae7beb322e32912fccc688a488a3de89_r3.json","wixCodeGridId":"21056c2c-144a-488f-912d-5fb0e1262beb","wixCodeInstanceId":"c520f32b-7cd2-44bd-a087-e5c72fd7af4c"},"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130":{"siteHeaderUrl":"f512fcdec26704c7da6a309d7b11c311_r3.json","wixCodeGridId":"2122ce2b-e7c2-40bf-a898-a6aa6f852c52","wixCodeInstanceId":"61d54d44-4efd-4c52-a518-f54563d97c37"}},"elevatedBlocksAppsOnReactNative":[],"experiments":{"specs.blocks-client.alwaysUseTokenInfoForDecode":"true"},"experimentsQueryParams":"init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=undefined","widgetBundleUrls":{},"isVeloBundlerParastorageUrlEnabled":true,"parastorageTemplateUrl":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_\/gridAppId_\/filePath_\/fileType_js\/compression_gzip\/depToken_3938\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_"},"window":{"csrfToken":""},"location":{"externalBaseUrl":"https:\/\/www.dehonline.es","isPremiumDomain":true,"metaSiteId":"b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1","userFileDomainUrl":"filesusr.com"},"bi":{"ownerId":"ccd8ffa2-1969-432d-b976-df5cde6967ca","isMobileFriendly":true,"isPreview":false,"requestId":"1772921026.1539296995341308"},"platformAPIData":{"routersConfigMap":{"routers-lpdz75mh":{"prefix":"account","appDefinitionId":"14cc59bc-f0b7-15b8-e1c7-89ce41d0e0c9","config":"{\"type\":\"private\",\"patterns\":{\"\/my-account\":{\"socialHome\":false,\"appData\":{\"appDefinitionId\":\"14cffd81-5215-0a7f-22f8-074b0e2401fb\",\"appPageId\":\"member_info\",\"menuOrder\":3,\"visibleForRoles\":[]},\"page\":\"ede32970-5e9c-406c-9950-09655f962869\",\"seoData\":{\"title\":\"Mi cuenta\",\"description\":\"\",\"keywords\":\"\",\"noIndex\":\"true\"},\"title\":\"Mi cuenta\"},\"\/my-subscriptions\":{\"socialHome\":false,\"appData\":{\"numbers\":{},\"appDefinitionId\":\"2bef2abe-7abe-43da-889c-53c1500a328c\",\"appPageId\":\"My Subscriptions\",\"menuOrder\":2,\"visibleForRoles\":[]},\"page\":\"380936b6-70ca-4254-8474-31bedebcd7e4\",\"seoData\":{\"title\":\"Mis suscripciones\",\"description\":\"\",\"keywords\":\"\",\"noIndex\":\"true\"},\"title\":\"Mis suscripciones\"},\"\/my-addresses\":{\"socialHome\":false,\"appData\":{\"numbers\":{},\"appDefinitionId\":\"1505b775-e885-eb1b-b665-1e485d9bf90e\",\"appPageId\":\"my_addresses\",\"menuOrder\":2,\"visibleForRoles\":[]},\"page\":\"541a5cc2-d6f6-4cd8-8a90-312ce207e850\",\"seoData\":{\"title\":\"Mis direcciones\",\"description\":\"\",\"keywords\":\"\",\"noIndex\":\"true\"},\"title\":\"Mis direcciones\"},\"\/my-wallet\":{\"socialHome\":false,\"appData\":{\"numbers\":{},\"appDefinitionId\":\"4aebd0cb-fbdb-4da7-b5d1-d05660a30172\",\"appPageId\":\"my_wallet\",\"menuOrder\":2,\"visibleForRoles\":[]},\"page\":\"e223a1f4-3ce9-44de-bbf3-c7e77c21e6ab\",\"seoData\":{\"title\":\"Mi billetera\",\"description\":\"\",\"keywords\":\"\",\"noIndex\":\"true\"},\"title\":\"Mi billetera\"},\"\/settings\":{\"socialHome\":false,\"appData\":{\"numbers\":{},\"appDefinitionId\":\"14f25dc5-6af3-5420-9568-f9c5ed98c9b1\",\"appPageId\":\"settings\",\"menuOrder\":4,\"visibleForRoles\":[]},\"page\":\"4403c30c-a1ec-497e-9056-d87d7ffae212\",\"seoData\":{\"title\":\"Opciones\",\"description\":\"\",\"keywords\":\"\",\"noIndex\":\"true\"},\"title\":\"Opciones\"},\"\/notifications\":{\"socialHome\":false,\"appData\":{\"numbers\":{\"key\":\"notificationsCount\",\"default\":0},\"appDefinitionId\":\"14f25924-5664-31b2-9568-f9c5ed98c9b1\",\"appPageId\":\"notifications_app\",\"menuOrder\":4,\"visibleForRoles\":[]},\"page\":\"ad16ce05-02eb-4802-86ef-e3f6cb5d2056\",\"seoData\":{\"title\":\"Notificaciones\",\"description\":\"\",\"keywords\":\"\",\"noIndex\":\"true\"},\"title\":\"Notificaciones\"},\"\/my-orders\":{\"socialHome\":false,\"appData\":{\"numbers\":{},\"appDefinitionId\":\"1380b703-ce81-ff05-f115-39571d94dfcd\",\"appPageId\":\"order_history\",\"menuOrder\":2,\"visibleForRoles\":[]},\"page\":\"cfe08b5e-852d-4a74-b28c-53cd2d18a0f9\",\"seoData\":{\"title\":\"Mis pedidos\",\"description\":\"\",\"keywords\":\"\",\"noIndex\":\"true\"},\"title\":\"Mis pedidos\"},\"\/my-bookings\":{\"socialHome\":false,\"appData\":{\"numbers\":{},\"appDefinitionId\":\"13d21c63-b5ec-5912-8397-c3a5ddb27a97\",\"appPageId\":\"bookings_member_area\",\"menuOrder\":2,\"visibleForRoles\":[]},\"page\":\"221dd5b5-a7e8-483e-92bc-c8aefef82fb4\",\"seoData\":{\"title\":\"Mis reservas\",\"description\":\"\",\"keywords\":\"\",\"noIndex\":\"true\"},\"title\":\"Mis reservas\"},\"\/my-groups\":{\"socialHome\":false,\"appData\":{\"numbers\":{},\"appDefinitionId\":\"148c2287-c669-d849-d153-463c7486a694\",\"appPageId\":\"My Groups\",\"menuOrder\":2,\"visibleForRoles\":[]},\"page\":\"9869a6f2-b478-4cf3-8fbc-0b8979b85e04\",\"seoData\":{\"title\":\"My Groups\",\"description\":\"\",\"keywords\":\"\",\"noIndex\":\"true\"},\"title\":\"My Groups\"}}}","group":"members","pages":{"cfe08b5e-852d-4a74-b28c-53cd2d18a0f9":"pkvic","221dd5b5-a7e8-483e-92bc-c8aefef82fb4":"wrmtp","ad16ce05-02eb-4802-86ef-e3f6cb5d2056":"yp7a1","e223a1f4-3ce9-44de-bbf3-c7e77c21e6ab":"tpqog","380936b6-70ca-4254-8474-31bedebcd7e4":"wpgmi","541a5cc2-d6f6-4cd8-8a90-312ce207e850":"in5n9","ede32970-5e9c-406c-9950-09655f962869":"v760n","9869a6f2-b478-4cf3-8fbc-0b8979b85e04":"u305p","4403c30c-a1ec-497e-9056-d87d7ffae212":"muzu0"},"roleVariations":{}},"routers-lsx0bfnn":{"prefix":"partners","appDefinitionId":"dataBinding","config":"{\"patterns\":{\"\/{title}\":{\"seoMetaTags\":{\"description\":\"{_id}\",\"robots\":\"index\",\"keywords\":\"\",\"og:image\":\"\"},\"pageRole\":\"a52dca6c-d625-428a-bfc6-ba31939fd9d2\",\"title\":\"{title}\",\"config\":{\"collection\":\"Partners\",\"pageSize\":26,\"lowercase\":true,\"seoV2\":true}}}}","group":"","pages":{"a52dca6c-d625-428a-bfc6-ba31939fd9d2":"n1mgf"},"roleVariations":{}},"routers-m7krxodo":{"prefix":"logs-api-panel","appDefinitionId":"dataBinding","config":"{\"patterns\":{\"\/\":{\"seoMetaTags\":{\"description\":\"{request}\",\"robots\":\"index\"},\"pageRole\":\"62d1cbe7-edd5-4013-9ffd-4b33b0101891\",\"title\":\"LogsAPIPanel\",\"config\":{\"collection\":\"LogsAPIPanel\",\"pageSize\":1,\"lowercase\":true,\"seoV2\":true}}}}","group":"","pages":{"62d1cbe7-edd5-4013-9ffd-4b33b0101891":"uv3a3"},"roleVariations":{}},"routers-lpdz75mh1":{"prefix":"profile","appDefinitionId":"14cc59bc-f0b7-15b8-e1c7-89ce41d0e0c9","config":"{\"type\":\"public\",\"patterns\":{\"\/{userName}\/profile\":{\"socialHome\":true,\"appData\":{\"numbers\":{},\"appDefinitionId\":\"14dbef06-cc42-5583-32a7-3abd44da4908\",\"appPageId\":\"about\",\"menuOrder\":1,\"visibleForRoles\":[]},\"page\":\"296fd1b2-b2d3-43e1-8485-54b566155d9b\",\"seoData\":{\"title\":\"{userName} | Perfil\",\"description\":\"\",\"keywords\":\"\",\"noIndex\":\"true\"},\"title\":\"Perfil\"}}}","group":"members","pages":{"296fd1b2-b2d3-43e1-8485-54b566155d9b":"a7c5z"},"roleVariations":{}}}},"wixCodeBootstrapData":{"wixCodeAppDefinitionId":"675bbcef-18d8-41f5-800e-131ec9e08762","wixCodeInstanceId":"cd8308c8-d8e2-44bc-aa5e-f2a62a9bc2d6","wixCloudBaseDomain":"wix-code.com","dbsmViewerApp":"https:\/\/static.parastorage.com\/services\/dbsm-viewer-app\/1.9023.0","wixCodePlatformBaseUrl":"https:\/\/static.parastorage.com\/services\/wix-code-platform\/1.1097.93","wixCodeModel":{"appData":{"codeAppId":"5fa8ac08-adbb-498d-8d2c-f4685175922b"},"signedAppRenderInfo":"cc3ad67fbe4e16ea743126cbed25ea2b1d014f1b.eyJncmlkQXBwSWQiOiI1ZmE4YWMwOC1hZGJiLTQ5OGQtOGQyYy1mNDY4NTE3NTkyMmIiLCJodG1sU2l0ZUlkIjoiMjQxZGQ2YzctN2ZiNS00YzhkLWI0ZDYtOTRlNmFmZDMxNTM3IiwiZGVtb0lkIjpudWxsLCJzaWduRGF0ZSI6MTc3MjkyMTAyNjI0OH0="},"wixCodePageIds":{"mkray":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_mkray.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","cim8a":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_cim8a.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","bc8kx":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_bc8kx.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","gji5q":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_gji5q.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","slmag":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_slmag.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","quxst":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_quxst.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","zxmy1":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_zxmy1.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","oujlx":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_oujlx.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","je6hc":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_je6hc.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","ytqdg":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_ytqdg.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","olhdo":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_olhdo.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","i0g2n":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_i0g2n.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","xq2tw":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_xq2tw.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","njh83":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_njh83.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","txodm":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_txodm.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","n1mgf":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_n1mgf.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","qmhcs":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_qmhcs.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","ga5jw":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_ga5jw.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","hpgql":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_hpgql.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","sbcjh":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_sbcjh.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","w8duu":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_w8duu.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","wm3z0":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_wm3z0.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","af52d":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_af52d.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","vmhii":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_vmhii.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","tajgd":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_tajgd.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","u6bhj":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_u6bhj.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","p60vc":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_p60vc.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","nhshd":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_nhshd.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","l8mal":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_l8mal.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","rwy8r":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_rwy8r.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","k9yj1":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_k9yj1.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","fswyo":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_fswyo.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","uwoq0":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_uwoq0.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","o8zx5":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_o8zx5.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","qofog":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_qofog.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","y73hn":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_y73hn.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","hw5bv":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_hw5bv.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","wu4cm":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_wu4cm.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","dsocb":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_dsocb.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","t1as7":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_t1as7.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","dytx1":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_dytx1.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","wmg2n":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_wmg2n.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","h10oq":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_h10oq.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","ik1hh":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_ik1hh.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","hydos":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_hydos.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","wcsyo":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_wcsyo.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","nt31e":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_nt31e.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","x29nv":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_x29nv.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","reoxc":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_reoxc.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","mrxoe":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_mrxoe.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","lmhhf":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_lmhhf.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","pm5m6":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_pm5m6.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","yp7vs":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_yp7vs.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","ocq3p":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_ocq3p.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","masterPage":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_masterPage.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","skvoa":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_skvoa.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","d48k3":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_d48k3.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","thsrc":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_thsrc.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","sxzjx":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_sxzjx.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","obu7v":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_obu7v.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","hfva2":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_hfva2.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false","kjy2o":"https:\/\/bundler-velo.parastorage.com\/v_metaSiteId_b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1\/gridAppId_5fa8ac08-adbb-498d-8d2c-f4685175922b\/filePath_public_delimiter_pages_delimiter_kjy2o.js\/fileType_js\/compression_gzip\/depToken_\/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions\/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false"},"elementorySupport":{"baseUrl":"https:\/\/www.dehonline.es\/_api\/wix-code-public-dispatcher-ng\/siteview"},"codePackagesData":[]},"autoFrontendModulesBaseUrl":"https:\/\/static.parastorage.com\/services\/auto-frontend-modules\/1.6238.0","disabledPlatformApps":{},"widgetsClientSpecMapData":{"14ce1214-b278-a7e4-1373-00cebd1bef7c":{},"675bbcef-18d8-41f5-800e-131ec9e08762":{},"1380b703-ce81-ff05-f115-39571d94dfcd":{"13a94f09-2766-3c40-4a32-8edb5acdd8bc":{"widgetName":"product_page","componentFields":{}},"49dbb2d9-d9e5-4605-a147-e926605bf164":{"widgetName":"49dbb2d9-d9e5-4605-a147-e926605bf164","componentFields":{}},"14666402-0bc7-b763-e875-e99840d131bd":{"widgetName":"add_to_cart_button","componentFields":{}},"a63a5215-8aa6-42af-96b1-583bfd74cff5":{"widgetName":"wishlist","componentFields":{}},"13afb094-84f9-739f-44fd-78d036adb028":{"widgetName":"grid_gallery","componentFields":{}},"1380bbab-4da3-36b0-efb4-2e0599971d14":{"widgetName":"shopping_cart","componentFields":{}},"139a41fd-0b1d-975f-6f67-e8cbdf8ccc82":{"widgetName":"slider_gallery","componentFields":{}},"1380bbb4-8df0-fd38-a235-88821cf3f8a4":{"widgetName":"thank_you_page","componentFields":{}},"14e121c8-00a3-f7cc-6156-2c82a2ba8fcb":{"widgetName":"order_history","componentFields":{}},"1380bba0-253e-a800-a235-88821cf3f8a4":{"widgetName":"product_gallery","componentFields":{}},"1380bbc4-1485-9d44-4616-92e36b1ead6b":{"widgetName":"shopping_cart_icon","componentFields":{}},"244576c9-d856-49b9-af14-216071924e3b":{"widgetName":"244576c9-d856-49b9-af14-216071924e3b","componentFields":{}},"abcd87fe-c51f-4538-848d-2902a2f50d2d":{"widgetName":"abcd87fe-c51f-4538-848d-2902a2f50d2d","componentFields":{}},"4425f8e8-51fb-457b-9123-fdb7b1cef94a":{"widgetName":"4425f8e8-51fb-457b-9123-fdb7b1cef94a","componentFields":{}},"bda15dc1-816d-4ff3-8dcb-1172d5343cce":{"widgetName":"bda15dc1-816d-4ff3-8dcb-1172d5343cce","componentFields":{}},"14fd5970-8072-c276-1246-058b79e70c1a":{"widgetName":"checkout","componentFields":{}},"13ec3e79-e668-cc0c-2d48-e99d53a213dd":{"widgetName":"product_widget","componentFields":{}},"deaaaab0-f5bd-4b7a-a652-3845efcb546a":{"widgetName":"deaaaab0-f5bd-4b7a-a652-3845efcb546a","componentFields":{}},"215f8ab7-97c3-4838-a6d0-ad4a61747158":{"componentFields":{}}},"5c047089-b4af-4395-bd58-139524a3da1d":{"f32eee9c-7a0e-4d2d-b907-53762023aba7":{"componentFields":{}},"c4a8a2b7-48a0-40b4-b494-6903f3e5113a":{"componentFields":{}}},"14271d6f-ba62-d045-549b-ab972ae1f70e":{"142bb34d-3439-576a-7118-683e690a1e0d":{"widgetName":"pro-gallery","componentFields":{}},"144f04b9-aab4-fde7-179b-780c11da4f46":{"widgetName":"fullscreen_page","componentFields":{}}},"14c92d28-031e-7910-c9a8-a670011e062d":{"14c92de1-0e02-cbe5-98e9-c3de44d63a55":{"widgetName":"faq_widget","componentFields":{}}},"215238eb-22a5-4c36-9e7b-e7c08025e04e":{},"14cc59bc-f0b7-15b8-e1c7-89ce41d0e0c9":{"e53d6a92-5acc-4a00-9d4d-f46c86a49c2e":{"componentFields":{}}},"14cffd81-5215-0a7f-22f8-074b0e2401fb":{"14dd1af6-3e02-63db-0ef2-72fbc7cc3136":{"widgetName":"member_info","componentFields":{}}},"14ce28f7-7eb0-3745-22f8-074b0e2401fb":{"14cefc05-d163-dbb7-e4ec-cd4f2c4d6ddd":{"widgetName":"profile","componentFields":{}}},"4aebd0cb-fbdb-4da7-b5d1-d05660a30172":{"6467c15e-af3c-4e8d-b167-41bfb8efc32a":{"widgetName":"my_wallet","componentFields":{}}},"2bef2abe-7abe-43da-889c-53c1500a328c":{"b29db04a-a8f2-4bfe-bbad-21c99c1054b5":{"widgetName":"My Subscriptions","componentFields":{}}},"14517e1a-3ff0-af98-408e-2bd6953c36a2":{"14517f3f-ffc5-eced-f592-980aaa0bbb5c":{"widgetName":"wix_visitors","componentFields":{}}},"14bcded7-0066-7c35-14d7-466cb3f09103":{"ea40bb32-ddfc-4f68-a163-477bd0e97c8e":{"componentFields":{}},"14f260f9-c2eb-50e8-9b3c-4d21861fe58f":{"widgetName":"member-comments-page","componentFields":{}},"6e2b3a80-dc83-4ce3-adc2-82ce48ff2ed6":{"componentFields":{}},"14e5b36b-e545-88a0-1475-2487df7e9206":{"widgetName":"recent-posts-widget","componentFields":{}},"14c1462a-97f2-9f6a-7bb7-f5541f23caa6":{"widgetName":"blog","componentFields":{}},"5fdc6c03-080d-4872-b567-24146c82fae5":{"componentFields":{}},"7183995a-bf0b-4a2f-a9b4-a1b7ef96b6fa":{"componentFields":{}},"ff5bffc0-5d09-4b31-b140-be6d8ffa2c03":{"componentFields":{}},"2d4ed2d3-75f8-4942-9787-71e3d182e256":{"componentFields":{}},"46a9e991-c1cc-47c9-b19a-e99d3be1e2c9":{"widgetName":"46a9e991-c1cc-47c9-b19a-e99d3be1e2c9","componentFields":{}},"a0d7808c-0d7d-4a40-8cf0-911a9f0de96f":{"widgetName":"a0d7808c-0d7d-4a40-8cf0-911a9f0de96f","componentFields":{}},"5940091f-797c-4e86-9c57-73fcfd87425f":{"componentFields":{}},"e5520a99-1725-4b88-a85f-c439916890c8":{"componentFields":{}},"1b5b448c-a39f-4515-9445-c6b4ceace1c2":{"componentFields":{}},"68a2d745-328b-475d-9e36-661f678daa31":{"componentFields":{}},"5e123a45-f3aa-4157-a47a-e58d8cb246eb":{"componentFields":{}},"c0a125b8-2311-451e-99c5-89b6bba02b22":{"widgetName":"c0a125b8-2311-451e-99c5-89b6bba02b22","componentFields":{}},"b27ea74b-1c6f-4bdb-bda7-8242323ba20b":{"componentFields":{}},"25ab36f9-f8bd-4799-a887-f10b6822fc2e":{"componentFields":{}},"14f26109-514f-f9a8-9b3c-4d21861fe58f":{"widgetName":"member-likes-page","componentFields":{}},"76359954-edd4-4c46-ad14-a7c5e65cc30c":{"componentFields":{}},"14e5b39b-6d47-99c3-3ee5-cee1c2574c89":{"widgetName":"custom-feed-widget","componentFields":{}},"26858b64-aad8-42ab-8c63-f19009198c7b":{"componentFields":{}},"129259f6-06e4-42a3-9877-81a1fa9de95c":{"componentFields":{}},"d134b0c9-8085-415a-9479-b555374ba958":{"componentFields":{}},"1515a9e7-b579-fbbb-43fc-0e3051c14803":{"widgetName":"rss-feed-widget","componentFields":{}},"2f3d2c69-2bc4-4519-bd72-0a63dd92577f":{"widgetName":"2f3d2c69-2bc4-4519-bd72-0a63dd92577f","componentFields":{}},"75eefde7-6159-4e4c-aafd-2aaf5a27ebbd":{"componentFields":{}},"211b5287-14e2-4690-bb71-525908938c81":{"widgetName":"post","componentFields":{}},"478911c3-de0c-469e-90e3-304f2f8cd6a7":{"widgetName":"478911c3-de0c-469e-90e3-304f2f8cd6a7","componentFields":{}},"f43a5e97-d70d-4906-a56e-45fdfc0f5bb7":{"componentFields":{}},"ce8e832b-c34f-4b80-b2a6-6cfd6d573751":{"componentFields":{}},"0cc51cdc-4a4f-4054-9284-6cfb0dc5a22a":{"componentFields":{}},"813eb645-c6bd-4870-906d-694f30869fd9":{"widgetName":"813eb645-c6bd-4870-906d-694f30869fd9","componentFields":{}},"bc7fa914-015b-4c32-a323-e5472563a798":{"componentFields":{}},"7466726a-84cf-41c8-be6b-1694445dc539":{"componentFields":{}},"14f260e4-ea13-f861-b0ba-4577df99b961":{"widgetName":"member-drafts-page","componentFields":{}},"091d05b7-f44d-4a76-9163-0c7ed5312769":{"componentFields":{}},"763aa9a8-0531-426f-a4b1-61a7291ce292":{"componentFields":{}},"e5a2773b-0e6b-4cbb-a012-3b4a69e92046":{"widgetName":"e5a2773b-0e6b-4cbb-a012-3b4a69e92046","componentFields":{}},"14f26118-b65b-b1c1-b6db-34d5da9dd623":{"widgetName":"member-posts-page","componentFields":{}}},"1484cb44-49cd-5b39-9681-75188ab429de":{"44c66af6-4d25-485a-ad9d-385f5460deef":{"widgetName":"search_results","componentFields":{}}},"14f25dc5-6af3-5420-9568-f9c5ed98c9b1":{"04462ba4-2137-41bd-9460-0814554aae07":{"widgetName":"04462ba4-2137-41bd-9460-0814554aae07","componentFields":{}},"14f25dd2-f9b0-edc2-f38e-eded5da094aa":{"widgetName":"settings","componentFields":{}}},"14dbef06-cc42-5583-32a7-3abd44da4908":{"14dbefb9-3b7b-c4e9-53e8-766defd30587":{"widgetName":"about","componentFields":{}}},"14f25924-5664-31b2-9568-f9c5ed98c9b1":{"14f2595a-a352-3ff1-9b3c-4d21861fe58f":{"widgetName":"notifications_app","componentFields":{}},"6ca9273a-a775-407c-87e1-9685588c9aa7":{"widgetName":"6ca9273a-a775-407c-87e1-9685588c9aa7","componentFields":{}}},"148c2287-c669-d849-d153-463c7486a694":{"47a7e7bb-f412-4093-9155-1ff5adbc4dae":{"widgetName":"47a7e7bb-f412-4093-9155-1ff5adbc4dae","componentFields":{}},"0a9f687f-7e00-4576-a8e1-9415844b8f44":{"widgetName":"0a9f687f-7e00-4576-a8e1-9415844b8f44","componentFields":{}},"8cce2b9e-8549-46c7-8ad2-f75bf28534ac":{"widgetName":"8cce2b9e-8549-46c7-8ad2-f75bf28534ac","componentFields":{}},"a7dcdfcb-8abd-4008-af19-fed5fcd12b40":{"widgetName":"groups","componentFields":{}},"83b2af08-c021-40c8-a3a5-b329a959ec2b":{"widgetName":"83b2af08-c021-40c8-a3a5-b329a959ec2b","componentFields":{}},"e018cc55-7b1c-4500-a2e5-969f22c8a33a":{"widgetName":"e018cc55-7b1c-4500-a2e5-969f22c8a33a","componentFields":{}},"513a5d84-3ebb-4ca6-a5aa-83effd2123b9":{"widgetName":"group","componentFields":{}}},"bcf2aea9-53d2-4139-9a63-3ad7ecc93d28":{},"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130":{"cee9250f-6d1b-4792-9c89-92ad9331a14c":{"componentFields":{}},"2aab0194-002b-49b0-96b0-14023fe80a51":{"componentFields":{}},"0c69860e-22af-4e7d-afb5-8688f8a62810":{"componentFields":{}},"d6c045f0-5d83-4c6c-845e-9059ca159990":{"componentFields":{}},"a9d4e3aa-646a-4318-8cd1-142bf9dcbcc6":{"componentFields":{}},"19c2c23c-bee0-46d5-89a8-aa218df193c9":{"componentFields":{}},"dce5b630-279d-48fe-ad36-d4689446f8b8":{"componentFields":{}},"dafd3feb-14fb-4e16-af79-43fa6e7757d6":{"componentFields":{}},"8170e65e-9571-4936-8d8c-87b20e86983e":{"componentFields":{}},"e0a0078d-0b7b-448b-8286-634343625929":{"componentFields":{}},"90e98c69-d7e4-4735-ae70-8f865f447492":{"componentFields":{}},"5801308f-1c6e-484c-afaa-f5f002a0f05a":{"componentFields":{}},"dcb496ce-09a9-4ad8-b376-8b95516767e4":{"componentFields":{}},"a0ad8ad7-c3d5-49d1-afd4-21d5bd73e727":{"componentFields":{}},"d88f5910-8e5f-430d-9a33-ead698c6a601":{"componentFields":{}},"3f41d62e-4f48-4ba5-a2f4-54cc7b6a412f":{"componentFields":{}},"18c27451-20c4-4b32-817a-cec90ef4cf6a":{"componentFields":{}},"94473845-b8a0-44cb-9b46-3be017b18139":{"componentFields":{}},"83f9f884-6bc1-40fe-9507-0caf491eb30a":{"componentFields":{}},"21044b85-8044-4a6a-9f6e-b60b6b8b8240":{"componentFields":{}},"e824d6ec-80ef-42ea-bb34-a345716451c6":{"componentFields":{}},"85ed03d7-7cab-44cf-b261-956cf77078d7":{"componentFields":{}},"c6a5ef1c-92b9-4523-b0cf-f5f86e18b63f":{"componentFields":{}},"34f0a4f4-6ffe-4e9b-a144-0ad7c1ab8c80":{"componentFields":{}},"54160040-d8c6-47a0-b9cb-2023c59e5f72":{"componentFields":{}},"60c9bfbb-a162-45a3-a1f3-66fea3e3e4ed":{"componentFields":{}},"8a95c2ad-d49b-4a5c-8b7d-5a90a2e5cd18":{"componentFields":{}},"94749934-1639-4306-84db-7149978a0562":{"componentFields":{}},"e90b63c1-7f1b-48c5-b046-391f2478d2aa":{"componentFields":{}},"7ba61b91-d50d-4b14-ab40-0e5e9220919c":{"componentFields":{}},"7286ccdf-e28c-4ad8-a243-f90d09949ca3":{"componentFields":{}},"830c75f8-dbe6-4bf9-bc08-7e39828a6301":{"componentFields":{}},"cb811972-44c1-44b5-8fc9-c9508659c54e":{"componentFields":{}},"ec526bfa-27bd-40a7-80c5-2deabcbaf204":{"componentFields":{}},"c5a464fa-7892-47d5-b23e-f11e9ac1d694":{"componentFields":{}},"c6b2e7c1-46ed-4cc5-8dbd-50ddb1b1e9ad":{"componentFields":{}},"5ec17c5e-c01b-4d4f-9ffe-ab6282146654":{"componentFields":{}},"ceecd61c-3aec-4639-b32c-cbfe1400e819":{"componentFields":{}},"e86110ad-890a-4b7a-abe3-6e8dc8bb15cf":{"componentFields":{}},"437cf52e-f57d-449e-af48-96791677e471":{"componentFields":{}},"ccd857ff-153e-452c-8cea-3f3a8aafeb86":{"componentFields":{}},"43ae5824-a10b-4baf-9584-775920339ec7":{"componentFields":{}},"43f58330-cdf6-4381-b1f4-e0d571533f51":{"componentFields":{}},"1a280e59-fe91-46e5-9a08-66000a7becbe":{"componentFields":{}},"26616003-ec67-46bf-93f3-eb1c1476a581":{"componentFields":{}}},"949cfcc9-2a3f-4a96-bd6c-11d9d82763a4":{"aa86b56d-3c49-44fd-9976-963695e7815d":{"componentFields":{}}},"13d21c63-b5ec-5912-8397-c3a5ddb27a97":{"c7fddce1-ebf5-46b0-a309-7865384ba63f":{"componentFields":{}},"169204d8-21be-4b45-b263-a997d31723dc":{"componentFields":{}},"a91a0543-d4bd-4e6b-b315-9410aa27bcde":{"widgetName":"Booking Service Page","componentFields":{}},"3c675d25-41c7-437e-b13d-d0f99328e347":{"widgetName":"3c675d25-41c7-437e-b13d-d0f99328e347","componentFields":{}},"14edb332-fdb9-2fe6-0fd1-e6293322b83b":{"widgetName":"bookings_member_area","componentFields":{}},"13d27016-697f-b82f-7512-8e20854c09f6":{"widgetName":"scheduler","componentFields":{}},"713f72a2-7a32-47e9-b5e4-6024ee57d277":{"widgetName":"book_checkout","componentFields":{}},"e86ab26e-a14f-46d1-9d74-7243b686923b":{"widgetName":"e86ab26e-a14f-46d1-9d74-7243b686923b","componentFields":{}},"621bc837-5943-4c76-a7ce-a0e38185301f":{"widgetName":"bookings_list","componentFields":{}},"cc882051-73c9-41a6-8f90-f6ebc9f10fe1":{"widgetName":"service_list_widget","componentFields":{}},"0eadb76d-b167-4f19-88d1-496a8207e92b":{"widgetName":"0eadb76d-b167-4f19-88d1-496a8207e92b","componentFields":{}},"89c4023a-027e-4d2a-b6b7-0b9d345b508d":{"widgetName":"bookings_timetable_daily","componentFields":{}},"985e6fc8-ce3f-4cf8-9b85-714c73f48695":{"widgetName":"985e6fc8-ce3f-4cf8-9b85-714c73f48695","componentFields":{}},"2f22f475-3ed1-41fd-90b7-221e92134f3c":{"widgetName":"2f22f475-3ed1-41fd-90b7-221e92134f3c","componentFields":{}},"3dc66bc5-5354-4ce6-a436-bd8394c09b0e":{"componentFields":{}},"e1339b7c-0c95-43fe-89f6-be037ad29ea9":{"widgetName":"e1339b7c-0c95-43fe-89f6-be037ad29ea9","componentFields":{}},"14756c3d-f10a-45fc-4df1-808f22aabe80":{"widgetName":"widget","componentFields":{}},"54d912c5-52cb-4657-b8fa-e1a4cda8ed01":{"widgetName":"54d912c5-52cb-4657-b8fa-e1a4cda8ed01","componentFields":{}}},"1514b01b-cb08-41b4-8582-0a88551ac769":{"1514b184-bb0d-2336-704b-976633cb5fe5":{"widgetName":"admin_pages","componentFields":{}}},"225dd912-7dea-4738-8688-4b8c6955ffc2":{"371ee199-389c-4a93-849e-e35b8a15b7ca":{"widgetName":"371ee199-389c-4a93-849e-e35b8a15b7ca","componentFields":{}}},"bbe1406a-31f5-4f3f-9e0a-b39dfd25274f":{},"dataBinding":{}},"essentials":{"appsConductedExperiments":{"14f25924-5664-31b2-9568-f9c5ed98c9b1":{"specs.ping.membersAreaNotifications.useIntlInsteadOfMoment":"true","specs.ping.MANotifications.useMAWidgetPluginService":"true"},"225dd912-7dea-4738-8688-4b8c6955ffc2":{"specs.forms.LocalPhoneNumbers":"true","specs.form-app.AiFormAssistantTypingEffect":"false","specs.forms.MultilineAddressInTemplates":"true","specs.forms.FetchFormsInEditor":"false","specs.forms.SettingsButtonTextFormatting":"true","specs.forms.RemoveFalsyValues":"false","specs.forms.FixControllerActions":"true","specs.forms.WixServicesInstallation":"true","specs.forms.UseFieldsV2":"true","specs.forms.WdsOpacityColorPicker":"false","specs.bookings.BIFInstallOnlyMeetings":"false","specs.form-app.AiFormAssistantV2":"false","specs.forms.ImportFilesToMediaManagerExperiment":"true","specs.form-app.AiFormAssistantOptionsButtons":"true","specs.forms.EnableNewPhoneFieldValidation":"true","specs.forms.CreateFormFromPreset":"true","specs.bookings.InstallMeetingsForBIF":"false","specs.forms.EnablePhoneField":"true","specs.services.RemoveBookingsDependency":"true","specs.forms.SignatureFieldV2":"true","specs.forms.BoxlessTextStyles":"true","specs.forms.EnablePresetTab":"false"},"14271d6f-ba62-d045-549b-ab972ae1f70e":{"specs.pro-gallery.displayPreset14":"true","specs.pro-gallery.removeUseOfCounterApi":"true","specs.pro-gallery.horizontalScrollAnimations":"true","specs.pro-gallery.useImageAvifFormat":"true","specs.pro-gallery.EnableAlbumsStorePremiumValidation":"true","specs.pro-gallery.removePgStoreTab":"true","specs.pro-gallery.backgroundDesignFullscreen":"true","specs.pro-gallery.useMotherSiteAppInstance":"true","specs.pro-gallery.addSEOVideoMetaTags":"false","specs.pro-gallery.enableMainLightroomSettingsButton":"true","specs.pro-gallery.displayPreset17":"false","specs.pro-gallery.slideTransition":"true","specs.proGallery.shouldShowNewPanels":"false","specs.pro-gallery.displayProGalleryPresets":"true","specs.pro-gallery.navigationArrowsDrawer":"true","specs.pro-gallery.horizontalTitlePlacementOptions":"true","specs.pro-gallery.artstoreShowDeprecationMessageInSettings":"false","specs.pro-gallery.navArrowsVericalPositionController":"true","specs.pro-gallery.enablePGRenderIndicator":"false","specs.pro-gallery.excludeFromWarmupData":"false","specs.pro-gallery.customNavigationArrows":"true","specs.pro-gallery.fixedGalleryRatio":"true","specs.pro-gallery.displayProGalleryNewPreset":"true","specs.pro-gallery.useReactionService":"true","specs.pro-gallery.textBoxWidthControllers":"true","specs.pro-gallery.allowOverlayGradient":"true","specs.pro-gallery.excludeFromLayoutFixer":"false","specs.pro-gallery.useIsInFirstFold":"false","specs.pro-gallery.dontRenderGalleryBelowFoldOnLoad":"false","specs.pro-gallery.enableLightroomSettingsButton":"true","specs.pro-gallery.displayPreset16":"true","specs.pro-gallery.displayProGallerySEOSettings":"false","specs.pro-gallery.imageEditing":"b","specs.pro-gallery.useWowImageRenderer":"false","specs.pro-gallery.useWarmupData":"true","specs.pro-gallery.enableFullResFeature":"true","specs.pro-gallery.slideAnimationDeck":"true","specs.pro-gallery.useReactPortalInArtStore":"true","specs.pro-gallery.blockOAP":"false","specs.pro-gallery.useServerBlueprints-viewer":"false","specs.pro-gallery.excludeFromThinLinesFix":"false","specs.pro-gallery.excludeFromHlsVideosOnIphone":"true","specs.pro-gallery.removeRoleApplication":"true","specs.pro-gallery.tryCentralizedConduction":"false","specs.pro-gallery.organizeMediaMultiTypes":"true","specs.pro-gallery.useServerBlueprints-preview":"false","specs.pro-gallery.displayPreset15":"true","specs.pro-gallery.enableVideoPlaceholder":"true","specs.pro-gallery.organizeMediaAltText":"b","specs.pro-gallery.overlayDesign":"true","specs.pro-gallery.shouldUseVirtualization":"true","specs.pro-gallery.disableImagePreload":"true","specs.pro-gallery.excludeFromPrerenderPerformance":"false","specs.pro-gallery.appSettings":"true"},"2bef2abe-7abe-43da-889c-53c1500a328c":{"specs.subscriptionsTpa.ShowLastNextCharge":"true","specs.premium.subscriptions-tpa.VerifyGracePeriodBeforePayNow":"true","specs.premium.subscriptions-tpa.enablePagnination":"true","specs.premium.subscriptions-tpa.UseInitiatePaymentMethodSetup":"true","specs.premium.subscriptions-tpa.fixSessionsOnEcom":"true","specs.EnableAllowedActionsIsAllowedIndicator":"true","specs.premium.subscriptions-tpa.advancedPauseResume":"false","specs.subscriptionsTpa.UseBassAPI":"true"},"949cfcc9-2a3f-4a96-bd6c-11d9d82763a4":{"specs.ricos.newFormattingToolbar":"true","specs.ricos.newVideoVerticalAndSocialModals":"true","specs.wixRicos.withWixStyles":"true","specs.ricos-server.resolveParentPagePath":"true","specs.ricos.enablePages":"false","specs.ricos.removeUsmFromImageUrls":"true","specs.ricos.fixedTabSize":"true","specs.ricos.encAutoImageUrls":"true","specs.ricos.tiptapEditor":"false","specs.ricos.newSettingsModals":"true"},"1505b775-e885-eb1b-b665-1e485d9bf90e":{"specs.stores.UseLatestSubdivisionsClient":"true","specs.addresses.SupportBIForHIPPA":"true"},"14cc59bc-f0b7-15b8-e1c7-89ce41d0e0c9":{"specs.ping.membersAreaUseNotificationsV2Api":"true","specs.membersArea.enableNotificationsOnV2":"true","specs.membersArea.addStandalonePageRoutesToPublicAppData":"true","specs.membersArea.useScalableDimensionsForLoginBarOnE3":"true","specs.membersArea.addNavigationIntentParams":"true","specs.membersArea.enableAppData":"true","specs.membersArea.normalizeMenuItemsLinkMetaData":"true"},"14dbef06-cc42-5583-32a7-3abd44da4908":{"specs.UouSubscriptionServiceUseApiGatewayClient":"true","specs.membersArea.DoNotWaitInstallNavigation":"true","specs.membersArea.UseMembersNgApiUpdate":"false","specs.members.FollowersAudienceProvider":"false","specs.media.MediaManager3":"true","specs.ricos.newFormattingToolbar":"true","specs.membersArea.showCascadingIndicators":"true","specs.membersArea.HideMemberSortField":"true","specs.membersArea.DisableLivePreviewRefreshes":"true","specs.membersArea.CheckUserContributorPermissions":"true","specs.membersArea.CheckIsAppActiveBeforeInstallV1":"true","specs.membersArea.HandleMembersNgUpdateDomainEvents":"true","specs.membersArea.UseGetMyMemberInMemberHandler":"true","specs.membersArea.EnableMembersAreaContextCheck":"true","specs.profileCardOOI.ReorganizeActionButtons":"true","specs.membersArea.SplitCustomPageTranslations":"true","specs.membersArea.AddSuspendedFilter":"true","specs.membersfollow.ActivityCounters":"true","specs.profileCardOOI.TitleForAll":"true","specs.membersArea.ShowPageRedirectNote":"true","specs.membersArea.ExtendedUninstallMASubApps":"true","specs.membersArea.UseViewedMemberBlocked":"true","specs.membersArea.UseFollowersV3":"true","specs.members.enableMuteMembersSkill":"true","specs.ricos.newVideoVerticalAndSocialModals":"true","specs.myAccount.ShowBlockedMembersModalEmptyState":"true","specs.membersArea.enableTimeoutLogs":"false","specs.badges.useBadgesV3":"true","specs.membersArea.GetRoutesUseGlobal":"true","specs.membersArea.ShouldOpenPropertyInDevCenter":"false","specs.membersApi.UseProfilesApiForTitleAndCoverWrites":"true","specs.membersArea.EnableLoginBarComponentExtension":"true","specs.members.enableUpdateCustomFieldSkill":"true","specs.membersArea.ShowNewFFBorderSettings":"true","specs.membersArea.AddNotificationsIconOnV2":"true","specs.membersAbout.EnableWDSPanels":"true","specs.members.enableHideCustomFieldSkill":"true","specs.membersArea.installationSourceOfTruth":"true","specs.membersAreaV2.HidePermissionsPanelOnPrivateMA":"false","specs.wixRicos.withWixStyles":"true","specs.responsive-editor.NoMeasureInstall":"true","specs.members.enableDeleteCustomFieldSkill":"true","specs.membersArea.SkipTemplateHandlerForSettings":"false","specs.membersArea.UsePopoverDynamicPositioning":"true","specs.membersArea.MemberHandlerUseMembersNgApi":"true","specs.membersArea.EnableMyAccountParallelInstall":"true","specs.membersArea.UseIsPermittedOnAppData":"true","specs.membersArea.UseMembersNgApi":"true","specs.membersArea.ResolveMemberDuplication":"true","specs.membersArea.DoNotCreateTeamMember":"false","specs.membersArea.NotificationsIconFixerOnV2":"true","specs.ricos-server.resolveParentPagePath":"true","specs.membersArea.ConsumeMembersPiiExchangeDomainEvents":"true","specs.membersArea.handleMobileComponentsDeletion":"true","specs.membersAbout.UseResponsivePostsCover":"true","specs.membersArea.PrivateMemberIndicator":"false","specs.membersAbout.UseNewPostsCoverDefaults":"true","specs.membersArea.ShowMoreMembersWithBadge":"false","specs.membersAbout.EnableAboutContainerStyles":"true","specs.membersAboutOOI.DisableButtonOnPublish":"true","specs.ricos.enablePages":"false","specs.membersArea.AddRevisionField":"true","specs.membersArea.EnableTpaPageLinksDataFixerForV2MenuItems":"true","specs.membersArea.AddManageMemberAccessAction":"true","specs.membersArea.EnableTpaPageLinksDataFixerForV3MenuItems":"true","specs.ident.SiteMembersSocialDisclaimer":"true","specs.membersAbout.EnablePostListInSEO":"true","specs.ricos.removeUsmFromImageUrls":"true","specs.membersArea.UseQueryMembersTextSearch":"true","specs.membersAreaV2.EnablePageInfoPanelCustomPage":"false","specs.myAccount.showBlockedMembersModalRedesign":"true","specs.membersArea.MetaSiteSpecialConsumerV2":"true","specs.members.enableUnmuteMembersSkill":"true","specs.membersArea.UseMembersAboutV2":"true","specs.members.enableCreateBadgeSkill":"true","specs.membersArea.HideSuspendedLabelForNonOwners":"true","specs.membersArea.UseApplyChangeToAllLanguagesForMaV2":"true","specs.membersArea.SortByNumbersInElastic":"true","specs.myAccount.ShowPrivacySettingsMessageForSiteOwners":"true","specs.membersArea.MembersApiUseMembersNgApiQueryForSortBy":"true","specs.membersArea.UninstallMASubApps":"true","specs.membersArea.UseAppDataForRoutes":"true","specs.membersArea.CreateMissingMember":"true","specs.membersArea.EnableMenusDataFixer":"true","specs.members.usePlatformizedServicesForUpdate":"true","specs.badges.shouldUseBadgesV3InEdm":"true","specs.membersArea.HideSuspendedLabelForNonOwnersFFBox":"true","specs.membersArea.EnableMemberPagePermissions":"false","specs.ricos.fixedTabSize":"true","specs.profileCardOOI.EnableProfileDetailsEdit":"true","specs.membersArea.UseIsPermittedOnMediaCredentials":"true","specs.membersArea.fixLoginBarResponsiveLayout":"true","specs.membersAbout.EnableAccessibleRCE":"true","specs.membersArea.EnableV2SilentInstall":"true","specs.membersAbout.EnableAboutMiddleware":"true","specs.members.enableManageMemberPrivacySkill":"true","specs.membersAreaV3.ReAddPageWorkaround":"true","specs.membersArea.OptimizeVerticalDeletion":"true","specs.membersAbout.EnableCSSIndicators":"true","specs.membersArea.EnableFollowersAsLightbox":"true","specs.membersArea.UseGetOrCreateMemberV2":"true","specs.membersAboutOOI.EnablePluralStatisticFix":"true","specs.ricos.encAutoImageUrls":"true","specs.members.enableCreateCustomFieldSkill":"true","specs.ricos.tiptapEditor":"false","specs.membersArea.migrateToV2":"false","specs.membersArea.ClearSettings":"true","specs.membersAbout.EnableHtmlTagSettings":"true","specs.ricos.newSettingsModals":"true","specs.membersArea.CallGetMyMemberForCreatingMember":"true","specs.membersArea.ShowHeadingLevelSettings":"true"},"dataBinding":{"specs.wixDataViewer.NewCoreImageStaticBinding":"false","specs.wixDataViewer.useGetForSchemaBulk":"false","specs.wixDataViewer.fetchOnlyConnectedFields":"true","specs.wixDataViewer.deferredIsDead":"true","specs.wixDataViewer.NewCoreFormatters":"false"},"14cffd81-5215-0a7f-22f8-074b0e2401fb":{"specs.UouSubscriptionServiceUseApiGatewayClient":"true","specs.membersArea.DoNotWaitInstallNavigation":"true","specs.membersArea.UseMembersNgApiUpdate":"false","specs.members.FollowersAudienceProvider":"false","specs.media.MediaManager3":"true","specs.membersArea.showCascadingIndicators":"true","specs.membersArea.HideMemberSortField":"true","specs.membersArea.DisableLivePreviewRefreshes":"true","specs.membersArea.CheckUserContributorPermissions":"true","specs.membersArea.CheckIsAppActiveBeforeInstallV1":"true","specs.membersArea.HandleMembersNgUpdateDomainEvents":"true","specs.membersArea.UseGetMyMemberInMemberHandler":"true","specs.membersArea.EnableMembersAreaContextCheck":"true","specs.profileCardOOI.ReorganizeActionButtons":"true","specs.membersArea.SplitCustomPageTranslations":"true","specs.membersArea.AddSuspendedFilter":"true","specs.membersfollow.ActivityCounters":"true","specs.profileCardOOI.TitleForAll":"true","specs.membersArea.ShowPageRedirectNote":"true","specs.membersArea.ExtendedUninstallMASubApps":"true","specs.membersArea.ChangeLoginInfo":"true","specs.membersArea.UseViewedMemberBlocked":"true","specs.membersArea.UseFollowersV3":"true","specs.members.enableMuteMembersSkill":"true","specs.myAccount.UseNewSettings":"true","specs.myAccount.ShowBlockedMembersModalEmptyState":"true","specs.membersArea.enableTimeoutLogs":"false","specs.badges.useBadgesV3":"true","specs.membersArea.GetRoutesUseGlobal":"true","specs.membersArea.ShouldOpenPropertyInDevCenter":"false","specs.myAccount.EnablePhoneNumberValidation":"true","specs.membersApi.UseProfilesApiForTitleAndCoverWrites":"true","specs.membersArea.EnableLoginBarComponentExtension":"true","specs.members.enableUpdateCustomFieldSkill":"true","specs.membersArea.ShowNewFFBorderSettings":"true","specs.membersArea.AddNotificationsIconOnV2":"true","specs.members.enableHideCustomFieldSkill":"true","specs.myAccount.EnableCSSIndicators":"true","specs.membersArea.installationSourceOfTruth":"true","specs.membersAreaV2.HidePermissionsPanelOnPrivateMA":"false","specs.myAccount.EnableDatePickerStyling":"true","specs.responsive-editor.NoMeasureInstall":"true","specs.members.enableDeleteCustomFieldSkill":"true","specs.membersArea.SkipTemplateHandlerForSettings":"false","specs.membersArea.UsePopoverDynamicPositioning":"true","specs.membersArea.MemberHandlerUseMembersNgApi":"true","specs.membersArea.EnableMyAccountParallelInstall":"true","specs.membersArea.UseIsPermittedOnAppData":"true","specs.membersArea.UseMembersNgApi":"true","specs.membersArea.ResolveMemberDuplication":"true","specs.membersArea.DoNotCreateTeamMember":"false","specs.membersArea.NotificationsIconFixerOnV2":"true","specs.myAccount.EnableHtmlTagSettings":"true","specs.membersArea.ConsumeMembersPiiExchangeDomainEvents":"true","specs.membersArea.handleMobileComponentsDeletion":"true","specs.membersArea.PrivateMemberIndicator":"false","specs.membersArea.ShowMoreMembersWithBadge":"false","specs.membersArea.AddRevisionField":"true","specs.membersArea.EnableTpaPageLinksDataFixerForV2MenuItems":"true","specs.membersArea.AddManageMemberAccessAction":"true","specs.membersArea.EnableTpaPageLinksDataFixerForV3MenuItems":"true","specs.ident.SiteMembersSocialDisclaimer":"true","specs.membersArea.UseQueryMembersTextSearch":"true","specs.membersAreaV2.EnablePageInfoPanelCustomPage":"false","specs.myAccount.showBlockedMembersModalRedesign":"true","specs.membersArea.MetaSiteSpecialConsumerV2":"true","specs.myAccount.EnableMyAccountMiddleware":"true","specs.members.enableUnmuteMembersSkill":"true","specs.membersArea.UseMembersAboutV2":"true","specs.members.enableCreateBadgeSkill":"true","specs.myAccount.EnableUrlEditNote":"true","specs.membersArea.HideSuspendedLabelForNonOwners":"true","specs.membersArea.UseApplyChangeToAllLanguagesForMaV2":"true","specs.myAccount.ShowButtonTextSetting":"true","specs.membersArea.SortByNumbersInElastic":"true","specs.myAccount.ShowPrivacySettingsMessageForSiteOwners":"true","specs.membersArea.MembersApiUseMembersNgApiQueryForSortBy":"true","specs.membersArea.UninstallMASubApps":"true","specs.membersArea.UseAppDataForRoutes":"true","specs.membersArea.CreateMissingMember":"true","specs.membersArea.EnableMenusDataFixer":"true","specs.members.usePlatformizedServicesForUpdate":"true","specs.badges.shouldUseBadgesV3InEdm":"true","specs.membersArea.HideSuspendedLabelForNonOwnersFFBox":"true","specs.membersArea.EnableMemberPagePermissions":"false","specs.profileCardOOI.EnableProfileDetailsEdit":"true","specs.membersArea.UseIsPermittedOnMediaCredentials":"true","specs.membersArea.fixLoginBarResponsiveLayout":"true","specs.membersArea.EnableV2SilentInstall":"true","specs.members.enableManageMemberPrivacySkill":"true","specs.membersAreaV3.ReAddPageWorkaround":"true","specs.membersArea.OptimizeVerticalDeletion":"true","specs.myAccount.EnableDesignTabResetButtonPerPage":"true","specs.myAccount.EnableLoginAndAddressInTextsTab":"true","specs.membersArea.EnableFollowersAsLightbox":"true","specs.membersArea.UseGetOrCreateMemberV2":"true","specs.members.enableCreateCustomFieldSkill":"true","specs.myAccount.EnableWDSPanels":"true","specs.membersArea.migrateToV2":"false","specs.membersArea.ClearSettings":"true","specs.myAccount.EnableAllSubdivisionsInAddressForm":"true","specs.membersArea.CallGetMyMemberForCreatingMember":"true","specs.membersArea.ShowHeadingLevelSettings":"true"},"148c2287-c669-d849-d153-463c7486a694":{"specs.groups.CustomTabContentType":"RICH_CONTENT","specs.groups.UpdateSidebarLayout":"true","specs.ricos.newFormattingToolbar":"true","specs.groups.PublicGroupRestriction":"true","specs.groups.UpdatedMemberPermissions":"true","specs.ricos.newVideoVerticalAndSocialModals":"true","specs.groups.cssPBI":"true","specs.groups.TopicsLayoutRedesign":"true","specs.groups.SEO-subtitle":"true","specs.groups.ResizeTopics":"true","specs.wixRicos.withWixStyles":"true","specs.groups.events-by-uou":"true","specs.ricos-server.resolveParentPagePath":"true","specs.groups.EnableMembersAreaFeedItemComments":"true","specs.groups.newNotificationsScreens":"true","spec.groups.TitlesAddOns":"true","specs.ricos.enablePages":"false","specs.groups.CentralFeedContentType":"RICH_CONTENT","specs.groups.FeedItemViews":"true","specs.ricos.removeUsmFromImageUrls":"true","specs.groups.GroupFeedContentType":"RICH_CONTENT","specs.groups.AllowToAddImageAltText":"false","specs.groups.GroupPrivacyLabel":"true","specs.groups.MemberOnboarding":"true","specs.groups.EnablePostTitle":"true","specs.groups.SiteMembersSsrCaching":"false","specs.ricos.fixedTabSize":"true","specs.groups.SupportRicosCollapsibleList":"true","specs.groups.GroupDescriptionContentType":"RICH_CONTENT","specs.groups.OOIOptimization":"true","specs.groups.GroupSearch":"true","specs.ricos.encAutoImageUrls":"true","specs.ricos.tiptapEditor":"false","specs.ricos.newSettingsModals":"true"},"215238eb-22a5-4c36-9e7b-e7c08025e04e":{"specs.stores.UseAddToCurrentCart":"true","specs.stores.AddTrackDataOnAddProducts":"true"},"14f25dc5-6af3-5420-9568-f9c5ed98c9b1":{"specs.ping.errorHandlerInUou":"true","specs.ping.MAPreferences.useMAWidgetPluginService":"true"},"14ce1214-b278-a7e4-1373-00cebd1bef7c":{"specs.forms.RemoveFalsyValues":"false","specs.forms.EnableFormsInBlog":"true"},"14bcded7-0066-7c35-14d7-466cb3f09103":{"specs.wixBlog.ImportFromWordPressInsideMenu":"false","specs.wixBlog.FixMultipleColors":"true","specs.media.MediaManager3":"true","specs.wixBlog.CollectMetrics":"false","specs.ricos.newFormattingToolbar":"true","specs.wixBlog.UseWarmupStateInOldPostPage":"false","specs.wixBlog.PreInstalledAuthorChanged":"true","specs.wixBlog.UseBlogSettingsAllPostsFeedLabels":"true","specs.ricos.newVideoVerticalAndSocialModals":"true","specs.wixBlog.BlogSausageMenu":"false","specs.wixBlog.SausageMenuFeed":"false","specs.wixBlog.BMMergePendingReviewTab":"false","specs.wixBlog.ImportUseDraftPostApiProxy":"true","specs.wixBlog.RemoveMainTab":"true","specs.wixBlog.NewBlogPostComment":"false","specs.wixBlog.DontCallDbOnBadSlug":"false","specs.wixRicos.withWixStyles":"true","specs.wixBlog.UseWarmupStateInPostList":"true","specs.wixBlog.UseWarmupStateInNewPostPage":"true","specs.wixBlog.BlockViewCountUpdates":"false","specs.ricos-server.resolveParentPagePath":"true","specs.wixBlog.HashtagPageUseFeedPage":"true","specs.wixBlog.PostRatings":"true","specs.wixBlog.DisplayPostComposerError":"false","specs.wixBlog.ScrollPostListToTop":"true","specs.wixBlog.PreInstalledPostSubmittedForReview":"true","specs.ricos.enablePages":"false","specs.wixBlog.UseBlogPermissionCacheService":"true","specs.blogImporter.EnableRollbackOfMigrationsBM":"false","specs.wixBlog.UseWarmupStateInFeed":"true","specs.wixBlog.UseLayoutFixer":"true","specs.ricos.removeUsmFromImageUrls":"true","specs.forms.EnableFormsInBlog":"true","specs.wixBlog.DisableBlogInjectGenie":"false","specs.wixBlog.UseTranslationCreditsApi":"true","specs.membersArea.BlogCommentsFromCommentsSerivice":"true","specs.wixBlog.UseFilesusrDomain":"false","specs.wixBlog.UsePromptHubForImageGeneration":"true","specs.wixBlog.MigrateCustomFeedOnEditorReady":"false","specs.wixBlog.SettingsFromParastorage":"false","specs.wixBlog.NewBlogPostPublishedAutomation":"true","specs.ricos.fixedTabSize":"true","specs.wixBlog.UseBlogLikeNinjaService":"true","specs.wixBlog.BMManagePendingReviews":"true","specs.wixBlog.PreInstalledPostSubmissionStatus":"true","specs.wixBlog.EnableDiscoveryIngestion":"true","specs.wixBlog.UseAiServiceCreateDraftPost":"true","specs.wixBlog.PreInstalledScheduledPostPublished":"true","specs.ricos.encAutoImageUrls":"true","specs.ricos.tiptapEditor":"false","specs.ricos.newSettingsModals":"true"},"1484cb44-49cd-5b39-9681-75188ab429de":{"specs.siteSearch.ChangeSelectedTabInEditorOnEdit":"true","specs.siteSearch.UseWarmupData":"true","specs.siteSearch.NewSearchOnClassicEditor":"true","specs.siteSearch.CSSPerBreakpointIndications":"true","specs.siteSearch.ResponsiveSearchBoxSkin":"true","specs.siteSearch.ShowStudioUpdateFlow":"true"},"1380b703-ce81-ff05-f115-39571d94dfcd":{"specs.ecom.ShouldRenderStepContentWithCallback":"true","specs.stores.FixFilterColorWithMultipleNames":"true","specs.ecom.SupportManualPaymentsOnPaymentRequest":"false","specs.stores.FixQuickViewNavigationToProductPage":"true","specs.stores.GalleryMigrateRowsToProductsCountViewer":"true","specs.ecom.CheckoutUIRevampOrderSummary":"true","specs.ecom.ShowMultipleLineItemActions":"true","specs.stores.AddMobileClassesToSliderGalleryRoot":"true","specs.ecom.ShowCheckoutPoliciesPage":"true","specs.stores.DisableFocusProductOnInfiniteScroll":"true","specs.ecom.HidePointerOnNotClickableHeader":"true","specs.forms.LocalPhoneNumbers":"true","specs.stores.GalleryProductOptionMobileNativeDropdown":"true","specs.stores.AllowAddToCartButtonOnImageInViewer":"true","specs.ecom.FixImageDimensionsOnCart":"true","specs.forms.JapanAutocompleteEnabled":"true","specs.stores.GalleryFetchAppSettingsOnce":"false","specs.stores.ReturnCartIdNullInsteadOfDeprecatedForExpressService":"true","specs.stores.ImageSettingsInViewer":"true","specs.stores.EnableDynamicSizeDefaultImage":"true","specs.ecom.PricesIncludeTaxFromCheckoutInExpress":"true","specs.stores.AllowResponsiveLayoutMaxWidth":"true","specs.stores.ThumbnailsDesignViewer":"true","specs.stores.ProductPageNewWixCodeApi":"true","specs.stores.ProductPageFixReflowSausageNavigation":"true","specs.stores.ShowAutomaticDiscountDataOnGallery":"true","specs.stores.HideBillingFormForPayPalAndManualNotBrazil":"true","specs.stores.GalleryProductOptionsAndQuantityWidth":"true","specs.stores.ProductPageUpliftProductOptionsViewer":"true","specs.ecom.violationBasedOnDeliveryOption":"true","specs.ecom.FixDeliveryTaxExemption":"true","specs.ecom.deliveryOptionsSetFirstAsDefault":"true","specs.stores.InfoSectionTabsTPAComponent":"true","specs.stores.ProductPageBreadcrumbsAfterHydration":"true","specs.stores.GalleryColorPickerA11yReflowKeyboardFix":"true","specs.stores.GalleryDontFetchFilteredProductsWithoutActiveFilters":"true","specs.ecom.PlatformFeeOnCartAndCheckout":"true","specs.stores.ShouldUseCommonDiscountPricingMethods":"true","specs.ecom.FixTotalPriceCSSSideCart":"true","specs.stores.UseNewFiltersQueryParamEncoder":"true","specs.stores.GalleryEnableLoadMoreHoverUnderline":"true","specs.stores.allowProductPageButtonsOption":"true","specs.stores.TYPUpdateOrderModelWithSubscriptionInfo":"true","specs.forms.MoveEcomLabelTranslations":"true","specs.stores.FixWishlistPageLiveTextEditing":"true","specs.ecom.separateAdditionalFee":"true","specs.ecom.PreloadOnCartCheckoutButton":"true","specs.stores.SliderGalleryInfiniteLoopToggleViewer":"true","specs.stores.UseProductThumbnailWithWowImage":"true","specs.stores.GalleryPriceFilterClientTicksCalculation":"true","ecomTestFedOwnerScope":"false","specs.stores.ProductPageBreadcrumbsDesignViewer":"true","specs.stores.GalleryEditableGridTemplateRepeatOption":"true","specs.stores.ProductPageRemovePagination":"true","specs.stores.AddHasDiscountToVariantsItemsQueries":"true","specs.stores.FixVerticalThumbnailsPosition":"true","specs.stores.ShowAutomaticDiscountDataOnProductWidget":"true","specs.stores.FixCheckoutAddressTemplateMandatoryZipCode":"true","specs.ecom.MoveCartToViewerContext":"true","specs.stores.FixVariantIdCalculationInBuyNowFlow":"false","specs.stores.OnlineStoresSessionStorageWithTTL":"true","specs.forms.MultilineAddressInTemplates":"true","specs.stores.FixCartIconOnEditor":"true","specs.stores.ResponsiveGalleryMigration":"true","specs.ecom.MergeExpressDeliveryRateWithHandlingFee":"false","specs.stores.ShowAddToCartWithSubscription":"true","specs.stores.ProductPageSlotsAddMoreProps":"true","specs.stores.ProductPageBuyNowFromEcomSdk":"true","specs.stores.GalleryFixWarmUpDataCacheKeyWithQueryParams":"true","specs.ecom.CheckoutHeaderContinueBrowsingDisplayCheckout":"true","specs.stores.FixAnnounceNotDefinedBug":"true","specs.stores.RefactorFormServiceToCalcExtendedFields":"true","specs.stores.FixQuickViewForSubscriptionsInWishlist":"true","specs.stores.ShowGiftCardAddToCartSettings":"true","specs.stores.ProductPageVideoPosterOptimization":"true","specs.ecom.fixGroupedDeliveryOptionSelection":"false","specs.stores.LoadClientConfigInController":"true","specs.stores.MainMediaWrapperAsAnchorElement":"true","specs.stores.AllowGalleryProductRoundCornersInViewer":"false","specs.stores.ResponsiveEditorBreadcrumbsToggle":"true","specs.ecom.MigrateAddressFormToV2":"true","specs.stores.SupportFreeTrialTYP":"true","usingStoresViewerScriptAddToCart":"false","specs.stores.SwitchMainMediaSlickToSwiper":"true","specs.stores.FixFilterKeySpecialCharacter":"true","specs.forms.RemoveFalsyValues":"false","specs.stores.StorefrontLegacyEnablePanoramaIntegration":"true","specs.stores.ProductNameHtmlTag":"true","specs.stores.UseUndefinedAsDefaultBillingAddressInCheckout":"true","specs.stores.GalleryA11yReflowFilterModalFix":"true","specs.stores.EnableDiscountAndRegularPriceSwapViewer":"true","specs.ecom.CheckoutHeaderAdditionalCustomizationsCheckout":"true","specs.ecom.CacheGetClientConfigInSiteStore":"true","specs.stores.GalleryFiltersClassicMobileHorizontalOrientationFix":"true","specs.stores.ShowWishlistInGallery":"true","specs.ecom.ShowCheckoutOnEditorPreview":"true","specs.ecom.ShowVoidedErrorMessage":"true","specs.stores.UseOpenSideCartApi":"true","specs.stores.UsingStoresViewerScriptAddToCart":"true","specs.stores.ShowAutomaticDiscountDataOnProductPage":"true","specs.stores.ProductPageWaitForWarmupData":"true","specs.stores.ProductMediaNavigationDots":"false","specs.stores.UseNewSubscriptionView":"true","specs.stores.AddSlotToCheckoutPolicies":"true","specs.forms.FixControllerActions":"true","specs.ecom.ImprovePerformanceByParallelPromises":"true","specs.ecom.FixDebouncedUpdateItemQuantity":"true","specs.ecom.AddCheckoutCountryToDeliveryCountries":"true","specs.stores.GalleryAddMissingAddProductImpressionEvent":"true","specs.stores.ProductPageUplift":"true","specs.stores.ProductPageUpliftNewFeaturesSF":"true","specs.ecom.NewThankYouPage":"false","specs.stores.ProductPageUpliftProductOptions":"true","specs.stores.SubscriptionPlanNewDesign":"false","specs.stores.GallerySlotsPOC":"false","specs.stores.AllowGalleryIntervalNavigation":"true","specs.stores.navigateToRelativeUrlWithCustomizedUrl":"true","specs.ecom.UsePaymentStatusV2":"true","specs.stores.enableUnitedStatesMilitaryAddresses":"true","specs.stores.GalleryNewErrorState":"true","specs.ecom.ShowTwoDescriptionLinesOnCartAndCheckout":"true","specs.ecom.showPriceWithFreeShippingCoupon":"true","specs.ecom.FixOutOfStockOnCart":"true","specs.stores.GalleryPriceSliderA11yFixKeyboardFocus":"true","specs.stores.ProductPageSsrInvalidationTags":"true","specs.stores.AllowGalleryContainerPadding":"true","specs.stores.ConfigureGalleryViewStates":"true","specs.stores.ShouldHandlePaylinksRedirectError":"true","specs.ecom.FixCartNavigationOnPreview":"false","specs.stores.GalleryWaitForWarmupData":"true","specs.stores.ShouldProductPageUseNewSocialIcons":"true","specs.stores.SliderGalleryExposeOptionsViewer":"true","specs.ecom.DontUseViewerStorageOnPreview":"true","specs.stores.Set404ForSeoWhenPageHasNoProducts":"true","specs.stores.SliderGalleryFixSwiperIndex":"true","specs.stores.DontRedirectToSiteOnFailedFetch":"true","specs.stores.SupportMitEnabledFieldInCheckoutPage":"true","specs.stores.ConfigureSlotsInEditorSDK":"true","ecomTestFed":"false","specs.ecom.useFallbackInPreviewLoader":"true","specs.ecom.UsePartialLineItemUrlInCart":"true","specs.stores.GalleryProductOptionsLimit":"true","specs.stores.ProductPageSlots":"true","specs.stores.newClearFiltersHoverState":"true","specs.stores.UseGalleryNewApplyFilterQueryParams":"false","specs.stores.tpaRouterShouldQueryProductsV3":"true","specs.ecom.showDeliveryOptionPreviewError":"true","specs.ecom.MoveCheckoutToViewerContext":"true","specs.stores.ProductPageConsumePublicDataFromBothScopes":"true","storesFTGalleryEnableLoadMoreHoverUnderline":"false","specs.forms.EnableNewPhoneFieldValidation":"true","specs.ecom.RichTextPoliciesCheckout":"true","specs.stores.GallerySeoTags":"true","specs.stores.GalleryMoveDiscountNameUnderPrice":"true","specs.stores.SliderGallery200Limit":"true","specs.stores.ProductPageBlocksFixAddToCartOnSecondaryLang":"true","specs.stores.AllowStickySidebarInViewer":"true","specs.ecom.CallCartV2FromCheckout":"true","specs.stores.RangeFilterRefactor":"true","specs.stores.ProductPageLocationOnChangePathChangeForEditorSausage":"true","specs.ecom.SendPaymentTokenUndefinedFallback":"true","specs.stores.SubscriptionPlansNewDesignViewer":"true","specs.stores.AllowAddToCartButtonContentTypesInViewer":"true","specs.ecom.OrdersModifiers":"true","specs.ecom.loadDeliverySectionsDataOnReadOnly":"true","specs.ecom.AddProjectionsTYPQuery":"true","specs.ecom.EcomPlatformWidgetsBFCache":"true","specs.stores.EnableOutOfStockAlignment":"true","specs.forms.EnablePhoneField":"true","specs.stores.UseNewQueriesOnWishlistWithDiscount":"true","specs.stores.FixGalleryBorderRadiusOnZoomHover":"true","specs.stores.UseExperimentsFromPlatformFlowApiLegacyProjects":"true","specs.ecom.ShowMultipleSubscriptions":"true","specs.stores.FixBackInStockButtonValidation":"true","specs.stores.RemoveControllerFactory":"true","specs.stores.FixGalleryNotToShowQueryPageFor1":"true","specs.stores.FixSliderGalleryRelatedProductsEmptyRender":"true","specs.ecom.StopFocusOnCart":"true","specs.ecom.hideShippingOptionAvailibilityBadgeOnMobile":"true","specs.ecom.HideMissingLineItemImagesInPaymentRequest":"true","specs.stores.GalleryProductOptionsAndQuantityRoundCornersInViewer":"true","specs.forms.SignatureFieldV2":"true","specs.ecom.SideCartEditor3SettingsPanel":"true","specs.stores.GalleryQuickBuyViewer":"true","specs.stores.RenderSlotsInGallery":"true","specs.ecom.StopSendingOriginInCheckoutUrl":"true","specs.stores.PriceFilterClientTicksCalculation":"true","specs.ecom.TopCheckoutButtonSkeletonOnCart":"true","specs.stores.UseNewQueriesWithProductDiscount":"true","specs.stores.AlignProductCountAndSort":"true","specs.stores.GalleryOptionButtonsGrid":"true","specs.ecom.TaxExemptionOnTYP":"true","specs.ecom.AddExemptTextToTaxNameWhenPartiallyExempt":"true","specs.stores.UseNewFiltersQueryParamDecoder":"true","specs.stores.ResponsiveTYPCss":"true","specs.ecom.InitCustomUrlApiOnlyInProductPage":"true","specs.stores.ShouldSplitBillingInfoPrefill":"true","specs.stores.UseExperimentsFromPlatformFlowApi":"true","specs.ecom.UsePaymentRequestTitleInThankYou":"true","specs.stores.ShouldShowFirstProductOptionInGallery":"true","specs.stores.GalleryColorOptionAlignment":"true","specs.stores.AllowGalleryFreeModeNavigationInViewer":"true","specs.stores.GalleryProductItemResetQuantityUponSelectionChange":"true","specs.stores.EnableQualityOptionsStylingChanges":"false","specs.stores.AddingOverflowHiddenToFilterTitleMobile":"true","specs.stores.ProductPageSupportGridLayout":"true","specs.stores.ShouldSeparateQuantityAndOptionsStyleParams":"true","specs.stores.UseProductLineItemFromTYP":"true","specs.stores.AddSliderGalleryTitleToGlobalPropsContext":"true","specs.ecom.FixCouponErrorInCart":"true","specs.ecom.FixCartCountOverlap":"true","specs.stores.EnableWarmUpDataCaching":"true","specs.stores.FixGalleryRenderingWhenUrlChanges":"false","specs.stores.ProductPageNotifyEmailOnCheckout":"true","specs.ecom.UseIsMobileForOneColumnView":"true","specs.stores.PreventGalleryFullRefreshOnUrlChange":"true","specs.ecom.CallShowPaymentErrorModalAfterValidation":"true","specs.stores.ProductPageRicoDescription":"true","specs.stores.increaseGqlGetLimit":"true","specs.stores.CategoryPageFooterDescriptionSF":"true"},"675bbcef-18d8-41f5-800e-131ec9e08762":{"specs.wixCode.LoadWithImportAMDModule":"true","specs.wixCode.LoadNamespacesPerPage":"false","specs.wixcode.ViewerExperimentOwnerScopeTest":"true","specs.wixCode.resolveMissingPlatformNamespaces":"false","specs.wixcode.ViewerExperimentTest":"false"},"14ce28f7-7eb0-3745-22f8-074b0e2401fb":{"specs.UouSubscriptionServiceUseApiGatewayClient":"true","specs.membersArea.DoNotWaitInstallNavigation":"true","specs.membersArea.UseMembersNgApiUpdate":"false","specs.members.FollowersAudienceProvider":"false","specs.media.MediaManager3":"true","specs.membersArea.showCascadingIndicators":"true","specs.membersArea.HideMemberSortField":"true","specs.profileCardOOI.MakeProfileCardRemovableInNewMA":"true","specs.membersArea.DisableLivePreviewRefreshes":"true","specs.membersArea.CheckUserContributorPermissions":"true","specs.profileCard.EnableHtmlTagSettings":"true","specs.membersArea.CheckIsAppActiveBeforeInstallV1":"true","specs.membersArea.HandleMembersNgUpdateDomainEvents":"true","specs.membersArea.UseGetMyMemberInMemberHandler":"true","specs.membersArea.EnableMembersAreaContextCheck":"true","specs.profileCardOOI.ReorganizeActionButtons":"true","specs.profileCardOOI.NewResetSettings":"true","specs.membersArea.SplitCustomPageTranslations":"true","specs.membersArea.AddSuspendedFilter":"true","specs.membersfollow.ActivityCounters":"true","specs.profileCardOOI.TitleForAll":"true","specs.membersArea.ShowPageRedirectNote":"true","specs.membersArea.ExtendedUninstallMASubApps":"true","specs.membersArea.UseViewedMemberBlocked":"true","specs.membersArea.UseFollowersV3":"true","specs.members.enableMuteMembersSkill":"true","specs.myAccount.ShowBlockedMembersModalEmptyState":"true","specs.membersArea.enableTimeoutLogs":"false","specs.badges.useBadgesV3":"true","specs.membersArea.GetRoutesUseGlobal":"true","specs.membersArea.ShouldOpenPropertyInDevCenter":"false","specs.membersApi.UseProfilesApiForTitleAndCoverWrites":"true","specs.profileCardOOI.UseMiddlewareForGlobalSettingsGetter":"true","specs.membersArea.EnableLoginBarComponentExtension":"true","specs.members.enableUpdateCustomFieldSkill":"true","specs.membersArea.ShowNewFFBorderSettings":"true","specs.membersArea.AddNotificationsIconOnV2":"true","specs.members.enableHideCustomFieldSkill":"true","specs.membersArea.installationSourceOfTruth":"true","specs.membersAreaV2.HidePermissionsPanelOnPrivateMA":"false","specs.responsive-editor.NoMeasureInstall":"true","specs.members.enableDeleteCustomFieldSkill":"true","specs.membersArea.SkipTemplateHandlerForSettings":"false","specs.membersArea.UsePopoverDynamicPositioning":"true","specs.membersArea.MemberHandlerUseMembersNgApi":"true","specs.membersArea.EnableMyAccountParallelInstall":"true","specs.profileCardOOI.UseMiddlewareForMemberGetter":"true","specs.membersArea.UseIsPermittedOnAppData":"true","specs.membersArea.UseMembersNgApi":"true","specs.membersArea.ResolveMemberDuplication":"true","specs.membersArea.DoNotCreateTeamMember":"false","specs.membersArea.NotificationsIconFixerOnV2":"true","specs.profileCardOOI.EnableAvifEncoding":"true","specs.membersArea.ConsumeMembersPiiExchangeDomainEvents":"true","specs.membersArea.handleMobileComponentsDeletion":"true","specs.membersArea.PrivateMemberIndicator":"false","specs.membersArea.ShowMoreMembersWithBadge":"false","specs.membersArea.AddRevisionField":"true","specs.membersArea.EnableTpaPageLinksDataFixerForV2MenuItems":"true","specs.membersArea.AddManageMemberAccessAction":"true","specs.membersArea.EnableTpaPageLinksDataFixerForV3MenuItems":"true","specs.ident.SiteMembersSocialDisclaimer":"true","specs.profileCardOOI.EnableProfileAlignmentCssVars":"true","specs.membersArea.UseQueryMembersTextSearch":"true","specs.membersAreaV2.EnablePageInfoPanelCustomPage":"false","specs.profileCardOOI.usePlaceholderLoaders":"true","specs.profileCardOOI.UseBlockedCheckFollowButton":"true","specs.myAccount.showBlockedMembersModalRedesign":"true","specs.membersArea.MetaSiteSpecialConsumerV2":"true","specs.members.enableUnmuteMembersSkill":"true","specs.membersArea.UseMembersAboutV2":"true","specs.members.enableCreateBadgeSkill":"true","specs.membersArea.HideSuspendedLabelForNonOwners":"true","specs.membersArea.UseApplyChangeToAllLanguagesForMaV2":"true","specs.membersArea.SortByNumbersInElastic":"true","specs.myAccount.ShowPrivacySettingsMessageForSiteOwners":"true","specs.membersArea.MembersApiUseMembersNgApiQueryForSortBy":"true","specs.profileCardOOI.showNewNotificationsContent":"true","specs.membersArea.UninstallMASubApps":"true","specs.membersArea.UseAppDataForRoutes":"true","specs.membersArea.CreateMissingMember":"true","specs.membersArea.EnableMenusDataFixer":"true","specs.members.usePlatformizedServicesForUpdate":"true","specs.badges.shouldUseBadgesV3InEdm":"true","specs.membersArea.HideSuspendedLabelForNonOwnersFFBox":"true","specs.profileCardOOI.EnableCSSIndicators":"true","specs.membersArea.EnableMemberPagePermissions":"false","specs.profileCardOOI.EnableProfileDetailsEdit":"true","specs.membersArea.UseIsPermittedOnMediaCredentials":"true","specs.profileCardOOI.UseMiddlewareForRolesMapGetter":"true","specs.membersArea.fixLoginBarResponsiveLayout":"true","specs.membersArea.EnableV2SilentInstall":"true","specs.profileCard.UseMigratedEditor3StylesParams":"true","specs.members.enableManageMemberPrivacySkill":"true","specs.membersAreaV3.ReAddPageWorkaround":"true","specs.membersArea.OptimizeVerticalDeletion":"true","specs.membersArea.EnableFollowersAsLightbox":"true","specs.membersArea.UseGetOrCreateMemberV2":"true","specs.members.enableCreateCustomFieldSkill":"true","specs.membersArea.migrateToV2":"false","specs.membersArea.ClearSettings":"true","specs.membersArea.CallGetMyMemberForCreatingMember":"true","specs.membersArea.ShowHeadingLevelSettings":"true"},"13d21c63-b5ec-5912-8397-c3a5ddb27a97":{"specs.bookings.PreventDoubleBookingCourse":"true","specs.bookings.stripLayoutMultiColumn":"true","specs.bookings.AddBookingMadeEvent":"true","specs.forms.LocalPhoneNumbers":"true","specs.bookings.serviceListMenuLayout":"true","specs.bookings.TimezoneAwareSlotMatching":"true","specs.bookings.paidByClasspassIndication":"true","specs.bookings.idanExperimentTest":"true","specs.bookings.AlignDateAndTime":"true","specs.bookings.StaffQueryParamInCalendar":"true","specs.bookings.CalendarIntervalsImprovement":"true","specs.bookings.MyBookingsCssPBPIndication":"true","specs.bookings.DeepLinkAddonsUOU":"false","specs.bookings.daily-agenda.staff-image-view":"true","specs.bookings.UoUMultiLocationV1":"true","specs.bookings.members-area-lazy-load":"true","specs.bookings.KibanaInfoLogs":"false","specs.bookings.TimezoneIndicatorImprovementCalendars":"true","specs.bookings.AddonsAndPlanOnlyUOU":"true","specs.bookings.SitePropertiesFacadeMigration":"true","specs.bookings.consultants.dynamicPricingPerStaff":"true","specs.ImagePixelDensityFactorSpecs":"1.5","specs.bookings.EcomRendererHidePriceForMembershipAndFree":"true","specs.bookings.consultants.dynamicPricingCustom":"true","specs.bookings.RemoveViewPricingFromCalendarSettings":"true","specs.bookings.migrateServiceDetailsToStyleParm":"true","specs.bookings.dev.UseBusinessInfoMapper":"true","specs.bookings.OutOfModalScrollFix":"true","specs.bookings.ShowUnavailableSlotForm":"true","specs.wossm.EnableMultiLocation":"true","specs.bookings.FormNewErrorHandling":"true","specs.bookings.calendarFixLoadingButtonSize":"true","specs.bookings.BookAnotherText":"true","specs.bookings.agendaWarmupDataForServices":"true","specs.bookings.initSlotsToShow":"true","specs.bookings.AddPaymentAmountToCashier":"true","specs.bookings.RedesignA1":"true","specs.bookings.AdditionalTimeSlotsInFormPlugin":"true","specs.bookings.updateFemToWixFormsPopulation":"false","specs.bookings.ClearButtonAnyStaffMember":"false","specs.bookings.ResetNavigatingStatusOnBack":"true","specs.bookings.FormAddH1HeaderForA11y":"true","specs.bookings.DeprecateCatalogServicesSlotAvailability":"true","specs.bookings.agendaWarmupDataForStaffMembers":"true","specs.bookings.servicesPagesBreadcrumbs":"true","specs.bookings.WixFormsMigration":"true","specs.bookings.timeQueryParamAutoSelect":"true","specs.bookings.supportServicesChoices":"false","specs.bookings.Editor3":"true","specs.bookings.DisableOldMembersArea":"true","specs.bookings.daily-agenda.session-items.overlay-view":"true","specs.bookings.UouZoomV2":"true","specs.bookings.ShowPriceTextInFormIfServiceIsWithPPAndCustomPrice":"true","specs.bookings.addNotificationTogglesToBoxes":"true","specs.bookings.migrateCalendarSettingsToServicesV2":"true","specs.bookings.warnOnShowAllServicesFilterOption":"true","specs.bookings.CalendarAndServiceListShowDiscount":"false","specs.bookings.removeExtraReloadCalendar":"true","specs.bookings.HandleMembershipErrorInCheckoutUoU":"true","specs.bookings.TimezoneIndicatorImprovementOfferingPage":"true","specs.DevCenter.IncludeAppointmentWaitlistInSSR":"true","specs.bookings.BookOnBehalf":"false","specs.bookings.warmupDataCachingForCalendar":"true","specs.bookings.OnConfirmationPageRemoveScheduleForCourse":"true","specs.forms.FixControllerActions":"true","specs.bookings.removeCategoryQueryParamOnNavigation":"true","specs.bookings.servicesPerLoadInServiceListSettings":"true","specs.bookings.ResetNavigatingStatusOnServicePage":"true","specs.bookings.UserTimezoneFirstSlotWithDifferentWeek":"true","specs.bookings.FiveNines":"false","specs.bookings.ShouldDisplayTaxAddressField":"true","specs.ValidateBookingCongratulationsSpecs":"true","specs.bookings.AppBuilderUseServicesV2":"true","specs.bookings.FormEditorKBContent":"false","specs.bookings.MyBookingsShowFormSubmission":"true","specs.bookings.translatePages":"false","specs.bookings.CalendarFailedErrorMessageUOU":"true","specs.bookings.MoveToMetroMembershipSpiHostUoU":"true","specs.bookings.FixApplyingCouponExperience":"true","specs.bookings.UoUMultiLocationAllLocations":"true","specs.bookings.AccessibilityImprovements":"true","specs.bookings.useBookingsViewerCache":"false","specs.bookings.useQueryEventsInServicePage":"true","specs.bookings.FormUseAutomationsForSMS":"true","specs.bookings.UOUIntakeFormsIntegration":"true","specs.bookings.SingleLineItemPreviewPrice":"true","specs.bookings.RescheduleDefaultLocation":"true","specs.bookings.calendar-summary":"true","specs.bookings.ServiceV2ServicePage":"true","specs.bookings.CheckIsMemberAreaInstalledUsingPublicAPI":"true","specs.bookings.fetchOnlyTenStaffMembers":"false","specs.bookings.RemovePPErrorMessageUponLoginInMobile":"true","specs.bookings.CancellationFeesUoU":"true","specs.bookings.daily-agenda.display-preferences.categories-filter":"false","specs.bookings.calendarA11YChanges":"true","specs.bookings.MultiServiceA1Model":"true","specs.bookings.BookFlowSettings":"true","specs.bookings.DisableDatesAfterReschedulePlanExpiration":"true","specs.bookings.updateFemToWixForms":"true","specs.bookings.noTpaSettingsProviderInList":"true","specs.bookings.AddParticipantShortcut":"true","specs.bookings.bookAgainController":"true","specs.bookings.CartConflictEnableSlotsTimezoneConversion":"true","spec.bookings.owner-fes.DeprecateCatalogWriter":"false","specs.bookings.AutomaticDiscountsUoU":"true","specs.bookings.agendaServiceFilterByLocationSettings":"true","specs.bookings.FixPresetIdInitialization":"true","specs.bookings.bookButtonDestination":"true","specs.bookings.fetchTabsInServiceList":"true","specs.bookings.AnonymousReschedule":"true","specs.bookings.A11YCalendarLabel":"true","specs.bookings.migrateUoUAvailability2":"true","specs.bookings.removeSkipPreferencesModalParam":"true","specs.bookings.FormPaymentOptionNewDropdown":"true","specs.bookings.allowRescheduleWithDynamicPricing":"false","specs.bookings.BookOnlyOneSlotUsingPP":"true","specs.bookings.CheckForExistingBooking":"true","specs.bookings.withErrorHandlerCheckout":"true","spec.bookings.owner-fes.RemoveOldEndpoints":"true","specs.bookings.UseQueryBySessionStartForContactBookings":"true","specs.bookings.EnforcePolicyOnCourse":"true","specs.bookings.DynamicPricingResilientUOU":"false","specs.bookings.UseGetAvailabilityForCourse":"true","specs.bookings.RemoveCalendarLinkFromBookingsCheckoutSettingsPanel":"true","specs.bookings.DetachNumberOfParticipantsFieldFromForm":"true","specs.bookings.AddonsUOU":"true","specs.bookings.MultiLocationUoU":"true","specs.bookings.UseNewBenefitsAPIUoU":"false","specs.bookings.FormReplaceArray":"true","specs.bookings.ServiceXV3CourseService":"true","specs.bookings.DepositeOrFullAmountUoU":"true","specs.bookings.QueryServicesInBatches":"false","specs.bookings.DatacapsuleMigration":"true","specs.bookings.AlwaysShowComplexPhoneField":"false","specs.bookings.ResilientBusinessInfo":"true","specs.bookings.boMultilocation":"true","specs.wos.KillWixSMS":"false","specs.bookings.fineGrainPermissionsModelWithWOA":"true","specs.bookings.ReportBookingAttemptBlockedAutomationOnly":"true","specs.bookings.AppInstanceOnCashierConfg":"true","specs.bookings.FixPricingPlanNavigation":"true","specs.bookings.QueryAvailabilityFromNow":"true","specs.bookings.showWorkingDaysForBookableClass":"true"}}},"forceEmptySdks":false,"appDefIdToIsMigratedToGetPlatformApi":{"14ce1214-b278-a7e4-1373-00cebd1bef7c":false,"675bbcef-18d8-41f5-800e-131ec9e08762":false,"1380b703-ce81-ff05-f115-39571d94dfcd":false,"5c047089-b4af-4395-bd58-139524a3da1d":false,"14271d6f-ba62-d045-549b-ab972ae1f70e":false,"14c92d28-031e-7910-c9a8-a670011e062d":false,"215238eb-22a5-4c36-9e7b-e7c08025e04e":false,"14cc59bc-f0b7-15b8-e1c7-89ce41d0e0c9":false,"14cffd81-5215-0a7f-22f8-074b0e2401fb":false,"14ce28f7-7eb0-3745-22f8-074b0e2401fb":false,"4aebd0cb-fbdb-4da7-b5d1-d05660a30172":false,"2bef2abe-7abe-43da-889c-53c1500a328c":false,"14517e1a-3ff0-af98-408e-2bd6953c36a2":false,"14bcded7-0066-7c35-14d7-466cb3f09103":true,"1484cb44-49cd-5b39-9681-75188ab429de":false,"14f25dc5-6af3-5420-9568-f9c5ed98c9b1":false,"14dbef06-cc42-5583-32a7-3abd44da4908":false,"14f25924-5664-31b2-9568-f9c5ed98c9b1":false,"148c2287-c669-d849-d153-463c7486a694":false,"bcf2aea9-53d2-4139-9a63-3ad7ecc93d28":false,"d90652a2-f5a1-4c7c-84c4-d4cdcc41f130":false,"949cfcc9-2a3f-4a96-bd6c-11d9d82763a4":false,"13d21c63-b5ec-5912-8397-c3a5ddb27a97":false,"1514b01b-cb08-41b4-8582-0a88551ac769":false,"225dd912-7dea-4738-8688-4b8c6955ffc2":false,"bbe1406a-31f5-4f3f-9e0a-b39dfd25274f":false,"dataBinding":false}},"appsScripts":{"urls":{"225dd912-7dea-4738-8688-4b8c6955ffc2":["https:\/\/static.parastorage.com\/services\/form-app\/1.2413.0\/viewerScript.bundle.min.js"],"14ce28f7-7eb0-3745-22f8-074b0e2401fb":["https:\/\/static.parastorage.com\/services\/profile-card-tpa-ooi\/1.2887.0\/viewerScript.bundle.min.js","https:\/\/static.parastorage.com\/services\/profile-card-tpa-ooi\/1.2887.0\/ProfileCardController.bundle.min.js"],"14cc59bc-f0b7-15b8-e1c7-89ce41d0e0c9":["https:\/\/static.parastorage.com\/services\/santa-members-viewer-app\/1.2819.0\/viewerScript.bundle.min.js"]},"scope":"page"},"debug":{"disablePlatform":false,"disableSnapshots":false,"enableSnapshots":false},"isBuilderComponentModel":false}},"siteAssets":{"dataFixersParams":{"experiments":{"dm_bgScrubToMotionFixer":true,"dm_migrateOldHoverBoxToNewFixer":true},"dfVersion":"1.5295.0","isHttps":true,"isUrlMigrated":true,"metaSiteId":"b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1","quickActionsMenuEnabled":false,"siteId":"241dd6c7-7fb5-4c8d-b4d6-94e6afd31537","siteRevision":11177,"v":3,"cacheVersions":{"dataFixer":6},"oneDocEnabled":true},"modulesParams":{"features":{"moduleName":"thunderbolt-features","contentType":"application\/json","resourceType":"features","languageResolutionMethod":"QueryParam","isMultilingualEnabled":true,"externalBaseUrl":"https:\/\/www.dehonline.es","useSandboxInHTMLComp":false,"disableStaticPagesUrlHierarchy":false,"aboveTheFoldSectionsNum":null,"isTrackClicksAnalyticsEnabled":true,"isSocialElementsBlocked":false,"builderAppVersions":"","onlyInteractions":false},"platform":{"moduleName":"thunderbolt-platform","contentType":"application\/json","resourceType":"platform","externalBaseUrl":"https:\/\/www.dehonline.es","staticHTMLComponentUrl":"https:\/\/www-dehonline-es.filesusr.com\/"},"css":{"moduleName":"thunderbolt-css","contentType":"application\/json","resourceType":"css","shouldRunVsm":true,"shouldRunCssInBrowser":false,"shouldGetCssResultObject":false,"stylableMetadataURLs":["editor-elements-library.thunderbolt.690457d8543d12a0c5ae126d90da6da59d74c93c","editor-elements-design-systems.thunderbolt.a3c3827ad7a769a39b95388ba7487863a6fc40cd"],"builderAppVersions":"","ooiVersions":"0a9f687f-7e00-4576-a8e1-9415844b8f44%3Dp.social-groups-ooi%2F5.780.0%2FGroupsListWidgetViewerWidgetNoCss.%3B1380bbab-4da3-36b0-efb4-2e0599971d14%3Dp.wixstores-client-cart-ooi%2F1.5988.0%2FcartViewerWidgetNoCss.%3B1380bbb4-8df0-fd38-a235-88821cf3f8a4%3Dp.wixstores-client-thank-you-page-ooi%2F1.3451.0%2FthankYouPageViewerWidgetNoCss.%3B14c1462a-97f2-9f6a-7bb7-f5541f23caa6%3Dp.communities-blog-ooi%2F1.3112.0%2FBlogViewerWidgetNoCss.%3B14c92de1-0e02-cbe5-98e9-c3de44d63a55%3Dp.faq-ooi%2F1.592.0%2FFaqOoiViewerWidgetNoCss.%3B14cefc05-d163-dbb7-e4ec-cd4f2c4d6ddd%3Dp.profile-card-tpa-ooi%2F1.2887.0%2FProfileCardViewerWidgetNoCss.%3B14dbefb9-3b7b-c4e9-53e8-766defd30587%3Dp.members-about-ooi%2F1.2646.0%2FProfileViewerWidgetNoCss.%3B14dd1af6-3e02-63db-0ef2-72fbc7cc3136%3Dp.my-account-ooi%2F1.2783.0%2FMyAccountViewerWidgetNoCss.%3B14edb332-fdb9-2fe6-0fd1-e6293322b83b%3Dp.bookings-my-bookings-widget%2F1.638.0%2FMyBookingsViewerWidgetNoCss.%3B14fd5970-8072-c276-1246-058b79e70c1a%3Dp.ecom-platform-checkout%2F1.6787.0%2FCheckoutViewerWidgetNoCss.%3B211b5287-14e2-4690-bb71-525908938c81%3Dp.communities-blog-ooi%2F1.3112.0%2FPostViewerWidgetNoCss.%3B371ee199-389c-4a93-849e-e35b8a15b7ca%3Dp.form-app%2F1.2413.0%2FFormViewerWidgetNoCss.%3B44c66af6-4d25-485a-ad9d-385f5460deef%3Dp.search-app%2F1.3961.0%2FSearchResultsViewerWidgetNoCss.%3B49dbb2d9-d9e5-4605-a147-e926605bf164%3Dp.wixstores-client-cart-ooi%2F1.5988.0%2FSideCartViewerWidgetNoCss.%3B513a5d84-3ebb-4ca6-a5aa-83effd2123b9%3Dp.social-groups-ooi%2F5.780.0%2FGroupViewerWidgetNoCss.%3B54d912c5-52cb-4657-b8fa-e1a4cda8ed01%3Dp.bookings-calendar-widget%2F1.3539.0%2FBookingCalendarViewerWidgetNoCss.%3B621bc837-5943-4c76-a7ce-a0e38185301f%3Dp.bookings-service-list-widget%2F1.2175.0%2FBookOnlineViewerWidgetNoCss.%3B6467c15e-af3c-4e8d-b167-41bfb8efc32a%3Dp.payments-my-wallet%2F1.1131.0%2FMyWalletViewerWidgetNoCss.%3B813eb645-c6bd-4870-906d-694f30869fd9%3Dp.communities-blog-ooi%2F1.3112.0%2FPostListViewerWidgetNoCss.%3B985e6fc8-ce3f-4cf8-9b85-714c73f48695%3Dp.bookings-form-widget%2F1.2349.0%2FBookingsFormViewerWidgetNoCss.%3Ba7dcdfcb-8abd-4008-af19-fed5fcd12b40%3Dp.social-groups-ooi%2F5.780.0%2FGroupsViewerWidgetNoCss.%3Babcd87fe-c51f-4538-848d-2902a2f50d2d%3Dp.wixstores-client-gallery%2F1.5848.0%2FSearchResultsPageGalleryViewerWidgetNoCss.%3Be018cc55-7b1c-4500-a2e5-969f22c8a33a%3Dp.social-groups-ooi%2F5.780.0%2FMembersAreaGroupsViewerWidgetNoCss."},"cssMappers":{"moduleName":"thunderbolt-css-mappers","contentType":"application\/json","resourceType":"cssMappers","shouldRunVsm":true,"shouldRunCssInBrowser":false,"shouldGetCssResultObject":false,"stylableMetadataURLs":["editor-elements-library.thunderbolt.690457d8543d12a0c5ae126d90da6da59d74c93c","editor-elements-design-systems.thunderbolt.a3c3827ad7a769a39b95388ba7487863a6fc40cd"],"builderAppVersions":"","ooiVersions":"0a9f687f-7e00-4576-a8e1-9415844b8f44%3Dp.social-groups-ooi%2F5.780.0%2FGroupsListWidgetViewerWidgetNoCss.%3B1380bbab-4da3-36b0-efb4-2e0599971d14%3Dp.wixstores-client-cart-ooi%2F1.5988.0%2FcartViewerWidgetNoCss.%3B1380bbb4-8df0-fd38-a235-88821cf3f8a4%3Dp.wixstores-client-thank-you-page-ooi%2F1.3451.0%2FthankYouPageViewerWidgetNoCss.%3B14c1462a-97f2-9f6a-7bb7-f5541f23caa6%3Dp.communities-blog-ooi%2F1.3112.0%2FBlogViewerWidgetNoCss.%3B14c92de1-0e02-cbe5-98e9-c3de44d63a55%3Dp.faq-ooi%2F1.592.0%2FFaqOoiViewerWidgetNoCss.%3B14cefc05-d163-dbb7-e4ec-cd4f2c4d6ddd%3Dp.profile-card-tpa-ooi%2F1.2887.0%2FProfileCardViewerWidgetNoCss.%3B14dbefb9-3b7b-c4e9-53e8-766defd30587%3Dp.members-about-ooi%2F1.2646.0%2FProfileViewerWidgetNoCss.%3B14dd1af6-3e02-63db-0ef2-72fbc7cc3136%3Dp.my-account-ooi%2F1.2783.0%2FMyAccountViewerWidgetNoCss.%3B14edb332-fdb9-2fe6-0fd1-e6293322b83b%3Dp.bookings-my-bookings-widget%2F1.638.0%2FMyBookingsViewerWidgetNoCss.%3B14fd5970-8072-c276-1246-058b79e70c1a%3Dp.ecom-platform-checkout%2F1.6787.0%2FCheckoutViewerWidgetNoCss.%3B211b5287-14e2-4690-bb71-525908938c81%3Dp.communities-blog-ooi%2F1.3112.0%2FPostViewerWidgetNoCss.%3B371ee199-389c-4a93-849e-e35b8a15b7ca%3Dp.form-app%2F1.2413.0%2FFormViewerWidgetNoCss.%3B44c66af6-4d25-485a-ad9d-385f5460deef%3Dp.search-app%2F1.3961.0%2FSearchResultsViewerWidgetNoCss.%3B49dbb2d9-d9e5-4605-a147-e926605bf164%3Dp.wixstores-client-cart-ooi%2F1.5988.0%2FSideCartViewerWidgetNoCss.%3B513a5d84-3ebb-4ca6-a5aa-83effd2123b9%3Dp.social-groups-ooi%2F5.780.0%2FGroupViewerWidgetNoCss.%3B54d912c5-52cb-4657-b8fa-e1a4cda8ed01%3Dp.bookings-calendar-widget%2F1.3539.0%2FBookingCalendarViewerWidgetNoCss.%3B621bc837-5943-4c76-a7ce-a0e38185301f%3Dp.bookings-service-list-widget%2F1.2175.0%2FBookOnlineViewerWidgetNoCss.%3B6467c15e-af3c-4e8d-b167-41bfb8efc32a%3Dp.payments-my-wallet%2F1.1131.0%2FMyWalletViewerWidgetNoCss.%3B813eb645-c6bd-4870-906d-694f30869fd9%3Dp.communities-blog-ooi%2F1.3112.0%2FPostListViewerWidgetNoCss.%3B985e6fc8-ce3f-4cf8-9b85-714c73f48695%3Dp.bookings-form-widget%2F1.2349.0%2FBookingsFormViewerWidgetNoCss.%3Ba7dcdfcb-8abd-4008-af19-fed5fcd12b40%3Dp.social-groups-ooi%2F5.780.0%2FGroupsViewerWidgetNoCss.%3Babcd87fe-c51f-4538-848d-2902a2f50d2d%3Dp.wixstores-client-gallery%2F1.5848.0%2FSearchResultsPageGalleryViewerWidgetNoCss.%3Be018cc55-7b1c-4500-a2e5-969f22c8a33a%3Dp.social-groups-ooi%2F5.780.0%2FMembersAreaGroupsViewerWidgetNoCss."},"siteMap":{"moduleName":"thunderbolt-site-map","contentType":"application\/json","resourceType":"siteMap"},"mobileAppBuilder":{"moduleName":"thunderbolt-mobile-app-builder","resourceType":"mobileAppBuilder","contentType":"application\/json"},"builderComponentFeatures":{"moduleName":"builder-component-features","resourceType":"builderComponentFeatures","contentType":"application\/json"},"builderComponentCss":{"moduleName":"builder-component-css","resourceType":"builderComponentCss","contentType":"application\/json"},"builderComponentPlatform":{"moduleName":"builder-component-platform","resourceType":"builderComponentPlatform","contentType":"application\/json"},"componentManifestCss":{"moduleName":"component-manifest-css","resourceType":"componentManifestCss","contentType":"application\/json","builderAppVersions":""},"pilerSiteAssets":{"moduleName":"piler-siteassets","resourceType":"pilerSiteAssets","contentType":"application\/json","buildFullApp":"true","keepWidgetBuild":"false","modulesToHashes":"{\"builder-component-features\":\"904a7028.bundle.min\",\"builder-component-css\":\"134d524d.bundle.min\",\"builder-component-platform\":\"574053e4.bundle.min\",\"component-manifest-css\":\"f1db8eb5.bundle.min\",\"thunderbolt-css-mappers\":\"2d2a4ffc.bundle.min\",\"thunderbolt-services-configs\":\"ed90fbd5.bundle.min\",\"thunderbolt-features\":\"c30a77c9.bundle.min\",\"thunderbolt-platform\":\"d4d2613d.bundle.min\",\"thunderbolt-css\":\"a81a9363.bundle.min\",\"thunderbolt-site-map\":\"3c193add.bundle.min\",\"thunderbolt-mobile-app-builder\":\"aa28cbb6.bundle.min\"}","nonBeckyModuleVersions":"{\"remote-widget-structure-builder\":\"1.251.0\",\"blocks-app-descriptor\":\"1.118.0\"}"}},"clientTopology":{"mediaRootUrl":"https:\/\/static.wixstatic.com","scriptsUrl":"static.parastorage.com","staticMediaUrl":"https:\/\/static.wixstatic.com\/media","moduleRepoUrl":"https:\/\/static.parastorage.com\/unpkg","fileRepoUrl":"https:\/\/static.parastorage.com\/services","viewerAppsUrl":"https:\/\/viewer-apps.parastorage.com","viewerAssetsUrl":"https:\/\/viewer-assets.parastorage.com","siteAssetsUrl":"https:\/\/siteassets.parastorage.com","pageJsonServerUrls":["https:\/\/pages.parastorage.com","https:\/\/staticorigin.wixstatic.com","https:\/\/www.dehonline.es","https:\/\/fallback.wix.com\/wix-html-editor-pages-webapp\/page"],"pathOfTBModulesInFileRepoForFallback":"wix-thunderbolt\/dist\/"},"siteScopeParams":{"rendererType":null,"wixCodePageIds":["mkray","cim8a","bc8kx","gji5q","slmag","quxst","zxmy1","oujlx","je6hc","ytqdg","olhdo","i0g2n","xq2tw","njh83","txodm","n1mgf","qmhcs","ga5jw","hpgql","sbcjh","w8duu","wm3z0","af52d","vmhii","tajgd","u6bhj","p60vc","nhshd","l8mal","rwy8r","k9yj1","fswyo","uwoq0","o8zx5","qofog","y73hn","hw5bv","wu4cm","dsocb","t1as7","dytx1","wmg2n","h10oq","ik1hh","hydos","wcsyo","nt31e","x29nv","reoxc","mrxoe","lmhhf","pm5m6","yp7vs","ocq3p","masterPage","skvoa","d48k3","thsrc","sxzjx","obu7v","hfva2","kjy2o"],"hasTPAWorkerOnSite":true,"formFactor":"desktop","viewMode":"desktop","freemiumBanner":false,"coBrandingBanner":false,"dayfulBanner":false,"mobileActionsMenu":false,"isWixSite":false,"isResponsive":false,"editorName":"Unknown","urlFormatModel":{"format":"slash","forbiddenPageUriSEOs":["app","apps","_api","robots.txt","sitemap.xml","feed.xml","sites"],"pageIdToResolvedUriSEO":{}},"pageJsonFileNames":{"zuzg7":"ccd8ff_5a765fa3be5afc95807800d4981f373b_11056.json","nhshd":"ccd8ff_201094f7ad64058474599a3122175e85_11063.json","quxst":"ccd8ff_f779e3af23b0d2a1e97db555a1cb46e8_11060.json","pm5m6":"ccd8ff_bb516a36ef4d942b056acd0aa9afdb44_11055.json","hxib1":"ccd8ff_7cb4a9bd18397c7a0da434cf0d4eb9e1_11060.json","mrxoe":"ccd8ff_e992d5fcda054148bf820b5a15dd48d6_11092.json","txodm":"ccd8ff_bd9dc4ded08cbe51d80616d0ed971f89_11070.json","ol5if":"ccd8ff_d25a3a8b6db48192aa810c8eb823be32_11051.json","nt31m":"ccd8ff_f941fd510d2220094814e88efa21571e_11051.json","olhdo":"ccd8ff_86b89d9ffd363eced05759f57d20949e_11051.json","nt31l":"ccd8ff_bd5a73821416a88371ee5d7a15e53223_11051.json","o0l10":"ccd8ff_759f4e3da440c2df6eb98352087e1b37_11051.json","nd8j7":"ccd8ff_a201f6e811463f24974a2d20bca8133e_11051.json","syyvq":"ccd8ff_aaede83908aebaf7fcf9330a41e9260d_11051.json","pcxzv":"ccd8ff_3d5921ea41d9e0f2ae9d9043e924a189_11051.json","popoq":"ccd8ff_7e568a63c68e8cf1be0c0ab66a1f63e0_11051.json","hpgql":"ccd8ff_3621b19b8b56b5ce84c2e7297bb3c416_11051.json","nt31g":"ccd8ff_655c6faaf91d465849e706e1cf31aa65_11051.json","cim8a":"ccd8ff_529b7fa8fc4a3d49def47d3e473d9987_11177.json","qetce":"ccd8ff_a04fb81240220455483fe0c3ec7adcfa_11051.json","dsocb":"ccd8ff_1c91ce176b76dcd0b9201381255860e8_11051.json","hfva2":"ccd8ff_0ef72eef7979b4f9222f9b7ef1713f44_11060.json","fqdy2":"ccd8ff_01e8a98775fe8b24b5baf9c41a5028f3_11051.json","ik1hh":"ccd8ff_47882fef4597fb55f659c6ec2a8e7ee1_11051.json","q5qha":"ccd8ff_3f67fcb6f0d6edf97a069679b7ee3a9f_11051.json","zxmy1":"ccd8ff_de8db80aeedb7a600f791e84dcdf6d00_11060.json","shn4f":"ccd8ff_af1bd866f57d981e339c93de1734298e_11092.json","i2evc":"ccd8ff_65df3bfc5141d36c164df9e111742b63_11051.json","p9srv":"ccd8ff_08ff3d2477873e0ec376625bfbe9db7e_11060.json","v5m3j":"ccd8ff_fda94af02f13c617b667243fa18a79f8_11051.json","ocq3p":"ccd8ff_d18c75c61b7d5f55b9a5c167d694fea4_11051.json","qurwf":"ccd8ff_b2d7e0ddaaa2acb64bcd0c9d930c455d_11146.json","vl0d0":"ccd8ff_039673da5e58025c713e6d24992631ef_11051.json","gji5q":"ccd8ff_33bd2c8e67284aa9ae7fe589ffa64eea_11060.json","njh83":"ccd8ff_a5471243a54e1553476cd4e128d026d3_11060.json","y59yq":"ccd8ff_1a725d7d691a1a3808e18c62ac78db47_11082.json","errqt":"ccd8ff_abac7bbeae9fd1fb5a66de65e1746b3c_11051.json","h10oq":"ccd8ff_6430a1e1b3926d4b76c91543de772d1c_11055.json","kphfo":"ccd8ff_2840964641b54bc8fd08a87882291b4f_11051.json","bpx3c":"ccd8ff_013903206300554e0d9a06d87c49a2a9_11051.json","tcuwq":"ccd8ff_c2be338c7d693ff09e49589d90b71b25_11060.json","nt31j":"ccd8ff_9db64beee282cf096a9ed5073e06b662_11051.json","qn9b9":"ccd8ff_f8dd30b348333281dd55dba5a8fdde68_11056.json","wrsv8":"ccd8ff_86d786ad8761e76e75e70b493079b367_11051.json","fc4zp":"ccd8ff_a85b858d8382a0281d31ff16363d8ef8_11051.json","rwy8r":"ccd8ff_7adadba4419368e4887862e697dc448b_11051.json","kjy2o":"ccd8ff_74001c918761978947d259018e0bd8bf_11051.json","qbfxr":"ccd8ff_a52f80d9ca09060924294d3ba22b476b_11051.json","nt31h":"ccd8ff_b983bb2d7acba9bcca3a4874d154e5a4_11051.json","p60vc":"ccd8ff_5f4a69496476a50416a931375058ce54_11060.json","qjepe":"ccd8ff_13317c6eb40fb9ed05b57e7ac72fc537_11051.json","thsrc":"ccd8ff_f322c7930c4716fd10cf9c56291f1c52_11051.json","k9yj1":"ccd8ff_c916b41079ee4777a06c03f3a7c235f9_11051.json","wi4q4":"ccd8ff_1a3de6c619b0a344a70a78226b521f62_11051.json","nt31f":"ccd8ff_4d695f24260e30b8d2e4b3c3181b508b_11051.json","cenyi":"ccd8ff_9bb4e5f284d607253b433fcfd478e798_11051.json","xg7qg":"ccd8ff_7abf1378ae27933bd8d5c14b52ad1df3_11051.json","cmksk":"ccd8ff_25c793206570ee517502b355b9b64598_11051.json","j8k8e":"ccd8ff_266bc687d0681c3150108a449d915e21_11051.json","p3s3p":"ccd8ff_26672058a3e25c882a77c266407901ff_11051.json","fd425":"ccd8ff_49b6348a4dfdc838634280b119e84ca4_11051.json","mmdw4":"ccd8ff_db067411f7a092acb698273d08a33a2d_11051.json","hw5bv":"ccd8ff_9678072e0db7caa570defc1bd9134879_11051.json","rl147":"ccd8ff_acdfd35d60a96a678a9ec91e3bbcd12c_11051.json","xgxhy":"ccd8ff_0da8427d60ac72d8c71aab808dca7515_11051.json","iwat5":"ccd8ff_24debed06be12a1180b2f503c218f785_11060.json","z7jn0":"ccd8ff_5b1ddbc83e97c4c907a2292d1e892e1d_11051.json","nh8xj":"ccd8ff_966e66e861eda8eb2244dbc859a2e129_11051.json","x555j":"ccd8ff_b69fa2f2eaf53a4132355cfc0d5448e2_11051.json","tejf5":"ccd8ff_0b05ba6881ce49f8fa6f2c5fa91623f2_11158.json","sxzjx":"ccd8ff_42362a13a786cf5b91cab510627ff055_11051.json","zt28q":"ccd8ff_36ebece37e0d6624af467cdfda2803b3_11051.json","ot0oq":"ccd8ff_0ec56b712054d8f53cf4ec6380cce166_11051.json","smykc":"ccd8ff_4ffc97d82cb722178bc7b54d228513a9_11051.json","zzhwm":"ccd8ff_1d50f9db25773a97730976317e34c5ed_11051.json","l8mal":"ccd8ff_3844934e030be601e8d5ee61213a4747_11051.json","af52d":"ccd8ff_3bbc34b05cca62e971790383a7a75e10_11051.json","nt31n":"ccd8ff_46d55e507e14d0a2f6e6f371bdfe9b5b_11051.json","wi29w":"ccd8ff_eca2c07265a2edb0ab20d55f95d35e1e_11051.json","y73hn":"ccd8ff_e10b380660527c777ce1a4f7048ad3cd_11170.json","nt31d":"ccd8ff_afec459926e11c33d034ff68901b2548_11051.json","w8duu":"ccd8ff_215b2481df090bc07264bc2eef2ccdcd_11051.json","izzed":"ccd8ff_16e5ac7156cfa272beee8d5a522c85ac_11051.json","sbcjh":"ccd8ff_40ec516f406146821051d95e4f58ebc2_11051.json","mwl8s":"ccd8ff_00dac8dc083b9a1ff3bee39b3c46b8af_11051.json","uv3a3":"ccd8ff_5626b43ee098ad6bccadb03765ed9266_11051.json","vmhii":"ccd8ff_1d3a81ecd8e4accf1011308212d6ce09_11051.json","gpbxw":"ccd8ff_e65681b9fbce2f259324f9c128be9b78_11051.json","x29nv":"ccd8ff_46801823dabe2c6eb6d56074e623fb65_11107.json","cg9jn":"ccd8ff_8a0207d7dfc6e3eb2c552ea11416988a_11051.json","d8prw":"ccd8ff_010d59c1ae4e1613120ca04267ed3d39_11051.json","nt31e":"ccd8ff_1605ae6422ba0aa84c298a1adff2b518_11051.json","z7nph":"ccd8ff_0926ee05a79e68be6d004937d8e8cfec_11051.json","lmhhf":"ccd8ff_4b1f71f015bfc4e5f5c4bc75a97b9513_11055.json","u6bhj":"ccd8ff_39d95debf4206f3f6d3647df42fe5abc_11051.json","wu4cm":"ccd8ff_5f81aede2377ac81e094231e85b72c43_11160.json","knhbr":"ccd8ff_6578179e07711c77db1e35d594ca5997_11056.json","c0ser":"ccd8ff_cc60f065a1eeddf664e63571d329ee94_11051.json","e5c1j":"ccd8ff_beba0201be8ad55e174932e0b9719eac_11051.json","dytx1":"ccd8ff_14d633eb2dfd27e95de18e1f54708755_11055.json","yp7vs":"ccd8ff_07b2c298a6263fb88c38cc911b93f8d0_11051.json","d5r14":"ccd8ff_8b8d7927c284cf549091f3a496e175b1_11051.json","k3136":"ccd8ff_59ad3beab4e853323e3faaf7b91c77ed_11051.json","steae":"ccd8ff_c135fa4498cbb18da5185b0fed7002d7_11060.json","obu7v":"ccd8ff_491ce352a23f08786e99a2787683443f_11059.json","ikonk":"ccd8ff_f793021f3a6e54b59f0c83d5b18ada47_11060.json","l9mx3":"ccd8ff_692644d80f0a6394a609909554dc0163_11146.json","qofog":"ccd8ff_03e410b8ad7b6ea55ae9abcf3fcaf9e5_11061.json","xx429":"ccd8ff_f9a34c7d37b1cd957887a5657f0e8934_11060.json","kz0lr":"ccd8ff_c416f3ccf4d14bc47444eb016878889d_11051.json","js15o":"ccd8ff_5b25627c4e46ac3539700179095afd1b_11069.json","u6k6f":"ccd8ff_2aeff3dfc4a91070dc548e82b9094e8c_11051.json","zsvm8":"ccd8ff_bf8f8d8d75c7406491e41bf098722e25_11060.json","nt31i":"ccd8ff_07226b46bb0ee3bb590060c4dbfd5de5_11051.json","uwoq0":"ccd8ff_cb80eb0d45957f17f82b000690430208_11051.json","reoxc":"ccd8ff_8003951114a879a2f298b205c87975b2_11051.json","nt31k":"ccd8ff_c9ac61856e8f7385a727c5575ed1e220_11051.json","ydcn0":"ccd8ff_36e6b268522b41c7de63d5407058574f_11051.json","o8zx5":"ccd8ff_3847eee8145aa0aaf59b5a0ac32fe190_11060.json","khd1a":"ccd8ff_f488f07d259ac77e2832c27b54ae1cc7_11157.json","n1mgf":"ccd8ff_12a90926cfb9dbafd17388dc4056664a_11051.json","ypkkv":"ccd8ff_fb1c82f4fb64d8ab2c34976f91bae320_11060.json","ibjpe":"ccd8ff_2aefc8264203e2c09993356b4acda931_11051.json","uf8q2":"ccd8ff_36c04f67a21ff4a6bfac6683e516aceb_11051.json","htqpi":"ccd8ff_77c6de767163962b95f26d66c04461f8_11051.json","a7c5z":"ccd8ff_d2221e4c3c22fbfd1045021a9eba510f_11051.json","vvs4y":"ccd8ff_dccf4e7174c2fcec2e5aa48781dca91d_11051.json","a67ag":"ccd8ff_37fd45f0652c2734aef4d21dbe4d1a34_11051.json","pkewe":"ccd8ff_0c145256fddb66cbfa46c902a0cafe99_11051.json","redrq":"ccd8ff_3e99fda2e4185999ab6b7e6476f52a21_11051.json","fswyo":"ccd8ff_bbc7a4b4b04ccd0f7b6d2210c282beb5_11159.json","sbgdt":"ccd8ff_74b49bca0e1f6feb94b6b15de7ad8217_11051.json","skelz":"ccd8ff_1476e140c42da98981b54126e25803fe_11051.json","slmag":"ccd8ff_0badf3930ed373b92b55f621a033eaf9_11051.json","zsmlf":"ccd8ff_3648e4d8379c6cdfff9f0ed4bc3a9035_11051.json","bc8kx":"ccd8ff_b83c9ad9a6bb7a818bc5436a31e28630_11051.json","xc5ju":"ccd8ff_bcfa94f26f7c767d01d66470a9f75df1_11051.json","t1as7":"ccd8ff_e54058395ecec400dd84c9df4a2ee886_11060.json","i0g2n":"ccd8ff_4c1d16826df042a491e3b062c57b84f5_11059.json","vpfah":"ccd8ff_f21a02027543656c1f555e6d889fc51b_11051.json","m0mic":"ccd8ff_7cb66e195966407122c6f579bffa80d8_11051.json","nvapc":"ccd8ff_ffdfdb139d78013e9a1eeefbd5ad7bcc_11051.json","uafvx":"ccd8ff_0adb6bab588d799c55772f29101aacff_11060.json","tajgd":"ccd8ff_6fa97a8a24cda899a0e944b89c6569ec_11061.json","lspga":"ccd8ff_e5400bc8a604b06a2cdca5e0f90a8ef7_11051.json","hydos":"ccd8ff_9f4a4f09fe12973c5aefd87a91efa1ce_11076.json","mkray":"ccd8ff_980819a87acc632a5ab30077665699ca_11051.json","tdhex":"ccd8ff_4626da7f335e4072f58f98e4ca1061c8_11051.json","rc4o6":"ccd8ff_b2af851b856a208c7ada978370462fc3_11060.json","vvsrw":"ccd8ff_165d2b0091a64f8ec8fc0f95b442bd04_11051.json","unlm7":"ccd8ff_707f081ecf3881a36ed57a81604af6b0_11051.json","yzt11":"ccd8ff_5a9919011c77b0646ada97050c28c8eb_11051.json","ic0g7":"ccd8ff_b05d5d0bc3915e0afd5c7f044c875027_11051.json","dk9q2":"ccd8ff_17228a6ea461f7a90f443cfbea2d6665_11051.json","ume87":"ccd8ff_35f1ea1a612e57422b1806a70d168586_11051.json","masterPage":"ccd8ff_019daac1d84cfc1ce8ac50bb9eb63a6f_11177.json"},"protectedPageIds":["in5n9","yp7a1","u305p","muzu0","pkvic","tpqog","xq2tw","wmg2n","d48k3","skvoa","qmhcs","wrmtp","ytqdg","wpgmi","wcsyo","oujlx","ga5jw","je6hc","v760n","wm3z0"],"routersInfo":{"configMap":{"routers-lpdz75mh":{"prefix":"account","appDefinitionId":"14cc59bc-f0b7-15b8-e1c7-89ce41d0e0c9","config":"{\"type\":\"private\",\"patterns\":{\"\/my-account\":{\"socialHome\":false,\"appData\":{\"appDefinitionId\":\"14cffd81-5215-0a7f-22f8-074b0e2401fb\",\"appPageId\":\"member_info\",\"menuOrder\":3,\"visibleForRoles\":[]},\"page\":\"ede32970-5e9c-406c-9950-09655f962869\",\"seoData\":{\"title\":\"Mi cuenta\",\"description\":\"\",\"keywords\":\"\",\"noIndex\":\"true\"},\"title\":\"Mi cuenta\"},\"\/my-subscriptions\":{\"socialHome\":false,\"appData\":{\"numbers\":{},\"appDefinitionId\":\"2bef2abe-7abe-43da-889c-53c1500a328c\",\"appPageId\":\"My Subscriptions\",\"menuOrder\":2,\"visibleForRoles\":[]},\"page\":\"380936b6-70ca-4254-8474-31bedebcd7e4\",\"seoData\":{\"title\":\"Mis suscripciones\",\"description\":\"\",\"keywords\":\"\",\"noIndex\":\"true\"},\"title\":\"Mis suscripciones\"},\"\/my-addresses\":{\"socialHome\":false,\"appData\":{\"numbers\":{},\"appDefinitionId\":\"1505b775-e885-eb1b-b665-1e485d9bf90e\",\"appPageId\":\"my_addresses\",\"menuOrder\":2,\"visibleForRoles\":[]},\"page\":\"541a5cc2-d6f6-4cd8-8a90-312ce207e850\",\"seoData\":{\"title\":\"Mis direcciones\",\"description\":\"\",\"keywords\":\"\",\"noIndex\":\"true\"},\"title\":\"Mis direcciones\"},\"\/my-wallet\":{\"socialHome\":false,\"appData\":{\"numbers\":{},\"appDefinitionId\":\"4aebd0cb-fbdb-4da7-b5d1-d05660a30172\",\"appPageId\":\"my_wallet\",\"menuOrder\":2,\"visibleForRoles\":[]},\"page\":\"e223a1f4-3ce9-44de-bbf3-c7e77c21e6ab\",\"seoData\":{\"title\":\"Mi billetera\",\"description\":\"\",\"keywords\":\"\",\"noIndex\":\"true\"},\"title\":\"Mi billetera\"},\"\/settings\":{\"socialHome\":false,\"appData\":{\"numbers\":{},\"appDefinitionId\":\"14f25dc5-6af3-5420-9568-f9c5ed98c9b1\",\"appPageId\":\"settings\",\"menuOrder\":4,\"visibleForRoles\":[]},\"page\":\"4403c30c-a1ec-497e-9056-d87d7ffae212\",\"seoData\":{\"title\":\"Opciones\",\"description\":\"\",\"keywords\":\"\",\"noIndex\":\"true\"},\"title\":\"Opciones\"},\"\/notifications\":{\"socialHome\":false,\"appData\":{\"numbers\":{\"key\":\"notificationsCount\",\"default\":0},\"appDefinitionId\":\"14f25924-5664-31b2-9568-f9c5ed98c9b1\",\"appPageId\":\"notifications_app\",\"menuOrder\":4,\"visibleForRoles\":[]},\"page\":\"ad16ce05-02eb-4802-86ef-e3f6cb5d2056\",\"seoData\":{\"title\":\"Notificaciones\",\"description\":\"\",\"keywords\":\"\",\"noIndex\":\"true\"},\"title\":\"Notificaciones\"},\"\/my-orders\":{\"socialHome\":false,\"appData\":{\"numbers\":{},\"appDefinitionId\":\"1380b703-ce81-ff05-f115-39571d94dfcd\",\"appPageId\":\"order_history\",\"menuOrder\":2,\"visibleForRoles\":[]},\"page\":\"cfe08b5e-852d-4a74-b28c-53cd2d18a0f9\",\"seoData\":{\"title\":\"Mis pedidos\",\"description\":\"\",\"keywords\":\"\",\"noIndex\":\"true\"},\"title\":\"Mis pedidos\"},\"\/my-bookings\":{\"socialHome\":false,\"appData\":{\"numbers\":{},\"appDefinitionId\":\"13d21c63-b5ec-5912-8397-c3a5ddb27a97\",\"appPageId\":\"bookings_member_area\",\"menuOrder\":2,\"visibleForRoles\":[]},\"page\":\"221dd5b5-a7e8-483e-92bc-c8aefef82fb4\",\"seoData\":{\"title\":\"Mis reservas\",\"description\":\"\",\"keywords\":\"\",\"noIndex\":\"true\"},\"title\":\"Mis reservas\"},\"\/my-groups\":{\"socialHome\":false,\"appData\":{\"numbers\":{},\"appDefinitionId\":\"148c2287-c669-d849-d153-463c7486a694\",\"appPageId\":\"My Groups\",\"menuOrder\":2,\"visibleForRoles\":[]},\"page\":\"9869a6f2-b478-4cf3-8fbc-0b8979b85e04\",\"seoData\":{\"title\":\"My Groups\",\"description\":\"\",\"keywords\":\"\",\"noIndex\":\"true\"},\"title\":\"My Groups\"}}}","group":"members","pages":{"cfe08b5e-852d-4a74-b28c-53cd2d18a0f9":"pkvic","221dd5b5-a7e8-483e-92bc-c8aefef82fb4":"wrmtp","ad16ce05-02eb-4802-86ef-e3f6cb5d2056":"yp7a1","e223a1f4-3ce9-44de-bbf3-c7e77c21e6ab":"tpqog","380936b6-70ca-4254-8474-31bedebcd7e4":"wpgmi","541a5cc2-d6f6-4cd8-8a90-312ce207e850":"in5n9","ede32970-5e9c-406c-9950-09655f962869":"v760n","9869a6f2-b478-4cf3-8fbc-0b8979b85e04":"u305p","4403c30c-a1ec-497e-9056-d87d7ffae212":"muzu0"},"roleVariations":{}},"routers-lsx0bfnn":{"prefix":"partners","appDefinitionId":"dataBinding","config":"{\"patterns\":{\"\/{title}\":{\"seoMetaTags\":{\"description\":\"{_id}\",\"robots\":\"index\",\"keywords\":\"\",\"og:image\":\"\"},\"pageRole\":\"a52dca6c-d625-428a-bfc6-ba31939fd9d2\",\"title\":\"{title}\",\"config\":{\"collection\":\"Partners\",\"pageSize\":26,\"lowercase\":true,\"seoV2\":true}}}}","group":"","pages":{"a52dca6c-d625-428a-bfc6-ba31939fd9d2":"n1mgf"},"roleVariations":{}},"routers-m7krxodo":{"prefix":"logs-api-panel","appDefinitionId":"dataBinding","config":"{\"patterns\":{\"\/\":{\"seoMetaTags\":{\"description\":\"{request}\",\"robots\":\"index\"},\"pageRole\":\"62d1cbe7-edd5-4013-9ffd-4b33b0101891\",\"title\":\"LogsAPIPanel\",\"config\":{\"collection\":\"LogsAPIPanel\",\"pageSize\":1,\"lowercase\":true,\"seoV2\":true}}}}","group":"","pages":{"62d1cbe7-edd5-4013-9ffd-4b33b0101891":"uv3a3"},"roleVariations":{}},"routers-lpdz75mh1":{"prefix":"profile","appDefinitionId":"14cc59bc-f0b7-15b8-e1c7-89ce41d0e0c9","config":"{\"type\":\"public\",\"patterns\":{\"\/{userName}\/profile\":{\"socialHome\":true,\"appData\":{\"numbers\":{},\"appDefinitionId\":\"14dbef06-cc42-5583-32a7-3abd44da4908\",\"appPageId\":\"about\",\"menuOrder\":1,\"visibleForRoles\":[]},\"page\":\"296fd1b2-b2d3-43e1-8485-54b566155d9b\",\"seoData\":{\"title\":\"{userName} | Perfil\",\"description\":\"\",\"keywords\":\"\",\"noIndex\":\"true\"},\"title\":\"Perfil\"}}}","group":"members","pages":{"296fd1b2-b2d3-43e1-8485-54b566155d9b":"a7c5z"},"roleVariations":{}}}},"isPremiumDomain":true,"disableSiteAssetsCache":false,"migratingToOoiWidgetIds":"","siteRevisionConfig":{},"registryLibrariesTopology":[{"artifactId":"editor-elements","namespace":"wixui","url":"https:\/\/static.parastorage.com\/services\/editor-elements\/1.14949.0"},{"artifactId":"editor-elements","namespace":"dsgnsys","url":"https:\/\/static.parastorage.com\/services\/editor-elements\/1.14949.0"}],"isInSeo":false,"language":"es","originalLanguage":"es","appDefinitionIdToSiteRevision":{"5c047089-b4af-4395-bd58-139524a3da1d":"33","14271d6f-ba62-d045-549b-ab972ae1f70e":"25","14bcded7-0066-7c35-14d7-466cb3f09103":"1335","d90652a2-f5a1-4c7c-84c4-d4cdcc41f130":"9292","13d21c63-b5ec-5912-8397-c3a5ddb27a97":"440"},"isClientSdkOnSite":false,"appDefinitionIdsWithCustomCss":[],"isBuilderComponentModel":false,"hasUserDomainMedia":false},"beckyExperiments":{"specs.thunderbolt.one_cell_grid_display_flex":true,"specs.thunderbolt.useClassnameInResponsiveAppWidget":true,"specs.thunderbolt.shouldUseResponsiveImages":true,"specs.thunderbolt.WixFreeSiteBannerDesktop":true,"specs.thunderbolt.DatePickerPortal":true,"specs.thunderbolt.updateRichTextSemanticClassNamesOnCorvid":true,"specs.thunderbolt.DDMenuMigrateCssCarmiMapper":true,"specs.thunderbolt.buttonUdp":true,"specs.thunderbolt.useResponsiveImgClassicFixed":true,"specs.thunderbolt.DisableDocumentScrollWhenLightBoxOpen":true,"specs.thunderbolt.removeSafariStickyFix":true,"specs.thunderbolt.fiveGridLineStudioSkins":true,"specs.thunderbolt.useSvgLoaderFeature":true,"specs.thunderbolt.isClassNameToRootEnabled":true,"specs.thunderbolt.LoginBarEnableLoggingInStateInSSR":true,"specs.thunderbolt.WixFreeSiteBannerMobile":true,"specs.thunderbolt.calculateCollapsibleTextLineHeightByFont":true,"specs.thunderbolt.imageEncodingAVIF":true,"specs.thunderbolt.dynamicSlots":true,"specs.thunderbolt.TextInputAutoFillFix":true,"specs.thunderbolt.removeDynamicModelTopologyFromSiteAssets":true,"specs.thunderbolt.FreemiumBannerOdeditor":true,"specs.thunderbolt.UseLoginSocialBarCustomMenu":true,"specs.thunderbolt.dom_store":true,"specs.thunderbolt.UseNewLoginSocialBarCustomMenuPositioning":true,"specs.thunderbolt.customScaleMinBreakpoint":true,"specs.thunderbolt.useSvgLoaderFeatureOnBuilderComps":true,"specs.thunderbolt.safariStickyFix":true,"specs.thunderbolt.motionTimeAnimationsCSS":true,"specs.thunderbolt.takeAppDependenciesFromCSM":true,"specs.thunderbolt.propsCarmiMappersMigration1":true,"specs.thunderbolt.VerticalMenu_uiType_NativeMapper":true,"specs.thunderbolt.useImageAvifFormatInNativeProGallery":true,"specs.thunderbolt.propsCarmiMappersMigration4":true,"specs.thunderbolt.UseNewLoginSocialBarMemberInitialsAvatar":true,"specs.thunderbolt.HoverBoxSelectorToCssNativeMapper":true,"specs.thunderbolt.UseNewLoginSocialBarElementStructure":true,"specs.thunderbolt.svgResolver_2":true,"specs.thunderbolt.ooiCssSelectorWithSuffix":true,"specs.thunderbolt.propsCarmiMappersMigration5":true,"specs.thunderbolt.pinnedTopAuto":true,"specs.thunderbolt.EnableCustomCSSVarsForLoginSocialBar":true,"specs.thunderbolt.removeSingleTabCssMapper":true,"specs.thunderbolt.textScaleAdjust":true},"manifests":{"node":{"modulesToHashes":{"builder-component-features":"904a7028.bundle.min","builder-component-css":"134d524d.bundle.min","builder-component-platform":"574053e4.bundle.min","component-manifest-css":"f1db8eb5.bundle.min","thunderbolt-css-mappers":"2d2a4ffc.bundle.min","thunderbolt-services-configs":"ed90fbd5.bundle.min","thunderbolt-features":"c30a77c9.bundle.min","thunderbolt-platform":"d4d2613d.bundle.min","thunderbolt-css":"a81a9363.bundle.min","thunderbolt-site-map":"3c193add.bundle.min","thunderbolt-mobile-app-builder":"aa28cbb6.bundle.min"}},"web":{"modulesToHashes":{"thunderbolt-features":"99127a18.bundle.min","thunderbolt-platform":"5246c282.bundle.min","thunderbolt-css":"0df8fa03.bundle.min","thunderbolt-site-map":"c99f62d8.bundle.min","thunderbolt-mobile-app-builder":"88090ba7.bundle.min","builder-component-features":"bba72687.bundle.min","builder-component-css":"52bb4702.bundle.min","builder-component-platform":"11270de3.bundle.min","component-manifest-css":"bdfa230e.bundle.min","thunderbolt-css-mappers":"72ac1349.bundle.min","thunderbolt-services-configs":"444b0c96.bundle.min","webpack-runtime":"e9817151.bundle.min"},"webpackRuntimeBundle":"e9817151.bundle.min"},"webWorker":{"modulesToHashes":{"thunderbolt-features":"f24c4a6f.bundle.min","thunderbolt-platform":"c25b90ee.bundle.min","thunderbolt-css":"e388e4c6.bundle.min","thunderbolt-site-map":"b9673aab.bundle.min","thunderbolt-mobile-app-builder":"534e448a.bundle.min","builder-component-features":"e57841fb.bundle.min","builder-component-css":"0616edad.bundle.min","builder-component-platform":"18eb9f67.bundle.min","component-manifest-css":"9f99b979.bundle.min","thunderbolt-css-mappers":"8f38258a.bundle.min","thunderbolt-services-configs":"6029b569.bundle.min"}}},"siteAssetsVersions":{"viewer-assets-generator":"1.0.0","santa-data-fixer":"1.5295.0","@wix\/santa-main-r":"1.1643.0","santa-main-r":"1.1643.0","@wix\/blocks-app-descriptor":"1.118.0","simple-all-pages":"1.0.0","blocks-builder-manifest-generator":"1.151.0","@wix\/santa-data-fixer":"1.5295.0","remote-widget-structure-builder":"1.251.0","remote-widget-metadata":"1.2593.0","santa-site-metadata":"1.3212.0","piler-siteassets":"1.803.0","stylable-santa-flatten":"2.0.222","@wix\/piler-siteassets":"1.803.0"},"staticHTMLComponentUrl":"https:\/\/www-dehonline-es.filesusr.com\/","remoteWidgetStructureBuilderVersion":"1.251.0","blocksBuilderManifestGeneratorVersion":"1.129.0"},"experiments":{"specs.thunderbolt.DisableSentry":true,"specs.thunderbolt.cmsDprNamedQueryParam":true,"specs.thunderbolt.viewport_hydration_extended_react_18":true,"specs.thunderbolt.inMemoryPaypalAuthToken":true,"specs.thunderbolt.roundBordersInResponsiveContainer":true,"specs.thunderbolt.removeWidgetsFromAppsCSM":true,"specs.thunderbolt.PanoramaErrorMonitor":true,"specs.thunderbolt.userAsFactory":true,"specs.thunderbolt.getMemberDetailsFromMembersNg":true,"specs.thunderbolt.UseEEImpress":true,"specs.promote.ar.reportRestPurchaseEventsInsteadOfKafka":true,"specs.thunderbolt.sendBiInlightbox":true,"specs.thunderbolt.fixDisabledLinkButtonStyles":true,"specs.thunderbolt.UseEcomFemBi":true,"specs.thunderbolt.one_cell_grid_display_flex":true,"specs.thunderbolt.siteMembersMultilingualLanguage":true,"specs.thunderbolt.useClassnameInResponsiveAppWidget":true,"specs.thunderbolt.shouldRunCodEmbedsCallbackOnce":true,"specs.thunderbolt.browserCacheReload":true,"specs.thunderbolt.shouldUseResponsiveImages":true,"specs.thunderbolt.WixFreeSiteBannerDesktop":true,"specs.thunderbolt.dontTruncateScrollPosition":true,"specs.thunderbolt.excludeInstanceFromQueryParams":true,"specs.thunderbolt.enableVeloInMpaNavigation":true,"specs.thunderbolt.fullPageNavigationSpecificSites":true,"specs.thunderbolt.ComponentsRegistryFixAnonymousDefine":true,"specs.thunderbolt.newTransitionEndHandlerLogic":true,"specs.thunderbolt.postTransitionElementFocus":true,"specs.thunderbolt.preventDifferentContextMpaNavigation":true,"specs.thunderbolt.useMpaNavigationBlacklistMode":true,"specs.thunderbolt.LoginSocialBarSplitStateProps":true,"specs.thunderbolt.skipDecodeUri":true,"specs.thunderbolt.SetNoCacheOnAppError":true,"specs.thunderbolt.bundlerTrafficToAws":true,"specs.thunderbolt.HtmlComponentPropsMapper":true,"specs.thunderbolt.showContentReflowBanner":true,"specs.thunderbolt.removeDynamicModelTopologyFromSiteAssets":true,"specs.thunderbolt.updateStorageOnBfCacheRestore":true,"specs.thunderbolt.FreemiumBannerOdeditor":true,"specs.thunderbolt.pageUrlRegexIgnoreSpace":true,"specs.thunderbolt.UseLoginSocialBarCustomMenu":true,"specs.thunderbolt.WRichTextPropsMapper":true,"specs.thunderbolt.wixRealtimeGetAppTokenFromPlatformUtils":true,"specs.thunderbolt.newLoginFlowOnProtectedCollection":true,"specs.thunderbolt.FixWixDataInstanceForBlocksPreview":true,"specs.thunderbolt.deprecatewixperf":true,"specs.thunderbolt.shouldSendCookiesForSiteMembersSettings":true,"specs.thunderbolt.calculateHeadEmbedsInSSR":true,"specs.thunderbolt.useNewRegisterLogin":true,"specs.thunderbolt.popupCustom404":true,"specs.thunderbolt.TextInputPrefixWidthFix":true,"specs.thunderbolt.loadWebpackRuntimeInHead":true,"specs.thunderbolt.DatePickerPortal":true,"specs.thunderbolt.dom_store":true,"specs.thunderbolt.removeSendBeat":true,"specs.thunderbolt.UseNewLoginSocialBarCustomMenuPositioning":true,"specs.thunderbolt.siteButtonKeyboardBehavior":true,"specs.os.EnableErrorHandlerInViewer":true,"specs.thunderbolt.customScaleMinBreakpoint":true,"specs.thunderbolt.CallStoresPublicAPIForAddProducts":true,"specs.thunderbolt.ShouldUseNewIAMSocialFlow":true,"specs.thunderbolt.useSvgLoaderFeatureOnBuilderComps":true,"specs.thunderbolt.useIAMEnabledConnections":true,"specs.thunderbolt.StoresCartNullOnShippingInfo":true,"specs.thunderbolt.shouldEncodeUriSlugs":true,"specs.thunderbolt.securityExperiments":true,"specs.thunderbolt.useElementoryRelativePath":true,"specs.thunderbolt.safariStickyFix":true,"specs.thunderbolt.mapLazyLoadedCompsInDifferentRegistrarMap":true,"specs.thunderbolt.fixAiChatOnSafari":true,"specs.thunderbolt.preventGetMemberDetailsWaterfall":true,"specs.thunderbolt.linkBarNativeMapper":true,"specs.thunderbolt.wrichtextListInRtl":true,"specs.thunderbolt.scrollToRetries":true,"specs.thunderbolt.pageBGTransitionHandler":true,"specs.thunderbolt.updateRichTextSemanticClassNamesOnCorvid":true,"specs.thunderbolt.shouldFetchLoginUrlByClientId":true,"specs.thunderbolt.shouldLoadGoogleSdkEarly":true,"specs.thunderbolt.loadNewerSentrySdk":true,"specs.thunderbolt.motionTimeAnimationsCSS":true,"specs.thunderbolt.shouldUseMemberPrivacySettingsService":true,"specs.thunderbolt.DDMenuMigrateCssCarmiMapper":true,"specs.membersArea.LoginBarRemake":true,"specs.thunderbolt.spxStopper":true,"specs.thunderbolt.buttonUdp":true,"specs.thunderbolt.e3presetsPolyfillMutation":true,"specs.thunderbolt.alwaysApplySessionTokenOnIAM":true,"specs.thunderbolt.sendFedopsLoadStartedReplaced":true,"specs.thunderbolt.SlideshowStopMediaInNonActiveSlides":true,"specs.thunderbolt.removeDynamicModelTopology":true,"specs.thunderbolt.hardenFetchAndXHR":true,"specs.thunderbolt.useResponsiveImgClassicFixed":true,"specs.thunderbolt.DisableDocumentScrollWhenLightBoxOpen":true,"specs.thunderbolt.biForBrowserZoom":true,"specs.thunderbolt.shouldValidateRedirectUrl":true,"specs.thunderbolt.StoresCartZeroOnShippingAndTax":true,"specs.thunderbolt.cmsStandalone":true,"specs.thunderbolt.enableSignUpPrivacyNoteType":true,"specs.thunderbolt.veloWixMembersAmbassadorV2":true,"specs.thunderbolt.customElemCollapsedheight":true,"specs.thunderbolt.megaMenuMouseLeave":true,"specs.thunderbolt.useUrlFromBrowserWindowInsteadOfViewerModel":true,"specs.thunderbolt.takeAppDependenciesFromCSM":true,"specs.thunderbolt.WRichTextVerticalAlignTopSafariAndIOS":true,"specs.thunderbolt.viewportOnBPChange":true,"specs.thunderbolt.propsCarmiMappersMigration1":true,"specs.thunderbolt.allowMpaForExternalApps":true,"specs.thunderbolt.UseWixDataItemService":true,"specs.thunderbolt.VerticalMenu_uiType_NativeMapper":true,"specs.thunderbolt.onPageRestoreListener":true,"specs.thunderbolt.useImageAvifFormatInNativeProGallery":true,"specs.thunderbolt.splitLinkUtils":true,"specs.thunderbolt.useNewBuilderSdkApi":true,"specs.thunderbolt.propsCarmiMappersMigration4":true,"specs.thunderbolt.UseCloudDataUrlWithBaseExternalUrl":true,"specs.thunderbolt.dontCleanLightboxState":true,"specs.thunderbolt.removeSafariStickyFix":true,"specs.promote.ar.reportEcomPlatformPurchaseEvents":true,"specs.thunderbolt.UseNewLoginSocialBarMemberInitialsAvatar":true,"specs.thunderbolt.useIAMPlatform":true,"specs.thunderbolt.veloBundlerParastorageUrl":true,"specs.thunderbolt.motionBackgroundSiteParallax":true,"specs.thunderbolt.HoverBoxSelectorToCssNativeMapper":true,"specs.thunderbolt.fiveGridLineStudioSkins":true,"specs.thunderbolt.removeCsmeMpaFlag":true,"specs.thunderbolt.AddRegisterEventListenerToWixWindow":true,"specs.thunderbolt.fetchSVGfromNetworkInCSR":true,"specs.thunderbolt.newStyleApi":true,"specs.thunderbolt.UseNewLoginSocialBarElementStructure":true,"specs.thunderbolt.inlineFontsCSSForIframeTPA":true,"specs.thunderbolt.svgResolver_2":true,"specs.thunderbolt.updateLoginSocialBarMenuItemsSDKData":true,"specs.thunderbolt.excludeGetFeedbackFromMpa":true,"specs.thunderbolt.membersService":true,"specs.thunderbolt.shouldSearchForRouterPrefix":true,"specs.thunderbolt.carouselGalleryImageFitting":true,"specs.thunderbolt.scrollToAnchorSsr":true,"specs.thunderbolt.pricingPlansUserOrdersV2":true,"specs.thunderbolt.useSvgLoaderFeature":true,"specs.thunderbolt.loginSocialBarEnableUrlChangeListeners":true,"specs.thunderbolt.pageTransitionScrollSmoothly":true,"specs.thunderbolt.removeFrozenFooterFromAnchors":true,"specs.thunderbolt.buttonUdp_loggedIn":true,"specs.thunderbolt.InitPlatformApiProvider":true,"specs.thunderbolt.magnifyKeyboardOperability":true,"specs.thunderbolt.isClassNameToRootEnabledNext":true,"specs.thunderbolt.isClassNameToRootEnabled":true,"specs.thunderbolt.LoginBarEnableLoggingInStateInSSR":true,"specs.thunderbolt.WixFreeSiteBannerMobile":true,"specs.thunderbolt.SearchBoxSanitiseSuggestions":true,"specs.thunderbolt.render_dom_store_before_site":true,"specs.thunderbolt.calculateCollapsibleTextLineHeightByFont":true,"specs.thunderbolt.imageEncodingAVIF":true,"displayWixAdsNewVersion":true,"specs.thunderbolt.hideWPhotoTooltip":true,"specs.thunderbolt.BundlerTypescriptListExportedFunctions":true,"specs.thunderbolt.smModalsShouldWaitForAppDidMount":true,"specs.thunderbolt.ooi_css_optimization":true,"specs.thunderbolt.mobileFriendlyInFormFactor":true,"specs.thunderbolt.dynamicSlots":true,"specs.thunderbolt.addOnPageRestoreUnsubscribe":true,"specs.thunderbolt.fixGapBelowTextboxonMobileSite":true,"specs.thunderbolt.propsCarmiMappersMigration2":true,"specs.ShouldForceCaptchaVerificationOnSignupSpec":"Disabled","specs.ShouldForceCaptchaVerificationOnLoginSpec":"Disabled","specs.thunderbolt.css_optimization_change":true,"specs.thunderbolt.ooiCssSelectorWithSuffix":true,"specs.thunderbolt.propsCarmiMappersMigration5":true,"specs.thunderbolt.editorElementsRegistryEnsureComponentLoaderFix":true,"specs.thunderbolt.moveFedopsLoadStartToBody":true,"specs.thunderbolt.pinnedTopAuto":true,"specs.thunderbolt.EnableCustomCSSVarsForLoginSocialBar":true,"specs.thunderbolt.shouldFetchLogoutUrlByClientId":true,"specs.thunderbolt.retainInternalQueryParams":true,"specs.thunderbolt.convertBirthdateToISOString":true,"specs.thunderbolt.textMaskFontFallbacks":true,"specs.thunderbolt.getAppTokenForCustomElement":true,"specs.thunderbolt.businessLoggerService":true,"specs.promote.ar.reportScheduleEventsOnPurchaseIfNeeded":true,"specs.thunderbolt.removeSingleTabCssMapper":true,"specs.thunderbolt.newAuthorizedPagesFlow":true,"specs.thunderbolt.viewerWithoutWixDynamicCustomElements":true,"specs.thunderbolt.newControllersModel":true,"specs.thunderbolt.sanitizeCustomElement":true,"specs.thunderbolt.textScaleAdjust":true,"specs.thunderbolt.Panorama":true,"specs.thunderbolt.fetchCurrentMemberFromMembersNg":true,"specs.thunderbolt.logoutOnIAM":true,"specs.thunderbolt.TextInputAutoFillFix":true,"specs.thunderbolt.suspenseInSlots":true,"specs.thunderbolt.useNewTelemetryAPI":true,"specs.thunderbolt.useMpaSpeculationRulesForPrefetchApi":true},"fleetConfig":{"fleetName":"thunderbolt-renderer-user-code","type":"GA","code":0},"accessTokensUrl":"https:\/\/www.dehonline.es\/_api\/v1\/access-tokens","rollout":{"siteAssetsVersionsRollout":false,"isDACRollout":0,"isTBRollout":false},"commonConfig":{"brand":"wix","host":"VIEWER","bsi":"","consentPolicy":{},"consentPolicyHeader":{},"siteRevision":"11177","renderingFlow":"NONE","language":"es","locale":"es-es"},"componentsLibrariesTopology":[{"artifactId":"editor-elements","namespace":"wixui","url":"https:\/\/static.parastorage.com\/services\/editor-elements\/1.14949.0"},{"artifactId":"editor-elements","namespace":"dsgnsys","url":"https:\/\/static.parastorage.com\/services\/editor-elements\/1.14949.0"}],"anywhereConfig":{},"interactionSampleRatio":0.01,"rendererType":null,"isPartialRouteMatching":false,"useLocalPiler":false,"pilerExperiments":{},"react18Compatible":true,"react18HydrationBlackListWidgets":["14756c3d-f10a-45fc-4df1-808f22aabe80"],"mpaBlacklistWidgets":["1514b184-bb0d-2336-704b-976633cb5fe5"],"excludeCompsForSSRList":[""],"mpaNavigationCompatible":true,"mpaIncompatibleWidgetsList":[],"isolatedRenderer":false}
+  `,
+  String.raw`
+window.viewerModel = JSON.parse(
+  document.getElementById("wix-viewer-model").textContent,
+);
+  `,
+  String.raw`
+["location", "window", "site", "seo", "user"];
+  `,
+  String.raw`
+window.usedPlatformApis = JSON.parse(
+  document.getElementById("used-platform-apis-data").textContent,
+);
+  `,
+  String.raw`
+"use strict";
+(self.webpackJsonp__wix_thunderbolt_app =
+  self.webpackJsonp__wix_thunderbolt_app || []).push([
+  ["6747"],
+  {
+    99090(e, t, o) {
+      o.d(t, { O: () => c });
+      let c = (e, t = "") =>
+        t.toLowerCase().includes("forcereducedmotion") ||
+        !!e?.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    },
+  },
+  function (e) {
+    (e.O(0, ["1619", "3033"], function () {
+      return e((e.s = 19787));
+    }),
+      e.O());
+  },
+]);
+//# sourceMappingURL=lazyCustomElementWrapper.inline.0a0bab45.bundle.min.js.map
+  `,
+  String.raw`
+"use strict";
+(self.webpackJsonp__wix_thunderbolt_app =
+  self.webpackJsonp__wix_thunderbolt_app || []).push([
+  ["6008"],
+  {
+    53850(e, t, r) {
+      r.d(t, { $: () => o });
+      let o = {
+        site: ({ api: e }) => {
+          let t = !!e.rendererModel.getSiteMetaData()?.builderComponentModel,
+            r =
+              !!e.env.getExperiments()["specs.thunderbolt.servicesInfra"] || t;
+          return {
+            shouldLoadSiteFeature: r,
+            shouldLoadSiteConfig: r,
+            siteConfig: {},
+          };
+        },
+        name: "fedopsLoggerService",
+      };
+    },
+    68703(e, t, r) {
+      r.d(t, { L: () => s });
+      var o = r(8716),
+        a = r(26778),
+        n = r(89330);
+      let s = (0, o.Og)([], () => ({
+        definition: a.FedopsLoggerDefinition,
+        impl: n.FedopsLoggerService,
+        config: {},
+        platformConfig: {},
+      }));
+    },
+    89973(e, t, r) {
+      r.d(t, { h: () => s });
+      var o = r(65672),
+        a = r(48869);
+      let n = ({
+          useBatch: e = !0,
+          publishMethod: t = o.PublishMethods.Auto,
+          endpoint: r,
+          muteBi: a = !1,
+          biStore: n,
+          sessionManager: s,
+          fetch: i,
+          factory: d,
+        }) =>
+          d({ useBatch: e, publishMethod: t, endpoint: r })
+            .setMuted(a)
+            .withUoUContext({ msid: n.msid })
+            .withNonEssentialContext({
+              visitorId: () => s.getVisitorId(),
+              siteMemberId: () => s.getSiteMemberId(),
+            })
+            .updateDefaults({
+              vsi: n.viewerSessionId,
+              _av: \`thunderbolt-\${n.viewerVersion}\`,
+              isb: n.is_headless,
+              ...(n.is_headless && { isbr: n.is_headless_reason }),
+            }),
+        s = {
+          createBaseBiLoggerFactory: n,
+          createBiLoggerFactoryForFedops: (e) => {
+            let {
+              biStore: {
+                session_id: t,
+                initialTimestamp: r,
+                initialRequestTimestamp: o,
+                dc: s,
+                microPop: i,
+                is_headless: d,
+                isCached: l,
+                pageData: p,
+                rolloutData: u,
+                caching: c,
+                checkVisibility: f = () => "",
+                viewerVersion: m,
+                requestUrl: I,
+                st: h,
+                isSuccessfulSSR: S,
+                mpaSessionId: A,
+                adjustForPrerenderActivation: g,
+              },
+              muteBi: _ = !1,
+            } = e;
+            return n({ ...e, muteBi: _ }).updateDefaults({
+              ts: () => Date.now() - r,
+              tsn: () =>
+                (function ({
+                  initialRequestTimestamp: e,
+                  adjustForPrerender: t = !1,
+                }) {
+                  if ("undefined" == typeof window)
+                    return Math.round(
+                      performance.now() + (performance.timeOrigin - e),
+                    );
+                  let r = t ? (0, a.b)() : 0;
+                  return Math.round(performance.now() - r);
+                })({ initialRequestTimestamp: o, adjustForPrerender: g }),
+              dc: s,
+              microPop: i,
+              caching: c,
+              session_id: t,
+              st: h,
+              url: I || p.pageUrl,
+              ish: d,
+              pn: p.pageNumber,
+              isFirstNavigation: 1 === p.pageNumber,
+              pv: f,
+              pageId: p.pageId,
+              isServerSide: !1,
+              isSuccessfulSSR: S,
+              is_lightbox: p.isLightbox,
+              is_cached: l,
+              is_sav_rollout: +!!u.siteAssetsVersionsRollout,
+              is_dac_rollout: +!!u.isDACRollout,
+              v: m,
+              mpaSessionId: A,
+            });
+          },
+        };
+    },
+    48869(e, t, r) {
+      r.d(t, { b: () => o });
+      let o = () => {
+        let e = (() => {
+          if (
+            "undefined" == typeof performance ||
+            "function" != typeof performance.getEntriesByType
+          )
+            return;
+          let e = performance.getEntriesByType("navigation")[0];
+          if (e && e.responseStart > 0 && e.responseStart < performance.now())
+            return e;
+        })();
+        return e?.activationStart ?? 0;
+      };
+    },
+    35499(e, t, r) {
+      r.d(t, { W: () => l });
+      var o = r(41394),
+        a = r(41789),
+        n = r(683),
+        s = r(4291),
+        i = r(6355),
+        d = r(63328);
+      let l = ({
+        biLoggerFactory: e,
+        customParams: t = {},
+        phasesConfig: r = "SEND_ON_FINISH",
+        appName: l = "thunderbolt",
+        presetType: p = o.u.BOLT,
+        reportBlackbox: u = !1,
+        paramsOverrides: c = {},
+        factory: f,
+        muteThunderboltEvents: m = !1,
+        experiments: I = {},
+        monitoringData: h,
+      }) => {
+        let S,
+          A,
+          g,
+          _,
+          N,
+          E,
+          b,
+          v,
+          R = f(l, {
+            presetType: p,
+            phasesConfig: r,
+            isPersistent: !0,
+            isServerSide: !1,
+            reportBlackbox: u,
+            customParams: t,
+            biLoggerFactory: e,
+            paramsOverrides: c,
+            enableSampleRateForAppNames:
+              (0, d.k)(
+                "specs.thunderbolt.fedops_enableSampleRateForAppNames",
+                I,
+              ) ??
+              ("undefined" != typeof window &&
+                (0, d.k)(
+                  "specs.thunderbolt.fedops_enableSampleRateForAppNames",
+                  I,
+                )),
+          }),
+          {
+            interactionStarted: w,
+            interactionEnded: O,
+            appLoadingPhaseStart: D,
+            appLoadingPhaseFinish: T,
+            appLoadStarted: y,
+            appLoaded: C,
+          } = R,
+          V = (0, d.k)("specs.thunderbolt.fedopsMuteErrors", I),
+          F = (0, d.k)("specs.thunderbolt.panoramaInSsr", I),
+          L = "undefined" == typeof window,
+          M = (e) => e?.evid && 26 === parseInt(e.evid, 10),
+          B =
+            ((S = (0, i.n)()),
+            h?.viewerSessionId && S.setSessionId(h.viewerSessionId),
+            (A = h?.metaSiteId ?? ""),
+            (g = h?.dc ?? ""),
+            (_ = !!h?.isHeadless),
+            (N = !!h?.isCached),
+            (E = !!h?.rolloutData?.isTBRollout),
+            (b = !!h?.rolloutData?.isDACRollout),
+            (v = !!h?.rolloutData?.siteAssetsVersionsRollout),
+            (0, n.V)({
+              baseParams: {
+                platform: s.OD.Viewer,
+                msid: A,
+                fullArtifactId: "com.wixpress.html-client.wix-thunderbolt",
+                componentId: l,
+              },
+              pluginParams: { useBatch: !0 },
+              data: {
+                dataCenter: g,
+                isHeadless: _,
+                isCached: N,
+                isRollout: E,
+                isDacRollout: b,
+                isSavRollout: v,
+                isSsr: !1,
+                presetType: p,
+                customParams: t,
+              },
+              reporterOptions: L ? { fetchFn: fetch } : {},
+            })
+              .withGlobalConfig(S)
+              .client()),
+          G = (e) => {
+            B && (F || !L) && (e ? B.reportLoadStart() : B.reportLoadFinish());
+          },
+          P = (e, t, r) => {
+            if (!B) return;
+            let o = e.replaceAll(" ", "_");
+            t ? B.transaction(o).start(r) : B.transaction(o).finish(r);
+          },
+          k = (e, t, r, n) => {
+            if (a.iy.has(l)) return !0;
+            if (
+              ((e, t, r) => {
+                let n;
+                return M(r)
+                  ? V
+                  : ((n = r?.siteAssetsModule ?? ""),
+                    !(
+                      p !== o.u.BOLT ||
+                      a.EQ.has(e) ||
+                      (t &&
+                        [
+                          "thunderbolt-css",
+                          "thunderbolt-features",
+                          "thunderbolt-platform",
+                        ].includes(n))
+                    ));
+              })(e, t, n)
+            )
+              return !1;
+            if (n?.siteAssetsModule) return !0;
+            let s = !!r?.appId && !a.S_.has(r.appId),
+              i = a.S2.has(e),
+              d = a.wV.has(e);
+            return i || s || (!d && !m);
+          };
+        return (
+          (R.interactionStarted = (e, t) => {
+            if (
+              (M(t?.paramsOverrides)
+                ? ((e = {}) => {
+                    if (!B) return;
+                    let { errorInfo: t, errorType: r } = e,
+                      o = Error(t);
+                    B?.errorMonitor().reportError(o, {
+                      errorName: r,
+                      environment: "Viewer",
+                    });
+                  })(t?.paramsOverrides)
+                : (F || e.startsWith("platform_") || !L) && P(e, !0),
+              k(e, !0, void 0, t?.paramsOverrides))
+            )
+              return w.call(R, e, t);
+            try {
+              performance.mark(\`\${e} started\`);
+            } catch (e) {}
+            return { timeoutId: 0 };
+          }),
+          (R.interactionEnded = (e, t) => {
+            if (
+              ((F || e.startsWith("platform_") || !L) && P(e, !1),
+              k(e, !0, void 0, t?.paramsOverrides))
+            )
+              O.call(R, e, t);
+            else
+              try {
+                performance.mark(\`\${e} ended\`);
+              } catch (e) {}
+          }),
+          (R.appLoadingPhaseStart = (e, t) => {
+            if (
+              (P(e, !0, { appDefId: t?.appId, componentId: t?.widgetId }),
+              k(e, !1, t))
+            )
+              D.call(R, e, t);
+            else
+              try {
+                performance.mark(\`\${e} started\`);
+              } catch (e) {}
+          }),
+          (R.appLoadingPhaseFinish = (e, t, r) => {
+            if (
+              (P(e, !1, { appDefId: t?.appId, componentId: t?.widgetId }),
+              k(e, !1, t))
+            )
+              T.call(R, e, t, r);
+            else
+              try {
+                performance.mark(\`\${e} finished\`);
+              } catch (e) {}
+          }),
+          (R.appLoadStarted = (e) => {
+            (G(!0), y.call(R, e));
+          }),
+          (R.appLoaded = (e) => {
+            (G(!1), C.call(R, e));
+          }),
+          R
+        );
+      };
+    },
+    81855(e, t, r) {
+      r.d(t, { c: () => o });
+      let o = (e) => {
+        let t = "thunderbolt-commons";
+        return {
+          reportAsyncWithCustomKey: (r, o, a) =>
+            e.reportAsyncWithCustomKey(r, t, o, a),
+          runAsyncAndReport: (r, o) => e.runAsyncAndReport(r, t, o),
+          runAndReport: (r, o) => e.runAndReport(r, t, o),
+          reportError: (r) => {
+            e.captureError(r, {
+              tags: { feature: t, clientMetricsReporterError: !0 },
+            });
+          },
+          meter: (t, r) => {
+            e.meter(t, r);
+          },
+          histogram: (e, t) => {},
+        };
+      };
+    },
+    27256(e, t, r) {
+      (r.r(t), r.d(t, { createBiReporter: () => s, site: () => i }));
+      var o = r(73388),
+        a = r(60990);
+      let n = (...e) => console.log("[TB] ", ...e);
+      function s(e = n, t = n, r = () => {}, o = n, a = n) {
+        return {
+          reportBI: e,
+          sendBeat: t,
+          setDynamicSessionData: r,
+          reportPageNavigation: o,
+          reportPageNavigationDone: a,
+        };
+      }
+      let i =
+        ({ biReporter: e, wixBiSession: t, viewerModel: r }) =>
+        (n) => {
+          (n(o.O$).toConstantValue(t),
+            n(o.u6).toConstantValue(e),
+            n(o.lR).toConstantValue((0, a.f)(r)));
+        };
+    },
+    94756(e, t, r) {
+      r.d(t, { lF: () => n, mY: () => i, w4: () => s });
+      var o,
+        a,
+        n =
+          (((o = {})[(o.START = 1)] = "START"),
+          (o[(o.VISIBLE = 2)] = "VISIBLE"),
+          (o[(o.PAGE_FINISH = 33)] = "PAGE_FINISH"),
+          (o[(o.FIRST_CDN_RESPONSE = 4)] = "FIRST_CDN_RESPONSE"),
+          (o[(o.TBD = -1)] = "TBD"),
+          (o[(o.PAGE_NAVIGATION = 101)] = "PAGE_NAVIGATION"),
+          (o[(o.PAGE_NAVIGATION_DONE = 103)] = "PAGE_NAVIGATION_DONE"),
+          o),
+        s =
+          (((a = {})[(a.NAVIGATION = 1)] = "NAVIGATION"),
+          (a[(a.DYNAMIC_REDIRECT = 2)] = "DYNAMIC_REDIRECT"),
+          (a[(a.INNER_ROUTE = 3)] = "INNER_ROUTE"),
+          (a[(a.NAVIGATION_ERROR = 4)] = "NAVIGATION_ERROR"),
+          (a[(a.CANCELED = 5)] = "CANCELED"),
+          a);
+      let i = {
+        1: "page-navigation",
+        2: "page-navigation-redirect",
+        3: "page-navigation-inner-route",
+        4: "navigation-error",
+        5: "navigation-canceled",
+      };
+    },
+    73388(e, t, r) {
+      r.d(t, { O$: () => a, lR: () => n, u6: () => o });
+      let o = Symbol.for("BI"),
+        a = Symbol.for("WixBiSessionSymbol"),
+        n = Symbol.for("appName");
+    },
+  },
+]);
+//# sourceMappingURL=bi-common.inline.fe86753d.bundle.min.js.map
+  `,
+  String.raw`
+"use strict";
+(self.webpackJsonp__wix_thunderbolt_app =
+  self.webpackJsonp__wix_thunderbolt_app || []).push([
+  ["8426"],
+  {
+    7146(e, r, t) {
+      (t.r(r), t.d(r, { platformWorkerPromise: () => m }));
+      let s = window.viewerModel,
+        a = s?.siteFeatures || [],
+        o = s?.siteFeaturesConfigs?.platform,
+        p = s?.siteAssets?.clientTopology,
+        l = s?.site?.externalBaseUrl,
+        i = window.usedPlatformApis,
+        c = "undefined" != typeof Worker && a.includes("platform") && !!o,
+        n = async () => {
+          let e;
+          if (!o?.clientWorkerUrl || !o?.appsScripts || !o?.bootstrapData)
+            return void console.warn(
+              "[create-worker] Platform config incomplete (missing clientWorkerUrl, appsScripts, or bootstrapData), skipping worker creation",
+            );
+          let r = "platform_create-worker started";
+          performance.mark(r);
+          let {
+              clientWorkerUrl: t,
+              appsScripts: s,
+              bootstrapData: a,
+              sdksStaticPaths: c,
+            } = o,
+            {
+              appsSpecData: n = {},
+              appDefIdToIsMigratedToGetPlatformApi: m = {},
+              forceEmptySdks: d,
+            } = a || {},
+            f = new Worker(
+              t.startsWith("http://localhost:") ||
+                t.startsWith("https://bo.wix.com/suricate/") ||
+                document.baseURI !== location.href
+                ? ((e = new Blob([\`importScripts('\${t}');\`], {
+                    type: "application/javascript",
+                  })),
+                  URL.createObjectURL(e))
+                : t.replace(p?.fileRepoUrl || "", \`\${l}/_partials\`),
+            ),
+            u = s?.urls || {},
+            k = Object.keys(u)
+              .filter((e) => !n[e]?.isModuleFederated)
+              .reduce((e, r) => ((e[r] = u[r]), e), {});
+          (c &&
+            c.mainSdks &&
+            c.nonMainSdks &&
+            (Object.values(m).every((e) => e) || d
+              ? f.postMessage({ type: "preloadNamespaces", namespaces: i })
+              : f.postMessage({
+                  type: "preloadAllNamespaces",
+                  sdksStaticPaths: c,
+                })),
+            f.postMessage({
+              type: "platformScriptsToPreload",
+              appScriptsUrls: k,
+            }));
+          let w = "platform_create-worker ended";
+          return (
+            performance.mark(w),
+            performance.measure("Create Platform Web Worker", r, w),
+            f
+          );
+        },
+        m = c ? n() : Promise.resolve();
+    },
+  },
+  function (e) {
+    e((e.s = 7146));
+  },
+]);
+//# sourceMappingURL=createPlatformWorker.inline.5582455f.bundle.min.js.map
+  `,
+  String.raw`
+"use strict";
+(self.webpackJsonp__wix_thunderbolt_app =
+  self.webpackJsonp__wix_thunderbolt_app || []).push([
+  ["1625"],
+  {
+    97534() {
+      var e;
+      let n, a, t;
+      ((e = window),
+        (n = new Set()),
+        (a = []),
+        (t = (e) => {
+          let a = [];
+          (n.forEach((n) => {
+            e.canHandleEvent(n) && a.push(n);
+          }),
+            a.forEach((a) => {
+              (n.delete(a), e.handleEvent(a));
+            }));
+        }),
+        e.addEventListener("message", (e) => {
+          let d = { source: e.source, data: e.data, origin: e.origin },
+            s = a.find((e) => e.canHandleEvent(d));
+          s ? (t(s), s.handleEvent(d)) : n.add(d);
+        }),
+        (e._addWindowMessageHandler = (e) => {
+          (a.push(e), t(e));
+        }));
+    },
+  },
+  function (e) {
+    e((e.s = 97534));
+  },
+]);
+//# sourceMappingURL=windowMessageRegister.inline.d8470fd7.bundle.min.js.map
+  `,
+  String.raw`
+window.clientSideRender = false;
+  `,
+  String.raw`
+"use strict";
+(self.webpackJsonp__wix_thunderbolt_app =
+  self.webpackJsonp__wix_thunderbolt_app || []).push([
+  ["9114"],
+  {
+    79032(e, i, n) {
+      let t, r, s, o;
+      n.d(i, { K: () => h });
+      var a = n(94756);
+      let l = (e) => {
+        let i = !1;
+        if (!/\(iP(hone|ad|od);/i.test(window?.navigator?.userAgent))
+          try {
+            i = navigator.sendBeacon(e);
+          } catch {}
+        i || (new Image().src = e);
+      };
+      function c([e, i]) {
+        return null !== i && \`\${e}=\${i}\`;
+      }
+      let d = function (
+          e,
+          { eventType: i, ts: n, tts: t, extra: r = "" },
+          s,
+          o,
+        ) {
+          let a,
+            l,
+            d =
+              ((a = r.split("&").reduce((e, i) => {
+                let [n, t] = i.split("=");
+                return { ...e, [n]: t };
+              }, {})),
+              (e, i) => (void 0 !== a[e] ? a[e] : i)),
+            u = (e) => (void 0 === s[e] ? null : s[e]),
+            p = !0,
+            m = window?.consentPolicyManager;
+          if (m) {
+            let e = m.getCurrentConsentPolicy();
+            if (e) {
+              let { policy: i } = e;
+              p = !(i.functional && i.analytics);
+            }
+          }
+          let w = u("requestUrl"),
+            h = Object.entries({
+              src: "29",
+              evid: "3",
+              viewer_name: u("viewerName"),
+              caching: u("caching"),
+              client_id: p
+                ? null
+                : (l = document.cookie.match(/_wixCIDX=([^;]*)/)) && l[1],
+              dc: u("dc"),
+              microPop: u("microPop"),
+              et: i,
+              event_name: e ? encodeURIComponent(e) : null,
+              is_cached: u("isCached"),
+              is_platform_loaded: u("is_platform_loaded"),
+              is_rollout: u("is_rollout"),
+              ism: u("isMesh"),
+              isp: 0,
+              isjp: u("isjp"),
+              iss: u("isServerSide"),
+              ssr_fb: u("fallbackReason"),
+              ita: d("ita", s.checkVisibility() ? "1" : "0"),
+              mid: p ? null : o?.siteMemberId || null,
+              msid: u("msId"),
+              pid: d("pid", null),
+              pn: d("pn", "1"),
+              ref:
+                document.referrer && !p
+                  ? encodeURIComponent(document.referrer)
+                  : null,
+              sar: p
+                ? null
+                : d(
+                    "sar",
+                    screen.availWidth
+                      ? \`\${screen.availWidth}x\${screen.availHeight}\`
+                      : null,
+                  ),
+              sessionId: p && m ? null : u("sessionId"),
+              siterev:
+                s.siteRevision || s.siteCacheRevision
+                  ? \`\${s.siteRevision}-\${s.siteCacheRevision}\`
+                  : null,
+              sr: p
+                ? null
+                : d(
+                    "sr",
+                    screen.width ? \`\${screen.width}x\${screen.height}\` : null,
+                  ),
+              st: u("st"),
+              ts: n,
+              tts: t,
+              url: p
+                ? (function (e) {
+                    if (!e) return null;
+                    let i = new URL(decodeURIComponent(e));
+                    return ((i.search = "?"), encodeURIComponent(i.href));
+                  })(w)
+                : w,
+              v: window?.thunderboltVersion || "0.0.0",
+              vid: p ? null : o?.visitorId || null,
+              bsi: p ? null : o?.bsi || null,
+              vsi: u("viewerSessionId"),
+              wor:
+                p || !window.outerWidth
+                  ? null
+                  : \`\${window.outerWidth}x\${window.outerHeight}\`,
+              wr: p
+                ? null
+                : d(
+                    "wr",
+                    window.innerWidth
+                      ? \`\${window.innerWidth}x\${window.innerHeight}\`
+                      : null,
+                  ),
+              _brandId: s.commonConfig?.brand || null,
+              nt: d("nt", null),
+            })
+              .map(c)
+              .filter(Boolean)
+              .join("&");
+          return \`https://frog.wix.com/bt?\${h}\`;
+        },
+        u = "unknown",
+        p = (e) => {
+          let i,
+            n,
+            t = ((i = e.cache), (n = e.varnish), \`\${i || u},\${n || u}\`);
+          return {
+            caching: t,
+            isCached: t.includes("hit"),
+            ...(e.microPop ? { microPop: e.microPop } : {}),
+          };
+        },
+        m = { WixSite: 1, UGC: 2, Template: 3 };
+      var w = n(48869);
+      let h =
+        ((t = (() => {
+          let {
+              fedops: e,
+              viewerModel: {
+                siteFeaturesConfigs: i,
+                requestUrl: n,
+                site: t,
+                fleetConfig: r,
+                commonConfig: s,
+                interactionSampleRatio: o,
+              },
+              clientSideRender: a,
+              santaRenderingError: l,
+            } = window,
+            c = (({ requestUrl: e, interactionSampleRatio: i }) => {
+              let n = new URL(e).searchParams;
+              return n.has("sampleEvents")
+                ? "true" === n.get("sampleEvents")
+                : Math.random() < (i ? 1 - i : 0.9);
+            })({ requestUrl: n, interactionSampleRatio: o }),
+            d =
+              ((e) => {
+                let { userAgent: i } = e.navigator;
+                return /instagram.+google\/google/i.test(i)
+                  ? ""
+                  : /bot|google(?!play)|phantom|crawl|spider|headless|slurp|facebookexternal|Lighthouse|PTST|^mozilla\/4\.0$|^\s*$/i.test(
+                        i,
+                      )
+                    ? "ua"
+                    : "";
+              })(window) ||
+              (() => {
+                try {
+                  if (window.self === window.top) return "";
+                } catch {}
+                return "iframe";
+              })() ||
+              (() => {
+                if (!Function.prototype.bind) return "bind";
+                let { document: e, navigator: i } = window;
+                if (!e || !i) return "document";
+                let {
+                  webdriver: n,
+                  userAgent: t,
+                  plugins: r,
+                  languages: s,
+                } = i;
+                if (n) return "webdriver";
+                if (!r || Array.isArray(r)) return "plugins";
+                if (Object.getOwnPropertyDescriptor(r, "0")?.writable)
+                  return "plugins-extra";
+                if (!t) return "userAgent";
+                if (t.indexOf("Snapchat") > 0 && e.hidden) return "Snapchat";
+                if (!s || 0 === s.length || !Object.isFrozen(s))
+                  return "languages";
+                try {
+                  throw Error();
+                } catch (e) {
+                  if (e instanceof Error) {
+                    let { stack: i } = e;
+                    if (i && / (\(internal\/)|(\(?file:\/)/.test(i))
+                      return "stack";
+                  }
+                }
+                return "";
+              })() ||
+              (({ seo: e }) => (e?.isInSEO ? "seo" : ""))(i);
+          return {
+            suppressbi: n.includes("suppressbi=true"),
+            initialTimestamp: window.initialTimestamps.initialTimestamp,
+            initialRequestTimestamp:
+              window.initialTimestamps.initialRequestTimestamp,
+            viewerSessionId: e.vsi,
+            viewerName: t.appNameForBiEvents,
+            siteRevision: String(t.siteRevision),
+            msId: t.metaSiteId,
+            is_rollout: 0 === r.code || 1 === r.code ? r.code : null,
+            is_platform_loaded: 0,
+            requestUrl: encodeURIComponent(n),
+            sessionId: String(t.sessionId),
+            btype: d,
+            isjp: !!d,
+            dc: t.dc,
+            siteCacheRevision: "__siteCacheRevision__",
+            checkVisibility: (() => {
+              let e = !0;
+              function i() {
+                e = e && !0 !== document.hidden;
+              }
+              return (
+                document.addEventListener("visibilitychange", i, {
+                  passive: !0,
+                }),
+                i(),
+                () => (i(), e)
+              );
+            })(),
+            ...((e, i) => {
+              let n,
+                t = ((e) => {
+                  let i;
+                  try {
+                    i = e();
+                  } catch {
+                    i = [];
+                  }
+                  let n = i.reduce(
+                    (e, i) => ((e[i.name] = i.description), e),
+                    {},
+                  );
+                  return { cache: n.cache, varnish: n.varnish, microPop: n.dc };
+                })(i);
+              if (t.cache || t.varnish)
+                return p({
+                  cache: t.cache || u,
+                  varnish: t.varnish || u,
+                  microPop: t.microPop,
+                });
+              let r =
+                (n = e.match(
+                  /ssr-caching="?cache[,#]\s*desc=([\w-]+)(?:[,#]\s*varnish=(\w+))?(?:[,#]\s*dc[,#]\s*desc=([\w-]+))?(?:"|;|$)/,
+                )) && n.length
+                  ? { cache: n[1], varnish: n[2] || u, microPop: n[3] }
+                  : null;
+              return r ? p(r) : { caching: u, isCached: !1 };
+            })(document.cookie, () => [
+              ...(performance.getEntriesByType("navigation")[0].serverTiming ||
+                []),
+            ]),
+            isMesh: 1,
+            st: m[t.siteType] || 0,
+            commonConfig: s,
+            muteThunderboltEvents: c,
+            isServerSide: +!a,
+            isSuccessfulSSR: !a,
+            fallbackReason: l?.errorInfo,
+            mpaSessionId: e.mpaSessionId,
+          };
+        })()),
+        (r = {}),
+        (s = 1),
+        {
+          sendBeat: (o = (e, i, n = {}) => {
+            if (i && performance.mark) {
+              let n = \`\${i} (beat \${e})\`;
+              performance.mark(n);
+            }
+            let o = globalThis.window?.viewerModel;
+            if (!o?.experiments["specs.thunderbolt.removeSendBeat"]) {
+              let a = Date.now(),
+                c = o?.experiments[
+                  "specs.thunderbolt.adjustForPrerenderActivation"
+                ]
+                  ? (0, w.b)()
+                  : 0,
+                u = Math.round(performance.now() - c),
+                p = a - t.initialTimestamp;
+              if (t.suppressbi || window.__browser_deprecation__) return;
+              let { pageId: m, pageNumber: h = s, navigationType: f } = n,
+                v = \`&pn=\${h}\`;
+              (m && (v += \`&pid=\${m}\`),
+                f && (v += \`&nt=\${f}\`),
+                l(d(i, { eventType: e, ts: p, tts: u, extra: v }, t, r)));
+            }
+          }),
+          reportBI: function (e, i) {
+            let n, t;
+            ((n = i ? \`\${e} - \${i}\` : e),
+              (t = "end" === i ? \`\${e} - start\` : null),
+              performance.mark(n),
+              performance.measure &&
+                t &&
+                performance.measure(\`\u2B50\${e}\`, t, n));
+          },
+          wixBiSession: t,
+          sendBeacon: l,
+          setDynamicSessionData: ({
+            visitorId: e,
+            siteMemberId: i,
+            bsi: n,
+          }) => {
+            ((r.visitorId = e || r.visitorId),
+              (r.siteMemberId = i || r.siteMemberId),
+              (r.bsi = n || r.bsi));
+          },
+          reportPageNavigation: function (e) {
+            ((s += 1),
+              o(a.lF.PAGE_NAVIGATION, "page navigation start", {
+                pageId: e,
+                pageNumber: s,
+              }));
+          },
+          reportPageNavigationDone: function (e, i) {
+            (o(a.lF.PAGE_NAVIGATION_DONE, "page navigation complete", {
+              pageId: e,
+              pageNumber: s,
+              navigationType: i,
+            }),
+              (i === a.w4.DYNAMIC_REDIRECT ||
+                i === a.w4.NAVIGATION_ERROR ||
+                i === a.w4.CANCELED) &&
+                (s -= 1));
+          },
+        });
+      ((window.bi = h),
+        (window.bi.wixBiSession.isServerSide = +!window.clientSideRender),
+        (window.bi.wixBiSession.isSuccessfulSSR = !window.clientSideRender),
+        window.clientSideRender &&
+          (window.bi.wixBiSession.fallbackReason =
+            window.santaRenderingError?.errorInfo),
+        h.sendBeat(1, "Init"));
+    },
+  },
+  function (e) {
+    (e.O(0, ["6008"], function () {
+      return e((e.s = 79032));
+    }),
+      e.O());
+  },
+]);
+//# sourceMappingURL=bi.inline.af370d22.bundle.min.js.map
+  `,
+  String.raw`
+"use strict";
+(self.webpackJsonp__wix_thunderbolt_app =
+  self.webpackJsonp__wix_thunderbolt_app || []).push([
+  ["1698"],
+  {
+    40250(e, i, n) {
+      n(79032).K.sendBeat(12, "Partially visible", {
+        pageId: window.firstPageId,
+      });
+    },
+    79032(e, i, n) {
+      let t, r, s, o;
+      n.d(i, { K: () => h });
+      var a = n(94756);
+      let l = (e) => {
+        let i = !1;
+        if (!/\(iP(hone|ad|od);/i.test(window?.navigator?.userAgent))
+          try {
+            i = navigator.sendBeacon(e);
+          } catch {}
+        i || (new Image().src = e);
+      };
+      function c([e, i]) {
+        return null !== i && \`\${e}=\${i}\`;
+      }
+      let d = function (
+          e,
+          { eventType: i, ts: n, tts: t, extra: r = "" },
+          s,
+          o,
+        ) {
+          let a,
+            l,
+            d =
+              ((a = r.split("&").reduce((e, i) => {
+                let [n, t] = i.split("=");
+                return { ...e, [n]: t };
+              }, {})),
+              (e, i) => (void 0 !== a[e] ? a[e] : i)),
+            u = (e) => (void 0 === s[e] ? null : s[e]),
+            p = !0,
+            w = window?.consentPolicyManager;
+          if (w) {
+            let e = w.getCurrentConsentPolicy();
+            if (e) {
+              let { policy: i } = e;
+              p = !(i.functional && i.analytics);
+            }
+          }
+          let m = u("requestUrl"),
+            h = Object.entries({
+              src: "29",
+              evid: "3",
+              viewer_name: u("viewerName"),
+              caching: u("caching"),
+              client_id: p
+                ? null
+                : (l = document.cookie.match(/_wixCIDX=([^;]*)/)) && l[1],
+              dc: u("dc"),
+              microPop: u("microPop"),
+              et: i,
+              event_name: e ? encodeURIComponent(e) : null,
+              is_cached: u("isCached"),
+              is_platform_loaded: u("is_platform_loaded"),
+              is_rollout: u("is_rollout"),
+              ism: u("isMesh"),
+              isp: 0,
+              isjp: u("isjp"),
+              iss: u("isServerSide"),
+              ssr_fb: u("fallbackReason"),
+              ita: d("ita", s.checkVisibility() ? "1" : "0"),
+              mid: p ? null : o?.siteMemberId || null,
+              msid: u("msId"),
+              pid: d("pid", null),
+              pn: d("pn", "1"),
+              ref:
+                document.referrer && !p
+                  ? encodeURIComponent(document.referrer)
+                  : null,
+              sar: p
+                ? null
+                : d(
+                    "sar",
+                    screen.availWidth
+                      ? \`\${screen.availWidth}x\${screen.availHeight}\`
+                      : null,
+                  ),
+              sessionId: p && w ? null : u("sessionId"),
+              siterev:
+                s.siteRevision || s.siteCacheRevision
+                  ? \`\${s.siteRevision}-\${s.siteCacheRevision}\`
+                  : null,
+              sr: p
+                ? null
+                : d(
+                    "sr",
+                    screen.width ? \`\${screen.width}x\${screen.height}\` : null,
+                  ),
+              st: u("st"),
+              ts: n,
+              tts: t,
+              url: p
+                ? (function (e) {
+                    if (!e) return null;
+                    let i = new URL(decodeURIComponent(e));
+                    return ((i.search = "?"), encodeURIComponent(i.href));
+                  })(m)
+                : m,
+              v: window?.thunderboltVersion || "0.0.0",
+              vid: p ? null : o?.visitorId || null,
+              bsi: p ? null : o?.bsi || null,
+              vsi: u("viewerSessionId"),
+              wor:
+                p || !window.outerWidth
+                  ? null
+                  : \`\${window.outerWidth}x\${window.outerHeight}\`,
+              wr: p
+                ? null
+                : d(
+                    "wr",
+                    window.innerWidth
+                      ? \`\${window.innerWidth}x\${window.innerHeight}\`
+                      : null,
+                  ),
+              _brandId: s.commonConfig?.brand || null,
+              nt: d("nt", null),
+            })
+              .map(c)
+              .filter(Boolean)
+              .join("&");
+          return \`https://frog.wix.com/bt?\${h}\`;
+        },
+        u = "unknown",
+        p = (e) => {
+          let i,
+            n,
+            t = ((i = e.cache), (n = e.varnish), \`\${i || u},\${n || u}\`);
+          return {
+            caching: t,
+            isCached: t.includes("hit"),
+            ...(e.microPop ? { microPop: e.microPop } : {}),
+          };
+        },
+        w = { WixSite: 1, UGC: 2, Template: 3 };
+      var m = n(48869);
+      let h =
+        ((t = (() => {
+          let {
+              fedops: e,
+              viewerModel: {
+                siteFeaturesConfigs: i,
+                requestUrl: n,
+                site: t,
+                fleetConfig: r,
+                commonConfig: s,
+                interactionSampleRatio: o,
+              },
+              clientSideRender: a,
+              santaRenderingError: l,
+            } = window,
+            c = (({ requestUrl: e, interactionSampleRatio: i }) => {
+              let n = new URL(e).searchParams;
+              return n.has("sampleEvents")
+                ? "true" === n.get("sampleEvents")
+                : Math.random() < (i ? 1 - i : 0.9);
+            })({ requestUrl: n, interactionSampleRatio: o }),
+            d =
+              ((e) => {
+                let { userAgent: i } = e.navigator;
+                return /instagram.+google\/google/i.test(i)
+                  ? ""
+                  : /bot|google(?!play)|phantom|crawl|spider|headless|slurp|facebookexternal|Lighthouse|PTST|^mozilla\/4\.0$|^\s*$/i.test(
+                        i,
+                      )
+                    ? "ua"
+                    : "";
+              })(window) ||
+              (() => {
+                try {
+                  if (window.self === window.top) return "";
+                } catch {}
+                return "iframe";
+              })() ||
+              (() => {
+                if (!Function.prototype.bind) return "bind";
+                let { document: e, navigator: i } = window;
+                if (!e || !i) return "document";
+                let {
+                  webdriver: n,
+                  userAgent: t,
+                  plugins: r,
+                  languages: s,
+                } = i;
+                if (n) return "webdriver";
+                if (!r || Array.isArray(r)) return "plugins";
+                if (Object.getOwnPropertyDescriptor(r, "0")?.writable)
+                  return "plugins-extra";
+                if (!t) return "userAgent";
+                if (t.indexOf("Snapchat") > 0 && e.hidden) return "Snapchat";
+                if (!s || 0 === s.length || !Object.isFrozen(s))
+                  return "languages";
+                try {
+                  throw Error();
+                } catch (e) {
+                  if (e instanceof Error) {
+                    let { stack: i } = e;
+                    if (i && / (\(internal\/)|(\(?file:\/)/.test(i))
+                      return "stack";
+                  }
+                }
+                return "";
+              })() ||
+              (({ seo: e }) => (e?.isInSEO ? "seo" : ""))(i);
+          return {
+            suppressbi: n.includes("suppressbi=true"),
+            initialTimestamp: window.initialTimestamps.initialTimestamp,
+            initialRequestTimestamp:
+              window.initialTimestamps.initialRequestTimestamp,
+            viewerSessionId: e.vsi,
+            viewerName: t.appNameForBiEvents,
+            siteRevision: String(t.siteRevision),
+            msId: t.metaSiteId,
+            is_rollout: 0 === r.code || 1 === r.code ? r.code : null,
+            is_platform_loaded: 0,
+            requestUrl: encodeURIComponent(n),
+            sessionId: String(t.sessionId),
+            btype: d,
+            isjp: !!d,
+            dc: t.dc,
+            siteCacheRevision: "__siteCacheRevision__",
+            checkVisibility: (() => {
+              let e = !0;
+              function i() {
+                e = e && !0 !== document.hidden;
+              }
+              return (
+                document.addEventListener("visibilitychange", i, {
+                  passive: !0,
+                }),
+                i(),
+                () => (i(), e)
+              );
+            })(),
+            ...((e, i) => {
+              let n,
+                t = ((e) => {
+                  let i;
+                  try {
+                    i = e();
+                  } catch {
+                    i = [];
+                  }
+                  let n = i.reduce(
+                    (e, i) => ((e[i.name] = i.description), e),
+                    {},
+                  );
+                  return { cache: n.cache, varnish: n.varnish, microPop: n.dc };
+                })(i);
+              if (t.cache || t.varnish)
+                return p({
+                  cache: t.cache || u,
+                  varnish: t.varnish || u,
+                  microPop: t.microPop,
+                });
+              let r =
+                (n = e.match(
+                  /ssr-caching="?cache[,#]\s*desc=([\w-]+)(?:[,#]\s*varnish=(\w+))?(?:[,#]\s*dc[,#]\s*desc=([\w-]+))?(?:"|;|$)/,
+                )) && n.length
+                  ? { cache: n[1], varnish: n[2] || u, microPop: n[3] }
+                  : null;
+              return r ? p(r) : { caching: u, isCached: !1 };
+            })(document.cookie, () => [
+              ...(performance.getEntriesByType("navigation")[0].serverTiming ||
+                []),
+            ]),
+            isMesh: 1,
+            st: w[t.siteType] || 0,
+            commonConfig: s,
+            muteThunderboltEvents: c,
+            isServerSide: +!a,
+            isSuccessfulSSR: !a,
+            fallbackReason: l?.errorInfo,
+            mpaSessionId: e.mpaSessionId,
+          };
+        })()),
+        (r = {}),
+        (s = 1),
+        {
+          sendBeat: (o = (e, i, n = {}) => {
+            if (i && performance.mark) {
+              let n = \`\${i} (beat \${e})\`;
+              performance.mark(n);
+            }
+            let o = globalThis.window?.viewerModel;
+            if (!o?.experiments["specs.thunderbolt.removeSendBeat"]) {
+              let a = Date.now(),
+                c = o?.experiments[
+                  "specs.thunderbolt.adjustForPrerenderActivation"
+                ]
+                  ? (0, m.b)()
+                  : 0,
+                u = Math.round(performance.now() - c),
+                p = a - t.initialTimestamp;
+              if (t.suppressbi || window.__browser_deprecation__) return;
+              let { pageId: w, pageNumber: h = s, navigationType: f } = n,
+                v = \`&pn=\${h}\`;
+              (w && (v += \`&pid=\${w}\`),
+                f && (v += \`&nt=\${f}\`),
+                l(d(i, { eventType: e, ts: p, tts: u, extra: v }, t, r)));
+            }
+          }),
+          reportBI: function (e, i) {
+            let n, t;
+            ((n = i ? \`\${e} - \${i}\` : e),
+              (t = "end" === i ? \`\${e} - start\` : null),
+              performance.mark(n),
+              performance.measure &&
+                t &&
+                performance.measure(\`\u2B50\${e}\`, t, n));
+          },
+          wixBiSession: t,
+          sendBeacon: l,
+          setDynamicSessionData: ({
+            visitorId: e,
+            siteMemberId: i,
+            bsi: n,
+          }) => {
+            ((r.visitorId = e || r.visitorId),
+              (r.siteMemberId = i || r.siteMemberId),
+              (r.bsi = n || r.bsi));
+          },
+          reportPageNavigation: function (e) {
+            ((s += 1),
+              o(a.lF.PAGE_NAVIGATION, "page navigation start", {
+                pageId: e,
+                pageNumber: s,
+              }));
+          },
+          reportPageNavigationDone: function (e, i) {
+            (o(a.lF.PAGE_NAVIGATION_DONE, "page navigation complete", {
+              pageId: e,
+              pageNumber: s,
+              navigationType: i,
+            }),
+              (i === a.w4.DYNAMIC_REDIRECT ||
+                i === a.w4.NAVIGATION_ERROR ||
+                i === a.w4.CANCELED) &&
+                (s -= 1));
+          },
+        });
+      ((window.bi = h),
+        (window.bi.wixBiSession.isServerSide = +!window.clientSideRender),
+        (window.bi.wixBiSession.isSuccessfulSSR = !window.clientSideRender),
+        window.clientSideRender &&
+          (window.bi.wixBiSession.fallbackReason =
+            window.santaRenderingError?.errorInfo),
+        h.sendBeat(1, "Init"));
+    },
+  },
+  function (e) {
+    (e.O(0, ["6008"], function () {
+      return e((e.s = 40250));
+    }),
+      e.O());
+  },
+]);
+//# sourceMappingURL=sendBeat12.inline.776ddbe5.bundle.min.js.map
+  `,
+  String.raw`
+window.firstPageId = "shn4f";
+
+if (window.requestCloseWelcomeScreen) {
+  window.requestCloseWelcomeScreen();
+}
+if (!window.__browser_deprecation__) {
+  window.fedops.phaseStarted("partially_visible", {
+    paramsOverrides: {
+      pageId: firstPageId,
+      isSuccessfulSSR: !clientSideRender,
+    },
+  });
+}
+  `,
+  String.raw`
+const wixAdsOffsetHeight =
+  document.getElementById("WIX_ADS")?.offsetHeight || 0;
+const header = document.getElementsByTagName("header")[0];
+
+let headerOffsetHeight = 0;
+
+if (header) {
+  const headerPosition = window
+    .getComputedStyle(header)
+    .getPropertyValue("position")
+    .toLowerCase();
+  const isHeaderStickyOrFixed =
+    headerPosition === "sticky" || headerPosition === "fixed";
+  headerOffsetHeight = isHeaderStickyOrFixed ? header.offsetHeight : 0;
+}
+
+document.documentElement.style.scrollPaddingTop = \`\${wixAdsOffsetHeight + headerOffsetHeight}px\`;
+  `,
+  String.raw`
+{"platform":{"ssrPropsUpdates":[],"ssrStyleUpdates":[],"ssrStructureUpdates":[]},"pages":{"compIdToTypeMap":{"CONTROLLER_COMP_CUSTOM_ID":"AppController","comp-lmuiwu1j":"WPhoto","comp-lmuiwu1p":"WRichText","comp-lmuiwu1s":"LinkBar","comp-lmujei0h":"WRichText","comp-lmuiwu2a":"WPhoto","comp-lmuiwu25":"WPhoto","comp-lmuiwu1u":"WRichText","comp-mbyxpcr8":"WRichText","comp-lpslwf316":"WPhoto","comp-lr6ik6re":"LoginSocialBar","masterPage":"MasterPage","PAGES_CONTAINER":"PagesContainer","SOSP_CONTAINER_CUSTOM_ID":"Container","SITE_HEADER":"HeaderContainer","SITE_FOOTER":"FooterContainer","comp-lnekios6":"TPAGluedWidget","SITE_PAGES":"PageGroup","comp-lpdz77sq":"tpaWidgetNative","comp-lmyz9cin":"StripColumnsContainer","comp-mhjp4fzj":"Group","comp-lmyz9cjh2":"Column","comp-lpslwf2y":"StripColumnsContainer","comp-lpslwf302":"Column","comp-lqe1fbv7":"StylableHorizontalMenu","comp-lr6ik6q7":"AppWidget","BACKGROUND_GROUP":"BackgroundGroup","SCROLL_TO_TOP":"Anchor","SCROLL_TO_BOTTOM":"Anchor","comp-lnekios6-pinned-layer":"PinnedLayer","pinnedTopRight":"DivWithChildren","soapAfterPagesContainer":"MeshGroup","SKIP_TO_CONTENT_BTN":"SkipToContentButton","comp-mi7aogb5":"WPhoto","comp-mi7ar38g":"VectorImage","comp-mi4ha2e02":"WRichText","comp-mimx2xnx":"WRichText","comp-mi7bpfa3":"StylableButton","comp-mi7bt9j1":"StylableButton","comp-mi7c7eec":"WRichText","comp-mi4ha2e9":"WPhoto","comp-miipgc85":"WRichText","comp-miiqnc78":"WRichText","comp-miirugoj":"WRichText","comp-miisbdcb":"WRichText","comp-miitc3kn":"WRichText","comp-miismeen":"WRichText","comp-miitdl9u":"WRichText","comp-miisd8l6":"VectorImage","comp-miit7yrw":"VectorImage","comp-miit84b1":"VectorImage","comp-miit999b":"VectorImage","comp-mi4ha2f5":"WRichText","comp-mi7ksn6j":"WPhoto","comp-mi7j3jaf":"WRichText","comp-miiqs3g7":"VectorImage","comp-miiqt56p":"WRichText","comp-mingyf4n":"VectorImage","comp-miiquz2e":"WRichText","comp-mingyzqu":"VectorImage","comp-miiqx63q":"WRichText","comp-miiso7z8":"WRichText","comp-miit2hy5":"WRichText","comp-miit4m6b":"WRichText","comp-miit8f3v1":"WRichText","comp-miisulkg":"WRichText","comp-miit3a6m":"WRichText","comp-miit5kzv":"WRichText","comp-miit9f1k":"WRichText","comp-mi8ordet":"WPhoto","comp-mi8ordfx":"WRichText","comp-mi8ordgw3":"LinkBar","comp-mi8ordhf1":"WRichText","comp-mi8ordhh":"WPhoto","comp-mi8ordhj1":"WPhoto","comp-mi8ordhs1":"WRichText","comp-mi8ordhw8":"WRichText","pageBackground_shn4f":"PageBackground","shn4f":"Page","comp-miiub1ci":"ClassicSection","comp-mi4ha2e14":"ClassicSection","comp-miiru33x":"ClassicSection","comp-mi4ha2f3":"ClassicSection","comp-mi8oosiy":"ClassicSection","comp-miir0ei8":"Group","comp-minoyypu":"Group","comp-minoz9v5":"Group","comp-miispyyl":"Container","comp-miit2hxr":"Container","comp-miit4m61":"Container","comp-miit8f3l":"Container","comp-miisulk2":"Container","comp-miit3a6c":"Container","comp-miit5kzk":"Container","comp-miit9f1b":"Container","comp-mi4ha2f63":"tpaWidgetNative","comp-mi8orddm":"Group","Containershn4f":"Group","DYNAMIC_STRUCTURE_CONTAINER":"DynamicStructureContainer","site-root":"DivWithChildren","main_MF":"DivWithChildren","shn4f_wrapper":"PageMountUnmount","shn4f_wrapper_background":"PageMountUnmount"}},"appsWarmupData":{"675bbcef-18d8-41f5-800e-131ec9e08762":{"importedNamespaces":["wix-data","wix-users","wix-location-frontend","wix-storage","wix-window","wix-location","wix-window-frontend"]},"225dd912-7dea-4738-8688-4b8c6955ffc2":{"form-viewer-comp-mi4ha2f63":{"formsById":{"3e886e49-f194-4f22-b7fd-fedd5f48dd33":{"id":"3e886e49-f194-4f22-b7fd-fedd5f48dd33","fields":[{"id":"7e9d7a34-8f8d-481e-ee07-66a36d1ef4ed","target":"first_name","validation":{"string":{"format":"UNDEFINED","enum":[]},"required":true},"pii":true,"hidden":false,"view":{"label":"Nombre","fieldType":"CONTACTS_FIRST_NAME","hideLabel":false},"readOnly":false},{"id":"4f006c2a-1363-4911-5f72-020aa087e055","target":"last_name","validation":{"string":{"format":"UNDEFINED","enum":[]},"required":false},"pii":true,"hidden":false,"view":{"label":"Apellidos","fieldType":"CONTACTS_LAST_NAME","hideLabel":false},"readOnly":false},{"id":"8ffeec5e-d1fd-49d4-b311-bf77a33d3eea","target":"email_d952","validation":{"string":{"format":"EMAIL","enum":[]},"required":true},"pii":true,"hidden":false,"view":{"label":"Email","fieldType":"CONTACTS_EMAIL","hideLabel":false},"readOnly":false},{"id":"ed6b2f21-d030-450e-e5ae-f5ef82b41ba6","pii":false,"hidden":false,"view":{"submitText":"Enviar","nextText":"Next","submitAction":"THANK_YOU_MESSAGE","fieldType":"SUBMIT_BUTTON","previousText":"Back"},"readOnly":false},{"id":"152c702b-157e-40e6-1aee-c1a9306c8bd8","target":"form_field_a5ff","validation":{"boolean":{"enum":[true]},"required":true},"pii":false,"hidden":false,"view":{"label":{"nodes":[{"id":"jpsrj211","type":"PARAGRAPH","nodes":[{"id":"","type":"TEXT","nodes":[],"textData":{"text":"He leído y acepto la ","decorations":[]}},{"id":"","type":"TEXT","nodes":[],"textData":{"text":"Política de Privacidad","decorations":[{"type":"LINK","linkData":{"link":{"rel":{"noreferrer":true},"url":"https:\/\/www.dehonline.es\/politica-de-privacidad","target":"BLANK"}}},{"type":"UNDERLINE"}]}}],"paragraphData":{}}],"documentStyle":{}},"fieldType":"CHECKBOX"},"readOnly":false},{"id":"c344b588-121b-4e80-6462-5404b3f188f0","target":"telefono_df30","validation":{"string":{"format":"PHONE","enum":[]},"required":true},"pii":true,"hidden":false,"view":{"label":"Teléfono","showFlag":false,"fieldType":"CONTACTS_PHONE","hideLabel":false},"readOnly":false},{"id":"481aa6b2-33c3-4ee3-ba01-af6b7de40948","target":"form_field_d1d5","validation":{"boolean":{"enum":[]},"required":false},"pii":false,"hidden":false,"view":{"label":{"nodes":[{"id":"2dm4d3","type":"PARAGRAPH","nodes":[{"id":"","type":"TEXT","nodes":[],"textData":{"text":"Autorizo el envío de comunicaciones electrónicas informativas relativas a las actividades, productos o servicios de DEH Online.","decorations":[]}}],"paragraphData":{"textStyle":{"textAlignment":"AUTO"}}}],"documentStyle":{}},"fieldType":"CHECKBOX"},"readOnly":false}],"formFields":[{"id":"7e9d7a34-8f8d-481e-ee07-66a36d1ef4ed","hidden":false,"identifier":"CONTACTS_FIRST_NAME","fieldType":"INPUT","inputOptions":{"target":"first_name","pii":true,"required":true,"inputType":"STRING","contactMapping":{"contactField":"FIRST_NAME"},"readOnly":false,"stringOptions":{"validation":{"format":"UNKNOWN_FORMAT","enum":[]},"componentType":"TEXT_INPUT","textInputOptions":{"label":"Nombre","showLabel":true,"mediaSettings":{"imagePosition":"ABOVE","imageAlignment":"CENTER","imageFit":"COVER"}}}}},{"id":"4f006c2a-1363-4911-5f72-020aa087e055","hidden":false,"identifier":"CONTACTS_LAST_NAME","fieldType":"INPUT","inputOptions":{"target":"last_name","pii":true,"required":false,"inputType":"STRING","contactMapping":{"contactField":"LAST_NAME"},"readOnly":false,"stringOptions":{"validation":{"format":"UNKNOWN_FORMAT","enum":[]},"componentType":"TEXT_INPUT","textInputOptions":{"label":"Apellidos","showLabel":true,"mediaSettings":{"imagePosition":"ABOVE","imageAlignment":"CENTER","imageFit":"COVER"}}}}},{"id":"8ffeec5e-d1fd-49d4-b311-bf77a33d3eea","hidden":false,"identifier":"CONTACTS_EMAIL","fieldType":"INPUT","inputOptions":{"target":"email_d952","pii":true,"required":true,"inputType":"STRING","contactMapping":{"contactField":"EMAIL","emailInfo":{"tag":"UNTAGGED"}},"readOnly":false,"stringOptions":{"validation":{"format":"EMAIL","enum":[]},"componentType":"TEXT_INPUT","textInputOptions":{"label":"Email","showLabel":true,"mediaSettings":{"imagePosition":"ABOVE","imageAlignment":"CENTER","imageFit":"COVER"}}}}},{"id":"ed6b2f21-d030-450e-e5ae-f5ef82b41ba6","hidden":false,"identifier":"SUBMIT_BUTTON","fieldType":"DISPLAY","displayOptions":{"displayFieldType":"PAGE_NAVIGATION","pageNavigationOptions":{"nextPageText":"Next","previousPageText":"Back","submitText":"Enviar"}}},{"id":"152c702b-157e-40e6-1aee-c1a9306c8bd8","hidden":false,"identifier":"CHECKBOX","fieldType":"INPUT","inputOptions":{"target":"form_field_a5ff","pii":false,"required":true,"inputType":"BOOLEAN","readOnly":false,"booleanOptions":{"validation":{"enum":[true]},"componentType":"CHECKBOX","checkboxOptions":{"label":{"nodes":[{"type":"PARAGRAPH","id":"jpsrj211","nodes":[{"type":"TEXT","id":"","nodes":[],"textData":{"text":"He leído y acepto la ","decorations":[]}},{"type":"TEXT","id":"","nodes":[],"textData":{"text":"Política de Privacidad","decorations":[{"type":"LINK","linkData":{"link":{"url":"https:\/\/www.dehonline.es\/politica-de-privacidad","target":"BLANK","rel":{"noreferrer":true}}}},{"type":"UNDERLINE"}]}}],"paragraphData":{}}],"documentStyle":{}},"checked":false}}}},{"id":"c344b588-121b-4e80-6462-5404b3f188f0","hidden":false,"identifier":"CONTACTS_PHONE","fieldType":"INPUT","inputOptions":{"target":"telefono_df30","pii":true,"required":true,"inputType":"STRING","contactMapping":{"contactField":"PHONE","phoneInfo":{"tag":"UNTAGGED"}},"readOnly":false,"stringOptions":{"validation":{"format":"PHONE","enum":[]},"componentType":"PHONE_INPUT","phoneInputOptions":{"label":"Teléfono","showLabel":true,"showCountryFlag":false}}}},{"id":"481aa6b2-33c3-4ee3-ba01-af6b7de40948","hidden":false,"identifier":"CHECKBOX","fieldType":"INPUT","inputOptions":{"target":"form_field_d1d5","pii":false,"required":false,"inputType":"BOOLEAN","readOnly":false,"booleanOptions":{"validation":{"enum":[]},"componentType":"CHECKBOX","checkboxOptions":{"label":{"nodes":[{"type":"PARAGRAPH","id":"2dm4d3","nodes":[{"type":"TEXT","id":"","nodes":[],"textData":{"text":"Autorizo el envío de comunicaciones electrónicas informativas relativas a las actividades, productos o servicios de DEH Online.","decorations":[]}}],"paragraphData":{"textStyle":{"textAlignment":"AUTO"}}}],"documentStyle":{}},"checked":false}}}}],"steps":[{"id":"1a6750fb-4172-489f-4a3a-f6ebc7c3dc44","name":"Page 1","hidden":false,"layout":{"large":{"items":[{"fieldId":"7e9d7a34-8f8d-481e-ee07-66a36d1ef4ed","row":0,"column":0,"width":6,"height":1},{"fieldId":"4f006c2a-1363-4911-5f72-020aa087e055","row":0,"column":6,"width":6,"height":1},{"fieldId":"8ffeec5e-d1fd-49d4-b311-bf77a33d3eea","row":1,"column":0,"width":6,"height":1},{"fieldId":"ed6b2f21-d030-450e-e5ae-f5ef82b41ba6","row":4,"column":3,"width":6,"height":2},{"fieldId":"152c702b-157e-40e6-1aee-c1a9306c8bd8","row":2,"column":0,"width":12,"height":1},{"fieldId":"c344b588-121b-4e80-6462-5404b3f188f0","row":1,"column":6,"width":6,"height":1},{"fieldId":"481aa6b2-33c3-4ee3-ba01-af6b7de40948","row":3,"column":0,"width":12,"height":1}],"sections":[]}}}],"rules":[],"revision":"24","createdDate":"2025-01-02T11:40:29.358Z","updatedDate":"2025-12-03T16:21:27.273Z","properties":{"name":"Formulario DocumBox","disabled":false},"deletedFields":[{"id":"00510442-b7f5-4eb5-1332-7fe63e971290","target":"por_favor_indicanos_un_numero_aproximado_de_comunidades_de_propi","validation":{"string":{"format":"UNDEFINED","enum":[]},"required":true},"pii":false,"hidden":false,"view":{"label":"Por favor, indícanos un número aproximado de comunidades de propietarios que te gustaría dar de alta con nuestro servicio","fieldType":"TEXT_INPUT"},"readOnly":false}],"deletedFormFields":[{"id":"00510442-b7f5-4eb5-1332-7fe63e971290","hidden":false,"identifier":"TEXT_INPUT","fieldType":"INPUT","inputOptions":{"target":"por_favor_indicanos_un_numero_aproximado_de_comunidades_de_propi","pii":false,"required":true,"inputType":"STRING","readOnly":false,"stringOptions":{"validation":{"format":"UNKNOWN_FORMAT","enum":[]},"componentType":"TEXT_INPUT","textInputOptions":{"label":"Por favor, indícanos un número aproximado de comunidades de propietarios que te gustaría dar de alta con nuestro servicio","showLabel":true,"mediaSettings":{"imagePosition":"ABOVE","imageAlignment":"CENTER","imageFit":"COVER"}}}}}],"kind":"REGULAR","postSubmissionTriggers":{"upsertContact":{"fieldsMapping":{"last_name":{"contactField":"LAST_NAME"},"email_d952":{"contactField":"EMAIL","emailInfo":{"tag":"UNTAGGED"}},"first_name":{"contactField":"FIRST_NAME"},"telefono_df30":{"contactField":"PHONE","phoneInfo":{"tag":"UNTAGGED"}}},"labels":[]}},"extendedFields":{"namespaces":{"@forms\/form-app":{"automationId":"b3411e1b-7506-4585-bb0d-c7359679b05d"}}},"namespace":"wix.form_app.form","nestedForms":[],"spamFilterProtectionLevel":"ADVANCED","submitSettings":{"submitSuccessAction":"THANK_YOU_MESSAGE","thankYouMessageOptions":{"durationInSeconds":8,"richContent":{"nodes":[{"type":"PARAGRAPH","id":"foo","nodes":[{"type":"TEXT","id":"","nodes":[],"textData":{"text":"Solicitud enviada con éxito","decorations":[]}}],"paragraphData":{"textStyle":{"textAlignment":"CENTER"},"indentation":0}}],"documentStyle":{}}}},"fieldGroups":[],"enabled":true,"name":"Formulario DocumBox","formRules":[],"autoFillContact":"FORM_INPUT"}},"translations":{"field-description.a11y.aria-label":"{linkText} enlace de descripción","form.submit-button.next-step":"Siguiente","multiline-address.a11y.group-name":"Campo de dirección","error.could-not-load-form.button.label":"Actualizar","form.a11y.step.index.title":"Paso {index} de {total}","form.disabled.fallback-message":"Sorry, but the form is closed.","submit.failed.message.DISABLED_FORM_ERROR":"El formulario venció y ya no se puede enviar.","bookings-address.a11y.group-name":"Address field","error.could-not-load-form.title":"No pudimos cargar este formulario","form.submit-button.state.in-progress":"Enviando el formulario...","checkbox.input.error.message.required":"Marca la casilla para continuar.","submit.failed.message.SITE_MUST_ACCEPT_PAYMENTS_TO_CREATE_CHECKOUT":"No podemos aceptar pagos online en este momento. Contáctanos para completar la transacción.","error.could-not-load-form.description":"Parece que hay un problema temporal de nuestra parte. Espera unos minutos, actualiza la pantalla e inténtalo de nuevo.","form.submit-button.previous-step":"Volver","contacts-url-input.input.error.message.format-error":"Ingresa una URL web como https:\/\/www.ejemplo.com.","field-context-menu.cut":"Cortar","input.error.message.incomplete-date-error.day-time":"Ingresa un día y una hora.","field.signature.a11y.action-description.type":"Utiliza el teclado para escribir.","input.error.message.required-error-forced":"Este campo es obligatorio.","field-context-menu.show-field":"Mostrar campo","date-picker.input.error.message.format-error":"Elige una fecha.","form.login-bar.actions.login":"Inicia sesión","date-picker.a11y.clear-button":"Borrar","form.file-upload.uploading":"Subiendo {count, plural, =0 {...} other {#%...}}","rating-input.a11y.reaction-label":"{count, plural, one {{count} estrella} other {{count} estrellas}}","contacts-company.input.error.message.required-error":"Ingresa el nombre de tu compañía.","dext-phone.input.error.message.required-error":"Ingresa un número de teléfono.","field.signature.clear-button.label":"Borrar","input.error.message.type-error":"Elige un {type}.","payment-input.input.error.message.required-error":"Ingresa el monto del pago.","form.login-bar.action.logout":"Cerrar sesión","date-picker.a11y.arrow-left":"Ir al mes anterior","mla-subdivision.input.error.message.required-error.tr":"Elige una ciudad.","settings.scheduling.sync-external-calendars.modal.tooltip.kb-link":"https:\/\/support.wix.com\/en\/article\/wix-meetings-syncing-personal-calendars-with-wix-meetings","input.error.message.value-range-error":"Ingresa un número entre {minLimit} y {maxLimit}.","input.error.message.incomplete-date-error.year-month":"Ingresa un mes y un año.","mla-address-line.input.error.message.required-error":"Ingresa una dirección.","contacts-position.input.error.message.required-error":"Ingresa el nombre de tu cargo o posición laboral.","bookings-phone.input.error.message.format-error":"Ingresa un número de teléfono válido.","input.error.message.incomplete-date-error.year-month-time":"Ingresa un mes, una hora y un año.","field.number.aria-role-description":"Número","signature.input.error.message.required-error":"Firma en el cuadro de arriba.","field.date.label.month":"Mes","field.rich-text.read-more-button.label":"Leer más","field.time.label.period":"Formato de hora","submit.failed.message":"No pudimos enviar el formulario. Inténtalo de nuevo más tarde.","image-choice.input.error.message.required-error":"Elige una opción.","dext-email.input.error.message.required-error":"Ingresa una dirección de email como ejemplo@misitio.com.","mla-city.input.error.message.required-error.tr":"Ingresa un distrito.","date-picker.a11y.calendar-button.role-description":"Ventana emergente de calendario contraída","field.signature.a11y.action-description.draw-or-type":"Firma en la casilla o usa el teclado para escribir.","field.time.perdiod.AM":"a.m.","form.login-bar.title.logged-out-state":"¿Ya tienes una cuenta? ","form.appointment.slots-not-found.text":"No hay disponibilidad para esta fecha. Intenta seleccionar otra.","input.error.message.format-error":"Utiliza el formato \"{format}\".","contacts-address.input.error.message.required-error":"Ingresa una dirección.","field-context-menu.copy":"Copiar al portapapeles","field.signature.a11y.state.empty":"El campo de firma está vacío.","dext-date-picker.input.error.message.min-value-error":"Ingresa una fecha válida posterior a la fecha de hoy.","payment-input.input.error.message.min-value-error":"Ingresa un monto de pago superior a {limit} {currency}.","input.error.message.incomplete-date-error.year-time":"Ingresa un año de 4 dígitos y la hora.","field.signature.a11y.state.signed":"Firmado.","field.quiz-answer-feedback.wrong":"Incorrecto","mla-city.input.error.message.required-error":"Ingresa una ciudad.","field.rich-text.read-less-button.label":"Leer menos","form.appointment.accessibility.calendar.previous-week.aria-label":"Mostrar semana anterior","field.signature.mode.upload.description":"Modo de carga seleccionado. Sube una imagen de tu firma.","field.quiz-file-upload.skipped":"Se omitió esta pregunta. ","ecom.email.label":"Email","input.error.message.incomplete-date-error.year-month-day":"Ingresa un mes, un día y un año.","field-context-menu.make-optional":"Hacer opcional","contacts-subscribe.input.error.message.not-allowed-value":"Marca la casilla para continuar.","field.signature.mode.draw.description":"Modo de dibujo seleccionado. Para dibujar, necesitas un mouse o un panel táctil. Usa la función de accesibilidad del teclado al seleccionar Escribir o Subir.","checkbox.input.error.message.required-error":"Marca la casilla para continuar.","date-picker.input.error.message.required-error":"Elige una fecha.","dext-tags.input.error.message.required-error":"Elige una opción.","field-context-menu.delete":"Eliminar","field.date.label.year":"Año","mla-address-line-2.input.error.message.required-error":"Ingresa una segunda línea de dirección (p. ej., piso, departamento).","form.login-bar.title.logged-in-state":"Iniciaste sesión como {user}","payment-input.input.error.message.max-value-error":"Ingresa un monto de pago inferior a {limit} {currency}.","ecom-phone.input.error.message.required-error":"Ingresa un número de teléfono.","payment-input.input.error.message.value-range-error":"Ingresa un monto de pago entre {minLimit} {currency} y {maxLimit} {currency}.","input.error.message.incomplete-date-error.year-day":"Ingresa un día y un año.","submission-table.signature.not-signed":"No firmado","dext-url-input.input.error.message.format-error":"Ingresa una URL web como https:\/\/www.ejemplo.com.","ecom-phone.input.error.message.pattern-error":"Ingresa un número de teléfono válido.","contacts-phone.input.error.message.not-allowed-value":"No se aceptan números de teléfono con este código de país.","vat-id.input.error.message.required-error.il":"Ingresa un ID válido de 9 dígitos (\"teudat zehut\") o un número de empresa (\"het pey\").","input.error.message.incomplete-date-error.day":"Ingresa un día.","date-input.input.error.message.min-value-error":"Ingresa una fecha válida posterior a la fecha de hoy.","input.error.message.invalid-location-id-error":"Location is invalid","input.error.message.max-length-error":"{limit, plural, one {Introduce menos de {limit,number} carácter.} other {Introduce menos de {limit,number} caracteres.}}","field.date.placeholder.day":"Día","services-dropdown.input.error.message.required-error":"Select a Service","ecom-email.input.error.message.required-error":"Ingresa una dirección de email como ejemplo@misitio.com.","dext-phone.input.error.message.not-allowed-value":"No se aceptan números de teléfono con este código de país.","dext-url-input.input.error.message.required-error":"Ingresa una URL web como https:\/\/www.ejemplo.com.","contacts-date-input.input.error.message.format-error":"Ingresa un mes, un día y un año.","signature.input.error.message.required-error.with-upload":"Firma en el cuadro de arriba o sube tu firma.","contacts-phone.input.error.message.required-error":"Ingresa un número de teléfono.","field.phone.country-selector-button.aria-label":"Selecciona un código de país","field-context-menu.move-up":"Mover hacia arriba","dext-text-input.input.error.message.required-error":"Escribe una respuesta.","settings.required-indicator-text":"(Obligatorio)","file-upload.dropzone.overlay.button":" Soltar los archivos aquí","field.time.perdiod.PM":"p.m.","contacts-birthdate.input.error.message.format-error":"Ingresa un mes, un día y un año.","field.quiz-answer-feedback.correct":"Correcto","vat-id.input.error.message.required-error":"Ingresa un número CPF\/CNPJ.","bookings-email.input.error.message.format-error":"Ingresa una dirección de email como ejemplo@misitio.com.","input.error.message.character-length-range-error":"Ingresa entre {minLimit} y {maxLimit} caracteres.","bookings-phone.input.error.message.not-allowed-value":"No se aceptan números de teléfono con este código de país.","contacts-email.input.error.message.format-error":"Ingresa una dirección de email como ejemplo@misitio.com.","dropdown.input.error.message.required-error":"Elige una opción.","dext-text-area.input.error.message.required-error":"Escribe una respuesta.","field.signature.settings.upload-button.label":"Subir imagen","field.date.placeholder.month":"Mes","form.error.prefix.a11y":"Error:","contacts-tax-id.input.error.message.required-error":"Ingresa un número de IVA.","signature.text.placeholder":"Type your signature","contacts-number-input.input.error.message.required-error":"Enter a number.","date-picker.a11y.aria-label":"Mostrar selector de fecha","field.phone.country-search-input.aria-label":"Buscar","field.signature.a11y.state.drawing":"Escribiendo la firma...","input.error.message.unknown-value-error":"Debe tener propiedades adicionales.","phone.input.error.message.pattern-error":"Enter a valid phone number.","dext-date-picker.input.error.message.max-value-error":"Ingresa una fecha válida desde el 1 de enero de 1000 hasta hoy.","form.appointment.empty-state.notification.text":"Actualmente, no hay horarios disponibles para programar. Contáctanos para completar tu solicitud.","mla-country.input.error.message.required-error":"Elija un país\/región.","field.time.label.hours":"Horas","file-upload.delete-file.aria-label":"Eliminar archivo","field.vat-id.label-br":"CPF\/CNPJ","ecom-header.contact-details":"Detalles del cliente","input.error.message.invalid-staff-id-error":"This field is invalid.","date-input.input.error.message.format-error":"Ingresa un mes, un día y un año.","contacts-first-name.input.error.message.required-error":"Ingresa un nombre.","file-upload.dropzone.title":"Sube tu archivo","field-context-menu.move-down":"Mover hacia abajo","contacts-url-input.input.error.message.required-error":"Ingresa una URL web como https:\/\/www.ejemplo.com.","field.time.label.minutes":"Minutos","dext-phone.input.error.message.format-error":"Ingresa un número de teléfono válido.","bookings-phone.input.error.message.required-error":"Ingresa un número de teléfono.","form.file-upload.explanation-text":"{count, plural, one {{count,number} archivo subido} other {{count,number} archivos subidos}}","contacts-last-name.input.error.message.required-error":"Ingresa un apellido.","field.signature.mode.selector.aria-label":"Modo de entrada de firma","phone.input.error.message.not-allowed-value":"Phone numbers with this country code aren't accepted.","field.signature.mode.draw.label":"Dibujar","mla-postal-code.input.error.message.pattern-error":"Ingresa un código postal válido.","date-picker.a11y.dropdown-year":"Seleccionar año","time-input.input.error.message.format-error":"Ingresa horas y minutos.","field-context-menu.hide-field":"Ocultar campo","input.error.message.not-allowed-value":"El valor elegido no está permitido.","input.error.message.min-value-error":"Ingresa un número igual o superior a {limit}.","input.error.message.incomplete-date-error.month-day":"Ingresa un mes y un día.","field.date.placeholder.time":"HH:MM","submit.checkout.message":"Redireccionando a la página de pago...","form.file-upload.error.unsupported-file-format":"This file type is unsupported.","input.error.message.invalid-phone-country-code-error":"Ingresa un código de país válido.","mla-street-name.input.error.message.required-error":"Ingresa el nombre de la calle.","settings.scheduling.sync-external-calendars.not-current-user.kb-link":"https:\/\/support.wix.com\/en\/article\/wix-meetings-syncing-personal-calendars-with-wix-meetings","bookings-first-name.input.error.message.required-error":"Ingresa un nombre.","vat-id.input.error.message.format-error":"Ingresa un número CPF\/CNPJ válido.","form.appointment.accessibility.calendar.next-week.aria-label":"Mostrar la próxima semana","donation.input.error.message.required-error":"Elige un monto para donar.","input.error.message.incomplete-date-error.month":"Ingresa un mes.","input.error.message.incomplete-date-error.year":"Ingresa un año de 4 dígitos.","vat-id.input.error.message.format-error.il":"Ingresa un ID válido de 9 dígitos (\"teudat zehut\") o un número de empresa (\"het pey\").","field.phone.aria-label":"Teléfono","field.signature.canvas.aria-label.empty":"Área de dibujo de la firma (vacía)","file-upload.dropzone.limit-reached.title":"Has alcanzado el límite de carga de archivos.","form.appointment.accessibility.calendar.has-availability.aria-label":"Este día tiene franjas horarias disponibles.","bookings-phone.input.error.message.pattern-error":"Ingresa un número de teléfono válido.","input.error.message.incomplete-date-error.month-time":"Ingresa un mes y una hora.","product-list.input.error.message.required-error":"Elige una opción.","field-context-menu.move-to-next-page":"Mover a la página siguiente","mla-postal-code.input.error.message.required-error":"Ingresa un código postal.","file-upload.input.error.message.required-error":"Sube un archivo.","vat-id.input.error.message.format-error.br":"Enter a valid CPF\/CNPJ number.","input.error.message.exact-character-length-error":"{limit, plural, one {Ingresa exactamente {limit,number} carácter.} other {Ingresa exactamente {limit,number} caracteres.}}","submission-table.signature.signed":"Firmado","input.error.message.incomplete-date-error":"Ingresa un mes, un día y un año.","ecom-email.input.error.message.format-error":"Ingresa una dirección de email como ejemplo@misitio.com.","field.vat-id.label-il":"ID\/número de empresa","text-input.input.error.message.required-error":"Escribe una respuesta.","url-input.input.error.message.required-error":"Ingresa una URL web como https:\/\/www.ejemplo.com.","ecom-header.shipping-details":"Detalles de envío","service-dropdown.input.error.message.required-error":"Selecciona un servicio","field.signature.mode.type.description":"Modo de escritura seleccionado. Escribe tu firma con el teclado.","input.error.message.incomplete-date-error.year-day-time":"Ingresa un día, una hora y un año.","number-input.input.error.message.required-error":"Ingresa un número.","field.signature.mode.upload.label":"Subir","input.error.message.unknown-error":"Error desconocido, contacta a Atención al Cliente.","input.error.message.max-items-error":"{limit, plural, one {Elige hasta {limit,number} opción.} other {Elige hasta {limit,number} opciones.}}","file-upload.popover.aria-label":"Lista de archivos subidos","input.error.message.multiple-of-value-error":"Elige un múltiplo de {multipleOf}.","full-name-last-name.input.error.message.required-error":"Ingresa un apellido.","field-context-menu.paste":"Pegar","input.error.message.pattern-error":"Haz que coincida con el patrón \"{pattern}\".","dext-number-input.input.error.message.required-error":"Ingresa un número.","field-context-menu.ai-assistant":"AI Assistant","field-context-menu.move-to-previous-page":"Mover a la página anterior","dext-date-picker.input.error.message.required-error":"Elige una fecha.","date-input.input.error.message.max-value-error":"Ingresa una fecha válida desde el 1 de enero de 1000 hasta hoy.","dext-checkbox-group.input.error.message.required-error":"Elige una opción.","file-upload.dropzone.subtitle":"Elige un archivo o arrastra y suelta uno aquí.","dext-radio-group.input.error.message.required-error":"Elige una opción.","checkbox.input.error.message.not-allowed-value":"Marca la casilla para continuar.","contacts-birthdate.input.error.message.max-value-error":"Ingresa una fecha válida desde el 1 de enero de 1900 hasta hoy.","input.error.message.incomplete-date-error.month-day-time":"Ingresa un mes, un día y una hora.","file-upload.aria-roledescription":"Carga de archivo","contacts-phone.input.error.message.pattern-error":"Ingresa un número de teléfono válido.","mla-street-number.input.error.message.required-error":"Ingresa un número de casa.","date-picker.a11y.dropdown-month":"Seleccionar mes","field.signature.mode.type.label":"Escribir","settings.default-value-conflict.min-value-error":"Min characters must be at least the default text length. Update the character limit or shorten the text.","date-picker.input.error.message.min-value-error":"Ingresa una fecha válida posterior a la fecha de hoy.","date-time-input.input.error.message.min-value-error":"Ingresa una fecha válida posterior a la fecha de hoy.","dext-checkbox.input.error.message.required-error":"Marca la casilla para continuar.","url-input.input.error.message.format-error":"Ingresa una URL web como https:\/\/www.ejemplo.com.","file-upload.file.uploading-spinner.aria-label":"Cargando archivo...","field.phone.country-code.aria-label":"Código de país","add-other.default-other-option-label":"Otro","dext-checkbox.input.error.message.not-allowed-value":"Marca la casilla para continuar.","field.date.placeholder.year":"Año","date-picker.input.error.message.max-value-error":"Ingresa una fecha válida desde el 1 de enero de 1000 hasta hoy.","field.signature.text.placeholder":"Escribe tu firma","dext-date-picker.input.error.message.format-error":"Elige una fecha.","form.file-upload.error.upload-limit":"{limit, plural, one {El límite de carga es de {limit,number} archivo.} other {El límite de carga es de {limit,number} archivos.}}","checkbox-group.input.error.message.required-error":"Elige una opción.","rating-input.input.error.message.required-error":"Elige una calificación de estrellas.","field.mla-apartment.label":"Apartamento","text-area.input.error.message.required-error":"Escribe una respuesta.","field.phone.country-search-input.placeholder":"Buscar","submission-table.appointment.meeting-tool-tip":"Go to Scheduled Meetings","donation.other-option.placeholder":"Ingresa un monto","dext-rating-input.input.error.message.required-error":"Elige una calificación de estrellas.","field.signature.a11y.action-description.draw":"Firma en la casilla.","contacts-birthdate.input.error.message.min-value-error":"Ingresa una fecha válida desde el 1 de enero de 1900 hasta hoy.","mla-subdivision.input.error.message.required-error":"Elige una opción.","dext-dropdown.input.error.message.required-error":"Elige una opción.","contacts-text-input.input.error.message.required-error":"Enter an answer.","field.date.label.day":"Día","vat-id.input.error.message.required-error.br":"Enter a CPF\/CNPJ number.","date-picker.calendar.close-button":"Cerrar","phone.input.error.message.required-error":"Enter a phone number.","phone.input.error.message.format-error":"Enter a valid phone number.","input.error.message.invalid-value-for-pattern":"Ingresa una respuesta válida.","radio-group.input.error.message.required-error":"Elige una opción.","input.error.message.min-items-error":"{limit, plural, one {Elige al menos {limit,number} opción.} other {Elige al menos {limit,number} opciones.}}","ecom.form.field-type.ecom-subscriptions.label":"Acepto recibir novedades a la dirección de email y los números de teléfono agregados","input.error.message.decimal_point_error":"Agrega {number} número(s) después del separador decimal.","bookings-email.input.error.message.required-error":"Ingresa una dirección de email como ejemplo@misitio.com.","contacts-subscribe.input.error.message.required-error":"Marca la casilla para continuar.","form.appointment.show-more-slots.text":"Mostrar más horarios","form.file-upload.error.upload-failed":"La carga de archivos falló.","dext-email.input.error.message.format-error":"Ingresa una dirección de email como ejemplo@misitio.com.","full-name-first-name.input.error.message.required-error":"Ingresa un nombre.","field-context-menu.settings":"Ajustes","settings.default-value-conflict.max-value-error":"Max characters must be at least the default text length. Update the character limit or shorten the text.","bookings-last-name.input.error.message.required-error":"Ingresa un apellido.","appointment.input.error.message.required-error":"Este campo es obligatorio.","field-context-menu.make-required":"Hacer obligatorio","date-time-input.input.error.message.format-error":"Ingresa el mes, el día y el año.","field.date.label.time":"Horario","input.error.message.required-error":"Este campo es obligatorio.","field.phone.country-selector-dropdown.no-result":"No se encontraron resultados","input.error.message.exact-items-number-error":"{limit, plural, one {Elige {limit,number} opción.} other {Elige {limit,number} opciones.}}","form.appointment.timezone.label":"Zona horaria","dext-date-time-input.input.error.message.required-error":"Ingresa el día, el mes y el año.","actions.rules.button.label":"Rules","date-time-input.input.error.message.max-value-error":"Ingresa una fecha válida desde el 1 de enero de 1000 hasta hoy.","date-picker.a11y.arrow-right":"Ir al mes siguiente","input.error.message.incomplete-date-error.time":"Ingresa una hora.","field.signature.canvas.aria-label.signed":"Área de dibujo de la firma (firmado)","settings.default-value-conflict.regex-error":"The regex must be viable for the entered default value. Update the regex or change the text.","contacts-phone.input.error.message.format-error":"Ingresa un número de teléfono válido.","tags.input.error.message.required-error":"Elige una opción.","file-upload.dropzone.limit-reached.subtitle":"Elimina un archivo para poder agregar otro.","input.error.message.max-value-error":"Ingresa un número igual o inferior a {limit}.","input.error.message.min-length-error":"{limit, plural, one {Introduce al menos {limit,number} carácter.} other {Introduce al menos {limit,number} caracteres.}}","form.appointment.meeting-format.in-person-location-method-os-location":"Ubicación del negocio","form.file-upload.error.limit":"Has alcanzado tu límite de carga de {limit,number} archivos.","contacts-email.input.error.message.required-error":"Ingresa una dirección de email como ejemplo@misitio.com.","field-context-menu.duplicate":"Duplicar"},"localeDataset":{"locale-dataset.countries.BWA":"Botswana","locale-dataset.countries.STP":"Santo Tomé y Príncipe","locale-dataset.countries.BES":"Bonaire","locale-dataset.countries.WSM":"Samoa","locale-dataset.countries.CZE":"República Checa","locale-dataset.countries.GIN":"Guinea","locale-dataset.countries.ZAF":"Sudáfrica","locale-dataset.countries.COK":"Islas Cook","locale-dataset.countries.SRB":"Serbia","locale-dataset.countries.BLZ":"Belice ","locale-dataset.countries.IRL":"Irlanda","locale-dataset.countries.LBR":"Liberia","locale-dataset.countries.AUT":"Austria","locale-dataset.countries.SJM":"Svalbard y Jan Mayen","locale-dataset.countries.ERI":"Eritrea","locale-dataset.countries.CYM":"Islas Caimán","locale-dataset.countries.ROU":"Rumania","locale-dataset.countries.DOM":"República Dominicana","locale-dataset.countries.TON":"Tonga","locale-dataset.countries.CUB":"Cuba","locale-dataset.countries.MNE":"Montenegro","locale-dataset.countries.PRT":"Portugal","locale-dataset.countries.BMU":"Bermuda","locale-dataset.countries.TTO":"Trinidad y Tobago","locale-dataset.countries.DNK":"Dinamarca","locale-dataset.countries.GNB":"Guinea-Bissau","locale-dataset.countries.POL":"Polonia","locale-dataset.countries.ASM":"Samoa Americana","locale-dataset.countries.GUY":"Guyana","locale-dataset.countries.BIH":"Bosnia y Herzegovina","locale-dataset.countries.ARE":"Emiratos Árabes Unidos","locale-dataset.countries.MDV":"Maldivas","locale-dataset.countries.SDN":"Sudán","locale-dataset.countries.USA":"Estados Unidos","locale-dataset.countries.SSD":"Sudán del Sur","locale-dataset.countries.#N\/":"Macao S.A.R., China","locale-dataset.countries.COD":"Congo (Kinshasa) ","locale-dataset.countries.EGY":"Egipto","locale-dataset.countries.CYP":"Chipre","locale-dataset.countries.OMN":"Omán","locale-dataset.countries.DZA":"Algeria","locale-dataset.countries.BRB":"Barbados","locale-dataset.countries.KWT":"Kuwait","locale-dataset.countries.TGO":"Togo","locale-dataset.countries.SXM":"Sint Maarten","locale-dataset.countries.NPL":"Nepal","locale-dataset.countries.MRT":"Mauritania","locale-dataset.countries.NZL":"Nueva Zelanda","locale-dataset.countries.IRQ":"Irak","locale-dataset.countries.THA":"Tailandia","locale-dataset.countries.DMA":"Dominica","locale-dataset.countries.ZMB":"Zambia","locale-dataset.countries.NRU":"Nauru","locale-dataset.countries.LSO":"Lesoto","locale-dataset.countries.FIN":"Finlandia","locale-dataset.countries.SVK":"Eslovaquia","locale-dataset.countries.RUS":"Rusia","locale-dataset.countries.ESH":"Sahara Occidental","locale-dataset.countries.SPM":"San Pedro y Miquelón","locale-dataset.countries.LCA":"Santa Lucía","locale-dataset.countries.BDI":"Burundi","locale-dataset.countries.ETH":"Etiopía","locale-dataset.countries.AFG":"Afganistán","locale-dataset.countries.RWA":"Ruanda","locale-dataset.countries.GTM":"Guatemala","locale-dataset.countries.EST":"Estonia","locale-dataset.countries.NLD":"Holanda","locale-dataset.countries.KHM":"Camboya","locale-dataset.countries.ISR":"Israel","locale-dataset.countries.AZE":"Azerbaiyán","locale-dataset.countries.TKM":"Turkmenistán","locale-dataset.countries.PNG":"Papua Nueva Guinea","locale-dataset.countries.COL":"Colombia","locale-dataset.countries.GBR":"Reino Unido","locale-dataset.countries.KAZ":"Kazajistán","locale-dataset.countries.GMB":"Gambia","locale-dataset.countries.ZWE":"Zimbabue","locale-dataset.countries.GRC":"Grecia","locale-dataset.countries.SLB":"Islas Salomón","locale-dataset.countries.BOL":"Bolivia","locale-dataset.countries.HUN":"Hungría","locale-dataset.countries.MWI":"Malawi","locale-dataset.countries.VGB":"Islas Vírgenes Británicas","locale-dataset.countries.GAB":"Gabón","locale-dataset.countries.ECU":"Ecuador","locale-dataset.countries.HND":"Honduras","locale-dataset.countries.SLE":"Sierra Leona","locale-dataset.countries.UGA":"Uganda","locale-dataset.countries.ATG":"Antigua y Barbuda","locale-dataset.countries.SHN":"Santa Helena","locale-dataset.countries.ATA":"Antártida","locale-dataset.countries.HTI":"Haití","locale-dataset.countries.GRL":"Groenlandia","locale-dataset.countries.TLS":"Timor Oriental","locale-dataset.countries.VUT":"Vanuatu","locale-dataset.countries.MAR":"Marruecos","locale-dataset.countries.MNG":"Mongolia","locale-dataset.countries.MDA":"Moldavia","locale-dataset.countries.MLT":"Malta","locale-dataset.countries.BLR":"Bielorrusia","locale-dataset.countries.MHL":"Islas Marshall","locale-dataset.countries.PCN":"Isla Pitcairn","locale-dataset.countries.PAK":"Pakistán","locale-dataset.countries.GNQ":"Guinea Ecuatorial","locale-dataset.countries.BRN":"Brunéi","locale-dataset.countries.COM":"Comoras","locale-dataset.countries.FRO":"Islas Feroe","locale-dataset.countries.ANT":"Antillas Neerlandesas","locale-dataset.countries.LUX":"Luxemburgo","locale-dataset.countries.BRA":"Brasil","locale-dataset.countries.AUS":"Australia","locale-dataset.countries.TUR":"Turquía","locale-dataset.countries.MYT":"Mayotte","locale-dataset.countries.SAU":"Arabia Saudita","locale-dataset.countries.PRK":"Corea del Norte","locale-dataset.countries.NFK":"Isla Norfolk","locale-dataset.countries.SUR":"Surinam","locale-dataset.countries.KGZ":"Kyrgyzstán","locale-dataset.countries.COG":"Congo (Brazzaville)","locale-dataset.countries.SMR":"San Marino","locale-dataset.countries.VNM":"Vietnam","locale-dataset.countries.CHN":"China","locale-dataset.countries.YEM":"Yemen","locale-dataset.countries.IRN":"Irán","locale-dataset.countries.SYR":"Siria","locale-dataset.countries.ARM":"Armenia","locale-dataset.countries.BEN":"Benín","locale-dataset.countries.LBN":"Líbano","locale-dataset.countries.SVN":"Eslovenia","locale-dataset.countries.BLM":"San Bartolomé","locale-dataset.countries.DJI":"Djibouti","locale-dataset.countries.TUN":"Túnez","locale-dataset.countries.ARG":"Argentina","locale-dataset.countries.VEN":"Venezuela","locale-dataset.countries.GRD":"Granada","locale-dataset.countries.HMD":"Isla Heard e Islas McDonald","locale-dataset.countries.FJI":"Fiji","locale-dataset.countries.MTQ":"Martinica","locale-dataset.countries.CXR":"Isla de Navidad","locale-dataset.countries.LBY":"Libia","locale-dataset.countries.JAM":"Jamaica","locale-dataset.countries.MMR":"Birmania","locale-dataset.countries.CCK":"Islas Cocos (Keeling)","locale-dataset.countries.PER":"Perú","locale-dataset.countries.FLK":"Islas Malvinas","locale-dataset.countries.LVA":"Letonia","locale-dataset.countries.TJK":"Tayikistán","locale-dataset.countries.BVT":"Isla Bouvet","locale-dataset.countries.MUS":"Isla Mauricio","locale-dataset.countries.KOS":"Kosovo","locale-dataset.countries.BHS":"Bahamas","locale-dataset.countries.TKL":"Tokelau","locale-dataset.countries.GUF":"Guayana Francesa","locale-dataset.countries.CIV":"República de Costa de Marfil","locale-dataset.countries.IOT":"Territorio de Océano Índico Británico","locale-dataset.countries.ISL":"Islandia","locale-dataset.countries.BGR":"Bulgaria","locale-dataset.countries.TZA":"Tanzania","locale-dataset.countries.IDN":"Indonesia","locale-dataset.countries.LIE":"Liechtenstein","locale-dataset.countries.CAN":"Canadá","locale-dataset.countries.GHA":"Ghana","locale-dataset.countries.DEU":"Alemania","locale-dataset.countries.GIB":"Gibraltar","locale-dataset.countries.TUV":"Tuvalu","locale-dataset.countries.PRY":"Paraguay","locale-dataset.countries.PYF":"Polinesia Francesa","locale-dataset.countries.NIU":"Niue","locale-dataset.countries.KOR":"Corea del Sur","locale-dataset.countries.VIR":"Islas Vírgenes (Estados Unidos)","locale-dataset.countries.ALB":"Albania","locale-dataset.countries.MDG":"Madagascar","locale-dataset.countries.UZB":"Uzbekistán","locale-dataset.countries.BTN":"Bután","locale-dataset.countries.GLP":"Guadalupe","locale-dataset.countries.VCT":"San Vicente y Las Granadinas","locale-dataset.countries.NAM":"Namibia","locale-dataset.countries.MKD":"Macedonia","locale-dataset.countries.GUM":"Guam","locale-dataset.countries.MYS":"Malasia","locale-dataset.countries.SEN":"Senegal","locale-dataset.countries.MLI":"Mali","locale-dataset.countries.FSM":"Micronesia","locale-dataset.countries.BGD":"Bangladesh","locale-dataset.countries.WLF":"Wallis y Futuna","locale-dataset.countries.AND":"Andorra","locale-dataset.countries.AGO":"Angola","locale-dataset.countries.JOR":"Jordania","locale-dataset.countries.PAN":"Panamá","locale-dataset.countries.SGS":"Islas Georgia y Sandwich del Sur","locale-dataset.countries.NIC":"Nicaragua","locale-dataset.countries.SOM":"Somalia","locale-dataset.countries.CAF":"República Centroafricana","locale-dataset.countries.PSE":"Territorios palestinos","locale-dataset.countries.PHL":"Filipinas","locale-dataset.countries.SYC":"Seychelles","locale-dataset.countries.JEY":"Jersey","locale-dataset.countries.KIR":"Kiribati","locale-dataset.countries.URY":"Uruguay","locale-dataset.countries.FRA":"Francia","locale-dataset.countries.CRI":"Costa Rica","locale-dataset.countries.MAC":"Macao","locale-dataset.countries.ABW":"Aruba","locale-dataset.countries.SWZ":"Suazilandia","locale-dataset.countries.NCL":"Nueva Caledonia","locale-dataset.countries.CPV":"Cabo Verde","locale-dataset.countries.REU":"Saint-Denis (Reunión)","locale-dataset.countries.SLV":"El Salvador","locale-dataset.countries.NOR":"Noruega","locale-dataset.countries.CUW":"Curazao","locale-dataset.countries.CHE":"Suiza","locale-dataset.countries.ESP":"España","locale-dataset.countries.PLW":"Palaos","locale-dataset.countries.QAT":"Qatar","locale-dataset.countries.SWE":"Suecia","locale-dataset.countries.properties.taxName.default":"Impuesto","locale-dataset.countries.NGA":"Nigeria","locale-dataset.countries.UMI":"Islas Ultramarinas de Estados Unidos","locale-dataset.countries.LTU":"Lituania","locale-dataset.countries.BHR":"Baréin","locale-dataset.countries.UKR":"Ucrania","locale-dataset.countries.JPN":"Japón","locale-dataset.countries.LKA":"Sri Lanka","locale-dataset.countries.KNA":"San Cristobal y Nieves","locale-dataset.countries.LAO":"Laos","locale-dataset.countries.BEL":"Bélgica","locale-dataset.countries.IND":"India","locale-dataset.countries.MEX":"México","locale-dataset.countries.KEN":"Kenia","locale-dataset.countries.AIA":"Anguilla","locale-dataset.countries.MOZ":"Mozambique","locale-dataset.countries.MSR":"Montserrat","locale-dataset.countries.ATF":"Territorios Franceses del Sur","locale-dataset.countries.PRI":"Puerto Rico","locale-dataset.countries.CMR":"Camerún","locale-dataset.countries.NER":"Níger","locale-dataset.countries.TCA":"Islas Turcas y Caicos","locale-dataset.countries.VAT":"Vaticano","locale-dataset.countries.BFA":"Burkina Faso","locale-dataset.countries.ITA":"Italia","locale-dataset.countries.HKG":"Hong Kong","locale-dataset.countries.TWN":"Taiwán","locale-dataset.countries.GGY":"Guernsey","locale-dataset.countries.MAF":"San Martín","locale-dataset.countries.MCO":"Mónaco","locale-dataset.countries.SGP":"Singapur","locale-dataset.countries.IMN":"Isla de Man","locale-dataset.countries.CHL":"Chile","locale-dataset.countries.TCD":"Chad","locale-dataset.countries.ALA":"Islas Aland","locale-dataset.countries.MNP":"Islas Marianas del Norte","locale-dataset.countries.GEO":"Georgia","locale-dataset.countries.HRV":"Croacia"},"fieldInitialData":{}}},"14cc59bc-f0b7-15b8-e1c7-89ce41d0e0c9":{"initialData":{"counters":{},"roles":{}}}},"ooi":{"failedInSsr":{}}}
+  `,
+];
+
+module.exports = { pageName, externalScripts, inlineScripts };

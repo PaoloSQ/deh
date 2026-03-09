@@ -2,6 +2,7 @@ const express = require("express");
 const { engine } = require("express-handlebars");
 const path = require("path");
 const browserSync = require("browser-sync");
+const { listStandalonePages } = require("./lib/page-migrations");
 
 const app = express();
 const PORT = 3001;
@@ -19,7 +20,7 @@ app.engine(
         return null;
       },
     },
-  }),
+  })
 );
 
 app.set("view engine", "handlebars");
@@ -31,16 +32,37 @@ app.use("/js", express.static(path.join(__dirname, "public/js")));
 app.use("/images", express.static(path.join(__dirname, "public/images")));
 
 const routesDir = path.join(__dirname, "src/pages");
-const pages = {};
+const fs = require("fs");
 
 function getPageName(routePath) {
   if (routePath === "/") return "home";
   return routePath.replace(/^\//, "").replace(/\/$/, "");
 }
 
-function loadRoutes() {
-  const fs = require("fs");
+function fileExists(filePath) {
+  try {
+    fs.accessSync(filePath, fs.constants.F_OK);
+    return true;
+  } catch {
+    return false;
+  }
+}
 
+function buildRenderOptions(pageName) {
+  const cssPath = path.join(__dirname, "public", "css", `${pageName}.css`);
+  const jsPath = path.join(__dirname, "public", "js", `${pageName}.js`);
+  const standalonePages = new Set(listStandalonePages());
+
+  const isStandalone = standalonePages.has(pageName);
+
+  return {
+    layout: isStandalone ? "raw" : "main",
+    pageCSS: fileExists(cssPath) ? pageName : null,
+    pageJS: fileExists(jsPath) ? pageName : null,
+  };
+}
+
+function loadRoutes() {
   function scanDir(dir) {
     const items = fs.readdirSync(dir);
     items.forEach((item) => {
@@ -50,12 +72,8 @@ function loadRoutes() {
       if (stat.isDirectory()) {
         scanDir(fullPath);
       } else if (item.endsWith(".handlebars")) {
-        const relativePath = path.relative(
-          path.join(__dirname, "src/pages"),
-          fullPath,
-        );
-        let routePath =
-          "/" + relativePath.replace(".handlebars", "").replace(/\\/g, "/");
+        const relativePath = path.relative(path.join(__dirname, "src/pages"), fullPath);
+        let routePath = "/" + relativePath.replace(".handlebars", "").replace(/\\/g, "/");
 
         if (routePath.endsWith("/index")) {
           routePath = routePath.replace("/index", "");
@@ -65,35 +83,19 @@ function loadRoutes() {
 
         if (routePath === "/" || routePath === "/index") {
           const name = "home";
-          console.log("Route: / -> pageCSS:", name);
           app.get("/", (req, res) => {
-            const renderOptions = {
-              layout: "main",
-              pageCSS: name,
-              pageJS: name,
-            };
-            console.log("Rendering index with:", JSON.stringify(renderOptions));
+            const renderOptions = buildRenderOptions(name);
             res.render("index", renderOptions);
           });
         } else {
-          const viewPath = relativePath
-            .replace(/\\/g, "/")
-            .replace(".handlebars", "");
+          const viewPath = relativePath.replace(/\\/g, "/").replace(".handlebars", "");
 
           app.get(routePath + ".html", (req, res) => {
-            res.render(viewPath, {
-              layout: "main",
-              pageCSS: pageName,
-              pageJS: pageName,
-            });
+            res.render(viewPath, buildRenderOptions(pageName));
           });
 
           app.get(routePath, (req, res) => {
-            res.render(viewPath, {
-              layout: "main",
-              pageCSS: pageName,
-              pageJS: pageName,
-            });
+            res.render(viewPath, buildRenderOptions(pageName));
           });
         }
       }
@@ -137,7 +139,7 @@ const server = app.listen(PORT, () => {
         console.log("🎨 Browser-Sync proxy en http://localhost:3000");
         console.log("📝 Nodemon vigilando cambios del servidor...");
         console.log("🔄 Browser-Sync recargará el navegador automáticamente\n");
-      },
+      }
     );
   }
 });

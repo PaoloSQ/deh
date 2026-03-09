@@ -145,10 +145,7 @@ async function run() {
               ? COLORS.yellow + "⚠️"
               : COLORS.red + "❌";
 
-        log(
-          COLORS.reset,
-          `      ${status} ${compResult.percentDiff.toFixed(2)}%`,
-        );
+        log(COLORS.reset, `      ${status} ${compResult.percentDiff.toFixed(2)}%`);
 
         pageResults.viewports.push({
           viewport: vp.name,
@@ -174,9 +171,7 @@ async function run() {
 
   await browser.close();
 
-  console.log(
-    "\n" + COLORS.cyan + "=== RESULTADOS FINALES ===" + COLORS.reset + "\n",
-  );
+  console.log("\n" + COLORS.cyan + "=== RESULTADOS FINALES ===" + COLORS.reset + "\n");
 
   results.sort((a, b) => a.avgDiff - b.avgDiff);
 
@@ -191,8 +186,7 @@ async function run() {
     console.log(`${status} ${r.page}: ${r.avgDiff.toFixed(2)}%`);
   });
 
-  const avgDiff =
-    results.reduce((sum, r) => sum + r.avgDiff, 0) / results.length;
+  const avgDiff = results.reduce((sum, r) => sum + r.avgDiff, 0) / results.length;
   const passed = results.filter((r) => r.avgDiff < options.threshold).length;
 
   console.log("\n" + COLORS.cyan + "=== RESUMEN ===" + COLORS.reset);
@@ -202,18 +196,12 @@ async function run() {
   if (passed === results.length) {
     log(COLORS.green, "\n🎉 ¡Todas las páginas son casi idénticas!\n");
   } else if (passed > results.length / 2) {
-    log(
-      COLORS.yellow,
-      "\n⚠️ La mayoría de páginas están bien. Revisa las que fallan.\n",
-    );
+    log(COLORS.yellow, "\n⚠️ La mayoría de páginas están bien. Revisa las que fallan.\n");
   } else {
     log(COLORS.red, "\n❌ Muchas páginas necesitan ajustes.\n");
   }
 
-  log(
-    COLORS.cyan,
-    "💡 Ejecuta `npm run visual:report` para generar el HTML con capturas y diffs.",
-  );
+  log(COLORS.cyan, "💡 Ejecuta `npm run visual:report` para generar el HTML con capturas y diffs.");
 
   if (options.open) {
     openPath(OUTPUT_DIR);
