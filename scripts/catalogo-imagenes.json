@@ -1,0 +1,3666 @@
+{
+  "timestamp": "2026-03-08T00:50:38.368Z",
+  "totalImagenes": 306,
+  "porCategoria": {
+    "common": 117,
+    "logos": 3,
+    "blog": 50,
+    "icons": 7,
+    "servicios": 15,
+    "ui": 2,
+    "hero": 111,
+    "backgrounds": 1
+  },
+  "imagenes": [
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_a446329546684fd392f717ff39e6103e~mv2.png/v1/fill/w_129",
+      "categoria": "common",
+      "nuevoNombre": "common-1.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-1.jpg",
+      "usadaEn": [
+        "acceso-clientes.html",
+        "app-vigiladas.html",
+        "blog.html",
+        "book-online.html",
+        "canaldedenuncias.html",
+        "certibox.html",
+        "comunidad.html",
+        "condiciones-de-uso.html",
+        "contacto.html",
+        "datos-com-propietarios-comunidades.html",
+        "documbox-info.html",
+        "index.html",
+        "info-control-exp-notificaciones.html",
+        "lexbox.html",
+        "planes-af.html",
+        "politica-de-compliance.html",
+        "politica-de-cookies.html",
+        "politica-de-privacidad.html",
+        "política-de-privacidad-para-redes-sociales.html",
+        "pymes.html",
+        "tsa.html"
+      ],
+      "usoMultiple": true
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_ae2cba492bad4bffb6579f13f15a6c53~mv2.png/v1/fill/w_245",
+      "categoria": "common",
+      "nuevoNombre": "common-2.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-2.jpg",
+      "usadaEn": [
+        "acceso-clientes.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/panel.png",
+      "categoria": "common",
+      "nuevoNombre": "common-3.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-3.png",
+      "usadaEn": [
+        "acceso-clientes.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_51e505caf0cd40868c60eecbe3066572~mv2.png/v1/crop/x_0",
+      "categoria": "common",
+      "nuevoNombre": "common-4.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-4.jpg",
+      "usadaEn": [
+        "acceso-clientes.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/consola_consulta.png",
+      "categoria": "common",
+      "nuevoNombre": "common-5.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-5.png",
+      "usadaEn": [
+        "acceso-clientes.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_d46d6bcf939f459f89505081669b67d3~mv2.jpg/v1/crop/x_100",
+      "categoria": "common",
+      "nuevoNombre": "common-6.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-6.jpg",
+      "usadaEn": [
+        "acceso-clientes.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/shutterstock_2351619977.jpg",
+      "categoria": "common",
+      "nuevoNombre": "common-7.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-7.jpg",
+      "usadaEn": [
+        "acceso-clientes.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_a2656bed354e454e9d8b9324190d2c4e~mv2.png/v1/crop/x_72",
+      "categoria": "common",
+      "nuevoNombre": "common-8.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-8.jpg",
+      "usadaEn": [
+        "acceso-clientes.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_1cdce0881d9b4de0b78b25366cfe141d~mv2.png/v1/crop/x_0",
+      "categoria": "common",
+      "nuevoNombre": "common-9.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-9.jpg",
+      "usadaEn": [
+        "acceso-clientes.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/comunidad_02.png",
+      "categoria": "common",
+      "nuevoNombre": "common-10.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-10.png",
+      "usadaEn": [
+        "acceso-clientes.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_a446329546684fd392f717ff39e6103e~mv2.png/v1/fill/w_123",
+      "categoria": "common",
+      "nuevoNombre": "common-11.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-11.jpg",
+      "usadaEn": [
+        "acceso-clientes.html",
+        "app-vigiladas.html",
+        "blog.html",
+        "book-online.html",
+        "canaldedenuncias.html",
+        "certibox.html",
+        "comunidad.html",
+        "condiciones-de-uso.html",
+        "contacto.html",
+        "datos-com-propietarios-comunidades.html",
+        "documbox-info.html",
+        "index.html",
+        "info-control-exp-notificaciones.html",
+        "lexbox.html",
+        "planes-af.html",
+        "politica-de-compliance.html",
+        "politica-de-cookies.html",
+        "politica-de-privacidad.html",
+        "política-de-privacidad-para-redes-sociales.html",
+        "pymes.html",
+        "tsa.html"
+      ],
+      "usoMultiple": true
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/11062b_7dcffe5daf2944b7be0a46ac6d472634~mv2.png/v1/fill/w_32",
+      "categoria": "common",
+      "nuevoNombre": "common-12.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-12.jpg",
+      "usadaEn": [
+        "acceso-clientes.html",
+        "app-vigiladas.html",
+        "blog.html",
+        "book-online.html",
+        "canaldedenuncias.html",
+        "certibox.html",
+        "comunidad.html",
+        "condiciones-de-uso.html",
+        "contacto.html",
+        "datos-com-propietarios-comunidades.html",
+        "documbox-info.html",
+        "index.html",
+        "info-control-exp-notificaciones.html",
+        "lexbox.html",
+        "planes-af.html",
+        "politica-de-compliance.html",
+        "politica-de-cookies.html",
+        "politica-de-privacidad.html",
+        "política-de-privacidad-para-redes-sociales.html",
+        "pymes.html",
+        "tsa.html"
+      ],
+      "usoMultiple": true
+    },
+    {
+      "urlOriginal": "quality_auto/11062b_7dcffe5daf2944b7be0a46ac6d472634~mv2.png",
+      "categoria": "common",
+      "nuevoNombre": "common-13.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-13.png",
+      "usadaEn": [
+        "acceso-clientes.html",
+        "app-vigiladas.html",
+        "blog.html",
+        "book-online.html",
+        "canaldedenuncias.html",
+        "certibox.html",
+        "comunidad.html",
+        "condiciones-de-uso.html",
+        "contacto.html",
+        "datos-com-propietarios-comunidades.html",
+        "documbox-info.html",
+        "index.html",
+        "info-control-exp-notificaciones.html",
+        "lexbox.html",
+        "planes-af.html",
+        "politica-de-compliance.html",
+        "politica-de-cookies.html",
+        "politica-de-privacidad.html",
+        "política-de-privacidad-para-redes-sociales.html",
+        "pymes.html",
+        "tsa.html"
+      ],
+      "usoMultiple": true
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/11062b_f4e3e7f537ff4762a1914aa14e3e36b9~mv2.png/v1/fill/w_32",
+      "categoria": "common",
+      "nuevoNombre": "common-14.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-14.jpg",
+      "usadaEn": [
+        "acceso-clientes.html",
+        "app-vigiladas.html",
+        "blog.html",
+        "book-online.html",
+        "canaldedenuncias.html",
+        "certibox.html",
+        "comunidad.html",
+        "condiciones-de-uso.html",
+        "contacto.html",
+        "datos-com-propietarios-comunidades.html",
+        "documbox-info.html",
+        "index.html",
+        "info-control-exp-notificaciones.html",
+        "lexbox.html",
+        "planes-af.html",
+        "politica-de-compliance.html",
+        "politica-de-cookies.html",
+        "politica-de-privacidad.html",
+        "política-de-privacidad-para-redes-sociales.html",
+        "pymes.html",
+        "tsa.html"
+      ],
+      "usoMultiple": true
+    },
+    {
+      "urlOriginal": "quality_auto/11062b_f4e3e7f537ff4762a1914aa14e3e36b9~mv2.png",
+      "categoria": "common",
+      "nuevoNombre": "common-15.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-15.png",
+      "usadaEn": [
+        "acceso-clientes.html",
+        "app-vigiladas.html",
+        "blog.html",
+        "book-online.html",
+        "canaldedenuncias.html",
+        "certibox.html",
+        "comunidad.html",
+        "condiciones-de-uso.html",
+        "contacto.html",
+        "datos-com-propietarios-comunidades.html",
+        "documbox-info.html",
+        "index.html",
+        "info-control-exp-notificaciones.html",
+        "lexbox.html",
+        "planes-af.html",
+        "politica-de-compliance.html",
+        "politica-de-cookies.html",
+        "politica-de-privacidad.html",
+        "política-de-privacidad-para-redes-sociales.html",
+        "pymes.html",
+        "tsa.html"
+      ],
+      "usoMultiple": true
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/11062b_c67939a99eaf442d95d3f851857ceedf~mv2.png/v1/fill/w_32",
+      "categoria": "common",
+      "nuevoNombre": "common-16.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-16.jpg",
+      "usadaEn": [
+        "acceso-clientes.html",
+        "app-vigiladas.html",
+        "blog.html",
+        "book-online.html",
+        "canaldedenuncias.html",
+        "certibox.html",
+        "comunidad.html",
+        "condiciones-de-uso.html",
+        "contacto.html",
+        "datos-com-propietarios-comunidades.html",
+        "documbox-info.html",
+        "index.html",
+        "info-control-exp-notificaciones.html",
+        "lexbox.html",
+        "planes-af.html",
+        "politica-de-compliance.html",
+        "politica-de-cookies.html",
+        "politica-de-privacidad.html",
+        "política-de-privacidad-para-redes-sociales.html",
+        "pymes.html",
+        "tsa.html"
+      ],
+      "usoMultiple": true
+    },
+    {
+      "urlOriginal": "quality_auto/11062b_c67939a99eaf442d95d3f851857ceedf~mv2.png",
+      "categoria": "common",
+      "nuevoNombre": "common-17.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-17.png",
+      "usadaEn": [
+        "acceso-clientes.html",
+        "app-vigiladas.html",
+        "blog.html",
+        "book-online.html",
+        "canaldedenuncias.html",
+        "certibox.html",
+        "comunidad.html",
+        "condiciones-de-uso.html",
+        "contacto.html",
+        "datos-com-propietarios-comunidades.html",
+        "documbox-info.html",
+        "index.html",
+        "info-control-exp-notificaciones.html",
+        "lexbox.html",
+        "planes-af.html",
+        "politica-de-compliance.html",
+        "politica-de-cookies.html",
+        "politica-de-privacidad.html",
+        "política-de-privacidad-para-redes-sociales.html",
+        "pymes.html",
+        "tsa.html"
+      ],
+      "usoMultiple": true
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/11062b_603340b7bcb14e7785c7b65b233cd9f9~mv2.png/v1/fill/w_32",
+      "categoria": "common",
+      "nuevoNombre": "common-18.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-18.jpg",
+      "usadaEn": [
+        "acceso-clientes.html",
+        "app-vigiladas.html",
+        "blog.html",
+        "book-online.html",
+        "canaldedenuncias.html",
+        "certibox.html",
+        "comunidad.html",
+        "condiciones-de-uso.html",
+        "contacto.html",
+        "datos-com-propietarios-comunidades.html",
+        "documbox-info.html",
+        "index.html",
+        "info-control-exp-notificaciones.html",
+        "lexbox.html",
+        "planes-af.html",
+        "politica-de-compliance.html",
+        "politica-de-cookies.html",
+        "politica-de-privacidad.html",
+        "política-de-privacidad-para-redes-sociales.html",
+        "pymes.html",
+        "tsa.html"
+      ],
+      "usoMultiple": true
+    },
+    {
+      "urlOriginal": "quality_auto/11062b_603340b7bcb14e7785c7b65b233cd9f9~mv2.png",
+      "categoria": "common",
+      "nuevoNombre": "common-19.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-19.png",
+      "usadaEn": [
+        "acceso-clientes.html",
+        "app-vigiladas.html",
+        "blog.html",
+        "book-online.html",
+        "canaldedenuncias.html",
+        "certibox.html",
+        "comunidad.html",
+        "condiciones-de-uso.html",
+        "contacto.html",
+        "datos-com-propietarios-comunidades.html",
+        "documbox-info.html",
+        "index.html",
+        "info-control-exp-notificaciones.html",
+        "lexbox.html",
+        "planes-af.html",
+        "politica-de-compliance.html",
+        "politica-de-cookies.html",
+        "politica-de-privacidad.html",
+        "política-de-privacidad-para-redes-sociales.html",
+        "pymes.html",
+        "tsa.html"
+      ],
+      "usoMultiple": true
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_f266c1c516a64bdd97d7aef98f73d58a~mv2.png/v1/fill/w_163",
+      "categoria": "common",
+      "nuevoNombre": "common-20.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-20.jpg",
+      "usadaEn": [
+        "acceso-clientes.html",
+        "app-vigiladas.html",
+        "blog.html",
+        "book-online.html",
+        "canaldedenuncias.html",
+        "certibox.html",
+        "comunidad.html",
+        "condiciones-de-uso.html",
+        "contacto.html",
+        "datos-com-propietarios-comunidades.html",
+        "documbox-info.html",
+        "index.html",
+        "info-control-exp-notificaciones.html",
+        "lexbox.html",
+        "planes-af.html",
+        "politica-de-compliance.html",
+        "politica-de-cookies.html",
+        "politica-de-privacidad.html",
+        "política-de-privacidad-para-redes-sociales.html",
+        "pymes.html",
+        "tsa.html"
+      ],
+      "usoMultiple": true
+    },
+    {
+      "urlOriginal": "quality_auto/eidas_horizontal_trans.png",
+      "categoria": "common",
+      "nuevoNombre": "common-21.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-21.png",
+      "usadaEn": [
+        "acceso-clientes.html",
+        "app-vigiladas.html",
+        "blog.html",
+        "book-online.html",
+        "canaldedenuncias.html",
+        "certibox.html",
+        "comunidad.html",
+        "condiciones-de-uso.html",
+        "contacto.html",
+        "datos-com-propietarios-comunidades.html",
+        "documbox-info.html",
+        "index.html",
+        "info-control-exp-notificaciones.html",
+        "lexbox.html",
+        "planes-af.html",
+        "politica-de-compliance.html",
+        "politica-de-cookies.html",
+        "politica-de-privacidad.html",
+        "política-de-privacidad-para-redes-sociales.html",
+        "pymes.html",
+        "tsa.html"
+      ],
+      "usoMultiple": true
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_5301ca4b0f05418eb845283d2b97ecae~mv2.png/v1/fill/w_80",
+      "categoria": "common",
+      "nuevoNombre": "common-22.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-22.jpg",
+      "usadaEn": [
+        "acceso-clientes.html",
+        "app-vigiladas.html",
+        "blog.html",
+        "book-online.html",
+        "canaldedenuncias.html",
+        "certibox.html",
+        "comunidad.html",
+        "condiciones-de-uso.html",
+        "contacto.html",
+        "datos-com-propietarios-comunidades.html",
+        "documbox-info.html",
+        "index.html",
+        "info-control-exp-notificaciones.html",
+        "lexbox.html",
+        "planes-af.html",
+        "politica-de-compliance.html",
+        "politica-de-cookies.html",
+        "politica-de-privacidad.html",
+        "política-de-privacidad-para-redes-sociales.html",
+        "pymes.html",
+        "tsa.html"
+      ],
+      "usoMultiple": true
+    },
+    {
+      "urlOriginal": "quality_auto/aenor.png",
+      "categoria": "common",
+      "nuevoNombre": "common-23.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-23.png",
+      "usadaEn": [
+        "acceso-clientes.html",
+        "app-vigiladas.html",
+        "blog.html",
+        "book-online.html",
+        "canaldedenuncias.html",
+        "certibox.html",
+        "comunidad.html",
+        "condiciones-de-uso.html",
+        "contacto.html",
+        "datos-com-propietarios-comunidades.html",
+        "documbox-info.html",
+        "index.html",
+        "info-control-exp-notificaciones.html",
+        "lexbox.html",
+        "planes-af.html",
+        "politica-de-compliance.html",
+        "politica-de-cookies.html",
+        "politica-de-privacidad.html",
+        "política-de-privacidad-para-redes-sociales.html",
+        "pymes.html",
+        "tsa.html"
+      ],
+      "usoMultiple": true
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_a446329546684fd392f717ff39e6103e~mv2.png/v1/fill/w_258",
+      "categoria": "common",
+      "nuevoNombre": "common-24.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-24.jpg",
+      "usadaEn": [
+        "acceso-clientes.html",
+        "app-vigiladas.html",
+        "blog.html",
+        "book-online.html",
+        "canaldedenuncias.html",
+        "certibox.html",
+        "comunidad.html",
+        "condiciones-de-uso.html",
+        "contacto.html",
+        "datos-com-propietarios-comunidades.html",
+        "documbox-info.html",
+        "index.html",
+        "info-control-exp-notificaciones.html",
+        "lexbox.html",
+        "planes-af.html",
+        "politica-de-compliance.html",
+        "politica-de-cookies.html",
+        "politica-de-privacidad.html",
+        "política-de-privacidad-para-redes-sociales.html",
+        "pymes.html",
+        "tsa.html"
+      ],
+      "usoMultiple": true
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_ae2cba492bad4bffb6579f13f15a6c53~mv2.png/v1/fill/w_490",
+      "categoria": "common",
+      "nuevoNombre": "common-25.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-25.jpg",
+      "usadaEn": [
+        "acceso-clientes.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_a446329546684fd392f717ff39e6103e~mv2.png/v1/fill/w_246",
+      "categoria": "common",
+      "nuevoNombre": "common-26.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-26.jpg",
+      "usadaEn": [
+        "acceso-clientes.html",
+        "app-vigiladas.html",
+        "blog.html",
+        "book-online.html",
+        "canaldedenuncias.html",
+        "certibox.html",
+        "comunidad.html",
+        "condiciones-de-uso.html",
+        "contacto.html",
+        "datos-com-propietarios-comunidades.html",
+        "documbox-info.html",
+        "index.html",
+        "info-control-exp-notificaciones.html",
+        "lexbox.html",
+        "planes-af.html",
+        "politica-de-compliance.html",
+        "politica-de-cookies.html",
+        "politica-de-privacidad.html",
+        "política-de-privacidad-para-redes-sociales.html",
+        "pymes.html",
+        "tsa.html"
+      ],
+      "usoMultiple": true
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/11062b_7dcffe5daf2944b7be0a46ac6d472634~mv2.png/v1/fill/w_64",
+      "categoria": "common",
+      "nuevoNombre": "common-27.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-27.jpg",
+      "usadaEn": [
+        "acceso-clientes.html",
+        "app-vigiladas.html",
+        "blog.html",
+        "book-online.html",
+        "canaldedenuncias.html",
+        "certibox.html",
+        "comunidad.html",
+        "condiciones-de-uso.html",
+        "contacto.html",
+        "datos-com-propietarios-comunidades.html",
+        "documbox-info.html",
+        "index.html",
+        "info-control-exp-notificaciones.html",
+        "lexbox.html",
+        "planes-af.html",
+        "politica-de-compliance.html",
+        "politica-de-cookies.html",
+        "politica-de-privacidad.html",
+        "política-de-privacidad-para-redes-sociales.html",
+        "pymes.html",
+        "tsa.html"
+      ],
+      "usoMultiple": true
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/11062b_f4e3e7f537ff4762a1914aa14e3e36b9~mv2.png/v1/fill/w_64",
+      "categoria": "common",
+      "nuevoNombre": "common-28.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-28.jpg",
+      "usadaEn": [
+        "acceso-clientes.html",
+        "app-vigiladas.html",
+        "blog.html",
+        "book-online.html",
+        "canaldedenuncias.html",
+        "certibox.html",
+        "comunidad.html",
+        "condiciones-de-uso.html",
+        "contacto.html",
+        "datos-com-propietarios-comunidades.html",
+        "documbox-info.html",
+        "index.html",
+        "info-control-exp-notificaciones.html",
+        "lexbox.html",
+        "planes-af.html",
+        "politica-de-compliance.html",
+        "politica-de-cookies.html",
+        "politica-de-privacidad.html",
+        "política-de-privacidad-para-redes-sociales.html",
+        "pymes.html",
+        "tsa.html"
+      ],
+      "usoMultiple": true
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/11062b_c67939a99eaf442d95d3f851857ceedf~mv2.png/v1/fill/w_64",
+      "categoria": "common",
+      "nuevoNombre": "common-29.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-29.jpg",
+      "usadaEn": [
+        "acceso-clientes.html",
+        "app-vigiladas.html",
+        "blog.html",
+        "book-online.html",
+        "canaldedenuncias.html",
+        "certibox.html",
+        "comunidad.html",
+        "condiciones-de-uso.html",
+        "contacto.html",
+        "datos-com-propietarios-comunidades.html",
+        "documbox-info.html",
+        "index.html",
+        "info-control-exp-notificaciones.html",
+        "lexbox.html",
+        "planes-af.html",
+        "politica-de-compliance.html",
+        "politica-de-cookies.html",
+        "politica-de-privacidad.html",
+        "política-de-privacidad-para-redes-sociales.html",
+        "pymes.html",
+        "tsa.html"
+      ],
+      "usoMultiple": true
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/11062b_603340b7bcb14e7785c7b65b233cd9f9~mv2.png/v1/fill/w_64",
+      "categoria": "common",
+      "nuevoNombre": "common-30.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-30.jpg",
+      "usadaEn": [
+        "acceso-clientes.html",
+        "app-vigiladas.html",
+        "blog.html",
+        "book-online.html",
+        "canaldedenuncias.html",
+        "certibox.html",
+        "comunidad.html",
+        "condiciones-de-uso.html",
+        "contacto.html",
+        "datos-com-propietarios-comunidades.html",
+        "documbox-info.html",
+        "index.html",
+        "info-control-exp-notificaciones.html",
+        "lexbox.html",
+        "planes-af.html",
+        "politica-de-compliance.html",
+        "politica-de-cookies.html",
+        "politica-de-privacidad.html",
+        "política-de-privacidad-para-redes-sociales.html",
+        "pymes.html",
+        "tsa.html"
+      ],
+      "usoMultiple": true
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_f266c1c516a64bdd97d7aef98f73d58a~mv2.png/v1/fill/w_326",
+      "categoria": "common",
+      "nuevoNombre": "common-31.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-31.jpg",
+      "usadaEn": [
+        "acceso-clientes.html",
+        "app-vigiladas.html",
+        "blog.html",
+        "book-online.html",
+        "canaldedenuncias.html",
+        "certibox.html",
+        "comunidad.html",
+        "condiciones-de-uso.html",
+        "contacto.html",
+        "datos-com-propietarios-comunidades.html",
+        "documbox-info.html",
+        "index.html",
+        "info-control-exp-notificaciones.html",
+        "lexbox.html",
+        "planes-af.html",
+        "politica-de-compliance.html",
+        "politica-de-cookies.html",
+        "politica-de-privacidad.html",
+        "política-de-privacidad-para-redes-sociales.html",
+        "pymes.html",
+        "tsa.html"
+      ],
+      "usoMultiple": true
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_5301ca4b0f05418eb845283d2b97ecae~mv2.png/v1/fill/w_160",
+      "categoria": "common",
+      "nuevoNombre": "common-32.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-32.jpg",
+      "usadaEn": [
+        "acceso-clientes.html",
+        "app-vigiladas.html",
+        "blog.html",
+        "book-online.html",
+        "canaldedenuncias.html",
+        "certibox.html",
+        "comunidad.html",
+        "condiciones-de-uso.html",
+        "contacto.html",
+        "datos-com-propietarios-comunidades.html",
+        "documbox-info.html",
+        "index.html",
+        "info-control-exp-notificaciones.html",
+        "lexbox.html",
+        "planes-af.html",
+        "politica-de-compliance.html",
+        "politica-de-cookies.html",
+        "politica-de-privacidad.html",
+        "política-de-privacidad-para-redes-sociales.html",
+        "pymes.html",
+        "tsa.html"
+      ],
+      "usoMultiple": true
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_c443697866794e04b06d1535b90ed7d8%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/45bf13_c443697866794e04b06d1535b90ed7d8%7Emv2.png",
+      "categoria": "common",
+      "nuevoNombre": "common-33.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-33.png",
+      "usadaEn": [
+        "acceso-clientes.html",
+        "app-vigiladas.html",
+        "blog.html",
+        "book-online.html",
+        "canaldedenuncias.html",
+        "certibox.html",
+        "comunidad.html",
+        "condiciones-de-uso.html",
+        "contacto.html",
+        "datos-com-propietarios-comunidades.html",
+        "documbox-info.html",
+        "index.html",
+        "info-control-exp-notificaciones.html",
+        "lexbox.html",
+        "planes-af.html",
+        "plataforma-control-exp-notificaciones.html",
+        "politica-de-compliance.html",
+        "politica-de-cookies.html",
+        "politica-de-privacidad.html",
+        "política-de-privacidad-para-redes-sociales.html",
+        "pymes.html",
+        "servicios-as.html",
+        "tsa.html"
+      ],
+      "usoMultiple": true
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_c443697866794e04b06d1535b90ed7d8%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/45bf13_c443697866794e04b06d1535b90ed7d8%7Emv2.png",
+      "categoria": "common",
+      "nuevoNombre": "common-34.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-34.png",
+      "usadaEn": [
+        "acceso-clientes.html",
+        "app-vigiladas.html",
+        "blog.html",
+        "book-online.html",
+        "canaldedenuncias.html",
+        "certibox.html",
+        "comunidad.html",
+        "condiciones-de-uso.html",
+        "contacto.html",
+        "datos-com-propietarios-comunidades.html",
+        "documbox-info.html",
+        "index.html",
+        "info-control-exp-notificaciones.html",
+        "lexbox.html",
+        "planes-af.html",
+        "plataforma-control-exp-notificaciones.html",
+        "politica-de-compliance.html",
+        "politica-de-cookies.html",
+        "politica-de-privacidad.html",
+        "política-de-privacidad-para-redes-sociales.html",
+        "pymes.html",
+        "servicios-as.html",
+        "tsa.html"
+      ],
+      "usoMultiple": true
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_c443697866794e04b06d1535b90ed7d8%7Emv2.png/v1/fill/w_180%2Ch_180%2Clg_1%2Cusm_0.66_1.00_0.01/45bf13_c443697866794e04b06d1535b90ed7d8%7Emv2.png",
+      "categoria": "common",
+      "nuevoNombre": "common-35.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-35.png",
+      "usadaEn": [
+        "acceso-clientes.html",
+        "app-vigiladas.html",
+        "blog.html",
+        "book-online.html",
+        "canaldedenuncias.html",
+        "certibox.html",
+        "comunidad.html",
+        "condiciones-de-uso.html",
+        "contacto.html",
+        "datos-com-propietarios-comunidades.html",
+        "documbox-info.html",
+        "index.html",
+        "info-control-exp-notificaciones.html",
+        "lexbox.html",
+        "planes-af.html",
+        "plataforma-control-exp-notificaciones.html",
+        "politica-de-compliance.html",
+        "politica-de-cookies.html",
+        "politica-de-privacidad.html",
+        "política-de-privacidad-para-redes-sociales.html",
+        "pymes.html",
+        "servicios-as.html",
+        "tsa.html"
+      ],
+      "usoMultiple": true
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_56a9539094414f40ae3327e35ea694ca%7Emv2.png/v1/fit/w_2500",
+      "categoria": "common",
+      "nuevoNombre": "common-36.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-36.jpg",
+      "usadaEn": [
+        "acceso-clientes.html",
+        "app-vigiladas.html",
+        "blog.html",
+        "book-online.html",
+        "canaldedenuncias.html",
+        "certibox.html",
+        "comunidad.html",
+        "condiciones-de-uso.html",
+        "contacto.html",
+        "datos-com-propietarios-comunidades.html",
+        "documbox-info.html",
+        "index.html",
+        "info-control-exp-notificaciones.html",
+        "lexbox.html",
+        "planes-af.html",
+        "plataforma-control-exp-notificaciones.html",
+        "politica-de-compliance.html",
+        "politica-de-cookies.html",
+        "politica-de-privacidad.html",
+        "política-de-privacidad-para-redes-sociales.html",
+        "pymes.html",
+        "servicios-as.html",
+        "tsa.html"
+      ],
+      "usoMultiple": true
+    },
+    {
+      "urlOriginal": "al_c/45bf13_56a9539094414f40ae3327e35ea694ca%7Emv2.png",
+      "categoria": "common",
+      "nuevoNombre": "common-37.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-37.png",
+      "usadaEn": [
+        "acceso-clientes.html",
+        "app-vigiladas.html",
+        "blog.html",
+        "book-online.html",
+        "canaldedenuncias.html",
+        "certibox.html",
+        "comunidad.html",
+        "condiciones-de-uso.html",
+        "contacto.html",
+        "datos-com-propietarios-comunidades.html",
+        "documbox-info.html",
+        "index.html",
+        "info-control-exp-notificaciones.html",
+        "lexbox.html",
+        "planes-af.html",
+        "plataforma-control-exp-notificaciones.html",
+        "politica-de-compliance.html",
+        "politica-de-cookies.html",
+        "politica-de-privacidad.html",
+        "política-de-privacidad-para-redes-sociales.html",
+        "pymes.html",
+        "servicios-as.html",
+        "tsa.html"
+      ],
+      "usoMultiple": true
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_3c9dd34940cb4066804e30da9e77cf88~mv2.png/v1/fill/w_42",
+      "categoria": "common",
+      "nuevoNombre": "common-38.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-38.jpg",
+      "usadaEn": [
+        "app-vigiladas.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_35eec2d2c82f44f8833aa51a6f57edda~mv2.png/v1/fill/w_905",
+      "categoria": "common",
+      "nuevoNombre": "common-39.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-39.jpg",
+      "usadaEn": [
+        "app-vigiladas.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/Recurso%207app%20vigiladas.png",
+      "categoria": "common",
+      "nuevoNombre": "common-40.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-40.png",
+      "usadaEn": [
+        "app-vigiladas.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_3c9dd34940cb4066804e30da9e77cf88~mv2.png/v1/fill/w_84",
+      "categoria": "common",
+      "nuevoNombre": "common-41.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-41.jpg",
+      "usadaEn": [
+        "app-vigiladas.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_35eec2d2c82f44f8833aa51a6f57edda~mv2.png/v1/fill/w_1710",
+      "categoria": "common",
+      "nuevoNombre": "common-42.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-42.jpg",
+      "usadaEn": [
+        "app-vigiladas.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/11062b_518519f982bd4c60aa530880d95502f4~mv2.jpeg/v1/fill/w_50",
+      "categoria": "common",
+      "nuevoNombre": "common-43.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-43.jpg",
+      "usadaEn": [
+        "book-online.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "enc_auto/11062b_518519f982bd4c60aa530880d95502f4~mv2.jpeg",
+      "categoria": "common",
+      "nuevoNombre": "common-44.jpeg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-44.jpeg",
+      "usadaEn": [
+        "book-online.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/11062b_13c4f52478c94f088d9ca86fc949184a~mv2.jpeg/v1/fill/w_50",
+      "categoria": "common",
+      "nuevoNombre": "common-45.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-45.jpg",
+      "usadaEn": [
+        "book-online.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "enc_auto/11062b_13c4f52478c94f088d9ca86fc949184a~mv2.jpeg",
+      "categoria": "common",
+      "nuevoNombre": "common-46.jpeg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-46.jpeg",
+      "usadaEn": [
+        "book-online.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/11062b_91f2b978655241808bac54f081844ef1~mv2.jpg/v1/fill/w_50",
+      "categoria": "common",
+      "nuevoNombre": "common-47.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-47.jpg",
+      "usadaEn": [
+        "book-online.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "enc_auto/11062b_91f2b978655241808bac54f081844ef1~mv2.jpg",
+      "categoria": "common",
+      "nuevoNombre": "common-48.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-48.jpg",
+      "usadaEn": [
+        "book-online.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/127d6ea4b14a46fea73e92b3b4d4d0d0.jpg/v1/fill/w_50",
+      "categoria": "common",
+      "nuevoNombre": "common-49.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-49.jpg",
+      "usadaEn": [
+        "book-online.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "enc_auto/127d6ea4b14a46fea73e92b3b4d4d0d0.jpg",
+      "categoria": "common",
+      "nuevoNombre": "common-50.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-50.jpg",
+      "usadaEn": [
+        "book-online.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_81697da65fc94e44902d0d8ae0a3ef7f~mv2.png/v1/fill/w_940",
+      "categoria": "common",
+      "nuevoNombre": "common-51.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-51.jpg",
+      "usadaEn": [
+        "comunidad.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "enc_auto/45bf13_81697da65fc94e44902d0d8ae0a3ef7f~mv2.png",
+      "categoria": "common",
+      "nuevoNombre": "common-52.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-52.png",
+      "usadaEn": [
+        "comunidad.html",
+        "index.html"
+      ],
+      "usoMultiple": true
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/0e753d_de7ce88d30444e06855bfe6d31c603b5~mv2.webp/v1/fill/w_2081",
+      "categoria": "common",
+      "nuevoNombre": "common-53.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-53.jpg",
+      "usadaEn": [
+        "comunidad.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "enc_auto/0e753d_de7ce88d30444e06855bfe6d31c603b5~mv2.webp",
+      "categoria": "common",
+      "nuevoNombre": "common-54.webp",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-54.webp",
+      "usadaEn": [
+        "comunidad.html",
+        "index.html"
+      ],
+      "usoMultiple": true
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_e79ea0fa21b948c99ae81ed1e4d0c480~mv2.png/v1/fill/w_940",
+      "categoria": "common",
+      "nuevoNombre": "common-55.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-55.jpg",
+      "usadaEn": [
+        "comunidad.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "enc_auto/45bf13_e79ea0fa21b948c99ae81ed1e4d0c480~mv2.png",
+      "categoria": "common",
+      "nuevoNombre": "common-56.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-56.png",
+      "usadaEn": [
+        "comunidad.html",
+        "index.html"
+      ],
+      "usoMultiple": true
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/732f95_9402722129cc4aeda921905b4f676806~mv2.png/v1/fill/w_940",
+      "categoria": "common",
+      "nuevoNombre": "common-57.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-57.jpg",
+      "usadaEn": [
+        "comunidad.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "enc_auto/732f95_9402722129cc4aeda921905b4f676806~mv2.png",
+      "categoria": "common",
+      "nuevoNombre": "common-58.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-58.png",
+      "usadaEn": [
+        "comunidad.html",
+        "index.html"
+      ],
+      "usoMultiple": true
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_9fd7ba7a077e4e7ab7c14e7c7cefefaf~mv2.png/v1/fill/w_940",
+      "categoria": "common",
+      "nuevoNombre": "common-59.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-59.jpg",
+      "usadaEn": [
+        "comunidad.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "enc_auto/45bf13_9fd7ba7a077e4e7ab7c14e7c7cefefaf~mv2.png",
+      "categoria": "common",
+      "nuevoNombre": "common-60.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-60.png",
+      "usadaEn": [
+        "comunidad.html",
+        "index.html"
+      ],
+      "usoMultiple": true
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/732f95_7a21171c001549c4b63f08f22fd94831~mv2.jpeg/v1/fill/w_940",
+      "categoria": "common",
+      "nuevoNombre": "common-61.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-61.jpg",
+      "usadaEn": [
+        "comunidad.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "enc_auto/732f95_7a21171c001549c4b63f08f22fd94831~mv2.jpeg",
+      "categoria": "common",
+      "nuevoNombre": "common-62.jpeg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-62.jpeg",
+      "usadaEn": [
+        "comunidad.html",
+        "index.html"
+      ],
+      "usoMultiple": true
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_81697da65fc94e44902d0d8ae0a3ef7f~mv2.png/v1/fill/w_1128",
+      "categoria": "common",
+      "nuevoNombre": "common-63.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-63.jpg",
+      "usadaEn": [
+        "comunidad.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_e79ea0fa21b948c99ae81ed1e4d0c480~mv2.png/v1/fill/w_1128",
+      "categoria": "common",
+      "nuevoNombre": "common-64.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-64.jpg",
+      "usadaEn": [
+        "comunidad.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/732f95_9402722129cc4aeda921905b4f676806~mv2.png/v1/fill/w_1128",
+      "categoria": "common",
+      "nuevoNombre": "common-65.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-65.jpg",
+      "usadaEn": [
+        "comunidad.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_9fd7ba7a077e4e7ab7c14e7c7cefefaf~mv2.png/v1/fill/w_1128",
+      "categoria": "common",
+      "nuevoNombre": "common-66.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-66.jpg",
+      "usadaEn": [
+        "comunidad.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/732f95_7a21171c001549c4b63f08f22fd94831~mv2.jpeg/v1/fill/w_1128",
+      "categoria": "common",
+      "nuevoNombre": "common-67.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-67.jpg",
+      "usadaEn": [
+        "comunidad.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_0933ed36a168472082b40509f42f5614~mv2.png/v1/fill/w_42",
+      "categoria": "common",
+      "nuevoNombre": "common-68.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-68.jpg",
+      "usadaEn": [
+        "datos-com-propietarios-comunidades.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_82fcac157f614d0e9f68a3622f661d13~mv2.png/v1/crop/x_0",
+      "categoria": "common",
+      "nuevoNombre": "common-69.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-69.jpg",
+      "usadaEn": [
+        "datos-com-propietarios-comunidades.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/Comunidades.png",
+      "categoria": "common",
+      "nuevoNombre": "common-70.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-70.png",
+      "usadaEn": [
+        "datos-com-propietarios-comunidades.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_0933ed36a168472082b40509f42f5614~mv2.png/v1/fill/w_84",
+      "categoria": "common",
+      "nuevoNombre": "common-71.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-71.jpg",
+      "usadaEn": [
+        "datos-com-propietarios-comunidades.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_c11d429e562a43c2bca3ca2b51db36fd~mv2.jpg/v1/fill/w_147",
+      "categoria": "common",
+      "nuevoNombre": "common-72.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-72.jpg",
+      "usadaEn": [
+        "info-control-exp-notificaciones.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/7738b6_c11d429e562a43c2bca3ca2b51db36fd~mv2.jpg",
+      "categoria": "common",
+      "nuevoNombre": "common-73.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-73.jpg",
+      "usadaEn": [
+        "info-control-exp-notificaciones.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_f44bb448cca447518f2d6a5a06efaa35~mv2.png/v1/fill/w_337",
+      "categoria": "common",
+      "nuevoNombre": "common-74.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-74.jpg",
+      "usadaEn": [
+        "info-control-exp-notificaciones.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_4ad213c145094305a69cf2a2823d5695~mv2.png/v1/fill/w_94",
+      "categoria": "common",
+      "nuevoNombre": "common-75.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-75.jpg",
+      "usadaEn": [
+        "info-control-exp-notificaciones.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/vigilante_edited_edited.png",
+      "categoria": "common",
+      "nuevoNombre": "common-76.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-76.png",
+      "usadaEn": [
+        "info-control-exp-notificaciones.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_18034e1e779d46fa8dd7ea1541a2152f~mv2.png/v1/fill/w_94",
+      "categoria": "common",
+      "nuevoNombre": "common-77.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-77.jpg",
+      "usadaEn": [
+        "info-control-exp-notificaciones.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/verificado_edited_edited.png",
+      "categoria": "common",
+      "nuevoNombre": "common-78.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-78.png",
+      "usadaEn": [
+        "info-control-exp-notificaciones.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_0b038df4372f4b92865e563469efbabf~mv2.png/v1/fill/w_94",
+      "categoria": "common",
+      "nuevoNombre": "common-79.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-79.jpg",
+      "usadaEn": [
+        "info-control-exp-notificaciones.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/recurso_edited_edited.png",
+      "categoria": "common",
+      "nuevoNombre": "common-80.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-80.png",
+      "usadaEn": [
+        "info-control-exp-notificaciones.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_4bf13874db47476589a2a0339b9a41e4~mv2.png/v1/fill/w_94",
+      "categoria": "common",
+      "nuevoNombre": "common-81.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-81.jpg",
+      "usadaEn": [
+        "info-control-exp-notificaciones.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/temporizador_edited.png",
+      "categoria": "common",
+      "nuevoNombre": "common-82.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-82.png",
+      "usadaEn": [
+        "info-control-exp-notificaciones.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_e91011a6c0614b81b58ed54ef4c67604~mv2.jpg/v1/fill/w_123",
+      "categoria": "common",
+      "nuevoNombre": "common-83.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-83.jpg",
+      "usadaEn": [
+        "info-control-exp-notificaciones.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/7738b6_e91011a6c0614b81b58ed54ef4c67604~mv2.jpg",
+      "categoria": "common",
+      "nuevoNombre": "common-84.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-84.jpg",
+      "usadaEn": [
+        "info-control-exp-notificaciones.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_14dbd252f4424fe1a83bda7204bdac75~mv2.jpg/v1/fill/w_123",
+      "categoria": "common",
+      "nuevoNombre": "common-85.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-85.jpg",
+      "usadaEn": [
+        "info-control-exp-notificaciones.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/7738b6_14dbd252f4424fe1a83bda7204bdac75~mv2.jpg",
+      "categoria": "common",
+      "nuevoNombre": "common-86.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-86.jpg",
+      "usadaEn": [
+        "info-control-exp-notificaciones.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_f44bb448cca447518f2d6a5a06efaa35~mv2.png/v1/fill/w_674",
+      "categoria": "common",
+      "nuevoNombre": "common-87.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-87.jpg",
+      "usadaEn": [
+        "info-control-exp-notificaciones.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_4ad213c145094305a69cf2a2823d5695~mv2.png/v1/fill/w_188",
+      "categoria": "common",
+      "nuevoNombre": "common-88.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-88.jpg",
+      "usadaEn": [
+        "info-control-exp-notificaciones.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_18034e1e779d46fa8dd7ea1541a2152f~mv2.png/v1/fill/w_188",
+      "categoria": "common",
+      "nuevoNombre": "common-89.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-89.jpg",
+      "usadaEn": [
+        "info-control-exp-notificaciones.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_0b038df4372f4b92865e563469efbabf~mv2.png/v1/fill/w_188",
+      "categoria": "common",
+      "nuevoNombre": "common-90.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-90.jpg",
+      "usadaEn": [
+        "info-control-exp-notificaciones.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_4bf13874db47476589a2a0339b9a41e4~mv2.png/v1/fill/w_188",
+      "categoria": "common",
+      "nuevoNombre": "common-91.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-91.jpg",
+      "usadaEn": [
+        "info-control-exp-notificaciones.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_aa18dbe5c41c4d92a877bb2764f699e8~mv2.jpg/v1/crop/x_503",
+      "categoria": "common",
+      "nuevoNombre": "common-92.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-92.jpg",
+      "usadaEn": [
+        "lexbox.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/male-professional-cleaning-service-worke.jpg",
+      "categoria": "common",
+      "nuevoNombre": "common-93.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-93.jpg",
+      "usadaEn": [
+        "lexbox.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_9eed75987c28435e8574412619ca54b5~mv2.png/v1/fill/w_142",
+      "categoria": "common",
+      "nuevoNombre": "common-94.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-94.jpg",
+      "usadaEn": [
+        "lexbox.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/lexbox_fondo.png",
+      "categoria": "common",
+      "nuevoNombre": "common-95.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-95.png",
+      "usadaEn": [
+        "lexbox.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_9eed75987c28435e8574412619ca54b5~mv2.png/v1/fill/w_284",
+      "categoria": "common",
+      "nuevoNombre": "common-96.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-96.jpg",
+      "usadaEn": [
+        "lexbox.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_46e4bf22f1084b80b960a537ebdd022c~mv2.png/v1/fill/w_175",
+      "categoria": "common",
+      "nuevoNombre": "common-97.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-97.jpg",
+      "usadaEn": [
+        "planes-af.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/7738b6_46e4bf22f1084b80b960a537ebdd022c~mv2.png",
+      "categoria": "common",
+      "nuevoNombre": "common-98.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-98.png",
+      "usadaEn": [
+        "planes-af.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_f44bb448cca447518f2d6a5a06efaa35~mv2.png/v1/fill/w_191",
+      "categoria": "common",
+      "nuevoNombre": "common-99.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-99.jpg",
+      "usadaEn": [
+        "planes-af.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_0ab061b6b73a4e82991ac772a125378c~mv2.png/v1/crop/x_37",
+      "categoria": "common",
+      "nuevoNombre": "common-100.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-100.jpg",
+      "usadaEn": [
+        "planes-af.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_602ac8bc01e54030a0afaa84f2101e82~mv2.jpg/v1/fill/w_133",
+      "categoria": "common",
+      "nuevoNombre": "common-101.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-101.jpg",
+      "usadaEn": [
+        "planes-af.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_a6f3168815304f30ad1ea00145821318~mv2.png/v1/crop/x_0",
+      "categoria": "common",
+      "nuevoNombre": "common-102.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-102.jpg",
+      "usadaEn": [
+        "planes-af.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/DOCUMBOX_homologaci%C3%B3n_proveedores-06.png",
+      "categoria": "common",
+      "nuevoNombre": "common-103.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-103.png",
+      "usadaEn": [
+        "planes-af.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_46e4bf22f1084b80b960a537ebdd022c~mv2.png/v1/fill/w_350",
+      "categoria": "common",
+      "nuevoNombre": "common-104.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-104.jpg",
+      "usadaEn": [
+        "planes-af.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_f44bb448cca447518f2d6a5a06efaa35~mv2.png/v1/fill/w_382",
+      "categoria": "common",
+      "nuevoNombre": "common-105.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-105.jpg",
+      "usadaEn": [
+        "planes-af.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_602ac8bc01e54030a0afaa84f2101e82~mv2.jpg/v1/fill/w_243",
+      "categoria": "common",
+      "nuevoNombre": "common-106.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-106.jpg",
+      "usadaEn": [
+        "planes-af.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_0fd7bccc64534aa9a550fd94ed5ba3c7~mv2.jpg/v1/fill/w_147",
+      "categoria": "common",
+      "nuevoNombre": "common-107.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-107.jpg",
+      "usadaEn": [
+        "pymes.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/7738b6_0fd7bccc64534aa9a550fd94ed5ba3c7~mv2.jpg",
+      "categoria": "common",
+      "nuevoNombre": "common-108.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-108.jpg",
+      "usadaEn": [
+        "pymes.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_bb91d68ce6584478835a5f77278ac668~mv2.jpg/v1/fill/w_451",
+      "categoria": "common",
+      "nuevoNombre": "common-109.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-109.jpg",
+      "usadaEn": [
+        "pymes.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/standard-quality-control-concept-m.jpg",
+      "categoria": "common",
+      "nuevoNombre": "common-110.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-110.jpg",
+      "usadaEn": [
+        "pymes.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_e30a9a982a6a4a6ba4abecb0d2d9f723~mv2.png/v1/fill/w_482",
+      "categoria": "common",
+      "nuevoNombre": "common-111.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-111.jpg",
+      "usadaEn": [
+        "pymes.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/Nunca%20m%C3%A1s%20(1).png",
+      "categoria": "common",
+      "nuevoNombre": "common-112.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-112.png",
+      "usadaEn": [
+        "pymes.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_4c6dcc219f5f4c5b9db02bb93b6baddd~mv2.jpg/v1/fill/w_501",
+      "categoria": "common",
+      "nuevoNombre": "common-113.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-113.jpg",
+      "usadaEn": [
+        "pymes.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/business-people-giving-thumbs-up.jpg",
+      "categoria": "common",
+      "nuevoNombre": "common-114.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-114.jpg",
+      "usadaEn": [
+        "pymes.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_bb91d68ce6584478835a5f77278ac668~mv2.jpg/v1/fill/w_902",
+      "categoria": "common",
+      "nuevoNombre": "common-115.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-115.jpg",
+      "usadaEn": [
+        "pymes.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_e30a9a982a6a4a6ba4abecb0d2d9f723~mv2.png/v1/fill/w_964",
+      "categoria": "common",
+      "nuevoNombre": "common-116.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-116.jpg",
+      "usadaEn": [
+        "pymes.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_4c6dcc219f5f4c5b9db02bb93b6baddd~mv2.jpg/v1/fill/w_1002",
+      "categoria": "common",
+      "nuevoNombre": "common-117.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/common/common-117.jpg",
+      "usadaEn": [
+        "pymes.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/Logos_rgb-07.png",
+      "categoria": "logos",
+      "nuevoNombre": "Logos_rgb-07.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/logos/Logos_rgb-07.png",
+      "usadaEn": [
+        "acceso-clientes.html",
+        "app-vigiladas.html",
+        "blog.html",
+        "book-online.html",
+        "canaldedenuncias.html",
+        "certibox.html",
+        "comunidad.html",
+        "condiciones-de-uso.html",
+        "contacto.html",
+        "datos-com-propietarios-comunidades.html",
+        "documbox-info.html",
+        "index.html",
+        "info-control-exp-notificaciones.html",
+        "lexbox.html",
+        "planes-af.html",
+        "politica-de-compliance.html",
+        "politica-de-cookies.html",
+        "politica-de-privacidad.html",
+        "política-de-privacidad-para-redes-sociales.html",
+        "pymes.html",
+        "tsa.html"
+      ],
+      "usoMultiple": true
+    },
+    {
+      "urlOriginal": "quality_auto/LexBox_Logo_Azul_H_edited_edited.png",
+      "categoria": "logos",
+      "nuevoNombre": "logo-2.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/logos/logo-2.png",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/LexBox_Logo_Azul_H.png",
+      "categoria": "logos",
+      "nuevoNombre": "LexBox_Logo_Azul_H.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/logos/LexBox_Logo_Azul_H.png",
+      "usadaEn": [
+        "planes-af.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/blog.png",
+      "categoria": "blog",
+      "nuevoNombre": "blog-post-1.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/blog/blog-post-1.png",
+      "usadaEn": [
+        "acceso-clientes.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/0cc494_83951fd0c8ad4cecb2d1aed64c55cba2~mv2.png/v1/fill/w_334",
+      "categoria": "blog",
+      "nuevoNombre": "blog-post-2.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/blog/blog-post-2.jpg",
+      "usadaEn": [
+        "blog.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/0cc494_83951fd0c8ad4cecb2d1aed64c55cba2~mv2.webp",
+      "categoria": "blog",
+      "nuevoNombre": "blog-post-3.webp",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/blog/blog-post-3.webp",
+      "usadaEn": [
+        "blog.html",
+        "index.html"
+      ],
+      "usoMultiple": true
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/0cc494_83951fd0c8ad4cecb2d1aed64c55cba2~mv2.png/v1/fill/w_306",
+      "categoria": "blog",
+      "nuevoNombre": "blog-post-4.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/blog/blog-post-4.jpg",
+      "usadaEn": [
+        "blog.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/0cc494_ef9db4cab51c4bd2a09b2169f06e41a0~mv2.jpg/v1/fill/w_334",
+      "categoria": "blog",
+      "nuevoNombre": "blog-post-5.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/blog/blog-post-5.jpg",
+      "usadaEn": [
+        "blog.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/0cc494_ef9db4cab51c4bd2a09b2169f06e41a0~mv2.webp",
+      "categoria": "blog",
+      "nuevoNombre": "blog-post-6.webp",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/blog/blog-post-6.webp",
+      "usadaEn": [
+        "blog.html",
+        "index.html"
+      ],
+      "usoMultiple": true
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/0cc494_ef9db4cab51c4bd2a09b2169f06e41a0~mv2.jpg/v1/fill/w_306",
+      "categoria": "blog",
+      "nuevoNombre": "blog-post-7.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/blog/blog-post-7.jpg",
+      "usadaEn": [
+        "blog.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/366f9f_b66304faf1ea4ed3ae376725aa7332b9~mv2.jpg/v1/fill/w_333",
+      "categoria": "blog",
+      "nuevoNombre": "blog-post-8.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/blog/blog-post-8.jpg",
+      "usadaEn": [
+        "blog.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/366f9f_b66304faf1ea4ed3ae376725aa7332b9~mv2.webp",
+      "categoria": "blog",
+      "nuevoNombre": "blog-post-9.webp",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/blog/blog-post-9.webp",
+      "usadaEn": [
+        "blog.html",
+        "index.html"
+      ],
+      "usoMultiple": true
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/366f9f_b66304faf1ea4ed3ae376725aa7332b9~mv2.jpg/v1/fill/w_305",
+      "categoria": "blog",
+      "nuevoNombre": "blog-post-10.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/blog/blog-post-10.jpg",
+      "usadaEn": [
+        "blog.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/6cd751_469138fc9ad145f884609f9f793af31a~mv2.png/v1/fill/w_334",
+      "categoria": "blog",
+      "nuevoNombre": "blog-post-11.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/blog/blog-post-11.jpg",
+      "usadaEn": [
+        "blog.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/6cd751_469138fc9ad145f884609f9f793af31a~mv2.webp",
+      "categoria": "blog",
+      "nuevoNombre": "blog-post-12.webp",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/blog/blog-post-12.webp",
+      "usadaEn": [
+        "blog.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/6cd751_469138fc9ad145f884609f9f793af31a~mv2.png/v1/fill/w_306",
+      "categoria": "blog",
+      "nuevoNombre": "blog-post-13.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/blog/blog-post-13.jpg",
+      "usadaEn": [
+        "blog.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/0cc494_7382cd94531f4b25af8d6c17e6eee33b~mv2.jpg/v1/fill/w_334",
+      "categoria": "blog",
+      "nuevoNombre": "blog-post-14.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/blog/blog-post-14.jpg",
+      "usadaEn": [
+        "blog.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/0cc494_7382cd94531f4b25af8d6c17e6eee33b~mv2.webp",
+      "categoria": "blog",
+      "nuevoNombre": "blog-post-15.webp",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/blog/blog-post-15.webp",
+      "usadaEn": [
+        "blog.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/0cc494_7382cd94531f4b25af8d6c17e6eee33b~mv2.jpg/v1/fill/w_306",
+      "categoria": "blog",
+      "nuevoNombre": "blog-post-16.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/blog/blog-post-16.jpg",
+      "usadaEn": [
+        "blog.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/0cc494_a45ff98dbedc4bcc8fe84202709ebdf6~mv2.jpg/v1/fill/w_333",
+      "categoria": "blog",
+      "nuevoNombre": "blog-post-17.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/blog/blog-post-17.jpg",
+      "usadaEn": [
+        "blog.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/0cc494_a45ff98dbedc4bcc8fe84202709ebdf6~mv2.webp",
+      "categoria": "blog",
+      "nuevoNombre": "blog-post-18.webp",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/blog/blog-post-18.webp",
+      "usadaEn": [
+        "blog.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/0cc494_a45ff98dbedc4bcc8fe84202709ebdf6~mv2.jpg/v1/fill/w_305",
+      "categoria": "blog",
+      "nuevoNombre": "blog-post-19.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/blog/blog-post-19.jpg",
+      "usadaEn": [
+        "blog.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/0cc494_ee90e986a0f245cc82b483abc510659f~mv2.jpg/v1/fill/w_333",
+      "categoria": "blog",
+      "nuevoNombre": "blog-post-20.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/blog/blog-post-20.jpg",
+      "usadaEn": [
+        "blog.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/0cc494_ee90e986a0f245cc82b483abc510659f~mv2.webp",
+      "categoria": "blog",
+      "nuevoNombre": "blog-post-21.webp",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/blog/blog-post-21.webp",
+      "usadaEn": [
+        "blog.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/0cc494_ee90e986a0f245cc82b483abc510659f~mv2.jpg/v1/fill/w_292",
+      "categoria": "blog",
+      "nuevoNombre": "blog-post-22.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/blog/blog-post-22.jpg",
+      "usadaEn": [
+        "blog.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/6cd751_df0942e935c340f0a8cc6e89b79e6129~mv2.png/v1/fill/w_334",
+      "categoria": "blog",
+      "nuevoNombre": "blog-post-23.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/blog/blog-post-23.jpg",
+      "usadaEn": [
+        "blog.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/6cd751_df0942e935c340f0a8cc6e89b79e6129~mv2.webp",
+      "categoria": "blog",
+      "nuevoNombre": "blog-post-24.webp",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/blog/blog-post-24.webp",
+      "usadaEn": [
+        "blog.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/6cd751_df0942e935c340f0a8cc6e89b79e6129~mv2.png/v1/fill/w_306",
+      "categoria": "blog",
+      "nuevoNombre": "blog-post-25.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/blog/blog-post-25.jpg",
+      "usadaEn": [
+        "blog.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/6cd751_052e868c76814699870923280520bbd6~mv2.jpg/v1/fill/w_333",
+      "categoria": "blog",
+      "nuevoNombre": "blog-post-26.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/blog/blog-post-26.jpg",
+      "usadaEn": [
+        "blog.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/6cd751_052e868c76814699870923280520bbd6~mv2.webp",
+      "categoria": "blog",
+      "nuevoNombre": "blog-post-27.webp",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/blog/blog-post-27.webp",
+      "usadaEn": [
+        "blog.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/6cd751_052e868c76814699870923280520bbd6~mv2.jpg/v1/fill/w_305",
+      "categoria": "blog",
+      "nuevoNombre": "blog-post-28.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/blog/blog-post-28.jpg",
+      "usadaEn": [
+        "blog.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/0cc494_83951fd0c8ad4cecb2d1aed64c55cba2~mv2.png",
+      "categoria": "blog",
+      "nuevoNombre": "blog-post-29.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/blog/blog-post-29.png",
+      "usadaEn": [
+        "blog.html",
+        "index.html"
+      ],
+      "usoMultiple": true
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/0cc494_83951fd0c8ad4cecb2d1aed64c55cba2~mv2.png/v1/fill/w_983",
+      "categoria": "blog",
+      "nuevoNombre": "blog-post-30.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/blog/blog-post-30.jpg",
+      "usadaEn": [
+        "blog.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/0cc494_ef9db4cab51c4bd2a09b2169f06e41a0~mv2.jpg",
+      "categoria": "blog",
+      "nuevoNombre": "blog-post-31.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/blog/blog-post-31.jpg",
+      "usadaEn": [
+        "blog.html",
+        "index.html"
+      ],
+      "usoMultiple": true
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/0cc494_ef9db4cab51c4bd2a09b2169f06e41a0~mv2.jpg/v1/fill/w_1336",
+      "categoria": "blog",
+      "nuevoNombre": "blog-post-32.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/blog/blog-post-32.jpg",
+      "usadaEn": [
+        "blog.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/0cc494_ef9db4cab51c4bd2a09b2169f06e41a0~mv2.jpg/v1/fill/w_1224",
+      "categoria": "blog",
+      "nuevoNombre": "blog-post-33.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/blog/blog-post-33.jpg",
+      "usadaEn": [
+        "blog.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/366f9f_b66304faf1ea4ed3ae376725aa7332b9~mv2.jpg",
+      "categoria": "blog",
+      "nuevoNombre": "blog-post-34.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/blog/blog-post-34.jpg",
+      "usadaEn": [
+        "blog.html",
+        "index.html"
+      ],
+      "usoMultiple": true
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/366f9f_b66304faf1ea4ed3ae376725aa7332b9~mv2.jpg/v1/fill/w_622",
+      "categoria": "blog",
+      "nuevoNombre": "blog-post-35.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/blog/blog-post-35.jpg",
+      "usadaEn": [
+        "blog.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/6cd751_469138fc9ad145f884609f9f793af31a~mv2.png",
+      "categoria": "blog",
+      "nuevoNombre": "blog-post-36.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/blog/blog-post-36.png",
+      "usadaEn": [
+        "blog.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/6cd751_469138fc9ad145f884609f9f793af31a~mv2.png/v1/fill/w_873",
+      "categoria": "blog",
+      "nuevoNombre": "blog-post-37.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/blog/blog-post-37.jpg",
+      "usadaEn": [
+        "blog.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/0cc494_7382cd94531f4b25af8d6c17e6eee33b~mv2.jpg",
+      "categoria": "blog",
+      "nuevoNombre": "blog-post-38.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/blog/blog-post-38.jpg",
+      "usadaEn": [
+        "blog.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/0cc494_7382cd94531f4b25af8d6c17e6eee33b~mv2.jpg/v1/fill/w_1336",
+      "categoria": "blog",
+      "nuevoNombre": "blog-post-39.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/blog/blog-post-39.jpg",
+      "usadaEn": [
+        "blog.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/0cc494_7382cd94531f4b25af8d6c17e6eee33b~mv2.jpg/v1/fill/w_1224",
+      "categoria": "blog",
+      "nuevoNombre": "blog-post-40.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/blog/blog-post-40.jpg",
+      "usadaEn": [
+        "blog.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/0cc494_a45ff98dbedc4bcc8fe84202709ebdf6~mv2.jpg",
+      "categoria": "blog",
+      "nuevoNombre": "blog-post-41.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/blog/blog-post-41.jpg",
+      "usadaEn": [
+        "blog.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/0cc494_a45ff98dbedc4bcc8fe84202709ebdf6~mv2.jpg/v1/fill/w_1332",
+      "categoria": "blog",
+      "nuevoNombre": "blog-post-42.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/blog/blog-post-42.jpg",
+      "usadaEn": [
+        "blog.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/0cc494_a45ff98dbedc4bcc8fe84202709ebdf6~mv2.jpg/v1/fill/w_1220",
+      "categoria": "blog",
+      "nuevoNombre": "blog-post-43.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/blog/blog-post-43.jpg",
+      "usadaEn": [
+        "blog.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/0cc494_ee90e986a0f245cc82b483abc510659f~mv2.jpg",
+      "categoria": "blog",
+      "nuevoNombre": "blog-post-44.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/blog/blog-post-44.jpg",
+      "usadaEn": [
+        "blog.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/0cc494_ee90e986a0f245cc82b483abc510659f~mv2.jpg/v1/fill/w_409",
+      "categoria": "blog",
+      "nuevoNombre": "blog-post-45.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/blog/blog-post-45.jpg",
+      "usadaEn": [
+        "blog.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/6cd751_df0942e935c340f0a8cc6e89b79e6129~mv2.png",
+      "categoria": "blog",
+      "nuevoNombre": "blog-post-46.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/blog/blog-post-46.png",
+      "usadaEn": [
+        "blog.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/6cd751_df0942e935c340f0a8cc6e89b79e6129~mv2.png/v1/fill/w_871",
+      "categoria": "blog",
+      "nuevoNombre": "blog-post-47.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/blog/blog-post-47.jpg",
+      "usadaEn": [
+        "blog.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/6cd751_052e868c76814699870923280520bbd6~mv2.jpg",
+      "categoria": "blog",
+      "nuevoNombre": "blog-post-48.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/blog/blog-post-48.jpg",
+      "usadaEn": [
+        "blog.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/6cd751_052e868c76814699870923280520bbd6~mv2.jpg/v1/fill/w_1332",
+      "categoria": "blog",
+      "nuevoNombre": "blog-post-49.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/blog/blog-post-49.jpg",
+      "usadaEn": [
+        "blog.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/6cd751_052e868c76814699870923280520bbd6~mv2.jpg/v1/fill/w_1220",
+      "categoria": "blog",
+      "nuevoNombre": "blog-post-50.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/blog/blog-post-50.jpg",
+      "usadaEn": [
+        "blog.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/Recurso%201icono_app%20vigiladas.png",
+      "categoria": "icons",
+      "nuevoNombre": "icon-1.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/icons/icon-1.png",
+      "usadaEn": [
+        "app-vigiladas.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/Recurso%205icono.png",
+      "categoria": "icons",
+      "nuevoNombre": "Recurso%205icono.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/icons/Recurso%205icono.png",
+      "usadaEn": [
+        "datos-com-propietarios-comunidades.html",
+        "index.html"
+      ],
+      "usoMultiple": true
+    },
+    {
+      "urlOriginal": "quality_auto/online-message-blog-chat-communication-envelop-graphic-icon-concept.jpg",
+      "categoria": "icons",
+      "nuevoNombre": "icon-3.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/icons/icon-3.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/Recurso%203icono.png",
+      "categoria": "icons",
+      "nuevoNombre": "Recurso%203icono.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/icons/Recurso%203icono.png",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/Recurso%202icono_autonomo.png",
+      "categoria": "icons",
+      "nuevoNombre": "Recurso%202icono_autonomo.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/icons/Recurso%202icono_autonomo.png",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/Recurso%206icono.png",
+      "categoria": "icons",
+      "nuevoNombre": "Recurso%206icono.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/icons/Recurso%206icono.png",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/Recurso%204icono.png",
+      "categoria": "icons",
+      "nuevoNombre": "Recurso%204icono.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/icons/Recurso%204icono.png",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/11062b_35ef1b21c05a495db993f1af5b0163d0~mv2.jpg/v1/crop/x_1680",
+      "categoria": "servicios",
+      "nuevoNombre": "servicios-1.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/servicios/servicios-1.jpg",
+      "usadaEn": [
+        "certibox.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/Escribiendo%20en%20un%20ordenador.jpg",
+      "categoria": "servicios",
+      "nuevoNombre": "servicios-2.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/servicios/servicios-2.jpg",
+      "usadaEn": [
+        "certibox.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_5f57ae34843b4475a90f1a5e6531a43c~mv2.png/v1/fill/w_142",
+      "categoria": "servicios",
+      "nuevoNombre": "servicios-3.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/servicios/servicios-3.jpg",
+      "usadaEn": [
+        "certibox.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/45bf13_5f57ae34843b4475a90f1a5e6531a43c~mv2.png",
+      "categoria": "servicios",
+      "nuevoNombre": "servicios-4.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/servicios/servicios-4.png",
+      "usadaEn": [
+        "certibox.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_5f57ae34843b4475a90f1a5e6531a43c~mv2.png/v1/fill/w_284",
+      "categoria": "servicios",
+      "nuevoNombre": "servicios-5.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/servicios/servicios-5.jpg",
+      "usadaEn": [
+        "certibox.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_56a9539094414f40ae3327e35ea694ca~mv2.png",
+      "categoria": "servicios",
+      "nuevoNombre": "servicios-6.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/servicios/servicios-6.png",
+      "usadaEn": [
+        "certibox.html",
+        "contacto.html",
+        "index.html",
+        "lexbox.html",
+        "pymes.html",
+        "servicios-as.html"
+      ],
+      "usoMultiple": true
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_fb72129656844c119d11423d67dd3e5f~mv2.jpg/v1/fill/w_147",
+      "categoria": "servicios",
+      "nuevoNombre": "servicios-7.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/servicios/servicios-7.jpg",
+      "usadaEn": [
+        "documbox-info.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/7738b6_fb72129656844c119d11423d67dd3e5f~mv2.jpg",
+      "categoria": "servicios",
+      "nuevoNombre": "servicios-8.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/servicios/servicios-8.jpg",
+      "usadaEn": [
+        "documbox-info.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_a65c1171d8ef4774a3acc44f377a6b68~mv2.png/v1/crop/x_0",
+      "categoria": "servicios",
+      "nuevoNombre": "servicios-9.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/servicios/servicios-9.jpg",
+      "usadaEn": [
+        "documbox-info.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/DOCUMBOX_homologaci%C3%B3n_proveedores-08.png",
+      "categoria": "servicios",
+      "nuevoNombre": "servicios-10.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/servicios/servicios-10.png",
+      "usadaEn": [
+        "documbox-info.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_a2a9ffff7eb449e68461efb824784b0d~mv2.jpg/v1/fill/w_238",
+      "categoria": "servicios",
+      "nuevoNombre": "servicios-11.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/servicios/servicios-11.jpg",
+      "usadaEn": [
+        "documbox-info.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/man-doing-professional-home-cleaning-service.jpg",
+      "categoria": "servicios",
+      "nuevoNombre": "servicios-12.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/servicios/servicios-12.jpg",
+      "usadaEn": [
+        "documbox-info.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_fbe0ea0d14fa4c79920be28d7ee8d291~mv2.jpg/v1/fill/w_147",
+      "categoria": "servicios",
+      "nuevoNombre": "servicios-13.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/servicios/servicios-13.jpg",
+      "usadaEn": [
+        "documbox-info.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/7738b6_fbe0ea0d14fa4c79920be28d7ee8d291~mv2.jpg",
+      "categoria": "servicios",
+      "nuevoNombre": "servicios-14.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/servicios/servicios-14.jpg",
+      "usadaEn": [
+        "documbox-info.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_a2a9ffff7eb449e68461efb824784b0d~mv2.jpg/v1/fill/w_476",
+      "categoria": "servicios",
+      "nuevoNombre": "servicios-15.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/servicios/servicios-15.jpg",
+      "usadaEn": [
+        "documbox-info.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_16c1c3819e454a5da493bcdb7b2ac910~mv2.jpg/v1/fill/w_122",
+      "categoria": "ui",
+      "nuevoNombre": "ui-1.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/ui/ui-1.jpg",
+      "usadaEn": [
+        "contacto.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/7738b6_16c1c3819e454a5da493bcdb7b2ac910~mv2.jpg",
+      "categoria": "ui",
+      "nuevoNombre": "ui-2.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/ui/ui-2.jpg",
+      "usadaEn": [
+        "contacto.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_01e6ece1b8784183a1b6970c60b1c397~mv2.jpg/v1/fill/w_79",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-1.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-1.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/7738b6_01e6ece1b8784183a1b6970c60b1c397~mv2.jpg",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-2.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-2.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_a362deb4e77641f78f1fe1c158b74ede~mv2.jpg/v1/fill/w_309",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-3.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-3.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/wooden-houses-shelf-home-decor-detail.jpg",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-4.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-4.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/11062b_bbd890290e2c407486b46a0fc755d5b0~mv2.jpg/v1/fill/w_309",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-5.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-5.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/En%20la%20oficina.jpg",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-6.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-6.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_16c1c3819e454a5da493bcdb7b2ac910~mv2.jpg/v1/fill/w_309",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-7.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-7.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/Dise%C3%B1o%20sin%20t%C3%ADtulo_edited.jpg",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-8.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-8.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_2cf3028c0ab8472eae91d21dbe6a25ae~mv2.png/v1/fill/w_46",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-9.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-9.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/CEN_amarillo.png",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-10.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-10.png",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_675fd793de0545a6835c63ae8460647b~mv2.png/v1/crop/x_0",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-11.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-11.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_602ac8bc01e54030a0afaa84f2101e82~mv2.jpg/v1/fill/w_107",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-12.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-12.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/image_edited.jpg",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-13.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-13.jpg",
+      "usadaEn": [
+        "index.html",
+        "planes-af.html"
+      ],
+      "usoMultiple": true
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_d63e43d81db340db8973b6667d51ed95~mv2.jpg/v1/crop/x_237",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-14.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-14.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/DocumBox.jpg",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-15.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-15.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_1ac3e59e66ce47afb151cb07ac93dd57~mv2.jpeg/v1/fill/w_39",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-16.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-16.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/7738b6_1ac3e59e66ce47afb151cb07ac93dd57~mv2.jpeg",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-17.jpeg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-17.jpeg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_aec55d5ff06e4b368b345e505f306810~mv2.jpg/v1/fill/w_896",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-18.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-18.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/freepik__the-style-is-candid-image-photo.jpg",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-19.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-19.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_1b793389e4d74684966f3d0f3d43332e~mv2.jpg/v1/fill/w_147",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-20.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-20.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/7738b6_1b793389e4d74684966f3d0f3d43332e~mv2.jpg",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-21.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-21.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_c9aac9417d6e4b1c9e4df3d6e8b2d7b7~mv2.png/v1/crop/x_0",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-22.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-22.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/certibox_edited.png",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-23.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-23.png",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_97199bb1a5ca4d7eb5d4abb8c23cf25f~mv2.jpg/v1/crop/x_0",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-24.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-24.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/Captura%20de%20pantalla%202026-01-28%20115234_ed.jpg",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-25.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-25.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_16d10d8542334e219cd2054bcf5e4064~mv2.png/v1/crop/x_0",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-26.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-26.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/lexbox_edited_edited.png",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-27.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-27.png",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/11062b_e4a7ccc4d3764f7fa73ba88b6392e018~mv2.jpg/v1/crop/x_0",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-28.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-28.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/Calendario%20Anual.jpg",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-29.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-29.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_5a6c27d145514278b99e3adab35e3b52~mv2.jpg/v1/crop/x_0",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-30.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-30.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/DOCUMBOX_homoPROVEE-05_edited_edited_edi.jpg",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-31.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-31.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_6c7ca19ad7a04e1aab403077973e8c77~mv2.jpg/v1/crop/x_576",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-32.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-32.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_7918dde9c6c042eebe19f4073fb9368e~mv2.png/v1/fill/w_65",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-33.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-33.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_0933ed36a168472082b40509f42f5614~mv2.png/v1/fill/w_65",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-34.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-34.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_c2598934289f44ff9efe80c340e27ba9~mv2.png/v1/fill/w_71",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-35.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-35.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_56eb556e57dc47cda4371f4c94933624~mv2.png/v1/fill/w_64",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-36.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-36.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_b3a001a78ed54fc6980fd1acdad6ddc2~mv2.png/v1/fill/w_71",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-37.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-37.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_1d94cd8424df412ca1438e2cb6faa193~mv2.jpg/v1/fill/w_48",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-38.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-38.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/7738b6_1d94cd8424df412ca1438e2cb6faa193~mv2.jpg",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-39.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-39.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_5d2fe1010f55445fb0a896a384fa908f~mv2.png/v1/fit/w_168",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-40.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-40.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/45bf13_5d2fe1010f55445fb0a896a384fa908f~mv2.png",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-41.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-41.png",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_77218e5f96854408824061ea4788348a~mv2.png/v1/fit/w_168",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-42.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-42.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/45bf13_77218e5f96854408824061ea4788348a~mv2.png",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-43.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-43.png",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_2e52affb09c1487ba21937bd8f9cf8e2~mv2.png/v1/fit/w_168",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-44.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-44.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/45bf13_2e52affb09c1487ba21937bd8f9cf8e2~mv2.png",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-45.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-45.png",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_1df776ac2d964352b7554f224c01f5a2~mv2.png/v1/fit/w_168",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-46.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-46.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/45bf13_1df776ac2d964352b7554f224c01f5a2~mv2.png",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-47.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-47.png",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_7399d4aa4b764188a0d3fe34008b4e02~mv2.png/v1/fit/w_168",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-48.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-48.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/45bf13_7399d4aa4b764188a0d3fe34008b4e02~mv2.png",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-49.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-49.png",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_466bbb24f5bb4d3f8a80a607ef2f1355~mv2.png/v1/fit/w_168",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-50.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-50.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/45bf13_466bbb24f5bb4d3f8a80a607ef2f1355~mv2.png",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-51.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-51.png",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_3173dd32dcd249a9a6297f1876935539~mv2.jpg/v1/fill/w_83",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-52.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-52.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/7738b6_3173dd32dcd249a9a6297f1876935539~mv2.jpg",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-53.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-53.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_81697da65fc94e44902d0d8ae0a3ef7f~mv2.png/v1/fill/w_72",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-54.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-54.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/0e753d_de7ce88d30444e06855bfe6d31c603b5~mv2.webp/v1/fill/w_72",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-55.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-55.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_e79ea0fa21b948c99ae81ed1e4d0c480~mv2.png/v1/fill/w_72",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-56.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-56.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/732f95_9402722129cc4aeda921905b4f676806~mv2.png/v1/fill/w_72",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-57.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-57.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_9fd7ba7a077e4e7ab7c14e7c7cefefaf~mv2.png/v1/fill/w_72",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-58.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-58.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/732f95_7a21171c001549c4b63f08f22fd94831~mv2.jpeg/v1/fill/w_72",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-59.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-59.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/0cc494_83951fd0c8ad4cecb2d1aed64c55cba2~mv2.png/v1/fill/w_443",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-60.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-60.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/0cc494_83951fd0c8ad4cecb2d1aed64c55cba2~mv2.png/v1/fill/w_227",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-61.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-61.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/0cc494_ef9db4cab51c4bd2a09b2169f06e41a0~mv2.jpg/v1/fill/w_250",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-62.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-62.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/0cc494_ef9db4cab51c4bd2a09b2169f06e41a0~mv2.jpg/v1/fill/w_227",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-63.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-63.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/366f9f_b66304faf1ea4ed3ae376725aa7332b9~mv2.jpg/v1/fill/w_443",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-64.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-64.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/366f9f_b66304faf1ea4ed3ae376725aa7332b9~mv2.jpg/v1/fill/w_227",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-65.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-65.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_a3cce1736e8b40e282001a4925e5924e~mv2.jpg/v1/fit/w_214",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-66.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-66.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/45bf13_a3cce1736e8b40e282001a4925e5924e~mv2.jpg",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-67.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-67.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_c515718beb6945058d9e393b76fd8ef4~mv2.jpg/v1/fit/w_214",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-68.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-68.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/45bf13_c515718beb6945058d9e393b76fd8ef4~mv2.jpg",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-69.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-69.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_c1ce58db4125404fbfa0e4c527dc2b67~mv2.jpg/v1/fit/w_214",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-70.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-70.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/45bf13_c1ce58db4125404fbfa0e4c527dc2b67~mv2.jpg",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-71.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-71.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_e6301e4eec00405bbb936e96d4372923~mv2.jpg/v1/fit/w_214",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-72.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-72.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/45bf13_e6301e4eec00405bbb936e96d4372923~mv2.jpg",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-73.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-73.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_c99e960cb19142b3a79126bf49fcb8f9~mv2.jpg/v1/fit/w_214",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-74.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-74.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/45bf13_c99e960cb19142b3a79126bf49fcb8f9~mv2.jpg",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-75.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-75.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_97d7ecd264934bd583aee5261f501237~mv2.jpg/v1/fit/w_214",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-76.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-76.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/45bf13_97d7ecd264934bd583aee5261f501237~mv2.jpg",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-77.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-77.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "media/emptystate.85a4add5.svg",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-78.svg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-78.svg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_a362deb4e77641f78f1fe1c158b74ede~mv2.jpg/v1/fill/w_618",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-79.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-79.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/11062b_bbd890290e2c407486b46a0fc755d5b0~mv2.jpg/v1/fill/w_618",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-80.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-80.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_16c1c3819e454a5da493bcdb7b2ac910~mv2.jpg/v1/fill/w_618",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-81.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-81.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_2cf3028c0ab8472eae91d21dbe6a25ae~mv2.png/v1/fill/w_92",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-82.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-82.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_602ac8bc01e54030a0afaa84f2101e82~mv2.jpg/v1/fill/w_214",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-83.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-83.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_7918dde9c6c042eebe19f4073fb9368e~mv2.png/v1/fill/w_91",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-84.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-84.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_0933ed36a168472082b40509f42f5614~mv2.png/v1/fill/w_91",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-85.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-85.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_c2598934289f44ff9efe80c340e27ba9~mv2.png/v1/fill/w_104",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-86.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-86.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_56eb556e57dc47cda4371f4c94933624~mv2.png/v1/fill/w_90",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-87.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-87.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_b3a001a78ed54fc6980fd1acdad6ddc2~mv2.png/v1/fill/w_99",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-88.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-88.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_5d2fe1010f55445fb0a896a384fa908f~mv2.png/v1/fit/w_180",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-89.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-89.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_77218e5f96854408824061ea4788348a~mv2.png/v1/fit/w_180",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-90.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-90.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_2e52affb09c1487ba21937bd8f9cf8e2~mv2.png/v1/fit/w_180",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-91.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-91.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_1df776ac2d964352b7554f224c01f5a2~mv2.png/v1/fit/w_180",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-92.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-92.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_7399d4aa4b764188a0d3fe34008b4e02~mv2.png/v1/fit/w_180",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-93.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-93.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_466bbb24f5bb4d3f8a80a607ef2f1355~mv2.png/v1/fit/w_180",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-94.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-94.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_81697da65fc94e44902d0d8ae0a3ef7f~mv2.png/v1/fill/w_144",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-95.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-95.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/0e753d_de7ce88d30444e06855bfe6d31c603b5~mv2.webp/v1/fill/w_144",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-96.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-96.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_e79ea0fa21b948c99ae81ed1e4d0c480~mv2.png/v1/fill/w_144",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-97.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-97.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/732f95_9402722129cc4aeda921905b4f676806~mv2.png/v1/fill/w_144",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-98.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-98.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_9fd7ba7a077e4e7ab7c14e7c7cefefaf~mv2.png/v1/fill/w_144",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-99.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-99.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/732f95_7a21171c001549c4b63f08f22fd94831~mv2.jpeg/v1/fill/w_144",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-100.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-100.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/0cc494_83951fd0c8ad4cecb2d1aed64c55cba2~mv2.png/v1/fill/w_1305",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-101.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-101.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/0cc494_83951fd0c8ad4cecb2d1aed64c55cba2~mv2.png/v1/fill/w_908",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-102.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-102.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/0cc494_ef9db4cab51c4bd2a09b2169f06e41a0~mv2.jpg/v1/fill/w_1000",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-103.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-103.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/0cc494_ef9db4cab51c4bd2a09b2169f06e41a0~mv2.jpg/v1/fill/w_908",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-104.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-104.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/366f9f_b66304faf1ea4ed3ae376725aa7332b9~mv2.jpg/v1/fill/w_828",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-105.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-105.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_a3cce1736e8b40e282001a4925e5924e~mv2.jpg/v1/fit/w_344",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-106.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-106.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_c515718beb6945058d9e393b76fd8ef4~mv2.jpg/v1/fit/w_344",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-107.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-107.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_c1ce58db4125404fbfa0e4c527dc2b67~mv2.jpg/v1/fit/w_344",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-108.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-108.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_e6301e4eec00405bbb936e96d4372923~mv2.jpg/v1/fit/w_344",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-109.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-109.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_c99e960cb19142b3a79126bf49fcb8f9~mv2.jpg/v1/fit/w_344",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-110.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-110.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_97d7ecd264934bd583aee5261f501237~mv2.jpg/v1/fit/w_344",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-111.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-111.jpg",
+      "usadaEn": [
+        "index.html"
+      ],
+      "usoMultiple": false
+    },
+    {
+      "urlOriginal": "quality_auto/CEN-removebg-preview.png",
+      "categoria": "backgrounds",
+      "nuevoNombre": "backgrounds-1.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/backgrounds/backgrounds-1.png",
+      "usadaEn": [
+        "info-control-exp-notificaciones.html",
+        "planes-af.html"
+      ],
+      "usoMultiple": true
+    }
+  ]
+}

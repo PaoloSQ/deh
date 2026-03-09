@@ -1,0 +1,108 @@
+/**
+ * Variables CSS extraídas automáticamente del sitio original
+ * Generado: 2026-03-08T00:44:10.631Z
+ */
+
+:root {
+  /* === COLORES === */
+  --primary: rgb(0, 0, 0);
+  --secondary: #FFFFFF;
+  --accent: #fff;
+  --dark: rgb(51, 52, 63);
+  --light: rgb(255, 255, 255);
+  --text-primary: #33343F;
+  --text-secondary: #2b5672;
+  --border: #000;
+  --background: #E2E2E2;
+  --color-10: rgb(102, 103, 111);
+  --color-11: #5d5d61;
+  --color-12: #CC0000;
+  --color-13: #8F8F8F;
+  --color-14: #df3131;
+  --color-15: #e03939;
+
+  /* === FUENTES === */
+  --font-arial: 'Arial', sans-serif;
+  --font-helvetica: 'Helvetica', sans-serif;
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-madefor: 'Madefor', sans-serif;
+  --font-var--wix-ui-tpa-text-field-main-text-font-family: 'var(--wix-ui-tpa-text-field-main-text-font-family', sans-serif;
+  --font-var--wix-ui-tpa-text-field-readonly-text-font-family: 'var(--wix-ui-tpa-text-field-readonly-text-font-family', sans-serif;
+  --font-var--wst-paragraph-2-font-family: 'var(--wst-paragraph-2-font-family)', sans-serif;
+  --font-var--wix-ui-tpa-text-field-placeholder-font-family: 'var(--wix-ui-tpa-text-field-placeholder-font-family', sans-serif;
+  --font-var--wix-ui-tpa-text-field-main-label-font-family: 'var(--wix-ui-tpa-text-field-main-label-font-family', sans-serif;
+  --font-var--wix-ui-tpa-text-field-readonly-label-font-family: 'var(--wix-ui-tpa-text-field-readonly-label-font-family', sans-serif;
+  --font-var--wix-ui-tpa-text-field-char-count-font-family: 'var(--wix-ui-tpa-text-field-char-count-font-family', sans-serif;
+  --font-var--wix-ui-tpa-text-field-helper-text-font-family: 'var(--wix-ui-tpa-text-field-helper-text-font-family', sans-serif;
+  --font-var--wix-ui-tpa-text-main-text-font-family: 'var(--wix-ui-tpa-text-main-text-font-family', sans-serif;
+  --font-var--wix-ui-tpa-actions-menu-layout-item-item-font-family: 'var(--wix-ui-tpa-actions-menu-layout-item-item-font-family', sans-serif;
+  --font-var--wix-ui-tpa-actions-menu-layout-item-item-subtitle-font-family: 'var(--wix-ui-tpa-actions-menu-layout-item-item-subtitle-font-family', sans-serif;
+  --font-var--wix-ui-tpa-picker-font-style-family: 'var(--wix-ui-tpa-picker-font-style-family', sans-serif;
+  --font-var--wix-ui-tpa-text-button-main-text-font-family: 'var(--wix-ui-tpa-text-button-main-text-font-family', sans-serif;
+  --font-var--wix-ui-tpa-button-hover-text-font-family: 'var(--wix-ui-tpa-button-hover-text-font-family', sans-serif;
+  --font-var--wix-ui-tpa-button-main-text-font-family: 'var(--wix-ui-tpa-button-main-text-font-family', sans-serif;
+  --font-var--wix-ui-tpa-actions-menu-layout-item-font-family: 'var(--wix-ui-tpa-actions-menu-layout-item-font-family)', sans-serif;
+  --font-var--wix-ui-tpa-actions-menu-layout-item-subtitle-font-family: 'var(--wix-ui-tpa-actions-menu-layout-item-subtitle-font-family)', sans-serif;
+  --font-var--wix-font-page-title-family: 'var(--wix-font-Page-title-family)', sans-serif;
+  --font-var--wix-font-body-m-family: 'var(--wix-font-Body-M-family)', sans-serif;
+  --font-var--cardbodytextfont-family: 'var(--cardBodyTextFont-family)', sans-serif;
+  --font-sans-serif: 'sans-serif', sans-serif;
+  --font-var--toastify-font-family: 'var(--toastify-font-family)', sans-serif;
+  --font-var--textfieldfont-family: 'var(--textFieldFont-family)', sans-serif;
+  --font-var--groupnamefont-family: 'var(--groupNameFont-family)', sans-serif;
+  --font-var--groupinfofont-family: 'var(--groupInfoFont-family)', sans-serif;
+  --font-var--textbuttonfont-family: 'var(--textButtonFont-family)', sans-serif;
+  --font-var--listwidgettitlefont-family: 'var(--listWidgetTitleFont-family)', sans-serif;
+  --font-helveticaneuew01-45ligh: 'HelveticaNeueW01-45Ligh', sans-serif;
+  --font-consolas: 'Consolas', sans-serif;
+  --font-system-ui: 'system-ui', sans-serif;
+  --font-inheritqhpbsupositionrelativemedium-gap-qhpbsupadding-top50pxlarge-gap-qhpbsupadding-top100pxhtmlheight100: 'inherit}.qHpbsu{position:relative}.medium-gap .qHpbsu{padding-top:50px}.large-gap .qHpbsu{padding-top:100px}html{height:100%', sans-serif;
+  --font-inheritb79epnbackground-colorrgbvar--postlistwidgetbackgroundcolormobile: 'inherit}.b79EPn{background-color:rgb(var(--postListWidgetBackgroundColorMobile', sans-serif;
+  --font-inheritc3vdpv-nav-arrows-container-svgfillrgbvar--postlistwidgetsliderarrowscolor: 'inherit}.c3VDPV .nav-arrows-container svg{fill:rgb(var(--postListWidgetSliderArrowsColor', sans-serif;
+  --font-montserrat: 'montserrat', sans-serif;
+  --font-avenir-lt-w0135-light1475496: 'avenir-lt-w01_35-light1475496', sans-serif;
+  --font-poppins-semibold: 'poppins-semibold', sans-serif;
+  --font-poppins: 'poppins', sans-serif;
+  --font-raleway-semibold: 'raleway-semibold', sans-serif;
+  --font-raleway: 'raleway', sans-serif;
+  --font-wf3f0d4ffb6bdc4c1cb6dc005c9: 'wf_3f0d4ffb6bdc4c1cb6dc005c9', sans-serif;
+  --font-raleway-v2: 'raleway-v2', sans-serif;
+  --font-wff769ecd79d6840d8a5015d656: 'wf_f769ecd79d6840d8a5015d656', sans-serif;
+  --font-avenir-lt-w0185-heavy1475544: 'avenir-lt-w01_85-heavy1475544', sans-serif;
+  --font-wfonta3f6373f0d4ffb6bdc4c1cb6dc005c9dadbf65: 'wfont_a3f637_3f0d4ffb6bdc4c1cb6dc005c9dadbf65', sans-serif;
+  --font-wfont774146f769ecd79d6840d8a5015d656b8c61c2: 'wfont_774146_f769ecd79d6840d8a5015d656b8c61c2', sans-serif;
+  --font-helveticaneuew01-thin: 'HelveticaNeueW01-Thin', sans-serif;
+  --font-helveticaneuew01-ultlt: 'HelveticaNeueW01-UltLt', sans-serif;
+  --font-helvetica-tooltip-bodybeforecontent: 'Helvetica} .tooltip-body::before{content:', sans-serif;
+  --font-helveticaneuew01-55roma: 'HelveticaNeueW01-55Roma', sans-serif;
+  --font-: '\', sans-serif;
+
+  /* === TAMAÑOS DE FUENTE === */
+  --font-size-1: 12px;
+  --font-size-2: 15px;
+  --font-size-3: 14px;
+  --font-size-4: 16px;
+  --font-size-5: 18px;
+  --font-size-6: 13px;
+  --font-size-7: 30px;
+  --font-size-8: 26px;
+  --font-size-9: 19px;
+  --font-size-10: 20px;
+
+  /* === ESPACIADOS === */
+  --spacing-1: 0px;
+  --spacing-2: 1rem;
+  --spacing-3: 1px;
+  --spacing-4: 2px;
+  --spacing-5: 3px;
+  --spacing-6: 4px;
+  --spacing-7: 5px;
+  --spacing-8: 6px;
+  --spacing-9: 7px;
+  --spacing-10: 8px;
+  --spacing-11: 9px;
+  --spacing-12: 10px;
+  --spacing-13: 11px;
+  --spacing-14: 12px;
+  --spacing-15: 13px;
+}

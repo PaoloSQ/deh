@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reporte de Comparación - DEH Online</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+      padding: 20px;
+    }
+    
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #116dff;
+    }
+    
+    .summary {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .summary h2 { margin-bottom: 15px; }
+    
+    .stats {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    
+    .stat {
+      flex: 1;
+      min-width: 150px;
+      padding: 15px;
+      background: #f8f9fa;
+      border-radius: 6px;
+      text-align: center;
+    }
+    
+    .stat-value {
+      font-size: 2em;
+      font-weight: bold;
+      color: #116dff;
+    }
+    
+    .stat-label { color: #666; font-size: 0.9em; }
+    
+    .pages { display: flex; flex-direction: column; gap: 20px; }
+    
+    .page-card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    
+    .page-header {
+      padding: 15px 20px;
+      background: #116dff;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .page-header h3 { font-size: 1.2em; }
+    
+    .page-diff {
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 0.9em;
+    }
+    
+    .diff-low { background: #28a745; color: white; }
+    .diff-medium { background: #ffc107; color: #333; }
+    .diff-high { background: #dc3545; color: white; }
+    
+    .viewports { display: flex; flex-wrap: wrap; }
+    
+    .viewport {
+      flex: 1;
+      min-width: 300px;
+      padding: 15px;
+      border-right: 1px solid #eee;
+    }
+    
+    .viewport:last-child { border-right: none; }
+    
+    .viewport h4 {
+      margin-bottom: 10px;
+      color: #666;
+    }
+    
+    .images {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .images img {
+      max-width: 100%;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    
+    .image-label {
+      font-size: 0.8em;
+      color: #666;
+      margin-bottom: 3px;
+    }
+    
+    .legend {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    
+    .legend-color {
+      width: 20px;
+      height: 20px;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📊 Reporte de Comparación Visual</h1>
+    
+    <div class="summary">
+      <h2>Resumen</h2>
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-value">1</div>
+          <div class="stat-label">Páginas comparadas</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">72.28%</div>
+          <div class="stat-label">Diferencia promedio</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">0</div>
+          <div class="stat-label">Páginas casi idénticas</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">1</div>
+          <div class="stat-label">Necesitan ajustes</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="legend">
+      <div class="legend-item">
+        <div class="legend-color" style="background: #28a745;"></div>
+        <span>&lt; 1% diferencia</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-color" style="background: #ffc107;"></div>
+        <span>1-5% diferencia</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-color" style="background: #dc3545;"></div>
+        <span>&gt; 5% diferencia</span>
+      </div>
+    </div>
+    
+    <div class="pages">
+      
+        <div class="page-card">
+          <div class="page-header">
+            <h3>🏠 Home</h3>
+            <span class="page-diff diff-high">
+              72.28%
+            </span>
+          </div>
+          <div class="viewports">
+            
+              <div class="viewport">
+                <h4>desktop (72.28%)</h4>
+                <div class="images">
+                  <div>
+                    <div class="image-label">Original</div>
+                    <img src="screenshot-desktop-original-index.png" alt="Original">
+                  </div>
+                  <div>
+                    <div class="image-label">Nuevo</div>
+                    <img src="screenshot-desktop-new-index.png" alt="Nuevo">
+                  </div>
+                  <div>
+                    <div class="image-label">Diferencias</div>
+                    <img src="diff-desktop-index.png" alt="Diferencias">
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</body>
+</html>

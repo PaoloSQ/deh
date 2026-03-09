@@ -1,0 +1,229 @@
+{
+  "pagina": "index",
+  "fecha": "2026-03-08T01:35:12.096Z",
+  "total": 52,
+  "imagenes": {
+    "hero": [],
+    "servicios": [
+      {
+        "url": "https://static.wixstatic.com/media/7738b6_c9aac9417d6e4b1c9e4df3d6e8b2d7b7~mv2.png",
+        "extension": ".png"
+      },
+      {
+        "url": "https://static.wixstatic.com/media/7738b6_16d10d8542334e219cd2054bcf5e4064~mv2.png",
+        "extension": ".png"
+      },
+      {
+        "url": "https://static.wixstatic.com/media/7738b6_5a6c27d145514278b99e3adab35e3b52~mv2.jpg",
+        "extension": ".jpg"
+      }
+    ],
+    "partners": [
+      {
+        "url": "https://static.wixstatic.com/media/45bf13_5d2fe1010f55445fb0a896a384fa908f~mv2.png",
+        "extension": ".png"
+      },
+      {
+        "url": "https://static.wixstatic.com/media/45bf13_77218e5f96854408824061ea4788348a~mv2.png",
+        "extension": ".png"
+      }
+    ],
+    "stats": [
+      {
+        "url": "https://static.wixstatic.com/media/45bf13_7918dde9c6c042eebe19f4073fb9368e~mv2.png",
+        "extension": ".png"
+      },
+      {
+        "url": "https://static.wixstatic.com/media/45bf13_0933ed36a168472082b40509f42f5614~mv2.png",
+        "extension": ".png"
+      },
+      {
+        "url": "https://static.wixstatic.com/media/45bf13_c2598934289f44ff9efe80c340e27ba9~mv2.png",
+        "extension": ".png"
+      },
+      {
+        "url": "https://static.wixstatic.com/media/45bf13_56eb556e57dc47cda4371f4c94933624~mv2.png",
+        "extension": ".png"
+      },
+      {
+        "url": "https://static.wixstatic.com/media/45bf13_b3a001a78ed54fc6980fd1acdad6ddc2~mv2.png",
+        "extension": ".png"
+      }
+    ],
+    "grupos": [],
+    "blog": [
+      {
+        "url": "https://static.wixstatic.com/media/7738b6_6c7ca19ad7a04e1aab403077973e8c77~mv2.jpg",
+        "extension": ".jpg"
+      }
+    ],
+    "integraciones": [
+      {
+        "url": "https://static.wixstatic.com/media/45bf13_a3cce1736e8b40e282001a4925e5924e~mv2.jpg",
+        "extension": ".jpg"
+      },
+      {
+        "url": "https://static.wixstatic.com/media/45bf13_c1ce58db4125404fbfa0e4c527dc2b67~mv2.jpg",
+        "extension": ".jpg"
+      },
+      {
+        "url": "https://static.wixstatic.com/media/45bf13_e6301e4eec00405bbb936e96d4372923~mv2.jpg",
+        "extension": ".jpg"
+      }
+    ],
+    "otros": [
+      {
+        "url": "https://static.wixstatic.com/media/45bf13_a446329546684fd392f717ff39e6103e~mv2.png",
+        "extension": ".png"
+      },
+      {
+        "url": "https://static.wixstatic.com/media/7738b6_a362deb4e77641f78f1fe1c158b74ede~mv2.jpg",
+        "extension": ".jpg"
+      },
+      {
+        "url": "https://static.wixstatic.com/media/11062b_bbd890290e2c407486b46a0fc755d5b0~mv2.jpg",
+        "extension": ".jpg"
+      },
+      {
+        "url": "https://static.wixstatic.com/media/7738b6_16c1c3819e454a5da493bcdb7b2ac910~mv2.jpg",
+        "extension": ".jpg"
+      },
+      {
+        "url": "https://static.wixstatic.com/media/7738b6_2cf3028c0ab8472eae91d21dbe6a25ae~mv2.png",
+        "extension": ".png"
+      },
+      {
+        "url": "https://static.wixstatic.com/media/7738b6_675fd793de0545a6835c63ae8460647b~mv2.png",
+        "extension": ".png"
+      },
+      {
+        "url": "https://static.wixstatic.com/media/7738b6_602ac8bc01e54030a0afaa84f2101e82~mv2.jpg",
+        "extension": ".jpg"
+      },
+      {
+        "url": "https://static.wixstatic.com/media/7738b6_d63e43d81db340db8973b6667d51ed95~mv2.jpg",
+        "extension": ".jpg"
+      },
+      {
+        "url": "https://static.wixstatic.com/media/7738b6_aec55d5ff06e4b368b345e505f306810~mv2.jpg",
+        "extension": ".jpg"
+      },
+      {
+        "url": "https://static.wixstatic.com/media/7738b6_97199bb1a5ca4d7eb5d4abb8c23cf25f~mv2.jpg",
+        "extension": ".jpg"
+      },
+      {
+        "url": "https://static.wixstatic.com/media/11062b_e4a7ccc4d3764f7fa73ba88b6392e018~mv2.jpg",
+        "extension": ".jpg"
+      },
+      {
+        "url": "https://static.wixstatic.com/media/45bf13_2e52affb09c1487ba21937bd8f9cf8e2~mv2.png",
+        "extension": ".png"
+      },
+      {
+        "url": "https://static.wixstatic.com/media/45bf13_1df776ac2d964352b7554f224c01f5a2~mv2.png",
+        "extension": ".png"
+      },
+      {
+        "url": "https://static.wixstatic.com/media/45bf13_7399d4aa4b764188a0d3fe34008b4e02~mv2.png",
+        "extension": ".png"
+      },
+      {
+        "url": "https://static.wixstatic.com/media/45bf13_466bbb24f5bb4d3f8a80a607ef2f1355~mv2.png",
+        "extension": ".png"
+      },
+      {
+        "url": "https://static.wixstatic.com/media/45bf13_81697da65fc94e44902d0d8ae0a3ef7f~mv2.png",
+        "extension": ".png"
+      },
+      {
+        "url": "https://static.wixstatic.com/media/0e753d_de7ce88d30444e06855bfe6d31c603b5~mv2.webp",
+        "extension": ".webp"
+      },
+      {
+        "url": "https://static.wixstatic.com/media/45bf13_e79ea0fa21b948c99ae81ed1e4d0c480~mv2.png",
+        "extension": ".png"
+      },
+      {
+        "url": "https://static.wixstatic.com/media/732f95_9402722129cc4aeda921905b4f676806~mv2.png",
+        "extension": ".png"
+      },
+      {
+        "url": "https://static.wixstatic.com/media/45bf13_9fd7ba7a077e4e7ab7c14e7c7cefefaf~mv2.png",
+        "extension": ".png"
+      },
+      {
+        "url": "https://static.wixstatic.com/media/732f95_7a21171c001549c4b63f08f22fd94831~mv2.jpeg",
+        "extension": ".jpeg"
+      },
+      {
+        "url": "https://static.wixstatic.com/media/0cc494_83951fd0c8ad4cecb2d1aed64c55cba2~mv2.png",
+        "extension": ".png"
+      },
+      {
+        "url": "https://static.wixstatic.com/media/0cc494_ef9db4cab51c4bd2a09b2169f06e41a0~mv2.jpg",
+        "extension": ".jpg"
+      },
+      {
+        "url": "https://static.wixstatic.com/media/366f9f_b66304faf1ea4ed3ae376725aa7332b9~mv2.jpg",
+        "extension": ".jpg"
+      },
+      {
+        "url": "https://static.wixstatic.com/media/45bf13_c515718beb6945058d9e393b76fd8ef4~mv2.jpg",
+        "extension": ".jpg"
+      },
+      {
+        "url": "https://static.wixstatic.com/media/45bf13_c99e960cb19142b3a79126bf49fcb8f9~mv2.jpg",
+        "extension": ".jpg"
+      },
+      {
+        "url": "https://static.wixstatic.com/media/45bf13_97d7ecd264934bd583aee5261f501237~mv2.jpg",
+        "extension": ".jpg"
+      },
+      {
+        "url": "https://static.wixstatic.com/media/11062b_7dcffe5daf2944b7be0a46ac6d472634~mv2.png",
+        "extension": ".png"
+      },
+      {
+        "url": "https://static.wixstatic.com/media/11062b_f4e3e7f537ff4762a1914aa14e3e36b9~mv2.png",
+        "extension": ".png"
+      },
+      {
+        "url": "https://static.wixstatic.com/media/11062b_c67939a99eaf442d95d3f851857ceedf~mv2.png",
+        "extension": ".png"
+      },
+      {
+        "url": "https://static.wixstatic.com/media/11062b_603340b7bcb14e7785c7b65b233cd9f9~mv2.png",
+        "extension": ".png"
+      },
+      {
+        "url": "https://static.wixstatic.com/media/45bf13_f266c1c516a64bdd97d7aef98f73d58a~mv2.png",
+        "extension": ".png"
+      },
+      {
+        "url": "https://static.wixstatic.com/media/45bf13_5301ca4b0f05418eb845283d2b97ecae~mv2.png",
+        "extension": ".png"
+      },
+      {
+        "url": "https://static.wixstatic.com/media/7738b6_01e6ece1b8784183a1b6970c60b1c397~mv2.jpg",
+        "extension": ".jpg"
+      },
+      {
+        "url": "https://static.wixstatic.com/media/7738b6_1ac3e59e66ce47afb151cb07ac93dd57~mv2.jpeg",
+        "extension": ".jpeg"
+      },
+      {
+        "url": "https://static.wixstatic.com/media/7738b6_1b793389e4d74684966f3d0f3d43332e~mv2.jpg",
+        "extension": ".jpg"
+      },
+      {
+        "url": "https://static.wixstatic.com/media/7738b6_1d94cd8424df412ca1438e2cb6faa193~mv2.jpg",
+        "extension": ".jpg"
+      },
+      {
+        "url": "https://static.wixstatic.com/media/7738b6_3173dd32dcd249a9a6297f1876935539~mv2.jpg",
+        "extension": ".jpg"
+      }
+    ]
+  }
+}

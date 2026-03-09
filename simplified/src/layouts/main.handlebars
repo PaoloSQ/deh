@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}} | DEH Online</title>
+  
+  <!-- CSS Común -->
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  
+  <!-- CSS de la página -->
+  <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+  {{> header}}
+  
+  <main>
+    {{{body}}}
+  </main>
+
+  {{> footer}}
+  <div class="cookie-bar" role="region" aria-label="Aviso de cookies">
+    <div class="cookie-bar__inner">
+      <div class="cookie-bar__copy">
+        <p class="cookie-bar__title">Sobre las cookies en este sitio web</p>
+        <p class="cookie-bar__text">
+          DEH utiliza cookies propias y de terceros para registrar tus preferencias, analizar tu uso de la web y mostrar publicidad personalizada.
+        </p>
+      </div>
+      <div class="cookie-bar__actions">
+        <button type="button" class="cookie-bar__btn cookie-bar__btn--accept">Permitir todas las cookies</button>
+        <button type="button" class="cookie-bar__btn cookie-bar__btn--deny">Denegar todo</button>
+        <button type="button" class="cookie-bar__btn cookie-bar__btn--link">Configuracion de cookies</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS Común -->
+  <script src="/js/common.js"></script>
+  
+  <!-- JS de la página -->
+  {{#if pageJS}}
+    <script src="/js/{{pageJS}}.js"></script>
+  {{/if}}
+</body>
+</html>

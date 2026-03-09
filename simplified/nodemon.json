@@ -1,0 +1,9 @@
+{
+  "watch": ["server.js", "src/**/*.handlebars", "src/**/*.js"],
+  "ext": "js,handlebars",
+  "ignore": ["node_modules/**", "public/**"],
+  "delay": 500,
+  "env": {
+    "NODE_ENV": "development"
+  }
+}

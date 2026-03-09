@@ -1,0 +1,967 @@
+{
+  "timestamp": "2026-03-08T01:02:59.405Z",
+  "pagina": "index",
+  "archivo": "index.html",
+  "totalImagenes": 159,
+  "porCategoria": {
+    "hero": 151,
+    "logos": 2,
+    "icons": 6
+  },
+  "imagenes": [
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_a446329546684fd392f717ff39e6103e~mv2.png/v1/fill/w_129",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-1.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-1.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_01e6ece1b8784183a1b6970c60b1c397~mv2.jpg/v1/fill/w_79",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-2.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-2.jpg"
+    },
+    {
+      "urlOriginal": "quality_auto/7738b6_01e6ece1b8784183a1b6970c60b1c397~mv2.jpg",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-3.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-3.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_a362deb4e77641f78f1fe1c158b74ede~mv2.jpg/v1/fill/w_309",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-4.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-4.jpg"
+    },
+    {
+      "urlOriginal": "quality_auto/wooden-houses-shelf-home-decor-detail.jpg",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-5.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-5.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/11062b_bbd890290e2c407486b46a0fc755d5b0~mv2.jpg/v1/fill/w_309",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-6.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-6.jpg"
+    },
+    {
+      "urlOriginal": "quality_auto/En%20la%20oficina.jpg",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-7.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-7.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_16c1c3819e454a5da493bcdb7b2ac910~mv2.jpg/v1/fill/w_309",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-8.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-8.jpg"
+    },
+    {
+      "urlOriginal": "quality_auto/Dise%C3%B1o%20sin%20t%C3%ADtulo_edited.jpg",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-9.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-9.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_2cf3028c0ab8472eae91d21dbe6a25ae~mv2.png/v1/fill/w_46",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-10.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-10.jpg"
+    },
+    {
+      "urlOriginal": "quality_auto/CEN_amarillo.png",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-11.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-11.png"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_675fd793de0545a6835c63ae8460647b~mv2.png/v1/crop/x_0",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-12.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-12.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_602ac8bc01e54030a0afaa84f2101e82~mv2.jpg/v1/fill/w_107",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-13.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-13.jpg"
+    },
+    {
+      "urlOriginal": "quality_auto/image_edited.jpg",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-14.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-14.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_d63e43d81db340db8973b6667d51ed95~mv2.jpg/v1/crop/x_237",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-15.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-15.jpg"
+    },
+    {
+      "urlOriginal": "quality_auto/DocumBox.jpg",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-16.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-16.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_1ac3e59e66ce47afb151cb07ac93dd57~mv2.jpeg/v1/fill/w_39",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-17.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-17.jpg"
+    },
+    {
+      "urlOriginal": "quality_auto/7738b6_1ac3e59e66ce47afb151cb07ac93dd57~mv2.jpeg",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-18.jpeg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-18.jpeg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_aec55d5ff06e4b368b345e505f306810~mv2.jpg/v1/fill/w_896",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-19.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-19.jpg"
+    },
+    {
+      "urlOriginal": "quality_auto/freepik__the-style-is-candid-image-photo.jpg",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-20.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-20.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_1b793389e4d74684966f3d0f3d43332e~mv2.jpg/v1/fill/w_147",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-21.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-21.jpg"
+    },
+    {
+      "urlOriginal": "quality_auto/7738b6_1b793389e4d74684966f3d0f3d43332e~mv2.jpg",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-22.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-22.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_c9aac9417d6e4b1c9e4df3d6e8b2d7b7~mv2.png/v1/crop/x_0",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-23.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-23.jpg"
+    },
+    {
+      "urlOriginal": "quality_auto/certibox_edited.png",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-24.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-24.png"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_97199bb1a5ca4d7eb5d4abb8c23cf25f~mv2.jpg/v1/crop/x_0",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-25.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-25.jpg"
+    },
+    {
+      "urlOriginal": "quality_auto/Captura%20de%20pantalla%202026-01-28%20115234_ed.jpg",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-26.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-26.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_16d10d8542334e219cd2054bcf5e4064~mv2.png/v1/crop/x_0",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-27.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-27.jpg"
+    },
+    {
+      "urlOriginal": "quality_auto/lexbox_edited_edited.png",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-28.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-28.png"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/11062b_e4a7ccc4d3764f7fa73ba88b6392e018~mv2.jpg/v1/crop/x_0",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-29.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-29.jpg"
+    },
+    {
+      "urlOriginal": "quality_auto/Calendario%20Anual.jpg",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-30.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-30.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_5a6c27d145514278b99e3adab35e3b52~mv2.jpg/v1/crop/x_0",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-31.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-31.jpg"
+    },
+    {
+      "urlOriginal": "quality_auto/DOCUMBOX_homoPROVEE-05_edited_edited_edi.jpg",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-32.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-32.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_6c7ca19ad7a04e1aab403077973e8c77~mv2.jpg/v1/crop/x_576",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-33.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-33.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_7918dde9c6c042eebe19f4073fb9368e~mv2.png/v1/fill/w_65",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-34.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-34.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_0933ed36a168472082b40509f42f5614~mv2.png/v1/fill/w_65",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-35.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-35.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_c2598934289f44ff9efe80c340e27ba9~mv2.png/v1/fill/w_71",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-36.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-36.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_56eb556e57dc47cda4371f4c94933624~mv2.png/v1/fill/w_64",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-37.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-37.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_b3a001a78ed54fc6980fd1acdad6ddc2~mv2.png/v1/fill/w_71",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-38.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-38.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_1d94cd8424df412ca1438e2cb6faa193~mv2.jpg/v1/fill/w_48",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-39.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-39.jpg"
+    },
+    {
+      "urlOriginal": "quality_auto/7738b6_1d94cd8424df412ca1438e2cb6faa193~mv2.jpg",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-40.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-40.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_5d2fe1010f55445fb0a896a384fa908f~mv2.png/v1/fit/w_168",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-41.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-41.jpg"
+    },
+    {
+      "urlOriginal": "quality_auto/45bf13_5d2fe1010f55445fb0a896a384fa908f~mv2.png",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-42.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-42.png"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_77218e5f96854408824061ea4788348a~mv2.png/v1/fit/w_168",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-43.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-43.jpg"
+    },
+    {
+      "urlOriginal": "quality_auto/45bf13_77218e5f96854408824061ea4788348a~mv2.png",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-44.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-44.png"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_2e52affb09c1487ba21937bd8f9cf8e2~mv2.png/v1/fit/w_168",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-45.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-45.jpg"
+    },
+    {
+      "urlOriginal": "quality_auto/45bf13_2e52affb09c1487ba21937bd8f9cf8e2~mv2.png",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-46.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-46.png"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_1df776ac2d964352b7554f224c01f5a2~mv2.png/v1/fit/w_168",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-47.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-47.jpg"
+    },
+    {
+      "urlOriginal": "quality_auto/45bf13_1df776ac2d964352b7554f224c01f5a2~mv2.png",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-48.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-48.png"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_7399d4aa4b764188a0d3fe34008b4e02~mv2.png/v1/fit/w_168",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-49.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-49.jpg"
+    },
+    {
+      "urlOriginal": "quality_auto/45bf13_7399d4aa4b764188a0d3fe34008b4e02~mv2.png",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-50.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-50.png"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_466bbb24f5bb4d3f8a80a607ef2f1355~mv2.png/v1/fit/w_168",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-51.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-51.jpg"
+    },
+    {
+      "urlOriginal": "quality_auto/45bf13_466bbb24f5bb4d3f8a80a607ef2f1355~mv2.png",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-52.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-52.png"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_3173dd32dcd249a9a6297f1876935539~mv2.jpg/v1/fill/w_83",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-53.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-53.jpg"
+    },
+    {
+      "urlOriginal": "quality_auto/7738b6_3173dd32dcd249a9a6297f1876935539~mv2.jpg",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-54.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-54.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_81697da65fc94e44902d0d8ae0a3ef7f~mv2.png/v1/fill/w_72",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-55.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-55.jpg"
+    },
+    {
+      "urlOriginal": "enc_auto/45bf13_81697da65fc94e44902d0d8ae0a3ef7f~mv2.png",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-56.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-56.png"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/0e753d_de7ce88d30444e06855bfe6d31c603b5~mv2.webp/v1/fill/w_72",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-57.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-57.jpg"
+    },
+    {
+      "urlOriginal": "enc_auto/0e753d_de7ce88d30444e06855bfe6d31c603b5~mv2.webp",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-58.webp",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-58.webp"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_e79ea0fa21b948c99ae81ed1e4d0c480~mv2.png/v1/fill/w_72",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-59.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-59.jpg"
+    },
+    {
+      "urlOriginal": "enc_auto/45bf13_e79ea0fa21b948c99ae81ed1e4d0c480~mv2.png",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-60.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-60.png"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/732f95_9402722129cc4aeda921905b4f676806~mv2.png/v1/fill/w_72",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-61.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-61.jpg"
+    },
+    {
+      "urlOriginal": "enc_auto/732f95_9402722129cc4aeda921905b4f676806~mv2.png",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-62.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-62.png"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_9fd7ba7a077e4e7ab7c14e7c7cefefaf~mv2.png/v1/fill/w_72",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-63.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-63.jpg"
+    },
+    {
+      "urlOriginal": "enc_auto/45bf13_9fd7ba7a077e4e7ab7c14e7c7cefefaf~mv2.png",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-64.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-64.png"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/732f95_7a21171c001549c4b63f08f22fd94831~mv2.jpeg/v1/fill/w_72",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-65.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-65.jpg"
+    },
+    {
+      "urlOriginal": "enc_auto/732f95_7a21171c001549c4b63f08f22fd94831~mv2.jpeg",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-66.jpeg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-66.jpeg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/0cc494_83951fd0c8ad4cecb2d1aed64c55cba2~mv2.png/v1/fill/w_443",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-67.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-67.jpg"
+    },
+    {
+      "urlOriginal": "quality_auto/0cc494_83951fd0c8ad4cecb2d1aed64c55cba2~mv2.webp",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-68.webp",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-68.webp"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/0cc494_83951fd0c8ad4cecb2d1aed64c55cba2~mv2.png/v1/fill/w_227",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-69.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-69.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/0cc494_ef9db4cab51c4bd2a09b2169f06e41a0~mv2.jpg/v1/fill/w_250",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-70.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-70.jpg"
+    },
+    {
+      "urlOriginal": "quality_auto/0cc494_ef9db4cab51c4bd2a09b2169f06e41a0~mv2.webp",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-71.webp",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-71.webp"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/0cc494_ef9db4cab51c4bd2a09b2169f06e41a0~mv2.jpg/v1/fill/w_227",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-72.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-72.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/366f9f_b66304faf1ea4ed3ae376725aa7332b9~mv2.jpg/v1/fill/w_443",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-73.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-73.jpg"
+    },
+    {
+      "urlOriginal": "quality_auto/366f9f_b66304faf1ea4ed3ae376725aa7332b9~mv2.webp",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-74.webp",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-74.webp"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/366f9f_b66304faf1ea4ed3ae376725aa7332b9~mv2.jpg/v1/fill/w_227",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-75.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-75.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_a3cce1736e8b40e282001a4925e5924e~mv2.jpg/v1/fit/w_214",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-76.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-76.jpg"
+    },
+    {
+      "urlOriginal": "quality_auto/45bf13_a3cce1736e8b40e282001a4925e5924e~mv2.jpg",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-77.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-77.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_c515718beb6945058d9e393b76fd8ef4~mv2.jpg/v1/fit/w_214",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-78.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-78.jpg"
+    },
+    {
+      "urlOriginal": "quality_auto/45bf13_c515718beb6945058d9e393b76fd8ef4~mv2.jpg",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-79.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-79.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_c1ce58db4125404fbfa0e4c527dc2b67~mv2.jpg/v1/fit/w_214",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-80.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-80.jpg"
+    },
+    {
+      "urlOriginal": "quality_auto/45bf13_c1ce58db4125404fbfa0e4c527dc2b67~mv2.jpg",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-81.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-81.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_e6301e4eec00405bbb936e96d4372923~mv2.jpg/v1/fit/w_214",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-82.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-82.jpg"
+    },
+    {
+      "urlOriginal": "quality_auto/45bf13_e6301e4eec00405bbb936e96d4372923~mv2.jpg",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-83.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-83.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_c99e960cb19142b3a79126bf49fcb8f9~mv2.jpg/v1/fit/w_214",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-84.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-84.jpg"
+    },
+    {
+      "urlOriginal": "quality_auto/45bf13_c99e960cb19142b3a79126bf49fcb8f9~mv2.jpg",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-85.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-85.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_97d7ecd264934bd583aee5261f501237~mv2.jpg/v1/fit/w_214",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-86.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-86.jpg"
+    },
+    {
+      "urlOriginal": "quality_auto/45bf13_97d7ecd264934bd583aee5261f501237~mv2.jpg",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-87.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-87.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_a446329546684fd392f717ff39e6103e~mv2.png/v1/fill/w_123",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-88.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-88.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/11062b_7dcffe5daf2944b7be0a46ac6d472634~mv2.png/v1/fill/w_32",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-89.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-89.jpg"
+    },
+    {
+      "urlOriginal": "quality_auto/11062b_7dcffe5daf2944b7be0a46ac6d472634~mv2.png",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-90.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-90.png"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/11062b_f4e3e7f537ff4762a1914aa14e3e36b9~mv2.png/v1/fill/w_32",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-91.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-91.jpg"
+    },
+    {
+      "urlOriginal": "quality_auto/11062b_f4e3e7f537ff4762a1914aa14e3e36b9~mv2.png",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-92.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-92.png"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/11062b_c67939a99eaf442d95d3f851857ceedf~mv2.png/v1/fill/w_32",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-93.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-93.jpg"
+    },
+    {
+      "urlOriginal": "quality_auto/11062b_c67939a99eaf442d95d3f851857ceedf~mv2.png",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-94.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-94.png"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/11062b_603340b7bcb14e7785c7b65b233cd9f9~mv2.png/v1/fill/w_32",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-95.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-95.jpg"
+    },
+    {
+      "urlOriginal": "quality_auto/11062b_603340b7bcb14e7785c7b65b233cd9f9~mv2.png",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-96.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-96.png"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_f266c1c516a64bdd97d7aef98f73d58a~mv2.png/v1/fill/w_163",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-97.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-97.jpg"
+    },
+    {
+      "urlOriginal": "quality_auto/eidas_horizontal_trans.png",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-98.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-98.png"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_5301ca4b0f05418eb845283d2b97ecae~mv2.png/v1/fill/w_80",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-99.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-99.jpg"
+    },
+    {
+      "urlOriginal": "quality_auto/aenor.png",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-100.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-100.png"
+    },
+    {
+      "urlOriginal": "media/emptystate.85a4add5.svg",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-101.svg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-101.svg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_a446329546684fd392f717ff39e6103e~mv2.png/v1/fill/w_258",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-102.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-102.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_a362deb4e77641f78f1fe1c158b74ede~mv2.jpg/v1/fill/w_618",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-103.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-103.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/11062b_bbd890290e2c407486b46a0fc755d5b0~mv2.jpg/v1/fill/w_618",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-104.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-104.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_16c1c3819e454a5da493bcdb7b2ac910~mv2.jpg/v1/fill/w_618",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-105.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-105.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_2cf3028c0ab8472eae91d21dbe6a25ae~mv2.png/v1/fill/w_92",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-106.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-106.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/7738b6_602ac8bc01e54030a0afaa84f2101e82~mv2.jpg/v1/fill/w_214",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-107.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-107.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_7918dde9c6c042eebe19f4073fb9368e~mv2.png/v1/fill/w_91",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-108.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-108.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_0933ed36a168472082b40509f42f5614~mv2.png/v1/fill/w_91",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-109.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-109.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_c2598934289f44ff9efe80c340e27ba9~mv2.png/v1/fill/w_104",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-110.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-110.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_56eb556e57dc47cda4371f4c94933624~mv2.png/v1/fill/w_90",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-111.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-111.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_b3a001a78ed54fc6980fd1acdad6ddc2~mv2.png/v1/fill/w_99",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-112.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-112.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_5d2fe1010f55445fb0a896a384fa908f~mv2.png/v1/fit/w_180",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-113.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-113.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_77218e5f96854408824061ea4788348a~mv2.png/v1/fit/w_180",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-114.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-114.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_2e52affb09c1487ba21937bd8f9cf8e2~mv2.png/v1/fit/w_180",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-115.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-115.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_1df776ac2d964352b7554f224c01f5a2~mv2.png/v1/fit/w_180",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-116.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-116.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_7399d4aa4b764188a0d3fe34008b4e02~mv2.png/v1/fit/w_180",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-117.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-117.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_466bbb24f5bb4d3f8a80a607ef2f1355~mv2.png/v1/fit/w_180",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-118.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-118.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_81697da65fc94e44902d0d8ae0a3ef7f~mv2.png/v1/fill/w_144",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-119.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-119.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/0e753d_de7ce88d30444e06855bfe6d31c603b5~mv2.webp/v1/fill/w_144",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-120.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-120.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_e79ea0fa21b948c99ae81ed1e4d0c480~mv2.png/v1/fill/w_144",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-121.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-121.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/732f95_9402722129cc4aeda921905b4f676806~mv2.png/v1/fill/w_144",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-122.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-122.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_9fd7ba7a077e4e7ab7c14e7c7cefefaf~mv2.png/v1/fill/w_144",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-123.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-123.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/732f95_7a21171c001549c4b63f08f22fd94831~mv2.jpeg/v1/fill/w_144",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-124.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-124.jpg"
+    },
+    {
+      "urlOriginal": "quality_auto/0cc494_83951fd0c8ad4cecb2d1aed64c55cba2~mv2.png",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-125.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-125.png"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/0cc494_83951fd0c8ad4cecb2d1aed64c55cba2~mv2.png/v1/fill/w_1305",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-126.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-126.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/0cc494_83951fd0c8ad4cecb2d1aed64c55cba2~mv2.png/v1/fill/w_908",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-127.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-127.jpg"
+    },
+    {
+      "urlOriginal": "quality_auto/0cc494_ef9db4cab51c4bd2a09b2169f06e41a0~mv2.jpg",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-128.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-128.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/0cc494_ef9db4cab51c4bd2a09b2169f06e41a0~mv2.jpg/v1/fill/w_1000",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-129.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-129.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/0cc494_ef9db4cab51c4bd2a09b2169f06e41a0~mv2.jpg/v1/fill/w_908",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-130.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-130.jpg"
+    },
+    {
+      "urlOriginal": "quality_auto/366f9f_b66304faf1ea4ed3ae376725aa7332b9~mv2.jpg",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-131.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-131.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/366f9f_b66304faf1ea4ed3ae376725aa7332b9~mv2.jpg/v1/fill/w_828",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-132.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-132.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_a3cce1736e8b40e282001a4925e5924e~mv2.jpg/v1/fit/w_344",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-133.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-133.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_c515718beb6945058d9e393b76fd8ef4~mv2.jpg/v1/fit/w_344",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-134.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-134.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_c1ce58db4125404fbfa0e4c527dc2b67~mv2.jpg/v1/fit/w_344",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-135.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-135.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_e6301e4eec00405bbb936e96d4372923~mv2.jpg/v1/fit/w_344",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-136.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-136.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_c99e960cb19142b3a79126bf49fcb8f9~mv2.jpg/v1/fit/w_344",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-137.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-137.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_97d7ecd264934bd583aee5261f501237~mv2.jpg/v1/fit/w_344",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-138.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-138.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_a446329546684fd392f717ff39e6103e~mv2.png/v1/fill/w_246",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-139.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-139.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/11062b_7dcffe5daf2944b7be0a46ac6d472634~mv2.png/v1/fill/w_64",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-140.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-140.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/11062b_f4e3e7f537ff4762a1914aa14e3e36b9~mv2.png/v1/fill/w_64",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-141.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-141.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/11062b_c67939a99eaf442d95d3f851857ceedf~mv2.png/v1/fill/w_64",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-142.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-142.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/11062b_603340b7bcb14e7785c7b65b233cd9f9~mv2.png/v1/fill/w_64",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-143.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-143.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_f266c1c516a64bdd97d7aef98f73d58a~mv2.png/v1/fill/w_326",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-144.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-144.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_5301ca4b0f05418eb845283d2b97ecae~mv2.png/v1/fill/w_160",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-145.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-145.jpg"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_c443697866794e04b06d1535b90ed7d8%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/45bf13_c443697866794e04b06d1535b90ed7d8%7Emv2.png",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-146.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-146.png"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_c443697866794e04b06d1535b90ed7d8%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/45bf13_c443697866794e04b06d1535b90ed7d8%7Emv2.png",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-147.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-147.png"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_c443697866794e04b06d1535b90ed7d8%7Emv2.png/v1/fill/w_180%2Ch_180%2Clg_1%2Cusm_0.66_1.00_0.01/45bf13_c443697866794e04b06d1535b90ed7d8%7Emv2.png",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-148.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-148.png"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_56a9539094414f40ae3327e35ea694ca~mv2.png",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-149.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-149.png"
+    },
+    {
+      "urlOriginal": "https://static.wixstatic.com/media/45bf13_56a9539094414f40ae3327e35ea694ca%7Emv2.png/v1/fit/w_2500",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-150.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-150.jpg"
+    },
+    {
+      "urlOriginal": "al_c/45bf13_56a9539094414f40ae3327e35ea694ca%7Emv2.png",
+      "categoria": "hero",
+      "nuevoNombre": "hero-image-151.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/hero/hero-image-151.png"
+    },
+    {
+      "urlOriginal": "quality_auto/Logos_rgb-07.png",
+      "categoria": "logos",
+      "nuevoNombre": "Logos_rgb-07.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/logos/Logos_rgb-07.png"
+    },
+    {
+      "urlOriginal": "quality_auto/LexBox_Logo_Azul_H_edited_edited.png",
+      "categoria": "logos",
+      "nuevoNombre": "logo-2.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/logos/logo-2.png"
+    },
+    {
+      "urlOriginal": "quality_auto/online-message-blog-chat-communication-envelop-graphic-icon-concept.jpg",
+      "categoria": "icons",
+      "nuevoNombre": "icon-1.jpg",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/icons/icon-1.jpg"
+    },
+    {
+      "urlOriginal": "quality_auto/Recurso%203icono.png",
+      "categoria": "icons",
+      "nuevoNombre": "Recurso%203icono.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/icons/Recurso%203icono.png"
+    },
+    {
+      "urlOriginal": "quality_auto/Recurso%205icono.png",
+      "categoria": "icons",
+      "nuevoNombre": "Recurso%205icono.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/icons/Recurso%205icono.png"
+    },
+    {
+      "urlOriginal": "quality_auto/Recurso%202icono_autonomo.png",
+      "categoria": "icons",
+      "nuevoNombre": "Recurso%202icono_autonomo.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/icons/Recurso%202icono_autonomo.png"
+    },
+    {
+      "urlOriginal": "quality_auto/Recurso%206icono.png",
+      "categoria": "icons",
+      "nuevoNombre": "Recurso%206icono.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/icons/Recurso%206icono.png"
+    },
+    {
+      "urlOriginal": "quality_auto/Recurso%204icono.png",
+      "categoria": "icons",
+      "nuevoNombre": "Recurso%204icono.png",
+      "rutaDestino": "C:/Users/ben28/Desktop/deh/simplified/public/img/icons/Recurso%204icono.png"
+    }
+  ]
+}
