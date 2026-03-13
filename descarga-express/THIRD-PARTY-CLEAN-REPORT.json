@@ -1,0 +1,819 @@
+[
+  {
+    "filePath": "/workspaces/deh/descarga-express/public/assets/misc/encrypted-tbn2.gstatic.com/images/index.html",
+    "relPath": "public/assets/misc/encrypted-tbn2.gstatic.com/images/index.html",
+    "detected": [],
+    "removed": [
+      "telemetry guard refresh"
+    ],
+    "pending": [],
+    "modified": true
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/public/assets/misc/services/editor-elements-library/dist/siteAssets/media/Carousel.f4b92e4d.html",
+    "relPath": "public/assets/misc/services/editor-elements-library/dist/siteAssets/media/Carousel.f4b92e4d.html",
+    "detected": [],
+    "removed": [
+      "telemetry guard refresh",
+      "fedops stub"
+    ],
+    "pending": [],
+    "modified": true
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/documbox.dehonline.es/index.html",
+    "relPath": "sites/documbox.dehonline.es/index.html",
+    "detected": [],
+    "removed": [
+      "telemetry guard refresh",
+      "fedops stub"
+    ],
+    "pending": [],
+    "modified": true
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/panel.dehonline.es/auth/login.html",
+    "relPath": "sites/panel.dehonline.es/auth/login.html",
+    "detected": [],
+    "removed": [
+      "telemetry guard refresh",
+      "fedops stub"
+    ],
+    "pending": [],
+    "modified": true
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/soporte.dehonline.es/index.html",
+    "relPath": "sites/soporte.dehonline.es/index.html",
+    "detected": [],
+    "removed": [
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "telemetry guard refresh",
+      "fedops stub"
+    ],
+    "pending": [],
+    "modified": true
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.consola.dehonline.es/index.html",
+    "relPath": "sites/www.consola.dehonline.es/index.html",
+    "detected": [
+      "sentry"
+    ],
+    "removed": [
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "telemetry guard refresh",
+      "fedops stub"
+    ],
+    "pending": [
+      "sentry"
+    ],
+    "modified": true
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/acceso-clientes.html",
+    "relPath": "sites/www.dehonline.es/acceso-clientes.html",
+    "detected": [
+      "sentry"
+    ],
+    "removed": [
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "telemetry guard refresh",
+      "fedops stub"
+    ],
+    "pending": [
+      "sentry"
+    ],
+    "modified": true
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/app-vigiladas.html",
+    "relPath": "sites/www.dehonline.es/app-vigiladas.html",
+    "detected": [
+      "sentry"
+    ],
+    "removed": [
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "telemetry guard refresh",
+      "fedops stub"
+    ],
+    "pending": [
+      "sentry"
+    ],
+    "modified": true
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/blog/categories/administración-de-fincas.html",
+    "relPath": "sites/www.dehonline.es/blog/categories/administración-de-fincas.html",
+    "detected": [
+      "sentry"
+    ],
+    "removed": [
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "telemetry guard refresh",
+      "fedops stub"
+    ],
+    "pending": [
+      "sentry"
+    ],
+    "modified": true
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/blog/categories/inteligencia-artificial.html",
+    "relPath": "sites/www.dehonline.es/blog/categories/inteligencia-artificial.html",
+    "detected": [
+      "sentry"
+    ],
+    "removed": [
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "telemetry guard refresh",
+      "fedops stub"
+    ],
+    "pending": [
+      "sentry"
+    ],
+    "modified": true
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/blog/page/2.html",
+    "relPath": "sites/www.dehonline.es/blog/page/2.html",
+    "detected": [
+      "sentry"
+    ],
+    "removed": [
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "telemetry guard refresh",
+      "fedops stub"
+    ],
+    "pending": [
+      "sentry"
+    ],
+    "modified": true
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/blog/page/3.html",
+    "relPath": "sites/www.dehonline.es/blog/page/3.html",
+    "detected": [
+      "sentry"
+    ],
+    "removed": [
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "telemetry guard refresh",
+      "fedops stub"
+    ],
+    "pending": [
+      "sentry"
+    ],
+    "modified": true
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/blog/page/4.html",
+    "relPath": "sites/www.dehonline.es/blog/page/4.html",
+    "detected": [
+      "sentry"
+    ],
+    "removed": [
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "telemetry guard refresh",
+      "fedops stub"
+    ],
+    "pending": [
+      "sentry"
+    ],
+    "modified": true
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/blog.html",
+    "relPath": "sites/www.dehonline.es/blog.html",
+    "detected": [
+      "sentry"
+    ],
+    "removed": [
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "telemetry guard refresh",
+      "fedops stub"
+    ],
+    "pending": [
+      "sentry"
+    ],
+    "modified": true
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/book-online.html",
+    "relPath": "sites/www.dehonline.es/book-online.html",
+    "detected": [
+      "sentry"
+    ],
+    "removed": [
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "telemetry guard refresh",
+      "fedops stub"
+    ],
+    "pending": [
+      "sentry"
+    ],
+    "modified": true
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/canaldedenuncias.html",
+    "relPath": "sites/www.dehonline.es/canaldedenuncias.html",
+    "detected": [
+      "sentry"
+    ],
+    "removed": [
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "telemetry guard refresh",
+      "fedops stub"
+    ],
+    "pending": [
+      "sentry"
+    ],
+    "modified": true
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/certibox.html",
+    "relPath": "sites/www.dehonline.es/certibox.html",
+    "detected": [
+      "sentry"
+    ],
+    "removed": [
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "telemetry guard refresh",
+      "fedops stub"
+    ],
+    "pending": [
+      "sentry"
+    ],
+    "modified": true
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/comunidad.html",
+    "relPath": "sites/www.dehonline.es/comunidad.html",
+    "detected": [
+      "sentry"
+    ],
+    "removed": [
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "telemetry guard refresh",
+      "fedops stub"
+    ],
+    "pending": [
+      "sentry"
+    ],
+    "modified": true
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/condiciones-de-uso.html",
+    "relPath": "sites/www.dehonline.es/condiciones-de-uso.html",
+    "detected": [
+      "sentry"
+    ],
+    "removed": [
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "telemetry guard refresh",
+      "fedops stub"
+    ],
+    "pending": [
+      "sentry"
+    ],
+    "modified": true
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/contacto.html",
+    "relPath": "sites/www.dehonline.es/contacto.html",
+    "detected": [
+      "sentry"
+    ],
+    "removed": [
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "telemetry guard refresh",
+      "fedops stub"
+    ],
+    "pending": [
+      "sentry"
+    ],
+    "modified": true
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/datos-com-propietarios-comunidades.html",
+    "relPath": "sites/www.dehonline.es/datos-com-propietarios-comunidades.html",
+    "detected": [
+      "sentry"
+    ],
+    "removed": [
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "telemetry guard refresh",
+      "fedops stub"
+    ],
+    "pending": [
+      "sentry"
+    ],
+    "modified": true
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/documbox-info.html",
+    "relPath": "sites/www.dehonline.es/documbox-info.html",
+    "detected": [
+      "sentry"
+    ],
+    "removed": [
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "telemetry guard refresh",
+      "fedops stub"
+    ],
+    "pending": [
+      "sentry"
+    ],
+    "modified": true
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/grupos/comunicacion-con-clientes.html",
+    "relPath": "sites/www.dehonline.es/grupos/comunicacion-con-clientes.html",
+    "detected": [
+      "sentry"
+    ],
+    "removed": [
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "telemetry guard refresh",
+      "fedops stub"
+    ],
+    "pending": [
+      "sentry"
+    ],
+    "modified": true
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/grupos/energia.html",
+    "relPath": "sites/www.dehonline.es/grupos/energia.html",
+    "detected": [
+      "sentry"
+    ],
+    "removed": [
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "telemetry guard refresh",
+      "fedops stub"
+    ],
+    "pending": [
+      "sentry"
+    ],
+    "modified": true
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/grupos/factura-electronica.html",
+    "relPath": "sites/www.dehonline.es/grupos/factura-electronica.html",
+    "detected": [
+      "sentry"
+    ],
+    "removed": [
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "telemetry guard refresh",
+      "fedops stub"
+    ],
+    "pending": [
+      "sentry"
+    ],
+    "modified": true
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/grupos/financiacion-pymes.html",
+    "relPath": "sites/www.dehonline.es/grupos/financiacion-pymes.html",
+    "detected": [
+      "sentry"
+    ],
+    "removed": [
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "telemetry guard refresh",
+      "fedops stub"
+    ],
+    "pending": [
+      "sentry"
+    ],
+    "modified": true
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/grupos/riesgos-laborales.html",
+    "relPath": "sites/www.dehonline.es/grupos/riesgos-laborales.html",
+    "detected": [
+      "sentry"
+    ],
+    "removed": [
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "telemetry guard refresh",
+      "fedops stub"
+    ],
+    "pending": [
+      "sentry"
+    ],
+    "modified": true
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/grupos/tecnologia.html",
+    "relPath": "sites/www.dehonline.es/grupos/tecnologia.html",
+    "detected": [
+      "sentry"
+    ],
+    "removed": [
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "telemetry guard refresh",
+      "fedops stub"
+    ],
+    "pending": [
+      "sentry"
+    ],
+    "modified": true
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/index.html",
+    "relPath": "sites/www.dehonline.es/index.html",
+    "detected": [
+      "sentry"
+    ],
+    "removed": [
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "telemetry guard refresh",
+      "fedops stub"
+    ],
+    "pending": [
+      "sentry"
+    ],
+    "modified": true
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/info-control-exp-notificaciones.html",
+    "relPath": "sites/www.dehonline.es/info-control-exp-notificaciones.html",
+    "detected": [
+      "sentry"
+    ],
+    "removed": [
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "telemetry guard refresh",
+      "fedops stub"
+    ],
+    "pending": [
+      "sentry"
+    ],
+    "modified": true
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/lexbox.html",
+    "relPath": "sites/www.dehonline.es/lexbox.html",
+    "detected": [
+      "sentry"
+    ],
+    "removed": [
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "telemetry guard refresh",
+      "fedops stub"
+    ],
+    "pending": [
+      "sentry"
+    ],
+    "modified": true
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/planes-af.html",
+    "relPath": "sites/www.dehonline.es/planes-af.html",
+    "detected": [
+      "sentry"
+    ],
+    "removed": [
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "telemetry guard refresh",
+      "fedops stub"
+    ],
+    "pending": [
+      "sentry"
+    ],
+    "modified": true
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/plataforma-control-exp-notificaciones.html",
+    "relPath": "sites/www.dehonline.es/plataforma-control-exp-notificaciones.html",
+    "detected": [
+      "sentry"
+    ],
+    "removed": [
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "telemetry guard refresh",
+      "fedops stub"
+    ],
+    "pending": [
+      "sentry"
+    ],
+    "modified": true
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/politica-de-compliance.html",
+    "relPath": "sites/www.dehonline.es/politica-de-compliance.html",
+    "detected": [
+      "sentry"
+    ],
+    "removed": [
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "telemetry guard refresh",
+      "fedops stub"
+    ],
+    "pending": [
+      "sentry"
+    ],
+    "modified": true
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/politica-de-cookies.html",
+    "relPath": "sites/www.dehonline.es/politica-de-cookies.html",
+    "detected": [
+      "sentry"
+    ],
+    "removed": [
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "telemetry guard refresh",
+      "fedops stub"
+    ],
+    "pending": [
+      "sentry"
+    ],
+    "modified": true
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/politica-de-privacidad.html",
+    "relPath": "sites/www.dehonline.es/politica-de-privacidad.html",
+    "detected": [
+      "sentry"
+    ],
+    "removed": [
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "telemetry guard refresh",
+      "fedops stub"
+    ],
+    "pending": [
+      "sentry"
+    ],
+    "modified": true
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/política-de-privacidad-para-redes-sociales.html",
+    "relPath": "sites/www.dehonline.es/política-de-privacidad-para-redes-sociales.html",
+    "detected": [
+      "sentry"
+    ],
+    "removed": [
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "telemetry guard refresh",
+      "fedops stub"
+    ],
+    "pending": [
+      "sentry"
+    ],
+    "modified": true
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/post/carpetas-financieras-digitales-facilita-el-acceso-a-financiación-para-tu-pyme.html",
+    "relPath": "sites/www.dehonline.es/post/carpetas-financieras-digitales-facilita-el-acceso-a-financiación-para-tu-pyme.html",
+    "detected": [
+      "sentry"
+    ],
+    "removed": [
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "telemetry guard refresh",
+      "fedops stub"
+    ],
+    "pending": [
+      "sentry"
+    ],
+    "modified": true
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/post/cen-el-control-que-tu-despacho-necesitaba-para-gestionar-notificaciones-electrónicas.html",
+    "relPath": "sites/www.dehonline.es/post/cen-el-control-que-tu-despacho-necesitaba-para-gestionar-notificaciones-electrónicas.html",
+    "detected": [
+      "sentry"
+    ],
+    "removed": [
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "telemetry guard refresh",
+      "fedops stub"
+    ],
+    "pending": [
+      "sentry"
+    ],
+    "modified": true
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/post/demasiado-pequeño-para-digitalizar-desmitificando-el-uso-de-herramientas-para-digitalizar-tu-admin.html",
+    "relPath": "sites/www.dehonline.es/post/demasiado-pequeño-para-digitalizar-desmitificando-el-uso-de-herramientas-para-digitalizar-tu-admin.html",
+    "detected": [
+      "sentry"
+    ],
+    "removed": [
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "telemetry guard refresh",
+      "fedops stub"
+    ],
+    "pending": [
+      "sentry"
+    ],
+    "modified": true
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/post/el-verano-del-administrador-de-fincas-descanso-de-unos-tormenta-perfecta-de-otros.html",
+    "relPath": "sites/www.dehonline.es/post/el-verano-del-administrador-de-fincas-descanso-de-unos-tormenta-perfecta-de-otros.html",
+    "detected": [
+      "sentry"
+    ],
+    "removed": [
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "telemetry guard refresh",
+      "fedops stub"
+    ],
+    "pending": [
+      "sentry"
+    ],
+    "modified": true
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/post/estrenamos-nueva-imagen-en-la-web-de-deh-online.html",
+    "relPath": "sites/www.dehonline.es/post/estrenamos-nueva-imagen-en-la-web-de-deh-online.html",
+    "detected": [
+      "sentry"
+    ],
+    "removed": [
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "telemetry guard refresh",
+      "fedops stub"
+    ],
+    "pending": [
+      "sentry"
+    ],
+    "modified": true
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/post/hsm-la-cámara-acorazada-para-tus-certificados-digitales.html",
+    "relPath": "sites/www.dehonline.es/post/hsm-la-cámara-acorazada-para-tus-certificados-digitales.html",
+    "detected": [
+      "sentry"
+    ],
+    "removed": [
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "telemetry guard refresh",
+      "fedops stub"
+    ],
+    "pending": [
+      "sentry"
+    ],
+    "modified": true
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/post/la-inteligencia-artificial-está-transformando-la-administración-de-fincas-de-verdad-no-en-powerpoi.html",
+    "relPath": "sites/www.dehonline.es/post/la-inteligencia-artificial-está-transformando-la-administración-de-fincas-de-verdad-no-en-powerpoi.html",
+    "detected": [
+      "sentry"
+    ],
+    "removed": [
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "telemetry guard refresh",
+      "fedops stub"
+    ],
+    "pending": [
+      "sentry"
+    ],
+    "modified": true
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/post/sabes-realmente-quién-trabaja-en-tus-comunidades-la-homologación-de-proveedores-como-sello-de-gara.html",
+    "relPath": "sites/www.dehonline.es/post/sabes-realmente-quién-trabaja-en-tus-comunidades-la-homologación-de-proveedores-como-sello-de-gara.html",
+    "detected": [
+      "sentry"
+    ],
+    "removed": [
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "telemetry guard refresh",
+      "fedops stub"
+    ],
+    "pending": [
+      "sentry"
+    ],
+    "modified": true
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/post/vas-a-pedir-un-préstamo-como-pyme-esto-es-lo-que-necesitas-tener-a-mano.html",
+    "relPath": "sites/www.dehonline.es/post/vas-a-pedir-un-préstamo-como-pyme-esto-es-lo-que-necesitas-tener-a-mano.html",
+    "detected": [
+      "sentry"
+    ],
+    "removed": [
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "telemetry guard refresh",
+      "fedops stub"
+    ],
+    "pending": [
+      "sentry"
+    ],
+    "modified": true
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/pymes.html",
+    "relPath": "sites/www.dehonline.es/pymes.html",
+    "detected": [
+      "sentry"
+    ],
+    "removed": [
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "telemetry guard refresh",
+      "fedops stub"
+    ],
+    "pending": [
+      "sentry"
+    ],
+    "modified": true
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/servicios-as.html",
+    "relPath": "sites/www.dehonline.es/servicios-as.html",
+    "detected": [
+      "sentry"
+    ],
+    "removed": [
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "telemetry guard refresh",
+      "fedops stub"
+    ],
+    "pending": [
+      "sentry"
+    ],
+    "modified": true
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/tsa.html",
+    "relPath": "sites/www.dehonline.es/tsa.html",
+    "detected": [
+      "sentry"
+    ],
+    "removed": [
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "telemetry guard refresh",
+      "fedops stub"
+    ],
+    "pending": [
+      "sentry"
+    ],
+    "modified": true
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.soporte.dehonline.es/index.html",
+    "relPath": "sites/www.soporte.dehonline.es/index.html",
+    "detected": [],
+    "removed": [
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "viewerModel.siteFeaturesConfigs.appMonitoring cleared",
+      "telemetry guard refresh",
+      "fedops stub"
+    ],
+    "pending": [],
+    "modified": true
+  }
+]

@@ -1,0 +1,5 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Redireccion recover</title>
+<meta http-equiv="refresh" content="0;url=/panel.dehonline.es/auth/login.html">
+<a href="/panel.dehonline.es/auth/login.html">Ir a login</a>

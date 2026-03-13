@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<script id="deh-telemetry-guard">(function(){var blocked=/(^https?:)?\/\/(frog\.wix\.com|panorama\.wixapps\.net)\//i;var localOrigin="http://127.0.0.1:8080";function isBlocked(v){return typeof v==='string'&&blocked.test(v)}window.fedops=window.fedops||{};window.fedops.apps=window.fedops.apps||{};window.fedops.phaseStarted=window.fedops.phaseStarted||function(){return function(){}};window.fedops.phaseEnded=window.fedops.phaseEnded||function(){return function(){}};window.fedops.reportError=window.fedops.reportError||function(){};var NativeWorker=window.Worker;if(typeof NativeWorker==='function'){var workerOrigin=window.location.protocol+'//'+window.location.hostname+(window.location.port?':'+window.location.port:'');window.Worker=function(url,options){var nextUrl=url;if(typeof url==='string'){var prefix=localOrigin+'/'+window.location.hostname+'/';if(url.indexOf(prefix)===0){nextUrl=workerOrigin+'/'+url.slice(prefix.length)}}return new NativeWorker(nextUrl,options)};window.Worker.prototype=NativeWorker.prototype}var origFetch=window.fetch;if(typeof origFetch==='function'){window.fetch=function(input,init){var url=typeof input==='string'?input:(input&&input.url)||'';if(isBlocked(url)){return Promise.resolve(new Response('',{status:204,statusText:'No Content'}))}return origFetch.call(this,input,init)}}var origOpen=XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.open;if(origOpen){XMLHttpRequest.prototype.open=function(method,url){this.__dehBlockedTelemetry=isBlocked(url);return origOpen.apply(this,arguments)};var origSend=XMLHttpRequest.prototype.send;XMLHttpRequest.prototype.send=function(body){if(this.__dehBlockedTelemetry){try{this.readyState=4;this.status=204}catch(_e){}return}return origSend.call(this,body)}}var origBeacon=navigator.sendBeacon;if(typeof origBeacon==='function'){navigator.sendBeacon=function(url,data){if(isBlocked(url)){return true}return origBeacon.call(this,url,data)}}if(window.Image&&window.Image.prototype){var desc=Object.getOwnPropertyDescriptor(window.Image.prototype,'src');if(desc&&desc.set){Object.defineProperty(window.Image.prototype,'src',{configurable:true,enumerable:desc.enumerable,get:desc.get,set:function(value){if(isBlocked(value)){return value}return desc.set.call(this,value)}})}}})();</script>
+
+
+
+
+
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <!--<script type="text/javascript" src="jquery-1.8.3.js"></script>-->
+    <style type="text/css">
+      html,
+      body,
+      .wrapper {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      img {
+        border: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div id="sb-slider"></div>
+      <!-- Define left and right buttons. -->
+      <!--<input id="left-but"  type="button" value="Left" />-->
+      <!--<input id="right-but" type="button" value="Right" />-->
+
+      <!-- Define elements to accept the alt and title text from the images. -->
+      <!--<p id="title-text"></p>-->
+      <!--<p id="alt-text"></p>-->
+    </div>
+    <!-- /wrapper -->
+    <script
+      type="text/javascript"
+      src="/static.parastorage.com/services/santa/1.13152.0/node_modules/@wix/santa-galleries/lib/js/Wix.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/static.parastorage.com/services/third-party/hammer/1.0.5/jquery.hammer.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/static.parastorage.com/services/santa/1.13152.0/node_modules/@wix/santa-galleries/target/Carousel/jquery.mousewheel.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/static.parastorage.com/services/santa/1.13152.0/node_modules/@wix/santa-galleries/target/Carousel/cloud-carousel.1.0.5.js"
+    ></script>
+
+    <script type="text/javascript">
+      var sliderEl = $('#sb-slider');
+      var items = [];
+      var props = {};
+      var currentMode = {};
+      var mainPageId = 'mainPage';
+      var widthDivider = 2.4;
+      var heightDivider = 1.6108;
+      var initWidth = Math.floor($(window).innerWidth() / widthDivider);
+      var initHeight = Math.floor(initWidth / heightDivider);
+      var currentIndex = 0;
+      const params = new URLSearchParams(window.location.search);
+      const imageSizingStrategy = decodeURIComponent(
+          params.get('imageSizingStrategy'),
+        );
+
+      function Dummy(w, h) {
+        w = w || $(window).innerWidth() / 3;
+        h = h || $(window).innerHeight() / 2;
+
+        sliderEl.html(
+          '<img width="' +
+            w +
+            '" height="' +
+            h +
+            '" class="cloudcarousel" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSGwpiAcEg8KjbYqbGT1WLajcw0fjHvvy45l8tSRuZQzaak4iiF" alt="">' +
+            '<img width="' +
+            w +
+            '" height="' +
+            h +
+            '" class="cloudcarousel" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSGwpiAcEg8KjbYqbGT1WLajcw0fjHvvy45l8tSRuZQzaak4iiF" alt="">' +
+            '<img width="' +
+            w +
+            '" height="' +
+            h +
+            '" class="cloudcarousel" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSGwpiAcEg8KjbYqbGT1WLajcw0fjHvvy45l8tSRuZQzaak4iiF" alt="">' +
+            '<img width="' +
+            w +
+            '" height="' +
+            h +
+            '" class="cloudcarousel" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSGwpiAcEg8KjbYqbGT1WLajcw0fjHvvy45l8tSRuZQzaak4iiF" alt="">' +
+            '<img width="' +
+            w +
+            '" height="' +
+            h +
+            '" class="cloudcarousel" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSGwpiAcEg8KjbYqbGT1WLajcw0fjHvvy45l8tSRuZQzaak4iiF" alt="">' +
+            '<img width="' +
+            w +
+            '" height="' +
+            h +
+            '" class="cloudcarousel" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSGwpiAcEg8KjbYqbGT1WLajcw0fjHvvy45l8tSRuZQzaak4iiF" alt="">' +
+            '<img width="' +
+            w +
+            '" height="' +
+            h +
+            '" class="cloudcarousel" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSGwpiAcEg8KjbYqbGT1WLajcw0fjHvvy45l8tSRuZQzaak4iiF" alt="">' +
+            '<img width="' +
+            w +
+            '" height="' +
+            h +
+            '" class="cloudcarousel" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSGwpiAcEg8KjbYqbGT1WLajcw0fjHvvy45l8tSRuZQzaak4iiF" alt="">' +
+            '<img width="' +
+            w +
+            '" height="' +
+            h +
+            '" class="cloudcarousel" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSGwpiAcEg8KjbYqbGT1WLajcw0fjHvvy45l8tSRuZQzaak4iiF" alt="">' +
+            '<img width="' +
+            w +
+            '" height="' +
+            h +
+            '" class="cloudcarousel" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSGwpiAcEg8KjbYqbGT1WLajcw0fjHvvy45l8tSRuZQzaak4iiF" alt="">' +
+            '<img width="' +
+            w +
+            '" height="' +
+            h +
+            '" class="cloudcarousel" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSGwpiAcEg8KjbYqbGT1WLajcw0fjHvvy45l8tSRuZQzaak4iiF" alt="">' +
+            '<img width="' +
+            w +
+            '" height="' +
+            h +
+            '" class="cloudcarousel" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSGwpiAcEg8KjbYqbGT1WLajcw0fjHvvy45l8tSRuZQzaak4iiF" alt="">' +
+            '<img width="' +
+            w +
+            '" height="' +
+            h +
+            '" class="cloudcarousel" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSGwpiAcEg8KjbYqbGT1WLajcw0fjHvvy45l8tSRuZQzaak4iiF" alt="">' +
+            '<img width="' +
+            w +
+            '" height="' +
+            h +
+            '" class="cloudcarousel" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSGwpiAcEg8KjbYqbGT1WLajcw0fjHvvy45l8tSRuZQzaak4iiF" alt="">' +
+            '<img width="' +
+            w +
+            '" height="' +
+            h +
+            '" class="cloudcarousel" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSGwpiAcEg8KjbYqbGT1WLajcw0fjHvvy45l8tSRuZQzaak4iiF" alt="">',
+        );
+      }
+
+      var tm;
+      window.onresize = function () {
+        clearTimeout(tm);
+        tm = setTimeout(function () {
+          refreshSlider();
+        }, 120);
+      };
+
+      Wix.addEventListener(Wix.Events.SETTINGS_UPDATED, function (message) {
+        switch (message.cmd) {
+          case 'zoomClosed':
+            updateAutoPlay();
+            break;
+          case 'next':
+            next();
+            break;
+          case 'previous':
+            previous();
+            break;
+          default:
+            props = message.props || {};
+            items = message.items || [];
+            refreshSlider();
+            break;
+        }
+        mainPageId = message.mainPageId || mainPageId;
+      });
+
+      Wix.addEventListener(Wix.Events.PAGE_NAVIGATION_CHANGE, function () {
+        updateAutoPlay();
+        //console.log('Wix.Events.PAGE_NAVIGATION_CHANGE', arguments);
+      });
+
+      Wix.addEventListener(Wix.Events.EDIT_MODE_CHANGE, function (mode) {
+        currentMode = mode;
+        updateAutoPlay();
+      });
+
+      Wix.pushState(
+        JSON.stringify({ cmd: 'componentReady', id: Wix.Utils.getCompId() }),
+      );
+
+      function getPerfectImageSize(
+        viewPortWidth,
+        viewPortHeight,
+        imageWidth,
+        imageHeight,
+      ) {
+        const imageRatio = imageWidth / imageHeight;
+
+        // Width is too large, shrink to viewport width and maintain ratio
+        if (imageWidth > viewPortWidth) {
+          const newWidth = viewPortWidth;
+          const newHeight = Math.floor(newWidth / imageRatio);
+          return {
+            width: newWidth,
+            height: newHeight,
+          };
+        }
+
+        // Height is too large, shrink to viewport height and maintain ratio
+        const newHeight = viewPortHeight;
+        const newWidth = Math.floor(newHeight * imageRatio);
+
+        return {
+          width: newWidth,
+          height: newHeight,
+        };
+      }
+
+      function getFitImageSize(
+        viewPortWidth,
+        viewPortHeight,
+        imageWidth,
+        imageHeight,
+      ) {
+        // Image fits inside viewport
+        if (imageWidth < viewPortWidth && imageHeight < viewPortHeight) {
+          return {
+            width: imageWidth,
+            height: imageHeight,
+          };
+        }
+        const imageRatio = imageWidth / imageHeight;
+
+        if (imageRatio > 1) { // Landscape/wide image
+          if (imageWidth < viewPortWidth) {
+            return {
+              width: imageWidth,
+              height: Math.floor(imageWidth / imageRatio),
+            }
+          } else {
+            return {
+              width: viewPortWidth,
+              height: Math.floor(viewPortWidth / imageRatio),
+            }
+          }
+        } else { // Portrait/tall image
+          if (imageHeight < viewPortHeight) {
+            return {
+              width: Math.floor(imageHeight * imageRatio),
+              height: imageHeight
+            }
+          } else {
+            return {
+              width: Math.floor(viewPortHeight * imageRatio),
+              height: viewPortHeight,
+            }
+          }
+        }
+      }
+
+      function updateAutoPlay() {
+        var vm = Wix.Utils.getViewMode();
+        if (vm === 'preview' || vm === 'site') {
+          startAutoPlay();
+        } else {
+          stopAutoPlay();
+        }
+      }
+
+      function getPlugin() {
+        return sliderEl.data('cloudcarousel');
+      }
+
+      function startAutoPlay() {
+        if (props.autoplay) {
+          var plugin = getPlugin();
+          //console.log('go',plugin);
+          plugin && plugin.startAutoRotate();
+        }
+      }
+
+      function stopAutoPlay() {
+        var plugin = getPlugin();
+        //console.log('stop',plugin);
+        plugin && plugin.stopAutoRotate();
+      }
+
+      function next() {
+        var plugin = getPlugin();
+        plugin && plugin.rotate(-1);
+      }
+
+      function previous() {
+        var plugin = getPlugin();
+        plugin && plugin.rotate(1);
+      }
+
+      function createSliderDom() {
+        var item;
+        var fragment = document.createDocumentFragment();
+        for (var i = 0; i < items.length; i++) {
+          item = items[i];
+          fragment.appendChild(createSingleItem(item, i));
+        }
+        return fragment;
+      }
+
+      function createSingleItem(item, index) {
+        var width = Math.floor($(window).innerWidth() / widthDivider);
+        var height = Math.floor(width / heightDivider);
+
+        var img = document.createElement('img');
+        img.className = 'cloudcarousel';
+        img.title = item.title;
+        img.alt = item.description;
+
+        const imageSizingFunction = imageSizingStrategy === 'fit' ?
+        getFitImageSize : getPerfectImageSize;
+
+        var imagePerfectSize = imageSizingFunction(
+          width,
+          height,
+          item.width,
+          item.height,
+        );
+
+        img.src = Wix.Utils.Media.getResizedImageUrl(
+          item.uri,
+          imagePerfectSize.width,
+          imagePerfectSize.height,
+        ); //{{src}}
+
+        if (imageSizingStrategy === 'fit') {
+          img.width = imagePerfectSize.width;
+          img.height = imagePerfectSize.height;          
+        } else {
+          img.width = width;
+          img.height = height;
+        }
+
+        if (props.galleryImageOnClickAction !== 'goToLink') {
+          img.onclick = function (evt) {
+            if (+img.style.zIndex === 100) {
+              switch (props.galleryImageOnClickAction) {
+                case 'zoomMode':
+                  Wix.pushState(JSON.stringify({ cmd: 'zoom', args: [index] }));
+                  stopAutoPlay();
+                  break;
+                default:
+                  Wix.pushState(
+                    JSON.stringify({ cmd: 'itemClicked', args: [index] }),
+                  );
+              }
+              return false;
+            }
+          };
+        }
+
+        if (props.galleryImageOnClickAction === 'zoomMode') {
+          img.style.cursor = 'pointer';
+        }
+
+        if (
+          item.linkType !== 'FREE_LINK' &&
+          props.galleryImageOnClickAction === 'goToLink'
+        ) {
+          var uri;
+          var navigate;
+          var navigateToAnchor;
+          var a = document.createElement('a');
+          var pageId;
+
+          if (item.linkType === 'DOCUMENT') {
+            uri = item.href; //Wix.Utils.Media.getDocumentUrl(item.uri);
+          }
+
+          if (item.linkType === 'PAGE') {
+            uri = '#';
+            navigate = function () {
+              pageId =
+                (item &&
+                  item.link &&
+                  item.link.pageId &&
+                  item.link.pageId.id) ||
+                mainPageId;
+              stopAutoPlay();
+              Wix.navigateToPage(item.link.pageId.id);
+            };
+          }
+
+          if (item.linkType === 'ANCHOR') {
+            navigateToAnchor = function (e) {
+              pageId =
+                (item &&
+                  item.link &&
+                  item.link.pageId &&
+                  item.link.pageId.id) ||
+                mainPageId;
+              stopAutoPlay();
+              Wix.pushState(
+                JSON.stringify({
+                  cmd: 'navigateToAnchor',
+                  args: [pageId, item['data-anchor']],
+                }),
+              );
+            };
+          }
+
+          a.onclick = function () {
+            if (+$(img).andSelf().find('img').css('zIndex') === 100) {
+              if (navigate) {
+                navigate();
+                return false;
+              }
+              if (navigateToAnchor) {
+                navigateToAnchor();
+                return false;
+              }
+              return true;
+            }
+            return false;
+          };
+
+          if (uri) {
+            a.href = uri;
+          } else if (item.href) {
+            a.href = item.href;
+          }
+          if (item.title) {
+            a.alt = item.title;
+          }
+          if (item.target) {
+            a.target = item.target === '_self' ? '_parent' : item.target;
+          }
+          a.appendChild(img);
+          img = a;
+        }
+
+        return img;
+      }
+
+      function refreshSlider(items) {
+        destroySlider();
+        sliderEl.empty().append(createSliderDom(items));
+        startSlider();
+      }
+
+      function destroySlider() {
+        var plugin = getPlugin();
+        plugin && plugin.destroy();
+        sliderEl.hide();
+      }
+
+      function startSlider() {
+        //console.log(items);
+        var width = $(window).innerWidth();
+        var height = $(window).innerHeight();
+
+        var widthImage = Math.floor($(window).innerWidth() / widthDivider);
+        var heightImage = Math.floor(width / heightDivider);
+
+        sliderEl.css({
+          width: width,
+          height: height,
+          background: 'transparent',
+          overflow: 'hidden',
+        });
+
+        sliderEl.fadeIn(100);
+
+        var ms = +props.autoplayInterval * 1000;
+        ms = ms < 1000 ? 1000 : ms;
+
+        sliderEl.CloudCarousel({
+          //xRadius: 0,
+          //  yRadius:0  ,
+          autoRotateDelay: ms >= 0 ? ms : 5000,
+          autoRotate: props.autoplay || false,
+          bringToFront: true,
+          reflHeight: 0, //heightImage/10<<0,
+          xPos: width / 2,
+          yPos: height / 12,
+          animStopCallback: function (itemIndex) {
+            if (currentIndex !== itemIndex) {
+              Wix.pushState(
+                JSON.stringify({ cmd: 'itemChanged', args: [itemIndex] }),
+              );
+              currentIndex = itemIndex;
+            }
+          },
+          //   buttonLeft: $("#left-but"),
+          //   buttonRight: $("#right-but"),
+          //  altBox: $("#alt-text"),
+          //    titleBox: $("#title-text")
+        });
+
+        var plugin = getPlugin();
+        if (plugin) {
+          plugin.initEvent = function () {
+            updateAutoPlay();
+          };
+        }
+      }
+    </script>
+  <script id="deh-fedops-stub">(function(){window.fedops=window.fedops||{};window.fedops.apps=window.fedops.apps||{};window.fedops.phaseStarted=window.fedops.phaseStarted||function(){return function(){}};window.fedops.phaseEnded=window.fedops.phaseEnded||function(){return function(){}};window.fedops.reportError=window.fedops.reportError||function(){};})();</script></body>
+</html>

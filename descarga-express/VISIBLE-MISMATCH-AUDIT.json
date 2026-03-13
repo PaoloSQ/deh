@@ -1,0 +1,1088 @@
+{
+  "generatedAt": "2026-03-12T16:55:38.326Z",
+  "domain": "www.dehonline.es",
+  "route": "/",
+  "viewport": {
+    "name": "desktop",
+    "width": 1600,
+    "height": 1200
+  },
+  "localUrl": "http://127.0.0.1:8080/www.dehonline.es/",
+  "remoteUrl": "https://www.dehonline.es/",
+  "localElementCount": 225,
+  "remoteElementCount": 225,
+  "mismatches": [
+    {
+      "id": "masterPage",
+      "type": "layout-drift",
+      "reasons": [
+        "layout-drift"
+      ],
+      "local": {
+        "id": "masterPage",
+        "tag": "div",
+        "className": "mesh-layout masterPage css-editing-scope",
+        "text": "Comunidad DEH Blog Aún no eres cliente Acceso Clientes Iniciar sesión Administraciones de Fincas Conoce nuestras soluciones Asesorías Conoce nuestras soluciones Tenemos la solución para ti Queremos ayudarte Control de Ex",
+        "textLength": 3060,
+        "href": "/www.dehonline.es/",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 1600,
+          "height": 4996
+        },
+        "opacity": 1,
+        "display": "grid",
+        "visibility": "visible",
+        "transform": "none",
+        "animationName": "none",
+        "pointerEvents": "auto",
+        "rendered": true,
+        "imageCount": 8,
+        "loadedImageCount": 8,
+        "missingImageCount": 0,
+        "hasBackgroundImage": false,
+        "backgroundImage": "none"
+      },
+      "remote": {
+        "id": "masterPage",
+        "tag": "div",
+        "className": "mesh-layout masterPage css-editing-scope",
+        "text": "Comunidad DEH Blog Aún no eres cliente Acceso Clientes Iniciar sesión Administraciones de Fincas Conoce nuestras soluciones Asesorías Conoce nuestras soluciones Tenemos la solución para ti Queremos ayudarte Control de Ex",
+        "textLength": 3367,
+        "href": "https://www.dehonline.es",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 1600,
+          "height": 5271
+        },
+        "opacity": 1,
+        "display": "grid",
+        "visibility": "visible",
+        "transform": "none",
+        "animationName": "none",
+        "pointerEvents": "auto",
+        "rendered": true,
+        "imageCount": 8,
+        "loadedImageCount": 8,
+        "missingImageCount": 0,
+        "hasBackgroundImage": false,
+        "backgroundImage": "none"
+      },
+      "visual": {
+        "changedPixels": 830273,
+        "totalPixels": 8433600,
+        "diffRatio": 0.098448,
+        "localPath": "/workspaces/deh/descarga-express/.visible-mismatch-audit/home-desktop/elements/00-masterpage-local.png",
+        "remotePath": "/workspaces/deh/descarga-express/.visible-mismatch-audit/home-desktop/elements/00-masterpage-remote.png",
+        "diffPath": "/workspaces/deh/descarga-express/.visible-mismatch-audit/home-desktop/elements/00-masterpage-diff.png"
+      }
+    },
+    {
+      "id": "comp-m5qnidp97",
+      "type": "images-not-painted",
+      "reasons": [
+        "images-not-painted"
+      ],
+      "local": {
+        "id": "comp-m5qnidp97",
+        "tag": "section",
+        "className": "Oqnisf comp-m5qnidp97 wixui-section",
+        "text": "DEH en cifras +12Mil Administraciones públicas vigiladas +950 Organismos admin. central +2.500 Organismos admin. autonómica +7.000 Organismos admin. local 425.371 Suscripciones anuales 624 Nuevos suscriptores en la últim",
+        "textLength": 457,
+        "href": "/www.dehonline.es/app-vigiladas",
+        "rect": {
+          "x": 0,
+          "y": 2133,
+          "width": 1600,
+          "height": 607
+        },
+        "opacity": 1,
+        "display": "block",
+        "visibility": "visible",
+        "transform": "none",
+        "animationName": "none",
+        "pointerEvents": "auto",
+        "rendered": true,
+        "imageCount": 5,
+        "loadedImageCount": 0,
+        "missingImageCount": 5,
+        "hasBackgroundImage": false,
+        "backgroundImage": ""
+      },
+      "remote": {
+        "id": "comp-m5qnidp97",
+        "tag": "section",
+        "className": "Oqnisf comp-m5qnidp97 wixui-section",
+        "text": "DEH en cifras +12Mil Administraciones públicas vigiladas +950 Organismos admin. central +2.500 Organismos admin. autonómica +7.000 Organismos admin. local 425.371 Suscripciones anuales 624 Nuevos suscriptores en la últim",
+        "textLength": 457,
+        "href": "https://www.dehonline.es/app-vigiladas",
+        "rect": {
+          "x": 0,
+          "y": 2133,
+          "width": 1600,
+          "height": 607
+        },
+        "opacity": 1,
+        "display": "block",
+        "visibility": "visible",
+        "transform": "none",
+        "animationName": "none",
+        "pointerEvents": "auto",
+        "rendered": true,
+        "imageCount": 5,
+        "loadedImageCount": 5,
+        "missingImageCount": 0,
+        "hasBackgroundImage": false,
+        "backgroundImage": ""
+      },
+      "visual": {
+        "changedPixels": 5115,
+        "totalPixels": 1022400,
+        "diffRatio": 0.005003,
+        "localPath": "/workspaces/deh/descarga-express/.visible-mismatch-audit/home-desktop/elements/01-comp-m5qnidp97-local.png",
+        "remotePath": "/workspaces/deh/descarga-express/.visible-mismatch-audit/home-desktop/elements/01-comp-m5qnidp97-remote.png",
+        "diffPath": "/workspaces/deh/descarga-express/.visible-mismatch-audit/home-desktop/elements/01-comp-m5qnidp97-diff.png"
+      }
+    },
+    {
+      "id": "comp-m5qnidpx1",
+      "type": "images-not-painted",
+      "reasons": [
+        "images-not-painted"
+      ],
+      "local": {
+        "id": "comp-m5qnidpx1",
+        "tag": "div",
+        "className": "KaEeLN comp-m5qnidpx1",
+        "text": "+1.956 Administradores de Fincas +84.034 Comunidades de propietarios +209.597 Autónomos +79.659 Pequeñas y Medianas Empresas (PYMEs) +3.067 Asesores fiscales",
+        "textLength": 157,
+        "href": "/www.dehonline.es/datos-com-propietarios-comunidades",
+        "rect": {
+          "x": 543,
+          "y": 2476,
+          "width": 795,
+          "height": 204
+        },
+        "opacity": 1,
+        "display": "block",
+        "visibility": "visible",
+        "transform": "none",
+        "animationName": "none",
+        "pointerEvents": "auto",
+        "rendered": true,
+        "imageCount": 5,
+        "loadedImageCount": 0,
+        "missingImageCount": 5,
+        "hasBackgroundImage": false,
+        "backgroundImage": ""
+      },
+      "remote": {
+        "id": "comp-m5qnidpx1",
+        "tag": "div",
+        "className": "KaEeLN comp-m5qnidpx1",
+        "text": "+1.956 Administradores de Fincas +84.034 Comunidades de propietarios +209.597 Autónomos +79.659 Pequeñas y Medianas Empresas (PYMEs) +3.067 Asesores fiscales",
+        "textLength": 157,
+        "href": "https://www.dehonline.es/datos-com-propietarios-comunidades",
+        "rect": {
+          "x": 543,
+          "y": 2476,
+          "width": 795,
+          "height": 204
+        },
+        "opacity": 1,
+        "display": "block",
+        "visibility": "visible",
+        "transform": "none",
+        "animationName": "none",
+        "pointerEvents": "auto",
+        "rendered": true,
+        "imageCount": 5,
+        "loadedImageCount": 5,
+        "missingImageCount": 0,
+        "hasBackgroundImage": false,
+        "backgroundImage": ""
+      },
+      "visual": {
+        "changedPixels": 5115,
+        "totalPixels": 195172,
+        "diffRatio": 0.026208,
+        "localPath": "/workspaces/deh/descarga-express/.visible-mismatch-audit/home-desktop/elements/02-comp-m5qnidpx1-local.png",
+        "remotePath": "/workspaces/deh/descarga-express/.visible-mismatch-audit/home-desktop/elements/02-comp-m5qnidpx1-remote.png",
+        "diffPath": "/workspaces/deh/descarga-express/.visible-mismatch-audit/home-desktop/elements/02-comp-m5qnidpx1-diff.png"
+      }
+    },
+    {
+      "id": "comp-m5qnidpy2",
+      "type": "images-not-painted",
+      "reasons": [
+        "images-not-painted"
+      ],
+      "local": {
+        "id": "comp-m5qnidpy2",
+        "tag": "div",
+        "className": "comp-m5qnidpy2 SPY_vo",
+        "text": "+1.956 Administradores de Fincas",
+        "textLength": 32,
+        "href": "",
+        "rect": {
+          "x": 568,
+          "y": 2511,
+          "width": 148,
+          "height": 144
+        },
+        "opacity": 1,
+        "display": "block",
+        "visibility": "visible",
+        "transform": "none",
+        "animationName": "none",
+        "pointerEvents": "none",
+        "rendered": true,
+        "imageCount": 1,
+        "loadedImageCount": 0,
+        "missingImageCount": 1,
+        "hasBackgroundImage": false,
+        "backgroundImage": ""
+      },
+      "remote": {
+        "id": "comp-m5qnidpy2",
+        "tag": "div",
+        "className": "comp-m5qnidpy2 SPY_vo",
+        "text": "+1.956 Administradores de Fincas",
+        "textLength": 32,
+        "href": "",
+        "rect": {
+          "x": 568,
+          "y": 2511,
+          "width": 148,
+          "height": 144
+        },
+        "opacity": 1,
+        "display": "block",
+        "visibility": "visible",
+        "transform": "none",
+        "animationName": "none",
+        "pointerEvents": "none",
+        "rendered": true,
+        "imageCount": 1,
+        "loadedImageCount": 1,
+        "missingImageCount": 0,
+        "hasBackgroundImage": false,
+        "backgroundImage": ""
+      },
+      "visual": {
+        "changedPixels": 1131,
+        "totalPixels": 31680,
+        "diffRatio": 0.035701,
+        "localPath": "/workspaces/deh/descarga-express/.visible-mismatch-audit/home-desktop/elements/03-comp-m5qnidpy2-local.png",
+        "remotePath": "/workspaces/deh/descarga-express/.visible-mismatch-audit/home-desktop/elements/03-comp-m5qnidpy2-remote.png",
+        "diffPath": "/workspaces/deh/descarga-express/.visible-mismatch-audit/home-desktop/elements/03-comp-m5qnidpy2-diff.png"
+      }
+    },
+    {
+      "id": "comp-m5qnidpy8",
+      "type": "images-not-painted",
+      "reasons": [
+        "images-not-painted"
+      ],
+      "local": {
+        "id": "comp-m5qnidpy8",
+        "tag": "div",
+        "className": "MazNVa comp-m5qnidpy8 wixui-image",
+        "text": "",
+        "textLength": 0,
+        "href": "",
+        "rect": {
+          "x": 609,
+          "y": 2511,
+          "width": 65,
+          "height": 65
+        },
+        "opacity": 1,
+        "display": "block",
+        "visibility": "visible",
+        "transform": "none",
+        "animationName": "none",
+        "pointerEvents": "auto",
+        "rendered": true,
+        "imageCount": 1,
+        "loadedImageCount": 0,
+        "missingImageCount": 1,
+        "hasBackgroundImage": false,
+        "backgroundImage": ""
+      },
+      "remote": {
+        "id": "comp-m5qnidpy8",
+        "tag": "div",
+        "className": "MazNVa comp-m5qnidpy8 wixui-image",
+        "text": "",
+        "textLength": 0,
+        "href": "",
+        "rect": {
+          "x": 609,
+          "y": 2511,
+          "width": 65,
+          "height": 65
+        },
+        "opacity": 1,
+        "display": "block",
+        "visibility": "visible",
+        "transform": "none",
+        "animationName": "none",
+        "pointerEvents": "auto",
+        "rendered": true,
+        "imageCount": 1,
+        "loadedImageCount": 1,
+        "missingImageCount": 0,
+        "hasBackgroundImage": false,
+        "backgroundImage": ""
+      },
+      "visual": {
+        "changedPixels": 1131,
+        "totalPixels": 9409,
+        "diffRatio": 0.120204,
+        "localPath": "/workspaces/deh/descarga-express/.visible-mismatch-audit/home-desktop/elements/04-comp-m5qnidpy8-local.png",
+        "remotePath": "/workspaces/deh/descarga-express/.visible-mismatch-audit/home-desktop/elements/04-comp-m5qnidpy8-remote.png",
+        "diffPath": "/workspaces/deh/descarga-express/.visible-mismatch-audit/home-desktop/elements/04-comp-m5qnidpy8-diff.png"
+      }
+    },
+    {
+      "id": "comp-m5qnidq111",
+      "type": "images-not-painted",
+      "reasons": [
+        "images-not-painted"
+      ],
+      "local": {
+        "id": "comp-m5qnidq111",
+        "tag": "div",
+        "className": "comp-m5qnidq111 SPY_vo",
+        "text": "+84.034 Comunidades de propietarios",
+        "textLength": 35,
+        "href": "/www.dehonline.es/datos-com-propietarios-comunidades",
+        "rect": {
+          "x": 713,
+          "y": 2509,
+          "width": 148,
+          "height": 146
+        },
+        "opacity": 1,
+        "display": "block",
+        "visibility": "visible",
+        "transform": "none",
+        "animationName": "none",
+        "pointerEvents": "none",
+        "rendered": true,
+        "imageCount": 1,
+        "loadedImageCount": 0,
+        "missingImageCount": 1,
+        "hasBackgroundImage": false,
+        "backgroundImage": ""
+      },
+      "remote": {
+        "id": "comp-m5qnidq111",
+        "tag": "div",
+        "className": "comp-m5qnidq111 SPY_vo",
+        "text": "+84.034 Comunidades de propietarios",
+        "textLength": 35,
+        "href": "https://www.dehonline.es/datos-com-propietarios-comunidades",
+        "rect": {
+          "x": 713,
+          "y": 2509,
+          "width": 148,
+          "height": 146
+        },
+        "opacity": 1,
+        "display": "block",
+        "visibility": "visible",
+        "transform": "none",
+        "animationName": "none",
+        "pointerEvents": "none",
+        "rendered": true,
+        "imageCount": 1,
+        "loadedImageCount": 1,
+        "missingImageCount": 0,
+        "hasBackgroundImage": false,
+        "backgroundImage": ""
+      },
+      "visual": {
+        "changedPixels": 1360,
+        "totalPixels": 32040,
+        "diffRatio": 0.042447,
+        "localPath": "/workspaces/deh/descarga-express/.visible-mismatch-audit/home-desktop/elements/05-comp-m5qnidq111-local.png",
+        "remotePath": "/workspaces/deh/descarga-express/.visible-mismatch-audit/home-desktop/elements/05-comp-m5qnidq111-remote.png",
+        "diffPath": "/workspaces/deh/descarga-express/.visible-mismatch-audit/home-desktop/elements/05-comp-m5qnidq111-diff.png"
+      }
+    },
+    {
+      "id": "comp-m5qnidq25",
+      "type": "images-not-painted",
+      "reasons": [
+        "images-not-painted"
+      ],
+      "local": {
+        "id": "comp-m5qnidq25",
+        "tag": "div",
+        "className": "MazNVa comp-m5qnidq25 wixui-image rYiAuL",
+        "text": "",
+        "textLength": 0,
+        "href": "/www.dehonline.es/datos-com-propietarios-comunidades",
+        "rect": {
+          "x": 754,
+          "y": 2509,
+          "width": 65,
+          "height": 67
+        },
+        "opacity": 1,
+        "display": "block",
+        "visibility": "visible",
+        "transform": "none",
+        "animationName": "none",
+        "pointerEvents": "auto",
+        "rendered": true,
+        "imageCount": 1,
+        "loadedImageCount": 0,
+        "missingImageCount": 1,
+        "hasBackgroundImage": false,
+        "backgroundImage": ""
+      },
+      "remote": {
+        "id": "comp-m5qnidq25",
+        "tag": "div",
+        "className": "MazNVa comp-m5qnidq25 wixui-image rYiAuL",
+        "text": "",
+        "textLength": 0,
+        "href": "https://www.dehonline.es/datos-com-propietarios-comunidades",
+        "rect": {
+          "x": 754,
+          "y": 2509,
+          "width": 65,
+          "height": 67
+        },
+        "opacity": 1,
+        "display": "block",
+        "visibility": "visible",
+        "transform": "none",
+        "animationName": "none",
+        "pointerEvents": "auto",
+        "rendered": true,
+        "imageCount": 1,
+        "loadedImageCount": 1,
+        "missingImageCount": 0,
+        "hasBackgroundImage": false,
+        "backgroundImage": ""
+      },
+      "visual": {
+        "changedPixels": 1360,
+        "totalPixels": 9603,
+        "diffRatio": 0.141622,
+        "localPath": "/workspaces/deh/descarga-express/.visible-mismatch-audit/home-desktop/elements/06-comp-m5qnidq25-local.png",
+        "remotePath": "/workspaces/deh/descarga-express/.visible-mismatch-audit/home-desktop/elements/06-comp-m5qnidq25-remote.png",
+        "diffPath": "/workspaces/deh/descarga-express/.visible-mismatch-audit/home-desktop/elements/06-comp-m5qnidq25-diff.png"
+      }
+    },
+    {
+      "id": "comp-m5qnidq52",
+      "type": "images-not-painted",
+      "reasons": [
+        "images-not-painted"
+      ],
+      "local": {
+        "id": "comp-m5qnidq52",
+        "tag": "div",
+        "className": "comp-m5qnidq52 SPY_vo",
+        "text": "+209.597 Autónomos",
+        "textLength": 18,
+        "href": "",
+        "rect": {
+          "x": 874,
+          "y": 2512,
+          "width": 148,
+          "height": 127
+        },
+        "opacity": 1,
+        "display": "block",
+        "visibility": "visible",
+        "transform": "none",
+        "animationName": "none",
+        "pointerEvents": "none",
+        "rendered": true,
+        "imageCount": 1,
+        "loadedImageCount": 0,
+        "missingImageCount": 1,
+        "hasBackgroundImage": false,
+        "backgroundImage": ""
+      },
+      "remote": {
+        "id": "comp-m5qnidq52",
+        "tag": "div",
+        "className": "comp-m5qnidq52 SPY_vo",
+        "text": "+209.597 Autónomos",
+        "textLength": 18,
+        "href": "",
+        "rect": {
+          "x": 874,
+          "y": 2512,
+          "width": 148,
+          "height": 127
+        },
+        "opacity": 1,
+        "display": "block",
+        "visibility": "visible",
+        "transform": "none",
+        "animationName": "none",
+        "pointerEvents": "none",
+        "rendered": true,
+        "imageCount": 1,
+        "loadedImageCount": 1,
+        "missingImageCount": 0,
+        "hasBackgroundImage": false,
+        "backgroundImage": ""
+      },
+      "visual": {
+        "changedPixels": 817,
+        "totalPixels": 28620,
+        "diffRatio": 0.028546,
+        "localPath": "/workspaces/deh/descarga-express/.visible-mismatch-audit/home-desktop/elements/07-comp-m5qnidq52-local.png",
+        "remotePath": "/workspaces/deh/descarga-express/.visible-mismatch-audit/home-desktop/elements/07-comp-m5qnidq52-remote.png",
+        "diffPath": "/workspaces/deh/descarga-express/.visible-mismatch-audit/home-desktop/elements/07-comp-m5qnidq52-diff.png"
+      }
+    },
+    {
+      "id": "comp-m5qnidq6",
+      "type": "images-not-painted",
+      "reasons": [
+        "images-not-painted"
+      ],
+      "local": {
+        "id": "comp-m5qnidq6",
+        "tag": "div",
+        "className": "MazNVa comp-m5qnidq6 wixui-image",
+        "text": "",
+        "textLength": 0,
+        "href": "",
+        "rect": {
+          "x": 912,
+          "y": 2512,
+          "width": 71,
+          "height": 64
+        },
+        "opacity": 1,
+        "display": "block",
+        "visibility": "visible",
+        "transform": "none",
+        "animationName": "none",
+        "pointerEvents": "auto",
+        "rendered": true,
+        "imageCount": 1,
+        "loadedImageCount": 0,
+        "missingImageCount": 1,
+        "hasBackgroundImage": false,
+        "backgroundImage": ""
+      },
+      "remote": {
+        "id": "comp-m5qnidq6",
+        "tag": "div",
+        "className": "MazNVa comp-m5qnidq6 wixui-image",
+        "text": "",
+        "textLength": 0,
+        "href": "",
+        "rect": {
+          "x": 912,
+          "y": 2512,
+          "width": 71,
+          "height": 64
+        },
+        "opacity": 1,
+        "display": "block",
+        "visibility": "visible",
+        "transform": "none",
+        "animationName": "none",
+        "pointerEvents": "auto",
+        "rendered": true,
+        "imageCount": 1,
+        "loadedImageCount": 1,
+        "missingImageCount": 0,
+        "hasBackgroundImage": false,
+        "backgroundImage": ""
+      },
+      "visual": {
+        "changedPixels": 817,
+        "totalPixels": 9888,
+        "diffRatio": 0.082625,
+        "localPath": "/workspaces/deh/descarga-express/.visible-mismatch-audit/home-desktop/elements/08-comp-m5qnidq6-local.png",
+        "remotePath": "/workspaces/deh/descarga-express/.visible-mismatch-audit/home-desktop/elements/08-comp-m5qnidq6-remote.png",
+        "diffPath": "/workspaces/deh/descarga-express/.visible-mismatch-audit/home-desktop/elements/08-comp-m5qnidq6-diff.png"
+      }
+    },
+    {
+      "id": "comp-m5qnidqb1",
+      "type": "images-not-painted",
+      "reasons": [
+        "images-not-painted"
+      ],
+      "local": {
+        "id": "comp-m5qnidqb1",
+        "tag": "div",
+        "className": "comp-m5qnidqb1 SPY_vo",
+        "text": "+79.659 Pequeñas y Medianas Empresas (PYMEs)",
+        "textLength": 44,
+        "href": "",
+        "rect": {
+          "x": 1037,
+          "y": 2512,
+          "width": 148,
+          "height": 143
+        },
+        "opacity": 1,
+        "display": "block",
+        "visibility": "visible",
+        "transform": "none",
+        "animationName": "none",
+        "pointerEvents": "none",
+        "rendered": true,
+        "imageCount": 1,
+        "loadedImageCount": 0,
+        "missingImageCount": 1,
+        "hasBackgroundImage": false,
+        "backgroundImage": ""
+      },
+      "remote": {
+        "id": "comp-m5qnidqb1",
+        "tag": "div",
+        "className": "comp-m5qnidqb1 SPY_vo",
+        "text": "+79.659 Pequeñas y Medianas Empresas (PYMEs)",
+        "textLength": 44,
+        "href": "",
+        "rect": {
+          "x": 1037,
+          "y": 2512,
+          "width": 148,
+          "height": 143
+        },
+        "opacity": 1,
+        "display": "block",
+        "visibility": "visible",
+        "transform": "none",
+        "animationName": "none",
+        "pointerEvents": "none",
+        "rendered": true,
+        "imageCount": 1,
+        "loadedImageCount": 1,
+        "missingImageCount": 0,
+        "hasBackgroundImage": false,
+        "backgroundImage": ""
+      },
+      "visual": {
+        "changedPixels": 935,
+        "totalPixels": 31500,
+        "diffRatio": 0.029683,
+        "localPath": "/workspaces/deh/descarga-express/.visible-mismatch-audit/home-desktop/elements/09-comp-m5qnidqb1-local.png",
+        "remotePath": "/workspaces/deh/descarga-express/.visible-mismatch-audit/home-desktop/elements/09-comp-m5qnidqb1-remote.png",
+        "diffPath": "/workspaces/deh/descarga-express/.visible-mismatch-audit/home-desktop/elements/09-comp-m5qnidqb1-diff.png"
+      }
+    },
+    {
+      "id": "comp-m5qnidqd",
+      "type": "images-not-painted",
+      "reasons": [
+        "images-not-painted"
+      ],
+      "local": {
+        "id": "comp-m5qnidqd",
+        "tag": "div",
+        "className": "MazNVa comp-m5qnidqd wixui-image",
+        "text": "",
+        "textLength": 0,
+        "href": "",
+        "rect": {
+          "x": 1079,
+          "y": 2512,
+          "width": 64,
+          "height": 64
+        },
+        "opacity": 1,
+        "display": "block",
+        "visibility": "visible",
+        "transform": "none",
+        "animationName": "none",
+        "pointerEvents": "auto",
+        "rendered": true,
+        "imageCount": 1,
+        "loadedImageCount": 0,
+        "missingImageCount": 1,
+        "hasBackgroundImage": false,
+        "backgroundImage": ""
+      },
+      "remote": {
+        "id": "comp-m5qnidqd",
+        "tag": "div",
+        "className": "MazNVa comp-m5qnidqd wixui-image",
+        "text": "",
+        "textLength": 0,
+        "href": "",
+        "rect": {
+          "x": 1079,
+          "y": 2512,
+          "width": 64,
+          "height": 64
+        },
+        "opacity": 1,
+        "display": "block",
+        "visibility": "visible",
+        "transform": "none",
+        "animationName": "none",
+        "pointerEvents": "auto",
+        "rendered": true,
+        "imageCount": 1,
+        "loadedImageCount": 1,
+        "missingImageCount": 0,
+        "hasBackgroundImage": false,
+        "backgroundImage": ""
+      },
+      "visual": {
+        "changedPixels": 935,
+        "totalPixels": 9216,
+        "diffRatio": 0.101454,
+        "localPath": "/workspaces/deh/descarga-express/.visible-mismatch-audit/home-desktop/elements/10-comp-m5qnidqd-local.png",
+        "remotePath": "/workspaces/deh/descarga-express/.visible-mismatch-audit/home-desktop/elements/10-comp-m5qnidqd-remote.png",
+        "diffPath": "/workspaces/deh/descarga-express/.visible-mismatch-audit/home-desktop/elements/10-comp-m5qnidqd-diff.png"
+      }
+    },
+    {
+      "id": "comp-m5qnidqg1",
+      "type": "images-not-painted",
+      "reasons": [
+        "images-not-painted"
+      ],
+      "local": {
+        "id": "comp-m5qnidqg1",
+        "tag": "div",
+        "className": "comp-m5qnidqg1 SPY_vo",
+        "text": "+3.067 Asesores fiscales",
+        "textLength": 24,
+        "href": "",
+        "rect": {
+          "x": 1186,
+          "y": 2511,
+          "width": 148,
+          "height": 144
+        },
+        "opacity": 1,
+        "display": "block",
+        "visibility": "visible",
+        "transform": "none",
+        "animationName": "none",
+        "pointerEvents": "none",
+        "rendered": true,
+        "imageCount": 1,
+        "loadedImageCount": 0,
+        "missingImageCount": 1,
+        "hasBackgroundImage": false,
+        "backgroundImage": ""
+      },
+      "remote": {
+        "id": "comp-m5qnidqg1",
+        "tag": "div",
+        "className": "comp-m5qnidqg1 SPY_vo",
+        "text": "+3.067 Asesores fiscales",
+        "textLength": 24,
+        "href": "",
+        "rect": {
+          "x": 1186,
+          "y": 2511,
+          "width": 148,
+          "height": 144
+        },
+        "opacity": 1,
+        "display": "block",
+        "visibility": "visible",
+        "transform": "none",
+        "animationName": "none",
+        "pointerEvents": "none",
+        "rendered": true,
+        "imageCount": 1,
+        "loadedImageCount": 1,
+        "missingImageCount": 0,
+        "hasBackgroundImage": false,
+        "backgroundImage": ""
+      },
+      "visual": {
+        "changedPixels": 872,
+        "totalPixels": 31680,
+        "diffRatio": 0.027525,
+        "localPath": "/workspaces/deh/descarga-express/.visible-mismatch-audit/home-desktop/elements/11-comp-m5qnidqg1-local.png",
+        "remotePath": "/workspaces/deh/descarga-express/.visible-mismatch-audit/home-desktop/elements/11-comp-m5qnidqg1-remote.png",
+        "diffPath": "/workspaces/deh/descarga-express/.visible-mismatch-audit/home-desktop/elements/11-comp-m5qnidqg1-diff.png"
+      }
+    },
+    {
+      "id": "comp-m5qnidqh",
+      "type": "images-not-painted",
+      "reasons": [
+        "images-not-painted"
+      ],
+      "local": {
+        "id": "comp-m5qnidqh",
+        "tag": "div",
+        "className": "MazNVa comp-m5qnidqh wixui-image",
+        "text": "",
+        "textLength": 0,
+        "href": "",
+        "rect": {
+          "x": 1224,
+          "y": 2511,
+          "width": 71,
+          "height": 65
+        },
+        "opacity": 1,
+        "display": "block",
+        "visibility": "visible",
+        "transform": "none",
+        "animationName": "none",
+        "pointerEvents": "auto",
+        "rendered": true,
+        "imageCount": 1,
+        "loadedImageCount": 0,
+        "missingImageCount": 1,
+        "hasBackgroundImage": false,
+        "backgroundImage": ""
+      },
+      "remote": {
+        "id": "comp-m5qnidqh",
+        "tag": "div",
+        "className": "MazNVa comp-m5qnidqh wixui-image",
+        "text": "",
+        "textLength": 0,
+        "href": "",
+        "rect": {
+          "x": 1224,
+          "y": 2511,
+          "width": 71,
+          "height": 65
+        },
+        "opacity": 1,
+        "display": "block",
+        "visibility": "visible",
+        "transform": "none",
+        "animationName": "none",
+        "pointerEvents": "auto",
+        "rendered": true,
+        "imageCount": 1,
+        "loadedImageCount": 1,
+        "missingImageCount": 0,
+        "hasBackgroundImage": false,
+        "backgroundImage": ""
+      },
+      "visual": {
+        "changedPixels": 872,
+        "totalPixels": 9991,
+        "diffRatio": 0.087279,
+        "localPath": "/workspaces/deh/descarga-express/.visible-mismatch-audit/home-desktop/elements/12-comp-m5qnidqh-local.png",
+        "remotePath": "/workspaces/deh/descarga-express/.visible-mismatch-audit/home-desktop/elements/12-comp-m5qnidqh-remote.png",
+        "diffPath": "/workspaces/deh/descarga-express/.visible-mismatch-audit/home-desktop/elements/12-comp-m5qnidqh-diff.png"
+      }
+    },
+    {
+      "id": "comp-lmuiwu1j",
+      "type": "images-not-painted",
+      "reasons": [
+        "images-not-painted"
+      ],
+      "local": {
+        "id": "comp-lmuiwu1j",
+        "tag": "div",
+        "className": "MazNVa comp-lmuiwu1j wixui-image rYiAuL",
+        "text": "",
+        "textLength": 0,
+        "href": "/www.dehonline.es/",
+        "rect": {
+          "x": 261,
+          "y": 5043,
+          "width": 123,
+          "height": 45
+        },
+        "opacity": 1,
+        "display": "block",
+        "visibility": "visible",
+        "transform": "none",
+        "animationName": "none",
+        "pointerEvents": "auto",
+        "rendered": true,
+        "imageCount": 1,
+        "loadedImageCount": 0,
+        "missingImageCount": 1,
+        "hasBackgroundImage": false,
+        "backgroundImage": ""
+      },
+      "remote": {
+        "id": "comp-lmuiwu1j",
+        "tag": "div",
+        "className": "MazNVa comp-lmuiwu1j wixui-image rYiAuL",
+        "text": "",
+        "textLength": 0,
+        "href": "https://www.dehonline.es",
+        "rect": {
+          "x": 261,
+          "y": 5042,
+          "width": 123,
+          "height": 45
+        },
+        "opacity": 1,
+        "display": "block",
+        "visibility": "visible",
+        "transform": "none",
+        "animationName": "none",
+        "pointerEvents": "auto",
+        "rendered": true,
+        "imageCount": 1,
+        "loadedImageCount": 1,
+        "missingImageCount": 0,
+        "hasBackgroundImage": false,
+        "backgroundImage": ""
+      },
+      "visual": {
+        "changedPixels": 2373,
+        "totalPixels": 11935,
+        "diffRatio": 0.198827,
+        "localPath": "/workspaces/deh/descarga-express/.visible-mismatch-audit/home-desktop/elements/13-comp-lmuiwu1j-local.png",
+        "remotePath": "/workspaces/deh/descarga-express/.visible-mismatch-audit/home-desktop/elements/13-comp-lmuiwu1j-remote.png",
+        "diffPath": "/workspaces/deh/descarga-express/.visible-mismatch-audit/home-desktop/elements/13-comp-lmuiwu1j-diff.png"
+      }
+    },
+    {
+      "id": "comp-lmuiwu2a",
+      "type": "images-not-painted",
+      "reasons": [
+        "images-not-painted"
+      ],
+      "local": {
+        "id": "comp-lmuiwu2a",
+        "tag": "div",
+        "className": "MazNVa comp-lmuiwu2a wixui-image rYiAuL",
+        "text": "",
+        "textLength": 0,
+        "href": "https://sedediatid.digital.gob.es/Prestadores/Paginas/Inicio.aspx",
+        "rect": {
+          "x": 630,
+          "y": 5166,
+          "width": 163,
+          "height": 50
+        },
+        "opacity": 1,
+        "display": "block",
+        "visibility": "visible",
+        "transform": "none",
+        "animationName": "none",
+        "pointerEvents": "auto",
+        "rendered": true,
+        "imageCount": 1,
+        "loadedImageCount": 0,
+        "missingImageCount": 1,
+        "hasBackgroundImage": false,
+        "backgroundImage": ""
+      },
+      "remote": {
+        "id": "comp-lmuiwu2a",
+        "tag": "div",
+        "className": "MazNVa comp-lmuiwu2a wixui-image rYiAuL",
+        "text": "",
+        "textLength": 0,
+        "href": "https://sedediatid.digital.gob.es/Prestadores/Paginas/Inicio.aspx",
+        "rect": {
+          "x": 630,
+          "y": 5165,
+          "width": 163,
+          "height": 50
+        },
+        "opacity": 1,
+        "display": "block",
+        "visibility": "visible",
+        "transform": "none",
+        "animationName": "none",
+        "pointerEvents": "auto",
+        "rendered": true,
+        "imageCount": 1,
+        "loadedImageCount": 1,
+        "missingImageCount": 0,
+        "hasBackgroundImage": false,
+        "backgroundImage": ""
+      },
+      "visual": {
+        "changedPixels": 2458,
+        "totalPixels": 15990,
+        "diffRatio": 0.153721,
+        "localPath": "/workspaces/deh/descarga-express/.visible-mismatch-audit/home-desktop/elements/14-comp-lmuiwu2a-local.png",
+        "remotePath": "/workspaces/deh/descarga-express/.visible-mismatch-audit/home-desktop/elements/14-comp-lmuiwu2a-remote.png",
+        "diffPath": "/workspaces/deh/descarga-express/.visible-mismatch-audit/home-desktop/elements/14-comp-lmuiwu2a-diff.png"
+      }
+    },
+    {
+      "id": "comp-lmuiwu25",
+      "type": "images-not-painted",
+      "reasons": [
+        "images-not-painted"
+      ],
+      "local": {
+        "id": "comp-lmuiwu25",
+        "tag": "div",
+        "className": "MazNVa comp-lmuiwu25 wixui-image rYiAuL",
+        "text": "",
+        "textLength": 0,
+        "href": "/www.dehonline.es/_files/ugd/7738b6_83518145a445425eb55171a5ff6a4e65.pdf",
+        "rect": {
+          "x": 831,
+          "y": 5161,
+          "width": 80,
+          "height": 60
+        },
+        "opacity": 1,
+        "display": "block",
+        "visibility": "visible",
+        "transform": "none",
+        "animationName": "none",
+        "pointerEvents": "auto",
+        "rendered": true,
+        "imageCount": 1,
+        "loadedImageCount": 0,
+        "missingImageCount": 1,
+        "hasBackgroundImage": false,
+        "backgroundImage": ""
+      },
+      "remote": {
+        "id": "comp-lmuiwu25",
+        "tag": "div",
+        "className": "MazNVa comp-lmuiwu25 wixui-image rYiAuL",
+        "text": "",
+        "textLength": 0,
+        "href": "https://www.dehonline.es/_files/ugd/7738b6_83518145a445425eb55171a5ff6a4e65.pdf",
+        "rect": {
+          "x": 831,
+          "y": 5160,
+          "width": 80,
+          "height": 60
+        },
+        "opacity": 1,
+        "display": "block",
+        "visibility": "visible",
+        "transform": "none",
+        "animationName": "none",
+        "pointerEvents": "auto",
+        "rendered": true,
+        "imageCount": 1,
+        "loadedImageCount": 1,
+        "missingImageCount": 0,
+        "hasBackgroundImage": false,
+        "backgroundImage": ""
+      },
+      "visual": {
+        "changedPixels": 4011,
+        "totalPixels": 10304,
+        "diffRatio": 0.389266,
+        "localPath": "/workspaces/deh/descarga-express/.visible-mismatch-audit/home-desktop/elements/15-comp-lmuiwu25-local.png",
+        "remotePath": "/workspaces/deh/descarga-express/.visible-mismatch-audit/home-desktop/elements/15-comp-lmuiwu25-remote.png",
+        "diffPath": "/workspaces/deh/descarga-express/.visible-mismatch-audit/home-desktop/elements/15-comp-lmuiwu25-diff.png"
+      }
+    }
+  ]
+}

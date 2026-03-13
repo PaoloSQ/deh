@@ -145,6 +145,13 @@ function buildHandlebars(mainInner, config) {
   const cleanedMain = stripDataTestId(mainInner);
   const wrapperClass = config.wrapperClass || "downloaded-page";
 
+  if (config.singleTemplate) {
+    return {
+      page: `<section class="${wrapperClass}">\n${cleanedMain.trim()}\n</section>\n`,
+      partialFiles: {},
+    };
+  }
+
   const sectionData = resolveSectionPartials(cleanedMain, config);
 
   if (sectionData.blocks.length === 0) {
@@ -266,6 +273,7 @@ async function main() {
   const handlebars = buildHandlebars(mainInner, config);
   writeFile(outputPaths.handlebarsPath, handlebars.page);
   removeStalePartials(outputPaths.partialDir, Object.keys(handlebars.partialFiles));
+
   Object.entries(handlebars.partialFiles).forEach(([name, content]) => {
     writeFile(path.join(outputPaths.partialDir, `${name}.handlebars`), content);
   });

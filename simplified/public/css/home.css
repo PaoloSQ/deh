@@ -155,8 +155,9 @@
   position: relative;
   min-height: 300px;
   overflow: hidden;
-  border: 1px solid #d7d7d7;
-  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .home-audience-card:nth-child(2) {
@@ -168,20 +169,20 @@
 }
 
 .home-audience-card:nth-child(3) .home-audience-card__title {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 23px;
 }
 
 .home-audience-card__title {
   margin: 19px 0 0;
   min-height: 23px;
-  padding: 0 11px;
   font-family: "Raleway", sans-serif;
   font-size: 22px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 23px;
   color: #d33434;
   text-align: left;
+  letter-spacing: 0.7px;
 }
 
 .home-audience-card img {
@@ -189,6 +190,7 @@
   height: 200px;
   object-fit: cover;
   margin: 17px auto 0;
+  border-radius: 20px;
 }
 
 .home-audience-card .home-link-arrow {
@@ -200,11 +202,19 @@
   min-height: 35px;
   padding: 0 14px;
   justify-content: center;
-  border: 1px solid #d33434;
+  border: 1px solid #d9d9d9;
   border-radius: 999px;
-  background: #ffffff;
+  background: #e5e5e5;
   font-size: 11px;
   font-weight: 500;
+  color: #111111;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.home-audience-card .home-link-arrow:hover,
+.home-audience-card .home-link-arrow:focus-visible {
+  background: #ffffff;
+  border-color: #d33434;
   color: #d33434;
 }
 

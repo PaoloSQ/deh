@@ -1,0 +1,21 @@
+{
+	"name": "descarga-express",
+	"version": "1.0.0",
+	"private": true,
+	"description": "Servidor Express para exponer el contenido de la carpeta descarga",
+	"main": "server.js",
+	"scripts": {
+		"start": "node server.js",
+		"dev": "NODE_ENV=development node server.js",
+		"compare-rendered": "node scripts/compare-rendered-pages.js",
+		"audit-parity": "node scripts/audit-render-parity.js",
+		"audit-visible-mismatches": "node scripts/audit-visible-mismatches.js",
+		"audit-interactions": "node scripts/audit-interactions.js",
+		"clean-third-party": "node scripts/clean-third-party.js",
+		"verify-pages": "node scripts/verify-pages.js"
+	},
+	"dependencies": {
+		"express": "^4.21.2",
+		"morgan": "^1.10.0"
+	}
+}

@@ -4,6 +4,7 @@ const path = require("path");
 const PAGE_MIGRATIONS = {
   "documbox-info": {
     standalone: true,
+    singleTemplate: true,
     wrapperClass: "documbox-wix",
     download: {
       host: "www.dehonline.es",

@@ -7,7 +7,7 @@ const {
   launchBrowser,
   parseViewportSelection,
   getAllPages,
-  getOriginUrl,
+  resolveOriginUrl,
   getNewUrl,
   buildScreenshotPath,
   buildDiffPath,
@@ -100,7 +100,7 @@ async function run() {
 
   for (let i = 0; i < pages.length; i++) {
     const pageName = pages[i];
-    const originUrl = getOriginUrl(pageName, { live: options.live });
+    const originUrl = await resolveOriginUrl(pageName, { live: options.live });
     const newUrl = getNewUrl(pageName);
 
     if (!originUrl) {

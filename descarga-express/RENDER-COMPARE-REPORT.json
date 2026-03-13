@@ -1,0 +1,32 @@
+[
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/blog/page/3.html",
+    "relPath": "www.dehonline.es/blog/page/3.html",
+    "domain": "www.dehonline.es",
+    "routeWithinDomain": "/blog/page/3",
+    "localUrl": "http://127.0.0.1:8080/www.dehonline.es/blog/page/3",
+    "remoteUrl": "https://www.dehonline.es/blog/page/3",
+    "status": "different",
+    "replaced": true,
+    "localFinalUrl": "http://127.0.0.1:8080/www.dehonline.es/blog/page/3",
+    "remoteFinalUrl": "https://www.dehonline.es/blog/page/3",
+    "localHash": "c82ff1e70e4c6fc7a30c202a7aa58fe71b0de344",
+    "remoteHash": "b4a0d03485a48926bb4fa64f0b9bad43213b90ea",
+    "localLogSummary": {
+      "total": 21,
+      "errors": 2,
+      "warnings": 6,
+      "failedRequests": 12
+    },
+    "remoteLogSummary": {
+      "total": 35,
+      "errors": 3,
+      "warnings": 6,
+      "failedRequests": 20
+    },
+    "diffSnippets": {
+      "local": "rator\" content=\"Wix.com Website Builder\"><link rel=\"icon\" sizes=\"192x192\" href=\"/assets/img/media/45bf13_c443697866794e04b06d1535b90ed7d8%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/45bf13_c443697866794e0",
+      "remote": "rator\" content=\"Wix.com Website Builder\"><link rel=\"icon\" sizes=\"192x192\" href=\"https://static.wixstatic.com/media/45bf13_c443697866794e04b06d1535b90ed7d8%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/45bf1"
+    }
+  }
+]

@@ -1,0 +1,262 @@
+{
+  "data": {
+    "url": "https://www.dehonline.es/",
+    "title": "Inicio | DEH Online - Soluciones digitales",
+    "heroSample": "",
+    "richTexts": [
+      {
+        "id": "comp-mb56i7ni3",
+        "text": "PRIMERO FUIMOS PIONEROS..."
+      },
+      {
+        "id": "comp-mb56i7nl2",
+        "text": "AHORA SOMOS LÍDERES"
+      }
+    ],
+    "htmlLength": 2430260,
+    "siteHtmlLength": 791953,
+    "bodyTextLength": 3838
+  },
+  "logs": [
+    {
+      "type": "console",
+      "level": "warn",
+      "text": "Unrecognized feature: 'vr'."
+    },
+    {
+      "type": "requestfailed",
+      "url": "https://px.ads.linkedin.com/wa/?medium=fetch&fmt=g",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "type": "console",
+      "level": "warn",
+      "text": "[Meta Pixel] - Duplicate Pixel ID: 334528986108458."
+    },
+    {
+      "type": "requestfailed",
+      "url": "https://panorama.wixapps.net/api/v1/bulklog",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "type": "requestfailed",
+      "url": "https://panorama.wixapps.net/api/v1/bulklog",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "type": "requestfailed",
+      "url": "https://frog.wix.com/bpm",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "type": "requestfailed",
+      "url": "https://frog.wix.com/bolt-performance",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "type": "requestfailed",
+      "url": "https://panorama.wixapps.net/api/v1/bulklog",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "type": "console",
+      "level": "info",
+      "text": "Running the code for the site. To debug this code in your browser's dev tools, open masterPage.js."
+    },
+    {
+      "type": "console",
+      "level": "info",
+      "text": "Running the code for the Inicio page. To debug this code in your browser's dev tools, open fswyo.js."
+    },
+    {
+      "type": "requestfailed",
+      "url": "https://panorama.wixapps.net/api/v1/bulklog",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "type": "requestfailed",
+      "url": "https://frog.wix.com/bolt-performance",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "type": "requestfailed",
+      "url": "https://panorama.wixapps.net/api/v1/bulklog",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "type": "requestfailed",
+      "url": "https://panorama.wixapps.net/api/v1/bulklog",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "type": "requestfailed",
+      "url": "https://frog.wix.com/bolt-performance",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "type": "requestfailed",
+      "url": "https://frog.wix.com/bolt-performance",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "type": "requestfailed",
+      "url": "https://frog.wix.com/bolt-performance",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "type": "requestfailed",
+      "url": "https://frog.wix.com/bolt-performance",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "type": "requestfailed",
+      "url": "https://frog.wix.com/bolt-performance",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "type": "requestfailed",
+      "url": "https://frog.wix.com/bolt-performance",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "type": "console",
+      "level": "warn",
+      "text": "react-i18next:: It seems you are still using the old wait option, you may migrate to the new useSuspense behaviour."
+    },
+    {
+      "type": "requestfailed",
+      "url": "https://panorama.wixapps.net/api/v1/bulklog",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "type": "console",
+      "level": "warn",
+      "text": "react-i18next:: It seems you are still using the old wait option, you may migrate to the new useSuspense behaviour."
+    },
+    {
+      "type": "requestfailed",
+      "url": "https://frog.wix.com/bolt-performance",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "type": "requestfailed",
+      "url": "https://frog.wix.com/bolt-performance",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "type": "requestfailed",
+      "url": "https://frog.wix.com/bolt-performance",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "type": "requestfailed",
+      "url": "https://panorama.wixapps.net/api/v1/bulklog",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "type": "requestfailed",
+      "url": "https://www.dehonline.es/_serverless/analytics-reporter/facebook/event",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "type": "requestfailed",
+      "url": "https://pagead2.googlesyndication.com/ccm/collect?frm=0&en=page_view&dl=https%3A%2F%2Fwww.dehonline.es%2F&scrsrc=www.googletagmanager.com&rnd=2018709769.1773322755&navt=n&npa=1&did=dMzY0Yz&gdid=dMzY0Yz&gtm=45be63a1h1v9224107582z89102186201za20gzb9102186201zd9102186201xec&gcs=G100&gcd=13p3p3p3p5l1&dma_cps=-&dma=0&tag_exp=103116026~103200004~115938466~115938469~116024733~117484252~117625641&apve=1&apvf=f&apvc=1&tids=AW-431333098&tid=AW-431333098&tft=1773322754555&tfd=4092",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "type": "requestfailed",
+      "url": "https://frog.wix.com/photo-ugc",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "type": "requestfailed",
+      "url": "https://frog.wix.com/groups",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "type": "requestfailed",
+      "url": "https://frog.wix.com/bolt-performance",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "type": "response",
+      "status": 403,
+      "url": "https://www.dehonline.es/v1/bulk/report-exposures"
+    },
+    {
+      "type": "console",
+      "level": "error",
+      "text": "Failed to load resource: the server responded with a status of 403 ()"
+    },
+    {
+      "type": "console",
+      "level": "error",
+      "text": "Access to fetch at 'https://api.session-replays.io/api/websites/external/d8fc9d59-076c-405d-811c-b022a1b18469/sessions/undefined/recordings' from origin 'https://www.dehonline.es' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+    },
+    {
+      "type": "requestfailed",
+      "url": "https://api.session-replays.io/api/websites/external/d8fc9d59-076c-405d-811c-b022a1b18469/sessions/undefined/recordings",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "type": "console",
+      "level": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "console",
+      "level": "warn",
+      "text": "The resource https://siteassets.parastorage.com/pages/pages/thunderbolt?appDefinitionIdToSiteRevision=%7B%225c047089-b4af-4395-bd58-139524a3da1d%22%3A%2233%22%2C%2214271d6f-ba62-d045-549b-ab972ae1f70e%22%3A%2225%22%2C%2214bcded7-0066-7c35-14d7-466cb3f09103%22%3A%221335%22%2C%22d90652a2-f5a1-4c7c-84c4-d4cdcc41f130%22%3A%229292%22%2C%2213d21c63-b5ec-5912-8397-c3a5ddb27a97%22%3A%22440%22%7D&beckyExperiments=.DatePickerPortal%2C.EnableCustomCSSVarsForLoginSocialBar%2C.FreemiumBannerOdeditor%2C.LoginBarEnableLoggingInStateInSSR%2C.TextInputAutoFillFix%2C.UseLoginSocialBarCustomMenu%2C.UseNewLoginSocialBarCustomMenuPositioning%2C.UseNewLoginSocialBarElementStructure%2C.UseNewLoginSocialBarMemberInitialsAvatar%2C.WixFreeSiteBannerDesktop%2C.WixFreeSiteBannerMobile%2C.buttonUdp%2C.calculateCollapsibleTextLineHeightByFont%2C.dynamicSlots%2C.fiveGridLineStudioSkins%2C.isClassNameToRootEnabled%2C.propsCarmiMappersMigration1%2C.propsCarmiMappersMigration4%2C.propsCarmiMappersMigration5%2C.svgResolver_2%2C.takeAppDependenciesFromCSM%2C.updateRichTextSemanticClassNamesOnCorvid%2C.useClassnameInResponsiveAppWidget%2C.useImageAvifFormatInNativeProGallery&blocksBuilderManifestGeneratorVersion=1.129.0&contentType=application%2Fjson&dfCk=6&dfVersion=1.5303.0&editorName=Unknown&experiments=dm_bgScrubToMotionFixer%2Cdm_migrateOldHoverBoxToNewFixer&externalBaseUrl=https%3A%2F%2Fwww.dehonline.es&fileId=782f79fe.bundle.min&formFactor=desktop&hasTPAWorkerOnSite=true&hasUserDomainMedia=false&isBuilderComponentModel=false&isHttps=true&isInSeo=false&isPremiumDomain=true&isUrlMigrated=true&isWixCodeOnPage=true&isWixCodeOnSite=true&language=es&metaSiteId=b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1&module=thunderbolt-platform&oneDocEnabled=true&originalLanguage=es&pageId=ccd8ff_a6a670265f788bc9f13c80fbbb031549_11199.json&quickActionsMenuEnabled=false&registryLibrariesTopology=%5B%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22wixui%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14973.0%22%7D%2C%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22dsgnsys%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14973.0%22%7D%5D&remoteWidgetStructureBuilderVersion=1.251.0&siteId=241dd6c7-7fb5-4c8d-b4d6-94e6afd31537&siteRevision=11217&staticHTMLComponentUrl=https%3A%2F%2Fwww-dehonline-es.filesusr.com%2F&viewMode=desktop was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally."
+    },
+    {
+      "type": "console",
+      "level": "warn",
+      "text": "The resource https://siteassets.parastorage.com/pages/pages/thunderbolt?appDefinitionIdToSiteRevision=%7B%225c047089-b4af-4395-bd58-139524a3da1d%22%3A%2233%22%2C%2214271d6f-ba62-d045-549b-ab972ae1f70e%22%3A%2225%22%2C%2214bcded7-0066-7c35-14d7-466cb3f09103%22%3A%221335%22%2C%22d90652a2-f5a1-4c7c-84c4-d4cdcc41f130%22%3A%229292%22%2C%2213d21c63-b5ec-5912-8397-c3a5ddb27a97%22%3A%22440%22%7D&beckyExperiments=.DatePickerPortal%2C.EnableCustomCSSVarsForLoginSocialBar%2C.FreemiumBannerOdeditor%2C.LoginBarEnableLoggingInStateInSSR%2C.TextInputAutoFillFix%2C.UseLoginSocialBarCustomMenu%2C.UseNewLoginSocialBarCustomMenuPositioning%2C.UseNewLoginSocialBarElementStructure%2C.UseNewLoginSocialBarMemberInitialsAvatar%2C.WixFreeSiteBannerDesktop%2C.WixFreeSiteBannerMobile%2C.buttonUdp%2C.calculateCollapsibleTextLineHeightByFont%2C.dynamicSlots%2C.fiveGridLineStudioSkins%2C.isClassNameToRootEnabled%2C.propsCarmiMappersMigration1%2C.propsCarmiMappersMigration4%2C.propsCarmiMappersMigration5%2C.svgResolver_2%2C.takeAppDependenciesFromCSM%2C.updateRichTextSemanticClassNamesOnCorvid%2C.useClassnameInResponsiveAppWidget%2C.useImageAvifFormatInNativeProGallery&blocksBuilderManifestGeneratorVersion=1.129.0&contentType=application%2Fjson&dfCk=6&dfVersion=1.5303.0&editorName=Unknown&experiments=dm_bgScrubToMotionFixer%2Cdm_migrateOldHoverBoxToNewFixer&externalBaseUrl=https%3A%2F%2Fwww.dehonline.es&fileId=782f79fe.bundle.min&formFactor=desktop&hasTPAWorkerOnSite=true&hasUserDomainMedia=false&isBuilderComponentModel=false&isHttps=true&isInSeo=false&isPremiumDomain=true&isUrlMigrated=true&isWixCodeOnPage=true&isWixCodeOnSite=true&language=es&metaSiteId=b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1&module=thunderbolt-platform&oneDocEnabled=true&originalLanguage=es&pageId=ccd8ff_5d27da0baa250cba678882458aba925d_11217.json&quickActionsMenuEnabled=false&registryLibrariesTopology=%5B%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22wixui%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14973.0%22%7D%2C%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22dsgnsys%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14973.0%22%7D%5D&remoteWidgetStructureBuilderVersion=1.251.0&siteId=241dd6c7-7fb5-4c8d-b4d6-94e6afd31537&siteRevision=11217&staticHTMLComponentUrl=https%3A%2F%2Fwww-dehonline-es.filesusr.com%2F&viewMode=desktop was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally."
+    },
+    {
+      "type": "console",
+      "level": "log",
+      "text": "ancestorOrigins https://www.dehonline.es"
+    },
+    {
+      "type": "console",
+      "level": "log",
+      "text": "referrer https://www.dehonline.es/"
+    },
+    {
+      "type": "console",
+      "level": "log",
+      "text": "window.location [object Location]"
+    },
+    {
+      "type": "console",
+      "level": "log",
+      "text": "window.parent.location [object Location]"
+    },
+    {
+      "type": "console",
+      "level": "log",
+      "text": "url result https://www.dehonline.es/"
+    },
+    {
+      "type": "console",
+      "level": "warn",
+      "text": "The resource https://siteassets.parastorage.com/pages/pages/thunderbolt?appDefinitionIdToSiteRevision=%7B%225c047089-b4af-4395-bd58-139524a3da1d%22%3A%2233%22%2C%2214271d6f-ba62-d045-549b-ab972ae1f70e%22%3A%2225%22%2C%2214bcded7-0066-7c35-14d7-466cb3f09103%22%3A%221335%22%2C%22d90652a2-f5a1-4c7c-84c4-d4cdcc41f130%22%3A%229292%22%2C%2213d21c63-b5ec-5912-8397-c3a5ddb27a97%22%3A%22440%22%7D&beckyExperiments=.DatePickerPortal%2C.EnableCustomCSSVarsForLoginSocialBar%2C.FreemiumBannerOdeditor%2C.LoginBarEnableLoggingInStateInSSR%2C.TextInputAutoFillFix%2C.UseLoginSocialBarCustomMenu%2C.UseNewLoginSocialBarCustomMenuPositioning%2C.UseNewLoginSocialBarElementStructure%2C.UseNewLoginSocialBarMemberInitialsAvatar%2C.WixFreeSiteBannerDesktop%2C.WixFreeSiteBannerMobile%2C.buttonUdp%2C.calculateCollapsibleTextLineHeightByFont%2C.dynamicSlots%2C.fiveGridLineStudioSkins%2C.isClassNameToRootEnabled%2C.propsCarmiMappersMigration1%2C.propsCarmiMappersMigration4%2C.propsCarmiMappersMigration5%2C.svgResolver_2%2C.takeAppDependenciesFromCSM%2C.updateRichTextSemanticClassNamesOnCorvid%2C.useClassnameInResponsiveAppWidget%2C.useImageAvifFormatInNativeProGallery&blocksBuilderManifestGeneratorVersion=1.129.0&contentType=application%2Fjson&dfCk=6&dfVersion=1.5303.0&editorName=Unknown&experiments=dm_bgScrubToMotionFixer%2Cdm_migrateOldHoverBoxToNewFixer&externalBaseUrl=https%3A%2F%2Fwww.dehonline.es&fileId=782f79fe.bundle.min&formFactor=desktop&hasTPAWorkerOnSite=true&hasUserDomainMedia=false&isBuilderComponentModel=false&isHttps=true&isInSeo=false&isPremiumDomain=true&isUrlMigrated=true&isWixCodeOnPage=true&isWixCodeOnSite=true&language=es&metaSiteId=b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1&module=thunderbolt-platform&oneDocEnabled=true&originalLanguage=es&pageId=ccd8ff_a6a670265f788bc9f13c80fbbb031549_11199.json&quickActionsMenuEnabled=false&registryLibrariesTopology=%5B%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22wixui%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14973.0%22%7D%2C%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22dsgnsys%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14973.0%22%7D%5D&remoteWidgetStructureBuilderVersion=1.251.0&siteId=241dd6c7-7fb5-4c8d-b4d6-94e6afd31537&siteRevision=11217&staticHTMLComponentUrl=https%3A%2F%2Fwww-dehonline-es.filesusr.com%2F&viewMode=desktop was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally."
+    },
+    {
+      "type": "console",
+      "level": "warn",
+      "text": "The resource https://siteassets.parastorage.com/pages/pages/thunderbolt?appDefinitionIdToSiteRevision=%7B%225c047089-b4af-4395-bd58-139524a3da1d%22%3A%2233%22%2C%2214271d6f-ba62-d045-549b-ab972ae1f70e%22%3A%2225%22%2C%2214bcded7-0066-7c35-14d7-466cb3f09103%22%3A%221335%22%2C%22d90652a2-f5a1-4c7c-84c4-d4cdcc41f130%22%3A%229292%22%2C%2213d21c63-b5ec-5912-8397-c3a5ddb27a97%22%3A%22440%22%7D&beckyExperiments=.DatePickerPortal%2C.EnableCustomCSSVarsForLoginSocialBar%2C.FreemiumBannerOdeditor%2C.LoginBarEnableLoggingInStateInSSR%2C.TextInputAutoFillFix%2C.UseLoginSocialBarCustomMenu%2C.UseNewLoginSocialBarCustomMenuPositioning%2C.UseNewLoginSocialBarElementStructure%2C.UseNewLoginSocialBarMemberInitialsAvatar%2C.WixFreeSiteBannerDesktop%2C.WixFreeSiteBannerMobile%2C.buttonUdp%2C.calculateCollapsibleTextLineHeightByFont%2C.dynamicSlots%2C.fiveGridLineStudioSkins%2C.isClassNameToRootEnabled%2C.propsCarmiMappersMigration1%2C.propsCarmiMappersMigration4%2C.propsCarmiMappersMigration5%2C.svgResolver_2%2C.takeAppDependenciesFromCSM%2C.updateRichTextSemanticClassNamesOnCorvid%2C.useClassnameInResponsiveAppWidget%2C.useImageAvifFormatInNativeProGallery&blocksBuilderManifestGeneratorVersion=1.129.0&contentType=application%2Fjson&dfCk=6&dfVersion=1.5303.0&editorName=Unknown&experiments=dm_bgScrubToMotionFixer%2Cdm_migrateOldHoverBoxToNewFixer&externalBaseUrl=https%3A%2F%2Fwww.dehonline.es&fileId=782f79fe.bundle.min&formFactor=desktop&hasTPAWorkerOnSite=true&hasUserDomainMedia=false&isBuilderComponentModel=false&isHttps=true&isInSeo=false&isPremiumDomain=true&isUrlMigrated=true&isWixCodeOnPage=true&isWixCodeOnSite=true&language=es&metaSiteId=b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1&module=thunderbolt-platform&oneDocEnabled=true&originalLanguage=es&pageId=ccd8ff_5d27da0baa250cba678882458aba925d_11217.json&quickActionsMenuEnabled=false&registryLibrariesTopology=%5B%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22wixui%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14973.0%22%7D%2C%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22dsgnsys%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14973.0%22%7D%5D&remoteWidgetStructureBuilderVersion=1.251.0&siteId=241dd6c7-7fb5-4c8d-b4d6-94e6afd31537&siteRevision=11217&staticHTMLComponentUrl=https%3A%2F%2Fwww-dehonline-es.filesusr.com%2F&viewMode=desktop was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally."
+    },
+    {
+      "type": "console",
+      "level": "warn",
+      "text": "The resource https://siteassets.parastorage.com/pages/pages/thunderbolt?appDefinitionIdToSiteRevision=%7B%225c047089-b4af-4395-bd58-139524a3da1d%22%3A%2233%22%2C%2214271d6f-ba62-d045-549b-ab972ae1f70e%22%3A%2225%22%2C%2214bcded7-0066-7c35-14d7-466cb3f09103%22%3A%221335%22%2C%22d90652a2-f5a1-4c7c-84c4-d4cdcc41f130%22%3A%229292%22%2C%2213d21c63-b5ec-5912-8397-c3a5ddb27a97%22%3A%22440%22%7D&beckyExperiments=.DatePickerPortal%2C.EnableCustomCSSVarsForLoginSocialBar%2C.FreemiumBannerOdeditor%2C.LoginBarEnableLoggingInStateInSSR%2C.TextInputAutoFillFix%2C.UseLoginSocialBarCustomMenu%2C.UseNewLoginSocialBarCustomMenuPositioning%2C.UseNewLoginSocialBarElementStructure%2C.UseNewLoginSocialBarMemberInitialsAvatar%2C.WixFreeSiteBannerDesktop%2C.WixFreeSiteBannerMobile%2C.buttonUdp%2C.calculateCollapsibleTextLineHeightByFont%2C.dynamicSlots%2C.fiveGridLineStudioSkins%2C.isClassNameToRootEnabled%2C.propsCarmiMappersMigration1%2C.propsCarmiMappersMigration4%2C.propsCarmiMappersMigration5%2C.svgResolver_2%2C.takeAppDependenciesFromCSM%2C.updateRichTextSemanticClassNamesOnCorvid%2C.useClassnameInResponsiveAppWidget%2C.useImageAvifFormatInNativeProGallery&blocksBuilderManifestGeneratorVersion=1.129.0&contentType=application%2Fjson&dfCk=6&dfVersion=1.5303.0&editorName=Unknown&experiments=dm_bgScrubToMotionFixer%2Cdm_migrateOldHoverBoxToNewFixer&externalBaseUrl=https%3A%2F%2Fwww.dehonline.es&fileId=782f79fe.bundle.min&formFactor=desktop&hasTPAWorkerOnSite=true&hasUserDomainMedia=false&isBuilderComponentModel=false&isHttps=true&isInSeo=false&isPremiumDomain=true&isUrlMigrated=true&isWixCodeOnPage=true&isWixCodeOnSite=true&language=es&metaSiteId=b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1&module=thunderbolt-platform&oneDocEnabled=true&originalLanguage=es&pageId=ccd8ff_a6a670265f788bc9f13c80fbbb031549_11199.json&quickActionsMenuEnabled=false&registryLibrariesTopology=%5B%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22wixui%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14973.0%22%7D%2C%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22dsgnsys%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14973.0%22%7D%5D&remoteWidgetStructureBuilderVersion=1.251.0&siteId=241dd6c7-7fb5-4c8d-b4d6-94e6afd31537&siteRevision=11217&staticHTMLComponentUrl=https%3A%2F%2Fwww-dehonline-es.filesusr.com%2F&viewMode=desktop was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally."
+    },
+    {
+      "type": "console",
+      "level": "warn",
+      "text": "The resource https://siteassets.parastorage.com/pages/pages/thunderbolt?appDefinitionIdToSiteRevision=%7B%225c047089-b4af-4395-bd58-139524a3da1d%22%3A%2233%22%2C%2214271d6f-ba62-d045-549b-ab972ae1f70e%22%3A%2225%22%2C%2214bcded7-0066-7c35-14d7-466cb3f09103%22%3A%221335%22%2C%22d90652a2-f5a1-4c7c-84c4-d4cdcc41f130%22%3A%229292%22%2C%2213d21c63-b5ec-5912-8397-c3a5ddb27a97%22%3A%22440%22%7D&beckyExperiments=.DatePickerPortal%2C.EnableCustomCSSVarsForLoginSocialBar%2C.FreemiumBannerOdeditor%2C.LoginBarEnableLoggingInStateInSSR%2C.TextInputAutoFillFix%2C.UseLoginSocialBarCustomMenu%2C.UseNewLoginSocialBarCustomMenuPositioning%2C.UseNewLoginSocialBarElementStructure%2C.UseNewLoginSocialBarMemberInitialsAvatar%2C.WixFreeSiteBannerDesktop%2C.WixFreeSiteBannerMobile%2C.buttonUdp%2C.calculateCollapsibleTextLineHeightByFont%2C.dynamicSlots%2C.fiveGridLineStudioSkins%2C.isClassNameToRootEnabled%2C.propsCarmiMappersMigration1%2C.propsCarmiMappersMigration4%2C.propsCarmiMappersMigration5%2C.svgResolver_2%2C.takeAppDependenciesFromCSM%2C.updateRichTextSemanticClassNamesOnCorvid%2C.useClassnameInResponsiveAppWidget%2C.useImageAvifFormatInNativeProGallery&blocksBuilderManifestGeneratorVersion=1.129.0&contentType=application%2Fjson&dfCk=6&dfVersion=1.5303.0&editorName=Unknown&experiments=dm_bgScrubToMotionFixer%2Cdm_migrateOldHoverBoxToNewFixer&externalBaseUrl=https%3A%2F%2Fwww.dehonline.es&fileId=782f79fe.bundle.min&formFactor=desktop&hasTPAWorkerOnSite=true&hasUserDomainMedia=false&isBuilderComponentModel=false&isHttps=true&isInSeo=false&isPremiumDomain=true&isUrlMigrated=true&isWixCodeOnPage=true&isWixCodeOnSite=true&language=es&metaSiteId=b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1&module=thunderbolt-platform&oneDocEnabled=true&originalLanguage=es&pageId=ccd8ff_5d27da0baa250cba678882458aba925d_11217.json&quickActionsMenuEnabled=false&registryLibrariesTopology=%5B%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22wixui%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14973.0%22%7D%2C%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22dsgnsys%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14973.0%22%7D%5D&remoteWidgetStructureBuilderVersion=1.251.0&siteId=241dd6c7-7fb5-4c8d-b4d6-94e6afd31537&siteRevision=11217&staticHTMLComponentUrl=https%3A%2F%2Fwww-dehonline-es.filesusr.com%2F&viewMode=desktop was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally."
+    }
+  ]
+}

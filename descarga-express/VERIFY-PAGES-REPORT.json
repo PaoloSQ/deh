@@ -1,0 +1,1122 @@
+[
+  {
+    "filePath": "/workspaces/deh/descarga-express/public/assets/misc/encrypted-tbn2.gstatic.com/images/index.html",
+    "relPath": "public/assets/misc/encrypted-tbn2.gstatic.com/images/index.html",
+    "url": "http://127.0.0.1:8080/assets/misc/encrypted-tbn2.gstatic.com/images/",
+    "status": "ok",
+    "counts": {
+      "local-file": 0,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 0,
+      "other": 0
+    },
+    "issues": []
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/public/assets/misc/services/editor-elements-library/dist/siteAssets/media/Carousel.f4b92e4d.html",
+    "relPath": "public/assets/misc/services/editor-elements-library/dist/siteAssets/media/Carousel.f4b92e4d.html",
+    "url": "http://127.0.0.1:8080/assets/misc/services/editor-elements-library/dist/siteAssets/media/Carousel.f4b92e4d",
+    "status": "ok",
+    "counts": {
+      "local-file": 0,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 0,
+      "other": 0
+    },
+    "issues": []
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/documbox.dehonline.es/index.html",
+    "relPath": "sites/documbox.dehonline.es/index.html",
+    "url": "http://documbox.dehonline.es:8080/",
+    "status": "ok",
+    "counts": {
+      "local-file": 0,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 0,
+      "other": 0
+    },
+    "issues": []
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/panel.dehonline.es/auth/login.html",
+    "relPath": "sites/panel.dehonline.es/auth/login.html",
+    "url": "http://panel.dehonline.es:8080/auth/login",
+    "status": "ok",
+    "counts": {
+      "local-file": 0,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 0,
+      "other": 1
+    },
+    "issues": [
+      {
+        "type": "console",
+        "level": "verbose",
+        "text": "[DOM] Input elements should have autocomplete attributes (suggested: \"current-password\"): (More info: https://goo.gl/9p2vKq) %o",
+        "category": "other"
+      }
+    ]
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/soporte.dehonline.es/index.html",
+    "relPath": "sites/soporte.dehonline.es/index.html",
+    "url": "http://soporte.dehonline.es:8080/",
+    "status": "pageerror",
+    "counts": {
+      "local-file": 0,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 1,
+      "other": 0
+    },
+    "issues": [
+      {
+        "type": "pageerror",
+        "text": "Unbound dependency Symbol(BusinessLogger) in module Symbol(AppWillLoadPageHandler)\nf (http://soporte.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73329)\nasync m (http://soporte.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://soporte.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://soporte.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://soporte.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)\nasync m (http://soporte.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://soporte.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://soporte.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://soporte.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)",
+        "category": "runtime"
+      }
+    ]
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.consola.dehonline.es/index.html",
+    "relPath": "sites/www.consola.dehonline.es/index.html",
+    "url": "http://www.consola.dehonline.es:8080/",
+    "status": "pageerror",
+    "counts": {
+      "local-file": 0,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 1,
+      "other": 0
+    },
+    "issues": [
+      {
+        "type": "pageerror",
+        "text": "Unbound dependency Symbol(BusinessLogger) in module Symbol(AppWillLoadPageHandler)\nf (http://www.consola.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:73328)\nasync m (http://www.consola.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:73757)\nasync v (http://www.consola.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:74349)\nasync l (http://www.consola.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:72668)\nasync f (http://www.consola.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:73285)\nasync m (http://www.consola.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:73757)\nasync v (http://www.consola.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:74349)\nasync l (http://www.consola.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:72668)\nasync f (http://www.consola.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:73285)",
+        "category": "runtime"
+      }
+    ]
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/acceso-clientes.html",
+    "relPath": "sites/www.dehonline.es/acceso-clientes.html",
+    "url": "http://www.dehonline.es:8080/acceso-clientes",
+    "status": "pageerror",
+    "counts": {
+      "local-file": 0,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 1,
+      "other": 0
+    },
+    "issues": [
+      {
+        "type": "pageerror",
+        "text": "Unbound dependency Symbol(BusinessLogger) in module Symbol(AppWillLoadPageHandler)\nf (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:73328)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:73757)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:74349)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:72668)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:73285)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:73757)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:74349)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:72668)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:73285)",
+        "category": "runtime"
+      }
+    ]
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/app-vigiladas.html",
+    "relPath": "sites/www.dehonline.es/app-vigiladas.html",
+    "url": "http://www.dehonline.es:8080/app-vigiladas",
+    "status": "pageerror",
+    "counts": {
+      "local-file": 0,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 1,
+      "other": 0
+    },
+    "issues": [
+      {
+        "type": "pageerror",
+        "text": "Unbound dependency Symbol(BusinessLogger) in module Symbol(AppWillLoadPageHandler)\nf (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73329)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)",
+        "category": "runtime"
+      }
+    ]
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/blog/categories/administración-de-fincas.html",
+    "relPath": "sites/www.dehonline.es/blog/categories/administración-de-fincas.html",
+    "url": "http://www.dehonline.es:8080/blog/categories/administración-de-fincas",
+    "status": "pageerror",
+    "counts": {
+      "local-file": 0,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 1,
+      "other": 0
+    },
+    "issues": [
+      {
+        "type": "pageerror",
+        "text": "Unbound dependency Symbol(BusinessLogger) in module Symbol(AppWillLoadPageHandler)\nf (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73329)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)",
+        "category": "runtime"
+      }
+    ]
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/blog/categories/inteligencia-artificial.html",
+    "relPath": "sites/www.dehonline.es/blog/categories/inteligencia-artificial.html",
+    "url": "http://www.dehonline.es:8080/blog/categories/inteligencia-artificial",
+    "status": "pageerror",
+    "counts": {
+      "local-file": 0,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 1,
+      "other": 0
+    },
+    "issues": [
+      {
+        "type": "pageerror",
+        "text": "Unbound dependency Symbol(BusinessLogger) in module Symbol(AppWillLoadPageHandler)\nf (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73329)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)",
+        "category": "runtime"
+      }
+    ]
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/blog/page/2.html",
+    "relPath": "sites/www.dehonline.es/blog/page/2.html",
+    "url": "http://www.dehonline.es:8080/blog/page/2",
+    "status": "pageerror",
+    "counts": {
+      "local-file": 0,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 1,
+      "other": 0
+    },
+    "issues": [
+      {
+        "type": "pageerror",
+        "text": "Unbound dependency Symbol(BusinessLogger) in module Symbol(AppWillLoadPageHandler)\nf (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73329)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)",
+        "category": "runtime"
+      }
+    ]
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/blog/page/3.html",
+    "relPath": "sites/www.dehonline.es/blog/page/3.html",
+    "url": "http://www.dehonline.es:8080/blog/page/3",
+    "status": "pageerror",
+    "counts": {
+      "local-file": 0,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 0,
+      "other": 1
+    },
+    "issues": [
+      {
+        "type": "pageerror",
+        "text": "Uncaught (in promise) Error: Unbound dependency Symbol(BusinessLogger) in module Symbol(AppWillLoadPageHandler)",
+        "category": "other"
+      }
+    ]
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/blog/page/4.html",
+    "relPath": "sites/www.dehonline.es/blog/page/4.html",
+    "url": "http://www.dehonline.es:8080/blog/page/4",
+    "status": "pageerror",
+    "counts": {
+      "local-file": 0,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 1,
+      "other": 2
+    },
+    "issues": [
+      {
+        "type": "response",
+        "status": 403,
+        "url": "https://static.wixstatic.com/media//images-wixmp-7ef3383b5fd80a9f5a5cc686.wixmp.com/4f169ac9-ebc5-4f72-a1df-1f5b8c26500b/1586366258765-perfil-google.png/v1/fill/w_320,h_320/file.jpg/v1/fill/w_32,h_32,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/images-wixmp-7ef3383b5fd80a9f5a5cc686.wixmp.com/4f169ac9-ebc5-4f72-a1df-1f5b8c26500b/1586366258765-perfil-google.png/v1/fill/w_320,h_320/file.jpg",
+        "category": "other"
+      },
+      {
+        "type": "console",
+        "level": "error",
+        "text": "Failed to load resource: the server responded with a status of 403 ()",
+        "category": "other"
+      },
+      {
+        "type": "pageerror",
+        "text": "Unbound dependency Symbol(BusinessLogger) in module Symbol(AppWillLoadPageHandler)\nf (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73329)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)",
+        "category": "runtime"
+      }
+    ]
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/blog.html",
+    "relPath": "sites/www.dehonline.es/blog.html",
+    "url": "http://www.dehonline.es:8080/blog",
+    "status": "pageerror",
+    "counts": {
+      "local-file": 0,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 1,
+      "other": 0
+    },
+    "issues": [
+      {
+        "type": "pageerror",
+        "text": "Unbound dependency Symbol(BusinessLogger) in module Symbol(AppWillLoadPageHandler)\nf (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73329)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)",
+        "category": "runtime"
+      }
+    ]
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/book-online.html",
+    "relPath": "sites/www.dehonline.es/book-online.html",
+    "url": "http://www.dehonline.es:8080/book-online",
+    "status": "pageerror",
+    "counts": {
+      "local-file": 0,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 1,
+      "other": 0
+    },
+    "issues": [
+      {
+        "type": "pageerror",
+        "text": "Unbound dependency Symbol(BusinessLogger) in module Symbol(AppWillLoadPageHandler)\nf (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73329)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)",
+        "category": "runtime"
+      }
+    ]
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/canaldedenuncias.html",
+    "relPath": "sites/www.dehonline.es/canaldedenuncias.html",
+    "url": "http://www.dehonline.es:8080/canaldedenuncias",
+    "status": "pageerror",
+    "counts": {
+      "local-file": 0,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 1,
+      "other": 0
+    },
+    "issues": [
+      {
+        "type": "pageerror",
+        "text": "Unbound dependency Symbol(BusinessLogger) in module Symbol(AppWillLoadPageHandler)\nf (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73329)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)",
+        "category": "runtime"
+      }
+    ]
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/certibox.html",
+    "relPath": "sites/www.dehonline.es/certibox.html",
+    "url": "http://www.dehonline.es:8080/certibox",
+    "status": "pageerror",
+    "counts": {
+      "local-file": 0,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 1,
+      "other": 0
+    },
+    "issues": [
+      {
+        "type": "pageerror",
+        "text": "Unbound dependency Symbol(BusinessLogger) in module Symbol(AppWillLoadPageHandler)\nf (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73329)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)",
+        "category": "runtime"
+      }
+    ]
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/comunidad.html",
+    "relPath": "sites/www.dehonline.es/comunidad.html",
+    "url": "http://www.dehonline.es:8080/comunidad",
+    "status": "pageerror",
+    "counts": {
+      "local-file": 0,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 1,
+      "other": 0
+    },
+    "issues": [
+      {
+        "type": "pageerror",
+        "text": "Unbound dependency Symbol(BusinessLogger) in module Symbol(AppWillLoadPageHandler)\nf (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73329)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)",
+        "category": "runtime"
+      }
+    ]
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/condiciones-de-uso.html",
+    "relPath": "sites/www.dehonline.es/condiciones-de-uso.html",
+    "url": "http://www.dehonline.es:8080/condiciones-de-uso",
+    "status": "pageerror",
+    "counts": {
+      "local-file": 0,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 1,
+      "other": 0
+    },
+    "issues": [
+      {
+        "type": "pageerror",
+        "text": "Unbound dependency Symbol(BusinessLogger) in module Symbol(AppWillLoadPageHandler)\nf (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:73328)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:73757)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:74349)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:72668)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:73285)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:73757)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:74349)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:72668)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:73285)",
+        "category": "runtime"
+      }
+    ]
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/contacto.html",
+    "relPath": "sites/www.dehonline.es/contacto.html",
+    "url": "http://www.dehonline.es:8080/contacto",
+    "status": "pageerror",
+    "counts": {
+      "local-file": 0,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 1,
+      "other": 1
+    },
+    "issues": [
+      {
+        "type": "pageerror",
+        "text": "Unexpected token ','",
+        "category": "other"
+      },
+      {
+        "type": "pageerror",
+        "text": "Unbound dependency Symbol(BusinessLogger) in module Symbol(AppWillMountHandler)\nf (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:73328)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:73757)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:74349)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:72668)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:73285)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:73757)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:74349)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:72668)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:73285)",
+        "category": "runtime"
+      }
+    ]
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/datos-com-propietarios-comunidades.html",
+    "relPath": "sites/www.dehonline.es/datos-com-propietarios-comunidades.html",
+    "url": "http://www.dehonline.es:8080/datos-com-propietarios-comunidades",
+    "status": "pageerror",
+    "counts": {
+      "local-file": 0,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 1,
+      "other": 0
+    },
+    "issues": [
+      {
+        "type": "pageerror",
+        "text": "Unbound dependency Symbol(BusinessLogger) in module Symbol(AppWillLoadPageHandler)\nf (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73329)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)",
+        "category": "runtime"
+      }
+    ]
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/documbox-info.html",
+    "relPath": "sites/www.dehonline.es/documbox-info.html",
+    "url": "http://www.dehonline.es:8080/documbox-info",
+    "status": "pageerror",
+    "counts": {
+      "local-file": 0,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 1,
+      "other": 1
+    },
+    "issues": [
+      {
+        "type": "pageerror",
+        "text": "Unexpected token ','",
+        "category": "other"
+      },
+      {
+        "type": "pageerror",
+        "text": "Unbound dependency Symbol(BusinessLogger) in module Symbol(AppWillLoadPageHandler)\nf (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73329)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)",
+        "category": "runtime"
+      }
+    ]
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/grupos/comunicacion-con-clientes.html",
+    "relPath": "sites/www.dehonline.es/grupos/comunicacion-con-clientes.html",
+    "url": "http://www.dehonline.es:8080/grupos/comunicacion-con-clientes",
+    "status": "pageerror",
+    "counts": {
+      "local-file": 0,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 1,
+      "other": 2
+    },
+    "issues": [
+      {
+        "type": "pageerror",
+        "text": "Unexpected token ','",
+        "category": "other"
+      },
+      {
+        "type": "pageerror",
+        "text": "Expected ',' or '}' after property value in JSON at position 257 (line 1 column 258)\nJSON.parse (<anonymous>)\nl.reLayout (http://www.dehonline.es:8080/grupos/comunicacion-con-clientes:1482:8069)",
+        "category": "other"
+      },
+      {
+        "type": "pageerror",
+        "text": "Unbound dependency Symbol(BusinessLogger) in module Symbol(AppWillLoadPageHandler)\nf (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73329)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)",
+        "category": "runtime"
+      }
+    ]
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/grupos/energia.html",
+    "relPath": "sites/www.dehonline.es/grupos/energia.html",
+    "url": "http://www.dehonline.es:8080/grupos/energia",
+    "status": "pageerror",
+    "counts": {
+      "local-file": 0,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 1,
+      "other": 2
+    },
+    "issues": [
+      {
+        "type": "pageerror",
+        "text": "Unexpected token ','",
+        "category": "other"
+      },
+      {
+        "type": "pageerror",
+        "text": "Expected ',' or '}' after property value in JSON at position 251 (line 1 column 252)\nJSON.parse (<anonymous>)\nl.reLayout (http://www.dehonline.es:8080/grupos/energia:1482:8069)",
+        "category": "other"
+      },
+      {
+        "type": "pageerror",
+        "text": "Unbound dependency Symbol(BusinessLogger) in module Symbol(AppWillMountHandler)\nf (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73329)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)",
+        "category": "runtime"
+      }
+    ]
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/grupos/factura-electronica.html",
+    "relPath": "sites/www.dehonline.es/grupos/factura-electronica.html",
+    "url": "http://www.dehonline.es:8080/grupos/factura-electronica",
+    "status": "pageerror",
+    "counts": {
+      "local-file": 0,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 1,
+      "other": 1
+    },
+    "issues": [
+      {
+        "type": "pageerror",
+        "text": "Unexpected token ','",
+        "category": "other"
+      },
+      {
+        "type": "pageerror",
+        "text": "Unbound dependency Symbol(BusinessLogger) in module Symbol(AppWillLoadPageHandler)\nf (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73329)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)",
+        "category": "runtime"
+      }
+    ]
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/grupos/financiacion-pymes.html",
+    "relPath": "sites/www.dehonline.es/grupos/financiacion-pymes.html",
+    "url": "http://www.dehonline.es:8080/grupos/financiacion-pymes",
+    "status": "pageerror",
+    "counts": {
+      "local-file": 0,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 1,
+      "other": 2
+    },
+    "issues": [
+      {
+        "type": "pageerror",
+        "text": "Unexpected token ','",
+        "category": "other"
+      },
+      {
+        "type": "pageerror",
+        "text": "Expected ',' or '}' after property value in JSON at position 255 (line 1 column 256)\nJSON.parse (<anonymous>)\nl.reLayout (http://www.dehonline.es:8080/grupos/financiacion-pymes:1482:8069)",
+        "category": "other"
+      },
+      {
+        "type": "pageerror",
+        "text": "Unbound dependency Symbol(BusinessLogger) in module Symbol(AppWillLoadPageHandler)\nf (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73329)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)",
+        "category": "runtime"
+      }
+    ]
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/grupos/riesgos-laborales.html",
+    "relPath": "sites/www.dehonline.es/grupos/riesgos-laborales.html",
+    "url": "http://www.dehonline.es:8080/grupos/riesgos-laborales",
+    "status": "pageerror",
+    "counts": {
+      "local-file": 0,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 1,
+      "other": 2
+    },
+    "issues": [
+      {
+        "type": "pageerror",
+        "text": "Expected ',' or '}' after property value in JSON at position 255 (line 1 column 256)\nJSON.parse (<anonymous>)\nl.reLayout (http://www.dehonline.es:8080/grupos/riesgos-laborales:1482:8069)",
+        "category": "other"
+      },
+      {
+        "type": "pageerror",
+        "text": "Unexpected token ','",
+        "category": "other"
+      },
+      {
+        "type": "pageerror",
+        "text": "Unbound dependency Symbol(BusinessLogger) in module Symbol(AppWillLoadPageHandler)\nf (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73329)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)",
+        "category": "runtime"
+      }
+    ]
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/grupos/tecnologia.html",
+    "relPath": "sites/www.dehonline.es/grupos/tecnologia.html",
+    "url": "http://www.dehonline.es:8080/grupos/tecnologia",
+    "status": "pageerror",
+    "counts": {
+      "local-file": 0,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 1,
+      "other": 2
+    },
+    "issues": [
+      {
+        "type": "pageerror",
+        "text": "Unexpected token ','",
+        "category": "other"
+      },
+      {
+        "type": "pageerror",
+        "text": "Expected ',' or '}' after property value in JSON at position 251 (line 1 column 252)\nJSON.parse (<anonymous>)\nl.reLayout (http://www.dehonline.es:8080/grupos/tecnologia:1482:8069)",
+        "category": "other"
+      },
+      {
+        "type": "pageerror",
+        "text": "Unbound dependency Symbol(BusinessLogger) in module Symbol(AppWillLoadPageHandler)\nf (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73329)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)",
+        "category": "runtime"
+      }
+    ]
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/index.html",
+    "relPath": "sites/www.dehonline.es/index.html",
+    "url": "http://www.dehonline.es:8080/",
+    "status": "pageerror",
+    "counts": {
+      "local-file": 0,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 1,
+      "other": 0
+    },
+    "issues": [
+      {
+        "type": "pageerror",
+        "text": "Unbound dependency Symbol(BusinessLogger) in module Symbol(AppWillLoadPageHandler)\nf (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:73328)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:73757)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:74349)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:72668)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:73285)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:73757)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:74349)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:72668)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:73285)",
+        "category": "runtime"
+      }
+    ]
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/info-control-exp-notificaciones.html",
+    "relPath": "sites/www.dehonline.es/info-control-exp-notificaciones.html",
+    "url": "http://www.dehonline.es:8080/info-control-exp-notificaciones",
+    "status": "pageerror",
+    "counts": {
+      "local-file": 0,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 1,
+      "other": 1
+    },
+    "issues": [
+      {
+        "type": "pageerror",
+        "text": "Unexpected token ','",
+        "category": "other"
+      },
+      {
+        "type": "pageerror",
+        "text": "Unbound dependency Symbol(BusinessLogger) in module Symbol(AppWillMountHandler)\nf (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:73328)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:73757)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:74349)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:72668)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:73285)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:73757)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:74349)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:72668)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:73285)",
+        "category": "runtime"
+      }
+    ]
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/lexbox.html",
+    "relPath": "sites/www.dehonline.es/lexbox.html",
+    "url": "http://www.dehonline.es:8080/lexbox",
+    "status": "pageerror",
+    "counts": {
+      "local-file": 0,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 1,
+      "other": 0
+    },
+    "issues": [
+      {
+        "type": "pageerror",
+        "text": "Unbound dependency Symbol(BusinessLogger) in module Symbol(AppWillLoadPageHandler)\nf (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73329)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)",
+        "category": "runtime"
+      }
+    ]
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/planes-af.html",
+    "relPath": "sites/www.dehonline.es/planes-af.html",
+    "url": "http://www.dehonline.es:8080/planes-af",
+    "status": "pageerror",
+    "counts": {
+      "local-file": 0,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 1,
+      "other": 0
+    },
+    "issues": [
+      {
+        "type": "pageerror",
+        "text": "Unbound dependency Symbol(BusinessLogger) in module Symbol(AppWillLoadPageHandler)\nf (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73329)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)",
+        "category": "runtime"
+      }
+    ]
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/plataforma-control-exp-notificaciones.html",
+    "relPath": "sites/www.dehonline.es/plataforma-control-exp-notificaciones.html",
+    "url": "http://www.dehonline.es:8080/plataforma-control-exp-notificaciones",
+    "status": "pageerror",
+    "counts": {
+      "local-file": 0,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 1,
+      "other": 0
+    },
+    "issues": [
+      {
+        "type": "pageerror",
+        "text": "Unbound dependency Symbol(BusinessLogger) in module Symbol(AppWillLoadPageHandler)\nf (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:73328)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:73757)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:74349)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:72668)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:73285)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:73757)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:74349)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:72668)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:73285)",
+        "category": "runtime"
+      }
+    ]
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/politica-de-compliance.html",
+    "relPath": "sites/www.dehonline.es/politica-de-compliance.html",
+    "url": "http://www.dehonline.es:8080/politica-de-compliance",
+    "status": "pageerror",
+    "counts": {
+      "local-file": 0,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 1,
+      "other": 0
+    },
+    "issues": [
+      {
+        "type": "pageerror",
+        "text": "Unbound dependency Symbol(BusinessLogger) in module Symbol(AppWillLoadPageHandler)\nf (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:73328)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:73757)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:74349)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:72668)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:73285)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:73757)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:74349)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:72668)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.eb400bb1.bundle.min.js:3:73285)",
+        "category": "runtime"
+      }
+    ]
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/politica-de-cookies.html",
+    "relPath": "sites/www.dehonline.es/politica-de-cookies.html",
+    "url": "http://www.dehonline.es:8080/politica-de-cookies",
+    "status": "pageerror",
+    "counts": {
+      "local-file": 0,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 1,
+      "other": 0
+    },
+    "issues": [
+      {
+        "type": "pageerror",
+        "text": "Unbound dependency Symbol(BusinessLogger) in module Symbol(AppWillLoadPageHandler)\nf (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73329)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)",
+        "category": "runtime"
+      }
+    ]
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/politica-de-privacidad.html",
+    "relPath": "sites/www.dehonline.es/politica-de-privacidad.html",
+    "url": "http://www.dehonline.es:8080/politica-de-privacidad",
+    "status": "pageerror",
+    "counts": {
+      "local-file": 0,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 1,
+      "other": 0
+    },
+    "issues": [
+      {
+        "type": "pageerror",
+        "text": "Unbound dependency Symbol(BusinessLogger) in module Symbol(AppWillLoadPageHandler)\nf (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73329)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)",
+        "category": "runtime"
+      }
+    ]
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/política-de-privacidad-para-redes-sociales.html",
+    "relPath": "sites/www.dehonline.es/política-de-privacidad-para-redes-sociales.html",
+    "url": "http://www.dehonline.es:8080/política-de-privacidad-para-redes-sociales",
+    "status": "pageerror",
+    "counts": {
+      "local-file": 0,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 1,
+      "other": 0
+    },
+    "issues": [
+      {
+        "type": "pageerror",
+        "text": "Unbound dependency Symbol(BusinessLogger) in module Symbol(AppWillMountHandler)\nf (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73329)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)",
+        "category": "runtime"
+      }
+    ]
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/post/carpetas-financieras-digitales-facilita-el-acceso-a-financiación-para-tu-pyme.html",
+    "relPath": "sites/www.dehonline.es/post/carpetas-financieras-digitales-facilita-el-acceso-a-financiación-para-tu-pyme.html",
+    "url": "http://www.dehonline.es:8080/post/carpetas-financieras-digitales-facilita-el-acceso-a-financiación-para-tu-pyme",
+    "status": "pageerror",
+    "counts": {
+      "local-file": 0,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 1,
+      "other": 1
+    },
+    "issues": [
+      {
+        "type": "pageerror",
+        "text": "Unexpected token ','",
+        "category": "other"
+      },
+      {
+        "type": "pageerror",
+        "text": "Unbound dependency Symbol(BusinessLogger) in module Symbol(AppWillLoadPageHandler)\nf (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73329)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)",
+        "category": "runtime"
+      }
+    ]
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/post/cen-el-control-que-tu-despacho-necesitaba-para-gestionar-notificaciones-electrónicas.html",
+    "relPath": "sites/www.dehonline.es/post/cen-el-control-que-tu-despacho-necesitaba-para-gestionar-notificaciones-electrónicas.html",
+    "url": "http://www.dehonline.es:8080/post/cen-el-control-que-tu-despacho-necesitaba-para-gestionar-notificaciones-electrónicas",
+    "status": "pageerror",
+    "counts": {
+      "local-file": 0,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 1,
+      "other": 1
+    },
+    "issues": [
+      {
+        "type": "pageerror",
+        "text": "Unexpected token ','",
+        "category": "other"
+      },
+      {
+        "type": "pageerror",
+        "text": "Unbound dependency Symbol(BusinessLogger) in module Symbol(AppWillLoadPageHandler)\nf (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73329)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)",
+        "category": "runtime"
+      }
+    ]
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/post/demasiado-pequeño-para-digitalizar-desmitificando-el-uso-de-herramientas-para-digitalizar-tu-admin.html",
+    "relPath": "sites/www.dehonline.es/post/demasiado-pequeño-para-digitalizar-desmitificando-el-uso-de-herramientas-para-digitalizar-tu-admin.html",
+    "url": "http://www.dehonline.es:8080/post/demasiado-pequeño-para-digitalizar-desmitificando-el-uso-de-herramientas-para-digitalizar-tu-admin",
+    "status": "pageerror",
+    "counts": {
+      "local-file": 0,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 1,
+      "other": 1
+    },
+    "issues": [
+      {
+        "type": "pageerror",
+        "text": "Unexpected token ','",
+        "category": "other"
+      },
+      {
+        "type": "pageerror",
+        "text": "Unbound dependency Symbol(BusinessLogger) in module Symbol(AppWillLoadPageHandler)\nf (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73329)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)",
+        "category": "runtime"
+      }
+    ]
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/post/el-verano-del-administrador-de-fincas-descanso-de-unos-tormenta-perfecta-de-otros.html",
+    "relPath": "sites/www.dehonline.es/post/el-verano-del-administrador-de-fincas-descanso-de-unos-tormenta-perfecta-de-otros.html",
+    "url": "http://www.dehonline.es:8080/post/el-verano-del-administrador-de-fincas-descanso-de-unos-tormenta-perfecta-de-otros",
+    "status": "pageerror",
+    "counts": {
+      "local-file": 0,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 1,
+      "other": 1
+    },
+    "issues": [
+      {
+        "type": "pageerror",
+        "text": "Unexpected token ','",
+        "category": "other"
+      },
+      {
+        "type": "pageerror",
+        "text": "Unbound dependency Symbol(BusinessLogger) in module Symbol(AppWillLoadPageHandler)\nf (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73329)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)",
+        "category": "runtime"
+      }
+    ]
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/post/estrenamos-nueva-imagen-en-la-web-de-deh-online.html",
+    "relPath": "sites/www.dehonline.es/post/estrenamos-nueva-imagen-en-la-web-de-deh-online.html",
+    "url": "http://www.dehonline.es:8080/post/estrenamos-nueva-imagen-en-la-web-de-deh-online",
+    "status": "pageerror",
+    "counts": {
+      "local-file": 0,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 1,
+      "other": 1
+    },
+    "issues": [
+      {
+        "type": "pageerror",
+        "text": "Unexpected token ','",
+        "category": "other"
+      },
+      {
+        "type": "pageerror",
+        "text": "Unbound dependency Symbol(BusinessLogger) in module Symbol(AppWillLoadPageHandler)\nf (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73329)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)",
+        "category": "runtime"
+      }
+    ]
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/post/hsm-la-cámara-acorazada-para-tus-certificados-digitales.html",
+    "relPath": "sites/www.dehonline.es/post/hsm-la-cámara-acorazada-para-tus-certificados-digitales.html",
+    "url": "http://www.dehonline.es:8080/post/hsm-la-cámara-acorazada-para-tus-certificados-digitales",
+    "status": "pageerror",
+    "counts": {
+      "local-file": 0,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 1,
+      "other": 1
+    },
+    "issues": [
+      {
+        "type": "pageerror",
+        "text": "Unexpected token ','",
+        "category": "other"
+      },
+      {
+        "type": "pageerror",
+        "text": "Unbound dependency Symbol(BusinessLogger) in module Symbol(AppWillLoadPageHandler)\nf (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73329)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)",
+        "category": "runtime"
+      }
+    ]
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/post/la-inteligencia-artificial-está-transformando-la-administración-de-fincas-de-verdad-no-en-powerpoi.html",
+    "relPath": "sites/www.dehonline.es/post/la-inteligencia-artificial-está-transformando-la-administración-de-fincas-de-verdad-no-en-powerpoi.html",
+    "url": "http://www.dehonline.es:8080/post/la-inteligencia-artificial-está-transformando-la-administración-de-fincas-de-verdad-no-en-powerpoi",
+    "status": "pageerror",
+    "counts": {
+      "local-file": 0,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 1,
+      "other": 1
+    },
+    "issues": [
+      {
+        "type": "pageerror",
+        "text": "Unexpected token ','",
+        "category": "other"
+      },
+      {
+        "type": "pageerror",
+        "text": "Unbound dependency Symbol(BusinessLogger) in module Symbol(AppWillLoadPageHandler)\nf (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73329)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)",
+        "category": "runtime"
+      }
+    ]
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/post/sabes-realmente-quién-trabaja-en-tus-comunidades-la-homologación-de-proveedores-como-sello-de-gara.html",
+    "relPath": "sites/www.dehonline.es/post/sabes-realmente-quién-trabaja-en-tus-comunidades-la-homologación-de-proveedores-como-sello-de-gara.html",
+    "url": "http://www.dehonline.es:8080/post/sabes-realmente-quién-trabaja-en-tus-comunidades-la-homologación-de-proveedores-como-sello-de-gara",
+    "status": "pageerror",
+    "counts": {
+      "local-file": 0,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 1,
+      "other": 1
+    },
+    "issues": [
+      {
+        "type": "pageerror",
+        "text": "Unexpected token ','",
+        "category": "other"
+      },
+      {
+        "type": "pageerror",
+        "text": "Unbound dependency Symbol(BusinessLogger) in module Symbol(AppWillLoadPageHandler)\nf (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73329)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)",
+        "category": "runtime"
+      }
+    ]
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/post/vas-a-pedir-un-préstamo-como-pyme-esto-es-lo-que-necesitas-tener-a-mano.html",
+    "relPath": "sites/www.dehonline.es/post/vas-a-pedir-un-préstamo-como-pyme-esto-es-lo-que-necesitas-tener-a-mano.html",
+    "url": "http://www.dehonline.es:8080/post/vas-a-pedir-un-préstamo-como-pyme-esto-es-lo-que-necesitas-tener-a-mano",
+    "status": "pageerror",
+    "counts": {
+      "local-file": 0,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 1,
+      "other": 1
+    },
+    "issues": [
+      {
+        "type": "pageerror",
+        "text": "Unexpected token ','",
+        "category": "other"
+      },
+      {
+        "type": "pageerror",
+        "text": "Unbound dependency Symbol(BusinessLogger) in module Symbol(AppWillLoadPageHandler)\nf (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73329)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)",
+        "category": "runtime"
+      }
+    ]
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/pymes.html",
+    "relPath": "sites/www.dehonline.es/pymes.html",
+    "url": "http://www.dehonline.es:8080/pymes",
+    "status": "pageerror",
+    "counts": {
+      "local-file": 0,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 1,
+      "other": 2
+    },
+    "issues": [
+      {
+        "type": "pageerror",
+        "text": "Unexpected token ','",
+        "category": "other"
+      },
+      {
+        "type": "pageerror",
+        "text": "Unexpected token ','",
+        "category": "other"
+      },
+      {
+        "type": "pageerror",
+        "text": "Unbound dependency Symbol(BusinessLogger) in module Symbol(AppWillLoadPageHandler)\nf (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73329)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)",
+        "category": "runtime"
+      }
+    ]
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/servicios-as.html",
+    "relPath": "sites/www.dehonline.es/servicios-as.html",
+    "url": "http://www.dehonline.es:8080/servicios-as",
+    "status": "pageerror",
+    "counts": {
+      "local-file": 0,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 1,
+      "other": 0
+    },
+    "issues": [
+      {
+        "type": "pageerror",
+        "text": "Unbound dependency Symbol(BusinessLogger) in module Symbol(AppWillLoadPageHandler)\nf (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73329)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)",
+        "category": "runtime"
+      }
+    ]
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.dehonline.es/tsa.html",
+    "relPath": "sites/www.dehonline.es/tsa.html",
+    "url": "http://www.dehonline.es:8080/tsa",
+    "status": "pageerror",
+    "counts": {
+      "local-file": 0,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 1,
+      "other": 0
+    },
+    "issues": [
+      {
+        "type": "pageerror",
+        "text": "Unbound dependency Symbol(BusinessLogger) in module Symbol(AppWillLoadPageHandler)\nf (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73329)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)\nasync m (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)",
+        "category": "runtime"
+      }
+    ]
+  },
+  {
+    "filePath": "/workspaces/deh/descarga-express/sites/www.soporte.dehonline.es/index.html",
+    "relPath": "sites/www.soporte.dehonline.es/index.html",
+    "url": "http://www.soporte.dehonline.es:8080/",
+    "status": "pageerror",
+    "counts": {
+      "local-file": 0,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 1,
+      "other": 0
+    },
+    "issues": [
+      {
+        "type": "pageerror",
+        "text": "Unbound dependency Symbol(BusinessLogger) in module Symbol(AppWillLoadPageHandler)\nf (http://www.soporte.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73329)\nasync m (http://www.soporte.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.soporte.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.soporte.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.soporte.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)\nasync m (http://www.soporte.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73758)\nasync v (http://www.soporte.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:74350)\nasync l (http://www.soporte.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:72669)\nasync f (http://www.soporte.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/main.8aea3aa1.bundle.min.js:3:73286)",
+        "category": "runtime"
+      }
+    ]
+  }
+]

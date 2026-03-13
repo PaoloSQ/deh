@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<script id="deh-telemetry-guard">(function(){var blocked=/(^https?:)?\/\/(frog\.wix\.com|panorama\.wixapps\.net)\//i;var localOrigin="http://127.0.0.1:8080";function isBlocked(v){return typeof v==='string'&&blocked.test(v)}window.fedops=window.fedops||{};window.fedops.apps=window.fedops.apps||{};window.fedops.phaseStarted=window.fedops.phaseStarted||function(){return function(){}};window.fedops.phaseEnded=window.fedops.phaseEnded||function(){return function(){}};window.fedops.reportError=window.fedops.reportError||function(){};var NativeWorker=window.Worker;if(typeof NativeWorker==='function'){var workerOrigin=window.location.protocol+'//'+window.location.hostname+(window.location.port?':'+window.location.port:'');window.Worker=function(url,options){var nextUrl=url;if(typeof url==='string'){var prefix=localOrigin+'/'+window.location.hostname+'/';if(url.indexOf(prefix)===0){nextUrl=workerOrigin+'/'+url.slice(prefix.length)}}return new NativeWorker(nextUrl,options)};window.Worker.prototype=NativeWorker.prototype}var origFetch=window.fetch;if(typeof origFetch==='function'){window.fetch=function(input,init){var url=typeof input==='string'?input:(input&&input.url)||'';if(isBlocked(url)){return Promise.resolve(new Response('',{status:204,statusText:'No Content'}))}return origFetch.call(this,input,init)}}var origOpen=XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.open;if(origOpen){XMLHttpRequest.prototype.open=function(method,url){this.__dehBlockedTelemetry=isBlocked(url);return origOpen.apply(this,arguments)};var origSend=XMLHttpRequest.prototype.send;XMLHttpRequest.prototype.send=function(body){if(this.__dehBlockedTelemetry){try{this.readyState=4;this.status=204}catch(_e){}return}return origSend.call(this,body)}}var origBeacon=navigator.sendBeacon;if(typeof origBeacon==='function'){navigator.sendBeacon=function(url,data){if(isBlocked(url)){return true}return origBeacon.call(this,url,data)}}if(window.Image&&window.Image.prototype){var desc=Object.getOwnPropertyDescriptor(window.Image.prototype,'src');if(desc&&desc.set){Object.defineProperty(window.Image.prototype,'src',{configurable:true,enumerable:desc.enumerable,get:desc.get,set:function(value){if(isBlocked(value)){return value}return desc.set.call(this,value)}})}}})();</script>
+
+
+
+
+
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="/assets/css/cap/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/cap/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/cap/css/bootstrap-responsive.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/cap/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/cap/css/datatable_bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/cap/css/jquery.pnotify.default.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/cap/css/bootstrapSwitch.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/cap/css/tooltipster.bundle.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/js/lou-multi-select/css/multi-select.dist.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/cap/css/default.css" />
+    <link rel="shortcut icon" href="/assets/img/images/favicon.png" />
+    <link rel="apple-touch-icon" href="/assets/img/cap/icons/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/cap/icons/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/cap/icons/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/cap/icons/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/cap/icons/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/img/cap/icons/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/cap/icons/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/cap/icons/apple-touch-icon-152x152.png" />
+    <script src="https://js.pusher.com/4.4/pusher.min.js"></script>
+    <script type="text/javascript">
+        const BASE_URL = '/panel.dehonline.es/';
+        const POPUP = '';
+        const LANG = 'es';
+        const TAB_SEL = 0;
+    </script>
+
+    <title>DEH Online</title>
+</head>
+
+<body>
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <div class="pull-left">
+                    <img class="dehlogo" src="/assets/img/images/deh_logo.png" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="main" style="margin-top: 70px;">
+
+        <div class="row">
+            <div class="span4 offset4">
+                <div class="widget ">
+                    <div class="widget-header">
+                        <span class="icon-edit"></span>
+                        <h3>
+                            Acceso a DEH Online
+                        </h3>
+                    </div>
+                    <!-- /widget-header -->
+                    <div class="widget-content">
+                        <div class="row-fluid">
+                            <form class="form" id="login" action="/panel.dehonline.es/auth/login" method="post"
+                                accept-charset="utf-8">
+                                <input type="hidden" name="redirectUri" value="">
+                                <fieldset>
+
+                                    <div class="control-group">
+                                        <div class="controls">
+                                            <input class="span12" type="text" name="identity" id="identity"
+                                                placeholder="Usuario" />
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <div class="controls">
+                                            <input class="span12" type="password" name="password" id="password"
+                                                placeholder="Contraseña" />
+                                        </div>
+                                    </div>
+
+
+                                </fieldset>
+                                <div>
+                                    <button class="btn btn-primary">
+                                        Ingresar
+                                    </button>
+                                </div>
+                            </form>
+                            <p class="login-links" id="forgot_password"><a href="/recover">Has perdido tu
+                                    contraseña?</a></p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+    <div class="container" id="footer">
+        <hr>
+
+        <div id="menufooter" style="float:left;">
+            <a id="Politica" href="/www.dehonline.es/politica-de-privacidad">Política de Privacidad</a>
+            &nbsp;|&nbsp;
+            <a id="Condiciones" href="/www.dehonline.es/condiciones-de-uso">Condiciones Generales de Uso</a>
+            <br />
+            (v.3.3-20201215-1100)
+        </div>
+        <div id="CopyRight" style="float:right; text-align:right;">
+            © 2011 DEH Online - NIF B-86198306
+            <br />
+            DATOS REGISTRALES MADRID: Tomo 28784, Folio 108, Sección 8ª, Hoja M-518263, Inscripción 1ª.
+        </div>
+
+        <!-- Template: file:v3/footer.tpl -->
+    </div>
+    <div id="deh-privacy" style="display: none">
+    </div>
+    <script src="/assets/js/cap/js/jquery-1.8.3.min.js"></script>
+    <script src="/assets/js/cap/js/bootstrap.min.js"></script>
+    <script src="/assets/js/cap/js/bootbox.js"></script>
+    <script src="/assets/js/js/jquery.dataTables.min.js"></script>
+    <script src="/assets/js/js/jquery.validate.min.js"></script>
+    <script src="/assets/js/js/jquery.pnotify.js"></script>
+    <script src="/assets/js/js/jquery.blockUI.js"></script>
+    <script src="/assets/js/js/bootstrap-lightbox.min.js"></script>
+    <script src="/assets/js/js/bootstrap-filestyle.js"></script>
+    <script src="/assets/js/js/simpleUpload.min.js"></script>
+    <script src="/assets/js/js/simpleUpload.methods.js"></script>
+    <script src="/assets/js/js/admin.min.js?1772921994"></script>
+    <script src="/assets/js/js/calendar.es.js"></script>
+    <script src="/assets/js/js/calendar.js"></script>
+    <script src="/assets/js/js/jquery.quicksearch.js"></script>
+    <script src="/assets/js/js/lou-multi-select/js/jquery.multi-select.js"></script>
+    <script src="/assets/js/js/cookies.js"></script>
+
+
+    <script type="application/javascript">
+        bootbox.animate(false);
+        $(document).ready(function () {
+        });
+    </script>
+    <!-- fin notificaciones pnotify -->
+
+    <script type="application/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-29420114-1']);
+        _gaq.push(['_setDomainName', 'dehonline.es']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? '/ssl/' : '/www/') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+    <script type="application/javascript">
+        bootbox.animate(false);
+        $(document).ready(function () {
+            if (getCookie('DEH_privacy') !== "on") {
+                document.getElementById("deh-privacy").style.display = "none";
+            }
+        });
+    </script>
+
+<script id="deh-fedops-stub">(function(){window.fedops=window.fedops||{};window.fedops.apps=window.fedops.apps||{};window.fedops.phaseStarted=window.fedops.phaseStarted||function(){return function(){}};window.fedops.phaseEnded=window.fedops.phaseEnded||function(){return function(){}};window.fedops.reportError=window.fedops.reportError||function(){};})();</script></body>
+
+</html>

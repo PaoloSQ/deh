@@ -7,7 +7,7 @@ const {
   sleep,
   launchBrowser,
   parseViewportSelection,
-  getOriginUrl,
+  resolveOriginUrl,
   getNewUrl,
   buildScreenshotPath,
   buildDiffPath,
@@ -103,7 +103,7 @@ async function run() {
 
   ensureDir(OUTPUT_DIR);
 
-  const originUrl = getOriginUrl(options.page, { live: options.live });
+  const originUrl = await resolveOriginUrl(options.page, { live: options.live });
   const newUrl = getNewUrl(options.page);
 
   if (!originUrl) {

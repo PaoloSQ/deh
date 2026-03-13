@@ -7,7 +7,7 @@ const {
   sleep,
   launchBrowser,
   parseViewportSelection,
-  getOriginUrl,
+  resolveOriginUrl,
   getAllPages,
   buildScreenshotPath,
   capturePageScreenshot,
@@ -106,7 +106,7 @@ async function run() {
   let failed = 0;
 
   for (const pageName of pages) {
-    const url = getOriginUrl(pageName, { live: options.live });
+    const url = await resolveOriginUrl(pageName, { live: options.live });
 
     if (!url) {
       log(COLORS.red, `✗ Página no encontrada: ${pageName}`);

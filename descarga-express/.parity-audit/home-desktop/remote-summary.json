@@ -1,0 +1,1763 @@
+{
+  "snapshot": {
+    "title": "Inicio | DEH Online - Soluciones digitales",
+    "finalUrl": "https://www.dehonline.es/",
+    "rootDescriptor": {
+      "id": "",
+      "meshId": "ContainerfswyoinlineContent-gridContainer",
+      "childCount": 9
+    },
+    "document": {
+      "scrollHeight": 5271,
+      "textHash": "2481686018",
+      "textLength": 3367,
+      "imageStats": {
+        "total": 61,
+        "loaded": 60,
+        "missing": 1
+      },
+      "sectionCount": 8
+    },
+    "sections": [
+      {
+        "index": 0,
+        "id": "comp-mmlrzu5d",
+        "tag": "section",
+        "className": "Oqnisf comp-mmlrzu5d wixui-section",
+        "visible": true,
+        "rect": {
+          "x": 0,
+          "y": 94,
+          "width": 1600,
+          "height": 293,
+          "top": 94,
+          "left": 0,
+          "bottom": 387,
+          "right": 1600
+        },
+        "textLength": 0,
+        "textHash": "",
+        "textSample": "",
+        "imageCount": 5,
+        "loadedImageCount": 5,
+        "missingImageCount": 0,
+        "images": [
+          {
+            "key": "img_comp-mmls7rgc",
+            "currentSrc": "https://static.wixstatic.com/media/7738b6_018355d52234485982af13fd97c27d84~mv2.png/v1/fill/w_1300,h_293,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/7738b6_018355d52234485982af13fd97c27d84~mv2.png",
+            "src": "https://static.wixstatic.com/media/7738b6_018355d52234485982af13fd97c27d84~mv2.png/v1/fill/w_1300,h_293,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/7738b6_018355d52234485982af13fd97c27d84~mv2.png",
+            "alt": "",
+            "complete": true,
+            "naturalWidth": 1300,
+            "naturalHeight": 293,
+            "visible": true,
+            "rect": {
+              "x": 150,
+              "y": 94,
+              "width": 1300,
+              "height": 293,
+              "top": 94,
+              "left": 150,
+              "bottom": 387,
+              "right": 1450
+            }
+          },
+          {
+            "key": "img_comp-mmn7oru0",
+            "currentSrc": "https://static.wixstatic.com/media/7738b6_4ddc4e72b97c4f2190cc46a551a9e648~mv2.png/v1/fill/w_330,h_293,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/ampliacion%20fondo.png",
+            "src": "https://static.wixstatic.com/media/7738b6_4ddc4e72b97c4f2190cc46a551a9e648~mv2.png/v1/fill/w_330,h_293,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/ampliacion%20fondo.png",
+            "alt": "ampliacion fondo.png",
+            "complete": true,
+            "naturalWidth": 330,
+            "naturalHeight": 293,
+            "visible": true,
+            "rect": {
+              "x": 1399,
+              "y": 94,
+              "width": 330,
+              "height": 293,
+              "top": 94,
+              "left": 1399,
+              "bottom": 387,
+              "right": 1729
+            }
+          },
+          {
+            "key": "img_comp-mmn7rc8x",
+            "currentSrc": "https://static.wixstatic.com/media/7738b6_3d4e7c212cac496596e29ee6dfb4543f~mv2.jpg/v1/crop/x_0,y_0,w_382,h_644/fill/w_174,h_293,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/ampliacion%20fondo_edited.jpg",
+            "src": "https://static.wixstatic.com/media/7738b6_3d4e7c212cac496596e29ee6dfb4543f~mv2.jpg/v1/crop/x_0,y_0,w_382,h_644/fill/w_174,h_293,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/ampliacion%20fondo_edited.jpg",
+            "alt": "ampliacion fondo_edited.jpg",
+            "complete": true,
+            "naturalWidth": 174,
+            "naturalHeight": 293,
+            "visible": true,
+            "rect": {
+              "x": 11,
+              "y": 94,
+              "width": 174,
+              "height": 293,
+              "top": 94,
+              "left": 11,
+              "bottom": 387,
+              "right": 185
+            }
+          },
+          {
+            "key": "img_comp-mmn7vk0z",
+            "currentSrc": "https://static.wixstatic.com/media/7738b6_4ddc4e72b97c4f2190cc46a551a9e648~mv2.png/v1/crop/x_0,y_0,w_564,h_644/fill/w_257,h_293,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/ampliacion%20fondo.png",
+            "src": "https://static.wixstatic.com/media/7738b6_4ddc4e72b97c4f2190cc46a551a9e648~mv2.png/v1/crop/x_0,y_0,w_564,h_644/fill/w_257,h_293,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/ampliacion%20fondo.png",
+            "alt": "ampliacion fondo.png",
+            "complete": true,
+            "naturalWidth": 257,
+            "naturalHeight": 293,
+            "visible": true,
+            "rect": {
+              "x": 1609,
+              "y": 94,
+              "width": 257,
+              "height": 293,
+              "top": 94,
+              "left": 1609,
+              "bottom": 387,
+              "right": 1866
+            }
+          },
+          {
+            "key": "img_comp-mmn9m03m",
+            "currentSrc": "https://static.wixstatic.com/media/7738b6_3d4e7c212cac496596e29ee6dfb4543f~mv2.jpg/v1/crop/x_0,y_0,w_382,h_644/fill/w_174,h_293,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/ampliacion%20fondo_edited.jpg",
+            "src": "https://static.wixstatic.com/media/7738b6_3d4e7c212cac496596e29ee6dfb4543f~mv2.jpg/v1/crop/x_0,y_0,w_382,h_644/fill/w_174,h_293,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/ampliacion%20fondo_edited.jpg",
+            "alt": "ampliacion fondo_edited.jpg",
+            "complete": true,
+            "naturalWidth": 174,
+            "naturalHeight": 293,
+            "visible": true,
+            "rect": {
+              "x": -159,
+              "y": 94,
+              "width": 174,
+              "height": 293,
+              "top": 94,
+              "left": -159,
+              "bottom": 387,
+              "right": 15
+            }
+          }
+        ],
+        "backgroundCount": 0,
+        "backgrounds": [],
+        "buttons": [],
+        "links": [
+          {
+            "href": "https://iesa.io/5zr2vw_?utm_source=web-deh&utm_medium=banner-web-deh&utm_campaign=universo-aareon-deh-unibo&utm_target=landing-teaser-+-convocatoria-evento&utm_content=inscribete-al-webinar&utm_term=all",
+            "text": ""
+          }
+        ],
+        "animation": {
+          "animatedNodes": 0,
+          "transformedNodes": 0
+        },
+        "style": {
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1"
+        }
+      },
+      {
+        "index": 2,
+        "id": "comp-m5utn3xf",
+        "tag": "section",
+        "className": "Oqnisf comp-m5utn3xf wixui-section",
+        "visible": true,
+        "rect": {
+          "x": 0,
+          "y": 387,
+          "width": 1600,
+          "height": 693,
+          "top": 387,
+          "left": 0,
+          "bottom": 1080,
+          "right": 1600
+        },
+        "textLength": 560,
+        "textHash": "1440798114",
+        "textSample": "Administraciones de Fincas Conoce nuestras soluciones Asesorías Conoce nuestras soluciones Tenemos la solución para ti Queremos ayudarte Control de Expedientes de Notificaciones Empieza hoy a tener el control total de...",
+        "imageCount": 7,
+        "loadedImageCount": 7,
+        "missingImageCount": 0,
+        "images": [
+          {
+            "key": "img_comp-m6451tyt7",
+            "currentSrc": "https://static.wixstatic.com/media/7738b6_a362deb4e77641f78f1fe1c158b74ede~mv2.jpg/v1/fill/w_309,h_200,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/wooden-houses-shelf-home-decor-detail.jpg",
+            "src": "https://static.wixstatic.com/media/7738b6_a362deb4e77641f78f1fe1c158b74ede~mv2.jpg/v1/fill/w_309,h_200,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/wooden-houses-shelf-home-decor-detail.jpg",
+            "alt": "wooden-houses-shelf-home-decor-detail.jpg",
+            "complete": true,
+            "naturalWidth": 309,
+            "naturalHeight": 200,
+            "visible": true,
+            "rect": {
+              "x": 247,
+              "y": 471,
+              "width": 309,
+              "height": 200,
+              "top": 471,
+              "left": 247,
+              "bottom": 671,
+              "right": 556
+            }
+          },
+          {
+            "key": "img_comp-m6451tye2",
+            "currentSrc": "https://static.wixstatic.com/media/11062b_bbd890290e2c407486b46a0fc755d5b0~mv2.jpg/v1/fill/w_309,h_200,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/En%20la%20oficina.jpg",
+            "src": "https://static.wixstatic.com/media/11062b_bbd890290e2c407486b46a0fc755d5b0~mv2.jpg/v1/fill/w_309,h_200,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/En%20la%20oficina.jpg",
+            "alt": "En la oficina",
+            "complete": true,
+            "naturalWidth": 309,
+            "naturalHeight": 200,
+            "visible": true,
+            "rect": {
+              "x": 659,
+              "y": 468,
+              "width": 309,
+              "height": 200,
+              "top": 468,
+              "left": 659,
+              "bottom": 668,
+              "right": 968
+            }
+          },
+          {
+            "key": "img_comp-m6451tz08",
+            "currentSrc": "https://static.wixstatic.com/media/7738b6_16c1c3819e454a5da493bcdb7b2ac910~mv2.jpg/v1/fill/w_309,h_200,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Dise%C3%B1o%20sin%20t%C3%ADtulo_edited.jpg",
+            "src": "https://static.wixstatic.com/media/7738b6_16c1c3819e454a5da493bcdb7b2ac910~mv2.jpg/v1/fill/w_309,h_200,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Dise%C3%B1o%20sin%20t%C3%ADtulo_edited.jpg",
+            "alt": "Diseño sin título_edited.jpg",
+            "complete": true,
+            "naturalWidth": 309,
+            "naturalHeight": 200,
+            "visible": true,
+            "rect": {
+              "x": 1056,
+              "y": 470,
+              "width": 309,
+              "height": 200,
+              "top": 470,
+              "left": 1056,
+              "bottom": 670,
+              "right": 1365
+            }
+          },
+          {
+            "key": "img_comp-mhkgykrd2",
+            "currentSrc": "https://static.wixstatic.com/media/7738b6_2cf3028c0ab8472eae91d21dbe6a25ae~mv2.png/v1/fill/w_46,h_52,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/CEN_amarillo.png",
+            "src": "https://static.wixstatic.com/media/7738b6_2cf3028c0ab8472eae91d21dbe6a25ae~mv2.png/v1/fill/w_46,h_52,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/CEN_amarillo.png",
+            "alt": "CEN_amarillo.png",
+            "complete": true,
+            "naturalWidth": 46,
+            "naturalHeight": 52,
+            "visible": true,
+            "rect": {
+              "x": 264,
+              "y": 775,
+              "width": 46,
+              "height": 52,
+              "top": 775,
+              "left": 264,
+              "bottom": 827,
+              "right": 310
+            }
+          },
+          {
+            "key": "img_comp-mgex96ep",
+            "currentSrc": "https://static.wixstatic.com/media/7738b6_675fd793de0545a6835c63ae8460647b~mv2.png/v1/crop/x_0,y_23,w_402,h_147/fill/w_154,h_58,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/LexBox_Logo_Azul_H_edited_edited.png",
+            "src": "https://static.wixstatic.com/media/7738b6_675fd793de0545a6835c63ae8460647b~mv2.png/v1/crop/x_0,y_23,w_402,h_147/fill/w_154,h_58,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/LexBox_Logo_Azul_H_edited_edited.png",
+            "alt": "LexBox_Logo_Azul_H_edited_edited.png",
+            "complete": true,
+            "naturalWidth": 154,
+            "naturalHeight": 58,
+            "visible": true,
+            "rect": {
+              "x": 582,
+              "y": 774,
+              "width": 154,
+              "height": 58,
+              "top": 774,
+              "left": 582,
+              "bottom": 832,
+              "right": 736
+            }
+          },
+          {
+            "key": "img_comp-mclt1rxz",
+            "currentSrc": "https://static.wixstatic.com/media/7738b6_602ac8bc01e54030a0afaa84f2101e82~mv2.jpg/v1/fill/w_107,h_58,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/image_edited.jpg",
+            "src": "https://static.wixstatic.com/media/7738b6_602ac8bc01e54030a0afaa84f2101e82~mv2.jpg/v1/fill/w_107,h_58,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/image_edited.jpg",
+            "alt": "image_edited.jpg",
+            "complete": true,
+            "naturalWidth": 107,
+            "naturalHeight": 58,
+            "visible": true,
+            "rect": {
+              "x": 898,
+              "y": 774,
+              "width": 107,
+              "height": 58,
+              "top": 774,
+              "left": 898,
+              "bottom": 832,
+              "right": 1005
+            }
+          },
+          {
+            "key": "img_comp-mirg7kdd",
+            "currentSrc": "https://static.wixstatic.com/media/7738b6_d63e43d81db340db8973b6667d51ed95~mv2.jpg/v1/crop/x_237,y_0,w_868,h_936/fill/w_46,h_52,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/DocumBox.jpg",
+            "src": "https://static.wixstatic.com/media/7738b6_d63e43d81db340db8973b6667d51ed95~mv2.jpg/v1/crop/x_237,y_0,w_868,h_936/fill/w_46,h_52,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/DocumBox.jpg",
+            "alt": "DocumBox.jpg",
+            "complete": true,
+            "naturalWidth": 46,
+            "naturalHeight": 52,
+            "visible": true,
+            "rect": {
+              "x": 1166,
+              "y": 767,
+              "width": 46,
+              "height": 52,
+              "top": 767,
+              "left": 1166,
+              "bottom": 819,
+              "right": 1212
+            }
+          }
+        ],
+        "backgroundCount": 0,
+        "backgrounds": [],
+        "buttons": [
+          "Conoce nuestras soluciones",
+          "Conoce nuestras soluciones",
+          "Queremos ayudarte",
+          "Más información",
+          "ACCESO",
+          "Ver Vídeo",
+          "Ver vídeo",
+          "Más información",
+          "Acceso a DocumBox"
+        ],
+        "links": [
+          {
+            "href": "https://www.dehonline.es/planes-af",
+            "text": ""
+          },
+          {
+            "href": "https://www.dehonline.es/planes-af",
+            "text": "Conoce nuestras soluciones"
+          },
+          {
+            "href": "https://www.dehonline.es/contacto",
+            "text": ""
+          },
+          {
+            "href": "https://www.dehonline.es/contacto",
+            "text": "Queremos ayudarte"
+          },
+          {
+            "href": "https://www.dehonline.es/plataforma-control-exp-notificaciones",
+            "text": ""
+          },
+          {
+            "href": "https://www.dehonline.es/plataforma-control-exp-notificaciones",
+            "text": "Control de Expedientes de Notificaciones"
+          },
+          {
+            "href": "https://www.dehonline.es/plataforma-control-exp-notificaciones",
+            "text": "Empieza hoy a tener el control total de tus notificaciones"
+          },
+          {
+            "href": "https://www.dehonline.es/info-control-exp-notificaciones",
+            "text": "Más información"
+          },
+          {
+            "href": "https://www.dehonline.es/plataforma-control-exp-notificaciones",
+            "text": "ACCESO"
+          },
+          {
+            "href": "https://player.hihaho.com/embed/39e49284-148c-4bcb-9e63-3e0abc920c90",
+            "text": "Ver Vídeo"
+          },
+          {
+            "href": "http://bit.ly/487lNQf",
+            "text": ""
+          },
+          {
+            "href": "http://bit.ly/487lNQf",
+            "text": "Ver vídeo"
+          },
+          {
+            "href": "https://www.dehonline.es/plataforma-control-exp-notificaciones",
+            "text": "Cumplimiento Normativo (CAE) y la Homologación de Proveedores en un solo lugar"
+          },
+          {
+            "href": "https://www.dehonline.es/documbox-info",
+            "text": "Más información"
+          },
+          {
+            "href": "https://documbox.dehonline.es",
+            "text": "Acceso a DocumBox"
+          }
+        ],
+        "animation": {
+          "animatedNodes": 3,
+          "transformedNodes": 4
+        },
+        "style": {
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1"
+        }
+      },
+      {
+        "index": 3,
+        "id": "comp-m66dcvli",
+        "tag": "section",
+        "className": "Oqnisf comp-m66dcvli wixui-section",
+        "visible": true,
+        "rect": {
+          "x": 0,
+          "y": 1080,
+          "width": 1600,
+          "height": 337,
+          "top": 1080,
+          "left": 0,
+          "bottom": 1417,
+          "right": 1600
+        },
+        "textLength": 147,
+        "textHash": "3979591901",
+        "textSample": "En DEH Online disfrutamos ayudando a nuestros clientes a simplificar su día a día con compromiso y calidad, con soluciones sencillas e innovadoras.",
+        "imageCount": 2,
+        "loadedImageCount": 2,
+        "missingImageCount": 0,
+        "images": [
+          {
+            "key": "ofi rojo.jpeg",
+            "currentSrc": "https://static.wixstatic.com/media/7738b6_1ac3e59e66ce47afb151cb07ac93dd57~mv2.jpeg/v1/fill/w_1600,h_337,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/7738b6_1ac3e59e66ce47afb151cb07ac93dd57~mv2.jpeg",
+            "src": "https://static.wixstatic.com/media/7738b6_1ac3e59e66ce47afb151cb07ac93dd57~mv2.jpeg/v1/fill/w_1600,h_337,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/7738b6_1ac3e59e66ce47afb151cb07ac93dd57~mv2.jpeg",
+            "alt": "ofi rojo.jpeg",
+            "complete": true,
+            "naturalWidth": 1600,
+            "naturalHeight": 337,
+            "visible": true,
+            "rect": {
+              "x": 0,
+              "y": 1080,
+              "width": 1600,
+              "height": 337,
+              "top": 1080,
+              "left": 0,
+              "bottom": 1417,
+              "right": 1600
+            }
+          },
+          {
+            "key": "img_comp-m66de3kl",
+            "currentSrc": "https://static.wixstatic.com/media/7738b6_aec55d5ff06e4b368b345e505f306810~mv2.jpg/v1/fill/w_896,h_265,al_c,q_80,enc_avif,quality_auto/freepik__the-style-is-candid-image-photo.jpg",
+            "src": "https://static.wixstatic.com/media/7738b6_aec55d5ff06e4b368b345e505f306810~mv2.jpg/v1/fill/w_896,h_265,al_c,q_80,enc_avif,quality_auto/freepik__the-style-is-candid-image-photo.jpg",
+            "alt": "freepik__the-style-is-candid-image-photo",
+            "complete": true,
+            "naturalWidth": 896,
+            "naturalHeight": 265,
+            "visible": true,
+            "rect": {
+              "x": 13,
+              "y": 1080,
+              "width": 1140,
+              "height": 337,
+              "top": 1080,
+              "left": 13,
+              "bottom": 1417,
+              "right": 1153
+            }
+          }
+        ],
+        "backgroundCount": 0,
+        "backgrounds": [],
+        "buttons": [],
+        "links": [],
+        "animation": {
+          "animatedNodes": 0,
+          "transformedNodes": 1
+        },
+        "style": {
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1"
+        }
+      },
+      {
+        "index": 4,
+        "id": "comp-makvwzc5",
+        "tag": "section",
+        "className": "Oqnisf comp-makvwzc5 wixui-section",
+        "visible": true,
+        "rect": {
+          "x": 0,
+          "y": 1417,
+          "width": 1600,
+          "height": 715.515625,
+          "top": 1417,
+          "left": 0,
+          "bottom": 2132.515625,
+          "right": 1600
+        },
+        "textLength": 276,
+        "textHash": "1739113490",
+        "textSample": "Tecnología inteligente para optimizar tu día a día Certificados Digitales y Notificaciones Electrónicas​ Control de Expediente de Notificaciones Protección de Datos y Valoración de Riesgos Cita previa para Atención Co...",
+        "imageCount": 7,
+        "loadedImageCount": 7,
+        "missingImageCount": 0,
+        "images": [
+          {
+            "key": "https://static.wixstatic.com/media/7738b6_1b793389e4d74684966f3d0f3d43332e~mv2.jpg/v1/fill/w_1600,h_1200,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/7738b6_1b793389e4d74684966f3d0f3d43332e~mv2.jpg#0",
+            "currentSrc": "https://static.wixstatic.com/media/7738b6_1b793389e4d74684966f3d0f3d43332e~mv2.jpg/v1/fill/w_1600,h_1200,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/7738b6_1b793389e4d74684966f3d0f3d43332e~mv2.jpg",
+            "src": "https://static.wixstatic.com/media/7738b6_1b793389e4d74684966f3d0f3d43332e~mv2.jpg/v1/fill/w_1600,h_1200,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/7738b6_1b793389e4d74684966f3d0f3d43332e~mv2.jpg",
+            "alt": "",
+            "complete": true,
+            "naturalWidth": 1600,
+            "naturalHeight": 1200,
+            "visible": true,
+            "rect": {
+              "x": 0,
+              "y": 217,
+              "width": 1600,
+              "height": 1200,
+              "top": 217,
+              "left": 0,
+              "bottom": 1417,
+              "right": 1600
+            }
+          },
+          {
+            "key": "img_comp-makvwzcz5__item1",
+            "currentSrc": "https://static.wixstatic.com/media/7738b6_c9aac9417d6e4b1c9e4df3d6e8b2d7b7~mv2.png/v1/crop/x_0,y_3,w_246,h_173/fill/w_216,h_152,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/certibox_edited.png",
+            "src": "https://static.wixstatic.com/media/7738b6_c9aac9417d6e4b1c9e4df3d6e8b2d7b7~mv2.png/v1/crop/x_0,y_3,w_246,h_173/fill/w_216,h_152,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/certibox_edited.png",
+            "alt": "certibox_edited.png",
+            "complete": true,
+            "naturalWidth": 216,
+            "naturalHeight": 152,
+            "visible": true,
+            "rect": {
+              "x": 358.5,
+              "y": 1618.515625,
+              "width": 216,
+              "height": 152,
+              "top": 1618.515625,
+              "left": 358.5,
+              "bottom": 1770.515625,
+              "right": 574.5
+            }
+          },
+          {
+            "key": "img_comp-makvwzcz5__item-3f45e7c5-4497-4b5c-84f1-bbad6cea4901",
+            "currentSrc": "https://static.wixstatic.com/media/7738b6_97199bb1a5ca4d7eb5d4abb8c23cf25f~mv2.jpg/v1/crop/x_0,y_4,w_578,h_407/fill/w_216,h_152,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Captura%20de%20pantalla%202026-01-28%20115234_ed.jpg",
+            "src": "https://static.wixstatic.com/media/7738b6_97199bb1a5ca4d7eb5d4abb8c23cf25f~mv2.jpg/v1/crop/x_0,y_4,w_578,h_407/fill/w_216,h_152,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Captura%20de%20pantalla%202026-01-28%20115234_ed.jpg",
+            "alt": "Captura de pantalla 2026-01-28 115234_ed",
+            "complete": true,
+            "naturalWidth": 216,
+            "naturalHeight": 152,
+            "visible": true,
+            "rect": {
+              "x": 358.5,
+              "y": 1903.515625,
+              "width": 216,
+              "height": 152,
+              "top": 1903.515625,
+              "left": 358.5,
+              "bottom": 2055.515625,
+              "right": 574.5
+            }
+          },
+          {
+            "key": "img_comp-makvwzcz5__item-j9ples3e",
+            "currentSrc": "https://static.wixstatic.com/media/7738b6_16d10d8542334e219cd2054bcf5e4064~mv2.png/v1/crop/x_0,y_8,w_237,h_167/fill/w_216,h_152,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/lexbox_edited_edited.png",
+            "src": "https://static.wixstatic.com/media/7738b6_16d10d8542334e219cd2054bcf5e4064~mv2.png/v1/crop/x_0,y_8,w_237,h_167/fill/w_216,h_152,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/lexbox_edited_edited.png",
+            "alt": "lexbox_edited_edited.png",
+            "complete": true,
+            "naturalWidth": 216,
+            "naturalHeight": 152,
+            "visible": true,
+            "rect": {
+              "x": 694.5,
+              "y": 1618.515625,
+              "width": 216,
+              "height": 152,
+              "top": 1618.515625,
+              "left": 694.5,
+              "bottom": 1770.515625,
+              "right": 910.5
+            }
+          },
+          {
+            "key": "img_comp-makvwzcz5__item-4baa69a6-4feb-49ff-8c44-e09e698bee31",
+            "currentSrc": "https://static.wixstatic.com/media/11062b_e4a7ccc4d3764f7fa73ba88b6392e018~mv2.jpg/v1/crop/x_0,y_1130,w_3727,h_2747/fill/w_216,h_152,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Calendario%20Anual.jpg",
+            "src": "https://static.wixstatic.com/media/11062b_e4a7ccc4d3764f7fa73ba88b6392e018~mv2.jpg/v1/crop/x_0,y_1130,w_3727,h_2747/fill/w_216,h_152,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Calendario%20Anual.jpg",
+            "alt": "Calendario Anual",
+            "complete": true,
+            "naturalWidth": 216,
+            "naturalHeight": 152,
+            "visible": true,
+            "rect": {
+              "x": 694.5,
+              "y": 1903.515625,
+              "width": 216,
+              "height": 152,
+              "top": 1903.515625,
+              "left": 694.5,
+              "bottom": 2055.515625,
+              "right": 910.5
+            }
+          },
+          {
+            "key": "img_comp-makvwzcz5__item-j9plerjk",
+            "currentSrc": "https://static.wixstatic.com/media/7738b6_5a6c27d145514278b99e3adab35e3b52~mv2.jpg/v1/crop/x_0,y_19,w_1532,h_1078/fill/w_216,h_152,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/DOCUMBOX_homoPROVEE-05_edited_edited_edi.jpg",
+            "src": "https://static.wixstatic.com/media/7738b6_5a6c27d145514278b99e3adab35e3b52~mv2.jpg/v1/crop/x_0,y_19,w_1532,h_1078/fill/w_216,h_152,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/DOCUMBOX_homoPROVEE-05_edited_edited_edi.jpg",
+            "alt": "DOCUMBOX_homoPROVEE-05_edited_edited_edi",
+            "complete": true,
+            "naturalWidth": 216,
+            "naturalHeight": 152,
+            "visible": true,
+            "rect": {
+              "x": 1030.5,
+              "y": 1618.515625,
+              "width": 216,
+              "height": 152,
+              "top": 1618.515625,
+              "left": 1030.5,
+              "bottom": 1770.515625,
+              "right": 1246.5
+            }
+          },
+          {
+            "key": "img_comp-makvwzcz5__item-588aab86-de66-4a8e-ad39-1ed74b88f3a5",
+            "currentSrc": "https://static.wixstatic.com/media/7738b6_6c7ca19ad7a04e1aab403077973e8c77~mv2.jpg/v1/crop/x_576,y_0,w_3848,h_2837/fill/w_216,h_152,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/online-message-blog-chat-communication-envelop-graphic-icon-concept.jpg",
+            "src": "https://static.wixstatic.com/media/7738b6_6c7ca19ad7a04e1aab403077973e8c77~mv2.jpg/v1/crop/x_576,y_0,w_3848,h_2837/fill/w_216,h_152,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/online-message-blog-chat-communication-envelop-graphic-icon-concept.jpg",
+            "alt": "online-message-blog-chat-communication-envelop-graphic-icon-concept.jpg",
+            "complete": true,
+            "naturalWidth": 216,
+            "naturalHeight": 152,
+            "visible": true,
+            "rect": {
+              "x": 1030.5,
+              "y": 1903.515625,
+              "width": 216,
+              "height": 152,
+              "top": 1903.515625,
+              "left": 1030.5,
+              "bottom": 2055.515625,
+              "right": 1246.5
+            }
+          }
+        ],
+        "backgroundCount": 0,
+        "backgrounds": [],
+        "buttons": [],
+        "links": [
+          {
+            "href": "https://www.dehonline.es/certibox",
+            "text": ""
+          },
+          {
+            "href": "https://www.dehonline.es/certibox",
+            "text": ""
+          },
+          {
+            "href": "https://www.dehonline.es",
+            "text": ""
+          },
+          {
+            "href": "https://www.dehonline.es/info-control-exp-notificaciones",
+            "text": ""
+          },
+          {
+            "href": "https://www.dehonline.es/lexbox",
+            "text": ""
+          },
+          {
+            "href": "https://www.dehonline.es/lexbox",
+            "text": ""
+          },
+          {
+            "href": "https://www.dehonline.es",
+            "text": ""
+          },
+          {
+            "href": "https://www.dehonline.es/book-online",
+            "text": ""
+          },
+          {
+            "href": "https://www.dehonline.es",
+            "text": ""
+          },
+          {
+            "href": "https://www.dehonline.es/documbox-info",
+            "text": ""
+          },
+          {
+            "href": "https://www.dehonline.es",
+            "text": ""
+          },
+          {
+            "href": "https://www.dehonline.es/blog",
+            "text": ""
+          }
+        ],
+        "animation": {
+          "animatedNodes": 1,
+          "transformedNodes": 7
+        },
+        "style": {
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1"
+        }
+      },
+      {
+        "index": 5,
+        "id": "comp-m5qnidp97",
+        "tag": "section",
+        "className": "Oqnisf comp-m5qnidp97 wixui-section",
+        "visible": true,
+        "rect": {
+          "x": 0,
+          "y": 2132.515625,
+          "width": 1600,
+          "height": 607.25,
+          "top": 2132.515625,
+          "left": 0,
+          "bottom": 2739.765625,
+          "right": 1600
+        },
+        "textLength": 457,
+        "textHash": "3479664826",
+        "textSample": "DEH en cifras +12Mil Administraciones públicas vigiladas +950 Organismos admin. central +2.500 Organismos admin. autonómica +7.000 Organismos admin. local 425.371 Suscripciones anuales 624 Nuevos suscriptores en la úl...",
+        "imageCount": 5,
+        "loadedImageCount": 5,
+        "missingImageCount": 0,
+        "images": [
+          {
+            "key": "img_comp-m5qnidpy8",
+            "currentSrc": "https://static.wixstatic.com/media/45bf13_7918dde9c6c042eebe19f4073fb9368e~mv2.png/v1/fill/w_65,h_65,al_c,q_85,enc_avif,quality_auto/Recurso%203icono.png",
+            "src": "https://static.wixstatic.com/media/45bf13_7918dde9c6c042eebe19f4073fb9368e~mv2.png/v1/fill/w_65,h_65,al_c,q_85,enc_avif,quality_auto/Recurso%203icono.png",
+            "alt": "Recurso 3icono.png",
+            "complete": true,
+            "naturalWidth": 65,
+            "naturalHeight": 65,
+            "visible": true,
+            "rect": {
+              "x": 609,
+              "y": 2511.421875,
+              "width": 65,
+              "height": 65,
+              "top": 2511.421875,
+              "left": 609,
+              "bottom": 2576.421875,
+              "right": 674
+            }
+          },
+          {
+            "key": "img_comp-m5qnidq25",
+            "currentSrc": "https://static.wixstatic.com/media/45bf13_0933ed36a168472082b40509f42f5614~mv2.png/v1/fill/w_65,h_67,al_c,q_85,enc_avif,quality_auto/Recurso%205icono.png",
+            "src": "https://static.wixstatic.com/media/45bf13_0933ed36a168472082b40509f42f5614~mv2.png/v1/fill/w_65,h_67,al_c,q_85,enc_avif,quality_auto/Recurso%205icono.png",
+            "alt": "Recurso 5icono.png",
+            "complete": true,
+            "naturalWidth": 65,
+            "naturalHeight": 67,
+            "visible": true,
+            "rect": {
+              "x": 754,
+              "y": 2509.421875,
+              "width": 65,
+              "height": 67,
+              "top": 2509.421875,
+              "left": 754,
+              "bottom": 2576.421875,
+              "right": 819
+            }
+          },
+          {
+            "key": "img_comp-m5qnidq6",
+            "currentSrc": "https://static.wixstatic.com/media/45bf13_c2598934289f44ff9efe80c340e27ba9~mv2.png/v1/fill/w_71,h_64,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Recurso%202icono_autonomo.png",
+            "src": "https://static.wixstatic.com/media/45bf13_c2598934289f44ff9efe80c340e27ba9~mv2.png/v1/fill/w_71,h_64,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Recurso%202icono_autonomo.png",
+            "alt": "Recurso 2icono_autonomo.png",
+            "complete": true,
+            "naturalWidth": 71,
+            "naturalHeight": 64,
+            "visible": true,
+            "rect": {
+              "x": 912,
+              "y": 2512.421875,
+              "width": 71,
+              "height": 64,
+              "top": 2512.421875,
+              "left": 912,
+              "bottom": 2576.421875,
+              "right": 983
+            }
+          },
+          {
+            "key": "img_comp-m5qnidqd",
+            "currentSrc": "https://static.wixstatic.com/media/45bf13_56eb556e57dc47cda4371f4c94933624~mv2.png/v1/fill/w_64,h_64,al_c,q_85,enc_avif,quality_auto/Recurso%206icono.png",
+            "src": "https://static.wixstatic.com/media/45bf13_56eb556e57dc47cda4371f4c94933624~mv2.png/v1/fill/w_64,h_64,al_c,q_85,enc_avif,quality_auto/Recurso%206icono.png",
+            "alt": "Recurso 6icono.png",
+            "complete": true,
+            "naturalWidth": 64,
+            "naturalHeight": 64,
+            "visible": true,
+            "rect": {
+              "x": 1079,
+              "y": 2512.421875,
+              "width": 64,
+              "height": 64,
+              "top": 2512.421875,
+              "left": 1079,
+              "bottom": 2576.421875,
+              "right": 1143
+            }
+          },
+          {
+            "key": "img_comp-m5qnidqh",
+            "currentSrc": "https://static.wixstatic.com/media/45bf13_b3a001a78ed54fc6980fd1acdad6ddc2~mv2.png/v1/fill/w_71,h_65,al_c,q_85,enc_avif,quality_auto/Recurso%204icono.png",
+            "src": "https://static.wixstatic.com/media/45bf13_b3a001a78ed54fc6980fd1acdad6ddc2~mv2.png/v1/fill/w_71,h_65,al_c,q_85,enc_avif,quality_auto/Recurso%204icono.png",
+            "alt": "Recurso 4icono.png",
+            "complete": true,
+            "naturalWidth": 71,
+            "naturalHeight": 65,
+            "visible": true,
+            "rect": {
+              "x": 1224,
+              "y": 2511.421875,
+              "width": 71,
+              "height": 65,
+              "top": 2511.421875,
+              "left": 1224,
+              "bottom": 2576.421875,
+              "right": 1295
+            }
+          }
+        ],
+        "backgroundCount": 0,
+        "backgrounds": [],
+        "buttons": [],
+        "links": [
+          {
+            "href": "https://www.dehonline.es/app-vigiladas",
+            "text": "Administraciones públicas vigiladas"
+          },
+          {
+            "href": "https://www.dehonline.es/datos-com-propietarios-comunidades",
+            "text": ""
+          },
+          {
+            "href": "https://www.dehonline.es/datos-com-propietarios-comunidades",
+            "text": "Comunidades de propietarios"
+          }
+        ],
+        "animation": {
+          "animatedNodes": 0,
+          "transformedNodes": 0
+        },
+        "style": {
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1"
+        }
+      },
+      {
+        "index": 6,
+        "id": "comp-m5qnidqk2",
+        "tag": "section",
+        "className": "Oqnisf comp-m5qnidqk2 wixui-section",
+        "visible": true,
+        "rect": {
+          "x": 0,
+          "y": 2739.765625,
+          "width": 1600,
+          "height": 321.421875,
+          "top": 2739.765625,
+          "left": 0,
+          "bottom": 3061.1875,
+          "right": 1600
+        },
+        "textLength": 17,
+        "textHash": "833425268",
+        "textSample": "Nuestros partners",
+        "imageCount": 7,
+        "loadedImageCount": 7,
+        "missingImageCount": 0,
+        "images": [
+          {
+            "key": "fondo rojo 3.jpg",
+            "currentSrc": "https://static.wixstatic.com/media/7738b6_1d94cd8424df412ca1438e2cb6faa193~mv2.jpg/v1/fill/w_1600,h_321,al_b,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/7738b6_1d94cd8424df412ca1438e2cb6faa193~mv2.jpg",
+            "src": "https://static.wixstatic.com/media/7738b6_1d94cd8424df412ca1438e2cb6faa193~mv2.jpg/v1/fill/w_1600,h_321,al_b,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/7738b6_1d94cd8424df412ca1438e2cb6faa193~mv2.jpg",
+            "alt": "fondo rojo 3.jpg",
+            "complete": true,
+            "naturalWidth": 1600,
+            "naturalHeight": 321,
+            "visible": true,
+            "rect": {
+              "x": 0,
+              "y": 2739.765625,
+              "width": 1600,
+              "height": 321,
+              "top": 2739.765625,
+              "left": 0,
+              "bottom": 3060.765625,
+              "right": 1600
+            }
+          },
+          {
+            "key": "ff9b4e9b-ef8a-4149-b48c-4be21a239df0",
+            "currentSrc": "https://static.wixstatic.com/media/45bf13_5d2fe1010f55445fb0a896a384fa908f~mv2.png/v1/fit/w_168,h_168,q_90,enc_avif,quality_auto/45bf13_5d2fe1010f55445fb0a896a384fa908f~mv2.png",
+            "src": "https://static.wixstatic.com/media/45bf13_5d2fe1010f55445fb0a896a384fa908f~mv2.png/v1/fit/w_168,h_168,q_90,enc_avif,quality_auto/45bf13_5d2fe1010f55445fb0a896a384fa908f~mv2.png",
+            "alt": "Thales",
+            "complete": true,
+            "naturalWidth": 168,
+            "naturalHeight": 168,
+            "visible": true,
+            "rect": {
+              "x": 264,
+              "y": 2817.1875,
+              "width": 168,
+              "height": 168,
+              "top": 2817.1875,
+              "left": 264,
+              "bottom": 2985.1875,
+              "right": 432
+            }
+          },
+          {
+            "key": "186ee717-31fb-4c63-b1ae-55ad85913ebf",
+            "currentSrc": "https://static.wixstatic.com/media/45bf13_77218e5f96854408824061ea4788348a~mv2.png/v1/fit/w_168,h_168,q_90,enc_avif,quality_auto/45bf13_77218e5f96854408824061ea4788348a~mv2.png",
+            "src": "https://static.wixstatic.com/media/45bf13_77218e5f96854408824061ea4788348a~mv2.png/v1/fit/w_168,h_168,q_90,enc_avif,quality_auto/45bf13_77218e5f96854408824061ea4788348a~mv2.png",
+            "alt": "Microsoft Azure",
+            "complete": true,
+            "naturalWidth": 168,
+            "naturalHeight": 168,
+            "visible": true,
+            "rect": {
+              "x": 457,
+              "y": 2817.1875,
+              "width": 168,
+              "height": 168,
+              "top": 2817.1875,
+              "left": 457,
+              "bottom": 2985.1875,
+              "right": 625
+            }
+          },
+          {
+            "key": "27eec0c4-f481-434e-91ae-e7dc97d47e83",
+            "currentSrc": "https://static.wixstatic.com/media/45bf13_2e52affb09c1487ba21937bd8f9cf8e2~mv2.png/v1/fit/w_168,h_168,q_90,enc_avif,quality_auto/45bf13_2e52affb09c1487ba21937bd8f9cf8e2~mv2.png",
+            "src": "https://static.wixstatic.com/media/45bf13_2e52affb09c1487ba21937bd8f9cf8e2~mv2.png/v1/fit/w_168,h_168,q_90,enc_avif,quality_auto/45bf13_2e52affb09c1487ba21937bd8f9cf8e2~mv2.png",
+            "alt": "AWS",
+            "complete": true,
+            "naturalWidth": 168,
+            "naturalHeight": 168,
+            "visible": true,
+            "rect": {
+              "x": 650,
+              "y": 2817.1875,
+              "width": 168,
+              "height": 168,
+              "top": 2817.1875,
+              "left": 650,
+              "bottom": 2985.1875,
+              "right": 818
+            }
+          },
+          {
+            "key": "311e36c8-9409-4e34-b689-ea5b22e8ac43",
+            "currentSrc": "https://static.wixstatic.com/media/45bf13_1df776ac2d964352b7554f224c01f5a2~mv2.png/v1/fit/w_168,h_168,q_90,enc_avif,quality_auto/45bf13_1df776ac2d964352b7554f224c01f5a2~mv2.png",
+            "src": "https://static.wixstatic.com/media/45bf13_1df776ac2d964352b7554f224c01f5a2~mv2.png/v1/fit/w_168,h_168,q_90,enc_avif,quality_auto/45bf13_1df776ac2d964352b7554f224c01f5a2~mv2.png",
+            "alt": "Uanataca",
+            "complete": true,
+            "naturalWidth": 168,
+            "naturalHeight": 168,
+            "visible": true,
+            "rect": {
+              "x": 843,
+              "y": 2817.1875,
+              "width": 168,
+              "height": 168,
+              "top": 2817.1875,
+              "left": 843,
+              "bottom": 2985.1875,
+              "right": 1011
+            }
+          },
+          {
+            "key": "c6a9c68f-e026-4ddd-b29e-b6225d6050cf",
+            "currentSrc": "https://static.wixstatic.com/media/45bf13_7399d4aa4b764188a0d3fe34008b4e02~mv2.png/v1/fit/w_168,h_168,q_90,enc_avif,quality_auto/45bf13_7399d4aa4b764188a0d3fe34008b4e02~mv2.png",
+            "src": "https://static.wixstatic.com/media/45bf13_7399d4aa4b764188a0d3fe34008b4e02~mv2.png/v1/fit/w_168,h_168,q_90,enc_avif,quality_auto/45bf13_7399d4aa4b764188a0d3fe34008b4e02~mv2.png",
+            "alt": "Camerfirma",
+            "complete": true,
+            "naturalWidth": 168,
+            "naturalHeight": 168,
+            "visible": true,
+            "rect": {
+              "x": 1036,
+              "y": 2817.1875,
+              "width": 168,
+              "height": 168,
+              "top": 2817.1875,
+              "left": 1036,
+              "bottom": 2985.1875,
+              "right": 1204
+            }
+          },
+          {
+            "key": "76e20ac7-bcb0-4975-8494-e983bf77038d",
+            "currentSrc": "https://static.wixstatic.com/media/45bf13_466bbb24f5bb4d3f8a80a607ef2f1355~mv2.png/v1/fit/w_168,h_168,q_90,enc_avif,quality_auto/45bf13_466bbb24f5bb4d3f8a80a607ef2f1355~mv2.png",
+            "src": "https://static.wixstatic.com/media/45bf13_466bbb24f5bb4d3f8a80a607ef2f1355~mv2.png/v1/fit/w_168,h_168,q_90,enc_avif,quality_auto/45bf13_466bbb24f5bb4d3f8a80a607ef2f1355~mv2.png",
+            "alt": "Bilky",
+            "complete": true,
+            "naturalWidth": 168,
+            "naturalHeight": 168,
+            "visible": true,
+            "rect": {
+              "x": 1229,
+              "y": 2817.1875,
+              "width": 168,
+              "height": 168,
+              "top": 2817.1875,
+              "left": 1229,
+              "bottom": 2985.1875,
+              "right": 1397
+            }
+          }
+        ],
+        "backgroundCount": 0,
+        "backgrounds": [],
+        "buttons": [],
+        "links": [],
+        "animation": {
+          "animatedNodes": 0,
+          "transformedNodes": 7
+        },
+        "style": {
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1"
+        }
+      },
+      {
+        "index": 7,
+        "id": "comp-mamoyxjr",
+        "tag": "section",
+        "className": "Oqnisf comp-mamoyxjr wixui-section",
+        "visible": true,
+        "rect": {
+          "x": 0,
+          "y": 3060.1875,
+          "width": 1600,
+          "height": 1614.03125,
+          "top": 3060.1875,
+          "left": 0,
+          "bottom": 4674.21875,
+          "right": 1600
+        },
+        "textLength": 1466,
+        "textHash": "2996982529",
+        "textSample": "Comunidad DEH Grupos Riesgos Laborales Privado·32 miembros Enviar solicitud Financiación Pymes Privado·23 miembros Enviar solicitud Comunicación con clientes Privado·58 miembros Enviar solicitud Tecnología Privado·33 ...",
+        "imageCount": 13,
+        "loadedImageCount": 13,
+        "missingImageCount": 0,
+        "images": [
+          {
+            "key": "abstract-networking-concept-still-life-arrangement.jpg",
+            "currentSrc": "https://static.wixstatic.com/media/7738b6_3173dd32dcd249a9a6297f1876935539~mv2.jpg/v1/fill/w_544,h_1550,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/7738b6_3173dd32dcd249a9a6297f1876935539~mv2.jpg",
+            "src": "https://static.wixstatic.com/media/7738b6_3173dd32dcd249a9a6297f1876935539~mv2.jpg/v1/fill/w_544,h_1550,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/7738b6_3173dd32dcd249a9a6297f1876935539~mv2.jpg",
+            "alt": "abstract-networking-concept-still-life-arrangement.jpg",
+            "complete": true,
+            "naturalWidth": 544,
+            "naturalHeight": 1550,
+            "visible": true,
+            "rect": {
+              "x": 0,
+              "y": 3123.1875,
+              "width": 543.671875,
+              "height": 1550,
+              "top": 3123.1875,
+              "left": 0,
+              "bottom": 4673.1875,
+              "right": 543.671875
+            }
+          },
+          {
+            "key": "https://static.wixstatic.com/media/45bf13_81697da65fc94e44902d0d8ae0a3ef7f~mv2.png/v1/fill/w_72,h_72,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/45bf13_81697da65fc94e44902d0d8ae0a3ef7f~mv2.png#1",
+            "currentSrc": "https://static.wixstatic.com/media/45bf13_81697da65fc94e44902d0d8ae0a3ef7f~mv2.png/v1/fill/w_72,h_72,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/45bf13_81697da65fc94e44902d0d8ae0a3ef7f~mv2.png",
+            "src": "https://static.wixstatic.com/media/45bf13_81697da65fc94e44902d0d8ae0a3ef7f~mv2.png/v1/fill/w_72,h_72,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/45bf13_81697da65fc94e44902d0d8ae0a3ef7f~mv2.png",
+            "alt": "",
+            "complete": true,
+            "naturalWidth": 72,
+            "naturalHeight": 72,
+            "visible": true,
+            "rect": {
+              "x": 695.328125,
+              "y": 3279.984375,
+              "width": 72,
+              "height": 72,
+              "top": 3279.984375,
+              "left": 695.328125,
+              "bottom": 3351.984375,
+              "right": 767.328125
+            }
+          },
+          {
+            "key": "https://static.wixstatic.com/media/0e753d_de7ce88d30444e06855bfe6d31c603b5~mv2.webp/v1/fill/w_72,h_72,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/0e753d_de7ce88d30444e06855bfe6d31c603b5~mv2.webp#2",
+            "currentSrc": "https://static.wixstatic.com/media/0e753d_de7ce88d30444e06855bfe6d31c603b5~mv2.webp/v1/fill/w_72,h_72,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/0e753d_de7ce88d30444e06855bfe6d31c603b5~mv2.webp",
+            "src": "https://static.wixstatic.com/media/0e753d_de7ce88d30444e06855bfe6d31c603b5~mv2.webp/v1/fill/w_72,h_72,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/0e753d_de7ce88d30444e06855bfe6d31c603b5~mv2.webp",
+            "alt": "",
+            "complete": true,
+            "naturalWidth": 72,
+            "naturalHeight": 72,
+            "visible": true,
+            "rect": {
+              "x": 695.328125,
+              "y": 3392.984375,
+              "width": 72,
+              "height": 72,
+              "top": 3392.984375,
+              "left": 695.328125,
+              "bottom": 3464.984375,
+              "right": 767.328125
+            }
+          },
+          {
+            "key": "https://static.wixstatic.com/media/45bf13_e79ea0fa21b948c99ae81ed1e4d0c480~mv2.png/v1/fill/w_72,h_72,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/45bf13_e79ea0fa21b948c99ae81ed1e4d0c480~mv2.png#3",
+            "currentSrc": "https://static.wixstatic.com/media/45bf13_e79ea0fa21b948c99ae81ed1e4d0c480~mv2.png/v1/fill/w_72,h_72,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/45bf13_e79ea0fa21b948c99ae81ed1e4d0c480~mv2.png",
+            "src": "https://static.wixstatic.com/media/45bf13_e79ea0fa21b948c99ae81ed1e4d0c480~mv2.png/v1/fill/w_72,h_72,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/45bf13_e79ea0fa21b948c99ae81ed1e4d0c480~mv2.png",
+            "alt": "",
+            "complete": true,
+            "naturalWidth": 72,
+            "naturalHeight": 72,
+            "visible": true,
+            "rect": {
+              "x": 695.328125,
+              "y": 3505.984375,
+              "width": 72,
+              "height": 72,
+              "top": 3505.984375,
+              "left": 695.328125,
+              "bottom": 3577.984375,
+              "right": 767.328125
+            }
+          },
+          {
+            "key": "https://static.wixstatic.com/media/732f95_9402722129cc4aeda921905b4f676806~mv2.png/v1/fill/w_72,h_72,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/732f95_9402722129cc4aeda921905b4f676806~mv2.png#4",
+            "currentSrc": "https://static.wixstatic.com/media/732f95_9402722129cc4aeda921905b4f676806~mv2.png/v1/fill/w_72,h_72,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/732f95_9402722129cc4aeda921905b4f676806~mv2.png",
+            "src": "https://static.wixstatic.com/media/732f95_9402722129cc4aeda921905b4f676806~mv2.png/v1/fill/w_72,h_72,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/732f95_9402722129cc4aeda921905b4f676806~mv2.png",
+            "alt": "",
+            "complete": true,
+            "naturalWidth": 72,
+            "naturalHeight": 72,
+            "visible": true,
+            "rect": {
+              "x": 695.328125,
+              "y": 3618.984375,
+              "width": 72,
+              "height": 72,
+              "top": 3618.984375,
+              "left": 695.328125,
+              "bottom": 3690.984375,
+              "right": 767.328125
+            }
+          },
+          {
+            "key": "https://static.wixstatic.com/media/45bf13_9fd7ba7a077e4e7ab7c14e7c7cefefaf~mv2.png/v1/fill/w_72,h_72,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/45bf13_9fd7ba7a077e4e7ab7c14e7c7cefefaf~mv2.png#5",
+            "currentSrc": "https://static.wixstatic.com/media/45bf13_9fd7ba7a077e4e7ab7c14e7c7cefefaf~mv2.png/v1/fill/w_72,h_72,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/45bf13_9fd7ba7a077e4e7ab7c14e7c7cefefaf~mv2.png",
+            "src": "https://static.wixstatic.com/media/45bf13_9fd7ba7a077e4e7ab7c14e7c7cefefaf~mv2.png/v1/fill/w_72,h_72,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/45bf13_9fd7ba7a077e4e7ab7c14e7c7cefefaf~mv2.png",
+            "alt": "",
+            "complete": true,
+            "naturalWidth": 72,
+            "naturalHeight": 72,
+            "visible": true,
+            "rect": {
+              "x": 695.328125,
+              "y": 3731.984375,
+              "width": 72,
+              "height": 72,
+              "top": 3731.984375,
+              "left": 695.328125,
+              "bottom": 3803.984375,
+              "right": 767.328125
+            }
+          },
+          {
+            "key": "https://static.wixstatic.com/media/732f95_7a21171c001549c4b63f08f22fd94831~mv2.jpeg/v1/fill/w_72,h_72,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/732f95_7a21171c001549c4b63f08f22fd94831~mv2.jpeg#6",
+            "currentSrc": "https://static.wixstatic.com/media/732f95_7a21171c001549c4b63f08f22fd94831~mv2.jpeg/v1/fill/w_72,h_72,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/732f95_7a21171c001549c4b63f08f22fd94831~mv2.jpeg",
+            "src": "https://static.wixstatic.com/media/732f95_7a21171c001549c4b63f08f22fd94831~mv2.jpeg/v1/fill/w_72,h_72,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/732f95_7a21171c001549c4b63f08f22fd94831~mv2.jpeg",
+            "alt": "",
+            "complete": true,
+            "naturalWidth": 72,
+            "naturalHeight": 72,
+            "visible": true,
+            "rect": {
+              "x": 695.328125,
+              "y": 3844.984375,
+              "width": 72,
+              "height": 72,
+              "top": 3844.984375,
+              "left": 695.328125,
+              "bottom": 3916.984375,
+              "right": 767.328125
+            }
+          },
+          {
+            "key": "HSM: La cámara acorazada para tus certificados digitales",
+            "currentSrc": "https://static.wixstatic.com/media/0cc494_83951fd0c8ad4cecb2d1aed64c55cba2~mv2.png/v1/fill/w_443,h_250,fp_0.50_0.50,q_35,blur_30,enc_avif,quality_auto/0cc494_83951fd0c8ad4cecb2d1aed64c55cba2~mv2.png",
+            "src": "https://static.wixstatic.com/media/0cc494_83951fd0c8ad4cecb2d1aed64c55cba2~mv2.png/v1/fill/w_443,h_250,fp_0.50_0.50,q_35,blur_30,enc_avif,quality_auto/0cc494_83951fd0c8ad4cecb2d1aed64c55cba2~mv2.webp",
+            "alt": "HSM: La cámara acorazada para tus certificados digitales",
+            "complete": true,
+            "naturalWidth": 443,
+            "naturalHeight": 250,
+            "visible": true,
+            "rect": {
+              "x": 681.328125,
+              "y": 4136.21875,
+              "width": 227,
+              "height": 128,
+              "top": 4136.21875,
+              "left": 681.328125,
+              "bottom": 4264.21875,
+              "right": 908.328125
+            }
+          },
+          {
+            "key": "HSM: La cámara acorazada para tus certificados digitales",
+            "currentSrc": "https://static.wixstatic.com/media/0cc494_83951fd0c8ad4cecb2d1aed64c55cba2~mv2.png/v1/fill/w_227,h_128,fp_0.50_0.50,q_95,enc_avif,quality_auto/0cc494_83951fd0c8ad4cecb2d1aed64c55cba2~mv2.png",
+            "src": "https://static.wixstatic.com/media/0cc494_83951fd0c8ad4cecb2d1aed64c55cba2~mv2.png/v1/fill/w_227,h_128,fp_0.50_0.50,q_95,enc_avif,quality_auto/0cc494_83951fd0c8ad4cecb2d1aed64c55cba2~mv2.webp",
+            "alt": "HSM: La cámara acorazada para tus certificados digitales",
+            "complete": true,
+            "naturalWidth": 227,
+            "naturalHeight": 128,
+            "visible": true,
+            "rect": {
+              "x": 681.328125,
+              "y": 4136.21875,
+              "width": 227,
+              "height": 128,
+              "top": 4136.21875,
+              "left": 681.328125,
+              "bottom": 4264.21875,
+              "right": 908.328125
+            }
+          },
+          {
+            "key": "El Verano del Administrador de Fincas: Descanso de unos, Tormenta Perfecta de otros",
+            "currentSrc": "https://static.wixstatic.com/media/0cc494_ef9db4cab51c4bd2a09b2169f06e41a0~mv2.jpg/v1/fill/w_250,h_250,fp_0.50_0.50,q_30,blur_30,enc_avif,quality_auto/0cc494_ef9db4cab51c4bd2a09b2169f06e41a0~mv2.jpg",
+            "src": "https://static.wixstatic.com/media/0cc494_ef9db4cab51c4bd2a09b2169f06e41a0~mv2.jpg/v1/fill/w_250,h_250,fp_0.50_0.50,q_30,blur_30,enc_avif,quality_auto/0cc494_ef9db4cab51c4bd2a09b2169f06e41a0~mv2.webp",
+            "alt": "El Verano del Administrador de Fincas: Descanso de unos, Tormenta Perfecta de otros",
+            "complete": true,
+            "naturalWidth": 250,
+            "naturalHeight": 250,
+            "visible": true,
+            "rect": {
+              "x": 933.328125,
+              "y": 4136.21875,
+              "width": 227,
+              "height": 227,
+              "top": 4136.21875,
+              "left": 933.328125,
+              "bottom": 4363.21875,
+              "right": 1160.328125
+            }
+          },
+          {
+            "key": "El Verano del Administrador de Fincas: Descanso de unos, Tormenta Perfecta de otros",
+            "currentSrc": "https://static.wixstatic.com/media/0cc494_ef9db4cab51c4bd2a09b2169f06e41a0~mv2.jpg/v1/fill/w_227,h_227,fp_0.50_0.50,q_90,enc_avif,quality_auto/0cc494_ef9db4cab51c4bd2a09b2169f06e41a0~mv2.jpg",
+            "src": "https://static.wixstatic.com/media/0cc494_ef9db4cab51c4bd2a09b2169f06e41a0~mv2.jpg/v1/fill/w_227,h_227,fp_0.50_0.50,q_90,enc_avif,quality_auto/0cc494_ef9db4cab51c4bd2a09b2169f06e41a0~mv2.webp",
+            "alt": "El Verano del Administrador de Fincas: Descanso de unos, Tormenta Perfecta de otros",
+            "complete": true,
+            "naturalWidth": 227,
+            "naturalHeight": 227,
+            "visible": true,
+            "rect": {
+              "x": 933.328125,
+              "y": 4136.21875,
+              "width": 227,
+              "height": 227,
+              "top": 4136.21875,
+              "left": 933.328125,
+              "bottom": 4363.21875,
+              "right": 1160.328125
+            }
+          },
+          {
+            "key": "La inteligencia artificial está transformando la administración de fincas (de verdad, no en PowerPoint)",
+            "currentSrc": "https://static.wixstatic.com/media/366f9f_b66304faf1ea4ed3ae376725aa7332b9~mv2.jpg/v1/fill/w_443,h_250,fp_0.50_0.50,q_30,blur_30,enc_avif,quality_auto/366f9f_b66304faf1ea4ed3ae376725aa7332b9~mv2.jpg",
+            "src": "https://static.wixstatic.com/media/366f9f_b66304faf1ea4ed3ae376725aa7332b9~mv2.jpg/v1/fill/w_443,h_250,fp_0.50_0.50,q_30,blur_30,enc_avif,quality_auto/366f9f_b66304faf1ea4ed3ae376725aa7332b9~mv2.webp",
+            "alt": "La inteligencia artificial está transformando la administración de fincas (de verdad, no en PowerPoint)",
+            "complete": true,
+            "naturalWidth": 443,
+            "naturalHeight": 250,
+            "visible": true,
+            "rect": {
+              "x": 1185.328125,
+              "y": 4136.21875,
+              "width": 227,
+              "height": 128,
+              "top": 4136.21875,
+              "left": 1185.328125,
+              "bottom": 4264.21875,
+              "right": 1412.328125
+            }
+          },
+          {
+            "key": "La inteligencia artificial está transformando la administración de fincas (de verdad, no en PowerPoint)",
+            "currentSrc": "https://static.wixstatic.com/media/366f9f_b66304faf1ea4ed3ae376725aa7332b9~mv2.jpg/v1/fill/w_227,h_128,fp_0.50_0.50,q_90,enc_avif,quality_auto/366f9f_b66304faf1ea4ed3ae376725aa7332b9~mv2.jpg",
+            "src": "https://static.wixstatic.com/media/366f9f_b66304faf1ea4ed3ae376725aa7332b9~mv2.jpg/v1/fill/w_227,h_128,fp_0.50_0.50,q_90,enc_avif,quality_auto/366f9f_b66304faf1ea4ed3ae376725aa7332b9~mv2.webp",
+            "alt": "La inteligencia artificial está transformando la administración de fincas (de verdad, no en PowerPoint)",
+            "complete": true,
+            "naturalWidth": 227,
+            "naturalHeight": 128,
+            "visible": true,
+            "rect": {
+              "x": 1185.328125,
+              "y": 4136.21875,
+              "width": 227,
+              "height": 128,
+              "top": 4136.21875,
+              "left": 1185.328125,
+              "bottom": 4264.21875,
+              "right": 1412.328125
+            }
+          }
+        ],
+        "backgroundCount": 0,
+        "backgrounds": [],
+        "buttons": [
+          "Enviar solicitud",
+          "Enviar solicitud",
+          "Enviar solicitud",
+          "Enviar solicitud",
+          "Enviar solicitud",
+          "Enviar solicitud",
+          "Mostrar más",
+          "1"
+        ],
+        "links": [
+          {
+            "href": "https://www.dehonline.es/grupos/riesgos-laborales",
+            "text": ""
+          },
+          {
+            "href": "https://www.dehonline.es/grupos/riesgos-laborales",
+            "text": "Riesgos Laborales"
+          },
+          {
+            "href": "https://www.dehonline.es/grupos/financiacion-pymes",
+            "text": ""
+          },
+          {
+            "href": "https://www.dehonline.es/grupos/financiacion-pymes",
+            "text": "Financiación Pymes"
+          },
+          {
+            "href": "https://www.dehonline.es/grupos/comunicacion-con-clientes",
+            "text": ""
+          },
+          {
+            "href": "https://www.dehonline.es/grupos/comunicacion-con-clientes",
+            "text": "Comunicación con clientes"
+          },
+          {
+            "href": "https://www.dehonline.es/grupos/tecnologia",
+            "text": ""
+          },
+          {
+            "href": "https://www.dehonline.es/grupos/tecnologia",
+            "text": "Tecnología"
+          },
+          {
+            "href": "https://www.dehonline.es/grupos/factura-electronica",
+            "text": ""
+          },
+          {
+            "href": "https://www.dehonline.es/grupos/factura-electronica",
+            "text": "Factura electrónica"
+          },
+          {
+            "href": "https://www.dehonline.es/grupos/energia",
+            "text": ""
+          },
+          {
+            "href": "https://www.dehonline.es/grupos/energia",
+            "text": "Energía"
+          },
+          {
+            "href": "https://www.dehonline.es/post/hsm-la-cámara-acorazada-para-tus-certificados-digitales",
+            "text": "HSM: La cámara acorazada para tus certificados digitales"
+          },
+          {
+            "href": "https://www.dehonline.es/post/el-verano-del-administrador-de-fincas-descanso-de-unos-tormenta-perfecta-de-otros",
+            "text": "El Verano del Administrador de Fincas: Descanso de unos, Tormenta Perfecta de otros"
+          },
+          {
+            "href": "https://www.dehonline.es/post/la-inteligencia-artificial-está-transformando-la-administración-de-fincas-de-verdad-no-en-powerpoi",
+            "text": "La inteligencia artificial está transformando la administración de fincas (de verdad, no en PowerPoint)"
+          }
+        ],
+        "animation": {
+          "animatedNodes": 0,
+          "transformedNodes": 4
+        },
+        "style": {
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1"
+        }
+      },
+      {
+        "index": 8,
+        "id": "comp-m5qnidsd6",
+        "tag": "section",
+        "className": "Oqnisf comp-m5qnidsd6 wixui-section",
+        "visible": true,
+        "rect": {
+          "x": 0,
+          "y": 4674.21875,
+          "width": 1600,
+          "height": 320.5,
+          "top": 4674.21875,
+          "left": 0,
+          "bottom": 4994.71875,
+          "right": 1600
+        },
+        "textLength": 47,
+        "textHash": "2879754859",
+        "textSample": "Principales Administraciones Públicas vigiladas",
+        "imageCount": 6,
+        "loadedImageCount": 6,
+        "missingImageCount": 0,
+        "images": [
+          {
+            "key": "0e728a04-596f-48d3-ae90-80f81c187583",
+            "currentSrc": "https://static.wixstatic.com/media/45bf13_a3cce1736e8b40e282001a4925e5924e~mv2.jpg/v1/fit/w_214,h_135,q_90,enc_avif,quality_auto/45bf13_a3cce1736e8b40e282001a4925e5924e~mv2.jpg",
+            "src": "https://static.wixstatic.com/media/45bf13_a3cce1736e8b40e282001a4925e5924e~mv2.jpg/v1/fit/w_214,h_135,q_90,enc_avif,quality_auto/45bf13_a3cce1736e8b40e282001a4925e5924e~mv2.jpg",
+            "alt": "Dehú",
+            "complete": true,
+            "naturalWidth": 214,
+            "naturalHeight": 134,
+            "visible": true,
+            "rect": {
+              "x": 267,
+              "y": 4795.71875,
+              "width": 214,
+              "height": 135,
+              "top": 4795.71875,
+              "left": 267,
+              "bottom": 4930.71875,
+              "right": 481
+            }
+          },
+          {
+            "key": "c742e875-8cf4-4e30-91f1-d369109207d2",
+            "currentSrc": "https://static.wixstatic.com/media/45bf13_c515718beb6945058d9e393b76fd8ef4~mv2.jpg/v1/fit/w_214,h_135,q_90,enc_avif,quality_auto/45bf13_c515718beb6945058d9e393b76fd8ef4~mv2.jpg",
+            "src": "https://static.wixstatic.com/media/45bf13_c515718beb6945058d9e393b76fd8ef4~mv2.jpg/v1/fit/w_214,h_135,q_90,enc_avif,quality_auto/45bf13_c515718beb6945058d9e393b76fd8ef4~mv2.jpg",
+            "alt": "Tesorería Seguridad Social",
+            "complete": true,
+            "naturalWidth": 214,
+            "naturalHeight": 134,
+            "visible": true,
+            "rect": {
+              "x": 480,
+              "y": 4795.71875,
+              "width": 214,
+              "height": 135,
+              "top": 4795.71875,
+              "left": 480,
+              "bottom": 4930.71875,
+              "right": 694
+            }
+          },
+          {
+            "key": "7b048ec7-410f-4d85-9e9a-4063e819cd6f",
+            "currentSrc": "https://static.wixstatic.com/media/45bf13_c1ce58db4125404fbfa0e4c527dc2b67~mv2.jpg/v1/fit/w_214,h_135,q_90,enc_avif,quality_auto/45bf13_c1ce58db4125404fbfa0e4c527dc2b67~mv2.jpg",
+            "src": "https://static.wixstatic.com/media/45bf13_c1ce58db4125404fbfa0e4c527dc2b67~mv2.jpg/v1/fit/w_214,h_135,q_90,enc_avif,quality_auto/45bf13_c1ce58db4125404fbfa0e4c527dc2b67~mv2.jpg",
+            "alt": "DGT",
+            "complete": true,
+            "naturalWidth": 214,
+            "naturalHeight": 134,
+            "visible": true,
+            "rect": {
+              "x": 693,
+              "y": 4795.71875,
+              "width": 214,
+              "height": 135,
+              "top": 4795.71875,
+              "left": 693,
+              "bottom": 4930.71875,
+              "right": 907
+            }
+          },
+          {
+            "key": "3e2dfceb-12d9-4939-a835-fd0cbe1b4fe3",
+            "currentSrc": "https://static.wixstatic.com/media/45bf13_e6301e4eec00405bbb936e96d4372923~mv2.jpg/v1/fit/w_214,h_135,q_90,enc_avif,quality_auto/45bf13_e6301e4eec00405bbb936e96d4372923~mv2.jpg",
+            "src": "https://static.wixstatic.com/media/45bf13_e6301e4eec00405bbb936e96d4372923~mv2.jpg/v1/fit/w_214,h_135,q_90,enc_avif,quality_auto/45bf13_e6301e4eec00405bbb936e96d4372923~mv2.jpg",
+            "alt": "Agencia Tributaria",
+            "complete": true,
+            "naturalWidth": 214,
+            "naturalHeight": 134,
+            "visible": true,
+            "rect": {
+              "x": 906,
+              "y": 4795.71875,
+              "width": 214,
+              "height": 135,
+              "top": 4795.71875,
+              "left": 906,
+              "bottom": 4930.71875,
+              "right": 1120
+            }
+          },
+          {
+            "key": "40267f8e-5fde-482b-9fe4-2bd2bd43e823",
+            "currentSrc": "https://static.wixstatic.com/media/45bf13_c99e960cb19142b3a79126bf49fcb8f9~mv2.jpg/v1/fit/w_214,h_135,q_90,enc_avif,quality_auto/45bf13_c99e960cb19142b3a79126bf49fcb8f9~mv2.jpg",
+            "src": "https://static.wixstatic.com/media/45bf13_c99e960cb19142b3a79126bf49fcb8f9~mv2.jpg/v1/fit/w_214,h_135,q_90,enc_avif,quality_auto/45bf13_c99e960cb19142b3a79126bf49fcb8f9~mv2.jpg",
+            "alt": "TEU",
+            "complete": true,
+            "naturalWidth": 214,
+            "naturalHeight": 134,
+            "visible": true,
+            "rect": {
+              "x": 1119,
+              "y": 4795.71875,
+              "width": 214,
+              "height": 135,
+              "top": 4795.71875,
+              "left": 1119,
+              "bottom": 4930.71875,
+              "right": 1333
+            }
+          },
+          {
+            "key": "d2347700-bf14-40b6-bf4f-823220037e03",
+            "currentSrc": "https://static.wixstatic.com/media/45bf13_97d7ecd264934bd583aee5261f501237~mv2.jpg/v1/fit/w_214,h_135,q_90,enc_avif,quality_auto/45bf13_97d7ecd264934bd583aee5261f501237~mv2.jpg",
+            "src": "https://static.wixstatic.com/media/45bf13_97d7ecd264934bd583aee5261f501237~mv2.jpg/v1/fit/w_214,h_135,q_90,enc_avif,quality_auto/45bf13_97d7ecd264934bd583aee5261f501237~mv2.jpg",
+            "alt": "e-NOTUM",
+            "complete": true,
+            "naturalWidth": 214,
+            "naturalHeight": 134,
+            "visible": true,
+            "rect": {
+              "x": 1332,
+              "y": 4795.71875,
+              "width": 214,
+              "height": 135,
+              "top": 4795.71875,
+              "left": 1332,
+              "bottom": 4930.71875,
+              "right": 1546
+            }
+          }
+        ],
+        "backgroundCount": 0,
+        "backgrounds": [],
+        "buttons": [],
+        "links": [],
+        "animation": {
+          "animatedNodes": 0,
+          "transformedNodes": 6
+        },
+        "style": {
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1"
+        }
+      }
+    ]
+  },
+  "logs": [
+    {
+      "type": "requestfailed",
+      "url": "https://snap.licdn.com/li.lms-analytics/insight.min.js",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "type": "console",
+      "level": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "console",
+      "level": "warn",
+      "text": "Unrecognized feature: 'vr'."
+    },
+    {
+      "type": "requestfailed",
+      "url": "https://frog.wix.com/bolt-performance?src=72&evid=21&appName=thunderbolt&is_rollout=0&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=ireland-pub&microPop=fastly_grad&is_cached=true&msid=b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1&session_id=7f0659e0-07b1-49f9-9d48-bdeb2c62a140&ish=true&isb=true&isbr=ua&vsi=24e21d57-544b-4b2c-abd2-48e7cd1dee85&caching=miss,miss_hit&pv=visible&pn=1&v=1.17008.0&url=https%3A%2F%2Fwww.dehonline.es%2F&st=2&ts=487&tsn=585&platformOnSite=true&hasInitialZoom=false&mpaSessionId=c2900788-da5f-4285-a6bb-9dcc0d7df4a5",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "type": "console",
+      "level": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "requestfailed",
+      "url": "https://panorama.wixapps.net/api/v1/bulklog",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "type": "console",
+      "level": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "requestfailed",
+      "url": "https://frog.wix.com/bolt-performance?src=72&evid=28&appName=thunderbolt&is_rollout=0&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=ireland-pub&microPop=fastly_grad&is_cached=true&msid=b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1&session_id=7f0659e0-07b1-49f9-9d48-bdeb2c62a140&ish=true&isb=true&isbr=ua&vsi=24e21d57-544b-4b2c-abd2-48e7cd1dee85&caching=miss,miss_hit&pv=visible&pn=1&v=1.17008.0&url=https%3A%2F%2Fwww.dehonline.es%2F&st=2&ts=487&tsn=585&name=partially_visible&duration=1773330492402&pageId=fswyo&isSuccessfulSSR=true",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "type": "console",
+      "level": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "requestfailed",
+      "url": "https://frog.wix.com/",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "type": "console",
+      "level": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "requestfailed",
+      "url": "https://panorama.wixapps.net/api/v1/bulklog",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "type": "console",
+      "level": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "requestfailed",
+      "url": "https://frog.wix.com/site-members?_msid=b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1&vsi=24e21d57-544b-4b2c-abd2-48e7cd1dee85&_av=thunderbolt-1.17008.0&isb=true&isbr=ua&_brandId=wix&_siteBranchId=undefined&_ms=1522&_isHeadless=undefined&_hostingPlatform=VIEWER&_lv=2.0.985%7CC&_visitorId=4cc7dc7a-9610-4989-8cce-4b66290788bd&_siteMemberId=undefined&bsi=9ec5d7c1-8df1-4e98-9209-9cbb959ce1e9%7C1&src=5&evid=698&biToken=b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1&context=undefined&ts=1423&viewmode=undefined&visitor_id=4cc7dc7a-9610-4989-8cce-4b66290788bd&site_member_id=undefined&site_settings_lng=es&browser_lng=es&lng_mismatch=false&layout=undefined&_isca=1&_iscf=1&_ispd=0&_ise=0&_=17733304935720",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "type": "console",
+      "level": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "requestfailed",
+      "url": "https://frog.wix.com/bolt-performance?_msid=b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1&vsi=24e21d57-544b-4b2c-abd2-48e7cd1dee85&_av=thunderbolt-1.17008.0&isb=true&isbr=ua&_brandId=wix&_siteBranchId=undefined&_ms=1538&_isHeadless=undefined&_hostingPlatform=VIEWER&_lv=2.0.985%7CC&_visitorId=4cc7dc7a-9610-4989-8cce-4b66290788bd&_siteMemberId=undefined&bsi=9ec5d7c1-8df1-4e98-9209-9cbb959ce1e9%7C1&src=72&evid=19&isEligible=true&_isca=1&_iscf=1&_ispd=0&_ise=0&_=17733304935841",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "type": "console",
+      "level": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "requestfailed",
+      "url": "https://panorama.wixapps.net/api/v1/bulklog",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "type": "console",
+      "level": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "requestfailed",
+      "url": "https://connect.facebook.net/en_US/fbevents.js",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "type": "console",
+      "level": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "requestfailed",
+      "url": "https://www.googletagmanager.com/gtm.js?id=GTM-PDBKGNG",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "type": "console",
+      "level": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "requestfailed",
+      "url": "https://frog.wix.com/bolt-performance",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "type": "console",
+      "level": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "requestfailed",
+      "url": "https://panorama.wixapps.net/api/v1/bulklog",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "type": "console",
+      "level": "error",
+      "text": "TypeError: Failed to fetch"
+    },
+    {
+      "type": "requestfailed",
+      "url": "https://panorama.wixapps.net/api/v1/bulklog",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "type": "console",
+      "level": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "requestfailed",
+      "url": "https://panorama.wixapps.net/api/v1/bulklog",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "type": "console",
+      "level": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "requestfailed",
+      "url": "https://panorama.wixapps.net/api/v1/bulklog",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "type": "console",
+      "level": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "console",
+      "level": "warn",
+      "text": "The resource https://siteassets.parastorage.com/pages/pages/thunderbolt?appDefinitionIdToSiteRevision=%7B%225c047089-b4af-4395-bd58-139524a3da1d%22%3A%2233%22%2C%2214271d6f-ba62-d045-549b-ab972ae1f70e%22%3A%2225%22%2C%2214bcded7-0066-7c35-14d7-466cb3f09103%22%3A%221335%22%2C%22d90652a2-f5a1-4c7c-84c4-d4cdcc41f130%22%3A%229292%22%2C%2213d21c63-b5ec-5912-8397-c3a5ddb27a97%22%3A%22440%22%7D&beckyExperiments=.DatePickerPortal%2C.EnableCustomCSSVarsForLoginSocialBar%2C.FreemiumBannerOdeditor%2C.LoginBarEnableLoggingInStateInSSR%2C.TextInputAutoFillFix%2C.UseLoginSocialBarCustomMenu%2C.UseNewLoginSocialBarCustomMenuPositioning%2C.UseNewLoginSocialBarElementStructure%2C.UseNewLoginSocialBarMemberInitialsAvatar%2C.WixFreeSiteBannerDesktop%2C.WixFreeSiteBannerMobile%2C.buttonUdp%2C.calculateCollapsibleTextLineHeightByFont%2C.dynamicSlots%2C.fiveGridLineStudioSkins%2C.isClassNameToRootEnabled%2C.propsCarmiMappersMigration1%2C.propsCarmiMappersMigration4%2C.propsCarmiMappersMigration5%2C.svgResolver_2%2C.takeAppDependenciesFromCSM%2C.updateRichTextSemanticClassNamesOnCorvid%2C.useClassnameInResponsiveAppWidget%2C.useImageAvifFormatInNativeProGallery%2C.useWowImageInFastGallery&blocksBuilderManifestGeneratorVersion=1.129.0&contentType=application%2Fjson&dfCk=6&dfVersion=1.5303.0&editorName=Unknown&experiments=dm_bgScrubToMotionFixer%2Cdm_migrateOldHoverBoxToNewFixer&externalBaseUrl=https%3A%2F%2Fwww.dehonline.es&fileId=782f79fe.bundle.min&formFactor=desktop&hasTPAWorkerOnSite=true&hasUserDomainMedia=false&isBuilderComponentModel=false&isHttps=true&isInSeo=false&isPremiumDomain=true&isUrlMigrated=true&isWixCodeOnPage=true&isWixCodeOnSite=true&language=es&metaSiteId=b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1&module=thunderbolt-platform&oneDocEnabled=true&originalLanguage=es&pageId=ccd8ff_5ccbf2ff930d51d8f35498401ac9dc35_11222.json&quickActionsMenuEnabled=false&registryLibrariesTopology=%5B%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22wixui%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14973.0%22%7D%2C%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22dsgnsys%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14973.0%22%7D%5D&remoteWidgetStructureBuilderVersion=1.251.0&siteId=241dd6c7-7fb5-4c8d-b4d6-94e6afd31537&siteRevision=11222&staticHTMLComponentUrl=https%3A%2F%2Fwww-dehonline-es.filesusr.com%2F&viewMode=desktop was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally."
+    },
+    {
+      "type": "console",
+      "level": "warn",
+      "text": "The resource https://siteassets.parastorage.com/pages/pages/thunderbolt?appDefinitionIdToSiteRevision=%7B%225c047089-b4af-4395-bd58-139524a3da1d%22%3A%2233%22%2C%2214271d6f-ba62-d045-549b-ab972ae1f70e%22%3A%2225%22%2C%2214bcded7-0066-7c35-14d7-466cb3f09103%22%3A%221335%22%2C%22d90652a2-f5a1-4c7c-84c4-d4cdcc41f130%22%3A%229292%22%2C%2213d21c63-b5ec-5912-8397-c3a5ddb27a97%22%3A%22440%22%7D&beckyExperiments=.DatePickerPortal%2C.EnableCustomCSSVarsForLoginSocialBar%2C.FreemiumBannerOdeditor%2C.LoginBarEnableLoggingInStateInSSR%2C.TextInputAutoFillFix%2C.UseLoginSocialBarCustomMenu%2C.UseNewLoginSocialBarCustomMenuPositioning%2C.UseNewLoginSocialBarElementStructure%2C.UseNewLoginSocialBarMemberInitialsAvatar%2C.WixFreeSiteBannerDesktop%2C.WixFreeSiteBannerMobile%2C.buttonUdp%2C.calculateCollapsibleTextLineHeightByFont%2C.dynamicSlots%2C.fiveGridLineStudioSkins%2C.isClassNameToRootEnabled%2C.propsCarmiMappersMigration1%2C.propsCarmiMappersMigration4%2C.propsCarmiMappersMigration5%2C.svgResolver_2%2C.takeAppDependenciesFromCSM%2C.updateRichTextSemanticClassNamesOnCorvid%2C.useClassnameInResponsiveAppWidget%2C.useImageAvifFormatInNativeProGallery%2C.useWowImageInFastGallery&blocksBuilderManifestGeneratorVersion=1.129.0&contentType=application%2Fjson&dfCk=6&dfVersion=1.5303.0&editorName=Unknown&experiments=dm_bgScrubToMotionFixer%2Cdm_migrateOldHoverBoxToNewFixer&externalBaseUrl=https%3A%2F%2Fwww.dehonline.es&fileId=782f79fe.bundle.min&formFactor=desktop&hasTPAWorkerOnSite=true&hasUserDomainMedia=false&isBuilderComponentModel=false&isHttps=true&isInSeo=false&isPremiumDomain=true&isUrlMigrated=true&isWixCodeOnPage=true&isWixCodeOnSite=true&language=es&metaSiteId=b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1&module=thunderbolt-platform&oneDocEnabled=true&originalLanguage=es&pageId=ccd8ff_a6a670265f788bc9f13c80fbbb031549_11199.json&quickActionsMenuEnabled=false&registryLibrariesTopology=%5B%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22wixui%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14973.0%22%7D%2C%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22dsgnsys%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14973.0%22%7D%5D&remoteWidgetStructureBuilderVersion=1.251.0&siteId=241dd6c7-7fb5-4c8d-b4d6-94e6afd31537&siteRevision=11222&staticHTMLComponentUrl=https%3A%2F%2Fwww-dehonline-es.filesusr.com%2F&viewMode=desktop was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally."
+    },
+    {
+      "type": "console",
+      "level": "warn",
+      "text": "The resource https://siteassets.parastorage.com/pages/pages/thunderbolt?appDefinitionIdToSiteRevision=%7B%225c047089-b4af-4395-bd58-139524a3da1d%22%3A%2233%22%2C%2214271d6f-ba62-d045-549b-ab972ae1f70e%22%3A%2225%22%2C%2214bcded7-0066-7c35-14d7-466cb3f09103%22%3A%221335%22%2C%22d90652a2-f5a1-4c7c-84c4-d4cdcc41f130%22%3A%229292%22%2C%2213d21c63-b5ec-5912-8397-c3a5ddb27a97%22%3A%22440%22%7D&beckyExperiments=.DatePickerPortal%2C.EnableCustomCSSVarsForLoginSocialBar%2C.FreemiumBannerOdeditor%2C.LoginBarEnableLoggingInStateInSSR%2C.TextInputAutoFillFix%2C.UseLoginSocialBarCustomMenu%2C.UseNewLoginSocialBarCustomMenuPositioning%2C.UseNewLoginSocialBarElementStructure%2C.UseNewLoginSocialBarMemberInitialsAvatar%2C.WixFreeSiteBannerDesktop%2C.WixFreeSiteBannerMobile%2C.buttonUdp%2C.calculateCollapsibleTextLineHeightByFont%2C.dynamicSlots%2C.fiveGridLineStudioSkins%2C.isClassNameToRootEnabled%2C.propsCarmiMappersMigration1%2C.propsCarmiMappersMigration4%2C.propsCarmiMappersMigration5%2C.svgResolver_2%2C.takeAppDependenciesFromCSM%2C.updateRichTextSemanticClassNamesOnCorvid%2C.useClassnameInResponsiveAppWidget%2C.useImageAvifFormatInNativeProGallery%2C.useWowImageInFastGallery&blocksBuilderManifestGeneratorVersion=1.129.0&contentType=application%2Fjson&dfCk=6&dfVersion=1.5303.0&editorName=Unknown&experiments=dm_bgScrubToMotionFixer%2Cdm_migrateOldHoverBoxToNewFixer&externalBaseUrl=https%3A%2F%2Fwww.dehonline.es&fileId=782f79fe.bundle.min&formFactor=desktop&hasTPAWorkerOnSite=true&hasUserDomainMedia=false&isBuilderComponentModel=false&isHttps=true&isInSeo=false&isPremiumDomain=true&isUrlMigrated=true&isWixCodeOnPage=true&isWixCodeOnSite=true&language=es&metaSiteId=b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1&module=thunderbolt-platform&oneDocEnabled=true&originalLanguage=es&pageId=ccd8ff_5ccbf2ff930d51d8f35498401ac9dc35_11222.json&quickActionsMenuEnabled=false&registryLibrariesTopology=%5B%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22wixui%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14973.0%22%7D%2C%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22dsgnsys%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14973.0%22%7D%5D&remoteWidgetStructureBuilderVersion=1.251.0&siteId=241dd6c7-7fb5-4c8d-b4d6-94e6afd31537&siteRevision=11222&staticHTMLComponentUrl=https%3A%2F%2Fwww-dehonline-es.filesusr.com%2F&viewMode=desktop was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally."
+    },
+    {
+      "type": "console",
+      "level": "warn",
+      "text": "The resource https://siteassets.parastorage.com/pages/pages/thunderbolt?appDefinitionIdToSiteRevision=%7B%225c047089-b4af-4395-bd58-139524a3da1d%22%3A%2233%22%2C%2214271d6f-ba62-d045-549b-ab972ae1f70e%22%3A%2225%22%2C%2214bcded7-0066-7c35-14d7-466cb3f09103%22%3A%221335%22%2C%22d90652a2-f5a1-4c7c-84c4-d4cdcc41f130%22%3A%229292%22%2C%2213d21c63-b5ec-5912-8397-c3a5ddb27a97%22%3A%22440%22%7D&beckyExperiments=.DatePickerPortal%2C.EnableCustomCSSVarsForLoginSocialBar%2C.FreemiumBannerOdeditor%2C.LoginBarEnableLoggingInStateInSSR%2C.TextInputAutoFillFix%2C.UseLoginSocialBarCustomMenu%2C.UseNewLoginSocialBarCustomMenuPositioning%2C.UseNewLoginSocialBarElementStructure%2C.UseNewLoginSocialBarMemberInitialsAvatar%2C.WixFreeSiteBannerDesktop%2C.WixFreeSiteBannerMobile%2C.buttonUdp%2C.calculateCollapsibleTextLineHeightByFont%2C.dynamicSlots%2C.fiveGridLineStudioSkins%2C.isClassNameToRootEnabled%2C.propsCarmiMappersMigration1%2C.propsCarmiMappersMigration4%2C.propsCarmiMappersMigration5%2C.svgResolver_2%2C.takeAppDependenciesFromCSM%2C.updateRichTextSemanticClassNamesOnCorvid%2C.useClassnameInResponsiveAppWidget%2C.useImageAvifFormatInNativeProGallery%2C.useWowImageInFastGallery&blocksBuilderManifestGeneratorVersion=1.129.0&contentType=application%2Fjson&dfCk=6&dfVersion=1.5303.0&editorName=Unknown&experiments=dm_bgScrubToMotionFixer%2Cdm_migrateOldHoverBoxToNewFixer&externalBaseUrl=https%3A%2F%2Fwww.dehonline.es&fileId=782f79fe.bundle.min&formFactor=desktop&hasTPAWorkerOnSite=true&hasUserDomainMedia=false&isBuilderComponentModel=false&isHttps=true&isInSeo=false&isPremiumDomain=true&isUrlMigrated=true&isWixCodeOnPage=true&isWixCodeOnSite=true&language=es&metaSiteId=b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1&module=thunderbolt-platform&oneDocEnabled=true&originalLanguage=es&pageId=ccd8ff_a6a670265f788bc9f13c80fbbb031549_11199.json&quickActionsMenuEnabled=false&registryLibrariesTopology=%5B%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22wixui%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14973.0%22%7D%2C%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22dsgnsys%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14973.0%22%7D%5D&remoteWidgetStructureBuilderVersion=1.251.0&siteId=241dd6c7-7fb5-4c8d-b4d6-94e6afd31537&siteRevision=11222&staticHTMLComponentUrl=https%3A%2F%2Fwww-dehonline-es.filesusr.com%2F&viewMode=desktop was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally."
+    }
+  ]
+}

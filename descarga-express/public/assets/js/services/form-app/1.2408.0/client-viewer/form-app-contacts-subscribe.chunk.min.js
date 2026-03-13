@@ -1,0 +1,2 @@
+"use strict";(("undefined"!=typeof self?self:this).webpackJsonp__wix_form_app=("undefined"!=typeof self?self:this).webpackJsonp__wix_form_app||[]).push([[2885],{51489:(e,s,f)=>{f.r(s),f.d(s,{default:()=>o});var p=f(20011),t=f(27762),n=f.n(t),_=f(42301),i=f(96454);const o=e=>{const s=_.Z9.CONTACTS_SUBSCRIBE;return n().createElement(i.W,(0,p.Z)({},e,{fieldType:s}))}}}]);
+//# sourceMappingURL=form-app-contacts-subscribe.chunk.min.js.map

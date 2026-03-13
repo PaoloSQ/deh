@@ -64,6 +64,26 @@ function main() {
   const outputPaths = resolveGeneratedPaths(root, args.page);
   const pageHtml = readText(outputPaths.handlebarsPath);
   const cleanedHtml = stripNoiseAttributes(pageHtml);
+
+  if (config.singleTemplate) {
+    removeStalePartials(outputPaths.partialDir, []);
+    writeText(outputPaths.handlebarsPath, `${cleanedHtml.trim()}\n`);
+
+    console.log(
+      JSON.stringify(
+        {
+          page: args.page,
+          pagePath: outputPaths.handlebarsPath,
+          partials: [],
+          mode: "single-template",
+        },
+        null,
+        2
+      )
+    );
+    return;
+  }
+
   const sectionData = resolveSectionPartials(cleanedHtml, config);
   const { prefix, suffix, blocks } = sectionData;
   const partials = [];
