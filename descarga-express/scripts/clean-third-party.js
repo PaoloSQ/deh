@@ -176,16 +176,34 @@ function patchViewerJson(jsonText, changes, localUrl, localSiteBase) {
         }
       }
 
+      if (viewerModel && viewerModel.experiments && typeof viewerModel.experiments === 'object') {
+        const removableExperiments = [
+          'specs.thunderbolt.businessLoggerService',
+          'specs.thunderbolt.fedops_enableSampleRateForAppNames',
+          'specs.thunderbolt.fedopsMuteErrors',
+          'specs.thunderbolt.InitPlatformApiProvider',
+          'specs.thunderbolt.loadNewerSentrySdk',
+          'specs.thunderbolt.moveFedopsLoadStartToBody',
+          'specs.thunderbolt.Panorama',
+          'specs.thunderbolt.PanoramaErrorMonitor',
+          'specs.thunderbolt.sendFedopsLoadStartedReplaced',
+          'specs.thunderbolt.useNewTelemetryAPI'
+        ];
+        for (const experiment of removableExperiments) {
+          if (experiment in viewerModel.experiments) {
+            delete viewerModel.experiments[experiment];
+            changes.removed.push(`viewerModel.experiments.${experiment}`);
+          }
+        }
+      }
+
       if (Array.isArray(viewerModel?.siteFeatures)) {
-        const removableFeatures = new Set(['businessLogger', 'panorama']);
+        const removableFeatures = new Set(['appMonitoring', 'businessLogger', 'panorama']);
         const before = viewerModel.siteFeatures.length;
         viewerModel.siteFeatures = viewerModel.siteFeatures.filter((feature) => !removableFeatures.has(feature));
-        if (!viewerModel.siteFeatures.includes('appMonitoring')) {
-          viewerModel.siteFeatures.push('appMonitoring');
-          changes.removed.push('viewerModel.siteFeatures appMonitoring stubbed');
-        }
-        if (viewerModel.siteFeatures.length !== before) {
-          changes.removed.push(`viewerModel.siteFeatures (${before - viewerModel.siteFeatures.length})`);
+        const removed = before - viewerModel.siteFeatures.length;
+        if (removed > 0) {
+          changes.removed.push(`viewerModel.siteFeatures (${removed})`);
         }
       }
 
@@ -194,11 +212,8 @@ function patchViewerJson(jsonText, changes, localUrl, localSiteBase) {
         changes.pending.push('viewerModel without siteFeaturesConfigs');
       } else {
         if (configs.appMonitoring) {
-          configs.appMonitoring.appsWithMonitoring = [];
-          changes.removed.push('viewerModel.siteFeaturesConfigs.appMonitoring cleared');
-        } else {
-          configs.appMonitoring = { appsWithMonitoring: [] };
-          changes.removed.push('viewerModel.siteFeaturesConfigs.appMonitoring stubbed');
+          delete configs.appMonitoring;
+          changes.removed.push('viewerModel.siteFeaturesConfigs.appMonitoring');
         }
         if (configs.businessLogger) {
           delete configs.businessLogger;

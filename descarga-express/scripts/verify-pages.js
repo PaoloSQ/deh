@@ -24,6 +24,8 @@ function parseArgs(argv) {
   const options = {
     filter: '',
     limit: 0,
+    targetDir: '',
+    extension: null,
     timeoutMs: Number(process.env.VERIFY_TIMEOUT_MS || 120000),
     paths: []
   };
@@ -32,6 +34,8 @@ function parseArgs(argv) {
     const arg = argv[i];
     if (arg === '--filter') options.filter = String(argv[++i] || '').toLowerCase();
     else if (arg === '--limit') options.limit = Number(argv[++i] || 0);
+    else if (arg === '--target-dir') options.targetDir = String(argv[++i] || '');
+    else if (arg === '--extension') options.extension = String(argv[++i] || '');
     else if (arg === '--timeout') options.timeoutMs = Number(argv[++i] || options.timeoutMs);
     else options.paths.push(path.resolve(process.cwd(), arg));
   }
@@ -136,13 +140,25 @@ function formatReport(results, localBase) {
 
 async function main() {
   const options = parseArgs(process.argv.slice(2));
-  const files = (options.paths.length ? options.paths : walk(PROJECT_ROOT).filter(isHtmlFile))
+  let files = options.paths.length ? options.paths : walk(PROJECT_ROOT).filter(isHtmlFile);
+
+  if (!options.paths.length && options.targetDir) {
+    const absoluteDir = path.resolve(PROJECT_ROOT, options.targetDir);
+    if (fs.existsSync(absoluteDir) && fs.statSync(absoluteDir).isDirectory()) {
+      files = fs.readdirSync(absoluteDir)
+        .map((entry) => path.resolve(absoluteDir, entry))
+        .filter((filePath) => fs.existsSync(filePath) && fs.statSync(filePath).isFile());
+    }
+  }
+
+  files = files
     .filter((filePath) => filePath.startsWith(PROJECT_ROOT) && fs.existsSync(filePath))
     .filter((filePath) => !/[/\\](node_modules|scripts)[/\\]/.test(filePath))
     .filter((filePath) => {
       const rel = toPosix(path.relative(PROJECT_ROOT, filePath));
       return rel.startsWith('sites/') || rel.startsWith('public/assets/') || rel.startsWith('public/docs/');
     })
+    .filter((filePath) => options.extension === null || path.extname(filePath) === options.extension)
     .filter((filePath) => !options.filter || toPosix(path.relative(PROJECT_ROOT, filePath)).toLowerCase().includes(options.filter))
     .slice(0, options.limit > 0 ? options.limit : undefined);
 

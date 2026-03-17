@@ -1,0 +1,53 @@
+[
+  {
+    "filePath": "C:\\www\\producción\\deh\\descarga-express\\sites\\www.dehonline.es\\condiciones-de-uso.html",
+    "relPath": "sites/www.dehonline.es/condiciones-de-uso.html",
+    "modified": false,
+    "counts": {}
+  },
+  {
+    "filePath": "C:\\www\\producción\\deh\\descarga-express\\sites\\www.dehonline.es\\politica-de-compliance.html",
+    "relPath": "sites/www.dehonline.es/politica-de-compliance.html",
+    "modified": true,
+    "counts": {
+      "script": 51,
+      "preload link": 4
+    }
+  },
+  {
+    "filePath": "C:\\www\\producción\\deh\\descarga-express\\sites\\www.dehonline.es\\politica-de-cookies.html",
+    "relPath": "sites/www.dehonline.es/politica-de-cookies.html",
+    "modified": true,
+    "counts": {
+      "script": 51,
+      "preload link": 4
+    }
+  },
+  {
+    "filePath": "C:\\www\\producción\\deh\\descarga-express\\sites\\www.dehonline.es\\politica-de-privacidad.html",
+    "relPath": "sites/www.dehonline.es/politica-de-privacidad.html",
+    "modified": true,
+    "counts": {
+      "script": 51,
+      "preload link": 4
+    }
+  },
+  {
+    "filePath": "C:\\www\\producción\\deh\\descarga-express\\sites\\www.dehonline.es\\política-de-privacidad-para-redes-sociales.html",
+    "relPath": "sites/www.dehonline.es/política-de-privacidad-para-redes-sociales.html",
+    "modified": true,
+    "counts": {
+      "script": 51,
+      "preload link": 4
+    }
+  },
+  {
+    "filePath": "C:\\www\\producción\\deh\\descarga-express\\sites\\www.dehonline.es\\pol%C3%ADtica-de-privacidad-para-redes-sociales",
+    "relPath": "sites/www.dehonline.es/pol%C3%ADtica-de-privacidad-para-redes-sociales",
+    "modified": true,
+    "counts": {
+      "script": 59,
+      "preload link": 4
+    }
+  }
+]

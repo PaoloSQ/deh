@@ -1,0 +1,29 @@
+node_modules/
+.server-port.json
+
+# Generated audit artifacts
+.interaction-audit/
+.parity-audit/
+.visible-mismatch-audit/
+INTERACTION-AUDIT.json
+INTERACTION-AUDIT.md
+PARITY-AUDIT.json
+PARITY-AUDIT.md
+RENDER-COMPARE-REPORT.json
+RENDER-COMPARE-REPORT.md
+ROUTES-CHECK-REPORT.md
+THIRD-PARTY-CLEAN-REPORT.json
+THIRD-PARTY-CLEAN-REPORT.md
+VERIFY-PAGES-REPORT.json
+VERIFY-PAGES-REPORT.md
+VISIBLE-MISMATCH-AUDIT.json
+VISIBLE-MISMATCH-AUDIT.md
+
+# Local scratch files and screenshots
+.tmp-*/
+.tmp-*.png
+.clip-*.png
+.inspect-*.png
+.final-*.png
+.section-*.png
+.postfix-*.png
