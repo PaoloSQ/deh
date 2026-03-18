@@ -27,8 +27,10 @@ const THIRD_PARTY_PATTERNS = {
 
 const TELEMETRY_GUARD_ID = 'deh-telemetry-guard';
 const FEDOPS_STUB_ID = 'deh-fedops-stub';
-const TELEMETRY_GUARD_SCRIPT = `<script id="${TELEMETRY_GUARD_ID}">(function(){var blocked=/(^https?:)?\\/\\/(frog\\.wix\\.com|panorama\\.wixapps\\.net)\\//i;var localOrigin=${JSON.stringify(LOCAL_ORIGIN)};function isBlocked(v){return typeof v==='string'&&blocked.test(v)}window.fedops=window.fedops||{};window.fedops.apps=window.fedops.apps||{};window.fedops.phaseStarted=window.fedops.phaseStarted||function(){return function(){}};window.fedops.phaseEnded=window.fedops.phaseEnded||function(){return function(){}};window.fedops.reportError=window.fedops.reportError||function(){};var NativeWorker=window.Worker;if(typeof NativeWorker==='function'){var workerOrigin=window.location.protocol+'//'+window.location.hostname+(window.location.port?':'+window.location.port:'');window.Worker=function(url,options){var nextUrl=url;if(typeof url==='string'){var prefix=localOrigin+'/'+window.location.hostname+'/';if(url.indexOf(prefix)===0){nextUrl=workerOrigin+'/'+url.slice(prefix.length)}}return new NativeWorker(nextUrl,options)};window.Worker.prototype=NativeWorker.prototype}var origFetch=window.fetch;if(typeof origFetch==='function'){window.fetch=function(input,init){var url=typeof input==='string'?input:(input&&input.url)||'';if(isBlocked(url)){return Promise.resolve(new Response('',{status:204,statusText:'No Content'}))}return origFetch.call(this,input,init)}}var origOpen=XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.open;if(origOpen){XMLHttpRequest.prototype.open=function(method,url){this.__dehBlockedTelemetry=isBlocked(url);return origOpen.apply(this,arguments)};var origSend=XMLHttpRequest.prototype.send;XMLHttpRequest.prototype.send=function(body){if(this.__dehBlockedTelemetry){try{this.readyState=4;this.status=204}catch(_e){}return}return origSend.call(this,body)}}var origBeacon=navigator.sendBeacon;if(typeof origBeacon==='function'){navigator.sendBeacon=function(url,data){if(isBlocked(url)){return true}return origBeacon.call(this,url,data)}}if(window.Image&&window.Image.prototype){var desc=Object.getOwnPropertyDescriptor(window.Image.prototype,'src');if(desc&&desc.set){Object.defineProperty(window.Image.prototype,'src',{configurable:true,enumerable:desc.enumerable,get:desc.get,set:function(value){if(isBlocked(value)){return value}return desc.set.call(this,value)}})}}})();</script>`;
+const TELEMETRY_GUARD_SCRIPT = `<script id="${TELEMETRY_GUARD_ID}">(function(){var blocked=/(^https?:)?\\/\\/(frog\\.wix\\.com|panorama\\.wixapps\\.net|auto\\.srv791713\\.hstgr\\.cloud)\\//i;var localOrigin=${JSON.stringify(LOCAL_ORIGIN)};function isBlocked(v){return typeof v==='string'&&blocked.test(v)}window.fedops=window.fedops||{};window.fedops.apps=window.fedops.apps||{};window.fedops.phaseStarted=window.fedops.phaseStarted||function(){return function(){}};window.fedops.phaseEnded=window.fedops.phaseEnded||function(){return function(){}};window.fedops.reportError=window.fedops.reportError||function(){};var NativeWorker=window.Worker;if(typeof NativeWorker==='function'){var workerOrigin=window.location.protocol+'//'+window.location.hostname+(window.location.port?':'+window.location.port:'');window.Worker=function(url,options){var nextUrl=url;if(typeof url==='string'){var prefix=localOrigin+'/'+window.location.hostname+'/';if(url.indexOf(prefix)===0){nextUrl=workerOrigin+'/'+url.slice(prefix.length)}}return new NativeWorker(nextUrl,options)};window.Worker.prototype=NativeWorker.prototype}var origFetch=window.fetch;if(typeof origFetch==='function'){window.fetch=function(input,init){var url=typeof input==='string'?input:(input&&input.url)||'';if(isBlocked(url)){return Promise.resolve(new Response('',{status:204,statusText:'No Content'}))}return origFetch.call(this,input,init)}}var origOpen=XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.open;if(origOpen){XMLHttpRequest.prototype.open=function(method,url){this.__dehBlockedTelemetry=isBlocked(url);return origOpen.apply(this,arguments)};var origSend=XMLHttpRequest.prototype.send;XMLHttpRequest.prototype.send=function(body){if(this.__dehBlockedTelemetry){try{this.readyState=4;this.status=204}catch(_e){}return}return origSend.call(this,body)}}var origBeacon=navigator.sendBeacon;if(typeof origBeacon==='function'){navigator.sendBeacon=function(url,data){if(isBlocked(url)){return true}return origBeacon.call(this,url,data)}}if(window.Image&&window.Image.prototype){var desc=Object.getOwnPropertyDescriptor(window.Image.prototype,'src');if(desc&&desc.set){Object.defineProperty(window.Image.prototype,'src',{configurable:true,enumerable:desc.enumerable,get:desc.get,set:function(value){if(isBlocked(value)){return value}return desc.set.call(this,value)}})}}})();</script>`;
 const FEDOPS_STUB_SCRIPT = `<script id="${FEDOPS_STUB_ID}">(function(){window.fedops=window.fedops||{};window.fedops.apps=window.fedops.apps||{};window.fedops.phaseStarted=window.fedops.phaseStarted||function(){return function(){}};window.fedops.phaseEnded=window.fedops.phaseEnded||function(){return function(){}};window.fedops.reportError=window.fedops.reportError||function(){};})();</script>`;
+const THUNDERBOLT_SCRIPT_PATTERN = /wix-thunderbolt|thunderbolt-platform|thunderbolt-features|thunderbolt\/dist/i;
+const THUNDERBOLT_PRELOAD_PATTERN = /siteassets\.parastorage\.com\/pages\/pages\/thunderbolt|static\.parastorage\.com\/services\/search-app|static\.parastorage\.com\/services\/form-app/i;
 
 function parseArgs(argv) {
   const options = {
@@ -87,6 +89,18 @@ function removeMatchingNoscriptBlocks(text, pattern) {
 function removeMatchingComments(text, pattern) {
   let count = 0;
   const next = text.replace(/<!--([\s\S]*?)-->/g, (block) => {
+    if (pattern.test(block)) {
+      count += 1;
+      return '';
+    }
+    return block;
+  });
+  return { text: next, count };
+}
+
+function removeMatchingLinkBlocks(text, pattern) {
+  let count = 0;
+  const next = text.replace(/<link\b[^>]*>/gi, (block) => {
     if (pattern.test(block)) {
       count += 1;
       return '';
@@ -198,12 +212,18 @@ function patchViewerJson(jsonText, changes, localUrl, localSiteBase) {
       }
 
       if (Array.isArray(viewerModel?.siteFeatures)) {
-        const removableFeatures = new Set(['appMonitoring', 'businessLogger', 'panorama']);
+        const removableFeatures = new Set(['panorama']);
         const before = viewerModel.siteFeatures.length;
         viewerModel.siteFeatures = viewerModel.siteFeatures.filter((feature) => !removableFeatures.has(feature));
         const removed = before - viewerModel.siteFeatures.length;
         if (removed > 0) {
           changes.removed.push(`viewerModel.siteFeatures (${removed})`);
+        }
+        if (!viewerModel.siteFeatures.includes('appMonitoring')) {
+          viewerModel.siteFeatures.push('appMonitoring');
+        }
+        if (!viewerModel.siteFeatures.includes('businessLogger')) {
+          viewerModel.siteFeatures.push('businessLogger');
         }
       }
 
@@ -211,13 +231,11 @@ function patchViewerJson(jsonText, changes, localUrl, localSiteBase) {
       if (!configs) {
         changes.pending.push('viewerModel without siteFeaturesConfigs');
       } else {
-        if (configs.appMonitoring) {
-          delete configs.appMonitoring;
-          changes.removed.push('viewerModel.siteFeaturesConfigs.appMonitoring');
+        if (!configs.appMonitoring) {
+          configs.appMonitoring = {};
         }
-        if (configs.businessLogger) {
-          delete configs.businessLogger;
-          changes.removed.push('viewerModel.siteFeaturesConfigs.businessLogger');
+        if (!configs.businessLogger) {
+          configs.businessLogger = {};
         }
         if (configs.codeEmbed && Array.isArray(configs.codeEmbed.htmlEmbeds)) {
           const before = configs.codeEmbed.htmlEmbeds.length;
@@ -348,6 +366,16 @@ function sanitizeHtml(text, changes, relPath) {
   const sentryComments = removeMatchingComments(next, THIRD_PARTY_PATTERNS.sentry);
   next = sentryComments.text;
   if (sentryComments.count) changes.removed.push(`sentry comments (${sentryComments.count})`);
+
+  if (/search\.html|carpetas-financieras\.html/i.test(relPath)) {
+    const thunderboltScripts = removeMatchingScriptBlocks(next, THUNDERBOLT_SCRIPT_PATTERN);
+    next = thunderboltScripts.text;
+    if (thunderboltScripts.count) changes.removed.push(`thunderbolt scripts (${thunderboltScripts.count})`);
+
+    const thunderboltPreloads = removeMatchingLinkBlocks(next, THUNDERBOLT_PRELOAD_PATTERN);
+    next = thunderboltPreloads.text;
+    if (thunderboltPreloads.count) changes.removed.push(`thunderbolt preloads (${thunderboltPreloads.count})`);
+  }
 
   next = next.replace(/<iframe\b([^>]*?(visitor-analytics\.io|TWIPLA Website Intelligence)[^>]*)><\/iframe>/gi, () => {
     changes.removed.push('twipla iframe');

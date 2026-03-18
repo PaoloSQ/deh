@@ -1,0 +1,265 @@
+{
+  "processed": 1,
+  "files": [
+    {
+      "file": "sites/www.dehonline.es/360homeservice/index.html",
+      "found": 62
+    }
+  ],
+  "downloaded": [
+    {
+      "url": "https://siteassets.parastorage.com/pages/pages/thunderbolt?appDefinitionIdToSiteRevision=%7B%225c047089-b4af-4395-bd58-139524a3da1d%22%3A%2233%22%2C%2214271d6f-ba62-d045-549b-ab972ae1f70e%22%3A%2225%22%2C%2214bcded7-0066-7c35-14d7-466cb3f09103%22%3A%221335%22%2C%22d90652a2-f5a1-4c7c-84c4-d4cdcc41f130%22%3A%229292%22%2C%2213d21c63-b5ec-5912-8397-c3a5ddb27a97%22%3A%22440%22%7D&beckyExperiments=.DatePickerPortal%2C.DisableDocumentScrollWhenLightBoxOpen%2C.EnableCustomCSSVarsForLoginSocialBar%2C.FreemiumBannerOdeditor%2C.LoginBarEnableLoggingInStateInSSR%2C.TextInputAutoFillFix%2C.UseLoginSocialBarCustomMenu%2C.UseNewLoginSocialBarCustomMenuPositioning%2C.UseNewLoginSocialBarElementStructure%2C.UseNewLoginSocialBarMemberInitialsAvatar%2C.VerticalMenu_uiType_NativeMapper%2C.WixFreeSiteBannerDesktop%2C.WixFreeSiteBannerMobile%2C.buttonUdp%2C.calculateCollapsibleTextLineHeightByFont%2C.dom_store%2C.dynamicSlots%2C.fiveGridLineStudioSkins%2C.imageEncodingAVIF%2C.isClassNameToRootEnabled%2C.motionTimeAnimationsCSS%2C.propsCarmiMappersMigration1%2C.propsCarmiMappersMigration4%2C.propsCarmiMappersMigration5%2C.removeDynamicModelTopologyFromSiteAssets%2C.shouldUseResponsiveImages%2C.svgResolver_2%2C.takeAppDependenciesFromCSM%2C.updateRichTextSemanticClassNamesOnCorvid%2C.useClassnameInResponsiveAppWidget%2C.useImageAvifFormatInNativeProGallery%2C.useResponsiveImgClassicFixed%2C.useSvgLoaderFeature%2C.useSvgLoaderFeatureOnBuilderComps%2C.useWowImageInFastGallery&blocksBuilderManifestGeneratorVersion=1.129.0&contentType=application%2Fjson&deviceType=Desktop&dfCk=6&dfVersion=1.5303.0&disableStaticPagesUrlHierarchy=false&editorName=Unknown&experiments=dm_bgScrubToMotionFixer%2Cdm_migrateOldHoverBoxToNewFixer&externalBaseUrl=https%3A%2F%2Fwww.dehonline.es&fileId=86082b5f.bundle.min&formFactor=desktop&hasTPAWorkerOnSite=true&hasUserDomainMedia=false&isBuilderComponentModel=false&isHttps=true&isInSeo=false&isMultilingualEnabled=true&isPremiumDomain=true&isTrackClicksAnalyticsEnabled=true&isUrlMigrated=true&isWixCodeOnPage=true&isWixCodeOnSite=true&language=es&languageResolutionMethod=QueryParam&metaSiteId=b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1&module=thunderbolt-features&oneDocEnabled=true&originalLanguage=es&pageId=ccd8ff_f16802d917115dc220346e1cc3fec017_11232.json&quickActionsMenuEnabled=false&registryLibrariesTopology=%5B%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22wixui%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14989.0%22%7D%2C%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22dsgnsys%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14989.0%22%7D%5D&remoteWidgetStructureBuilderVersion=1.251.0&siteId=241dd6c7-7fb5-4c8d-b4d6-94e6afd31537&siteRevision=11232&staticHTMLComponentUrl=https%3A%2F%2Fwww-dehonline-es.filesusr.com%2F&useSandboxInHTMLComp=false&viewMode=desktop",
+      "localPath": "public\\assets\\external\\siteassets.parastorage.com\\pages\\pages\\thunderbolt_64daa4325e"
+    },
+    {
+      "url": "https://siteassets.parastorage.com/pages/pages/thunderbolt?appDefinitionIdToSiteRevision=%7B%225c047089-b4af-4395-bd58-139524a3da1d%22%3A%2233%22%2C%2214271d6f-ba62-d045-549b-ab972ae1f70e%22%3A%2225%22%2C%2214bcded7-0066-7c35-14d7-466cb3f09103%22%3A%221335%22%2C%22d90652a2-f5a1-4c7c-84c4-d4cdcc41f130%22%3A%229292%22%2C%2213d21c63-b5ec-5912-8397-c3a5ddb27a97%22%3A%22440%22%7D&beckyExperiments=.DatePickerPortal%2C.DisableDocumentScrollWhenLightBoxOpen%2C.EnableCustomCSSVarsForLoginSocialBar%2C.FreemiumBannerOdeditor%2C.LoginBarEnableLoggingInStateInSSR%2C.TextInputAutoFillFix%2C.UseLoginSocialBarCustomMenu%2C.UseNewLoginSocialBarCustomMenuPositioning%2C.UseNewLoginSocialBarElementStructure%2C.UseNewLoginSocialBarMemberInitialsAvatar%2C.VerticalMenu_uiType_NativeMapper%2C.WixFreeSiteBannerDesktop%2C.WixFreeSiteBannerMobile%2C.buttonUdp%2C.calculateCollapsibleTextLineHeightByFont%2C.dom_store%2C.dynamicSlots%2C.fiveGridLineStudioSkins%2C.imageEncodingAVIF%2C.isClassNameToRootEnabled%2C.motionTimeAnimationsCSS%2C.propsCarmiMappersMigration1%2C.propsCarmiMappersMigration4%2C.propsCarmiMappersMigration5%2C.removeDynamicModelTopologyFromSiteAssets%2C.shouldUseResponsiveImages%2C.svgResolver_2%2C.takeAppDependenciesFromCSM%2C.updateRichTextSemanticClassNamesOnCorvid%2C.useClassnameInResponsiveAppWidget%2C.useImageAvifFormatInNativeProGallery%2C.useResponsiveImgClassicFixed%2C.useSvgLoaderFeature%2C.useSvgLoaderFeatureOnBuilderComps%2C.useWowImageInFastGallery&blocksBuilderManifestGeneratorVersion=1.129.0&contentType=application%2Fjson&deviceType=Desktop&dfCk=6&dfVersion=1.5303.0&disableStaticPagesUrlHierarchy=false&editorName=Unknown&experiments=dm_bgScrubToMotionFixer%2Cdm_migrateOldHoverBoxToNewFixer&externalBaseUrl=https%3A%2F%2Fwww.dehonline.es&fileId=86082b5f.bundle.min&formFactor=desktop&hasTPAWorkerOnSite=true&hasUserDomainMedia=false&isBuilderComponentModel=false&isHttps=true&isInSeo=false&isMultilingualEnabled=true&isPremiumDomain=true&isTrackClicksAnalyticsEnabled=true&isUrlMigrated=true&isWixCodeOnPage=true&isWixCodeOnSite=true&language=es&languageResolutionMethod=QueryParam&metaSiteId=b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1&module=thunderbolt-features&oneDocEnabled=true&originalLanguage=es&pageId=ccd8ff_4d3fc7ec6020b441b5da10617f71114e_11178.json&quickActionsMenuEnabled=false&registryLibrariesTopology=%5B%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22wixui%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14989.0%22%7D%2C%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22dsgnsys%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14989.0%22%7D%5D&remoteWidgetStructureBuilderVersion=1.251.0&siteId=241dd6c7-7fb5-4c8d-b4d6-94e6afd31537&siteRevision=11232&staticHTMLComponentUrl=https%3A%2F%2Fwww-dehonline-es.filesusr.com%2F&useSandboxInHTMLComp=false&viewMode=desktop",
+      "localPath": "public\\assets\\external\\siteassets.parastorage.com\\pages\\pages\\thunderbolt_1b141f1d57"
+    },
+    {
+      "url": "https://siteassets.parastorage.com/pages/pages/thunderbolt?appDefinitionIdToSiteRevision=%7B%225c047089-b4af-4395-bd58-139524a3da1d%22%3A%2233%22%2C%2214271d6f-ba62-d045-549b-ab972ae1f70e%22%3A%2225%22%2C%2214bcded7-0066-7c35-14d7-466cb3f09103%22%3A%221335%22%2C%22d90652a2-f5a1-4c7c-84c4-d4cdcc41f130%22%3A%229292%22%2C%2213d21c63-b5ec-5912-8397-c3a5ddb27a97%22%3A%22440%22%7D&beckyExperiments=.DatePickerPortal%2C.EnableCustomCSSVarsForLoginSocialBar%2C.FreemiumBannerOdeditor%2C.LoginBarEnableLoggingInStateInSSR%2C.TextInputAutoFillFix%2C.UseLoginSocialBarCustomMenu%2C.UseNewLoginSocialBarCustomMenuPositioning%2C.UseNewLoginSocialBarElementStructure%2C.UseNewLoginSocialBarMemberInitialsAvatar%2C.WixFreeSiteBannerDesktop%2C.WixFreeSiteBannerMobile%2C.buttonUdp%2C.calculateCollapsibleTextLineHeightByFont%2C.dynamicSlots%2C.fiveGridLineStudioSkins%2C.isClassNameToRootEnabled%2C.propsCarmiMappersMigration1%2C.propsCarmiMappersMigration4%2C.propsCarmiMappersMigration5%2C.svgResolver_2%2C.takeAppDependenciesFromCSM%2C.updateRichTextSemanticClassNamesOnCorvid%2C.useClassnameInResponsiveAppWidget%2C.useImageAvifFormatInNativeProGallery%2C.useWowImageInFastGallery&blocksBuilderManifestGeneratorVersion=1.129.0&contentType=application%2Fjson&dfCk=6&dfVersion=1.5303.0&editorName=Unknown&experiments=dm_bgScrubToMotionFixer%2Cdm_migrateOldHoverBoxToNewFixer&externalBaseUrl=https%3A%2F%2Fwww.dehonline.es&fileId=782f79fe.bundle.min&formFactor=desktop&hasTPAWorkerOnSite=true&hasUserDomainMedia=false&isBuilderComponentModel=false&isHttps=true&isInSeo=false&isPremiumDomain=true&isUrlMigrated=true&isWixCodeOnPage=true&isWixCodeOnSite=true&language=es&metaSiteId=b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1&module=thunderbolt-platform&oneDocEnabled=true&originalLanguage=es&pageId=ccd8ff_f16802d917115dc220346e1cc3fec017_11232.json&quickActionsMenuEnabled=false&registryLibrariesTopology=%5B%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22wixui%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14989.0%22%7D%2C%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22dsgnsys%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14989.0%22%7D%5D&remoteWidgetStructureBuilderVersion=1.251.0&siteId=241dd6c7-7fb5-4c8d-b4d6-94e6afd31537&siteRevision=11232&staticHTMLComponentUrl=https%3A%2F%2Fwww-dehonline-es.filesusr.com%2F&viewMode=desktop",
+      "localPath": "public\\assets\\external\\siteassets.parastorage.com\\pages\\pages\\thunderbolt_076bf054eb"
+    },
+    {
+      "url": "https://siteassets.parastorage.com/pages/pages/thunderbolt?appDefinitionIdToSiteRevision=%7B%225c047089-b4af-4395-bd58-139524a3da1d%22%3A%2233%22%2C%2214271d6f-ba62-d045-549b-ab972ae1f70e%22%3A%2225%22%2C%2214bcded7-0066-7c35-14d7-466cb3f09103%22%3A%221335%22%2C%22d90652a2-f5a1-4c7c-84c4-d4cdcc41f130%22%3A%229292%22%2C%2213d21c63-b5ec-5912-8397-c3a5ddb27a97%22%3A%22440%22%7D&beckyExperiments=.DatePickerPortal%2C.EnableCustomCSSVarsForLoginSocialBar%2C.FreemiumBannerOdeditor%2C.LoginBarEnableLoggingInStateInSSR%2C.TextInputAutoFillFix%2C.UseLoginSocialBarCustomMenu%2C.UseNewLoginSocialBarCustomMenuPositioning%2C.UseNewLoginSocialBarElementStructure%2C.UseNewLoginSocialBarMemberInitialsAvatar%2C.WixFreeSiteBannerDesktop%2C.WixFreeSiteBannerMobile%2C.buttonUdp%2C.calculateCollapsibleTextLineHeightByFont%2C.dynamicSlots%2C.fiveGridLineStudioSkins%2C.isClassNameToRootEnabled%2C.propsCarmiMappersMigration1%2C.propsCarmiMappersMigration4%2C.propsCarmiMappersMigration5%2C.svgResolver_2%2C.takeAppDependenciesFromCSM%2C.updateRichTextSemanticClassNamesOnCorvid%2C.useClassnameInResponsiveAppWidget%2C.useImageAvifFormatInNativeProGallery%2C.useWowImageInFastGallery&blocksBuilderManifestGeneratorVersion=1.129.0&contentType=application%2Fjson&dfCk=6&dfVersion=1.5303.0&editorName=Unknown&experiments=dm_bgScrubToMotionFixer%2Cdm_migrateOldHoverBoxToNewFixer&externalBaseUrl=https%3A%2F%2Fwww.dehonline.es&fileId=782f79fe.bundle.min&formFactor=desktop&hasTPAWorkerOnSite=true&hasUserDomainMedia=false&isBuilderComponentModel=false&isHttps=true&isInSeo=false&isPremiumDomain=true&isUrlMigrated=true&isWixCodeOnPage=true&isWixCodeOnSite=true&language=es&metaSiteId=b45c7ae7-5f7f-4aa9-8bda-9259f0e2d2d1&module=thunderbolt-platform&oneDocEnabled=true&originalLanguage=es&pageId=ccd8ff_4d3fc7ec6020b441b5da10617f71114e_11178.json&quickActionsMenuEnabled=false&registryLibrariesTopology=%5B%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22wixui%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14989.0%22%7D%2C%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22dsgnsys%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14989.0%22%7D%5D&remoteWidgetStructureBuilderVersion=1.251.0&siteId=241dd6c7-7fb5-4c8d-b4d6-94e6afd31537&siteRevision=11232&staticHTMLComponentUrl=https%3A%2F%2Fwww-dehonline-es.filesusr.com%2F&viewMode=desktop",
+      "localPath": "public\\assets\\external\\siteassets.parastorage.com\\pages\\pages\\thunderbolt_8168b7cae2"
+    },
+    {
+      "url": "https://static.parastorage.com/services/wix-thunderbolt/dist/externals-registry.inline.2c3a9b6e.bundle.min.js",
+      "localPath": "public\\assets\\external\\static.parastorage.com\\services\\wix-thunderbolt\\dist\\externals-registry.inline.2c3a9b6e.bundle.min.js"
+    },
+    {
+      "url": "https://static.parastorage.com/services/wix-thunderbolt/dist/lazyCustomElementWrapper.inline.0a0bab45.bundle.min.js",
+      "localPath": "public\\assets\\external\\static.parastorage.com\\services\\wix-thunderbolt\\dist\\lazyCustomElementWrapper.inline.0a0bab45.bundle.min.js"
+    },
+    {
+      "url": "https://static.parastorage.com/unpkg/react@18.3.1/umd/react.production.min.js",
+      "localPath": "public\\assets\\external\\static.parastorage.com\\unpkg\\react_18.3.1\\umd\\react.production.min.js"
+    },
+    {
+      "url": "https://static.parastorage.com/unpkg/react-dom@18.3.1/umd/react-dom.production.min.js",
+      "localPath": "public\\assets\\external\\static.parastorage.com\\unpkg\\react-dom_18.3.1\\umd\\react-dom.production.min.js"
+    },
+    {
+      "url": "https://static.parastorage.com/unpkg/lodash@4.17.21/lodash.min.js",
+      "localPath": "public\\assets\\external\\static.parastorage.com\\unpkg\\lodash_4.17.21\\lodash.min.js"
+    },
+    {
+      "url": "https://static.parastorage.com/services/wix-thunderbolt/dist/thunderbolt-commons.b0f4162a.bundle.min.js",
+      "localPath": "public\\assets\\external\\static.parastorage.com\\services\\wix-thunderbolt\\dist\\thunderbolt-commons.b0f4162a.bundle.min.js"
+    },
+    {
+      "url": "https://static.parastorage.com/services/wix-thunderbolt/dist/bi-common.inline.4090635d.bundle.min.js",
+      "localPath": "public\\assets\\external\\static.parastorage.com\\services\\wix-thunderbolt\\dist\\bi-common.inline.4090635d.bundle.min.js"
+    },
+    {
+      "url": "https://static.parastorage.com/services/wix-thunderbolt/dist/main.6f3aafed.bundle.min.js",
+      "localPath": "public\\assets\\external\\static.parastorage.com\\services\\wix-thunderbolt\\dist\\main.6f3aafed.bundle.min.js"
+    },
+    {
+      "url": "https://static.parastorage.com/services/wix-thunderbolt/dist/main.renderer.99fa8096.bundle.min.js",
+      "localPath": "public\\assets\\external\\static.parastorage.com\\services\\wix-thunderbolt\\dist\\main.renderer.99fa8096.bundle.min.js"
+    },
+    {
+      "url": "https://static.parastorage.com/services/wix-thunderbolt/dist/createPlatformWorker.inline.5582455f.bundle.min.js",
+      "localPath": "public\\assets\\external\\static.parastorage.com\\services\\wix-thunderbolt\\dist\\createPlatformWorker.inline.5582455f.bundle.min.js"
+    },
+    {
+      "url": "https://static.parastorage.com/services/wix-thunderbolt/dist/windowMessageRegister.inline.d8470fd7.bundle.min.js",
+      "localPath": "public\\assets\\external\\static.parastorage.com\\services\\wix-thunderbolt\\dist\\windowMessageRegister.inline.d8470fd7.bundle.min.js"
+    },
+    {
+      "url": "https://static.parastorage.com/services/wix-thunderbolt/dist/browser-deprecation.bundle.es5.js",
+      "localPath": "public\\assets\\external\\static.parastorage.com\\services\\wix-thunderbolt\\dist\\browser-deprecation.bundle.es5.js"
+    },
+    {
+      "url": "https://static.parastorage.com/services/tag-manager-client/1.1028.0/siteTags.bundle.min.js",
+      "localPath": "public\\assets\\external\\static.parastorage.com\\services\\tag-manager-client\\1.1028.0\\siteTags.bundle.min.js"
+    }
+  ],
+  "skipped": [
+    {
+      "url": "https://static.wixstatic.com/media/45bf13_c443697866794e04b06d1535b90ed7d8%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/45bf13_c443697866794e04b06d1535b90ed7d8%7Emv2.png",
+      "localPath": "public\\assets\\external\\static.wixstatic.com\\media\\45bf13_c443697866794e04b06d1535b90ed7d8_7Emv2.png\\v1\\fill\\w_192_2Ch_192_2Clg_1_2Cusm_0.66_1.00_0.01\\45bf13_c443697866794e04b06d1535b90ed7d8_7Emv2.png"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/45bf13_c443697866794e04b06d1535b90ed7d8%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/45bf13_c443697866794e04b06d1535b90ed7d8%7Emv2.png",
+      "localPath": "public\\assets\\external\\static.wixstatic.com\\media\\45bf13_c443697866794e04b06d1535b90ed7d8_7Emv2.png\\v1\\fill\\w_32_2Ch_32_2Clg_1_2Cusm_0.66_1.00_0.01\\45bf13_c443697866794e04b06d1535b90ed7d8_7Emv2.png"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/45bf13_c443697866794e04b06d1535b90ed7d8%7Emv2.png/v1/fill/w_180%2Ch_180%2Clg_1%2Cusm_0.66_1.00_0.01/45bf13_c443697866794e04b06d1535b90ed7d8%7Emv2.png",
+      "localPath": "public\\assets\\external\\static.wixstatic.com\\media\\45bf13_c443697866794e04b06d1535b90ed7d8_7Emv2.png\\v1\\fill\\w_180_2Ch_180_2Clg_1_2Cusm_0.66_1.00_0.01\\45bf13_c443697866794e04b06d1535b90ed7d8_7Emv2.png"
+    },
+    {
+      "url": "https://static.parastorage.com/unpkg/core-js-bundle@3.2.1/minified.js",
+      "localPath": "public\\assets\\external\\static.parastorage.com\\unpkg\\core-js-bundle_3.2.1\\minified.js"
+    },
+    {
+      "url": "https://static.parastorage.com/unpkg/focus-within-polyfill@5.0.9/dist/focus-within-polyfill.js",
+      "localPath": "public\\assets\\external\\static.parastorage.com\\unpkg\\focus-within-polyfill_5.0.9\\dist\\focus-within-polyfill.js"
+    },
+    {
+      "url": "https://static.parastorage.com/services/wix-thunderbolt/dist/handleAccessTokens.inline.dc220a1a.bundle.min.js",
+      "localPath": "public\\assets\\external\\static.parastorage.com\\services\\wix-thunderbolt\\dist\\handleAccessTokens.inline.dc220a1a.bundle.min.js"
+    },
+    {
+      "url": "https://static.parastorage.com/services/wix-thunderbolt/dist/main.68f9276d.min.css",
+      "localPath": "public\\assets\\external\\static.parastorage.com\\services\\wix-thunderbolt\\dist\\main.68f9276d.min.css"
+    },
+    {
+      "url": "https://static.parastorage.com/services/wix-thunderbolt/dist/main.renderer.0e79bfca.min.css",
+      "localPath": "public\\assets\\external\\static.parastorage.com\\services\\wix-thunderbolt\\dist\\main.renderer.0e79bfca.min.css"
+    },
+    {
+      "url": "https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt_bootstrap-classic.72e6a2a3.min.css",
+      "localPath": "public\\assets\\external\\static.parastorage.com\\services\\editor-elements-library\\dist\\thunderbolt\\rb_wixui.thunderbolt_bootstrap-classic.72e6a2a3.min.css"
+    },
+    {
+      "url": "https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt_bootstrap.b6030042.min.css",
+      "localPath": "public\\assets\\external\\static.parastorage.com\\services\\editor-elements-library\\dist\\thunderbolt\\rb_wixui.thunderbolt_bootstrap.b6030042.min.css"
+    },
+    {
+      "url": "https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[LoginSocialBar].1057c3e0.min.css",
+      "localPath": "public\\assets\\external\\static.parastorage.com\\services\\editor-elements-library\\dist\\thunderbolt\\rb_wixui.thunderbolt_LoginSocialBar_.1057c3e0.min.css"
+    },
+    {
+      "url": "https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[Container_DefaultAreaSkin].4f93d927.min.css",
+      "localPath": "public\\assets\\external\\static.parastorage.com\\services\\editor-elements-library\\dist\\thunderbolt\\rb_wixui.thunderbolt_Container_DefaultAreaSkin_.4f93d927.min.css"
+    },
+    {
+      "url": "https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[HeaderContainer_AfterScroll].c99a4206.min.css",
+      "localPath": "public\\assets\\external\\static.parastorage.com\\services\\editor-elements-library\\dist\\thunderbolt\\rb_wixui.thunderbolt_HeaderContainer_AfterScroll_.c99a4206.min.css"
+    },
+    {
+      "url": "https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[StripColumnsContainer_Default].74034efe.min.css",
+      "localPath": "public\\assets\\external\\static.parastorage.com\\services\\editor-elements-library\\dist\\thunderbolt\\rb_wixui.thunderbolt_StripColumnsContainer_Default_.74034efe.min.css"
+    },
+    {
+      "url": "https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt_menu.936f4f3a.min.css",
+      "localPath": "public\\assets\\external\\static.parastorage.com\\services\\editor-elements-library\\dist\\thunderbolt\\rb_wixui.thunderbolt_menu.936f4f3a.min.css"
+    },
+    {
+      "url": "https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[AppWidget_Classic].4049eab0.min.css",
+      "localPath": "public\\assets\\external\\static.parastorage.com\\services\\editor-elements-library\\dist\\thunderbolt\\rb_wixui.thunderbolt_AppWidget_Classic_.4049eab0.min.css"
+    },
+    {
+      "url": "https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[SkipToContentButton].39deac6a.min.css",
+      "localPath": "public\\assets\\external\\static.parastorage.com\\services\\editor-elements-library\\dist\\thunderbolt\\rb_wixui.thunderbolt_SkipToContentButton_.39deac6a.min.css"
+    },
+    {
+      "url": "https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[StylableButton_Default].e469137d.min.css",
+      "localPath": "public\\assets\\external\\static.parastorage.com\\services\\editor-elements-library\\dist\\thunderbolt\\rb_wixui.thunderbolt_StylableButton_Default_.e469137d.min.css"
+    },
+    {
+      "url": "https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[TextInput].eedc8640.min.css",
+      "localPath": "public\\assets\\external\\static.parastorage.com\\services\\editor-elements-library\\dist\\thunderbolt\\rb_wixui.thunderbolt_TextInput_.eedc8640.min.css"
+    },
+    {
+      "url": "https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[Checkbox].bc010655.min.css",
+      "localPath": "public\\assets\\external\\static.parastorage.com\\services\\editor-elements-library\\dist\\thunderbolt\\rb_wixui.thunderbolt_Checkbox_.bc010655.min.css"
+    },
+    {
+      "url": "https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[ClassicSection].6435d050.min.css",
+      "localPath": "public\\assets\\external\\static.parastorage.com\\services\\editor-elements-library\\dist\\thunderbolt\\rb_wixui.thunderbolt_ClassicSection_.6435d050.min.css"
+    },
+    {
+      "url": "https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[StateBox].7a479fee.min.css",
+      "localPath": "public\\assets\\external\\static.parastorage.com\\services\\editor-elements-library\\dist\\thunderbolt\\rb_wixui.thunderbolt_StateBox_.7a479fee.min.css"
+    },
+    {
+      "url": "https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[SlideShowSlide].9c30ab76.min.css",
+      "localPath": "public\\assets\\external\\static.parastorage.com\\services\\editor-elements-library\\dist\\thunderbolt\\rb_wixui.thunderbolt_SlideShowSlide_.9c30ab76.min.css"
+    },
+    {
+      "url": "https://static.parastorage.com/services/wix-thunderbolt/dist/TPABaseComponent.fc3eeaee.chunk.min.css",
+      "localPath": "public\\assets\\external\\static.parastorage.com\\services\\wix-thunderbolt\\dist\\TPABaseComponent.fc3eeaee.chunk.min.css"
+    },
+    {
+      "url": "https://static.parastorage.com/services/wix-thunderbolt/dist/group_7.882d8423.chunk.min.css",
+      "localPath": "public\\assets\\external\\static.parastorage.com\\services\\wix-thunderbolt\\dist\\group_7.882d8423.chunk.min.css"
+    },
+    {
+      "url": "https://static.parastorage.com/services/profile-card-tpa-ooi/1.2898.0/ProfileCardViewerWidget.min.css",
+      "localPath": "public\\assets\\external\\static.parastorage.com\\services\\profile-card-tpa-ooi\\1.2898.0\\ProfileCardViewerWidget.min.css"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/45bf13_a446329546684fd392f717ff39e6103e~mv2.png/v1/fill/w_129,h_47,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Logos_rgb-07.png",
+      "localPath": "public\\assets\\external\\static.wixstatic.com\\media\\45bf13_a446329546684fd392f717ff39e6103e_mv2.png\\v1\\fill\\w_129_h_47_al_c_q_85_usm_0.66_1.00_0.01_enc_avif_quality_auto\\Logos_rgb-07.png"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/45bf13_0ec940494f20418e9fa5cc6ba35e113b~mv2.jpg/v1/fill/w_147,h_59,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/45bf13_0ec940494f20418e9fa5cc6ba35e113b~mv2.jpg",
+      "localPath": "public\\assets\\external\\static.wixstatic.com\\media\\45bf13_0ec940494f20418e9fa5cc6ba35e113b_mv2.jpg\\v1\\fill\\w_147_h_59_al_c_q_80_usm_0.66_1.00_0.01_blur_2_enc_avif_quality_auto\\45bf13_0ec940494f20418e9fa5cc6ba35e113b_mv2.jpg"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/45bf13_a446329546684fd392f717ff39e6103e~mv2.png/v1/fill/w_122,h_45,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Logos_rgb-07.png",
+      "localPath": "public\\assets\\external\\static.wixstatic.com\\media\\45bf13_a446329546684fd392f717ff39e6103e_mv2.png\\v1\\fill\\w_122_h_45_al_c_q_85_usm_0.66_1.00_0.01_enc_avif_quality_auto\\Logos_rgb-07.png"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/11062b_7dcffe5daf2944b7be0a46ac6d472634~mv2.png/v1/fill/w_39,h_39,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_7dcffe5daf2944b7be0a46ac6d472634~mv2.png",
+      "localPath": "public\\assets\\external\\static.wixstatic.com\\media\\11062b_7dcffe5daf2944b7be0a46ac6d472634_mv2.png\\v1\\fill\\w_39_h_39_al_c_q_85_usm_0.66_1.00_0.01_enc_avif_quality_auto\\11062b_7dcffe5daf2944b7be0a46ac6d472634_mv2.png"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/11062b_f4e3e7f537ff4762a1914aa14e3e36b9~mv2.png/v1/fill/w_39,h_39,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_f4e3e7f537ff4762a1914aa14e3e36b9~mv2.png",
+      "localPath": "public\\assets\\external\\static.wixstatic.com\\media\\11062b_f4e3e7f537ff4762a1914aa14e3e36b9_mv2.png\\v1\\fill\\w_39_h_39_al_c_q_85_usm_0.66_1.00_0.01_enc_avif_quality_auto\\11062b_f4e3e7f537ff4762a1914aa14e3e36b9_mv2.png"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/11062b_2533d1d4c31245408717d17b946bc8d8~mv2.png/v1/fill/w_39,h_39,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_2533d1d4c31245408717d17b946bc8d8~mv2.png",
+      "localPath": "public\\assets\\external\\static.wixstatic.com\\media\\11062b_2533d1d4c31245408717d17b946bc8d8_mv2.png\\v1\\fill\\w_39_h_39_al_c_q_85_usm_0.66_1.00_0.01_enc_avif_quality_auto\\11062b_2533d1d4c31245408717d17b946bc8d8_mv2.png"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/11062b_c67939a99eaf442d95d3f851857ceedf~mv2.png/v1/fill/w_39,h_39,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_c67939a99eaf442d95d3f851857ceedf~mv2.png",
+      "localPath": "public\\assets\\external\\static.wixstatic.com\\media\\11062b_c67939a99eaf442d95d3f851857ceedf_mv2.png\\v1\\fill\\w_39_h_39_al_c_q_85_usm_0.66_1.00_0.01_enc_avif_quality_auto\\11062b_c67939a99eaf442d95d3f851857ceedf_mv2.png"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/11062b_603340b7bcb14e7785c7b65b233cd9f9~mv2.png/v1/fill/w_39,h_39,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_603340b7bcb14e7785c7b65b233cd9f9~mv2.png",
+      "localPath": "public\\assets\\external\\static.wixstatic.com\\media\\11062b_603340b7bcb14e7785c7b65b233cd9f9_mv2.png\\v1\\fill\\w_39_h_39_al_c_q_85_usm_0.66_1.00_0.01_enc_avif_quality_auto\\11062b_603340b7bcb14e7785c7b65b233cd9f9_mv2.png"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/45bf13_a446329546684fd392f717ff39e6103e~mv2.png/v1/fill/w_123,h_45,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Logos_rgb-07.png",
+      "localPath": "public\\assets\\external\\static.wixstatic.com\\media\\45bf13_a446329546684fd392f717ff39e6103e_mv2.png\\v1\\fill\\w_123_h_45_al_c_q_85_usm_0.66_1.00_0.01_enc_avif_quality_auto\\Logos_rgb-07.png"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/11062b_7dcffe5daf2944b7be0a46ac6d472634~mv2.png/v1/fill/w_32,h_32,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_7dcffe5daf2944b7be0a46ac6d472634~mv2.png",
+      "localPath": "public\\assets\\external\\static.wixstatic.com\\media\\11062b_7dcffe5daf2944b7be0a46ac6d472634_mv2.png\\v1\\fill\\w_32_h_32_al_c_q_85_usm_0.66_1.00_0.01_enc_avif_quality_auto\\11062b_7dcffe5daf2944b7be0a46ac6d472634_mv2.png"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/11062b_f4e3e7f537ff4762a1914aa14e3e36b9~mv2.png/v1/fill/w_32,h_32,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_f4e3e7f537ff4762a1914aa14e3e36b9~mv2.png",
+      "localPath": "public\\assets\\external\\static.wixstatic.com\\media\\11062b_f4e3e7f537ff4762a1914aa14e3e36b9_mv2.png\\v1\\fill\\w_32_h_32_al_c_q_85_usm_0.66_1.00_0.01_enc_avif_quality_auto\\11062b_f4e3e7f537ff4762a1914aa14e3e36b9_mv2.png"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/11062b_c67939a99eaf442d95d3f851857ceedf~mv2.png/v1/fill/w_32,h_32,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_c67939a99eaf442d95d3f851857ceedf~mv2.png",
+      "localPath": "public\\assets\\external\\static.wixstatic.com\\media\\11062b_c67939a99eaf442d95d3f851857ceedf_mv2.png\\v1\\fill\\w_32_h_32_al_c_q_85_usm_0.66_1.00_0.01_enc_avif_quality_auto\\11062b_c67939a99eaf442d95d3f851857ceedf_mv2.png"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/11062b_603340b7bcb14e7785c7b65b233cd9f9~mv2.png/v1/fill/w_32,h_32,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_603340b7bcb14e7785c7b65b233cd9f9~mv2.png",
+      "localPath": "public\\assets\\external\\static.wixstatic.com\\media\\11062b_603340b7bcb14e7785c7b65b233cd9f9_mv2.png\\v1\\fill\\w_32_h_32_al_c_q_85_usm_0.66_1.00_0.01_enc_avif_quality_auto\\11062b_603340b7bcb14e7785c7b65b233cd9f9_mv2.png"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/45bf13_f266c1c516a64bdd97d7aef98f73d58a~mv2.png/v1/fill/w_163,h_50,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/eidas_horizontal_trans.png",
+      "localPath": "public\\assets\\external\\static.wixstatic.com\\media\\45bf13_f266c1c516a64bdd97d7aef98f73d58a_mv2.png\\v1\\fill\\w_163_h_50_al_c_q_85_usm_0.66_1.00_0.01_enc_avif_quality_auto\\eidas_horizontal_trans.png"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/45bf13_5301ca4b0f05418eb845283d2b97ecae~mv2.png/v1/fill/w_80,h_60,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/aenor.png",
+      "localPath": "public\\assets\\external\\static.wixstatic.com\\media\\45bf13_5301ca4b0f05418eb845283d2b97ecae_mv2.png\\v1\\fill\\w_80_h_60_al_c_q_85_usm_0.66_1.00_0.01_enc_avif_quality_auto\\aenor.png"
+    },
+    {
+      "url": "https://static.parastorage.com/services/wix-thunderbolt/dist/webpack-runtime.1ddc0e5a.bundle.min.js",
+      "localPath": "public\\assets\\external\\static.parastorage.com\\services\\wix-thunderbolt\\dist\\webpack-runtime.1ddc0e5a.bundle.min.js"
+    },
+    {
+      "url": "https://static.parastorage.com/services/wix-thunderbolt/dist/fastdom.inline.58a6f94c.bundle.min.js",
+      "localPath": "public\\assets\\external\\static.parastorage.com\\services\\wix-thunderbolt\\dist\\fastdom.inline.58a6f94c.bundle.min.js"
+    },
+    {
+      "url": "https://static.parastorage.com/services/wix-thunderbolt/dist/custom-element-utils.inline.af63090a.bundle.min.js",
+      "localPath": "public\\assets\\external\\static.parastorage.com\\services\\wix-thunderbolt\\dist\\custom-element-utils.inline.af63090a.bundle.min.js"
+    },
+    {
+      "url": "https://static.parastorage.com/services/wix-thunderbolt/dist/initCustomElements.inline.25987d64.bundle.min.js",
+      "localPath": "public\\assets\\external\\static.parastorage.com\\services\\wix-thunderbolt\\dist\\initCustomElements.inline.25987d64.bundle.min.js"
+    }
+  ],
+  "modified": [
+    "sites/www.dehonline.es/360homeservice/index.html"
+  ],
+  "errors": []
+}

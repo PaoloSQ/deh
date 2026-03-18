@@ -14,6 +14,9 @@ const sitesRoot = path.resolve(__dirname, 'sites');
 const assetsRoot = path.resolve(__dirname, 'public', 'assets');
 const docsRoot = path.resolve(__dirname, 'public', 'docs');
 const bucketRoots = [sitesRoot, assetsRoot, docsRoot];
+const LOCAL_HTML_HELPER_SCRIPTS = [
+  '/assets/js/local/popup-restore.js'
+];
 const RESERVED_HOST_REWRITE_PREFIXES = [
   '/assets',
   '/docs',
@@ -85,13 +88,74 @@ function findExistingAsset(candidate) {
   return fileExists(abs) ? abs : null;
 }
 
+function findFirstFileRecursive(dirPath) {
+  if (!fs.existsSync(dirPath) || !fs.statSync(dirPath).isDirectory()) return null;
+  const stack = [dirPath];
+
+  while (stack.length) {
+    const current = stack.pop();
+    const entries = fs.readdirSync(current, { withFileTypes: true });
+    for (const entry of entries) {
+      const abs = path.join(current, entry.name);
+      if (entry.isFile()) return abs;
+      if (entry.isDirectory()) stack.push(abs);
+    }
+  }
+
+  return null;
+}
+
 function tryRewriteMediaVariant(req) {
   const [pathname, query = ''] = req.url.split('?');
   if (!pathname.startsWith('/assets/img/media/')) return false;
 
+  const mediaPrefix = '/assets/img/media/';
+  const remainder = pathname.slice(mediaPrefix.length);
+  const firstSegment = remainder.split('/')[0];
+  if (firstSegment) {
+    const candidates = [];
+    candidates.push(firstSegment);
+    try {
+      const decoded = decodeURIComponent(firstSegment);
+      if (decoded && decoded !== firstSegment) candidates.push(decoded);
+    } catch {
+      // Mantiene la variante original.
+    }
+    for (const candidate of candidates) {
+      const baseFile = path.join(assetsRoot, 'img', 'media', candidate);
+      if (fileExists(baseFile)) {
+        req.url = `${mediaPrefix}${candidate}${query ? `?${query}` : ''}`;
+        req._parsedUrl = null;
+        req._parsedOriginalUrl = null;
+        return true;
+      }
+      if (fs.existsSync(baseFile) && fs.statSync(baseFile).isDirectory()) {
+        const nestedFile = findFirstFileRecursive(baseFile);
+        if (nestedFile) {
+          const nestedRelPath = path.relative(assetsRoot, nestedFile).split(path.sep).join('/');
+          req.url = `/assets/${nestedRelPath}${query ? `?${query}` : ''}`;
+          req._parsedUrl = null;
+          req._parsedOriginalUrl = null;
+          return true;
+        }
+      }
+    }
+  }
+
   const relPath = pathname.replace(/^\/assets\//, '');
   const absPath = path.join(assetsRoot, relPath);
   if (fileExists(absPath)) return false;
+
+  if (fs.existsSync(absPath) && fs.statSync(absPath).isDirectory()) {
+    const nestedFile = findFirstFileRecursive(absPath);
+    if (nestedFile) {
+      const nestedRelPath = path.relative(assetsRoot, nestedFile).split(path.sep).join('/');
+      req.url = `/assets/${nestedRelPath}${query ? `?${query}` : ''}`;
+      req._parsedUrl = null;
+      req._parsedOriginalUrl = null;
+      return true;
+    }
+  }
 
   const dir = path.dirname(absPath);
   const ext = path.extname(absPath);
@@ -107,8 +171,24 @@ function tryRewriteMediaVariant(req) {
     || variants[0];
 
   const nextRelPath = path.join(path.dirname(relPath), preferred).split(path.sep).join('/');
-  req.url = `/${nextRelPath}${query ? `?${query}` : ''}`;
+  req.url = `/assets/${nextRelPath}${query ? `?${query}` : ''}`;
+  req._parsedUrl = null;
+  req._parsedOriginalUrl = null;
   return true;
+}
+
+function isLikelyMediaToken(value) {
+  if (!value) return false;
+  if (path.extname(value)) return false;
+  if (/^(?:w|h|q|x|y|s)_[\d.]+$/i.test(value)) return true;
+  if (/^usm_[\d._]+$/i.test(value)) return true;
+  if (/^enc_[a-z0-9]+$/i.test(value)) return true;
+  if (/^quality_auto$/i.test(value)) return true;
+  if (/^al_[a-z0-9]+$/i.test(value)) return true;
+  if (/^c_[a-z0-9]+$/i.test(value)) return true;
+  if (/^g_[a-z0-9]+$/i.test(value)) return true;
+  if (/^blur_\d+$/i.test(value)) return true;
+  return false;
 }
 
 function proxyRemoteJs(url, res) {
@@ -124,6 +204,79 @@ function proxyRemoteJs(url, res) {
   }).on('error', () => {
     res.status(502).end();
   });
+}
+
+function safeJoin(baseDir, requestPath) {
+  const normalized = path.normalize(requestPath).replace(/^([.][.][/\\])+/, '');
+  const fullPath = path.join(baseDir, normalized);
+  if (!fullPath.startsWith(baseDir)) return null;
+  return fullPath;
+}
+
+function pathVariants(...requestPaths) {
+  const out = [];
+  for (const requestPath of requestPaths) {
+    if (!requestPath) continue;
+    const raw = requestPath.split('?')[0];
+    if (!out.includes(raw)) out.push(raw);
+    try {
+      const decoded = decodeURIComponent(raw);
+      if (decoded !== raw && !out.includes(decoded)) out.push(decoded);
+    } catch {
+      // Ignora rutas mal codificadas y conserva la variante cruda.
+    }
+  }
+  return out;
+}
+
+function resolveCandidates(...requestPaths) {
+  const cleanPaths = [];
+  for (const p of pathVariants(...requestPaths)) {
+    const normalized = p.replace(/^\/+/, '');
+    cleanPaths.push(normalized);
+    if (normalized.endsWith('/') && normalized.length > 1) {
+      cleanPaths.push(normalized.slice(0, -1));
+    }
+  }
+  const suffixes = ['', '.html', '/index.html'];
+  const out = [];
+
+  for (const base of bucketRoots) {
+    for (const cleanPath of cleanPaths) {
+      const baseRelativePaths = [cleanPath];
+      if (base === assetsRoot && cleanPath.startsWith('assets/')) {
+        baseRelativePaths.push(cleanPath.slice('assets/'.length));
+      }
+      if (base === docsRoot && cleanPath.startsWith('docs/')) {
+        baseRelativePaths.push(cleanPath.slice('docs/'.length));
+      }
+
+      for (const relPath of baseRelativePaths) {
+        for (const suffix of suffixes) {
+          const p = safeJoin(base, relPath + suffix);
+          if (p) out.push(p);
+        }
+      }
+    }
+  }
+
+  return out;
+}
+
+function injectLocalHelperScripts(html) {
+  let nextHtml = html;
+
+  for (const src of LOCAL_HTML_HELPER_SCRIPTS) {
+    if (nextHtml.includes(src)) continue;
+    const scriptTag = `<script defer src="${src}"></script>`;
+    if (nextHtml.includes('</head>')) {
+      nextHtml = nextHtml.replace('</head>', `${scriptTag}\n</head>`);
+    } else {
+      nextHtml = `${scriptTag}\n${nextHtml}`;
+    }
+  }
+
+  return nextHtml;
 }
 
 app.get('/health', (_req, res) => {
@@ -184,6 +337,33 @@ app.use((req, _res, next) => {
   return next();
 });
 
+app.use((req, res, next) => {
+  if (req.method !== 'GET' && req.method !== 'HEAD') return next();
+  if (req.path.startsWith('/assets/') || req.path.startsWith('/_api/')) return next();
+
+  const rawUrlPath = (req.originalUrl || '').split('?')[0];
+  const candidates = resolveCandidates(rawUrlPath, req.path);
+  const htmlCandidate = candidates.find((candidate) => {
+    if (!candidate.endsWith('.html')) return false;
+    if (!fs.existsSync(candidate) || !fs.statSync(candidate).isFile()) return false;
+    return candidate.startsWith(sitesRoot) || candidate.startsWith(docsRoot);
+  });
+
+  if (!htmlCandidate) return next();
+
+  try {
+    const html = fs.readFileSync(htmlCandidate, 'utf8');
+    const responseHtml = injectLocalHelperScripts(html);
+    res.type('html');
+    if (req.method === 'HEAD') {
+      return res.status(200).end();
+    }
+    return res.send(responseHtml);
+  } catch (_error) {
+    return next();
+  }
+});
+
 app.get('/:domain/index', (req, res, next) => {
   const { domain } = req.params;
   if (!/\.dehonline\.es$/i.test(domain)) return next();
@@ -234,6 +414,16 @@ app.use((req, res, next) => {
     return res.redirect(302, `https://static.parastorage.com/${relNoSlash}`);
   }
 
+  if (pathname.startsWith('/assets/img/media/')) {
+    const rel = pathname.replace('/assets/img/media/', '').split('/')[0];
+    if (rel && isLikelyMediaToken(rel)) {
+      const abs = path.join(assetsRoot, 'img', 'media', rel);
+      if (!fileExists(abs)) {
+        return res.status(204).end();
+      }
+    }
+  }
+
   if (tryRewriteMediaVariant(req)) {
     return next();
   }
@@ -273,63 +463,6 @@ app.use(
 app.get('/', (_req, res) => {
   res.redirect('/www.dehonline.es/');
 });
-
-function safeJoin(baseDir, requestPath) {
-  const normalized = path.normalize(requestPath).replace(/^([.][.][/\\])+/, '');
-  const fullPath = path.join(baseDir, normalized);
-  if (!fullPath.startsWith(baseDir)) return null;
-  return fullPath;
-}
-
-function pathVariants(...requestPaths) {
-  const out = [];
-  for (const requestPath of requestPaths) {
-    if (!requestPath) continue;
-    const raw = requestPath.split('?')[0];
-    if (!out.includes(raw)) out.push(raw);
-    try {
-      const decoded = decodeURIComponent(raw);
-      if (decoded !== raw && !out.includes(decoded)) out.push(decoded);
-    } catch {
-      // Ignora rutas mal codificadas y conserva la variante cruda.
-    }
-  }
-  return out;
-}
-
-function resolveCandidates(...requestPaths) {
-  const cleanPaths = [];
-  for (const p of pathVariants(...requestPaths)) {
-    const normalized = p.replace(/^\/+/, '');
-    cleanPaths.push(normalized);
-    if (normalized.endsWith('/') && normalized.length > 1) {
-      cleanPaths.push(normalized.slice(0, -1));
-    }
-  }
-  const suffixes = ['', '.html', '/index.html'];
-  const out = [];
-
-  for (const base of bucketRoots) {
-    for (const cleanPath of cleanPaths) {
-      const baseRelativePaths = [cleanPath];
-      if (base === assetsRoot && cleanPath.startsWith('assets/')) {
-        baseRelativePaths.push(cleanPath.slice('assets/'.length));
-      }
-      if (base === docsRoot && cleanPath.startsWith('docs/')) {
-        baseRelativePaths.push(cleanPath.slice('docs/'.length));
-      }
-
-      for (const relPath of baseRelativePaths) {
-        for (const suffix of suffixes) {
-          const p = safeJoin(base, relPath + suffix);
-          if (p) out.push(p);
-        }
-      }
-    }
-  }
-
-  return out;
-}
 
 app.get('*', (req, res, next) => {
   const rawUrlPath = (req.originalUrl || '').split('?')[0];

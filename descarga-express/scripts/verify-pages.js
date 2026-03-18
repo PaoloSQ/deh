@@ -206,7 +206,11 @@ async function main() {
         try {
           await page.goto(target.url, { waitUntil: 'networkidle2', timeout: options.timeoutMs });
           await new Promise((resolve) => setTimeout(resolve, WAIT_MS));
-          const categorized = issues.map((issue) => ({ ...issue, category: classifyIssue(issue, localBase) }));
+          const filteredIssues = issues.filter((issue) => {
+            if (issue.type !== 'requestfailed') return true;
+            return issue.error !== 'net::ERR_ABORTED';
+          });
+          const categorized = filteredIssues.map((issue) => ({ ...issue, category: classifyIssue(issue, localBase) }));
           const counts = categorized.reduce((acc, issue) => {
             acc[issue.category] += 1;
             return acc;

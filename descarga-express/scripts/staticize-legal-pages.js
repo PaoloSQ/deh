@@ -13,6 +13,7 @@ const DEFAULT_TARGETS = [
 ];
 const REPORT_MD = path.resolve(PROJECT_ROOT, 'STATICIZE-PAGES-REPORT.md');
 const REPORT_JSON = path.resolve(PROJECT_ROOT, 'STATICIZE-PAGES-REPORT.json');
+const LOCAL_IMAGE_FALLBACK_TAG = '<script defer src="/assets/js/local/image-fallback.js"></script>';
 
 function parseArgs(argv) {
   const options = {
@@ -97,6 +98,22 @@ function ensureTitle(text, changes) {
   return next;
 }
 
+function injectLocalImageFallback(text, changes) {
+  if (text.includes('/assets/js/local/image-fallback.js')) return text;
+
+  changes.removed.push('local image fallback injected');
+
+  if (/<\/head>/i.test(text)) {
+    return text.replace(/<\/head>/i, `${LOCAL_IMAGE_FALLBACK_TAG}\n</head>`);
+  }
+
+  if (/<\/body>/i.test(text)) {
+    return text.replace(/<\/body>/i, `${LOCAL_IMAGE_FALLBACK_TAG}\n</body>`);
+  }
+
+  return `${LOCAL_IMAGE_FALLBACK_TAG}\n${text}`;
+}
+
 function normalizeTargets(options) {
   const explicit = options.paths
     .filter((filePath) => filePath.startsWith(PROJECT_ROOT) && fs.existsSync(filePath))
@@ -163,6 +180,8 @@ function staticizeHtml(text, changes) {
   if (!/staticized: legal page/i.test(next)) {
     next = next.replace(/<body([^>]*)>/i, `<body$1><!-- staticized: legal page -->`);
   }
+
+  next = injectLocalImageFallback(next, changes);
 
   return next;
 }

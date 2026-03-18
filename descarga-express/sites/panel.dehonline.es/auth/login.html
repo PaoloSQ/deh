@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-<script id="deh-telemetry-guard">(function(){var blocked=/(^https?:)?\/\/(frog\.wix\.com|panorama\.wixapps\.net)\//i;var localOrigin="http://127.0.0.1:8080";function isBlocked(v){return typeof v==='string'&&blocked.test(v)}window.fedops=window.fedops||{};window.fedops.apps=window.fedops.apps||{};window.fedops.phaseStarted=window.fedops.phaseStarted||function(){return function(){}};window.fedops.phaseEnded=window.fedops.phaseEnded||function(){return function(){}};window.fedops.reportError=window.fedops.reportError||function(){};var NativeWorker=window.Worker;if(typeof NativeWorker==='function'){var workerOrigin=window.location.protocol+'//'+window.location.hostname+(window.location.port?':'+window.location.port:'');window.Worker=function(url,options){var nextUrl=url;if(typeof url==='string'){var prefix=localOrigin+'/'+window.location.hostname+'/';if(url.indexOf(prefix)===0){nextUrl=workerOrigin+'/'+url.slice(prefix.length)}}return new NativeWorker(nextUrl,options)};window.Worker.prototype=NativeWorker.prototype}var origFetch=window.fetch;if(typeof origFetch==='function'){window.fetch=function(input,init){var url=typeof input==='string'?input:(input&&input.url)||'';if(isBlocked(url)){return Promise.resolve(new Response('',{status:204,statusText:'No Content'}))}return origFetch.call(this,input,init)}}var origOpen=XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.open;if(origOpen){XMLHttpRequest.prototype.open=function(method,url){this.__dehBlockedTelemetry=isBlocked(url);return origOpen.apply(this,arguments)};var origSend=XMLHttpRequest.prototype.send;XMLHttpRequest.prototype.send=function(body){if(this.__dehBlockedTelemetry){try{this.readyState=4;this.status=204}catch(_e){}return}return origSend.call(this,body)}}var origBeacon=navigator.sendBeacon;if(typeof origBeacon==='function'){navigator.sendBeacon=function(url,data){if(isBlocked(url)){return true}return origBeacon.call(this,url,data)}}if(window.Image&&window.Image.prototype){var desc=Object.getOwnPropertyDescriptor(window.Image.prototype,'src');if(desc&&desc.set){Object.defineProperty(window.Image.prototype,'src',{configurable:true,enumerable:desc.enumerable,get:desc.get,set:function(value){if(isBlocked(value)){return value}return desc.set.call(this,value)}})}}})();</script>
+
 
 
 
@@ -29,18 +29,14 @@
     <link rel="apple-touch-icon" sizes="120x120" href="/assets/img/cap/icons/apple-touch-icon-120x120.png" />
     <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/cap/icons/apple-touch-icon-144x144.png" />
     <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/cap/icons/apple-touch-icon-152x152.png" />
-    <script src="https://js.pusher.com/4.4/pusher.min.js"></script>
-    <script type="text/javascript">
-        const BASE_URL = '/panel.dehonline.es/';
-        const POPUP = '';
-        const LANG = 'es';
-        const TAB_SEL = 0;
-    </script>
+    
+    
 
     <title>DEH Online</title>
+<script defer src="/assets/js/local/image-fallback.js"></script>
 </head>
 
-<body>
+<body data-js-loaded="true"><!-- staticized: legal page -->
     <div class="navbar navbar-fixed-top">
         <div class="navbar-inner">
             <div class="container">
@@ -122,57 +118,32 @@
     </div>
     <div id="deh-privacy" style="display: none">
     </div>
-    <script src="/assets/js/cap/js/jquery-1.8.3.min.js"></script>
-    <script src="/assets/js/cap/js/bootstrap.min.js"></script>
-    <script src="/assets/js/cap/js/bootbox.js"></script>
-    <script src="/assets/js/js/jquery.dataTables.min.js"></script>
-    <script src="/assets/js/js/jquery.validate.min.js"></script>
-    <script src="/assets/js/js/jquery.pnotify.js"></script>
-    <script src="/assets/js/js/jquery.blockUI.js"></script>
-    <script src="/assets/js/js/bootstrap-lightbox.min.js"></script>
-    <script src="/assets/js/js/bootstrap-filestyle.js"></script>
-    <script src="/assets/js/js/simpleUpload.min.js"></script>
-    <script src="/assets/js/js/simpleUpload.methods.js"></script>
-    <script src="/assets/js/js/admin.min.js?1772921994"></script>
-    <script src="/assets/js/js/calendar.es.js"></script>
-    <script src="/assets/js/js/calendar.js"></script>
-    <script src="/assets/js/js/jquery.quicksearch.js"></script>
-    <script src="/assets/js/js/lou-multi-select/js/jquery.multi-select.js"></script>
-    <script src="/assets/js/js/cookies.js"></script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 
-    <script type="application/javascript">
-        bootbox.animate(false);
-        $(document).ready(function () {
-        });
-    </script>
+    
     <!-- fin notificaciones pnotify -->
 
-    <script type="application/javascript">
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-29420114-1']);
-        _gaq.push(['_setDomainName', 'dehonline.es']);
-        _gaq.push(['_trackPageview']);
+    
 
-        (function () {
-            var ga = document.createElement('script');
-            ga.type = 'text/javascript';
-            ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? '/ssl/' : '/www/') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(ga, s);
-        })();
-    </script>
+    
 
-    <script type="application/javascript">
-        bootbox.animate(false);
-        $(document).ready(function () {
-            if (getCookie('DEH_privacy') !== "on") {
-                document.getElementById("deh-privacy").style.display = "none";
-            }
-        });
-    </script>
-
-<script id="deh-fedops-stub">(function(){window.fedops=window.fedops||{};window.fedops.apps=window.fedops.apps||{};window.fedops.phaseStarted=window.fedops.phaseStarted||function(){return function(){}};window.fedops.phaseEnded=window.fedops.phaseEnded||function(){return function(){}};window.fedops.reportError=window.fedops.reportError||function(){};})();</script></body>
+</body>
 
 </html>

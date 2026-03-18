@@ -28,6 +28,15 @@ const PAGE_MIGRATIONS = {
     },
     partialsDir: path.join("src", "partials", "certibox"),
   },
+  "360homeservice": {
+    standalone: true,
+    wrapperClass: "downloaded-page",
+    download: {
+      host: "www.dehonline.es",
+      file: "360homeservice.html",
+    },
+    partialsDir: path.join("src", "partials", "360homeservice"),
+  },
 };
 
 function getPageMigration(pageName) {

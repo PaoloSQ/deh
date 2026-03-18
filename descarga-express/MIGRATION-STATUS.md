@@ -4,9 +4,9 @@ Ultima actualizacion: 2026-03-17
 
 ## Resumen
 
-- `hecha`: 56 paginas
-- `pendiente`: 28 paginas
-- siguiente bloque recomendado: `paginas comerciales y de producto`
+- `hecha`: 84 paginas
+- `pendiente`: 0 paginas
+- estado: `migracion cerrada en el alcance actual`
 
 ## Criterio de estado
 
@@ -14,6 +14,42 @@ Ultima actualizacion: 2026-03-17
 - `pendiente`: aun no atacada o sin cerrar
 
 ## Hechas
+
+### Grupo 2. Paginas comerciales y de producto (cerradas)
+
+- `sites/www.dehonline.es/acceso-clientes.html`
+- `sites/www.dehonline.es/app-vigiladas.html`
+- `sites/www.dehonline.es/book-online.html`
+- `sites/www.dehonline.es/canaldedenuncias.html`
+- `sites/www.dehonline.es/certibox.html`
+- `sites/www.dehonline.es/contacto.html`
+- `sites/www.dehonline.es/datos-com-propietarios-comunidades.html`
+- `sites/www.dehonline.es/documbox-info.html`
+- `sites/www.dehonline.es/lexbox.html`
+- `sites/www.dehonline.es/planes-af.html`
+- `sites/www.dehonline.es/plataforma-control-exp-notificaciones.html`
+- `sites/www.dehonline.es/comunidad.html`
+- `sites/www.dehonline.es/info-control-exp-notificaciones.html`
+- `sites/www.dehonline.es/pymes.html`
+- `sites/www.dehonline.es/servicios-as.html`
+- `sites/www.dehonline.es/tsa.html`
+
+### Grupo 5. Comunidad y grupos (cerradas)
+
+- `sites/www.dehonline.es/grupos/comunicacion-con-clientes.html`
+- `sites/www.dehonline.es/grupos/energia.html`
+- `sites/www.dehonline.es/grupos/factura-electronica.html`
+- `sites/www.dehonline.es/grupos/financiacion-pymes.html`
+- `sites/www.dehonline.es/grupos/riesgos-laborales.html`
+- `sites/www.dehonline.es/grupos/tecnologia.html`
+
+### Grupo 7. Portales, soporte y panel (cerradas)
+
+- `sites/documbox.dehonline.es/index.html`
+- `sites/panel.dehonline.es/auth/login.html`
+- `sites/soporte.dehonline.es/index.html`
+- `sites/www.consola.dehonline.es/index.html`
+- `sites/www.soporte.dehonline.es/index.html`
 
 ### Grupo 3. Blog y discovery
 
@@ -80,44 +116,14 @@ Ultima actualizacion: 2026-03-17
 - `sites/www.dehonline.es/politica-de-privacidad-para-redes-sociales.html`
 - `sites/www.dehonline.es/pol%C3%ADtica-de-privacidad-para-redes-sociales`
 
-## Pendientes
-
-### Grupo 1. Home y portada principal
+### Grupo 1. Home y portada principal (cerrada)
 
 - `sites/www.dehonline.es/index.html`
 
-### Grupo 2. Paginas comerciales y de producto
+## Pendientes
 
-- `sites/www.dehonline.es/acceso-clientes.html`
-- `sites/www.dehonline.es/app-vigiladas.html`
-- `sites/www.dehonline.es/book-online.html`
-- `sites/www.dehonline.es/canaldedenuncias.html`
-- `sites/www.dehonline.es/certibox.html`
-- `sites/www.dehonline.es/comunidad.html`
-- `sites/www.dehonline.es/contacto.html`
-- `sites/www.dehonline.es/datos-com-propietarios-comunidades.html`
-- `sites/www.dehonline.es/documbox-info.html`
-- `sites/www.dehonline.es/info-control-exp-notificaciones.html`
-- `sites/www.dehonline.es/lexbox.html`
-- `sites/www.dehonline.es/planes-af.html`
-- `sites/www.dehonline.es/plataforma-control-exp-notificaciones.html`
-- `sites/www.dehonline.es/pymes.html`
-- `sites/www.dehonline.es/servicios-as.html`
-- `sites/www.dehonline.es/tsa.html`
+- Ninguno en el alcance actual.
 
-### Grupo 5. Comunidad y grupos
+## Bloqueos actuales
 
-- `sites/www.dehonline.es/grupos/comunicacion-con-clientes.html`
-- `sites/www.dehonline.es/grupos/energia.html`
-- `sites/www.dehonline.es/grupos/factura-electronica.html`
-- `sites/www.dehonline.es/grupos/financiacion-pymes.html`
-- `sites/www.dehonline.es/grupos/riesgos-laborales.html`
-- `sites/www.dehonline.es/grupos/tecnologia.html`
-
-### Grupo 7. Portales, soporte y panel
-
-- `sites/documbox.dehonline.es/index.html`
-- `sites/panel.dehonline.es/auth/login.html`
-- `sites/soporte.dehonline.es/index.html`
-- `sites/www.consola.dehonline.es/index.html`
-- `sites/www.soporte.dehonline.es/index.html`
+- Ninguno.

@@ -1,20 +1,11 @@
 [
   {
-    "filePath": "C:\\www\\producción\\deh\\descarga-express\\sites\\www.dehonline.es\\condiciones-de-uso.html",
-    "relPath": "sites/www.dehonline.es/condiciones-de-uso.html",
+    "filePath": "C:\\www\\producción\\deh\\descarga-express\\sites\\www.dehonline.es\\360homeservice\\index.html",
+    "relPath": "sites/www.dehonline.es/360homeservice/index.html",
     "detected": [
       "sentry"
     ],
     "removed": [
-      "viewerModel.experiments.specs.thunderbolt.businessLoggerService",
-      "viewerModel.experiments.specs.thunderbolt.fedops_enableSampleRateForAppNames",
-      "viewerModel.experiments.specs.thunderbolt.InitPlatformApiProvider",
-      "viewerModel.experiments.specs.thunderbolt.loadNewerSentrySdk",
-      "viewerModel.experiments.specs.thunderbolt.moveFedopsLoadStartToBody",
-      "viewerModel.experiments.specs.thunderbolt.Panorama",
-      "viewerModel.experiments.specs.thunderbolt.PanoramaErrorMonitor",
-      "viewerModel.experiments.specs.thunderbolt.sendFedopsLoadStartedReplaced",
-      "viewerModel.experiments.specs.thunderbolt.useNewTelemetryAPI",
       "telemetry guard refresh",
       "fedops stub"
     ],

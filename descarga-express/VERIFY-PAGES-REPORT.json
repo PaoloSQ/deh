@@ -1,44 +1,33 @@
 [
   {
-    "filePath": "c:\\www\\producción\\deh\\descarga-express\\sites\\www.dehonline.es\\blog\\page\\2.html",
-    "relPath": "sites/www.dehonline.es/blog/page/2.html",
-    "url": "http://www.dehonline.es:8080/blog/page/2",
-    "status": "ok",
+    "filePath": "C:\\www\\producción\\deh\\descarga-express\\sites\\www.dehonline.es\\360homeservice\\index.html",
+    "relPath": "sites/www.dehonline.es/360homeservice/index.html",
+    "url": "http://www.dehonline.es:8080/360homeservice/",
+    "status": "pageerror",
     "counts": {
       "local-file": 0,
       "local-api": 0,
       "third-party": 0,
-      "runtime": 0,
+      "runtime": 3,
       "other": 0
     },
-    "issues": []
-  },
-  {
-    "filePath": "c:\\www\\producción\\deh\\descarga-express\\sites\\www.dehonline.es\\blog\\page\\3.html",
-    "relPath": "sites/www.dehonline.es/blog/page/3.html",
-    "url": "http://www.dehonline.es:8080/blog/page/3",
-    "status": "ok",
-    "counts": {
-      "local-file": 0,
-      "local-api": 0,
-      "third-party": 0,
-      "runtime": 0,
-      "other": 0
-    },
-    "issues": []
-  },
-  {
-    "filePath": "c:\\www\\producción\\deh\\descarga-express\\sites\\www.dehonline.es\\blog\\page\\4.html",
-    "relPath": "sites/www.dehonline.es/blog/page/4.html",
-    "url": "http://www.dehonline.es:8080/blog/page/4",
-    "status": "ok",
-    "counts": {
-      "local-file": 0,
-      "local-api": 0,
-      "third-party": 0,
-      "runtime": 0,
-      "other": 0
-    },
-    "issues": []
+    "issues": [
+      {
+        "type": "pageerror",
+        "text": "Cannot read properties of undefined (reading 'match')\nm (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/thunderbolt-commons.b0f4162a.bundle.min.js:1:36489)",
+        "category": "runtime"
+      },
+      {
+        "type": "pageerror",
+        "text": "Cannot read properties of undefined (reading 'match')\nm (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/thunderbolt-commons.b0f4162a.bundle.min.js:1:36489)",
+        "category": "runtime"
+      },
+      {
+        "type": "console",
+        "level": "warn",
+        "text": "The resource http://www.dehonline.es:8080/assets/misc/siteassets.parastorage.com/pages/pages/thunderbolt was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.",
+        "category": "runtime"
+      }
+    ]
   }
 ]
