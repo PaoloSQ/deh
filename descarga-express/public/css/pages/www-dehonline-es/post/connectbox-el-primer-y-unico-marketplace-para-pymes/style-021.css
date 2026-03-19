@@ -1,1 +1,55 @@
-.sjuzr{background:var(--ricos-internal-button-background,var(--ricos-custom-button-background-color,var(--ricos-action-color,#116dff)));border:var(--ricos-internal-button-border-width,var(--ricos-custom-button-border-width,0)) solid var(--ricos-internal-button-border-color,var(--ricos-custom-button-border-color,var(--ricos-text-on-action-color,var(--ricos-background-color,#fff))));border-radius:var(--ricos-internal-button-border-radius,var(--ricos-custom-button-border-radius));box-sizing:border-box;color:var(--ricos-internal-button-color,var(--ricos-custom-button-color,var(--ricos-text-on-action-color,var(--ricos-background-color,#fff))));cursor:pointer;display:block;font-size:var(--ricos-internal-button-font-size,14px);padding:var(--ricos-internal-button-padding,12px);position:relative;text-decoration:none;width:min(100%,var(--ricos-internal-button-custom-width),auto)}.forced-hover .sjuzr,.sjuzr:hover{background:var(--ricos-internal-button-background-hover,var(--ricos-custom-button-background-color-hover,var(--ricos-action-color,#116dff)));border:var(--ricos-internal-button-border-width,var(--ricos-custom-button-border-width,0)) solid var(--ricos-internal-button-border-color-hover,var(--ricos-custom-button-border-color-hover,var(--ricos-text-on-action-color,var(--ricos-background-color,#fff))));color:var(--ricos-internal-button-color-hover,var(--ricos-custom-button-color-hover,var(--ricos-text-on-action-color,var(--ricos-background-color,#fff))))}.QgA42{font-family:var(--ricos-custom-p-font-family);line-height:21px;min-width:16px;overflow:hidden;text-align:center;text-overflow:ellipsis;white-space:nowrap}.WVZ--{width:auto}
+.sjuzr {
+  background: var(
+    --ricos-internal-button-background,
+    var(--ricos-custom-button-background-color, var(--ricos-action-color, #116dff))
+  );
+  border: var(--ricos-internal-button-border-width, var(--ricos-custom-button-border-width, 0)) solid
+    var(
+      --ricos-internal-button-border-color,
+      var(--ricos-custom-button-border-color, var(--ricos-text-on-action-color, var(--ricos-background-color, #fff)))
+    );
+  border-radius: var(--ricos-internal-button-border-radius, var(--ricos-custom-button-border-radius));
+  box-sizing: border-box;
+  color: var(
+    --ricos-internal-button-color,
+    var(--ricos-custom-button-color, var(--ricos-text-on-action-color, var(--ricos-background-color, #fff)))
+  );
+  cursor: pointer;
+  display: block;
+  font-size: var(--ricos-internal-button-font-size, 14px);
+  padding: var(--ricos-internal-button-padding, 12px);
+  position: relative;
+  text-decoration: none;
+  width: min(100%, var(--ricos-internal-button-custom-width), auto);
+}
+.forced-hover .sjuzr,
+.sjuzr:hover {
+  background: var(
+    --ricos-internal-button-background-hover,
+    var(--ricos-custom-button-background-color-hover, var(--ricos-action-color, #116dff))
+  );
+  border: var(--ricos-internal-button-border-width, var(--ricos-custom-button-border-width, 0)) solid
+    var(
+      --ricos-internal-button-border-color-hover,
+      var(
+        --ricos-custom-button-border-color-hover,
+        var(--ricos-text-on-action-color, var(--ricos-background-color, #fff))
+      )
+    );
+  color: var(
+    --ricos-internal-button-color-hover,
+    var(--ricos-custom-button-color-hover, var(--ricos-text-on-action-color, var(--ricos-background-color, #fff)))
+  );
+}
+.QgA42 {
+  font-family: var(--ricos-custom-p-font-family);
+  line-height: 21px;
+  min-width: 16px;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.WVZ-- {
+  width: auto;
+}
