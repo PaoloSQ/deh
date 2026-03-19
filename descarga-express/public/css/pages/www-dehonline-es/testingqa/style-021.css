@@ -1,1 +1,14 @@
-#pm5m6{width:auto;min-height:40px;}#pageBackground_pm5m6{--bg-position:absolute;--bg-overlay-color:rgb(var(--color_11));--bg-gradient:none;}#comp-mcc2evnj{--bg-overlay-color:transparent;--bg-gradient:none;min-width:980px;}
+#pm5m6 {
+  width: auto;
+  min-height: 40px;
+}
+#pageBackground_pm5m6 {
+  --bg-position: absolute;
+  --bg-overlay-color: rgb(var(--color_11));
+  --bg-gradient: none;
+}
+#comp-mcc2evnj {
+  --bg-overlay-color: transparent;
+  --bg-gradient: none;
+  min-width: 980px;
+}

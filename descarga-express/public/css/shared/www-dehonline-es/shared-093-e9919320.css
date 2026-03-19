@@ -1,0 +1,20 @@
+#ot0oq {
+  width: auto;
+  min-height: 40px;
+}
+#pageBackground_ot0oq {
+  --bg-position: absolute;
+  --bg-overlay-color: rgb(204, 0, 0);
+  --bg-gradient: none;
+}
+#comp-lmykxmz91 {
+  --bg-overlay-color: rgb(var(--color_36));
+  --bg-gradient: none;
+  min-width: 980px;
+}
+#comp-lmykxmzb3 {
+  --text-direction: var(--wix-opt-in-direction);
+}
+#comp-lmykxmzd {
+  --text-direction: var(--wix-opt-in-direction);
+}

@@ -1,1 +1,4 @@
-@view-transition {navigation: auto;types: OutIn}
+@view-transition {
+  navigation: auto;
+  types: OutIn;
+}

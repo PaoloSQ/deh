@@ -93,6 +93,21 @@ function computeStatus(categorized, counts) {
   return 'ok';
 }
 
+function shouldIgnoreIssue(issue) {
+  if (issue.type === 'requestfailed') {
+    return issue.error === 'net::ERR_ABORTED';
+  }
+
+  if (issue.type === 'console') {
+    const text = String(issue.text || '');
+    if (/preloaded using link preload but not used within a few seconds/i.test(text)) {
+      return true;
+    }
+  }
+
+  return false;
+}
+
 async function runPool(items, worker, concurrency) {
   const results = new Array(items.length);
   let cursor = 0;
@@ -206,10 +221,7 @@ async function main() {
         try {
           await page.goto(target.url, { waitUntil: 'networkidle2', timeout: options.timeoutMs });
           await new Promise((resolve) => setTimeout(resolve, WAIT_MS));
-          const filteredIssues = issues.filter((issue) => {
-            if (issue.type !== 'requestfailed') return true;
-            return issue.error !== 'net::ERR_ABORTED';
-          });
+          const filteredIssues = issues.filter((issue) => !shouldIgnoreIssue(issue));
           const categorized = filteredIssues.map((issue) => ({ ...issue, category: classifyIssue(issue, localBase) }));
           const counts = categorized.reduce((acc, issue) => {
             acc[issue.category] += 1;

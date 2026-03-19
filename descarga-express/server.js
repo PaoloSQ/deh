@@ -16,12 +16,14 @@ const cssRoot = path.resolve(__dirname, 'public', 'css');
 const jsRoot = path.resolve(__dirname, 'public', 'js');
 const assetsRoot = path.resolve(__dirname, 'public', 'assets');
 const docsRoot = path.resolve(__dirname, 'public', 'docs');
-const bucketRoots = [sitesRoot, imagesRoot, cssRoot, jsRoot, assetsRoot, docsRoot];
+const mediaRoot = path.resolve(__dirname, 'public', 'media');
+const bucketRoots = [sitesRoot, imagesRoot, cssRoot, jsRoot, assetsRoot, docsRoot, mediaRoot];
 const LOCAL_HTML_HELPER_SCRIPTS = [
   '/assets/js/local/popup-restore.js'
 ];
 const RESERVED_HOST_REWRITE_PREFIXES = [
   '/img',
+  '/media',
   '/css',
   '/js',
   '/assets',
@@ -207,6 +209,42 @@ function tryRewriteMediaVariant(req) {
   return true;
 }
 
+function tryRewriteImageVariant(req) {
+  const [pathname, query = ''] = req.url.split('?');
+  if (!pathname.startsWith('/img/')) return false;
+
+  const imagePrefix = '/img/';
+  const remainder = pathname.slice(imagePrefix.length);
+  const candidates = [];
+
+  for (const value of pathVariants(remainder)) {
+    if (!value) continue;
+
+    const direct = value.replace(/^\/+/, '');
+    if (direct) candidates.push(direct);
+
+    const trimmedVariant = direct.match(/^(.+?\.[a-z0-9]+)(?:,.*)?(?:\/.*)?$/i);
+    if (trimmedVariant && trimmedVariant[1]) {
+      candidates.push(trimmedVariant[1]);
+    }
+  }
+
+  for (const candidate of candidates) {
+    const normalized = candidate.replace(/^\/+/, '');
+    if (!normalized) continue;
+
+    const absPath = path.join(imagesRoot, normalized);
+    if (!fileExists(absPath)) continue;
+
+    req.url = `${imagePrefix}${normalized}${query ? `?${query}` : ''}`;
+    req._parsedUrl = null;
+    req._parsedOriginalUrl = null;
+    return true;
+  }
+
+  return false;
+}
+
 function isLikelyMediaToken(value) {
   if (!value) return false;
   if (path.extname(value)) return false;
@@ -293,8 +331,90 @@ function resolveCandidates(...requestPaths) {
   return out;
 }
 
+function escapeJsonForHtml(value) {
+  return JSON.stringify(value).replace(/</g, '\\u003c');
+}
+
+function buildJsonScriptTag(id, value) {
+  return `<script type="application/json" id="${id}">${escapeJsonForHtml(value)}</script>`;
+}
+
+function readJsonScriptValue(html, id) {
+  const patterns = [
+    new RegExp(`<script[^>]*id=["']${id}["'][^>]*type=["']application/json["'][^>]*>([\\s\\S]*?)<\\/script>`, 'i'),
+    new RegExp(`<script[^>]*type=["']application/json["'][^>]*id=["']${id}["'][^>]*>([\\s\\S]*?)<\\/script>`, 'i')
+  ];
+
+  for (const pattern of patterns) {
+    const match = html.match(pattern);
+    if (!match) continue;
+    try {
+      return JSON.parse(match[1]);
+    } catch {
+      return null;
+    }
+  }
+
+  return undefined;
+}
+
+function upsertJsonScriptValue(html, id, value) {
+  const nextTag = buildJsonScriptTag(id, value);
+  const patterns = [
+    new RegExp(`<script([^>]*)id=["']${id}["']([^>]*)type=["']application/json["']([^>]*)>[\\s\\S]*?<\\/script>`, 'i'),
+    new RegExp(`<script([^>]*)type=["']application/json["']([^>]*)id=["']${id}["']([^>]*)>[\\s\\S]*?<\\/script>`, 'i')
+  ];
+
+  for (const pattern of patterns) {
+    if (pattern.test(html)) {
+      return html.replace(pattern, nextTag);
+    }
+  }
+
+  if (html.includes('</head>')) {
+    return html.replace('</head>', `${nextTag}\n</head>`);
+  }
+
+  return `${nextTag}\n${html}`;
+}
+
 function injectLocalHelperScripts(html) {
   let nextHtml = html;
+  const essentialViewerModel = readJsonScriptValue(nextHtml, 'wix-essential-viewer-model');
+  const viewerModel = readJsonScriptValue(nextHtml, 'wix-viewer-model');
+  const fallbackViewerModel =
+    (essentialViewerModel && typeof essentialViewerModel === 'object' && essentialViewerModel)
+    || (viewerModel && typeof viewerModel === 'object' && viewerModel)
+    || {};
+
+  nextHtml = upsertJsonScriptValue(nextHtml, 'wix-essential-viewer-model', fallbackViewerModel);
+  nextHtml = upsertJsonScriptValue(nextHtml, 'wix-viewer-model', fallbackViewerModel);
+
+  if (readJsonScriptValue(nextHtml, 'wix-fedops') === undefined) {
+    nextHtml = upsertJsonScriptValue(nextHtml, 'wix-fedops', {
+      data: {
+        site: {},
+        rollout: {},
+        fleetConfig: {},
+        requestUrl: '',
+        isInSEO: false,
+        platformOnSite: true
+      }
+    });
+  }
+
+  if (readJsonScriptValue(nextHtml, 'used-platform-apis-data') === undefined) {
+    nextHtml = upsertJsonScriptValue(nextHtml, 'used-platform-apis-data', []);
+  }
+
+  if (!nextHtml.includes('id="deh-runtime-bootstrap"')) {
+    const bootstrapScript = `<script id="deh-runtime-bootstrap">(function(){try{var modelNode=document.getElementById('wix-essential-viewer-model')||document.getElementById('wix-viewer-model');window.viewerModel=window.viewerModel||JSON.parse(modelNode&&modelNode.textContent||'{}')}catch(_error){window.viewerModel=window.viewerModel||{}}var viewerModel=window.viewerModel;window.commonConfig=window.commonConfig||(viewerModel.commonConfig||{});var commonConfig=window.commonConfig;window.fedops=window.fedops||{};var fedops=window.fedops;window.usedPlatformApis=window.usedPlatformApis||[];}())</script>`;
+    if (nextHtml.includes('</head>')) {
+      nextHtml = nextHtml.replace('</head>', `${bootstrapScript}\n</head>`);
+    } else {
+      nextHtml = `${bootstrapScript}\n${nextHtml}`;
+    }
+  }
 
   for (const src of LOCAL_HTML_HELPER_SCRIPTS) {
     if (nextHtml.includes(src)) continue;
@@ -317,6 +437,10 @@ app.get('/favicon.ico', (_req, res) => {
   const candidate = findExistingAsset('img/client/pfavico.ico') || findExistingAsset('img/images/favicon.png');
   if (!candidate) return res.status(204).end();
   return res.sendFile(candidate);
+});
+
+app.all('/assets/fonts/fonts.gstatic.com*', (_req, res) => {
+  res.status(204).end();
 });
 
 // Silencia endpoints de analitica externos durante pruebas locales.
@@ -407,6 +531,10 @@ app.get('/:domain/index', (req, res, next) => {
 app.use((req, res, next) => {
   const pathname = req.path;
 
+  if (pathname.includes('&quot;')) {
+    return res.status(204).end();
+  }
+
   if (pathname.startsWith('/assets/misc/services/wix-thunderbolt/dist/')) {
     const rel = pathname.replace('/assets/misc/', '');
     const relNoSlash = rel.replace(/^\/+/, '');
@@ -444,6 +572,26 @@ app.use((req, res, next) => {
     return res.redirect(302, `https://static.parastorage.com/${relNoSlash}`);
   }
 
+  if (pathname.startsWith('/assets/misc/static.wixstatic.com/media/')) {
+    const [, legacyQuery = ''] = req.url.split('?');
+    const legacyMediaPath = pathname
+      .replace('/assets/misc/static.wixstatic.com/media/', '/')
+      .replace(/\/{2,}/g, '/');
+    const [rewrittenPath] = legacyMediaPath.split('?');
+
+    if (rewrittenPath.startsWith('/img/')) {
+      req.url = `${rewrittenPath}${legacyQuery ? `?${legacyQuery}` : ''}`;
+      req._parsedUrl = null;
+      req._parsedOriginalUrl = null;
+
+      if (tryRewriteImageVariant(req)) {
+        return next();
+      }
+
+      return next();
+    }
+  }
+
   if (pathname.startsWith('/assets/img/media/')) {
     const rel = pathname.replace('/assets/img/media/', '').split('/')[0];
     if (rel && isLikelyMediaToken(rel)) {
@@ -458,12 +606,26 @@ app.use((req, res, next) => {
     return next();
   }
 
+  if (tryRewriteImageVariant(req)) {
+    return next();
+  }
+
   return next();
 });
 
 app.use(
   '/img',
   express.static(imagesRoot, {
+    extensions: ['html'],
+    index: ['index.html'],
+    fallthrough: true,
+    maxAge: process.env.NODE_ENV === 'development' ? 0 : '1h'
+  })
+);
+
+app.use(
+  '/media',
+  express.static(mediaRoot, {
     extensions: ['html'],
     index: ['index.html'],
     fallthrough: true,

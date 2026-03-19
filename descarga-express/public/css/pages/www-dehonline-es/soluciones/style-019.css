@@ -1,1 +1,14 @@
-#fc4zp{width:auto;min-height:40px;}#pageBackground_fc4zp{--bg-position:absolute;--bg-overlay-color:rgb(204, 0, 0);--bg-gradient:none;}#comp-lm4p2h9t1{--bg-overlay-color:rgb(255, 255, 255);--bg-gradient:none;min-width:980px;}
+#fc4zp {
+  width: auto;
+  min-height: 40px;
+}
+#pageBackground_fc4zp {
+  --bg-position: absolute;
+  --bg-overlay-color: rgb(204, 0, 0);
+  --bg-gradient: none;
+}
+#comp-lm4p2h9t1 {
+  --bg-overlay-color: rgb(255, 255, 255);
+  --bg-gradient: none;
+  min-width: 980px;
+}

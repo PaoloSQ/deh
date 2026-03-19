@@ -1,0 +1,1241 @@
+{
+  "htmlChecked": 177,
+  "filesChanged": 164,
+  "filesSkipped": 12,
+  "wrapperFilesWritten": 164,
+  "stylesheetLinksConsolidated": 2999,
+  "entries": [
+    {
+      "file": "sites/www.dehonline.es/360homeservice.html",
+      "wrapper": "public/css/structured/pages/360homeservice/head.css",
+      "changed": false,
+      "skipped": true,
+      "hrefs": 0
+    },
+    {
+      "file": "sites/www.dehonline.es/acceso-clientes.html",
+      "wrapper": "public/css/structured/pages/acceso-clientes/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 18
+    },
+    {
+      "file": "sites/www.dehonline.es/acuerdo-ecpf.html",
+      "wrapper": "public/css/structured/pages/acuerdo-ecpf/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 19
+    },
+    {
+      "file": "sites/www.dehonline.es/acuerdo-ecpj.html",
+      "wrapper": "public/css/structured/pages/acuerdo-ecpj/head.css",
+      "changed": false,
+      "skipped": true,
+      "hrefs": 0
+    },
+    {
+      "file": "sites/www.dehonline.es/acuerdo-girona-pf.html",
+      "wrapper": "public/css/structured/pages/acuerdo-girona-pf/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 18
+    },
+    {
+      "file": "sites/www.dehonline.es/acuerdo-girona-pj.html",
+      "wrapper": "public/css/structured/pages/acuerdo-girona-pj/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 18
+    },
+    {
+      "file": "sites/www.dehonline.es/ad-comunidad.html",
+      "wrapper": "public/css/structured/pages/ad-comunidad/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 26
+    },
+    {
+      "file": "sites/www.dehonline.es/administracion-fincas.html",
+      "wrapper": "public/css/structured/pages/administracion-fincas/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 29
+    },
+    {
+      "file": "sites/www.dehonline.es/af-alicante.html",
+      "wrapper": "public/css/structured/pages/af-alicante/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 19
+    },
+    {
+      "file": "sites/www.dehonline.es/af-girona-finalizada.html",
+      "wrapper": "public/css/structured/pages/af-girona-finalizada/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 15
+    },
+    {
+      "file": "sites/www.dehonline.es/af-girona.html",
+      "wrapper": "public/css/structured/pages/af-girona/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 20
+    },
+    {
+      "file": "sites/www.dehonline.es/af-nuevo-servicios.html",
+      "wrapper": "public/css/structured/pages/af-nuevo-servicios/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 19
+    },
+    {
+      "file": "sites/www.dehonline.es/app-vigiladas.html",
+      "wrapper": "public/css/structured/pages/app-vigiladas/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 15
+    },
+    {
+      "file": "sites/www.dehonline.es/apttcb.html",
+      "wrapper": "public/css/structured/pages/apttcb/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 24
+    },
+    {
+      "file": "sites/www.dehonline.es/asesorias-despachos-profesionales.html",
+      "wrapper": "public/css/structured/pages/asesorias-despachos-profesionales/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 21
+    },
+    {
+      "file": "sites/www.dehonline.es/asesorlex.html",
+      "wrapper": "public/css/structured/pages/asesorlex/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 24
+    },
+    {
+      "file": "sites/www.dehonline.es/bankbox-demo-form.html",
+      "wrapper": "public/css/structured/pages/bankbox-demo-form/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 22
+    },
+    {
+      "file": "sites/www.dehonline.es/bankbox-demo.html",
+      "wrapper": "public/css/structured/pages/bankbox-demo/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 18
+    },
+    {
+      "file": "sites/www.dehonline.es/bankbox.html",
+      "wrapper": "public/css/structured/pages/bankbox/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 18
+    },
+    {
+      "file": "sites/www.dehonline.es/blog/categories/administración-de-fincas.html",
+      "wrapper": "public/css/structured/pages/blog/categories/administración-de-fincas/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 18
+    },
+    {
+      "file": "sites/www.dehonline.es/blog/categories/inteligencia-artificial.html",
+      "wrapper": "public/css/structured/pages/blog/categories/inteligencia-artificial/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 18
+    },
+    {
+      "file": "sites/www.dehonline.es/blog/page/2.html",
+      "wrapper": "public/css/structured/pages/blog/page/2/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 18
+    },
+    {
+      "file": "sites/www.dehonline.es/blog/page/3.html",
+      "wrapper": "public/css/structured/pages/blog/page/3/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 18
+    },
+    {
+      "file": "sites/www.dehonline.es/blog/page/4.html",
+      "wrapper": "public/css/structured/pages/blog/page/4/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 18
+    },
+    {
+      "file": "sites/www.dehonline.es/blog/tags/administrador-de-fincas.html",
+      "wrapper": "public/css/structured/pages/blog/tags/administrador-de-fincas/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 18
+    },
+    {
+      "file": "sites/www.dehonline.es/blog/tags/cae.html",
+      "wrapper": "public/css/structured/pages/blog/tags/cae/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 18
+    },
+    {
+      "file": "sites/www.dehonline.es/blog/tags/comunidades-de-propietarios.html",
+      "wrapper": "public/css/structured/pages/blog/tags/comunidades-de-propietarios/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 18
+    },
+    {
+      "file": "sites/www.dehonline.es/blog/tags/documbox.html",
+      "wrapper": "public/css/structured/pages/blog/tags/documbox/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 18
+    },
+    {
+      "file": "sites/www.dehonline.es/blog/tags/homologación.html",
+      "wrapper": "public/css/structured/pages/blog/tags/homologación/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 18
+    },
+    {
+      "file": "sites/www.dehonline.es/blog/tags/ia.html",
+      "wrapper": "public/css/structured/pages/blog/tags/ia/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 18
+    },
+    {
+      "file": "sites/www.dehonline.es/blog/tags/incidencias.html",
+      "wrapper": "public/css/structured/pages/blog/tags/incidencias/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 18
+    },
+    {
+      "file": "sites/www.dehonline.es/blog/tags/proveedores.html",
+      "wrapper": "public/css/structured/pages/blog/tags/proveedores/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 18
+    },
+    {
+      "file": "sites/www.dehonline.es/blog.html",
+      "wrapper": "public/css/structured/pages/blog/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 18
+    },
+    {
+      "file": "sites/www.dehonline.es/book-online.html",
+      "wrapper": "public/css/structured/pages/book-online/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 16
+    },
+    {
+      "file": "sites/www.dehonline.es/booking-calendar/cita-comercial-telefónica.html",
+      "wrapper": "public/css/structured/pages/booking-calendar/cita-comercial-telefónica/head.css",
+      "changed": false,
+      "skipped": true,
+      "hrefs": 0
+    },
+    {
+      "file": "sites/www.dehonline.es/booking-calendar/cita-presencial.html",
+      "wrapper": "public/css/structured/pages/booking-calendar/cita-presencial/head.css",
+      "changed": false,
+      "skipped": true,
+      "hrefs": 0
+    },
+    {
+      "file": "sites/www.dehonline.es/booking-calendar/cita-videoconferencia.html",
+      "wrapper": "public/css/structured/pages/booking-calendar/cita-videoconferencia/head.css",
+      "changed": false,
+      "skipped": true,
+      "hrefs": 0
+    },
+    {
+      "file": "sites/www.dehonline.es/booking-calendar/reserva-demo.html",
+      "wrapper": "public/css/structured/pages/booking-calendar/reserva-demo/head.css",
+      "changed": false,
+      "skipped": true,
+      "hrefs": 0
+    },
+    {
+      "file": "sites/www.dehonline.es/canaldedenuncias.html",
+      "wrapper": "public/css/structured/pages/canaldedenuncias/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 16
+    },
+    {
+      "file": "sites/www.dehonline.es/carpetas-financieras.html",
+      "wrapper": "public/css/structured/pages/carpetas-financieras/head.css",
+      "changed": false,
+      "skipped": true,
+      "hrefs": 0
+    },
+    {
+      "file": "sites/www.dehonline.es/certibox.html",
+      "wrapper": "public/css/structured/pages/certibox/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 17
+    },
+    {
+      "file": "sites/www.dehonline.es/certificado-eidas.html",
+      "wrapper": "public/css/structured/pages/certificado-eidas/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 16
+    },
+    {
+      "file": "sites/www.dehonline.es/comunidad-solar.html",
+      "wrapper": "public/css/structured/pages/comunidad-solar/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 23
+    },
+    {
+      "file": "sites/www.dehonline.es/comunidad.html",
+      "wrapper": "public/css/structured/pages/comunidad/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 16
+    },
+    {
+      "file": "sites/www.dehonline.es/condiciones-de-uso.html",
+      "wrapper": "public/css/structured/pages/condiciones-de-uso/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 15
+    },
+    {
+      "file": "sites/www.dehonline.es/contacto.html",
+      "wrapper": "public/css/structured/pages/contacto/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 23
+    },
+    {
+      "file": "sites/www.dehonline.es/datos-com-propietarios-comunidades.html",
+      "wrapper": "public/css/structured/pages/datos-com-propietarios-comunidades/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 15
+    },
+    {
+      "file": "sites/www.dehonline.es/documbox-info.html",
+      "wrapper": "public/css/structured/pages/documbox-info/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 22
+    },
+    {
+      "file": "sites/www.dehonline.es/emovili.html",
+      "wrapper": "public/css/structured/pages/emovili/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 20
+    },
+    {
+      "file": "sites/www.dehonline.es/encuesta-erp.html",
+      "wrapper": "public/css/structured/pages/encuesta-erp/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 21
+    },
+    {
+      "file": "sites/www.dehonline.es/evolucion-suscriptores.html",
+      "wrapper": "public/css/structured/pages/evolucion-suscriptores/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 16
+    },
+    {
+      "file": "sites/www.dehonline.es/facturas-deh-tucomunidad.html",
+      "wrapper": "public/css/structured/pages/facturas-deh-tucomunidad/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 19
+    },
+    {
+      "file": "sites/www.dehonline.es/faq.html",
+      "wrapper": "public/css/structured/pages/faq/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 16
+    },
+    {
+      "file": "sites/www.dehonline.es/grupos/administracion-publica/discussion/index.html",
+      "wrapper": "public/css/structured/pages/grupos/administracion-publica/discussion/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 1
+    },
+    {
+      "file": "sites/www.dehonline.es/grupos/comunicacion-con-clientes/discussion/index.html",
+      "wrapper": "public/css/structured/pages/grupos/comunicacion-con-clientes/discussion/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 1
+    },
+    {
+      "file": "sites/www.dehonline.es/grupos/comunicacion-con-clientes.html",
+      "wrapper": "public/css/structured/pages/grupos/comunicacion-con-clientes/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 18
+    },
+    {
+      "file": "sites/www.dehonline.es/grupos/energia/discussion/index.html",
+      "wrapper": "public/css/structured/pages/grupos/energia/discussion/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 1
+    },
+    {
+      "file": "sites/www.dehonline.es/grupos/energia.html",
+      "wrapper": "public/css/structured/pages/grupos/energia/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 18
+    },
+    {
+      "file": "sites/www.dehonline.es/grupos/factura-electronica/discussion/index.html",
+      "wrapper": "public/css/structured/pages/grupos/factura-electronica/discussion/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 1
+    },
+    {
+      "file": "sites/www.dehonline.es/grupos/factura-electronica.html",
+      "wrapper": "public/css/structured/pages/grupos/factura-electronica/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 18
+    },
+    {
+      "file": "sites/www.dehonline.es/grupos/financiacion-pymes/discussion/index.html",
+      "wrapper": "public/css/structured/pages/grupos/financiacion-pymes/discussion/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 1
+    },
+    {
+      "file": "sites/www.dehonline.es/grupos/financiacion-pymes.html",
+      "wrapper": "public/css/structured/pages/grupos/financiacion-pymes/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 18
+    },
+    {
+      "file": "sites/www.dehonline.es/grupos/riesgos-laborales/discussion/index.html",
+      "wrapper": "public/css/structured/pages/grupos/riesgos-laborales/discussion/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 1
+    },
+    {
+      "file": "sites/www.dehonline.es/grupos/riesgos-laborales.html",
+      "wrapper": "public/css/structured/pages/grupos/riesgos-laborales/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 18
+    },
+    {
+      "file": "sites/www.dehonline.es/grupos/tecnologia/discussion/index.html",
+      "wrapper": "public/css/structured/pages/grupos/tecnologia/discussion/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 1
+    },
+    {
+      "file": "sites/www.dehonline.es/grupos/tecnologia.html",
+      "wrapper": "public/css/structured/pages/grupos/tecnologia/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 18
+    },
+    {
+      "file": "sites/www.dehonline.es/homologacionproveedores.html",
+      "wrapper": "public/css/structured/pages/homologacionproveedores/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 21
+    },
+    {
+      "file": "sites/www.dehonline.es/index.html",
+      "wrapper": "public/css/structured/pages/home/head.css",
+      "changed": false,
+      "skipped": true,
+      "hrefs": 0
+    },
+    {
+      "file": "sites/www.dehonline.es/info-control-exp-notificaciones.html",
+      "wrapper": "public/css/structured/pages/info-control-exp-notificaciones/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 23
+    },
+    {
+      "file": "sites/www.dehonline.es/landing-comunidad.html",
+      "wrapper": "public/css/structured/pages/landing-comunidad/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 18
+    },
+    {
+      "file": "sites/www.dehonline.es/lexbox-prl-n.html",
+      "wrapper": "public/css/structured/pages/lexbox-prl-n/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 20
+    },
+    {
+      "file": "sites/www.dehonline.es/lexbox.html",
+      "wrapper": "public/css/structured/pages/lexbox/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 17
+    },
+    {
+      "file": "sites/www.dehonline.es/logs-api-panel.html",
+      "wrapper": "public/css/structured/pages/logs-api-panel/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 19
+    },
+    {
+      "file": "sites/www.dehonline.es/mas-ingresos.html",
+      "wrapper": "public/css/structured/pages/mas-ingresos/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 19
+    },
+    {
+      "file": "sites/www.dehonline.es/onzane-acceso.html",
+      "wrapper": "public/css/structured/pages/onzane-acceso/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 19
+    },
+    {
+      "file": "sites/www.dehonline.es/onzane-app.html",
+      "wrapper": "public/css/structured/pages/onzane-app/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 17
+    },
+    {
+      "file": "sites/www.dehonline.es/onzane.html",
+      "wrapper": "public/css/structured/pages/onzane/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 18
+    },
+    {
+      "file": "sites/www.dehonline.es/orama.html",
+      "wrapper": "public/css/structured/pages/orama/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 20
+    },
+    {
+      "file": "sites/www.dehonline.es/partners/app_vecinos.html",
+      "wrapper": "public/css/structured/pages/partners/app_vecinos/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 18
+    },
+    {
+      "file": "sites/www.dehonline.es/partners/avocaty.html",
+      "wrapper": "public/css/structured/pages/partners/avocaty/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 18
+    },
+    {
+      "file": "sites/www.dehonline.es/partners/bilky.html",
+      "wrapper": "public/css/structured/pages/partners/bilky/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 18
+    },
+    {
+      "file": "sites/www.dehonline.es/partners/breogan.html",
+      "wrapper": "public/css/structured/pages/partners/breogan/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 18
+    },
+    {
+      "file": "sites/www.dehonline.es/partners/checkit.html",
+      "wrapper": "public/css/structured/pages/partners/checkit/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 18
+    },
+    {
+      "file": "sites/www.dehonline.es/partners/comsolar.html",
+      "wrapper": "public/css/structured/pages/partners/comsolar/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 18
+    },
+    {
+      "file": "sites/www.dehonline.es/partners/crealsa.html",
+      "wrapper": "public/css/structured/pages/partners/crealsa/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 18
+    },
+    {
+      "file": "sites/www.dehonline.es/partners/dmd_asesores.html",
+      "wrapper": "public/css/structured/pages/partners/dmd_asesores/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 18
+    },
+    {
+      "file": "sites/www.dehonline.es/partners/dydes.html",
+      "wrapper": "public/css/structured/pages/partners/dydes/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 18
+    },
+    {
+      "file": "sites/www.dehonline.es/partners/eevidence.html",
+      "wrapper": "public/css/structured/pages/partners/eevidence/head.css",
+      "changed": false,
+      "skipped": true,
+      "hrefs": 0
+    },
+    {
+      "file": "sites/www.dehonline.es/partners/emovili.html",
+      "wrapper": "public/css/structured/pages/partners/emovili/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 18
+    },
+    {
+      "file": "sites/www.dehonline.es/partners/fandit.html",
+      "wrapper": "public/css/structured/pages/partners/fandit/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 18
+    },
+    {
+      "file": "sites/www.dehonline.es/partners/finergia.html",
+      "wrapper": "public/css/structured/pages/partners/finergia/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 18
+    },
+    {
+      "file": "sites/www.dehonline.es/partners/foro_proteccion.html",
+      "wrapper": "public/css/structured/pages/partners/foro_proteccion/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 18
+    },
+    {
+      "file": "sites/www.dehonline.es/partners/gigas.html",
+      "wrapper": "public/css/structured/pages/partners/gigas/head.css",
+      "changed": false,
+      "skipped": true,
+      "hrefs": 0
+    },
+    {
+      "file": "sites/www.dehonline.es/partners/librebor.html",
+      "wrapper": "public/css/structured/pages/partners/librebor/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 18
+    },
+    {
+      "file": "sites/www.dehonline.es/partners/orama.html",
+      "wrapper": "public/css/structured/pages/partners/orama/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 18
+    },
+    {
+      "file": "sites/www.dehonline.es/partners/processus.html",
+      "wrapper": "public/css/structured/pages/partners/processus/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 18
+    },
+    {
+      "file": "sites/www.dehonline.es/partners/rinc.html",
+      "wrapper": "public/css/structured/pages/partners/rinc/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 18
+    },
+    {
+      "file": "sites/www.dehonline.es/partners/ringover.html",
+      "wrapper": "public/css/structured/pages/partners/ringover/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 18
+    },
+    {
+      "file": "sites/www.dehonline.es/partners/singular.html",
+      "wrapper": "public/css/structured/pages/partners/singular/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 18
+    },
+    {
+      "file": "sites/www.dehonline.es/partners/sinvisitas.html",
+      "wrapper": "public/css/structured/pages/partners/sinvisitas/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 18
+    },
+    {
+      "file": "sites/www.dehonline.es/partners/tipsi.html",
+      "wrapper": "public/css/structured/pages/partners/tipsi/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 18
+    },
+    {
+      "file": "sites/www.dehonline.es/partners/tracedat.html",
+      "wrapper": "public/css/structured/pages/partners/tracedat/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 18
+    },
+    {
+      "file": "sites/www.dehonline.es/partners/tuio.html",
+      "wrapper": "public/css/structured/pages/partners/tuio/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 18
+    },
+    {
+      "file": "sites/www.dehonline.es/partners/xeoris.html",
+      "wrapper": "public/css/structured/pages/partners/xeoris/head.css",
+      "changed": false,
+      "skipped": true,
+      "hrefs": 0
+    },
+    {
+      "file": "sites/www.dehonline.es/planes-af.html",
+      "wrapper": "public/css/structured/pages/planes-af/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 19
+    },
+    {
+      "file": "sites/www.dehonline.es/planes-as.html",
+      "wrapper": "public/css/structured/pages/planes-as/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 21
+    },
+    {
+      "file": "sites/www.dehonline.es/plataforma-control-exp-notificaciones.html",
+      "wrapper": "public/css/structured/pages/plataforma-control-exp-notificaciones/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 2
+    },
+    {
+      "file": "sites/www.dehonline.es/pol%C3%ADtica-de-privacidad-para-redes-sociales.html",
+      "wrapper": "public/css/structured/pages/pol%C3%ADtica-de-privacidad-para-redes-sociales/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 15
+    },
+    {
+      "file": "sites/www.dehonline.es/politica-de-compliance.html",
+      "wrapper": "public/css/structured/pages/politica-de-compliance/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 15
+    },
+    {
+      "file": "sites/www.dehonline.es/politica-de-cookies.html",
+      "wrapper": "public/css/structured/pages/politica-de-cookies/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 15
+    },
+    {
+      "file": "sites/www.dehonline.es/politica-de-privacidad.html",
+      "wrapper": "public/css/structured/pages/politica-de-privacidad/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 15
+    },
+    {
+      "file": "sites/www.dehonline.es/política-de-privacidad-para-redes-sociales.html",
+      "wrapper": "public/css/structured/pages/política-de-privacidad-para-redes-sociales/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 15
+    },
+    {
+      "file": "sites/www.dehonline.es/post/administradores-de-fincas-guardianes-de-la-seguridad-y-la-excelencia.html",
+      "wrapper": "public/css/structured/pages/post/administradores-de-fincas-guardianes-de-la-seguridad-y-la-excelencia/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 21
+    },
+    {
+      "file": "sites/www.dehonline.es/post/ahorra-tiempo-en-la-gestión-de-tus-comunidades-con-lexbox-2-0-tú-a-lo-tuyo-y-nosotros-a-lo-nuestr.html",
+      "wrapper": "public/css/structured/pages/post/ahorra-tiempo-en-la-gestión-de-tus-comunidades-con-lexbox-2-0-tú-a-lo-tuyo-y-nosotros-a-lo-nuestr/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 22
+    },
+    {
+      "file": "sites/www.dehonline.es/post/automatización-de-tareas-y-procesos-en-asesorías.html",
+      "wrapper": "public/css/structured/pages/post/automatización-de-tareas-y-procesos-en-asesorías/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 22
+    },
+    {
+      "file": "sites/www.dehonline.es/post/buenas-noticias-llega-el-sol.html",
+      "wrapper": "public/css/structured/pages/post/buenas-noticias-llega-el-sol/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 23
+    },
+    {
+      "file": "sites/www.dehonline.es/post/carpetas-financieras-digitales-facilita-el-acceso-a-financiación-para-tu-pyme.html",
+      "wrapper": "public/css/structured/pages/post/carpetas-financieras-digitales-facilita-el-acceso-a-financiación-para-tu-pyme/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 21
+    },
+    {
+      "file": "sites/www.dehonline.es/post/cen-el-control-que-tu-despacho-necesitaba-para-gestionar-notificaciones-electrónicas.html",
+      "wrapper": "public/css/structured/pages/post/cen-el-control-que-tu-despacho-necesitaba-para-gestionar-notificaciones-electrónicas/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 21
+    },
+    {
+      "file": "sites/www.dehonline.es/post/connectbox-el-primer-y-único-marketplace-para-pymes.html",
+      "wrapper": "public/css/structured/pages/post/connectbox-el-primer-y-único-marketplace-para-pymes/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 23
+    },
+    {
+      "file": "sites/www.dehonline.es/post/copia-de-qué-es-el-reglamento-eidas-y-qué-ventajas-tiene.html",
+      "wrapper": "public/css/structured/pages/post/copia-de-qué-es-el-reglamento-eidas-y-qué-ventajas-tiene/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 22
+    },
+    {
+      "file": "sites/www.dehonline.es/post/copia-de-qué-es-la-firma-electrónica-con-otp-y-qué-ventajas-tiene.html",
+      "wrapper": "public/css/structured/pages/post/copia-de-qué-es-la-firma-electrónica-con-otp-y-qué-ventajas-tiene/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 22
+    },
+    {
+      "file": "sites/www.dehonline.es/post/copia-de-retos-y-oportunidades-de-la-transformación-digital-en-asesorías.html",
+      "wrapper": "public/css/structured/pages/post/copia-de-retos-y-oportunidades-de-la-transformación-digital-en-asesorías/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 22
+    },
+    {
+      "file": "sites/www.dehonline.es/post/cuáles-son-los-tipos-de-certificados-digitales.html",
+      "wrapper": "public/css/structured/pages/post/cuáles-son-los-tipos-de-certificados-digitales/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 22
+    },
+    {
+      "file": "sites/www.dehonline.es/post/cómo-protegerte-del-calor-extremo-en-tu-comunidad-de-propietarios.html",
+      "wrapper": "public/css/structured/pages/post/cómo-protegerte-del-calor-extremo-en-tu-comunidad-de-propietarios/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 22
+    },
+    {
+      "file": "sites/www.dehonline.es/post/cómo-saber-cuándo-caduca-mi-certificado-digital.html",
+      "wrapper": "public/css/structured/pages/post/cómo-saber-cuándo-caduca-mi-certificado-digital/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 22
+    },
+    {
+      "file": "sites/www.dehonline.es/post/deh-online-adopta-una-estrategia-enfocada-en-la-experiencia-del-cliente-colocando-al-cliente-en-el.html",
+      "wrapper": "public/css/structured/pages/post/deh-online-adopta-una-estrategia-enfocada-en-la-experiencia-del-cliente-colocando-al-cliente-en-el/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 21
+    },
+    {
+      "file": "sites/www.dehonline.es/post/demasiado-pequeño-para-digitalizar-desmitificando-el-uso-de-herramientas-para-digitalizar-tu-admin.html",
+      "wrapper": "public/css/structured/pages/post/demasiado-pequeño-para-digitalizar-desmitificando-el-uso-de-herramientas-para-digitalizar-tu-admin/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 21
+    },
+    {
+      "file": "sites/www.dehonline.es/post/el-futuro-de-la-integración-entre-sistemas-y-la-oportunidad-para-las-empresas.html",
+      "wrapper": "public/css/structured/pages/post/el-futuro-de-la-integración-entre-sistemas-y-la-oportunidad-para-las-empresas/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 21
+    },
+    {
+      "file": "sites/www.dehonline.es/post/el-verano-del-administrador-de-fincas-descanso-de-unos-tormenta-perfecta-de-otros.html",
+      "wrapper": "public/css/structured/pages/post/el-verano-del-administrador-de-fincas-descanso-de-unos-tormenta-perfecta-de-otros/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 20
+    },
+    {
+      "file": "sites/www.dehonline.es/post/ellas-son-mis-amigas-pero-aún-no-lo-saben.html",
+      "wrapper": "public/css/structured/pages/post/ellas-son-mis-amigas-pero-aún-no-lo-saben/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 21
+    },
+    {
+      "file": "sites/www.dehonline.es/post/emisión-del-certificado-digital-qué-es-la-vídeo-identificación.html",
+      "wrapper": "public/css/structured/pages/post/emisión-del-certificado-digital-qué-es-la-vídeo-identificación/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 22
+    },
+    {
+      "file": "sites/www.dehonline.es/post/equipos-de-extinción-de-incendios.html",
+      "wrapper": "public/css/structured/pages/post/equipos-de-extinción-de-incendios/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 22
+    },
+    {
+      "file": "sites/www.dehonline.es/post/estrenamos-nueva-imagen-en-la-web-de-deh-online.html",
+      "wrapper": "public/css/structured/pages/post/estrenamos-nueva-imagen-en-la-web-de-deh-online/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 20
+    },
+    {
+      "file": "sites/www.dehonline.es/post/hemos-estado-trabajando-en-esto-y-queremos-que-lo-veas.html",
+      "wrapper": "public/css/structured/pages/post/hemos-estado-trabajando-en-esto-y-queremos-que-lo-veas/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 21
+    },
+    {
+      "file": "sites/www.dehonline.es/post/hsm-la-cámara-acorazada-para-tus-certificados-digitales.html",
+      "wrapper": "public/css/structured/pages/post/hsm-la-cámara-acorazada-para-tus-certificados-digitales/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 20
+    },
+    {
+      "file": "sites/www.dehonline.es/post/la-coordinación-de-actividades-empresariales-cae.html",
+      "wrapper": "public/css/structured/pages/post/la-coordinación-de-actividades-empresariales-cae/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 25
+    },
+    {
+      "file": "sites/www.dehonline.es/post/la-inteligencia-artificial-está-transformando-la-administración-de-fincas-de-verdad-no-en-powerpoi.html",
+      "wrapper": "public/css/structured/pages/post/la-inteligencia-artificial-está-transformando-la-administración-de-fincas-de-verdad-no-en-powerpoi/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 20
+    },
+    {
+      "file": "sites/www.dehonline.es/post/las-claves-de-la-venta-o-la-magia-de-un-café.html",
+      "wrapper": "public/css/structured/pages/post/las-claves-de-la-venta-o-la-magia-de-un-café/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 21
+    },
+    {
+      "file": "sites/www.dehonline.es/post/nos-desnudamos.html",
+      "wrapper": "public/css/structured/pages/post/nos-desnudamos/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 21
+    },
+    {
+      "file": "sites/www.dehonline.es/post/notificaciones-de-la-agencia-tributaria.html",
+      "wrapper": "public/css/structured/pages/post/notificaciones-de-la-agencia-tributaria/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 22
+    },
+    {
+      "file": "sites/www.dehonline.es/post/prevención-de-riesgos-en-los-meses-fríos-y-lluviosos.html",
+      "wrapper": "public/css/structured/pages/post/prevención-de-riesgos-en-los-meses-fríos-y-lluviosos/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 22
+    },
+    {
+      "file": "sites/www.dehonline.es/post/puedo-correr-algún-riesgo-mi-comunidad-si-contrato-un-servicio-con-el-proveedor-más-barato.html",
+      "wrapper": "public/css/structured/pages/post/puedo-correr-algún-riesgo-mi-comunidad-si-contrato-un-servicio-con-el-proveedor-más-barato/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 21
+    },
+    {
+      "file": "sites/www.dehonline.es/post/puntos-clave-en-la-prevención-de-riesgos-laborales-durante-la-puesta-a-punto-de-las-piscinas.html",
+      "wrapper": "public/css/structured/pages/post/puntos-clave-en-la-prevención-de-riesgos-laborales-durante-la-puesta-a-punto-de-las-piscinas/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 22
+    },
+    {
+      "file": "sites/www.dehonline.es/post/que-es-eso-de-los-okrs.html",
+      "wrapper": "public/css/structured/pages/post/que-es-eso-de-los-okrs/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 22
+    },
+    {
+      "file": "sites/www.dehonline.es/post/qué-es-el-apoderamiento-electrónico.html",
+      "wrapper": "public/css/structured/pages/post/qué-es-el-apoderamiento-electrónico/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 22
+    },
+    {
+      "file": "sites/www.dehonline.es/post/qué-es-el-reglamento-eidas-y-qué-ventajas-tiene.html",
+      "wrapper": "public/css/structured/pages/post/qué-es-el-reglamento-eidas-y-qué-ventajas-tiene/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 22
+    },
+    {
+      "file": "sites/www.dehonline.es/post/renovación-del-certificado-digital-métodos-para-renovarlo.html",
+      "wrapper": "public/css/structured/pages/post/renovación-del-certificado-digital-métodos-para-renovarlo/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 22
+    },
+    {
+      "file": "sites/www.dehonline.es/post/retos-y-oportunidades-de-la-transformación-digital-en-asesorías.html",
+      "wrapper": "public/css/structured/pages/post/retos-y-oportunidades-de-la-transformación-digital-en-asesorías/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 22
+    },
+    {
+      "file": "sites/www.dehonline.es/post/riesgos-de-descarga-y-dispositivos-eléctricos.html",
+      "wrapper": "public/css/structured/pages/post/riesgos-de-descarga-y-dispositivos-eléctricos/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 22
+    },
+    {
+      "file": "sites/www.dehonline.es/post/riesgos-de-trabajar-en-alturas.html",
+      "wrapper": "public/css/structured/pages/post/riesgos-de-trabajar-en-alturas/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 25
+    },
+    {
+      "file": "sites/www.dehonline.es/post/sabes-realmente-quién-trabaja-en-tus-comunidades-la-homologación-de-proveedores-como-sello-de-gara.html",
+      "wrapper": "public/css/structured/pages/post/sabes-realmente-quién-trabaja-en-tus-comunidades-la-homologación-de-proveedores-como-sello-de-gara/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 20
+    },
+    {
+      "file": "sites/www.dehonline.es/post/software-de-administración-de-fincas-tu-aliado-en-la-gestión-de-comunidades-de-propietarios.html",
+      "wrapper": "public/css/structured/pages/post/software-de-administración-de-fincas-tu-aliado-en-la-gestión-de-comunidades-de-propietarios/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 21
+    },
+    {
+      "file": "sites/www.dehonline.es/post/tengo-un-problemón-con-los-certificados-digitales-de-mis-pymes-y-autónomos.html",
+      "wrapper": "public/css/structured/pages/post/tengo-un-problemón-con-los-certificados-digitales-de-mis-pymes-y-autónomos/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 21
+    },
+    {
+      "file": "sites/www.dehonline.es/post/toma-el-control-de-tus-certificados-digitales-con-certibox-hsm.html",
+      "wrapper": "public/css/structured/pages/post/toma-el-control-de-tus-certificados-digitales-con-certibox-hsm/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 22
+    },
+    {
+      "file": "sites/www.dehonline.es/post/trabajo-en-jardines.html",
+      "wrapper": "public/css/structured/pages/post/trabajo-en-jardines/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 22
+    },
+    {
+      "file": "sites/www.dehonline.es/post/tramitación-online-con-la-administración-pública.html",
+      "wrapper": "public/css/structured/pages/post/tramitación-online-con-la-administración-pública/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 22
+    },
+    {
+      "file": "sites/www.dehonline.es/post/vas-a-pedir-un-préstamo-como-pyme-esto-es-lo-que-necesitas-tener-a-mano.html",
+      "wrapper": "public/css/structured/pages/post/vas-a-pedir-un-préstamo-como-pyme-esto-es-lo-que-necesitas-tener-a-mano/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 21
+    },
+    {
+      "file": "sites/www.dehonline.es/post/ventajas-de-instalar-el-certificado-digital-en-la-nube.html",
+      "wrapper": "public/css/structured/pages/post/ventajas-de-instalar-el-certificado-digital-en-la-nube/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 22
+    },
+    {
+      "file": "sites/www.dehonline.es/promo-checkit.html",
+      "wrapper": "public/css/structured/pages/promo-checkit/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 23
+    },
+    {
+      "file": "sites/www.dehonline.es/pymes.html",
+      "wrapper": "public/css/structured/pages/pymes/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 26
+    },
+    {
+      "file": "sites/www.dehonline.es/redireccion-parrilla.html",
+      "wrapper": "public/css/structured/pages/redireccion-parrilla/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 15
+    },
+    {
+      "file": "sites/www.dehonline.es/search.html",
+      "wrapper": "public/css/structured/pages/search/head.css",
+      "changed": false,
+      "skipped": true,
+      "hrefs": 0
+    },
+    {
+      "file": "sites/www.dehonline.es/service-page/cita-comercial-telefónica/index.html",
+      "wrapper": "public/css/structured/pages/service-page/cita-comercial-telefónica/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 16
+    },
+    {
+      "file": "sites/www.dehonline.es/service-page/cita-presencial/index.html",
+      "wrapper": "public/css/structured/pages/service-page/cita-presencial/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 16
+    },
+    {
+      "file": "sites/www.dehonline.es/service-page/cita-videoconferencia/index.html",
+      "wrapper": "public/css/structured/pages/service-page/cita-videoconferencia/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 16
+    },
+    {
+      "file": "sites/www.dehonline.es/service-page/reserva-demo/index.html",
+      "wrapper": "public/css/structured/pages/service-page/reserva-demo/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 16
+    },
+    {
+      "file": "sites/www.dehonline.es/servicios-as.html",
+      "wrapper": "public/css/structured/pages/servicios-as/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 2
+    },
+    {
+      "file": "sites/www.dehonline.es/servicios-pymes.html",
+      "wrapper": "public/css/structured/pages/servicios-pymes/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 29
+    },
+    {
+      "file": "sites/www.dehonline.es/soluciones.html",
+      "wrapper": "public/css/structured/pages/soluciones/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 15
+    },
+    {
+      "file": "sites/www.dehonline.es/testingqa.html",
+      "wrapper": "public/css/structured/pages/testingqa/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 16
+    },
+    {
+      "file": "sites/www.dehonline.es/tsa.html",
+      "wrapper": "public/css/structured/pages/tsa/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 16
+    },
+    {
+      "file": "sites/www.dehonline.es/tuio-vecinos.html",
+      "wrapper": "public/css/structured/pages/tuio-vecinos/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 17
+    },
+    {
+      "file": "sites/www.dehonline.es/tuio.html",
+      "wrapper": "public/css/structured/pages/tuio/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 21
+    },
+    {
+      "file": "sites/www.dehonline.es/valoraciones.html",
+      "wrapper": "public/css/structured/pages/valoraciones/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 20
+    },
+    {
+      "file": "sites/www.dehonline.es/venta-digital/confirmacion/index.html",
+      "wrapper": "public/css/structured/pages/venta-digital/confirmacion/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 15
+    },
+    {
+      "file": "sites/www.dehonline.es/venta-digital/gracias/index.html",
+      "wrapper": "public/css/structured/pages/venta-digital/gracias/head.css",
+      "changed": true,
+      "skipped": false,
+      "hrefs": 1
+    }
+  ]
+}

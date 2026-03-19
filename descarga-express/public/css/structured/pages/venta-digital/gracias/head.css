@@ -1,0 +1,4 @@
+/* Structured entrypoint for venta-digital/gracias.
+   Imports preserve the original order to avoid visual drift. */
+
+@import url("/css/pages/www-dehonline-es/venta-digital/gracias/style-001.css");

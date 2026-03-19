@@ -31,6 +31,84 @@ const TELEMETRY_GUARD_SCRIPT = `<script id="${TELEMETRY_GUARD_ID}">(function(){v
 const FEDOPS_STUB_SCRIPT = `<script id="${FEDOPS_STUB_ID}">(function(){window.fedops=window.fedops||{};window.fedops.apps=window.fedops.apps||{};window.fedops.phaseStarted=window.fedops.phaseStarted||function(){return function(){}};window.fedops.phaseEnded=window.fedops.phaseEnded||function(){return function(){}};window.fedops.reportError=window.fedops.reportError||function(){};})();</script>`;
 const THUNDERBOLT_SCRIPT_PATTERN = /wix-thunderbolt|thunderbolt-platform|thunderbolt-features|thunderbolt\/dist/i;
 const THUNDERBOLT_PRELOAD_PATTERN = /siteassets\.parastorage\.com\/pages\/pages\/thunderbolt|static\.parastorage\.com\/services\/search-app|static\.parastorage\.com\/services\/form-app/i;
+const EXTERNAL_FONT_PATTERN = /fonts\.googleapis\.com|fonts\.gstatic\.com/i;
+const EXTERNAL_CHAT_PATTERN = /cdn\.jsdelivr\.net\/gh\/SoporteSquads\/SquadsChat|auto\.srv791713\.hstgr\.cloud/i;
+
+function localizeWixAssetUrl(urlText) {
+  if (typeof urlText !== 'string' || !urlText) return urlText;
+
+  let next = urlText;
+
+  next = next.replace(
+    /https?:\/\/www\.dehonline\.es\/_partials\/wix-thunderbolt\/dist\/([^"'`\s<)]+)/gi,
+    '/_partials/wix-thunderbolt/dist/$1'
+  );
+
+  next = next.replace(
+    /https?:\/\/static\.parastorage\.com\/unpkg\/([^"'`\s<)]+)/gi,
+    '/assets/js/unpkg/$1'
+  );
+
+  next = next.replace(
+    /https?:\/\/static\.parastorage\.com\/services\/([^"'`\s<)]+?\.css)(?=["'`\s<)]|$)/gi,
+    '/assets/css/services/$1'
+  );
+
+  next = next.replace(
+    /https?:\/\/static\.parastorage\.com\/services\/([^"'`\s<)]+?)(?=["'`\s<)]|$)/gi,
+    '/assets/js/services/$1'
+  );
+
+  next = next.replace(
+    /https?:\/\/static\.parastorage\.com\/pages\/pages\/([^"'`\s<)]+)(?=["'`\s<)]|$)/gi,
+    '/assets/misc/pages/pages/$1'
+  );
+
+  next = next.replace(
+    /https?:\/\/siteassets\.parastorage\.com\/([^"'`\s<)]+)(?=["'`\s<)]|$)/gi,
+    '/assets/misc/siteassets.parastorage.com/$1'
+  );
+
+  next = next.replace(
+    /https?:\/\/static\.wixstatic\.com\/media\/([^"'`\s<)]+)(?=["'`\s<)]|$)/gi,
+    '/assets/img/media/$1'
+  );
+
+  next = next.replace(
+    /https?:\/\/static\.wixstatic\.com\/([^"'`\s<)]+)(?=["'`\s<)]|$)/gi,
+    '/assets/misc/static.wixstatic.com/$1'
+  );
+
+  next = next.replace(
+    /https?:\/\/video\.wixstatic\.com\/([^"'`\s<)]+)(?=["'`\s<)]|$)/gi,
+    '/assets/misc/video.wixstatic.com/$1'
+  );
+
+  return next;
+}
+
+function rewriteKnownExternalAssets(text) {
+  return localizeWixAssetUrl(text)
+    .replace(/https?:\/\/static\.wixstatic\.com(?=\/|")/gi, '/assets/misc/static.wixstatic.com')
+    .replace(/https?:\/\/video\.wixstatic\.com(?=\/|")/gi, '/assets/misc/video.wixstatic.com')
+    .replace(/https?:\/\/static\.parastorage\.com\/unpkg(?=\/|")/gi, '/assets/js/unpkg')
+    .replace(/https?:\/\/static\.parastorage\.com\/services(?=\/|")/gi, '/assets/js/services')
+    .replace(/https?:\/\/static\.parastorage\.com(?=\/|")/gi, '/assets/js')
+    .replace(/https?:\/\/viewer-apps\.parastorage\.com(?=\/|")/gi, '/assets/misc/viewer-apps.parastorage.com')
+    .replace(/https?:\/\/viewer-assets\.parastorage\.com(?=\/|")/gi, '/assets/misc/viewer-assets.parastorage.com')
+    .replace(/https?:\/\/siteassets\.parastorage\.com(?=\/|")/gi, '/assets/misc/siteassets.parastorage.com')
+    .replace(/https?:\/\/pages\.parastorage\.com(?=\/|")/gi, '')
+    .replace(/https?:\/\/staticorigin\.wixstatic\.com(?=\/|")/gi, '')
+    .replace(/https?:\/\/fallback\.wix\.com(?=\/|")/gi, '')
+    .replace(/https?:\/\/(?:www\.wix\.com|apps\.wix\.com|bookings\.wixapps\.net)(?=\/|")/gi, '')
+    .replace(/https?:\/\/www-dehonline-es\.filesusr\.com(?=\/|")/gi, '/assets/misc/www-dehonline-es.filesusr.com')
+    .replace(/https?:\/\/cdn\.jsdelivr\.net\/gh\/SoporteSquads\/SquadsChat[^"'`\s<)]*/gi, '')
+    .replace(/https?:\/\/auto\.srv791713\.hstgr\.cloud\/[^"'`\s<)]*/gi, '')
+    .replace(/https?:\/\/browser\.sentry-cdn\.com\/[^"'`\s<)]*/gi, '')
+    .replace(/https?:\/\/[^"'`\s<)]*@sentry(?:-next)?\.wixpress\.com\/[^"'`\s<)]*/gi, '')
+    .replace(/https?:\/\/fonts\.googleapis\.com\/[^"'`\s<)]*/gi, '')
+    .replace(/https?:\/\/fonts\.gstatic\.com\/[^"'`\s<)]*/gi, '');
+}
 
 function parseArgs(argv) {
   const options = {
@@ -291,7 +369,7 @@ function patchViewerJson(jsonText, changes, localUrl, localSiteBase) {
       const serialized = JSON.stringify(viewerModel)
         .replace(/</g, '\\u003c')
         .replace(/-->/g, '--\\u003e');
-      return serialized;
+      return rewriteKnownExternalAssets(serialized);
 }
 
 function patchViewerModel(text, changes, relPath) {
@@ -363,6 +441,19 @@ function sanitizeHtml(text, changes, relPath) {
   next = linkedInNoscript.text;
   if (linkedInNoscript.count) changes.removed.push(`linkedin noscript blocks (${linkedInNoscript.count})`);
 
+  const externalFontLinks = removeMatchingLinkBlocks(next, EXTERNAL_FONT_PATTERN);
+  next = externalFontLinks.text;
+  if (externalFontLinks.count) changes.removed.push(`external font links (${externalFontLinks.count})`);
+
+  const externalChatLinks = removeMatchingLinkBlocks(next, EXTERNAL_CHAT_PATTERN);
+  next = externalChatLinks.text;
+  if (externalChatLinks.count) changes.removed.push(`external chat links (${externalChatLinks.count})`);
+
+  next = next.replace(/<link\b[^>]*cdn\.jsdelivr\.net\/gh\/SoporteSquads\/SquadsChat[^>]*>/gi, () => {
+    changes.removed.push('external chat stylesheet');
+    return '';
+  });
+
   const sentryComments = removeMatchingComments(next, THIRD_PARTY_PATTERNS.sentry);
   next = sentryComments.text;
   if (sentryComments.count) changes.removed.push(`sentry comments (${sentryComments.count})`);
@@ -375,6 +466,14 @@ function sanitizeHtml(text, changes, relPath) {
     const thunderboltPreloads = removeMatchingLinkBlocks(next, THUNDERBOLT_PRELOAD_PATTERN);
     next = thunderboltPreloads.text;
     if (thunderboltPreloads.count) changes.removed.push(`thunderbolt preloads (${thunderboltPreloads.count})`);
+  }
+
+  if (/search\.html|carpetas-financieras\.html/i.test(relPath)) {
+    const before = next;
+    next = next
+      .replace(/<script type="application\/json" id="wix-essential-viewer-model">[\s\S]*?<\/script>/i, '')
+      .replace(/<script type="application\/json" id="wix-viewer-model">[\s\S]*?<\/script>/i, '');
+    if (next !== before) changes.removed.push(/search\.html/i.test(relPath) ? 'search viewer models' : 'carpetas viewer models');
   }
 
   next = next.replace(/<iframe\b([^>]*?(visitor-analytics\.io|TWIPLA Website Intelligence)[^>]*)><\/iframe>/gi, () => {
@@ -392,6 +491,12 @@ function sanitizeHtml(text, changes, relPath) {
     return `allow="${`${before};${after}`.split(';').map((item) => item.trim()).filter(Boolean).join(';')}"`;
   });
 
+  if (/search\.html|carpetas-financieras\.html/i.test(relPath)) {
+    next = injectTelemetryGuard(next, changes);
+    next = injectFedopsStub(next, changes);
+    return rewriteKnownExternalAssets(next);
+  }
+
   const hasViewerModel = /<script type="application\/json" id="wix-essential-viewer-model">|<script type="application\/json" id="wix-viewer-model">/i.test(next);
   const hasThunderboltScripts = /<script\b[^>]*(?:wix-thunderbolt|thunderbolt-platform|thunderbolt-features|thunderbolt\/dist)[^>]*>/i.test(next);
   const isStaticizedPage = /<!--\s*staticized:/i.test(next)
@@ -404,7 +509,7 @@ function sanitizeHtml(text, changes, relPath) {
     next = injectFedopsStub(next, changes);
   }
 
-  return next;
+  return rewriteKnownExternalAssets(next);
 }
 
 function formatReport(results, options) {

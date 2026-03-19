@@ -1,0 +1,763 @@
+{
+  "filesChecked": 189,
+  "filesChanged": 178,
+  "metaTagsRemoved": 2078,
+  "entries": [
+    {
+      "file": "sites/documbox.dehonline.es/index.html",
+      "metaTagsRemoved": 0
+    },
+    {
+      "file": "sites/panel.dehonline.es/auth/login.html",
+      "metaTagsRemoved": 0
+    },
+    {
+      "file": "sites/soporte.dehonline.es/certificados-digitales.html",
+      "metaTagsRemoved": 6
+    },
+    {
+      "file": "sites/soporte.dehonline.es/index.html",
+      "metaTagsRemoved": 6
+    },
+    {
+      "file": "sites/soporte.dehonline.es/mi-panel-certibox.html",
+      "metaTagsRemoved": 6
+    },
+    {
+      "file": "sites/soporte.dehonline.es/notificaciones-electrónicas.html",
+      "metaTagsRemoved": 6
+    },
+    {
+      "file": "sites/soporte.dehonline.es/otras-consultas.html",
+      "metaTagsRemoved": 6
+    },
+    {
+      "file": "sites/soporte.dehonline.es/signbox.html",
+      "metaTagsRemoved": 6
+    },
+    {
+      "file": "sites/www.connectbox.es.html",
+      "metaTagsRemoved": 8
+    },
+    {
+      "file": "sites/www.consola.dehonline.es/email-certificado.html",
+      "metaTagsRemoved": 6
+    },
+    {
+      "file": "sites/www.consola.dehonline.es/index.html",
+      "metaTagsRemoved": 6
+    },
+    {
+      "file": "sites/www.dehonline.es/360homeservice.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/acceso-clientes.html",
+      "metaTagsRemoved": 10
+    },
+    {
+      "file": "sites/www.dehonline.es/acuerdo-ecpf.html",
+      "metaTagsRemoved": 10
+    },
+    {
+      "file": "sites/www.dehonline.es/acuerdo-ecpj.html",
+      "metaTagsRemoved": 10
+    },
+    {
+      "file": "sites/www.dehonline.es/acuerdo-girona-pf.html",
+      "metaTagsRemoved": 10
+    },
+    {
+      "file": "sites/www.dehonline.es/acuerdo-girona-pj.html",
+      "metaTagsRemoved": 10
+    },
+    {
+      "file": "sites/www.dehonline.es/ad-comunidad.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/administracion-fincas.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/af-alicante.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/af-girona-finalizada.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/af-girona.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/af-nuevo-servicios.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/app-vigiladas.html",
+      "metaTagsRemoved": 10
+    },
+    {
+      "file": "sites/www.dehonline.es/apttcb.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/asesorias-despachos-profesionales.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/asesorlex.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/bankbox-demo-form.html",
+      "metaTagsRemoved": 10
+    },
+    {
+      "file": "sites/www.dehonline.es/bankbox-demo.html",
+      "metaTagsRemoved": 10
+    },
+    {
+      "file": "sites/www.dehonline.es/bankbox.html",
+      "metaTagsRemoved": 10
+    },
+    {
+      "file": "sites/www.dehonline.es/blog/categories/administración-de-fincas.html",
+      "metaTagsRemoved": 6
+    },
+    {
+      "file": "sites/www.dehonline.es/blog/categories/inteligencia-artificial.html",
+      "metaTagsRemoved": 6
+    },
+    {
+      "file": "sites/www.dehonline.es/blog/page/2.html",
+      "metaTagsRemoved": 10
+    },
+    {
+      "file": "sites/www.dehonline.es/blog/page/3.html",
+      "metaTagsRemoved": 10
+    },
+    {
+      "file": "sites/www.dehonline.es/blog/page/4.html",
+      "metaTagsRemoved": 10
+    },
+    {
+      "file": "sites/www.dehonline.es/blog/tags/administrador-de-fincas.html",
+      "metaTagsRemoved": 10
+    },
+    {
+      "file": "sites/www.dehonline.es/blog/tags/cae.html",
+      "metaTagsRemoved": 10
+    },
+    {
+      "file": "sites/www.dehonline.es/blog/tags/comunidades-de-propietarios.html",
+      "metaTagsRemoved": 10
+    },
+    {
+      "file": "sites/www.dehonline.es/blog/tags/documbox.html",
+      "metaTagsRemoved": 10
+    },
+    {
+      "file": "sites/www.dehonline.es/blog/tags/homologación.html",
+      "metaTagsRemoved": 10
+    },
+    {
+      "file": "sites/www.dehonline.es/blog/tags/ia.html",
+      "metaTagsRemoved": 10
+    },
+    {
+      "file": "sites/www.dehonline.es/blog/tags/incidencias.html",
+      "metaTagsRemoved": 10
+    },
+    {
+      "file": "sites/www.dehonline.es/blog/tags/proveedores.html",
+      "metaTagsRemoved": 10
+    },
+    {
+      "file": "sites/www.dehonline.es/blog.html",
+      "metaTagsRemoved": 10
+    },
+    {
+      "file": "sites/www.dehonline.es/book-online.html",
+      "metaTagsRemoved": 10
+    },
+    {
+      "file": "sites/www.dehonline.es/booking-calendar/cita-comercial-telefónica.html",
+      "metaTagsRemoved": 10
+    },
+    {
+      "file": "sites/www.dehonline.es/booking-calendar/cita-presencial.html",
+      "metaTagsRemoved": 10
+    },
+    {
+      "file": "sites/www.dehonline.es/booking-calendar/cita-videoconferencia.html",
+      "metaTagsRemoved": 10
+    },
+    {
+      "file": "sites/www.dehonline.es/booking-calendar/reserva-demo.html",
+      "metaTagsRemoved": 10
+    },
+    {
+      "file": "sites/www.dehonline.es/canaldedenuncias.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/carpetas-financieras.html",
+      "metaTagsRemoved": 10
+    },
+    {
+      "file": "sites/www.dehonline.es/certibox.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/certificado-eidas.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/comunidad-solar.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/comunidad.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/condiciones-de-uso.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/contacto.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/datos-com-propietarios-comunidades.html",
+      "metaTagsRemoved": 10
+    },
+    {
+      "file": "sites/www.dehonline.es/documbox-info.html",
+      "metaTagsRemoved": 10
+    },
+    {
+      "file": "sites/www.dehonline.es/emovili.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/encuesta-erp.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/evolucion-suscriptores.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/facturas-deh-tucomunidad.html",
+      "metaTagsRemoved": 10
+    },
+    {
+      "file": "sites/www.dehonline.es/faq.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/grupos/administracion-publica/discussion/index.html",
+      "metaTagsRemoved": 0
+    },
+    {
+      "file": "sites/www.dehonline.es/grupos/comunicacion-con-clientes/discussion/index.html",
+      "metaTagsRemoved": 0
+    },
+    {
+      "file": "sites/www.dehonline.es/grupos/comunicacion-con-clientes.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/grupos/energia/discussion/index.html",
+      "metaTagsRemoved": 0
+    },
+    {
+      "file": "sites/www.dehonline.es/grupos/energia.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/grupos/factura-electronica/discussion/index.html",
+      "metaTagsRemoved": 0
+    },
+    {
+      "file": "sites/www.dehonline.es/grupos/factura-electronica.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/grupos/financiacion-pymes/discussion/index.html",
+      "metaTagsRemoved": 0
+    },
+    {
+      "file": "sites/www.dehonline.es/grupos/financiacion-pymes.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/grupos/riesgos-laborales/discussion/index.html",
+      "metaTagsRemoved": 0
+    },
+    {
+      "file": "sites/www.dehonline.es/grupos/riesgos-laborales.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/grupos/tecnologia/discussion/index.html",
+      "metaTagsRemoved": 0
+    },
+    {
+      "file": "sites/www.dehonline.es/grupos/tecnologia.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/homologacionproveedores.html",
+      "metaTagsRemoved": 10
+    },
+    {
+      "file": "sites/www.dehonline.es/index.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/info-control-exp-notificaciones.html",
+      "metaTagsRemoved": 10
+    },
+    {
+      "file": "sites/www.dehonline.es/landing-comunidad.html",
+      "metaTagsRemoved": 10
+    },
+    {
+      "file": "sites/www.dehonline.es/lexbox-prl-n.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/lexbox.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/logs-api-panel.html",
+      "metaTagsRemoved": 10
+    },
+    {
+      "file": "sites/www.dehonline.es/mas-ingresos.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/onzane-acceso.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/onzane-app.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/onzane.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/orama.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/partners/app_vecinos.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/partners/avocaty.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/partners/bilky.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/partners/breogan.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/partners/checkit.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/partners/comsolar.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/partners/crealsa.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/partners/dmd_asesores.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/partners/dydes.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/partners/eevidence.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/partners/emovili.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/partners/fandit.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/partners/finergia.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/partners/foro_proteccion.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/partners/gigas.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/partners/librebor.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/partners/orama.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/partners/processus.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/partners/rinc.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/partners/ringover.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/partners/singular.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/partners/sinvisitas.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/partners/tipsi.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/partners/tracedat.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/partners/tuio.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/partners/xeoris.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/planes-af.html",
+      "metaTagsRemoved": 10
+    },
+    {
+      "file": "sites/www.dehonline.es/planes-as.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/plataforma-control-exp-notificaciones.html",
+      "metaTagsRemoved": 10
+    },
+    {
+      "file": "sites/www.dehonline.es/pol%C3%ADtica-de-privacidad-para-redes-sociales.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/politica-de-compliance.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/politica-de-cookies.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/politica-de-privacidad.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/política-de-privacidad-para-redes-sociales.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/post/administradores-de-fincas-guardianes-de-la-seguridad-y-la-excelencia.html",
+      "metaTagsRemoved": 13
+    },
+    {
+      "file": "sites/www.dehonline.es/post/ahorra-tiempo-en-la-gestión-de-tus-comunidades-con-lexbox-2-0-tú-a-lo-tuyo-y-nosotros-a-lo-nuestr.html",
+      "metaTagsRemoved": 15
+    },
+    {
+      "file": "sites/www.dehonline.es/post/automatización-de-tareas-y-procesos-en-asesorías.html",
+      "metaTagsRemoved": 15
+    },
+    {
+      "file": "sites/www.dehonline.es/post/buenas-noticias-llega-el-sol.html",
+      "metaTagsRemoved": 15
+    },
+    {
+      "file": "sites/www.dehonline.es/post/carpetas-financieras-digitales-facilita-el-acceso-a-financiación-para-tu-pyme.html",
+      "metaTagsRemoved": 13
+    },
+    {
+      "file": "sites/www.dehonline.es/post/cen-el-control-que-tu-despacho-necesitaba-para-gestionar-notificaciones-electrónicas.html",
+      "metaTagsRemoved": 13
+    },
+    {
+      "file": "sites/www.dehonline.es/post/connectbox-el-primer-y-único-marketplace-para-pymes.html",
+      "metaTagsRemoved": 15
+    },
+    {
+      "file": "sites/www.dehonline.es/post/copia-de-qué-es-el-reglamento-eidas-y-qué-ventajas-tiene.html",
+      "metaTagsRemoved": 15
+    },
+    {
+      "file": "sites/www.dehonline.es/post/copia-de-qué-es-la-firma-electrónica-con-otp-y-qué-ventajas-tiene.html",
+      "metaTagsRemoved": 15
+    },
+    {
+      "file": "sites/www.dehonline.es/post/copia-de-retos-y-oportunidades-de-la-transformación-digital-en-asesorías.html",
+      "metaTagsRemoved": 15
+    },
+    {
+      "file": "sites/www.dehonline.es/post/cuáles-son-los-tipos-de-certificados-digitales.html",
+      "metaTagsRemoved": 15
+    },
+    {
+      "file": "sites/www.dehonline.es/post/cómo-protegerte-del-calor-extremo-en-tu-comunidad-de-propietarios.html",
+      "metaTagsRemoved": 15
+    },
+    {
+      "file": "sites/www.dehonline.es/post/cómo-saber-cuándo-caduca-mi-certificado-digital.html",
+      "metaTagsRemoved": 15
+    },
+    {
+      "file": "sites/www.dehonline.es/post/deh-online-adopta-una-estrategia-enfocada-en-la-experiencia-del-cliente-colocando-al-cliente-en-el.html",
+      "metaTagsRemoved": 13
+    },
+    {
+      "file": "sites/www.dehonline.es/post/demasiado-pequeño-para-digitalizar-desmitificando-el-uso-de-herramientas-para-digitalizar-tu-admin.html",
+      "metaTagsRemoved": 13
+    },
+    {
+      "file": "sites/www.dehonline.es/post/el-futuro-de-la-integración-entre-sistemas-y-la-oportunidad-para-las-empresas.html",
+      "metaTagsRemoved": 13
+    },
+    {
+      "file": "sites/www.dehonline.es/post/el-verano-del-administrador-de-fincas-descanso-de-unos-tormenta-perfecta-de-otros.html",
+      "metaTagsRemoved": 13
+    },
+    {
+      "file": "sites/www.dehonline.es/post/ellas-son-mis-amigas-pero-aún-no-lo-saben.html",
+      "metaTagsRemoved": 13
+    },
+    {
+      "file": "sites/www.dehonline.es/post/emisión-del-certificado-digital-qué-es-la-vídeo-identificación.html",
+      "metaTagsRemoved": 15
+    },
+    {
+      "file": "sites/www.dehonline.es/post/equipos-de-extinción-de-incendios.html",
+      "metaTagsRemoved": 15
+    },
+    {
+      "file": "sites/www.dehonline.es/post/estrenamos-nueva-imagen-en-la-web-de-deh-online.html",
+      "metaTagsRemoved": 13
+    },
+    {
+      "file": "sites/www.dehonline.es/post/hemos-estado-trabajando-en-esto-y-queremos-que-lo-veas.html",
+      "metaTagsRemoved": 15
+    },
+    {
+      "file": "sites/www.dehonline.es/post/hsm-la-cámara-acorazada-para-tus-certificados-digitales.html",
+      "metaTagsRemoved": 13
+    },
+    {
+      "file": "sites/www.dehonline.es/post/la-coordinación-de-actividades-empresariales-cae.html",
+      "metaTagsRemoved": 15
+    },
+    {
+      "file": "sites/www.dehonline.es/post/la-inteligencia-artificial-está-transformando-la-administración-de-fincas-de-verdad-no-en-powerpoi.html",
+      "metaTagsRemoved": 15
+    },
+    {
+      "file": "sites/www.dehonline.es/post/las-claves-de-la-venta-o-la-magia-de-un-café.html",
+      "metaTagsRemoved": 13
+    },
+    {
+      "file": "sites/www.dehonline.es/post/nos-desnudamos.html",
+      "metaTagsRemoved": 13
+    },
+    {
+      "file": "sites/www.dehonline.es/post/notificaciones-de-la-agencia-tributaria.html",
+      "metaTagsRemoved": 15
+    },
+    {
+      "file": "sites/www.dehonline.es/post/prevención-de-riesgos-en-los-meses-fríos-y-lluviosos.html",
+      "metaTagsRemoved": 15
+    },
+    {
+      "file": "sites/www.dehonline.es/post/puedo-correr-algún-riesgo-mi-comunidad-si-contrato-un-servicio-con-el-proveedor-más-barato.html",
+      "metaTagsRemoved": 13
+    },
+    {
+      "file": "sites/www.dehonline.es/post/puntos-clave-en-la-prevención-de-riesgos-laborales-durante-la-puesta-a-punto-de-las-piscinas.html",
+      "metaTagsRemoved": 15
+    },
+    {
+      "file": "sites/www.dehonline.es/post/que-es-eso-de-los-okrs.html",
+      "metaTagsRemoved": 15
+    },
+    {
+      "file": "sites/www.dehonline.es/post/qué-es-el-apoderamiento-electrónico.html",
+      "metaTagsRemoved": 15
+    },
+    {
+      "file": "sites/www.dehonline.es/post/qué-es-el-reglamento-eidas-y-qué-ventajas-tiene.html",
+      "metaTagsRemoved": 15
+    },
+    {
+      "file": "sites/www.dehonline.es/post/renovación-del-certificado-digital-métodos-para-renovarlo.html",
+      "metaTagsRemoved": 15
+    },
+    {
+      "file": "sites/www.dehonline.es/post/retos-y-oportunidades-de-la-transformación-digital-en-asesorías.html",
+      "metaTagsRemoved": 15
+    },
+    {
+      "file": "sites/www.dehonline.es/post/riesgos-de-descarga-y-dispositivos-eléctricos.html",
+      "metaTagsRemoved": 15
+    },
+    {
+      "file": "sites/www.dehonline.es/post/riesgos-de-trabajar-en-alturas.html",
+      "metaTagsRemoved": 15
+    },
+    {
+      "file": "sites/www.dehonline.es/post/sabes-realmente-quién-trabaja-en-tus-comunidades-la-homologación-de-proveedores-como-sello-de-gara.html",
+      "metaTagsRemoved": 13
+    },
+    {
+      "file": "sites/www.dehonline.es/post/software-de-administración-de-fincas-tu-aliado-en-la-gestión-de-comunidades-de-propietarios.html",
+      "metaTagsRemoved": 13
+    },
+    {
+      "file": "sites/www.dehonline.es/post/tengo-un-problemón-con-los-certificados-digitales-de-mis-pymes-y-autónomos.html",
+      "metaTagsRemoved": 13
+    },
+    {
+      "file": "sites/www.dehonline.es/post/toma-el-control-de-tus-certificados-digitales-con-certibox-hsm.html",
+      "metaTagsRemoved": 15
+    },
+    {
+      "file": "sites/www.dehonline.es/post/trabajo-en-jardines.html",
+      "metaTagsRemoved": 15
+    },
+    {
+      "file": "sites/www.dehonline.es/post/tramitación-online-con-la-administración-pública.html",
+      "metaTagsRemoved": 15
+    },
+    {
+      "file": "sites/www.dehonline.es/post/vas-a-pedir-un-préstamo-como-pyme-esto-es-lo-que-necesitas-tener-a-mano.html",
+      "metaTagsRemoved": 13
+    },
+    {
+      "file": "sites/www.dehonline.es/post/ventajas-de-instalar-el-certificado-digital-en-la-nube.html",
+      "metaTagsRemoved": 15
+    },
+    {
+      "file": "sites/www.dehonline.es/promo-checkit.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/pymes.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/redireccion-parrilla.html",
+      "metaTagsRemoved": 10
+    },
+    {
+      "file": "sites/www.dehonline.es/search.html",
+      "metaTagsRemoved": 10
+    },
+    {
+      "file": "sites/www.dehonline.es/service-page/cita-comercial-telefónica/index.html",
+      "metaTagsRemoved": 10
+    },
+    {
+      "file": "sites/www.dehonline.es/service-page/cita-presencial/index.html",
+      "metaTagsRemoved": 10
+    },
+    {
+      "file": "sites/www.dehonline.es/service-page/cita-videoconferencia/index.html",
+      "metaTagsRemoved": 10
+    },
+    {
+      "file": "sites/www.dehonline.es/service-page/reserva-demo/index.html",
+      "metaTagsRemoved": 10
+    },
+    {
+      "file": "sites/www.dehonline.es/servicios-as.html",
+      "metaTagsRemoved": 10
+    },
+    {
+      "file": "sites/www.dehonline.es/servicios-pymes.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/signbox.html",
+      "metaTagsRemoved": 0
+    },
+    {
+      "file": "sites/www.dehonline.es/soluciones.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/testingqa.html",
+      "metaTagsRemoved": 10
+    },
+    {
+      "file": "sites/www.dehonline.es/tsa.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/tuio-vecinos.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/tuio.html",
+      "metaTagsRemoved": 12
+    },
+    {
+      "file": "sites/www.dehonline.es/valoraciones.html",
+      "metaTagsRemoved": 10
+    },
+    {
+      "file": "sites/www.dehonline.es/venta-digital/confirmacion/index.html",
+      "metaTagsRemoved": 10
+    },
+    {
+      "file": "sites/www.dehonline.es/venta-digital/gracias/index.html",
+      "metaTagsRemoved": 0
+    },
+    {
+      "file": "sites/www.soporte.dehonline.es/index.html",
+      "metaTagsRemoved": 6
+    }
+  ]
+}

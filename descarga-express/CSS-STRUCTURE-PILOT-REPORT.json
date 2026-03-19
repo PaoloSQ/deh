@@ -1,0 +1,26 @@
+{
+  "targets": 3,
+  "filesChanged": 3,
+  "wrapperFilesWritten": 3,
+  "stylesheetLinksConsolidated": 62,
+  "entries": [
+    {
+      "file": "sites/www.dehonline.es/index.html",
+      "wrapper": "public/css/structured/pages/home/head.css",
+      "changed": true,
+      "hrefs": 23
+    },
+    {
+      "file": "sites/www.dehonline.es/360homeservice.html",
+      "wrapper": "public/css/structured/pages/360homeservice/head.css",
+      "changed": true,
+      "hrefs": 20
+    },
+    {
+      "file": "sites/www.dehonline.es/acuerdo-ecpj.html",
+      "wrapper": "public/css/structured/pages/acuerdo-ecpj/head.css",
+      "changed": true,
+      "hrefs": 19
+    }
+  ]
+}
