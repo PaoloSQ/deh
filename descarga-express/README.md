@@ -95,3 +95,24 @@ Salidas:
 
 - `VERIFY-PAGES-REPORT.md`
 - `VERIFY-PAGES-REPORT.json`
+
+## Inventario actual de rutas
+
+Genera la foto real de rutas servidas hoy desde `sites/` y cruza esa lista con `../reports/missing_pages_remote.txt`.
+
+```bash
+npm run inventory-routes
+```
+
+Salidas:
+
+- `../reports/current_routes_actual.txt`
+- `../reports/pending_pages_real.txt`
+- `../reports/extra_local_pages_vs_missing.txt`
+- `ROUTE-INVENTORY-SUMMARY.md`
+
+Notas:
+
+- `current_routes_actual.txt` es la fuente de verdad del inventario actual.
+- `pending_pages_real.txt` es la lista buena de pendientes reales tras normalizacion.
+- `HTML-ROUTES.md` puede quedar como snapshot historico si no se ha regenerado despues de cambios grandes en `sites/`.

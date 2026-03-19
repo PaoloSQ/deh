@@ -1,5 +1,12 @@
 # HTML Routes
 
+Nota 2026-03-19:
+
+- Este documento ya no refleja por si solo el estado real del proyecto.
+- La fuente de verdad actual del inventario es `../reports/current_routes_actual.txt`.
+- El resumen depurado contra `missing_pages_remote.txt` vive en `ROUTE-INVENTORY-SUMMARY.md`.
+- Si este archivo no se ha regenerado despues de cambios grandes en `sites/`, tratelo como snapshot historico.
+
 Base URL de referencia:
 
 - `https://studious-space-halibut-jx65j9xj7752v74-8080.app.github.dev`

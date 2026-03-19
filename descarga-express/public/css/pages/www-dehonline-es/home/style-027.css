@@ -1,1841 +1,1845 @@
-
-    #fswyo {
-        width: auto;
-        min-height: 40px;
-    }
-
-    #pageBackground_fswyo {
-        --bg-position: absolute;
-        --bg-overlay-color: rgb(var(--color_11));
-        --bg-gradient: none;
-    }
-
-    #comp-mb56i7nd {
-        --fill-layer-image-opacity: 0.5;
-        --bg-overlay-color: rgb(0, 0, 0);
-        --bg-gradient: none;
-        min-width: 980px;
-    }
-
-    #comp-mb56i7ni3 {
-        --text-direction: var(--wix-opt-in-direction);
-    }
-
-    #comp-mb56i7nl2 {
-        --text-direction: var(--wix-opt-in-direction);
-    }
-
-    #comp-mb56i7nk2 {
-        --text-direction: var(--wix-opt-in-direction);
-    }
-
-    #comp-m5utn3xf {
-        --bg-overlay-color: rgb(var(--color_11));
-        --bg-gradient: none;
-        min-width: 980px;
-    }
-
-    #comp-m6451tfk {
-        --bg-overlay-color: transparent;
-        --bg-gradient: none;
-        --padding: 0px;
-        --margin: 0px;
-        min-width: 980px;
-        --firstChildMarginTop: -1px;
-        --lastChildMarginBottom: -1px;
-        --direction: ltr;
-    }
-
-    #comp-m6451ty81 {
-        --bg-overlay-color: rgb(var(--color_36));
-        --bg-gradient: none;
-        width: 100%;
-        --column-width: 980px;
-        --column-flex: 980;
-    }
-
-    #comp-m6451tyv {
-        --text-direction: var(--wix-opt-in-direction);
-    }
-
-    #comp-m6451tyt7 {
-        --height: 200px;
-        --width: 309px;
-    }
-
-    #comp-m6451tyh {
-        --text-direction: var(--wix-opt-in-direction);
-    }
-
-    #comp-m6451tye2 {
-        --height: 200px;
-        --width: 309px;
-    }
-
-    #comp-m6451tz2 {
-        --text-direction: var(--wix-opt-in-direction);
-    }
-
-    #comp-m6451tz08 {
-        --height: 200px;
-        --width: 309px;
-    }
-
-    #comp-mhkgykr8 {
-        --shc-mutated-brightness: 41, 20, 27;
-    }
-
-    #comp-mhkgykrd2 {
-        --height: 52px;
-        --width: 46px;
-    }
-
-    #comp-mkxso3l0 {
-        --text-direction: var(--wix-opt-in-direction);
-    }
-
-    #comp-mhkgykrh1 {
-        --text-direction: var(--wix-opt-in-direction);
-    }
-
-    #comp-mgex96ee {
-        --shc-mutated-brightness: 128, 128, 128;
-    }
-
-    #comp-mgex96ep {
-        --height: 58px;
-        --width: 154px;
-        --mask-position: 0% 0%;
-        --mask-size: 100% 100%;
-        --mask-repeat: no-repeat;
-    }
-
-    #comp-mgex96en {
-        --text-direction: var(--wix-opt-in-direction);
-    }
-
-    #comp-mgex4ddg {
-        --shc-mutated-brightness: 128, 128, 128;
-    }
-
-    #comp-mclt1rxz {
-        --height: 58px;
-        --width: 107px;
-    }
-
-    #comp-mcltezrx {
-        --text-direction: var(--wix-opt-in-direction);
-    }
-
-    #comp-mirg7kd5 {
-        --shc-mutated-brightness: 128, 128, 128;
-    }
-
-    #comp-mirg7kdd {
-        --height: 52px;
-        --width: 46px;
-        --mask-image: url("data:image/svg+xml,%3Csvg preserveAspectRatio='none' data-bbox='20 20 160 160' viewBox='20 20 160 160' height='200' width='200' xmlns='https://www.w3.org/2000/svg' data-type='shape'%3E%3Cg%3E%3Cpath d='M180 20v160H20V20h160z'/%3E%3C/g%3E%3C/svg%3E%0A");
-        --mask-position: 0% 0%;
-        --mask-size: 100% 100%;
-        --mask-repeat: no-repeat;
-    }
-
-    #comp-mko5kjj5 {
-        --text-direction: var(--wix-opt-in-direction);
-    }
-
-    #comp-mirg7kdf {
-        --text-direction: var(--wix-opt-in-direction);
-    }
-
-    #comp-mauw28at {
-        --text-direction: var(--wix-opt-in-direction);
-    }
-
-    #comp-mauw4vgq {
-        --opacity: 1;
-    }
-
-    #comp-mauw6137 {
-        --opacity: 1;
-    }
-
-    #comp-mbqp35z2 {
-        --opacity: 1;
-    }
-
-    #comp-m66dcvli {
-        --fill-layer-image-opacity: 1;
-        --bg-overlay-color: rgb(var(--color_36));
-        --bg-gradient: none;
-        min-width: 980px;
-    }
-
-    #comp-m66de3kl {
-        --height: 337px;
-        --width: 1140px;
-    }
-
-    #comp-mh1ro4f21 {
-        --height: 401px;
-    }
-
-    #comp-m66djnfx {
-        --fill-opacity: 0.78;
-        --stroke-width: 0;
-        --stroke: #33343F;
-        --stroke-opacity: 1;
-        --fill: #282626;
-    }
-
-    #comp-m6693875 {
-        --text-direction: var(--wix-opt-in-direction);
-    }
-
-    #comp-makvwzc5 {
-        --fill-layer-image-opacity: 1;
-        --bg-overlay-color: rgb(var(--color_37));
-        --bg-gradient: none;
-        min-width: 980px;
-    }
-
-    #comp-makvwzcj {
-        --text-direction: var(--wix-opt-in-direction);
-    }
-
-    #comp-makvwzcl1 {
-        --direction: var(--wix-opt-in-direction);
-        --justify-content: center;
-        --item-margin: 15px 15px;
-        --margin-top: -15px;
-        --margin-bottom: -15px;
-        --margin-inline-start: -15px;
-        --margin-inline-end: -15px;
-    }
-
-    [id^="comp-makvwzco__"] {
-        --scale: 1;
-        --bg-overlay-color: rgba(var(--color_36), 0.81);
-        --bg-gradient: none;
-        border-width: 0 0 0 0;
-        border-style: solid solid solid solid;
-        border-color: rgba(176, 169, 134, 1) rgba(176, 169, 134, 1) rgba(176, 169, 134, 1) rgba(176, 169, 134, 1);
-        border-radius: 20px 20px 20px 20px;
-        overflow: clip !important;
-        transform: translateZ(0);
-        margin: -0px;
-    }
-
-    [id^="comp-makvwzcu2__"] {
-        --text-direction: var(--wix-opt-in-direction);
-    }
-
-    [id^="comp-makvwzcw3__"] {
-        --fill-opacity: 1;
-        --stroke-width: 3;
-        --stroke: #FFFFFF;
-        --stroke-opacity: 1;
-        --fill: #FFFFFF;
-        --svg-calculated-padding: 1px 2px 2px 1px;
-        --svg-calculated-width: calc(100% - 3px);
-        --svg-calculated-height: calc(100% - 3px);
-    }
-
-    [id^="comp-mbytc3eo__"] {
-        --shc-mutated-brightness: 128, 128, 128;
-    }
-
-    [id^="comp-makvwzcz5__"] {
-        --height: 152px;
-        --width: 216px;
-    }
-
-    [id="comp-makvwzcz5__item-j9plerjk"] {
-        --height: 152px;
-        --width: 216px;
-        --mask-image: url("data:image/svg+xml,%3Csvg preserveAspectRatio='none' data-bbox='20 20 160 160' viewBox='20 20 160 160' height='200' width='200' xmlns='https://www.w3.org/2000/svg' data-type='shape'%3E%3Cg%3E%3Cpath d='M180 20v160H20V20h160z'/%3E%3C/g%3E%3C/svg%3E%0A");
-        --mask-position: 0% 0%;
-        --mask-size: 100% 100%;
-        --mask-repeat: no-repeat;
-    }
-
-    [id="comp-makvwzcz5__item-3f45e7c5-4497-4b5c-84f1-bbad6cea4901"] {
-        --height: 152px;
-        --width: 216px;
-        --mask-image: url("data:image/svg+xml,%3Csvg preserveAspectRatio='none' data-bbox='20 20 160 160' viewBox='20 20 160 160' height='200' width='200' xmlns='https://www.w3.org/2000/svg' data-type='shape'%3E%3Cg%3E%3Cpath d='M180 20v160H20V20h160z'/%3E%3C/g%3E%3C/svg%3E%0A");
-        --mask-position: 0% 0%;
-        --mask-size: 100% 100%;
-        --mask-repeat: no-repeat;
-    }
-
-    [id="comp-makvwzcz5__item-4baa69a6-4feb-49ff-8c44-e09e698bee31"] {
-        --height: 152px;
-        --width: 216px;
-        --mask-image: url("data:image/svg+xml,%3Csvg preserveAspectRatio='none' data-bbox='20 20 160 160' viewBox='20 20 160 160' height='200' width='200' xmlns='https://www.w3.org/2000/svg' data-type='shape'%3E%3Cg%3E%3Cpath d='M180 20v160H20V20h160z'/%3E%3C/g%3E%3C/svg%3E%0A");
-        --mask-position: 0% 0%;
-        --mask-size: 100% 100%;
-        --mask-repeat: no-repeat;
-    }
-
-    [id="comp-makvwzcz5__item-588aab86-de66-4a8e-ad39-1ed74b88f3a5"] {
-        --height: 152px;
-        --width: 216px;
-        --mask-image: url("data:image/svg+xml,%3Csvg preserveAspectRatio='none' data-bbox='20 20 160 160' viewBox='20 20 160 160' height='200' width='200' xmlns='https://www.w3.org/2000/svg' data-type='shape'%3E%3Cg%3E%3Cpath d='M180 20v160H20V20h160z'/%3E%3C/g%3E%3C/svg%3E%0A");
-        --mask-position: 0% 0%;
-        --mask-size: 100% 100%;
-        --mask-repeat: no-repeat;
-    }
-
-    #comp-m5qnidp97 {
-        --bg-overlay-color: transparent;
-        --bg-gradient: none;
-        min-width: 980px;
-    }
-
-    #comp-m5qnidpb1 {
-        --text-direction: var(--wix-opt-in-direction);
-    }
-
-    #comp-m5qnidpc {
-        --shc-mutated-brightness: 116, 15, 62;
-    }
-
-    #comp-m5qnidpd6 {
-        --text-direction: var(--wix-opt-in-direction);
-    }
-
-    #comp-m5qnidpe2 {
-        --text-direction: var(--wix-opt-in-direction);
-    }
-
-    #comp-m5qnidpg6 {
-        --min-height: 43px;
-        --text-direction: var(--wix-opt-in-direction);
-    }
-
-    #comp-m5qnidph7 {
-        --min-height: 33px;
-        --text-direction: var(--wix-opt-in-direction);
-    }
-
-    #comp-m5qnidpj4 {
-        --min-height: 43px;
-        --text-direction: var(--wix-opt-in-direction);
-    }
-
-    #comp-m5qnidpk3 {
-        --min-height: 33px;
-        --text-direction: var(--wix-opt-in-direction);
-    }
-
-    #comp-m5qnidpm {
-        --min-height: 43px;
-        --text-direction: var(--wix-opt-in-direction);
-    }
-
-    #comp-m5qnidpn {
-        --min-height: 33px;
-        --text-direction: var(--wix-opt-in-direction);
-    }
-
-    #comp-m5qnidpo {
-        --shc-mutated-brightness: 26, 26, 32;
-    }
-
-    #comp-m5qnidpo4 {
-        --text-direction: var(--wix-opt-in-direction);
-    }
-
-    #comp-m5qnidpp8 {
-        --text-direction: var(--wix-opt-in-direction);
-    }
-
-    #comp-m5qnidpq11 {
-        --shc-mutated-brightness: 101, 7, 124;
-    }
-
-    #comp-m5qnidpr3 {
-        --fill-opacity: 1;
-        --stroke-width: 0;
-        --stroke: #5E97FF;
-        --stroke-opacity: 1;
-        --fill: #FFFFFF;
-    }
-
-    #comp-m5qnidps7 {
-        --text-direction: var(--wix-opt-in-direction);
-    }
-
-    #comp-m5qnidpt6 {
-        --text-direction: var(--wix-opt-in-direction);
-    }
-
-    #comp-m5qnidpu9 {
-        --shc-mutated-brightness: 15, 52, 103;
-    }
-
-    #comp-m5qnidpv3 {
-        --text-direction: var(--wix-opt-in-direction);
-    }
-
-    #comp-m5qnidpw1 {
-        --text-direction: var(--wix-opt-in-direction);
-    }
-
-    #comp-m5qnidpx1 {
-        --shc-mutated-brightness: 128, 93, 0;
-    }
-
-    #comp-m5qnidpy8 {
-        --height: 65px;
-        --width: 65px;
-    }
-
-    #comp-m5qnidpz6 {
-        --text-direction: var(--wix-opt-in-direction);
-    }
-
-    #comp-m5qnidq07 {
-        --text-direction: var(--wix-opt-in-direction);
-    }
-
-    #comp-m5qnidq25 {
-        --height: 67px;
-        --width: 65px;
-    }
-
-    #comp-m5qnidq33 {
-        --text-direction: var(--wix-opt-in-direction);
-    }
-
-    #comp-m5qnidq42 {
-        --text-direction: var(--wix-opt-in-direction);
-    }
-
-    #comp-m5qnidq6 {
-        --height: 64px;
-        --width: 71px;
-    }
-
-    #comp-m5qnidq7 {
-        --text-direction: var(--wix-opt-in-direction);
-    }
-
-    #comp-m5qnidq81 {
-        --text-direction: var(--wix-opt-in-direction);
-    }
-
-    #comp-m5qnidqd {
-        --height: 64px;
-        --width: 64px;
-    }
-
-    #comp-m5qnidqe {
-        --text-direction: var(--wix-opt-in-direction);
-    }
-
-    #comp-m5qnidqf1 {
-        --text-direction: var(--wix-opt-in-direction);
-    }
-
-    #comp-m5qnidqh {
-        --height: 65px;
-        --width: 71px;
-    }
-
-    #comp-m5qnidqi1 {
-        --text-direction: var(--wix-opt-in-direction);
-    }
-
-    #comp-m5qnidqj1 {
-        --text-direction: var(--wix-opt-in-direction);
-    }
-
-    #comp-m5qnidqk2 {
-        --fill-layer-image-opacity: 1;
-        --bg-overlay-color: rgb(204, 0, 0);
-        --bg-gradient: none;
-        min-width: 980px;
-    }
-
-    #comp-m5qnidql8 {
-        --text-direction: var(--wix-opt-in-direction);
-    }
-
-    #comp-m5qnidqm2 {
-        --shc-mutated-brightness: 128, 128, 128;
-    }
-
-    #comp-mamoyxjr {
-        --bg-overlay-color: rgb(var(--color_11));
-        --bg-gradient: none;
-        min-width: 980px;
-    }
-
-    #comp-mamoyxk6 {
-        --bg-overlay-color: transparent;
-        --bg-gradient: none;
-        --padding: 0px;
-        --margin: 0px;
-        min-width: 980px;
-        --firstChildMarginTop: -1px;
-        --lastChildMarginBottom: -1px;
-        --direction: ltr;
-    }
-
-    #comp-mamoyxkw {
-        --fill-layer-image-opacity: 0.91;
-        --bg-overlay-color: rgb(var(--color_12));
-        --bg-gradient: none;
-        width: 100%;
-        --column-width: 333px;
-        --column-flex: 333;
-    }
-
-    #comp-m5qnidsm4 {
-        --text-direction: var(--wix-opt-in-direction);
-    }
-
-    #comp-mamoyxkh {
-        --bg-overlay-color: transparent;
-        --bg-gradient: none;
-        width: 100%;
-        --column-width: 647px;
-        --column-flex: 647;
-    }
-
-    .comp-m5qnidso5 {
-        --wix-direction: ltr;
-        --sideBySideCardSpacing▶︎m: 33;
-        --buttonType: 1;
-        --buttonBorderWidth: 0;
-        --cardBorderWidth▶︎m: 1;
-        --imageRatio▶︎m: 2;
-        --secondaryButtonBorderWidth: 1;
-        --cardBorderCornerRadius▶︎m: 17;
-        --buttonBorderRadius: 100;
-        --secondaryButtonType: 3;
-        --groupCardGridTopBottomSpacing: 20.00001;
-        --groupCardGridTopBottomSpacing▶︎m: 20.00001;
-        --shadowDistance▶︎m: 0;
-        --cardBorderCornerRadius: 20;
-        --secondaryButtonBorderRadius: 100;
-        --appBorderWidth: 0;
-        --mobileButtonTextFontSize: 16;
-        --cardBorderWidth: 1;
-        --shadowAngle: 180;
-        --shadowDistance: 0;
-        --shadowBlur: 10;
-        --textFieldBorderWidth: 1;
-        --textFieldBorderRadius: 0;
-        --groupCardGridSideSpacing: 20;
-        --groupCardListTopBottomSpacing: 20;
-        --groupCardListSideSpacing: 20;
-        --groupCardListWidgetTopBottomSpacing: 20;
-        --groupCardListWidgetSideSpacing: 0;
-        --cardSideBySideHeight: 241;
-        --headerAlignment: 1;
-        --imageRatio: 1;
-        --sideBarAlignment: 2;
-        --groupCardGridSpacing: 12;
-        --listWidgetSpacing: 0;
-        --sideBarHorizontalSpacing: 40;
-        --sideBarVerticalSpacing: 24;
-        --sideBarProportion: 30;
-        --feedVerticalSpacing: 24;
-        --feedAlignment: 3;
-        --imageCrop: 1;
-        --imageLayout: 2;
-        --itemTextAlignment: 1;
-        --listWidgetTitleAlignment: 1;
-        --buttonTextFont: normal normal normal 16px/1.4em montserrat;
-        --buttonTextFont▶︎m: normal normal normal 18px/1.4em montserrat;
-        --cardTitleFont: normal normal normal 16px/1.4em montserrat, sans-serif;
-        --cardSubtitleFont: normal normal normal 14px/1.4em montserrat, sans-serif;
-        --cardBodyTextFont: normal normal normal 16px/1.4em montserrat, sans-serif;
-        --textButtonFont: normal normal normal 16px/1.4em montserrat, sans-serif;
-        --textFieldFont: normal normal normal 14px/1.4em montserrat, sans-serif;
-        --postsTitleFont: normal normal normal 20px/1.4em montserrat, sans-serif;
-        --postsTextFont: normal normal normal 16px/1.4em montserrat, sans-serif;
-        --memberNameFont: normal normal normal 16px/1.4em montserrat, sans-serif;
-        --postingDateFont: normal normal normal 14px/1.4em montserrat, sans-serif;
-        --commentsReactionsCounterFont: normal normal normal 14px/1.4em montserrat, sans-serif;
-        --sidebarGroupNameFont: normal normal normal 16px/1.4em montserrat, sans-serif;
-        --groupInfoFont: normal normal normal 14px/1.4em montserrat, sans-serif;
-        --listTitleFont: normal normal normal 24px/1.4em montserrat, sans-serif;
-        --listSubtitleFont: normal normal normal 16px/1.4em montserrat, sans-serif;
-        --sidebarTitleFont: normal normal normal 16px/1.4em montserrat, sans-serif;
-        --feedTitleFont: normal normal normal 20px/1.4em montserrat, sans-serif;
-        --feedSubtitleFont: normal normal normal 16px/1.4em montserrat, sans-serif;
-        --listWidgetTitleFont: normal normal normal 32px/1.4em montserrat, sans-serif;
-        --buttonTextColor: 255, 255, 255;
-        --buttonTextColor-rgb: 255, 255, 255;
-        --buttonTextColor-opacity: 1;
-        --buttonHoverColor: 204, 0, 0, 0.7;
-        --buttonHoverColor-rgb: 204, 0, 0;
-        --buttonHoverColor-opacity: 0.7;
-        --cardBackgroundColor▶︎m: 255, 255, 255;
-        --cardBackgroundColor▶︎m-rgb: 255, 255, 255;
-        --cardBackgroundColor▶︎m-opacity: 1;
-        --groupNameColorOnHover▶︎m: 153, 154, 159;
-        --groupNameColorOnHover▶︎m-rgb: 153, 154, 159;
-        --groupNameColorOnHover▶︎m-opacity: 1;
-        --appBackgroundColor: 255, 255, 255, 0;
-        --appBackgroundColor-rgb: 255, 255, 255;
-        --appBackgroundColor-opacity: 0;
-        --cardBorderColor: 51, 52, 63, 0.2;
-        --cardBorderColor-rgb: 51, 52, 63;
-        --cardBorderColor-opacity: 0.2;
-        --groupNameColor▶︎m: 51, 52, 63;
-        --groupNameColor▶︎m-rgb: 51, 52, 63;
-        --groupNameColor▶︎m-opacity: 1;
-        --appBackgroundColor▶︎m: 255, 255, 255;
-        --appBackgroundColor▶︎m-rgb: 255, 255, 255;
-        --appBackgroundColor▶︎m-opacity: 1;
-        --secondaryButtonTextColor: 51, 52, 63;
-        --secondaryButtonTextColor-rgb: 51, 52, 63;
-        --secondaryButtonTextColor-opacity: 1;
-        --cardBorderColor▶︎m: 51, 52, 63;
-        --cardBorderColor▶︎m-rgb: 51, 52, 63;
-        --cardBorderColor▶︎m-opacity: 1;
-        --secondaryButtonColor: 51, 52, 63, 0;
-        --secondaryButtonColor-rgb: 51, 52, 63;
-        --secondaryButtonColor-opacity: 0;
-        --buttonBorderColor▶︎m: 51, 52, 63, 0;
-        --buttonBorderColor▶︎m-rgb: 51, 52, 63;
-        --buttonBorderColor▶︎m-opacity: 0;
-        --groupNameColor: 51, 52, 63;
-        --groupNameColor-rgb: 51, 52, 63;
-        --groupNameColor-opacity: 1;
-        --groupInfoColor▶︎m: 51, 52, 63;
-        --groupInfoColor▶︎m-rgb: 51, 52, 63;
-        --groupInfoColor▶︎m-opacity: 1;
-        --buttonBorderColor: 51, 52, 63, 0;
-        --buttonBorderColor-rgb: 51, 52, 63;
-        --buttonBorderColor-opacity: 0;
-        --secondaryButtonBorderColor: 204, 0, 0;
-        --secondaryButtonBorderColor-rgb: 204, 0, 0;
-        --secondaryButtonBorderColor-opacity: 1;
-        --buttonColor: 204, 0, 0;
-        --buttonColor-rgb: 204, 0, 0;
-        --buttonColor-opacity: 1;
-        --buttonTextColor▶︎m: 255, 255, 255;
-        --buttonTextColor▶︎m-rgb: 255, 255, 255;
-        --buttonTextColor▶︎m-opacity: 1;
-        --appBorderColor: 255, 255, 255, 0.3;
-        --appBorderColor-rgb: 255, 255, 255;
-        --appBorderColor-opacity: 0.3;
-        --buttonHoverTextColor: 255, 255, 255, 0.7;
-        --buttonHoverTextColor-rgb: 255, 255, 255;
-        --buttonHoverTextColor-opacity: 0.7;
-        --buttonHoverBorderColor: 51, 52, 63, 0;
-        --buttonHoverBorderColor-rgb: 51, 52, 63;
-        --buttonHoverBorderColor-opacity: 0;
-        --secondaryButtonHoverColor: 51, 52, 63, 0;
-        --secondaryButtonHoverColor-rgb: 51, 52, 63;
-        --secondaryButtonHoverColor-opacity: 0;
-        --secondaryButtonHoverTextColor: 51, 52, 63, 0.7;
-        --secondaryButtonHoverTextColor-rgb: 51, 52, 63;
-        --secondaryButtonHoverTextColor-opacity: 0.7;
-        --secondaryButtonHoverBorderColor: 51, 52, 63, 0.7;
-        --secondaryButtonHoverBorderColor-rgb: 51, 52, 63;
-        --secondaryButtonHoverBorderColor-opacity: 0.7;
-        --cardBackgroundColor: 255, 255, 255;
-        --cardBackgroundColor-rgb: 255, 255, 255;
-        --cardBackgroundColor-opacity: 1;
-        --shadowColor: 51, 52, 63, 0.1;
-        --shadowColor-rgb: 51, 52, 63;
-        --shadowColor-opacity: 0.1;
-        --cardTitleColor: 51, 52, 63;
-        --cardTitleColor-rgb: 51, 52, 63;
-        --cardTitleColor-opacity: 1;
-        --cardSubtitleColor: 102, 103, 111;
-        --cardSubtitleColor-rgb: 102, 103, 111;
-        --cardSubtitleColor-opacity: 1;
-        --cardBodyTextColor: 51, 52, 63;
-        --cardBodyTextColor-rgb: 51, 52, 63;
-        --cardBodyTextColor-opacity: 1;
-        --textButtonColor: 51, 52, 63;
-        --textButtonColor-rgb: 51, 52, 63;
-        --textButtonColor-opacity: 1;
-        --textFieldBackgroundColor: 255, 255, 255;
-        --textFieldBackgroundColor-rgb: 255, 255, 255;
-        --textFieldBackgroundColor-opacity: 1;
-        --textFieldBorderColor: 51, 52, 63, 0.2;
-        --textFieldBorderColor-rgb: 51, 52, 63;
-        --textFieldBorderColor-opacity: 0.2;
-        --textFieldPlaceholderColor: 102, 103, 111;
-        --textFieldPlaceholderColor-rgb: 102, 103, 111;
-        --textFieldPlaceholderColor-opacity: 1;
-        --textFieldColor: 51, 52, 63;
-        --textFieldColor-rgb: 51, 52, 63;
-        --textFieldColor-opacity: 1;
-        --postIconsColor: 51, 52, 63;
-        --postIconsColor-rgb: 51, 52, 63;
-        --postIconsColor-opacity: 1;
-        --postsTitleColor: 51, 52, 63;
-        --postsTitleColor-rgb: 51, 52, 63;
-        --postsTitleColor-opacity: 1;
-        --postsTextColor: 51, 52, 63;
-        --postsTextColor-rgb: 51, 52, 63;
-        --postsTextColor-opacity: 1;
-        --memberNameColor: 51, 52, 63;
-        --memberNameColor-rgb: 51, 52, 63;
-        --memberNameColor-opacity: 1;
-        --postingDateColor: 51, 52, 63;
-        --postingDateColor-rgb: 51, 52, 63;
-        --postingDateColor-opacity: 1;
-        --commentsReactionsCounterColor: 51, 52, 63;
-        --commentsReactionsCounterColor-rgb: 51, 52, 63;
-        --commentsReactionsCounterColor-opacity: 1;
-        --sidebarGroupNameColor: 51, 52, 63;
-        --sidebarGroupNameColor-rgb: 51, 52, 63;
-        --sidebarGroupNameColor-opacity: 1;
-        --groupNameColorOnHover: 51, 52, 63;
-        --groupNameColorOnHover-rgb: 51, 52, 63;
-        --groupNameColorOnHover-opacity: 1;
-        --groupInfoColor: 51, 52, 63;
-        --groupInfoColor-rgb: 51, 52, 63;
-        --groupInfoColor-opacity: 1;
-        --listTitleColor: 51, 52, 63;
-        --listTitleColor-rgb: 51, 52, 63;
-        --listTitleColor-opacity: 1;
-        --listSubtitleColor: 51, 52, 63;
-        --listSubtitleColor-rgb: 51, 52, 63;
-        --listSubtitleColor-opacity: 1;
-        --searchSortingColor: 51, 52, 63;
-        --searchSortingColor-rgb: 51, 52, 63;
-        --searchSortingColor-opacity: 1;
-        --sidebarTitleColor: 51, 52, 63;
-        --sidebarTitleColor-rgb: 51, 52, 63;
-        --sidebarTitleColor-opacity: 1;
-        --feedTitleColor: 51, 52, 63;
-        --feedTitleColor-rgb: 51, 52, 63;
-        --feedTitleColor-opacity: 1;
-        --feedSubtitleColor: 51, 52, 63;
-        --feedSubtitleColor-rgb: 51, 52, 63;
-        --feedSubtitleColor-opacity: 1;
-        --listWidgetTitleColor: 51, 52, 63;
-        --listWidgetTitleColor-rgb: 51, 52, 63;
-        --listWidgetTitleColor-opacity: 1;
-        --groupNameFont: normal normal normal 18px/22px montserrat, sans-serif;
-        --groupNameFont-style: normal;
-        --groupNameFont-variant: normal;
-        --groupNameFont-weight: normal;
-        --groupNameFont-size: 18px;
-        --groupNameFont-line-height: 22px;
-        --groupNameFont-family: montserrat, sans-serif;
-        --groupNameFont-text-decoration: none;
-        --buttonTextFont-style: normal;
-        --buttonTextFont-variant: normal;
-        --buttonTextFont-weight: normal;
-        --buttonTextFont-size: 16px;
-        --buttonTextFont-line-height: 1.4em;
-        --buttonTextFont-family: montserrat;
-        --buttonTextFont-text-decoration: none;
-        --groupNameFont▶︎m: normal normal normal 12px/15px montserrat, sans-serif;
-        --groupNameFont▶︎m-style: normal;
-        --groupNameFont▶︎m-variant: normal;
-        --groupNameFont▶︎m-weight: normal;
-        --groupNameFont▶︎m-size: 12px;
-        --groupNameFont▶︎m-line-height: 15px;
-        --groupNameFont▶︎m-family: montserrat, sans-serif;
-        --groupNameFont▶︎m-text-decoration: none;
-        --buttonTextFont▶︎m-style: normal;
-        --buttonTextFont▶︎m-variant: normal;
-        --buttonTextFont▶︎m-weight: normal;
-        --buttonTextFont▶︎m-size: 18px;
-        --buttonTextFont▶︎m-line-height: 1.4em;
-        --buttonTextFont▶︎m-family: montserrat;
-        --buttonTextFont▶︎m-text-decoration: none;
-        --groupInfoFont▶︎m: normal normal normal 12px/15px montserrat, sans-serif;
-        --groupInfoFont▶︎m-style: normal;
-        --groupInfoFont▶︎m-variant: normal;
-        --groupInfoFont▶︎m-weight: normal;
-        --groupInfoFont▶︎m-size: 12px;
-        --groupInfoFont▶︎m-line-height: 15px;
-        --groupInfoFont▶︎m-family: montserrat, sans-serif;
-        --groupInfoFont▶︎m-text-decoration: none;
-        --cardTitleFont-style: normal;
-        --cardTitleFont-variant: normal;
-        --cardTitleFont-weight: normal;
-        --cardTitleFont-size: 16px;
-        --cardTitleFont-line-height: 1.4em;
-        --cardTitleFont-family: montserrat, sans-serif;
-        --cardTitleFont-text-decoration: none;
-        --cardSubtitleFont-style: normal;
-        --cardSubtitleFont-variant: normal;
-        --cardSubtitleFont-weight: normal;
-        --cardSubtitleFont-size: 14px;
-        --cardSubtitleFont-line-height: 1.4em;
-        --cardSubtitleFont-family: montserrat, sans-serif;
-        --cardSubtitleFont-text-decoration: none;
-        --cardBodyTextFont-style: normal;
-        --cardBodyTextFont-variant: normal;
-        --cardBodyTextFont-weight: normal;
-        --cardBodyTextFont-size: 16px;
-        --cardBodyTextFont-line-height: 1.4em;
-        --cardBodyTextFont-family: montserrat, sans-serif;
-        --cardBodyTextFont-text-decoration: none;
-        --textButtonFont-style: normal;
-        --textButtonFont-variant: normal;
-        --textButtonFont-weight: normal;
-        --textButtonFont-size: 16px;
-        --textButtonFont-line-height: 1.4em;
-        --textButtonFont-family: montserrat, sans-serif;
-        --textButtonFont-text-decoration: none;
-        --textFieldFont-style: normal;
-        --textFieldFont-variant: normal;
-        --textFieldFont-weight: normal;
-        --textFieldFont-size: 14px;
-        --textFieldFont-line-height: 1.4em;
-        --textFieldFont-family: montserrat, sans-serif;
-        --textFieldFont-text-decoration: none;
-        --postsTitleFont-style: normal;
-        --postsTitleFont-variant: normal;
-        --postsTitleFont-weight: normal;
-        --postsTitleFont-size: 20px;
-        --postsTitleFont-line-height: 1.4em;
-        --postsTitleFont-family: montserrat, sans-serif;
-        --postsTitleFont-text-decoration: none;
-        --postsTextFont-style: normal;
-        --postsTextFont-variant: normal;
-        --postsTextFont-weight: normal;
-        --postsTextFont-size: 16px;
-        --postsTextFont-line-height: 1.4em;
-        --postsTextFont-family: montserrat, sans-serif;
-        --postsTextFont-text-decoration: none;
-        --memberNameFont-style: normal;
-        --memberNameFont-variant: normal;
-        --memberNameFont-weight: normal;
-        --memberNameFont-size: 16px;
-        --memberNameFont-line-height: 1.4em;
-        --memberNameFont-family: montserrat, sans-serif;
-        --memberNameFont-text-decoration: none;
-        --postingDateFont-style: normal;
-        --postingDateFont-variant: normal;
-        --postingDateFont-weight: normal;
-        --postingDateFont-size: 14px;
-        --postingDateFont-line-height: 1.4em;
-        --postingDateFont-family: montserrat, sans-serif;
-        --postingDateFont-text-decoration: none;
-        --commentsReactionsCounterFont-style: normal;
-        --commentsReactionsCounterFont-variant: normal;
-        --commentsReactionsCounterFont-weight: normal;
-        --commentsReactionsCounterFont-size: 14px;
-        --commentsReactionsCounterFont-line-height: 1.4em;
-        --commentsReactionsCounterFont-family: montserrat, sans-serif;
-        --commentsReactionsCounterFont-text-decoration: none;
-        --sidebarGroupNameFont-style: normal;
-        --sidebarGroupNameFont-variant: normal;
-        --sidebarGroupNameFont-weight: normal;
-        --sidebarGroupNameFont-size: 16px;
-        --sidebarGroupNameFont-line-height: 1.4em;
-        --sidebarGroupNameFont-family: montserrat, sans-serif;
-        --sidebarGroupNameFont-text-decoration: none;
-        --groupInfoFont-style: normal;
-        --groupInfoFont-variant: normal;
-        --groupInfoFont-weight: normal;
-        --groupInfoFont-size: 14px;
-        --groupInfoFont-line-height: 1.4em;
-        --groupInfoFont-family: montserrat, sans-serif;
-        --groupInfoFont-text-decoration: none;
-        --listTitleFont-style: normal;
-        --listTitleFont-variant: normal;
-        --listTitleFont-weight: normal;
-        --listTitleFont-size: 24px;
-        --listTitleFont-line-height: 1.4em;
-        --listTitleFont-family: montserrat, sans-serif;
-        --listTitleFont-text-decoration: none;
-        --listSubtitleFont-style: normal;
-        --listSubtitleFont-variant: normal;
-        --listSubtitleFont-weight: normal;
-        --listSubtitleFont-size: 16px;
-        --listSubtitleFont-line-height: 1.4em;
-        --listSubtitleFont-family: montserrat, sans-serif;
-        --listSubtitleFont-text-decoration: none;
-        --sidebarTitleFont-style: normal;
-        --sidebarTitleFont-variant: normal;
-        --sidebarTitleFont-weight: normal;
-        --sidebarTitleFont-size: 16px;
-        --sidebarTitleFont-line-height: 1.4em;
-        --sidebarTitleFont-family: montserrat, sans-serif;
-        --sidebarTitleFont-text-decoration: none;
-        --feedTitleFont-style: normal;
-        --feedTitleFont-variant: normal;
-        --feedTitleFont-weight: normal;
-        --feedTitleFont-size: 20px;
-        --feedTitleFont-line-height: 1.4em;
-        --feedTitleFont-family: montserrat, sans-serif;
-        --feedTitleFont-text-decoration: none;
-        --feedSubtitleFont-style: normal;
-        --feedSubtitleFont-variant: normal;
-        --feedSubtitleFont-weight: normal;
-        --feedSubtitleFont-size: 16px;
-        --feedSubtitleFont-line-height: 1.4em;
-        --feedSubtitleFont-family: montserrat, sans-serif;
-        --feedSubtitleFont-text-decoration: none;
-        --listWidgetTitleFont-style: normal;
-        --listWidgetTitleFont-variant: normal;
-        --listWidgetTitleFont-weight: normal;
-        --listWidgetTitleFont-size: 32px;
-        --listWidgetTitleFont-line-height: 1.4em;
-        --listWidgetTitleFont-family: montserrat, sans-serif;
-        --listWidgetTitleFont-text-decoration: none;
-        --item-text-justify-content: flex-start;
-        --item-text-align-items: flex-start;
-        --list-widget-title-alignment: left;
-        --wix-color-1: 255, 255, 255;
-        --wix-color-2: 182, 182, 184;
-        --wix-color-3: 153, 154, 159;
-        --wix-color-4: 102, 103, 111;
-        --wix-color-5: 51, 52, 63;
-        --wix-color-6: 182, 183, 196;
-        --wix-color-7: 110, 112, 136;
-        --wix-color-8: 51, 52, 63;
-        --wix-color-9: 34, 35, 42;
-        --wix-color-10: 17, 17, 21;
-        --wix-color-11: 215, 215, 225;
-        --wix-color-12: 174, 175, 194;
-        --wix-color-13: 134, 135, 164;
-        --wix-color-14: 97, 99, 129;
-        --wix-color-15: 102, 103, 111;
-        --wix-color-16: 251, 251, 251;
-        --wix-color-17: 182, 182, 184;
-        --wix-color-18: 185, 185, 185;
-        --wix-color-19: 124, 124, 124;
-        --wix-color-20: 62, 62, 62;
-        --wix-color-21: 252, 222, 147;
-        --wix-color-22: 248, 189, 38;
-        --wix-color-23: 208, 151, 7;
-        --wix-color-24: 139, 101, 4;
-        --wix-color-25: 69, 50, 2;
-        --wix-color-26: 255, 255, 255;
-        --wix-color-27: 51, 52, 63;
-        --wix-color-28: 182, 182, 184;
-        --wix-color-29: 153, 154, 159;
-        --wix-color-30: 102, 103, 111;
-        --wix-color-31: 239, 239, 239;
-        --wix-color-32: 40, 38, 38;
-        --wix-color-33: 233, 226, 215;
-        --wix-color-34: 203, 200, 194;
-        --wix-color-35: 51, 52, 63;
-        --wix-color-36: 51, 52, 63;
-        --wix-color-37: 102, 103, 111;
-        --wix-color-38: 51, 52, 63;
-        --wix-color-39: 51, 52, 63;
-        --wix-color-40: 255, 255, 255;
-        --wix-color-41: 255, 255, 255;
-        --wix-color-42: 51, 52, 63;
-        --wix-color-43: 51, 52, 63;
-        --wix-color-44: 153, 154, 159;
-        --wix-color-45: 153, 154, 159;
-        --wix-color-46: 255, 255, 255;
-        --wix-color-47: 255, 255, 255;
-        --wix-color-48: 51, 52, 63;
-        --wix-color-49: 51, 52, 63;
-        --wix-color-50: 51, 52, 63;
-        --wix-color-51: 51, 52, 63;
-        --wix-color-52: 255, 255, 255;
-        --wix-color-53: 255, 255, 255;
-        --wix-color-54: 153, 154, 159;
-        --wix-color-55: 153, 154, 159;
-        --wix-font-Title: normal normal normal 88px/1.2em montserrat, sans-serif;
-        --wix-font-Title-style: normal;
-        --wix-font-Title-variant: normal;
-        --wix-font-Title-weight: normal;
-        --wix-font-Title-size: 88px;
-        --wix-font-Title-line-height: 1.2em;
-        --wix-font-Title-family: montserrat, sans-serif;
-        --wix-font-Title-text-decoration: none;
-        --wix-font-Menu: normal normal normal 14px/1.79em avenir-lt-w01_35-light1475496, sans-serif;
-        --wix-font-Menu-style: normal;
-        --wix-font-Menu-variant: normal;
-        --wix-font-Menu-weight: normal;
-        --wix-font-Menu-size: 14px;
-        --wix-font-Menu-line-height: 1.79em;
-        --wix-font-Menu-family: avenir-lt-w01_35-light1475496, sans-serif;
-        --wix-font-Menu-text-decoration: none;
-        --wix-font-Page-title: normal normal normal 72px/1.25em montserrat, sans-serif;
-        --wix-font-Page-title-style: normal;
-        --wix-font-Page-title-variant: normal;
-        --wix-font-Page-title-weight: normal;
-        --wix-font-Page-title-size: 72px;
-        --wix-font-Page-title-line-height: 1.25em;
-        --wix-font-Page-title-family: montserrat, sans-serif;
-        --wix-font-Page-title-text-decoration: none;
-        --wix-font-Heading-XL: normal normal normal 50px/1.34em montserrat, sans-serif;
-        --wix-font-Heading-XL-style: normal;
-        --wix-font-Heading-XL-variant: normal;
-        --wix-font-Heading-XL-weight: normal;
-        --wix-font-Heading-XL-size: 50px;
-        --wix-font-Heading-XL-line-height: 1.34em;
-        --wix-font-Heading-XL-family: montserrat, sans-serif;
-        --wix-font-Heading-XL-text-decoration: none;
-        --wix-font-Heading-L: normal normal normal 40px/1.35em montserrat, sans-serif;
-        --wix-font-Heading-L-style: normal;
-        --wix-font-Heading-L-variant: normal;
-        --wix-font-Heading-L-weight: normal;
-        --wix-font-Heading-L-size: 40px;
-        --wix-font-Heading-L-line-height: 1.35em;
-        --wix-font-Heading-L-family: montserrat, sans-serif;
-        --wix-font-Heading-L-text-decoration: none;
-        --wix-font-Heading-M: normal normal normal 28px/1.38em montserrat, sans-serif;
-        --wix-font-Heading-M-style: normal;
-        --wix-font-Heading-M-variant: normal;
-        --wix-font-Heading-M-weight: normal;
-        --wix-font-Heading-M-size: 28px;
-        --wix-font-Heading-M-line-height: 1.38em;
-        --wix-font-Heading-M-family: montserrat, sans-serif;
-        --wix-font-Heading-M-text-decoration: none;
-        --wix-font-Heading-S: normal normal normal 22px/1.41em montserrat, sans-serif;
-        --wix-font-Heading-S-style: normal;
-        --wix-font-Heading-S-variant: normal;
-        --wix-font-Heading-S-weight: normal;
-        --wix-font-Heading-S-size: 22px;
-        --wix-font-Heading-S-line-height: 1.41em;
-        --wix-font-Heading-S-family: montserrat, sans-serif;
-        --wix-font-Heading-S-text-decoration: none;
-        --wix-font-Body-L: normal normal normal 20px/1.67em montserrat, sans-serif;
-        --wix-font-Body-L-style: normal;
-        --wix-font-Body-L-variant: normal;
-        --wix-font-Body-L-weight: normal;
-        --wix-font-Body-L-size: 20px;
-        --wix-font-Body-L-line-height: 1.67em;
-        --wix-font-Body-L-family: montserrat, sans-serif;
-        --wix-font-Body-L-text-decoration: none;
-        --wix-font-Body-M: normal normal normal 18px/1.75em montserrat, sans-serif;
-        --wix-font-Body-M-style: normal;
-        --wix-font-Body-M-variant: normal;
-        --wix-font-Body-M-weight: normal;
-        --wix-font-Body-M-size: 18px;
-        --wix-font-Body-M-line-height: 1.75em;
-        --wix-font-Body-M-family: montserrat, sans-serif;
-        --wix-font-Body-M-text-decoration: none;
-        --wix-font-Body-S: normal normal normal 15px/1.88em montserrat, sans-serif;
-        --wix-font-Body-S-style: normal;
-        --wix-font-Body-S-variant: normal;
-        --wix-font-Body-S-weight: normal;
-        --wix-font-Body-S-size: 15px;
-        --wix-font-Body-S-line-height: 1.88em;
-        --wix-font-Body-S-family: montserrat, sans-serif;
-        --wix-font-Body-S-text-decoration: none;
-        --wix-font-Body-XS: normal normal normal 14px/1.79em avenir-lt-w01_35-light1475496, sans-serif;
-        --wix-font-Body-XS-style: normal;
-        --wix-font-Body-XS-variant: normal;
-        --wix-font-Body-XS-weight: normal;
-        --wix-font-Body-XS-size: 14px;
-        --wix-font-Body-XS-line-height: 1.79em;
-        --wix-font-Body-XS-family: avenir-lt-w01_35-light1475496, sans-serif;
-        --wix-font-Body-XS-text-decoration: none;
-        --wix-font-LIGHT: normal normal normal 12px/1.4em HelveticaNeueW01-45Ligh;
-        --wix-font-LIGHT-style: normal;
-        --wix-font-LIGHT-variant: normal;
-        --wix-font-LIGHT-weight: normal;
-        --wix-font-LIGHT-size: 12px;
-        --wix-font-LIGHT-line-height: 1.4em;
-        --wix-font-LIGHT-family: HelveticaNeueW01-45Ligh;
-        --wix-font-LIGHT-text-decoration: none;
-        --wix-font-MEDIUM: normal normal normal 12px/1.4em HelveticaNeueW01-55Roma;
-        --wix-font-MEDIUM-style: normal;
-        --wix-font-MEDIUM-variant: normal;
-        --wix-font-MEDIUM-weight: normal;
-        --wix-font-MEDIUM-size: 12px;
-        --wix-font-MEDIUM-line-height: 1.4em;
-        --wix-font-MEDIUM-family: HelveticaNeueW01-55Roma;
-        --wix-font-MEDIUM-text-decoration: none;
-        --wix-font-STRONG: normal normal normal 12px/1.4em HelveticaNeueW01-65Medi;
-        --wix-font-STRONG-style: normal;
-        --wix-font-STRONG-variant: normal;
-        --wix-font-STRONG-weight: normal;
-        --wix-font-STRONG-size: 12px;
-        --wix-font-STRONG-line-height: 1.4em;
-        --wix-font-STRONG-family: HelveticaNeueW01-65Medi;
-        --wix-font-STRONG-text-decoration: none;
-    }
-
-    #comp-m5qnidsn5 {
-        --text-direction: var(--wix-opt-in-direction);
-    }
-
-    .comp-m5qnidsc {
-        --wix-direction: ltr;
-        --layout-post-list-layoutType: 16;
-        --post-pg-text-on-image-medium-post-list-mobile-titleFontSize: 18;
-        --layout-post-list-pg-grid-contentHeightType: 1;
-        --layout-post-list-list-layoutSpacing: 12;
-        --layout-post-list-pg-grid-layoutPostSize: 290;
-        --layout-mobile-post-list-pg-text-on-image-medium-imageRatio: 1;
-        --layout-post-list-pg-grid-sidesPadding: 24;
-        --postListWidgetEntityCount: 3;
-        --layout-post-list-pg-grid-layoutSpacing: 25;
-        --layout-mobile-post-list-layoutType: 13;
-        --layout-post-list-pg-grid-imageCropType: 1;
-        --layout-post-list-list-imageRatio: 3;
-        --layout-post-list-pg-grid-titleLineCount: 3;
-        --layout-post-list-pg-grid-contentHeight: 320;
-        --postListWidgetPaginationType: 1;
-        --layout-post-list-pg-grid-layoutPostsPerRow: 3;
-        --contentAlignment: 0;
-        --layout-post-list-list-margins: 0;
-        --layout-post-list-pg-grid-layoutCardsRowType: 1;
-        --layout-post-list-pg-grid-imageRatio: 1;
-        --postListWidgetPostsPerPage: 3;
-        --layout-post-list-list-imageCropType: 0;
-        --layout-mobile-post-list-pg-grid-imageCropType: 0;
-        --layout-mobile-post-list-list-imageCropType: 0;
-        --layout-post-list-pg-side-by-side-imageCropType: 0;
-        --layout-mobile-post-list-pg-grid-imageRatio: 2;
-        --layout-mobile-post-list-list-imageRatio: 2;
-        --layout-mobile-post-list-slider-imageRatio: 2;
-        --layout-post-list-slider-imageRatio: 2;
-        --layout-post-list-pg-side-by-side-imageRatio: 2;
-        --layout-post-list-pg-text-on-image-medium-imageRatio: 3;
-        --contentAlignmentMobile: 0;
-        --layout-post-list-list-imageAlignment: 1;
-        --layout-mobile-post-list-list-imageAlignment: 1;
-        --layout-post-list-pg-side-by-side-imageAlignment: 1;
-        --layout-post-list-list-imageProportions: 25;
-        --layout-mobile-post-list-list-imageProportions: 25;
-        --layout-post-list-pg-side-by-side-imageProportions: 50;
-        --postListWidgetSliderPauseTime: 4;
-        --postListWidgetSliderPauseTimeMobile: 4;
-        --postListWidgetSliderArrowsPosition: 0;
-        --postListWidgetSliderArrowsPositionMobile: 0;
-        --postListWidgetSliderArrowsSize: 18;
-        --postListWidgetSliderArrowsSizeMobile: 18;
-        --layout-post-list-list-layoutCardsRowType: 0;
-        --layout-post-list-list-layoutPostSize: 292;
-        --layout-post-list-list-layoutPostsPerRow: 3;
-        --layout-mobile-post-list-pg-grid-layoutCardsRowType: 0;
-        --layout-mobile-post-list-pg-grid-layoutPostSize: 292;
-        --layout-mobile-post-list-pg-grid-layoutPostsPerRow: 3;
-        --layout-mobile-post-list-list-layoutCardsRowType: 0;
-        --layout-mobile-post-list-list-layoutPostSize: 292;
-        --layout-mobile-post-list-list-layoutPostsPerRow: 3;
-        --layout-mobile-post-list-pg-text-on-image-medium-layoutCardsRowType: 0;
-        --layout-mobile-post-list-pg-text-on-image-medium-layoutPostSize: 292;
-        --layout-mobile-post-list-pg-text-on-image-medium-layoutPostsPerRow: 3;
-        --layout-post-list-pg-text-on-image-medium-layoutCardsRowType: 0;
-        --layout-post-list-pg-text-on-image-medium-layoutPostSize: 454;
-        --layout-post-list-pg-text-on-image-medium-layoutPostsPerRow: 3;
-        --layout-mobile-post-list-pg-grid-layoutSpacing: 20;
-        --layout-mobile-post-list-list-layoutSpacing: 20;
-        --layout-mobile-post-list-pg-text-on-image-medium-layoutSpacing: 20;
-        --layout-post-list-pg-side-by-side-layoutSpacing: 32;
-        --layout-post-list-pg-text-on-image-medium-layoutSpacing: 32;
-        --layout-post-list-pg-one-column-layoutSpacing: 32;
-        --layout-post-list-list-contentHeightType: 0;
-        --layout-post-list-list-contentHeight: 156;
-        --layout-mobile-post-list-pg-grid-contentHeight: 350;
-        --layout-mobile-post-list-pg-grid-contentHeightType: 0;
-        --layout-mobile-post-list-list-contentHeight: 350;
-        --layout-mobile-post-list-slider-contentHeight: 350;
-        --layout-mobile-post-list-slider-contentHeightType: 0;
-        --layout-post-list-slider-contentHeightType: 1;
-        --layout-post-list-slider-contentHeight: 156;
-        --layout-post-list-pg-one-column-contentHeightType: 1;
-        --layout-post-list-pg-one-column-contentHeight: 156;
-        --layout-post-list-list-sidesPadding: 16;
-        --layout-mobile-post-list-pg-grid-sidesPadding: 24;
-        --layout-mobile-post-list-list-sidesPadding: 12;
-        --layout-mobile-post-list-pg-text-on-image-medium-sidesPadding: 12;
-        --layout-mobile-post-list-slider-sidesPadding: 24;
-        --layout-post-list-slider-sidesPadding: 16;
-        --layout-post-list-pg-side-by-side-sidesPadding: 16;
-        --layout-post-list-pg-text-on-image-medium-sidesPadding: 30;
-        --layout-post-list-pg-one-column-sidesPadding: 16;
-        --layout-post-list-list-titleLineCount: 3;
-        --layout-mobile-post-list-pg-grid-titleLineCount: 2;
-        --layout-mobile-post-list-pg-grid-descriptionLineCount: 3;
-        --layout-mobile-post-list-list-titleLineCount: 2;
-        --layout-mobile-post-list-pg-text-on-image-medium-titleLineCount: 2;
-        --layout-mobile-post-list-slider-titleLineCount: 2;
-        --layout-mobile-post-list-slider-descriptionLineCount: 3;
-        --layout-post-list-slider-titleLineCount: 3;
-        --layout-post-list-pg-side-by-side-titleLineCount: 3;
-        --layout-post-list-pg-text-on-image-medium-titleLineCount: 3;
-        --layout-post-list-pg-one-column-titleLineCount: 3;
-        --layout-post-list-pg-grid-descriptionLineCount: 1;
-        --layout-post-list-slider-descriptionLineCount: 1;
-        --layout-post-list-pg-side-by-side-descriptionLineCount: 1;
-        --layout-post-list-pg-one-column-descriptionLineCount: 1;
-        --post-slider-post-list-mobile-titleFontSize: 22;
-        --post-list-post-list-mobile-titleFontSize: 14;
-        --post-pg-grid-post-list-mobile-titleFontSize: 22;
-        --post-pg-grid-post-list-mobile-descriptionFontSize: 16;
-        --post-post-list-borderWidth: 1;
-        --post-post-list-mobile-borderWidth: 1;
-        --post-post-list-postRadius: 0;
-        --post-post-list-mobile-postRadius: 0;
-        --category-label-layoutType: 0;
-        --category-label-button-horizontalPadding: 12;
-        --category-label-button-verticalPadding: 6;
-        --category-label-button-cornerRadius: 0;
-        --category-label-button-borderWidth: 0;
-        --post-list-video-play: 0;
-        --post-list-video-playbackSpeed: 2;
-        --category-label-text-textFont: normal normal normal 14px/19.599999999999998px montserrat, sans-serif;
-        --category-label-button-textFont: normal normal normal 14px/19.599999999999998px montserrat, sans-serif;
-        --post-post-list-ratingFont: normal normal normal 18px/1.4em montserrat, sans-serif;
-        --post-list-post-list-ratingFont: normal normal normal 14px/19.599999999999998px montserrat, sans-serif;
-        --post-pg-one-column-post-list-ratingFont: normal normal normal 14px/19.599999999999998px montserrat, sans-serif;
-        --post-pg-side-by-side-post-list-ratingFont: normal normal normal 14px/19.599999999999998px montserrat, sans-serif;
-        --post-pg-text-on-image-medium-post-list-ratingFont: normal normal normal 14px/19.599999999999998px montserrat, sans-serif;
-        --post-slider-post-list-ratingFont: normal normal normal 14px/19.599999999999998px montserrat, sans-serif;
-        --post-list-medium-post-list-ratingFont: normal normal normal 14px/19.599999999999998px montserrat, sans-serif;
-        --post-list-large-post-list-ratingFont: normal normal normal 14px/19.599999999999998px montserrat, sans-serif;
-        --post-pg-grid-intermediate-post-list-ratingFont: normal normal normal 14px/19.599999999999998px montserrat, sans-serif;
-        --post-pg-grid-large-post-list-ratingFont: normal normal normal 14px/19.599999999999998px montserrat, sans-serif;
-        --post-pg-medium-post-list-ratingFont: normal normal normal 14px/19.599999999999998px montserrat, sans-serif;
-        --post-pg-side-by-side-right-post-list-ratingFont: normal normal normal 14px/19.599999999999998px montserrat, sans-serif;
-        --post-pg-text-on-image-large-post-list-ratingFont: normal normal normal 14px/19.599999999999998px montserrat, sans-serif;
-        --post-pg-text-on-image-small-post-list-ratingFont: normal normal normal 14px/19.599999999999998px montserrat, sans-serif;
-        --post-post-list-backgroundColor: 255, 255, 255;
-        --post-post-list-backgroundColor-rgb: 255, 255, 255;
-        --post-post-list-backgroundColor-opacity: 1;
-        --post-post-list-mobile-overlayColor: 0, 0, 0, 0.55;
-        --post-post-list-mobile-overlayColor-rgb: 0, 0, 0;
-        --post-post-list-mobile-overlayColor-opacity: 0.55;
-        --post-post-list-TOI-mobile-descriptionColor: 255, 255, 255;
-        --post-post-list-TOI-mobile-descriptionColor-rgb: 255, 255, 255;
-        --post-post-list-TOI-mobile-descriptionColor-opacity: 1;
-        --post-post-list-linkHashtagColor: 51, 52, 63;
-        --post-post-list-linkHashtagColor-rgb: 51, 52, 63;
-        --post-post-list-linkHashtagColor-opacity: 1;
-        --postListWidgetSliderArrowsColor: 51, 52, 63;
-        --postListWidgetSliderArrowsColor-rgb: 51, 52, 63;
-        --postListWidgetSliderArrowsColor-opacity: 1;
-        --post-post-list-ratingUnfilledStarColor: 153, 154, 159;
-        --post-post-list-ratingUnfilledStarColor-rgb: 153, 154, 159;
-        --post-post-list-ratingUnfilledStarColor-opacity: 1;
-        --post-post-list-titleColor: 51, 52, 63;
-        --post-post-list-titleColor-rgb: 51, 52, 63;
-        --post-post-list-titleColor-opacity: 1;
-        --post-post-list-borderColor: 182, 182, 184, 0.75;
-        --post-post-list-borderColor-rgb: 182, 182, 184;
-        --post-post-list-borderColor-opacity: 0.75;
-        --post-post-list-mobile-descriptionColor: 51, 52, 63;
-        --post-post-list-mobile-descriptionColor-rgb: 51, 52, 63;
-        --post-post-list-mobile-descriptionColor-opacity: 1;
-        --post-post-list-mobile-titleColor: 51, 52, 63;
-        --post-post-list-mobile-titleColor-rgb: 51, 52, 63;
-        --post-post-list-mobile-titleColor-opacity: 1;
-        --postListWidgetBackgroundColorMobile: 51, 52, 63;
-        --postListWidgetBackgroundColorMobile-rgb: 51, 52, 63;
-        --postListWidgetBackgroundColorMobile-opacity: 1;
-        --post-post-list-ratingFilledStarColor: 51, 52, 63;
-        --post-post-list-ratingFilledStarColor-rgb: 51, 52, 63;
-        --post-post-list-ratingFilledStarColor-opacity: 1;
-        --post-post-list-ratingFontColor: 51, 52, 63;
-        --post-post-list-ratingFontColor-rgb: 51, 52, 63;
-        --post-post-list-ratingFontColor-opacity: 1;
-        --post-post-list-TOI-mobile-titleColor: 255, 255, 255;
-        --post-post-list-TOI-mobile-titleColor-rgb: 255, 255, 255;
-        --post-post-list-TOI-mobile-titleColor-opacity: 1;
-        --post-post-list-descriptionColor: 51, 52, 63;
-        --post-post-list-descriptionColor-rgb: 51, 52, 63;
-        --post-post-list-descriptionColor-opacity: 1;
-        --post-post-list-mobile-linkHashtagColor: 51, 52, 63;
-        --post-post-list-mobile-linkHashtagColor-rgb: 51, 52, 63;
-        --post-post-list-mobile-linkHashtagColor-opacity: 1;
-        --post-post-list-mobile-backgroundColor: 255, 255, 255;
-        --post-post-list-mobile-backgroundColor-rgb: 255, 255, 255;
-        --post-post-list-mobile-backgroundColor-opacity: 1;
-        --postListWidgetBackgroundColor: 255, 255, 255, 0;
-        --postListWidgetBackgroundColor-rgb: 255, 255, 255;
-        --postListWidgetBackgroundColor-opacity: 0;
-        --post-post-list-mobile-borderColor: 182, 182, 184, 0.75;
-        --post-post-list-mobile-borderColor-rgb: 182, 182, 184;
-        --post-post-list-mobile-borderColor-opacity: 0.75;
-        --postListWidgetSliderArrowsColorMobile: 51, 52, 63;
-        --postListWidgetSliderArrowsColorMobile-rgb: 51, 52, 63;
-        --postListWidgetSliderArrowsColorMobile-opacity: 1;
-        --post-post-list-TOI-titleColor: 255, 255, 255;
-        --post-post-list-TOI-titleColor-rgb: 255, 255, 255;
-        --post-post-list-TOI-titleColor-opacity: 1;
-        --post-post-list-TOI-descriptionColor: 255, 255, 255;
-        --post-post-list-TOI-descriptionColor-rgb: 255, 255, 255;
-        --post-post-list-TOI-descriptionColor-opacity: 1;
-        --post-post-list-overlayColor: 51, 52, 63, 0.55;
-        --post-post-list-overlayColor-rgb: 51, 52, 63;
-        --post-post-list-overlayColor-opacity: 0.55;
-        --category-label-text-textColor: 51, 52, 63;
-        --category-label-text-textColor-rgb: 51, 52, 63;
-        --category-label-text-textColor-opacity: 1;
-        --category-label-text-textColorHover: 51, 52, 63, 0.7;
-        --category-label-text-textColorHover-rgb: 51, 52, 63;
-        --category-label-text-textColorHover-opacity: 0.7;
-        --category-label-button-textColor: 255, 255, 255;
-        --category-label-button-textColor-rgb: 255, 255, 255;
-        --category-label-button-textColor-opacity: 1;
-        --category-label-button-textColorHover: 255, 255, 255;
-        --category-label-button-textColorHover-rgb: 255, 255, 255;
-        --category-label-button-textColorHover-opacity: 1;
-        --category-label-button-backgroundColor: 51, 52, 63;
-        --category-label-button-backgroundColor-rgb: 51, 52, 63;
-        --category-label-button-backgroundColor-opacity: 1;
-        --category-label-button-backgroundColorHover: 51, 52, 63, 0.7;
-        --category-label-button-backgroundColorHover-rgb: 51, 52, 63;
-        --category-label-button-backgroundColorHover-opacity: 0.7;
-        --category-label-button-borderColor: 51, 52, 63;
-        --category-label-button-borderColor-rgb: 51, 52, 63;
-        --category-label-button-borderColor-opacity: 1;
-        --category-label-button-borderColorHover: 51, 52, 63, 0.7;
-        --category-label-button-borderColorHover-rgb: 51, 52, 63;
-        --category-label-button-borderColorHover-opacity: 0.7;
-        --post-post-list-TOI-ratingFilledStarColor: 255, 255, 255;
-        --post-post-list-TOI-ratingFilledStarColor-rgb: 255, 255, 255;
-        --post-post-list-TOI-ratingFilledStarColor-opacity: 1;
-        --post-post-list-TOI-ratingUnfilledStarColor: 153, 154, 159;
-        --post-post-list-TOI-ratingUnfilledStarColor-rgb: 153, 154, 159;
-        --post-post-list-TOI-ratingUnfilledStarColor-opacity: 1;
-        --post-post-list-TOI-ratingFontColor: 255, 255, 255;
-        --post-post-list-TOI-ratingFontColor-rgb: 255, 255, 255;
-        --post-post-list-TOI-ratingFontColor-opacity: 1;
-        --post-pg-grid-post-list-titleFont: normal normal normal 18px/22px montserrat, sans-serif;
-        --post-pg-grid-post-list-titleFont-style: normal;
-        --post-pg-grid-post-list-titleFont-variant: normal;
-        --post-pg-grid-post-list-titleFont-weight: normal;
-        --post-pg-grid-post-list-titleFont-size: 18px;
-        --post-pg-grid-post-list-titleFont-line-height: 22px;
-        --post-pg-grid-post-list-titleFont-family: montserrat, sans-serif;
-        --post-pg-grid-post-list-titleFont-text-decoration: none;
-        --post-pg-grid-intermediate-post-list-descriptionFont: normal normal normal 16px/20px montserrat, sans-serif;
-        --post-pg-grid-intermediate-post-list-descriptionFont-style: normal;
-        --post-pg-grid-intermediate-post-list-descriptionFont-variant: normal;
-        --post-pg-grid-intermediate-post-list-descriptionFont-weight: normal;
-        --post-pg-grid-intermediate-post-list-descriptionFont-size: 16px;
-        --post-pg-grid-intermediate-post-list-descriptionFont-line-height: 20px;
-        --post-pg-grid-intermediate-post-list-descriptionFont-family: montserrat, sans-serif;
-        --post-pg-grid-intermediate-post-list-descriptionFont-text-decoration: none;
-        --post-pg-grid-post-list-descriptionFont: normal normal normal 14px/17px montserrat, sans-serif;
-        --post-pg-grid-post-list-descriptionFont-style: normal;
-        --post-pg-grid-post-list-descriptionFont-variant: normal;
-        --post-pg-grid-post-list-descriptionFont-weight: normal;
-        --post-pg-grid-post-list-descriptionFont-size: 14px;
-        --post-pg-grid-post-list-descriptionFont-line-height: 17px;
-        --post-pg-grid-post-list-descriptionFont-family: montserrat, sans-serif;
-        --post-pg-grid-post-list-descriptionFont-text-decoration: none;
-        --post-list-medium-post-list-descriptionFont: normal normal normal 14px/17px montserrat, sans-serif;
-        --post-list-medium-post-list-descriptionFont-style: normal;
-        --post-list-medium-post-list-descriptionFont-variant: normal;
-        --post-list-medium-post-list-descriptionFont-weight: normal;
-        --post-list-medium-post-list-descriptionFont-size: 14px;
-        --post-list-medium-post-list-descriptionFont-line-height: 17px;
-        --post-list-medium-post-list-descriptionFont-family: montserrat, sans-serif;
-        --post-list-medium-post-list-descriptionFont-text-decoration: none;
-        --post-list-post-list-titleFont: normal normal normal 14px/17px montserrat, sans-serif;
-        --post-list-post-list-titleFont-style: normal;
-        --post-list-post-list-titleFont-variant: normal;
-        --post-list-post-list-titleFont-weight: normal;
-        --post-list-post-list-titleFont-size: 14px;
-        --post-list-post-list-titleFont-line-height: 17px;
-        --post-list-post-list-titleFont-family: montserrat, sans-serif;
-        --post-list-post-list-titleFont-text-decoration: none;
-        --post-pg-one-column-post-list-descriptionFont: normal normal normal 16px/20px montserrat, sans-serif;
-        --post-pg-one-column-post-list-descriptionFont-style: normal;
-        --post-pg-one-column-post-list-descriptionFont-variant: normal;
-        --post-pg-one-column-post-list-descriptionFont-weight: normal;
-        --post-pg-one-column-post-list-descriptionFont-size: 16px;
-        --post-pg-one-column-post-list-descriptionFont-line-height: 20px;
-        --post-pg-one-column-post-list-descriptionFont-family: montserrat, sans-serif;
-        --post-pg-one-column-post-list-descriptionFont-text-decoration: none;
-        --post-slider-post-list-titleFont: normal normal normal 22px/27px montserrat, sans-serif;
-        --post-slider-post-list-titleFont-style: normal;
-        --post-slider-post-list-titleFont-variant: normal;
-        --post-slider-post-list-titleFont-weight: normal;
-        --post-slider-post-list-titleFont-size: 22px;
-        --post-slider-post-list-titleFont-line-height: 27px;
-        --post-slider-post-list-titleFont-family: montserrat, sans-serif;
-        --post-slider-post-list-titleFont-text-decoration: none;
-        --post-slider-post-list-descriptionFont: normal normal normal 16px/20px montserrat, sans-serif;
-        --post-slider-post-list-descriptionFont-style: normal;
-        --post-slider-post-list-descriptionFont-variant: normal;
-        --post-slider-post-list-descriptionFont-weight: normal;
-        --post-slider-post-list-descriptionFont-size: 16px;
-        --post-slider-post-list-descriptionFont-line-height: 20px;
-        --post-slider-post-list-descriptionFont-family: montserrat, sans-serif;
-        --post-slider-post-list-descriptionFont-text-decoration: none;
-        --post-pg-side-by-side-right-post-list-titleFont: normal normal normal 28px/35px montserrat, sans-serif;
-        --post-pg-side-by-side-right-post-list-titleFont-style: normal;
-        --post-pg-side-by-side-right-post-list-titleFont-variant: normal;
-        --post-pg-side-by-side-right-post-list-titleFont-weight: normal;
-        --post-pg-side-by-side-right-post-list-titleFont-size: 28px;
-        --post-pg-side-by-side-right-post-list-titleFont-line-height: 35px;
-        --post-pg-side-by-side-right-post-list-titleFont-family: montserrat, sans-serif;
-        --post-pg-side-by-side-right-post-list-titleFont-text-decoration: none;
-        --post-pg-medium-post-list-descriptionFont: normal normal normal 16px/20px montserrat, sans-serif;
-        --post-pg-medium-post-list-descriptionFont-style: normal;
-        --post-pg-medium-post-list-descriptionFont-variant: normal;
-        --post-pg-medium-post-list-descriptionFont-weight: normal;
-        --post-pg-medium-post-list-descriptionFont-size: 16px;
-        --post-pg-medium-post-list-descriptionFont-line-height: 20px;
-        --post-pg-medium-post-list-descriptionFont-family: montserrat, sans-serif;
-        --post-pg-medium-post-list-descriptionFont-text-decoration: none;
-        --post-pg-one-column-post-list-titleFont: normal normal normal 28px/35px montserrat, sans-serif;
-        --post-pg-one-column-post-list-titleFont-style: normal;
-        --post-pg-one-column-post-list-titleFont-variant: normal;
-        --post-pg-one-column-post-list-titleFont-weight: normal;
-        --post-pg-one-column-post-list-titleFont-size: 28px;
-        --post-pg-one-column-post-list-titleFont-line-height: 35px;
-        --post-pg-one-column-post-list-titleFont-family: montserrat, sans-serif;
-        --post-pg-one-column-post-list-titleFont-text-decoration: none;
-        --post-post-list-descriptionFont: normal normal normal 14px/17px montserrat, sans-serif;
-        --post-post-list-descriptionFont-style: normal;
-        --post-post-list-descriptionFont-variant: normal;
-        --post-post-list-descriptionFont-weight: normal;
-        --post-post-list-descriptionFont-size: 14px;
-        --post-post-list-descriptionFont-line-height: 17px;
-        --post-post-list-descriptionFont-family: montserrat, sans-serif;
-        --post-post-list-descriptionFont-text-decoration: none;
-        --post-pg-side-by-side-post-list-titleFont: normal normal normal 28px/35px montserrat, sans-serif;
-        --post-pg-side-by-side-post-list-titleFont-style: normal;
-        --post-pg-side-by-side-post-list-titleFont-variant: normal;
-        --post-pg-side-by-side-post-list-titleFont-weight: normal;
-        --post-pg-side-by-side-post-list-titleFont-size: 28px;
-        --post-pg-side-by-side-post-list-titleFont-line-height: 35px;
-        --post-pg-side-by-side-post-list-titleFont-family: montserrat, sans-serif;
-        --post-pg-side-by-side-post-list-titleFont-text-decoration: none;
-        --post-pg-text-on-image-medium-post-list-descriptionFont: normal normal normal 16px/20px montserrat, sans-serif;
-        --post-pg-text-on-image-medium-post-list-descriptionFont-style: normal;
-        --post-pg-text-on-image-medium-post-list-descriptionFont-variant: normal;
-        --post-pg-text-on-image-medium-post-list-descriptionFont-weight: normal;
-        --post-pg-text-on-image-medium-post-list-descriptionFont-size: 16px;
-        --post-pg-text-on-image-medium-post-list-descriptionFont-line-height: 20px;
-        --post-pg-text-on-image-medium-post-list-descriptionFont-family: montserrat, sans-serif;
-        --post-pg-text-on-image-medium-post-list-descriptionFont-text-decoration: none;
-        --post-pg-text-on-image-large-post-list-descriptionFont: normal normal normal 16px/20px montserrat, sans-serif;
-        --post-pg-text-on-image-large-post-list-descriptionFont-style: normal;
-        --post-pg-text-on-image-large-post-list-descriptionFont-variant: normal;
-        --post-pg-text-on-image-large-post-list-descriptionFont-weight: normal;
-        --post-pg-text-on-image-large-post-list-descriptionFont-size: 16px;
-        --post-pg-text-on-image-large-post-list-descriptionFont-line-height: 20px;
-        --post-pg-text-on-image-large-post-list-descriptionFont-family: montserrat, sans-serif;
-        --post-pg-text-on-image-large-post-list-descriptionFont-text-decoration: none;
-        --post-list-post-list-descriptionFont: normal normal normal 14px/17px montserrat, sans-serif;
-        --post-list-post-list-descriptionFont-style: normal;
-        --post-list-post-list-descriptionFont-variant: normal;
-        --post-list-post-list-descriptionFont-weight: normal;
-        --post-list-post-list-descriptionFont-size: 14px;
-        --post-list-post-list-descriptionFont-line-height: 17px;
-        --post-list-post-list-descriptionFont-family: montserrat, sans-serif;
-        --post-list-post-list-descriptionFont-text-decoration: none;
-        --post-list-large-post-list-titleFont: normal normal normal 22px/27px montserrat, sans-serif;
-        --post-list-large-post-list-titleFont-style: normal;
-        --post-list-large-post-list-titleFont-variant: normal;
-        --post-list-large-post-list-titleFont-weight: normal;
-        --post-list-large-post-list-titleFont-size: 22px;
-        --post-list-large-post-list-titleFont-line-height: 27px;
-        --post-list-large-post-list-titleFont-family: montserrat, sans-serif;
-        --post-list-large-post-list-titleFont-text-decoration: none;
-        --post-list-medium-post-list-titleFont: normal normal normal 18px/22px montserrat, sans-serif;
-        --post-list-medium-post-list-titleFont-style: normal;
-        --post-list-medium-post-list-titleFont-variant: normal;
-        --post-list-medium-post-list-titleFont-weight: normal;
-        --post-list-medium-post-list-titleFont-size: 18px;
-        --post-list-medium-post-list-titleFont-line-height: 22px;
-        --post-list-medium-post-list-titleFont-family: montserrat, sans-serif;
-        --post-list-medium-post-list-titleFont-text-decoration: none;
-        --post-pg-grid-large-post-list-descriptionFont: normal normal normal 16px/20px montserrat, sans-serif;
-        --post-pg-grid-large-post-list-descriptionFont-style: normal;
-        --post-pg-grid-large-post-list-descriptionFont-variant: normal;
-        --post-pg-grid-large-post-list-descriptionFont-weight: normal;
-        --post-pg-grid-large-post-list-descriptionFont-size: 16px;
-        --post-pg-grid-large-post-list-descriptionFont-line-height: 20px;
-        --post-pg-grid-large-post-list-descriptionFont-family: montserrat, sans-serif;
-        --post-pg-grid-large-post-list-descriptionFont-text-decoration: none;
-        --post-pg-side-by-side-right-post-list-descriptionFont: normal normal normal 16px/20px montserrat, sans-serif;
-        --post-pg-side-by-side-right-post-list-descriptionFont-style: normal;
-        --post-pg-side-by-side-right-post-list-descriptionFont-variant: normal;
-        --post-pg-side-by-side-right-post-list-descriptionFont-weight: normal;
-        --post-pg-side-by-side-right-post-list-descriptionFont-size: 16px;
-        --post-pg-side-by-side-right-post-list-descriptionFont-line-height: 20px;
-        --post-pg-side-by-side-right-post-list-descriptionFont-family: montserrat, sans-serif;
-        --post-pg-side-by-side-right-post-list-descriptionFont-text-decoration: none;
-        --post-pg-grid-intermediate-post-list-titleFont: normal normal normal 22px/27px montserrat, sans-serif;
-        --post-pg-grid-intermediate-post-list-titleFont-style: normal;
-        --post-pg-grid-intermediate-post-list-titleFont-variant: normal;
-        --post-pg-grid-intermediate-post-list-titleFont-weight: normal;
-        --post-pg-grid-intermediate-post-list-titleFont-size: 22px;
-        --post-pg-grid-intermediate-post-list-titleFont-line-height: 27px;
-        --post-pg-grid-intermediate-post-list-titleFont-family: montserrat, sans-serif;
-        --post-pg-grid-intermediate-post-list-titleFont-text-decoration: none;
-        --post-pg-side-by-side-post-list-descriptionFont: normal normal normal 16px/20px montserrat, sans-serif;
-        --post-pg-side-by-side-post-list-descriptionFont-style: normal;
-        --post-pg-side-by-side-post-list-descriptionFont-variant: normal;
-        --post-pg-side-by-side-post-list-descriptionFont-weight: normal;
-        --post-pg-side-by-side-post-list-descriptionFont-size: 16px;
-        --post-pg-side-by-side-post-list-descriptionFont-line-height: 20px;
-        --post-pg-side-by-side-post-list-descriptionFont-family: montserrat, sans-serif;
-        --post-pg-side-by-side-post-list-descriptionFont-text-decoration: none;
-        --post-pg-text-on-image-small-post-list-titleFont: normal normal normal 22px/27px montserrat, sans-serif;
-        --post-pg-text-on-image-small-post-list-titleFont-style: normal;
-        --post-pg-text-on-image-small-post-list-titleFont-variant: normal;
-        --post-pg-text-on-image-small-post-list-titleFont-weight: normal;
-        --post-pg-text-on-image-small-post-list-titleFont-size: 22px;
-        --post-pg-text-on-image-small-post-list-titleFont-line-height: 27px;
-        --post-pg-text-on-image-small-post-list-titleFont-family: montserrat, sans-serif;
-        --post-pg-text-on-image-small-post-list-titleFont-text-decoration: none;
-        --post-post-list-titleFont: normal normal normal 18px/22px montserrat, sans-serif;
-        --post-post-list-titleFont-style: normal;
-        --post-post-list-titleFont-variant: normal;
-        --post-post-list-titleFont-weight: normal;
-        --post-post-list-titleFont-size: 18px;
-        --post-post-list-titleFont-line-height: 22px;
-        --post-post-list-titleFont-family: montserrat, sans-serif;
-        --post-post-list-titleFont-text-decoration: none;
-        --post-pg-medium-post-list-titleFont: normal normal normal 26px/32px montserrat, sans-serif;
-        --post-pg-medium-post-list-titleFont-style: normal;
-        --post-pg-medium-post-list-titleFont-variant: normal;
-        --post-pg-medium-post-list-titleFont-weight: normal;
-        --post-pg-medium-post-list-titleFont-size: 26px;
-        --post-pg-medium-post-list-titleFont-line-height: 32px;
-        --post-pg-medium-post-list-titleFont-family: montserrat, sans-serif;
-        --post-pg-medium-post-list-titleFont-text-decoration: none;
-        --post-list-large-post-list-descriptionFont: normal normal normal 14px/17px montserrat, sans-serif;
-        --post-list-large-post-list-descriptionFont-style: normal;
-        --post-list-large-post-list-descriptionFont-variant: normal;
-        --post-list-large-post-list-descriptionFont-weight: normal;
-        --post-list-large-post-list-descriptionFont-size: 14px;
-        --post-list-large-post-list-descriptionFont-line-height: 17px;
-        --post-list-large-post-list-descriptionFont-family: montserrat, sans-serif;
-        --post-list-large-post-list-descriptionFont-text-decoration: none;
-        --post-pg-grid-post-list-ratingFont: normal normal normal 14px/17px montserrat, sans-serif;
-        --post-pg-grid-post-list-ratingFont-style: normal;
-        --post-pg-grid-post-list-ratingFont-variant: normal;
-        --post-pg-grid-post-list-ratingFont-weight: normal;
-        --post-pg-grid-post-list-ratingFont-size: 14px;
-        --post-pg-grid-post-list-ratingFont-line-height: 17px;
-        --post-pg-grid-post-list-ratingFont-family: montserrat, sans-serif;
-        --post-pg-grid-post-list-ratingFont-text-decoration: none;
-        --post-pg-text-on-image-large-post-list-titleFont: normal normal normal 28px/35px montserrat, sans-serif;
-        --post-pg-text-on-image-large-post-list-titleFont-style: normal;
-        --post-pg-text-on-image-large-post-list-titleFont-variant: normal;
-        --post-pg-text-on-image-large-post-list-titleFont-weight: normal;
-        --post-pg-text-on-image-large-post-list-titleFont-size: 28px;
-        --post-pg-text-on-image-large-post-list-titleFont-line-height: 35px;
-        --post-pg-text-on-image-large-post-list-titleFont-family: montserrat, sans-serif;
-        --post-pg-text-on-image-large-post-list-titleFont-text-decoration: none;
-        --post-pg-text-on-image-medium-post-list-titleFont: normal normal normal 26px/32px montserrat, sans-serif;
-        --post-pg-text-on-image-medium-post-list-titleFont-style: normal;
-        --post-pg-text-on-image-medium-post-list-titleFont-variant: normal;
-        --post-pg-text-on-image-medium-post-list-titleFont-weight: normal;
-        --post-pg-text-on-image-medium-post-list-titleFont-size: 26px;
-        --post-pg-text-on-image-medium-post-list-titleFont-line-height: 32px;
-        --post-pg-text-on-image-medium-post-list-titleFont-family: montserrat, sans-serif;
-        --post-pg-text-on-image-medium-post-list-titleFont-text-decoration: none;
-        --post-pg-text-on-image-small-post-list-descriptionFont: normal normal normal 16px/20px montserrat, sans-serif;
-        --post-pg-text-on-image-small-post-list-descriptionFont-style: normal;
-        --post-pg-text-on-image-small-post-list-descriptionFont-variant: normal;
-        --post-pg-text-on-image-small-post-list-descriptionFont-weight: normal;
-        --post-pg-text-on-image-small-post-list-descriptionFont-size: 16px;
-        --post-pg-text-on-image-small-post-list-descriptionFont-line-height: 20px;
-        --post-pg-text-on-image-small-post-list-descriptionFont-family: montserrat, sans-serif;
-        --post-pg-text-on-image-small-post-list-descriptionFont-text-decoration: none;
-        --post-pg-grid-large-post-list-titleFont: normal normal normal 22px/27px montserrat, sans-serif;
-        --post-pg-grid-large-post-list-titleFont-style: normal;
-        --post-pg-grid-large-post-list-titleFont-variant: normal;
-        --post-pg-grid-large-post-list-titleFont-weight: normal;
-        --post-pg-grid-large-post-list-titleFont-size: 22px;
-        --post-pg-grid-large-post-list-titleFont-line-height: 27px;
-        --post-pg-grid-large-post-list-titleFont-family: montserrat, sans-serif;
-        --post-pg-grid-large-post-list-titleFont-text-decoration: none;
-        --category-label-text-textFont-style: normal;
-        --category-label-text-textFont-variant: normal;
-        --category-label-text-textFont-weight: normal;
-        --category-label-text-textFont-size: 14px;
-        --category-label-text-textFont-line-height: 19.599999999999998px;
-        --category-label-text-textFont-family: montserrat, sans-serif;
-        --category-label-text-textFont-text-decoration: none;
-        --category-label-button-textFont-style: normal;
-        --category-label-button-textFont-variant: normal;
-        --category-label-button-textFont-weight: normal;
-        --category-label-button-textFont-size: 14px;
-        --category-label-button-textFont-line-height: 19.599999999999998px;
-        --category-label-button-textFont-family: montserrat, sans-serif;
-        --category-label-button-textFont-text-decoration: none;
-        --post-post-list-ratingFont-style: normal;
-        --post-post-list-ratingFont-variant: normal;
-        --post-post-list-ratingFont-weight: normal;
-        --post-post-list-ratingFont-size: 18px;
-        --post-post-list-ratingFont-line-height: 1.4em;
-        --post-post-list-ratingFont-family: montserrat, sans-serif;
-        --post-post-list-ratingFont-text-decoration: none;
-        --post-list-post-list-ratingFont-style: normal;
-        --post-list-post-list-ratingFont-variant: normal;
-        --post-list-post-list-ratingFont-weight: normal;
-        --post-list-post-list-ratingFont-size: 14px;
-        --post-list-post-list-ratingFont-line-height: 19.599999999999998px;
-        --post-list-post-list-ratingFont-family: montserrat, sans-serif;
-        --post-list-post-list-ratingFont-text-decoration: none;
-        --post-pg-one-column-post-list-ratingFont-style: normal;
-        --post-pg-one-column-post-list-ratingFont-variant: normal;
-        --post-pg-one-column-post-list-ratingFont-weight: normal;
-        --post-pg-one-column-post-list-ratingFont-size: 14px;
-        --post-pg-one-column-post-list-ratingFont-line-height: 19.599999999999998px;
-        --post-pg-one-column-post-list-ratingFont-family: montserrat, sans-serif;
-        --post-pg-one-column-post-list-ratingFont-text-decoration: none;
-        --post-pg-side-by-side-post-list-ratingFont-style: normal;
-        --post-pg-side-by-side-post-list-ratingFont-variant: normal;
-        --post-pg-side-by-side-post-list-ratingFont-weight: normal;
-        --post-pg-side-by-side-post-list-ratingFont-size: 14px;
-        --post-pg-side-by-side-post-list-ratingFont-line-height: 19.599999999999998px;
-        --post-pg-side-by-side-post-list-ratingFont-family: montserrat, sans-serif;
-        --post-pg-side-by-side-post-list-ratingFont-text-decoration: none;
-        --post-pg-text-on-image-medium-post-list-ratingFont-style: normal;
-        --post-pg-text-on-image-medium-post-list-ratingFont-variant: normal;
-        --post-pg-text-on-image-medium-post-list-ratingFont-weight: normal;
-        --post-pg-text-on-image-medium-post-list-ratingFont-size: 14px;
-        --post-pg-text-on-image-medium-post-list-ratingFont-line-height: 19.599999999999998px;
-        --post-pg-text-on-image-medium-post-list-ratingFont-family: montserrat, sans-serif;
-        --post-pg-text-on-image-medium-post-list-ratingFont-text-decoration: none;
-        --post-slider-post-list-ratingFont-style: normal;
-        --post-slider-post-list-ratingFont-variant: normal;
-        --post-slider-post-list-ratingFont-weight: normal;
-        --post-slider-post-list-ratingFont-size: 14px;
-        --post-slider-post-list-ratingFont-line-height: 19.599999999999998px;
-        --post-slider-post-list-ratingFont-family: montserrat, sans-serif;
-        --post-slider-post-list-ratingFont-text-decoration: none;
-        --post-list-medium-post-list-ratingFont-style: normal;
-        --post-list-medium-post-list-ratingFont-variant: normal;
-        --post-list-medium-post-list-ratingFont-weight: normal;
-        --post-list-medium-post-list-ratingFont-size: 14px;
-        --post-list-medium-post-list-ratingFont-line-height: 19.599999999999998px;
-        --post-list-medium-post-list-ratingFont-family: montserrat, sans-serif;
-        --post-list-medium-post-list-ratingFont-text-decoration: none;
-        --post-list-large-post-list-ratingFont-style: normal;
-        --post-list-large-post-list-ratingFont-variant: normal;
-        --post-list-large-post-list-ratingFont-weight: normal;
-        --post-list-large-post-list-ratingFont-size: 14px;
-        --post-list-large-post-list-ratingFont-line-height: 19.599999999999998px;
-        --post-list-large-post-list-ratingFont-family: montserrat, sans-serif;
-        --post-list-large-post-list-ratingFont-text-decoration: none;
-        --post-pg-grid-intermediate-post-list-ratingFont-style: normal;
-        --post-pg-grid-intermediate-post-list-ratingFont-variant: normal;
-        --post-pg-grid-intermediate-post-list-ratingFont-weight: normal;
-        --post-pg-grid-intermediate-post-list-ratingFont-size: 14px;
-        --post-pg-grid-intermediate-post-list-ratingFont-line-height: 19.599999999999998px;
-        --post-pg-grid-intermediate-post-list-ratingFont-family: montserrat, sans-serif;
-        --post-pg-grid-intermediate-post-list-ratingFont-text-decoration: none;
-        --post-pg-grid-large-post-list-ratingFont-style: normal;
-        --post-pg-grid-large-post-list-ratingFont-variant: normal;
-        --post-pg-grid-large-post-list-ratingFont-weight: normal;
-        --post-pg-grid-large-post-list-ratingFont-size: 14px;
-        --post-pg-grid-large-post-list-ratingFont-line-height: 19.599999999999998px;
-        --post-pg-grid-large-post-list-ratingFont-family: montserrat, sans-serif;
-        --post-pg-grid-large-post-list-ratingFont-text-decoration: none;
-        --post-pg-medium-post-list-ratingFont-style: normal;
-        --post-pg-medium-post-list-ratingFont-variant: normal;
-        --post-pg-medium-post-list-ratingFont-weight: normal;
-        --post-pg-medium-post-list-ratingFont-size: 14px;
-        --post-pg-medium-post-list-ratingFont-line-height: 19.599999999999998px;
-        --post-pg-medium-post-list-ratingFont-family: montserrat, sans-serif;
-        --post-pg-medium-post-list-ratingFont-text-decoration: none;
-        --post-pg-side-by-side-right-post-list-ratingFont-style: normal;
-        --post-pg-side-by-side-right-post-list-ratingFont-variant: normal;
-        --post-pg-side-by-side-right-post-list-ratingFont-weight: normal;
-        --post-pg-side-by-side-right-post-list-ratingFont-size: 14px;
-        --post-pg-side-by-side-right-post-list-ratingFont-line-height: 19.599999999999998px;
-        --post-pg-side-by-side-right-post-list-ratingFont-family: montserrat, sans-serif;
-        --post-pg-side-by-side-right-post-list-ratingFont-text-decoration: none;
-        --post-pg-text-on-image-large-post-list-ratingFont-style: normal;
-        --post-pg-text-on-image-large-post-list-ratingFont-variant: normal;
-        --post-pg-text-on-image-large-post-list-ratingFont-weight: normal;
-        --post-pg-text-on-image-large-post-list-ratingFont-size: 14px;
-        --post-pg-text-on-image-large-post-list-ratingFont-line-height: 19.599999999999998px;
-        --post-pg-text-on-image-large-post-list-ratingFont-family: montserrat, sans-serif;
-        --post-pg-text-on-image-large-post-list-ratingFont-text-decoration: none;
-        --post-pg-text-on-image-small-post-list-ratingFont-style: normal;
-        --post-pg-text-on-image-small-post-list-ratingFont-variant: normal;
-        --post-pg-text-on-image-small-post-list-ratingFont-weight: normal;
-        --post-pg-text-on-image-small-post-list-ratingFont-size: 14px;
-        --post-pg-text-on-image-small-post-list-ratingFont-line-height: 19.599999999999998px;
-        --post-pg-text-on-image-small-post-list-ratingFont-family: montserrat, sans-serif;
-        --post-pg-text-on-image-small-post-list-ratingFont-text-decoration: none;
-        --wix-color-1: 255, 255, 255;
-        --wix-color-2: 182, 182, 184;
-        --wix-color-3: 153, 154, 159;
-        --wix-color-4: 102, 103, 111;
-        --wix-color-5: 51, 52, 63;
-        --wix-color-6: 182, 183, 196;
-        --wix-color-7: 110, 112, 136;
-        --wix-color-8: 51, 52, 63;
-        --wix-color-9: 34, 35, 42;
-        --wix-color-10: 17, 17, 21;
-        --wix-color-11: 215, 215, 225;
-        --wix-color-12: 174, 175, 194;
-        --wix-color-13: 134, 135, 164;
-        --wix-color-14: 97, 99, 129;
-        --wix-color-15: 102, 103, 111;
-        --wix-color-16: 251, 251, 251;
-        --wix-color-17: 182, 182, 184;
-        --wix-color-18: 185, 185, 185;
-        --wix-color-19: 124, 124, 124;
-        --wix-color-20: 62, 62, 62;
-        --wix-color-21: 252, 222, 147;
-        --wix-color-22: 248, 189, 38;
-        --wix-color-23: 208, 151, 7;
-        --wix-color-24: 139, 101, 4;
-        --wix-color-25: 69, 50, 2;
-        --wix-color-26: 255, 255, 255;
-        --wix-color-27: 51, 52, 63;
-        --wix-color-28: 182, 182, 184;
-        --wix-color-29: 153, 154, 159;
-        --wix-color-30: 102, 103, 111;
-        --wix-color-31: 239, 239, 239;
-        --wix-color-32: 40, 38, 38;
-        --wix-color-33: 233, 226, 215;
-        --wix-color-34: 203, 200, 194;
-        --wix-color-35: 51, 52, 63;
-        --wix-color-36: 51, 52, 63;
-        --wix-color-37: 102, 103, 111;
-        --wix-color-38: 51, 52, 63;
-        --wix-color-39: 51, 52, 63;
-        --wix-color-40: 255, 255, 255;
-        --wix-color-41: 255, 255, 255;
-        --wix-color-42: 51, 52, 63;
-        --wix-color-43: 51, 52, 63;
-        --wix-color-44: 153, 154, 159;
-        --wix-color-45: 153, 154, 159;
-        --wix-color-46: 255, 255, 255;
-        --wix-color-47: 255, 255, 255;
-        --wix-color-48: 51, 52, 63;
-        --wix-color-49: 51, 52, 63;
-        --wix-color-50: 51, 52, 63;
-        --wix-color-51: 51, 52, 63;
-        --wix-color-52: 255, 255, 255;
-        --wix-color-53: 255, 255, 255;
-        --wix-color-54: 153, 154, 159;
-        --wix-color-55: 153, 154, 159;
-        --wix-font-Title: normal normal normal 88px/1.2em montserrat, sans-serif;
-        --wix-font-Title-style: normal;
-        --wix-font-Title-variant: normal;
-        --wix-font-Title-weight: normal;
-        --wix-font-Title-size: 88px;
-        --wix-font-Title-line-height: 1.2em;
-        --wix-font-Title-family: montserrat, sans-serif;
-        --wix-font-Title-text-decoration: none;
-        --wix-font-Menu: normal normal normal 14px/1.79em avenir-lt-w01_35-light1475496, sans-serif;
-        --wix-font-Menu-style: normal;
-        --wix-font-Menu-variant: normal;
-        --wix-font-Menu-weight: normal;
-        --wix-font-Menu-size: 14px;
-        --wix-font-Menu-line-height: 1.79em;
-        --wix-font-Menu-family: avenir-lt-w01_35-light1475496, sans-serif;
-        --wix-font-Menu-text-decoration: none;
-        --wix-font-Page-title: normal normal normal 72px/1.25em montserrat, sans-serif;
-        --wix-font-Page-title-style: normal;
-        --wix-font-Page-title-variant: normal;
-        --wix-font-Page-title-weight: normal;
-        --wix-font-Page-title-size: 72px;
-        --wix-font-Page-title-line-height: 1.25em;
-        --wix-font-Page-title-family: montserrat, sans-serif;
-        --wix-font-Page-title-text-decoration: none;
-        --wix-font-Heading-XL: normal normal normal 50px/1.34em montserrat, sans-serif;
-        --wix-font-Heading-XL-style: normal;
-        --wix-font-Heading-XL-variant: normal;
-        --wix-font-Heading-XL-weight: normal;
-        --wix-font-Heading-XL-size: 50px;
-        --wix-font-Heading-XL-line-height: 1.34em;
-        --wix-font-Heading-XL-family: montserrat, sans-serif;
-        --wix-font-Heading-XL-text-decoration: none;
-        --wix-font-Heading-L: normal normal normal 40px/1.35em montserrat, sans-serif;
-        --wix-font-Heading-L-style: normal;
-        --wix-font-Heading-L-variant: normal;
-        --wix-font-Heading-L-weight: normal;
-        --wix-font-Heading-L-size: 40px;
-        --wix-font-Heading-L-line-height: 1.35em;
-        --wix-font-Heading-L-family: montserrat, sans-serif;
-        --wix-font-Heading-L-text-decoration: none;
-        --wix-font-Heading-M: normal normal normal 28px/1.38em montserrat, sans-serif;
-        --wix-font-Heading-M-style: normal;
-        --wix-font-Heading-M-variant: normal;
-        --wix-font-Heading-M-weight: normal;
-        --wix-font-Heading-M-size: 28px;
-        --wix-font-Heading-M-line-height: 1.38em;
-        --wix-font-Heading-M-family: montserrat, sans-serif;
-        --wix-font-Heading-M-text-decoration: none;
-        --wix-font-Heading-S: normal normal normal 22px/1.41em montserrat, sans-serif;
-        --wix-font-Heading-S-style: normal;
-        --wix-font-Heading-S-variant: normal;
-        --wix-font-Heading-S-weight: normal;
-        --wix-font-Heading-S-size: 22px;
-        --wix-font-Heading-S-line-height: 1.41em;
-        --wix-font-Heading-S-family: montserrat, sans-serif;
-        --wix-font-Heading-S-text-decoration: none;
-        --wix-font-Body-L: normal normal normal 20px/1.67em montserrat, sans-serif;
-        --wix-font-Body-L-style: normal;
-        --wix-font-Body-L-variant: normal;
-        --wix-font-Body-L-weight: normal;
-        --wix-font-Body-L-size: 20px;
-        --wix-font-Body-L-line-height: 1.67em;
-        --wix-font-Body-L-family: montserrat, sans-serif;
-        --wix-font-Body-L-text-decoration: none;
-        --wix-font-Body-M: normal normal normal 18px/1.75em montserrat, sans-serif;
-        --wix-font-Body-M-style: normal;
-        --wix-font-Body-M-variant: normal;
-        --wix-font-Body-M-weight: normal;
-        --wix-font-Body-M-size: 18px;
-        --wix-font-Body-M-line-height: 1.75em;
-        --wix-font-Body-M-family: montserrat, sans-serif;
-        --wix-font-Body-M-text-decoration: none;
-        --wix-font-Body-S: normal normal normal 15px/1.88em montserrat, sans-serif;
-        --wix-font-Body-S-style: normal;
-        --wix-font-Body-S-variant: normal;
-        --wix-font-Body-S-weight: normal;
-        --wix-font-Body-S-size: 15px;
-        --wix-font-Body-S-line-height: 1.88em;
-        --wix-font-Body-S-family: montserrat, sans-serif;
-        --wix-font-Body-S-text-decoration: none;
-        --wix-font-Body-XS: normal normal normal 14px/1.79em avenir-lt-w01_35-light1475496, sans-serif;
-        --wix-font-Body-XS-style: normal;
-        --wix-font-Body-XS-variant: normal;
-        --wix-font-Body-XS-weight: normal;
-        --wix-font-Body-XS-size: 14px;
-        --wix-font-Body-XS-line-height: 1.79em;
-        --wix-font-Body-XS-family: avenir-lt-w01_35-light1475496, sans-serif;
-        --wix-font-Body-XS-text-decoration: none;
-        --wix-font-LIGHT: normal normal normal 12px/1.4em HelveticaNeueW01-45Ligh;
-        --wix-font-LIGHT-style: normal;
-        --wix-font-LIGHT-variant: normal;
-        --wix-font-LIGHT-weight: normal;
-        --wix-font-LIGHT-size: 12px;
-        --wix-font-LIGHT-line-height: 1.4em;
-        --wix-font-LIGHT-family: HelveticaNeueW01-45Ligh;
-        --wix-font-LIGHT-text-decoration: none;
-        --wix-font-MEDIUM: normal normal normal 12px/1.4em HelveticaNeueW01-55Roma;
-        --wix-font-MEDIUM-style: normal;
-        --wix-font-MEDIUM-variant: normal;
-        --wix-font-MEDIUM-weight: normal;
-        --wix-font-MEDIUM-size: 12px;
-        --wix-font-MEDIUM-line-height: 1.4em;
-        --wix-font-MEDIUM-family: HelveticaNeueW01-55Roma;
-        --wix-font-MEDIUM-text-decoration: none;
-        --wix-font-STRONG: normal normal normal 12px/1.4em HelveticaNeueW01-65Medi;
-        --wix-font-STRONG-style: normal;
-        --wix-font-STRONG-variant: normal;
-        --wix-font-STRONG-weight: normal;
-        --wix-font-STRONG-size: 12px;
-        --wix-font-STRONG-line-height: 1.4em;
-        --wix-font-STRONG-family: HelveticaNeueW01-65Medi;
-        --wix-font-STRONG-text-decoration: none;
-    }
-
-    #comp-mamp9r87 {
-        --text-direction: var(--wix-opt-in-direction);
-    }
-
-    #comp-m5qnidsd6 {
-        --bg-overlay-color: transparent;
-        --bg-gradient: none;
-        min-width: 980px;
-    }
-
-    #comp-m5qnidsh4 {
-        --text-direction: var(--wix-opt-in-direction);
-    }
-
-    #comp-m5qnidsi3 {
-        --shc-mutated-brightness: 128, 128, 128;
-    }
+#fswyo {
+  width: auto;
+  min-height: 40px;
+}
+
+#pageBackground_fswyo {
+  --bg-position: absolute;
+  --bg-overlay-color: rgb(var(--color_11));
+  --bg-gradient: none;
+}
+
+#comp-mb56i7nd {
+  --fill-layer-image-opacity: 0.5;
+  --bg-overlay-color: rgb(0, 0, 0);
+  --bg-gradient: none;
+  min-width: 980px;
+}
+
+#comp-mb56i7ni3 {
+  --text-direction: var(--wix-opt-in-direction);
+}
+
+#comp-mb56i7nl2 {
+  --text-direction: var(--wix-opt-in-direction);
+}
+
+#comp-mb56i7nk2 {
+  --text-direction: var(--wix-opt-in-direction);
+}
+
+#comp-m5utn3xf {
+  --bg-overlay-color: rgb(var(--color_11));
+  --bg-gradient: none;
+  min-width: 980px;
+}
+
+#comp-m6451tfk {
+  --bg-overlay-color: transparent;
+  --bg-gradient: none;
+  --padding: 0px;
+  --margin: 0px;
+  min-width: 980px;
+  --firstChildMarginTop: -1px;
+  --lastChildMarginBottom: -1px;
+  --direction: ltr;
+}
+
+#comp-m6451ty81 {
+  --bg-overlay-color: rgb(var(--color_36));
+  --bg-gradient: none;
+  width: 100%;
+  --column-width: 980px;
+  --column-flex: 980;
+}
+
+#comp-m6451tyv {
+  --text-direction: var(--wix-opt-in-direction);
+}
+
+#comp-m6451tyt7 {
+  --height: 200px;
+  --width: 309px;
+}
+
+#comp-m6451tyh {
+  --text-direction: var(--wix-opt-in-direction);
+}
+
+#comp-m6451tye2 {
+  --height: 200px;
+  --width: 309px;
+}
+
+#comp-m6451tz2 {
+  --text-direction: var(--wix-opt-in-direction);
+}
+
+#comp-m6451tz08 {
+  --height: 200px;
+  --width: 309px;
+}
+
+#comp-mhkgykr8 {
+  --shc-mutated-brightness: 41, 20, 27;
+}
+
+#comp-mhkgykrd2 {
+  --height: 52px;
+  --width: 46px;
+}
+
+#comp-mkxso3l0 {
+  --text-direction: var(--wix-opt-in-direction);
+}
+
+#comp-mhkgykrh1 {
+  --text-direction: var(--wix-opt-in-direction);
+}
+
+#comp-mgex96ee {
+  --shc-mutated-brightness: 128, 128, 128;
+}
+
+#comp-mgex96ep {
+  --height: 58px;
+  --width: 154px;
+  --mask-position: 0% 0%;
+  --mask-size: 100% 100%;
+  --mask-repeat: no-repeat;
+}
+
+#comp-mgex96en {
+  --text-direction: var(--wix-opt-in-direction);
+}
+
+#comp-mgex4ddg {
+  --shc-mutated-brightness: 128, 128, 128;
+}
+
+#comp-mclt1rxz {
+  --height: 58px;
+  --width: 107px;
+}
+
+#comp-mcltezrx {
+  --text-direction: var(--wix-opt-in-direction);
+}
+
+#comp-mirg7kd5 {
+  --shc-mutated-brightness: 128, 128, 128;
+}
+
+#comp-mirg7kdd {
+  --height: 52px;
+  --width: 46px;
+  --mask-image: url("data:image/svg+xml,%3Csvg preserveAspectRatio='none' data-bbox='20 20 160 160' viewBox='20 20 160 160' height='200' width='200' xmlns='https://www.w3.org/2000/svg' data-type='shape'%3E%3Cg%3E%3Cpath d='M180 20v160H20V20h160z'/%3E%3C/g%3E%3C/svg%3E%0A");
+  --mask-position: 0% 0%;
+  --mask-size: 100% 100%;
+  --mask-repeat: no-repeat;
+}
+
+#comp-mko5kjj5 {
+  --text-direction: var(--wix-opt-in-direction);
+}
+
+#comp-mirg7kdf {
+  --text-direction: var(--wix-opt-in-direction);
+}
+
+#comp-mauw28at {
+  --text-direction: var(--wix-opt-in-direction);
+}
+
+#comp-mauw4vgq {
+  --opacity: 1;
+}
+
+#comp-mauw6137 {
+  --opacity: 1;
+}
+
+#comp-mbqp35z2 {
+  --opacity: 1;
+}
+
+#comp-m66dcvli {
+  --fill-layer-image-opacity: 1;
+  --bg-overlay-color: rgb(var(--color_36));
+  --bg-gradient: none;
+  min-width: 980px;
+}
+
+#comp-m66de3kl {
+  --height: 337px;
+  --width: 1140px;
+}
+
+#comp-mh1ro4f21 {
+  --height: 401px;
+}
+
+#comp-m66djnfx {
+  --fill-opacity: 0.78;
+  --stroke-width: 0;
+  --stroke: #33343f;
+  --stroke-opacity: 1;
+  --fill: #282626;
+}
+
+#comp-m6693875 {
+  --text-direction: var(--wix-opt-in-direction);
+}
+
+#comp-makvwzc5 {
+  --fill-layer-image-opacity: 1;
+  --bg-overlay-color: rgb(var(--color_37));
+  --bg-gradient: none;
+  min-width: 980px;
+}
+
+#comp-makvwzcj {
+  --text-direction: var(--wix-opt-in-direction);
+}
+
+#comp-makvwzcl1 {
+  --direction: var(--wix-opt-in-direction);
+  --justify-content: center;
+  --item-margin: 15px 15px;
+  --margin-top: -15px;
+  --margin-bottom: -15px;
+  --margin-inline-start: -15px;
+  --margin-inline-end: -15px;
+}
+
+[id^="comp-makvwzco__"] {
+  --scale: 1;
+  --bg-overlay-color: rgba(var(--color_36), 0.81);
+  --bg-gradient: none;
+  border-width: 0 0 0 0;
+  border-style: solid solid solid solid;
+  border-color: rgba(176, 169, 134, 1) rgba(176, 169, 134, 1) rgba(176, 169, 134, 1) rgba(176, 169, 134, 1);
+  border-radius: 20px 20px 20px 20px;
+  overflow: clip !important;
+  transform: translateZ(0);
+  margin: -0px;
+}
+
+[id^="comp-makvwzcu2__"] {
+  --text-direction: var(--wix-opt-in-direction);
+}
+
+[id^="comp-makvwzcw3__"] {
+  --fill-opacity: 1;
+  --stroke-width: 3;
+  --stroke: #ffffff;
+  --stroke-opacity: 1;
+  --fill: #ffffff;
+  --svg-calculated-padding: 1px 2px 2px 1px;
+  --svg-calculated-width: calc(100% - 3px);
+  --svg-calculated-height: calc(100% - 3px);
+}
+
+[id^="comp-mbytc3eo__"] {
+  --shc-mutated-brightness: 128, 128, 128;
+}
+
+[id^="comp-makvwzcz5__"] {
+  --height: 152px;
+  --width: 216px;
+}
+
+[id="comp-makvwzcz5__item-j9plerjk"] {
+  --height: 152px;
+  --width: 216px;
+  --mask-image: url("data:image/svg+xml,%3Csvg preserveAspectRatio='none' data-bbox='20 20 160 160' viewBox='20 20 160 160' height='200' width='200' xmlns='https://www.w3.org/2000/svg' data-type='shape'%3E%3Cg%3E%3Cpath d='M180 20v160H20V20h160z'/%3E%3C/g%3E%3C/svg%3E%0A");
+  --mask-position: 0% 0%;
+  --mask-size: 100% 100%;
+  --mask-repeat: no-repeat;
+}
+
+[id="comp-makvwzcz5__item-3f45e7c5-4497-4b5c-84f1-bbad6cea4901"] {
+  --height: 152px;
+  --width: 216px;
+  --mask-image: url("data:image/svg+xml,%3Csvg preserveAspectRatio='none' data-bbox='20 20 160 160' viewBox='20 20 160 160' height='200' width='200' xmlns='https://www.w3.org/2000/svg' data-type='shape'%3E%3Cg%3E%3Cpath d='M180 20v160H20V20h160z'/%3E%3C/g%3E%3C/svg%3E%0A");
+  --mask-position: 0% 0%;
+  --mask-size: 100% 100%;
+  --mask-repeat: no-repeat;
+}
+
+[id="comp-makvwzcz5__item-4baa69a6-4feb-49ff-8c44-e09e698bee31"] {
+  --height: 152px;
+  --width: 216px;
+  --mask-image: url("data:image/svg+xml,%3Csvg preserveAspectRatio='none' data-bbox='20 20 160 160' viewBox='20 20 160 160' height='200' width='200' xmlns='https://www.w3.org/2000/svg' data-type='shape'%3E%3Cg%3E%3Cpath d='M180 20v160H20V20h160z'/%3E%3C/g%3E%3C/svg%3E%0A");
+  --mask-position: 0% 0%;
+  --mask-size: 100% 100%;
+  --mask-repeat: no-repeat;
+}
+
+[id="comp-makvwzcz5__item-588aab86-de66-4a8e-ad39-1ed74b88f3a5"] {
+  --height: 152px;
+  --width: 216px;
+  --mask-image: url("data:image/svg+xml,%3Csvg preserveAspectRatio='none' data-bbox='20 20 160 160' viewBox='20 20 160 160' height='200' width='200' xmlns='https://www.w3.org/2000/svg' data-type='shape'%3E%3Cg%3E%3Cpath d='M180 20v160H20V20h160z'/%3E%3C/g%3E%3C/svg%3E%0A");
+  --mask-position: 0% 0%;
+  --mask-size: 100% 100%;
+  --mask-repeat: no-repeat;
+}
+
+#comp-m5qnidp97 {
+  --bg-overlay-color: transparent;
+  --bg-gradient: none;
+  min-width: 980px;
+}
+
+#comp-m5qnidpb1 {
+  --text-direction: var(--wix-opt-in-direction);
+}
+
+#comp-m5qnidpc {
+  --shc-mutated-brightness: 116, 15, 62;
+}
+
+#comp-m5qnidpd6 {
+  --text-direction: var(--wix-opt-in-direction);
+}
+
+#comp-m5qnidpe2 {
+  --text-direction: var(--wix-opt-in-direction);
+}
+
+#comp-m5qnidpg6 {
+  --min-height: 43px;
+  --text-direction: var(--wix-opt-in-direction);
+}
+
+#comp-m5qnidph7 {
+  --min-height: 33px;
+  --text-direction: var(--wix-opt-in-direction);
+}
+
+#comp-m5qnidpj4 {
+  --min-height: 43px;
+  --text-direction: var(--wix-opt-in-direction);
+}
+
+#comp-m5qnidpk3 {
+  --min-height: 33px;
+  --text-direction: var(--wix-opt-in-direction);
+}
+
+#comp-m5qnidpm {
+  --min-height: 43px;
+  --text-direction: var(--wix-opt-in-direction);
+}
+
+#comp-m5qnidpn {
+  --min-height: 33px;
+  --text-direction: var(--wix-opt-in-direction);
+}
+
+#comp-m5qnidpo {
+  --shc-mutated-brightness: 26, 26, 32;
+}
+
+#comp-m5qnidpo4 {
+  --text-direction: var(--wix-opt-in-direction);
+}
+
+#comp-m5qnidpp8 {
+  --text-direction: var(--wix-opt-in-direction);
+}
+
+#comp-m5qnidpq11 {
+  --shc-mutated-brightness: 101, 7, 124;
+}
+
+#comp-m5qnidpr3 {
+  --fill-opacity: 1;
+  --stroke-width: 0;
+  --stroke: #5e97ff;
+  --stroke-opacity: 1;
+  --fill: #ffffff;
+}
+
+#comp-m5qnidps7 {
+  --text-direction: var(--wix-opt-in-direction);
+}
+
+#comp-m5qnidpt6 {
+  --text-direction: var(--wix-opt-in-direction);
+}
+
+#comp-m5qnidpu9 {
+  --shc-mutated-brightness: 15, 52, 103;
+}
+
+#comp-m5qnidpv3 {
+  --text-direction: var(--wix-opt-in-direction);
+}
+
+#comp-m5qnidpw1 {
+  --text-direction: var(--wix-opt-in-direction);
+}
+
+#comp-m5qnidpx1 {
+  --shc-mutated-brightness: 128, 93, 0;
+}
+
+#comp-m5qnidpy8 {
+  --height: 65px;
+  --width: 65px;
+}
+
+#comp-m5qnidpz6 {
+  --text-direction: var(--wix-opt-in-direction);
+}
+
+#comp-m5qnidq07 {
+  --text-direction: var(--wix-opt-in-direction);
+}
+
+#comp-m5qnidq25 {
+  --height: 67px;
+  --width: 65px;
+}
+
+#comp-m5qnidq33 {
+  --text-direction: var(--wix-opt-in-direction);
+}
+
+#comp-m5qnidq42 {
+  --text-direction: var(--wix-opt-in-direction);
+}
+
+#comp-m5qnidq6 {
+  --height: 64px;
+  --width: 71px;
+}
+
+#comp-m5qnidq7 {
+  --text-direction: var(--wix-opt-in-direction);
+}
+
+#comp-m5qnidq81 {
+  --text-direction: var(--wix-opt-in-direction);
+}
+
+#comp-m5qnidqd {
+  --height: 64px;
+  --width: 64px;
+}
+
+#comp-m5qnidqe {
+  --text-direction: var(--wix-opt-in-direction);
+}
+
+#comp-m5qnidqf1 {
+  --text-direction: var(--wix-opt-in-direction);
+}
+
+#comp-m5qnidqh {
+  --height: 65px;
+  --width: 71px;
+}
+
+#comp-m5qnidqi1 {
+  --text-direction: var(--wix-opt-in-direction);
+}
+
+#comp-m5qnidqj1 {
+  --text-direction: var(--wix-opt-in-direction);
+}
+
+#comp-m5qnidqk2 {
+  --fill-layer-image-opacity: 1;
+  --bg-overlay-color: rgb(204, 0, 0);
+  --bg-gradient: none;
+  min-width: 980px;
+}
+
+#comp-m5qnidql8 {
+  --text-direction: var(--wix-opt-in-direction);
+}
+
+#comp-m5qnidqm2 {
+  --shc-mutated-brightness: 128, 128, 128;
+}
+
+#comp-mamoyxjr {
+  --bg-overlay-color: rgb(var(--color_11));
+  --bg-gradient: none;
+  min-width: 980px;
+}
+
+#comp-mamoyxk6 {
+  --bg-overlay-color: transparent;
+  --bg-gradient: none;
+  --padding: 0px;
+  --margin: 0px;
+  min-width: 980px;
+  --firstChildMarginTop: -1px;
+  --lastChildMarginBottom: -1px;
+  --direction: ltr;
+}
+
+#comp-mamoyxkw {
+  --fill-layer-image-opacity: 0.91;
+  --bg-overlay-color: rgb(var(--color_12));
+  --bg-gradient: none;
+  width: 100%;
+  --column-width: 333px;
+  --column-flex: 333;
+}
+
+#comp-m5qnidsm4 {
+  --text-direction: var(--wix-opt-in-direction);
+}
+
+#comp-mamoyxkh {
+  --bg-overlay-color: transparent;
+  --bg-gradient: none;
+  width: 100%;
+  --column-width: 647px;
+  --column-flex: 647;
+}
+
+.comp-m5qnidso5 {
+  --wix-direction: ltr;
+  --sideBySideCardSpacing▶︎m: 33;
+  --buttonType: 1;
+  --buttonBorderWidth: 0;
+  --cardBorderWidth▶︎m: 1;
+  --imageRatio▶︎m: 2;
+  --secondaryButtonBorderWidth: 1;
+  --cardBorderCornerRadius▶︎m: 17;
+  --buttonBorderRadius: 100;
+  --secondaryButtonType: 3;
+  --groupCardGridTopBottomSpacing: 20.00001;
+  --groupCardGridTopBottomSpacing▶︎m: 20.00001;
+  --shadowDistance▶︎m: 0;
+  --cardBorderCornerRadius: 20;
+  --secondaryButtonBorderRadius: 100;
+  --appBorderWidth: 0;
+  --mobileButtonTextFontSize: 16;
+  --cardBorderWidth: 1;
+  --shadowAngle: 180;
+  --shadowDistance: 0;
+  --shadowBlur: 10;
+  --textFieldBorderWidth: 1;
+  --textFieldBorderRadius: 0;
+  --groupCardGridSideSpacing: 20;
+  --groupCardListTopBottomSpacing: 20;
+  --groupCardListSideSpacing: 20;
+  --groupCardListWidgetTopBottomSpacing: 20;
+  --groupCardListWidgetSideSpacing: 0;
+  --cardSideBySideHeight: 241;
+  --headerAlignment: 1;
+  --imageRatio: 1;
+  --sideBarAlignment: 2;
+  --groupCardGridSpacing: 12;
+  --listWidgetSpacing: 0;
+  --sideBarHorizontalSpacing: 40;
+  --sideBarVerticalSpacing: 24;
+  --sideBarProportion: 30;
+  --feedVerticalSpacing: 24;
+  --feedAlignment: 3;
+  --imageCrop: 1;
+  --imageLayout: 2;
+  --itemTextAlignment: 1;
+  --listWidgetTitleAlignment: 1;
+  --buttonTextFont: normal normal normal 16px/1.4em montserrat;
+  --buttonTextFont▶︎m: normal normal normal 18px/1.4em montserrat;
+  --cardTitleFont: normal normal normal 16px/1.4em montserrat, sans-serif;
+  --cardSubtitleFont: normal normal normal 14px/1.4em montserrat, sans-serif;
+  --cardBodyTextFont: normal normal normal 16px/1.4em montserrat, sans-serif;
+  --textButtonFont: normal normal normal 16px/1.4em montserrat, sans-serif;
+  --textFieldFont: normal normal normal 14px/1.4em montserrat, sans-serif;
+  --postsTitleFont: normal normal normal 20px/1.4em montserrat, sans-serif;
+  --postsTextFont: normal normal normal 16px/1.4em montserrat, sans-serif;
+  --memberNameFont: normal normal normal 16px/1.4em montserrat, sans-serif;
+  --postingDateFont: normal normal normal 14px/1.4em montserrat, sans-serif;
+  --commentsReactionsCounterFont: normal normal normal 14px/1.4em montserrat, sans-serif;
+  --sidebarGroupNameFont: normal normal normal 16px/1.4em montserrat, sans-serif;
+  --groupInfoFont: normal normal normal 14px/1.4em montserrat, sans-serif;
+  --listTitleFont: normal normal normal 24px/1.4em montserrat, sans-serif;
+  --listSubtitleFont: normal normal normal 16px/1.4em montserrat, sans-serif;
+  --sidebarTitleFont: normal normal normal 16px/1.4em montserrat, sans-serif;
+  --feedTitleFont: normal normal normal 20px/1.4em montserrat, sans-serif;
+  --feedSubtitleFont: normal normal normal 16px/1.4em montserrat, sans-serif;
+  --listWidgetTitleFont: normal normal normal 32px/1.4em montserrat, sans-serif;
+  --buttonTextColor: 255, 255, 255;
+  --buttonTextColor-rgb: 255, 255, 255;
+  --buttonTextColor-opacity: 1;
+  --buttonHoverColor: 204, 0, 0, 0.7;
+  --buttonHoverColor-rgb: 204, 0, 0;
+  --buttonHoverColor-opacity: 0.7;
+  --cardBackgroundColor▶︎m: 255, 255, 255;
+  --cardBackgroundColor▶︎m-rgb: 255, 255, 255;
+  --cardBackgroundColor▶︎m-opacity: 1;
+  --groupNameColorOnHover▶︎m: 153, 154, 159;
+  --groupNameColorOnHover▶︎m-rgb: 153, 154, 159;
+  --groupNameColorOnHover▶︎m-opacity: 1;
+  --appBackgroundColor: 255, 255, 255, 0;
+  --appBackgroundColor-rgb: 255, 255, 255;
+  --appBackgroundColor-opacity: 0;
+  --cardBorderColor: 51, 52, 63, 0.2;
+  --cardBorderColor-rgb: 51, 52, 63;
+  --cardBorderColor-opacity: 0.2;
+  --groupNameColor▶︎m: 51, 52, 63;
+  --groupNameColor▶︎m-rgb: 51, 52, 63;
+  --groupNameColor▶︎m-opacity: 1;
+  --appBackgroundColor▶︎m: 255, 255, 255;
+  --appBackgroundColor▶︎m-rgb: 255, 255, 255;
+  --appBackgroundColor▶︎m-opacity: 1;
+  --secondaryButtonTextColor: 51, 52, 63;
+  --secondaryButtonTextColor-rgb: 51, 52, 63;
+  --secondaryButtonTextColor-opacity: 1;
+  --cardBorderColor▶︎m: 51, 52, 63;
+  --cardBorderColor▶︎m-rgb: 51, 52, 63;
+  --cardBorderColor▶︎m-opacity: 1;
+  --secondaryButtonColor: 51, 52, 63, 0;
+  --secondaryButtonColor-rgb: 51, 52, 63;
+  --secondaryButtonColor-opacity: 0;
+  --buttonBorderColor▶︎m: 51, 52, 63, 0;
+  --buttonBorderColor▶︎m-rgb: 51, 52, 63;
+  --buttonBorderColor▶︎m-opacity: 0;
+  --groupNameColor: 51, 52, 63;
+  --groupNameColor-rgb: 51, 52, 63;
+  --groupNameColor-opacity: 1;
+  --groupInfoColor▶︎m: 51, 52, 63;
+  --groupInfoColor▶︎m-rgb: 51, 52, 63;
+  --groupInfoColor▶︎m-opacity: 1;
+  --buttonBorderColor: 51, 52, 63, 0;
+  --buttonBorderColor-rgb: 51, 52, 63;
+  --buttonBorderColor-opacity: 0;
+  --secondaryButtonBorderColor: 204, 0, 0;
+  --secondaryButtonBorderColor-rgb: 204, 0, 0;
+  --secondaryButtonBorderColor-opacity: 1;
+  --buttonColor: 204, 0, 0;
+  --buttonColor-rgb: 204, 0, 0;
+  --buttonColor-opacity: 1;
+  --buttonTextColor▶︎m: 255, 255, 255;
+  --buttonTextColor▶︎m-rgb: 255, 255, 255;
+  --buttonTextColor▶︎m-opacity: 1;
+  --appBorderColor: 255, 255, 255, 0.3;
+  --appBorderColor-rgb: 255, 255, 255;
+  --appBorderColor-opacity: 0.3;
+  --buttonHoverTextColor: 255, 255, 255, 0.7;
+  --buttonHoverTextColor-rgb: 255, 255, 255;
+  --buttonHoverTextColor-opacity: 0.7;
+  --buttonHoverBorderColor: 51, 52, 63, 0;
+  --buttonHoverBorderColor-rgb: 51, 52, 63;
+  --buttonHoverBorderColor-opacity: 0;
+  --secondaryButtonHoverColor: 51, 52, 63, 0;
+  --secondaryButtonHoverColor-rgb: 51, 52, 63;
+  --secondaryButtonHoverColor-opacity: 0;
+  --secondaryButtonHoverTextColor: 51, 52, 63, 0.7;
+  --secondaryButtonHoverTextColor-rgb: 51, 52, 63;
+  --secondaryButtonHoverTextColor-opacity: 0.7;
+  --secondaryButtonHoverBorderColor: 51, 52, 63, 0.7;
+  --secondaryButtonHoverBorderColor-rgb: 51, 52, 63;
+  --secondaryButtonHoverBorderColor-opacity: 0.7;
+  --cardBackgroundColor: 255, 255, 255;
+  --cardBackgroundColor-rgb: 255, 255, 255;
+  --cardBackgroundColor-opacity: 1;
+  --shadowColor: 51, 52, 63, 0.1;
+  --shadowColor-rgb: 51, 52, 63;
+  --shadowColor-opacity: 0.1;
+  --cardTitleColor: 51, 52, 63;
+  --cardTitleColor-rgb: 51, 52, 63;
+  --cardTitleColor-opacity: 1;
+  --cardSubtitleColor: 102, 103, 111;
+  --cardSubtitleColor-rgb: 102, 103, 111;
+  --cardSubtitleColor-opacity: 1;
+  --cardBodyTextColor: 51, 52, 63;
+  --cardBodyTextColor-rgb: 51, 52, 63;
+  --cardBodyTextColor-opacity: 1;
+  --textButtonColor: 51, 52, 63;
+  --textButtonColor-rgb: 51, 52, 63;
+  --textButtonColor-opacity: 1;
+  --textFieldBackgroundColor: 255, 255, 255;
+  --textFieldBackgroundColor-rgb: 255, 255, 255;
+  --textFieldBackgroundColor-opacity: 1;
+  --textFieldBorderColor: 51, 52, 63, 0.2;
+  --textFieldBorderColor-rgb: 51, 52, 63;
+  --textFieldBorderColor-opacity: 0.2;
+  --textFieldPlaceholderColor: 102, 103, 111;
+  --textFieldPlaceholderColor-rgb: 102, 103, 111;
+  --textFieldPlaceholderColor-opacity: 1;
+  --textFieldColor: 51, 52, 63;
+  --textFieldColor-rgb: 51, 52, 63;
+  --textFieldColor-opacity: 1;
+  --postIconsColor: 51, 52, 63;
+  --postIconsColor-rgb: 51, 52, 63;
+  --postIconsColor-opacity: 1;
+  --postsTitleColor: 51, 52, 63;
+  --postsTitleColor-rgb: 51, 52, 63;
+  --postsTitleColor-opacity: 1;
+  --postsTextColor: 51, 52, 63;
+  --postsTextColor-rgb: 51, 52, 63;
+  --postsTextColor-opacity: 1;
+  --memberNameColor: 51, 52, 63;
+  --memberNameColor-rgb: 51, 52, 63;
+  --memberNameColor-opacity: 1;
+  --postingDateColor: 51, 52, 63;
+  --postingDateColor-rgb: 51, 52, 63;
+  --postingDateColor-opacity: 1;
+  --commentsReactionsCounterColor: 51, 52, 63;
+  --commentsReactionsCounterColor-rgb: 51, 52, 63;
+  --commentsReactionsCounterColor-opacity: 1;
+  --sidebarGroupNameColor: 51, 52, 63;
+  --sidebarGroupNameColor-rgb: 51, 52, 63;
+  --sidebarGroupNameColor-opacity: 1;
+  --groupNameColorOnHover: 51, 52, 63;
+  --groupNameColorOnHover-rgb: 51, 52, 63;
+  --groupNameColorOnHover-opacity: 1;
+  --groupInfoColor: 51, 52, 63;
+  --groupInfoColor-rgb: 51, 52, 63;
+  --groupInfoColor-opacity: 1;
+  --listTitleColor: 51, 52, 63;
+  --listTitleColor-rgb: 51, 52, 63;
+  --listTitleColor-opacity: 1;
+  --listSubtitleColor: 51, 52, 63;
+  --listSubtitleColor-rgb: 51, 52, 63;
+  --listSubtitleColor-opacity: 1;
+  --searchSortingColor: 51, 52, 63;
+  --searchSortingColor-rgb: 51, 52, 63;
+  --searchSortingColor-opacity: 1;
+  --sidebarTitleColor: 51, 52, 63;
+  --sidebarTitleColor-rgb: 51, 52, 63;
+  --sidebarTitleColor-opacity: 1;
+  --feedTitleColor: 51, 52, 63;
+  --feedTitleColor-rgb: 51, 52, 63;
+  --feedTitleColor-opacity: 1;
+  --feedSubtitleColor: 51, 52, 63;
+  --feedSubtitleColor-rgb: 51, 52, 63;
+  --feedSubtitleColor-opacity: 1;
+  --listWidgetTitleColor: 51, 52, 63;
+  --listWidgetTitleColor-rgb: 51, 52, 63;
+  --listWidgetTitleColor-opacity: 1;
+  --groupNameFont: normal normal normal 18px/22px montserrat, sans-serif;
+  --groupNameFont-style: normal;
+  --groupNameFont-variant: normal;
+  --groupNameFont-weight: normal;
+  --groupNameFont-size: 18px;
+  --groupNameFont-line-height: 22px;
+  --groupNameFont-family: montserrat, sans-serif;
+  --groupNameFont-text-decoration: none;
+  --buttonTextFont-style: normal;
+  --buttonTextFont-variant: normal;
+  --buttonTextFont-weight: normal;
+  --buttonTextFont-size: 16px;
+  --buttonTextFont-line-height: 1.4em;
+  --buttonTextFont-family: montserrat;
+  --buttonTextFont-text-decoration: none;
+  --groupNameFont▶︎m: normal normal normal 12px/15px montserrat, sans-serif;
+  --groupNameFont▶︎m-style: normal;
+  --groupNameFont▶︎m-variant: normal;
+  --groupNameFont▶︎m-weight: normal;
+  --groupNameFont▶︎m-size: 12px;
+  --groupNameFont▶︎m-line-height: 15px;
+  --groupNameFont▶︎m-family: montserrat, sans-serif;
+  --groupNameFont▶︎m-text-decoration: none;
+  --buttonTextFont▶︎m-style: normal;
+  --buttonTextFont▶︎m-variant: normal;
+  --buttonTextFont▶︎m-weight: normal;
+  --buttonTextFont▶︎m-size: 18px;
+  --buttonTextFont▶︎m-line-height: 1.4em;
+  --buttonTextFont▶︎m-family: montserrat;
+  --buttonTextFont▶︎m-text-decoration: none;
+  --groupInfoFont▶︎m: normal normal normal 12px/15px montserrat, sans-serif;
+  --groupInfoFont▶︎m-style: normal;
+  --groupInfoFont▶︎m-variant: normal;
+  --groupInfoFont▶︎m-weight: normal;
+  --groupInfoFont▶︎m-size: 12px;
+  --groupInfoFont▶︎m-line-height: 15px;
+  --groupInfoFont▶︎m-family: montserrat, sans-serif;
+  --groupInfoFont▶︎m-text-decoration: none;
+  --cardTitleFont-style: normal;
+  --cardTitleFont-variant: normal;
+  --cardTitleFont-weight: normal;
+  --cardTitleFont-size: 16px;
+  --cardTitleFont-line-height: 1.4em;
+  --cardTitleFont-family: montserrat, sans-serif;
+  --cardTitleFont-text-decoration: none;
+  --cardSubtitleFont-style: normal;
+  --cardSubtitleFont-variant: normal;
+  --cardSubtitleFont-weight: normal;
+  --cardSubtitleFont-size: 14px;
+  --cardSubtitleFont-line-height: 1.4em;
+  --cardSubtitleFont-family: montserrat, sans-serif;
+  --cardSubtitleFont-text-decoration: none;
+  --cardBodyTextFont-style: normal;
+  --cardBodyTextFont-variant: normal;
+  --cardBodyTextFont-weight: normal;
+  --cardBodyTextFont-size: 16px;
+  --cardBodyTextFont-line-height: 1.4em;
+  --cardBodyTextFont-family: montserrat, sans-serif;
+  --cardBodyTextFont-text-decoration: none;
+  --textButtonFont-style: normal;
+  --textButtonFont-variant: normal;
+  --textButtonFont-weight: normal;
+  --textButtonFont-size: 16px;
+  --textButtonFont-line-height: 1.4em;
+  --textButtonFont-family: montserrat, sans-serif;
+  --textButtonFont-text-decoration: none;
+  --textFieldFont-style: normal;
+  --textFieldFont-variant: normal;
+  --textFieldFont-weight: normal;
+  --textFieldFont-size: 14px;
+  --textFieldFont-line-height: 1.4em;
+  --textFieldFont-family: montserrat, sans-serif;
+  --textFieldFont-text-decoration: none;
+  --postsTitleFont-style: normal;
+  --postsTitleFont-variant: normal;
+  --postsTitleFont-weight: normal;
+  --postsTitleFont-size: 20px;
+  --postsTitleFont-line-height: 1.4em;
+  --postsTitleFont-family: montserrat, sans-serif;
+  --postsTitleFont-text-decoration: none;
+  --postsTextFont-style: normal;
+  --postsTextFont-variant: normal;
+  --postsTextFont-weight: normal;
+  --postsTextFont-size: 16px;
+  --postsTextFont-line-height: 1.4em;
+  --postsTextFont-family: montserrat, sans-serif;
+  --postsTextFont-text-decoration: none;
+  --memberNameFont-style: normal;
+  --memberNameFont-variant: normal;
+  --memberNameFont-weight: normal;
+  --memberNameFont-size: 16px;
+  --memberNameFont-line-height: 1.4em;
+  --memberNameFont-family: montserrat, sans-serif;
+  --memberNameFont-text-decoration: none;
+  --postingDateFont-style: normal;
+  --postingDateFont-variant: normal;
+  --postingDateFont-weight: normal;
+  --postingDateFont-size: 14px;
+  --postingDateFont-line-height: 1.4em;
+  --postingDateFont-family: montserrat, sans-serif;
+  --postingDateFont-text-decoration: none;
+  --commentsReactionsCounterFont-style: normal;
+  --commentsReactionsCounterFont-variant: normal;
+  --commentsReactionsCounterFont-weight: normal;
+  --commentsReactionsCounterFont-size: 14px;
+  --commentsReactionsCounterFont-line-height: 1.4em;
+  --commentsReactionsCounterFont-family: montserrat, sans-serif;
+  --commentsReactionsCounterFont-text-decoration: none;
+  --sidebarGroupNameFont-style: normal;
+  --sidebarGroupNameFont-variant: normal;
+  --sidebarGroupNameFont-weight: normal;
+  --sidebarGroupNameFont-size: 16px;
+  --sidebarGroupNameFont-line-height: 1.4em;
+  --sidebarGroupNameFont-family: montserrat, sans-serif;
+  --sidebarGroupNameFont-text-decoration: none;
+  --groupInfoFont-style: normal;
+  --groupInfoFont-variant: normal;
+  --groupInfoFont-weight: normal;
+  --groupInfoFont-size: 14px;
+  --groupInfoFont-line-height: 1.4em;
+  --groupInfoFont-family: montserrat, sans-serif;
+  --groupInfoFont-text-decoration: none;
+  --listTitleFont-style: normal;
+  --listTitleFont-variant: normal;
+  --listTitleFont-weight: normal;
+  --listTitleFont-size: 24px;
+  --listTitleFont-line-height: 1.4em;
+  --listTitleFont-family: montserrat, sans-serif;
+  --listTitleFont-text-decoration: none;
+  --listSubtitleFont-style: normal;
+  --listSubtitleFont-variant: normal;
+  --listSubtitleFont-weight: normal;
+  --listSubtitleFont-size: 16px;
+  --listSubtitleFont-line-height: 1.4em;
+  --listSubtitleFont-family: montserrat, sans-serif;
+  --listSubtitleFont-text-decoration: none;
+  --sidebarTitleFont-style: normal;
+  --sidebarTitleFont-variant: normal;
+  --sidebarTitleFont-weight: normal;
+  --sidebarTitleFont-size: 16px;
+  --sidebarTitleFont-line-height: 1.4em;
+  --sidebarTitleFont-family: montserrat, sans-serif;
+  --sidebarTitleFont-text-decoration: none;
+  --feedTitleFont-style: normal;
+  --feedTitleFont-variant: normal;
+  --feedTitleFont-weight: normal;
+  --feedTitleFont-size: 20px;
+  --feedTitleFont-line-height: 1.4em;
+  --feedTitleFont-family: montserrat, sans-serif;
+  --feedTitleFont-text-decoration: none;
+  --feedSubtitleFont-style: normal;
+  --feedSubtitleFont-variant: normal;
+  --feedSubtitleFont-weight: normal;
+  --feedSubtitleFont-size: 16px;
+  --feedSubtitleFont-line-height: 1.4em;
+  --feedSubtitleFont-family: montserrat, sans-serif;
+  --feedSubtitleFont-text-decoration: none;
+  --listWidgetTitleFont-style: normal;
+  --listWidgetTitleFont-variant: normal;
+  --listWidgetTitleFont-weight: normal;
+  --listWidgetTitleFont-size: 32px;
+  --listWidgetTitleFont-line-height: 1.4em;
+  --listWidgetTitleFont-family: montserrat, sans-serif;
+  --listWidgetTitleFont-text-decoration: none;
+  --item-text-justify-content: flex-start;
+  --item-text-align-items: flex-start;
+  --list-widget-title-alignment: left;
+  --wix-color-1: 255, 255, 255;
+  --wix-color-2: 182, 182, 184;
+  --wix-color-3: 153, 154, 159;
+  --wix-color-4: 102, 103, 111;
+  --wix-color-5: 51, 52, 63;
+  --wix-color-6: 182, 183, 196;
+  --wix-color-7: 110, 112, 136;
+  --wix-color-8: 51, 52, 63;
+  --wix-color-9: 34, 35, 42;
+  --wix-color-10: 17, 17, 21;
+  --wix-color-11: 215, 215, 225;
+  --wix-color-12: 174, 175, 194;
+  --wix-color-13: 134, 135, 164;
+  --wix-color-14: 97, 99, 129;
+  --wix-color-15: 102, 103, 111;
+  --wix-color-16: 251, 251, 251;
+  --wix-color-17: 182, 182, 184;
+  --wix-color-18: 185, 185, 185;
+  --wix-color-19: 124, 124, 124;
+  --wix-color-20: 62, 62, 62;
+  --wix-color-21: 252, 222, 147;
+  --wix-color-22: 248, 189, 38;
+  --wix-color-23: 208, 151, 7;
+  --wix-color-24: 139, 101, 4;
+  --wix-color-25: 69, 50, 2;
+  --wix-color-26: 255, 255, 255;
+  --wix-color-27: 51, 52, 63;
+  --wix-color-28: 182, 182, 184;
+  --wix-color-29: 153, 154, 159;
+  --wix-color-30: 102, 103, 111;
+  --wix-color-31: 239, 239, 239;
+  --wix-color-32: 40, 38, 38;
+  --wix-color-33: 233, 226, 215;
+  --wix-color-34: 203, 200, 194;
+  --wix-color-35: 51, 52, 63;
+  --wix-color-36: 51, 52, 63;
+  --wix-color-37: 102, 103, 111;
+  --wix-color-38: 51, 52, 63;
+  --wix-color-39: 51, 52, 63;
+  --wix-color-40: 255, 255, 255;
+  --wix-color-41: 255, 255, 255;
+  --wix-color-42: 51, 52, 63;
+  --wix-color-43: 51, 52, 63;
+  --wix-color-44: 153, 154, 159;
+  --wix-color-45: 153, 154, 159;
+  --wix-color-46: 255, 255, 255;
+  --wix-color-47: 255, 255, 255;
+  --wix-color-48: 51, 52, 63;
+  --wix-color-49: 51, 52, 63;
+  --wix-color-50: 51, 52, 63;
+  --wix-color-51: 51, 52, 63;
+  --wix-color-52: 255, 255, 255;
+  --wix-color-53: 255, 255, 255;
+  --wix-color-54: 153, 154, 159;
+  --wix-color-55: 153, 154, 159;
+  --wix-font-Title: normal normal normal 88px/1.2em montserrat, sans-serif;
+  --wix-font-Title-style: normal;
+  --wix-font-Title-variant: normal;
+  --wix-font-Title-weight: normal;
+  --wix-font-Title-size: 88px;
+  --wix-font-Title-line-height: 1.2em;
+  --wix-font-Title-family: montserrat, sans-serif;
+  --wix-font-Title-text-decoration: none;
+  --wix-font-Menu: normal normal normal 14px/1.79em avenir-lt-w01_35-light1475496, sans-serif;
+  --wix-font-Menu-style: normal;
+  --wix-font-Menu-variant: normal;
+  --wix-font-Menu-weight: normal;
+  --wix-font-Menu-size: 14px;
+  --wix-font-Menu-line-height: 1.79em;
+  --wix-font-Menu-family: avenir-lt-w01_35-light1475496, sans-serif;
+  --wix-font-Menu-text-decoration: none;
+  --wix-font-Page-title: normal normal normal 72px/1.25em montserrat, sans-serif;
+  --wix-font-Page-title-style: normal;
+  --wix-font-Page-title-variant: normal;
+  --wix-font-Page-title-weight: normal;
+  --wix-font-Page-title-size: 72px;
+  --wix-font-Page-title-line-height: 1.25em;
+  --wix-font-Page-title-family: montserrat, sans-serif;
+  --wix-font-Page-title-text-decoration: none;
+  --wix-font-Heading-XL: normal normal normal 50px/1.34em montserrat, sans-serif;
+  --wix-font-Heading-XL-style: normal;
+  --wix-font-Heading-XL-variant: normal;
+  --wix-font-Heading-XL-weight: normal;
+  --wix-font-Heading-XL-size: 50px;
+  --wix-font-Heading-XL-line-height: 1.34em;
+  --wix-font-Heading-XL-family: montserrat, sans-serif;
+  --wix-font-Heading-XL-text-decoration: none;
+  --wix-font-Heading-L: normal normal normal 40px/1.35em montserrat, sans-serif;
+  --wix-font-Heading-L-style: normal;
+  --wix-font-Heading-L-variant: normal;
+  --wix-font-Heading-L-weight: normal;
+  --wix-font-Heading-L-size: 40px;
+  --wix-font-Heading-L-line-height: 1.35em;
+  --wix-font-Heading-L-family: montserrat, sans-serif;
+  --wix-font-Heading-L-text-decoration: none;
+  --wix-font-Heading-M: normal normal normal 28px/1.38em montserrat, sans-serif;
+  --wix-font-Heading-M-style: normal;
+  --wix-font-Heading-M-variant: normal;
+  --wix-font-Heading-M-weight: normal;
+  --wix-font-Heading-M-size: 28px;
+  --wix-font-Heading-M-line-height: 1.38em;
+  --wix-font-Heading-M-family: montserrat, sans-serif;
+  --wix-font-Heading-M-text-decoration: none;
+  --wix-font-Heading-S: normal normal normal 22px/1.41em montserrat, sans-serif;
+  --wix-font-Heading-S-style: normal;
+  --wix-font-Heading-S-variant: normal;
+  --wix-font-Heading-S-weight: normal;
+  --wix-font-Heading-S-size: 22px;
+  --wix-font-Heading-S-line-height: 1.41em;
+  --wix-font-Heading-S-family: montserrat, sans-serif;
+  --wix-font-Heading-S-text-decoration: none;
+  --wix-font-Body-L: normal normal normal 20px/1.67em montserrat, sans-serif;
+  --wix-font-Body-L-style: normal;
+  --wix-font-Body-L-variant: normal;
+  --wix-font-Body-L-weight: normal;
+  --wix-font-Body-L-size: 20px;
+  --wix-font-Body-L-line-height: 1.67em;
+  --wix-font-Body-L-family: montserrat, sans-serif;
+  --wix-font-Body-L-text-decoration: none;
+  --wix-font-Body-M: normal normal normal 18px/1.75em montserrat, sans-serif;
+  --wix-font-Body-M-style: normal;
+  --wix-font-Body-M-variant: normal;
+  --wix-font-Body-M-weight: normal;
+  --wix-font-Body-M-size: 18px;
+  --wix-font-Body-M-line-height: 1.75em;
+  --wix-font-Body-M-family: montserrat, sans-serif;
+  --wix-font-Body-M-text-decoration: none;
+  --wix-font-Body-S: normal normal normal 15px/1.88em montserrat, sans-serif;
+  --wix-font-Body-S-style: normal;
+  --wix-font-Body-S-variant: normal;
+  --wix-font-Body-S-weight: normal;
+  --wix-font-Body-S-size: 15px;
+  --wix-font-Body-S-line-height: 1.88em;
+  --wix-font-Body-S-family: montserrat, sans-serif;
+  --wix-font-Body-S-text-decoration: none;
+  --wix-font-Body-XS: normal normal normal 14px/1.79em avenir-lt-w01_35-light1475496, sans-serif;
+  --wix-font-Body-XS-style: normal;
+  --wix-font-Body-XS-variant: normal;
+  --wix-font-Body-XS-weight: normal;
+  --wix-font-Body-XS-size: 14px;
+  --wix-font-Body-XS-line-height: 1.79em;
+  --wix-font-Body-XS-family: avenir-lt-w01_35-light1475496, sans-serif;
+  --wix-font-Body-XS-text-decoration: none;
+  --wix-font-LIGHT: normal normal normal 12px/1.4em HelveticaNeueW01-45Ligh;
+  --wix-font-LIGHT-style: normal;
+  --wix-font-LIGHT-variant: normal;
+  --wix-font-LIGHT-weight: normal;
+  --wix-font-LIGHT-size: 12px;
+  --wix-font-LIGHT-line-height: 1.4em;
+  --wix-font-LIGHT-family: HelveticaNeueW01-45Ligh;
+  --wix-font-LIGHT-text-decoration: none;
+  --wix-font-MEDIUM: normal normal normal 12px/1.4em HelveticaNeueW01-55Roma;
+  --wix-font-MEDIUM-style: normal;
+  --wix-font-MEDIUM-variant: normal;
+  --wix-font-MEDIUM-weight: normal;
+  --wix-font-MEDIUM-size: 12px;
+  --wix-font-MEDIUM-line-height: 1.4em;
+  --wix-font-MEDIUM-family: HelveticaNeueW01-55Roma;
+  --wix-font-MEDIUM-text-decoration: none;
+  --wix-font-STRONG: normal normal normal 12px/1.4em HelveticaNeueW01-65Medi;
+  --wix-font-STRONG-style: normal;
+  --wix-font-STRONG-variant: normal;
+  --wix-font-STRONG-weight: normal;
+  --wix-font-STRONG-size: 12px;
+  --wix-font-STRONG-line-height: 1.4em;
+  --wix-font-STRONG-family: HelveticaNeueW01-65Medi;
+  --wix-font-STRONG-text-decoration: none;
+}
+
+#comp-m5qnidsn5 {
+  --text-direction: var(--wix-opt-in-direction);
+}
+
+.comp-m5qnidsc {
+  --wix-direction: ltr;
+  --layout-post-list-layoutType: 16;
+  --post-pg-text-on-image-medium-post-list-mobile-titleFontSize: 18;
+  --layout-post-list-pg-grid-contentHeightType: 1;
+  --layout-post-list-list-layoutSpacing: 12;
+  --layout-post-list-pg-grid-layoutPostSize: 290;
+  --layout-mobile-post-list-pg-text-on-image-medium-imageRatio: 1;
+  --layout-post-list-pg-grid-sidesPadding: 24;
+  --postListWidgetEntityCount: 3;
+  --layout-post-list-pg-grid-layoutSpacing: 25;
+  --layout-mobile-post-list-layoutType: 13;
+  --layout-post-list-pg-grid-imageCropType: 1;
+  --layout-post-list-list-imageRatio: 3;
+  --layout-post-list-pg-grid-titleLineCount: 3;
+  --layout-post-list-pg-grid-contentHeight: 320;
+  --postListWidgetPaginationType: 1;
+  --layout-post-list-pg-grid-layoutPostsPerRow: 3;
+  --contentAlignment: 0;
+  --layout-post-list-list-margins: 0;
+  --layout-post-list-pg-grid-layoutCardsRowType: 1;
+  --layout-post-list-pg-grid-imageRatio: 1;
+  --postListWidgetPostsPerPage: 3;
+  --layout-post-list-list-imageCropType: 0;
+  --layout-mobile-post-list-pg-grid-imageCropType: 0;
+  --layout-mobile-post-list-list-imageCropType: 0;
+  --layout-post-list-pg-side-by-side-imageCropType: 0;
+  --layout-mobile-post-list-pg-grid-imageRatio: 2;
+  --layout-mobile-post-list-list-imageRatio: 2;
+  --layout-mobile-post-list-slider-imageRatio: 2;
+  --layout-post-list-slider-imageRatio: 2;
+  --layout-post-list-pg-side-by-side-imageRatio: 2;
+  --layout-post-list-pg-text-on-image-medium-imageRatio: 3;
+  --contentAlignmentMobile: 0;
+  --layout-post-list-list-imageAlignment: 1;
+  --layout-mobile-post-list-list-imageAlignment: 1;
+  --layout-post-list-pg-side-by-side-imageAlignment: 1;
+  --layout-post-list-list-imageProportions: 25;
+  --layout-mobile-post-list-list-imageProportions: 25;
+  --layout-post-list-pg-side-by-side-imageProportions: 50;
+  --postListWidgetSliderPauseTime: 4;
+  --postListWidgetSliderPauseTimeMobile: 4;
+  --postListWidgetSliderArrowsPosition: 0;
+  --postListWidgetSliderArrowsPositionMobile: 0;
+  --postListWidgetSliderArrowsSize: 18;
+  --postListWidgetSliderArrowsSizeMobile: 18;
+  --layout-post-list-list-layoutCardsRowType: 0;
+  --layout-post-list-list-layoutPostSize: 292;
+  --layout-post-list-list-layoutPostsPerRow: 3;
+  --layout-mobile-post-list-pg-grid-layoutCardsRowType: 0;
+  --layout-mobile-post-list-pg-grid-layoutPostSize: 292;
+  --layout-mobile-post-list-pg-grid-layoutPostsPerRow: 3;
+  --layout-mobile-post-list-list-layoutCardsRowType: 0;
+  --layout-mobile-post-list-list-layoutPostSize: 292;
+  --layout-mobile-post-list-list-layoutPostsPerRow: 3;
+  --layout-mobile-post-list-pg-text-on-image-medium-layoutCardsRowType: 0;
+  --layout-mobile-post-list-pg-text-on-image-medium-layoutPostSize: 292;
+  --layout-mobile-post-list-pg-text-on-image-medium-layoutPostsPerRow: 3;
+  --layout-post-list-pg-text-on-image-medium-layoutCardsRowType: 0;
+  --layout-post-list-pg-text-on-image-medium-layoutPostSize: 454;
+  --layout-post-list-pg-text-on-image-medium-layoutPostsPerRow: 3;
+  --layout-mobile-post-list-pg-grid-layoutSpacing: 20;
+  --layout-mobile-post-list-list-layoutSpacing: 20;
+  --layout-mobile-post-list-pg-text-on-image-medium-layoutSpacing: 20;
+  --layout-post-list-pg-side-by-side-layoutSpacing: 32;
+  --layout-post-list-pg-text-on-image-medium-layoutSpacing: 32;
+  --layout-post-list-pg-one-column-layoutSpacing: 32;
+  --layout-post-list-list-contentHeightType: 0;
+  --layout-post-list-list-contentHeight: 156;
+  --layout-mobile-post-list-pg-grid-contentHeight: 350;
+  --layout-mobile-post-list-pg-grid-contentHeightType: 0;
+  --layout-mobile-post-list-list-contentHeight: 350;
+  --layout-mobile-post-list-slider-contentHeight: 350;
+  --layout-mobile-post-list-slider-contentHeightType: 0;
+  --layout-post-list-slider-contentHeightType: 1;
+  --layout-post-list-slider-contentHeight: 156;
+  --layout-post-list-pg-one-column-contentHeightType: 1;
+  --layout-post-list-pg-one-column-contentHeight: 156;
+  --layout-post-list-list-sidesPadding: 16;
+  --layout-mobile-post-list-pg-grid-sidesPadding: 24;
+  --layout-mobile-post-list-list-sidesPadding: 12;
+  --layout-mobile-post-list-pg-text-on-image-medium-sidesPadding: 12;
+  --layout-mobile-post-list-slider-sidesPadding: 24;
+  --layout-post-list-slider-sidesPadding: 16;
+  --layout-post-list-pg-side-by-side-sidesPadding: 16;
+  --layout-post-list-pg-text-on-image-medium-sidesPadding: 30;
+  --layout-post-list-pg-one-column-sidesPadding: 16;
+  --layout-post-list-list-titleLineCount: 3;
+  --layout-mobile-post-list-pg-grid-titleLineCount: 2;
+  --layout-mobile-post-list-pg-grid-descriptionLineCount: 3;
+  --layout-mobile-post-list-list-titleLineCount: 2;
+  --layout-mobile-post-list-pg-text-on-image-medium-titleLineCount: 2;
+  --layout-mobile-post-list-slider-titleLineCount: 2;
+  --layout-mobile-post-list-slider-descriptionLineCount: 3;
+  --layout-post-list-slider-titleLineCount: 3;
+  --layout-post-list-pg-side-by-side-titleLineCount: 3;
+  --layout-post-list-pg-text-on-image-medium-titleLineCount: 3;
+  --layout-post-list-pg-one-column-titleLineCount: 3;
+  --layout-post-list-pg-grid-descriptionLineCount: 1;
+  --layout-post-list-slider-descriptionLineCount: 1;
+  --layout-post-list-pg-side-by-side-descriptionLineCount: 1;
+  --layout-post-list-pg-one-column-descriptionLineCount: 1;
+  --post-slider-post-list-mobile-titleFontSize: 22;
+  --post-list-post-list-mobile-titleFontSize: 14;
+  --post-pg-grid-post-list-mobile-titleFontSize: 22;
+  --post-pg-grid-post-list-mobile-descriptionFontSize: 16;
+  --post-post-list-borderWidth: 1;
+  --post-post-list-mobile-borderWidth: 1;
+  --post-post-list-postRadius: 0;
+  --post-post-list-mobile-postRadius: 0;
+  --category-label-layoutType: 0;
+  --category-label-button-horizontalPadding: 12;
+  --category-label-button-verticalPadding: 6;
+  --category-label-button-cornerRadius: 0;
+  --category-label-button-borderWidth: 0;
+  --post-list-video-play: 0;
+  --post-list-video-playbackSpeed: 2;
+  --category-label-text-textFont: normal normal normal 14px/19.599999999999998px montserrat, sans-serif;
+  --category-label-button-textFont: normal normal normal 14px/19.599999999999998px montserrat, sans-serif;
+  --post-post-list-ratingFont: normal normal normal 18px/1.4em montserrat, sans-serif;
+  --post-list-post-list-ratingFont: normal normal normal 14px/19.599999999999998px montserrat, sans-serif;
+  --post-pg-one-column-post-list-ratingFont: normal normal normal 14px/19.599999999999998px montserrat, sans-serif;
+  --post-pg-side-by-side-post-list-ratingFont: normal normal normal 14px/19.599999999999998px montserrat, sans-serif;
+  --post-pg-text-on-image-medium-post-list-ratingFont:
+    normal normal normal 14px/19.599999999999998px montserrat, sans-serif;
+  --post-slider-post-list-ratingFont: normal normal normal 14px/19.599999999999998px montserrat, sans-serif;
+  --post-list-medium-post-list-ratingFont: normal normal normal 14px/19.599999999999998px montserrat, sans-serif;
+  --post-list-large-post-list-ratingFont: normal normal normal 14px/19.599999999999998px montserrat, sans-serif;
+  --post-pg-grid-intermediate-post-list-ratingFont:
+    normal normal normal 14px/19.599999999999998px montserrat, sans-serif;
+  --post-pg-grid-large-post-list-ratingFont: normal normal normal 14px/19.599999999999998px montserrat, sans-serif;
+  --post-pg-medium-post-list-ratingFont: normal normal normal 14px/19.599999999999998px montserrat, sans-serif;
+  --post-pg-side-by-side-right-post-list-ratingFont:
+    normal normal normal 14px/19.599999999999998px montserrat, sans-serif;
+  --post-pg-text-on-image-large-post-list-ratingFont:
+    normal normal normal 14px/19.599999999999998px montserrat, sans-serif;
+  --post-pg-text-on-image-small-post-list-ratingFont:
+    normal normal normal 14px/19.599999999999998px montserrat, sans-serif;
+  --post-post-list-backgroundColor: 255, 255, 255;
+  --post-post-list-backgroundColor-rgb: 255, 255, 255;
+  --post-post-list-backgroundColor-opacity: 1;
+  --post-post-list-mobile-overlayColor: 0, 0, 0, 0.55;
+  --post-post-list-mobile-overlayColor-rgb: 0, 0, 0;
+  --post-post-list-mobile-overlayColor-opacity: 0.55;
+  --post-post-list-TOI-mobile-descriptionColor: 255, 255, 255;
+  --post-post-list-TOI-mobile-descriptionColor-rgb: 255, 255, 255;
+  --post-post-list-TOI-mobile-descriptionColor-opacity: 1;
+  --post-post-list-linkHashtagColor: 51, 52, 63;
+  --post-post-list-linkHashtagColor-rgb: 51, 52, 63;
+  --post-post-list-linkHashtagColor-opacity: 1;
+  --postListWidgetSliderArrowsColor: 51, 52, 63;
+  --postListWidgetSliderArrowsColor-rgb: 51, 52, 63;
+  --postListWidgetSliderArrowsColor-opacity: 1;
+  --post-post-list-ratingUnfilledStarColor: 153, 154, 159;
+  --post-post-list-ratingUnfilledStarColor-rgb: 153, 154, 159;
+  --post-post-list-ratingUnfilledStarColor-opacity: 1;
+  --post-post-list-titleColor: 51, 52, 63;
+  --post-post-list-titleColor-rgb: 51, 52, 63;
+  --post-post-list-titleColor-opacity: 1;
+  --post-post-list-borderColor: 182, 182, 184, 0.75;
+  --post-post-list-borderColor-rgb: 182, 182, 184;
+  --post-post-list-borderColor-opacity: 0.75;
+  --post-post-list-mobile-descriptionColor: 51, 52, 63;
+  --post-post-list-mobile-descriptionColor-rgb: 51, 52, 63;
+  --post-post-list-mobile-descriptionColor-opacity: 1;
+  --post-post-list-mobile-titleColor: 51, 52, 63;
+  --post-post-list-mobile-titleColor-rgb: 51, 52, 63;
+  --post-post-list-mobile-titleColor-opacity: 1;
+  --postListWidgetBackgroundColorMobile: 51, 52, 63;
+  --postListWidgetBackgroundColorMobile-rgb: 51, 52, 63;
+  --postListWidgetBackgroundColorMobile-opacity: 1;
+  --post-post-list-ratingFilledStarColor: 51, 52, 63;
+  --post-post-list-ratingFilledStarColor-rgb: 51, 52, 63;
+  --post-post-list-ratingFilledStarColor-opacity: 1;
+  --post-post-list-ratingFontColor: 51, 52, 63;
+  --post-post-list-ratingFontColor-rgb: 51, 52, 63;
+  --post-post-list-ratingFontColor-opacity: 1;
+  --post-post-list-TOI-mobile-titleColor: 255, 255, 255;
+  --post-post-list-TOI-mobile-titleColor-rgb: 255, 255, 255;
+  --post-post-list-TOI-mobile-titleColor-opacity: 1;
+  --post-post-list-descriptionColor: 51, 52, 63;
+  --post-post-list-descriptionColor-rgb: 51, 52, 63;
+  --post-post-list-descriptionColor-opacity: 1;
+  --post-post-list-mobile-linkHashtagColor: 51, 52, 63;
+  --post-post-list-mobile-linkHashtagColor-rgb: 51, 52, 63;
+  --post-post-list-mobile-linkHashtagColor-opacity: 1;
+  --post-post-list-mobile-backgroundColor: 255, 255, 255;
+  --post-post-list-mobile-backgroundColor-rgb: 255, 255, 255;
+  --post-post-list-mobile-backgroundColor-opacity: 1;
+  --postListWidgetBackgroundColor: 255, 255, 255, 0;
+  --postListWidgetBackgroundColor-rgb: 255, 255, 255;
+  --postListWidgetBackgroundColor-opacity: 0;
+  --post-post-list-mobile-borderColor: 182, 182, 184, 0.75;
+  --post-post-list-mobile-borderColor-rgb: 182, 182, 184;
+  --post-post-list-mobile-borderColor-opacity: 0.75;
+  --postListWidgetSliderArrowsColorMobile: 51, 52, 63;
+  --postListWidgetSliderArrowsColorMobile-rgb: 51, 52, 63;
+  --postListWidgetSliderArrowsColorMobile-opacity: 1;
+  --post-post-list-TOI-titleColor: 255, 255, 255;
+  --post-post-list-TOI-titleColor-rgb: 255, 255, 255;
+  --post-post-list-TOI-titleColor-opacity: 1;
+  --post-post-list-TOI-descriptionColor: 255, 255, 255;
+  --post-post-list-TOI-descriptionColor-rgb: 255, 255, 255;
+  --post-post-list-TOI-descriptionColor-opacity: 1;
+  --post-post-list-overlayColor: 51, 52, 63, 0.55;
+  --post-post-list-overlayColor-rgb: 51, 52, 63;
+  --post-post-list-overlayColor-opacity: 0.55;
+  --category-label-text-textColor: 51, 52, 63;
+  --category-label-text-textColor-rgb: 51, 52, 63;
+  --category-label-text-textColor-opacity: 1;
+  --category-label-text-textColorHover: 51, 52, 63, 0.7;
+  --category-label-text-textColorHover-rgb: 51, 52, 63;
+  --category-label-text-textColorHover-opacity: 0.7;
+  --category-label-button-textColor: 255, 255, 255;
+  --category-label-button-textColor-rgb: 255, 255, 255;
+  --category-label-button-textColor-opacity: 1;
+  --category-label-button-textColorHover: 255, 255, 255;
+  --category-label-button-textColorHover-rgb: 255, 255, 255;
+  --category-label-button-textColorHover-opacity: 1;
+  --category-label-button-backgroundColor: 51, 52, 63;
+  --category-label-button-backgroundColor-rgb: 51, 52, 63;
+  --category-label-button-backgroundColor-opacity: 1;
+  --category-label-button-backgroundColorHover: 51, 52, 63, 0.7;
+  --category-label-button-backgroundColorHover-rgb: 51, 52, 63;
+  --category-label-button-backgroundColorHover-opacity: 0.7;
+  --category-label-button-borderColor: 51, 52, 63;
+  --category-label-button-borderColor-rgb: 51, 52, 63;
+  --category-label-button-borderColor-opacity: 1;
+  --category-label-button-borderColorHover: 51, 52, 63, 0.7;
+  --category-label-button-borderColorHover-rgb: 51, 52, 63;
+  --category-label-button-borderColorHover-opacity: 0.7;
+  --post-post-list-TOI-ratingFilledStarColor: 255, 255, 255;
+  --post-post-list-TOI-ratingFilledStarColor-rgb: 255, 255, 255;
+  --post-post-list-TOI-ratingFilledStarColor-opacity: 1;
+  --post-post-list-TOI-ratingUnfilledStarColor: 153, 154, 159;
+  --post-post-list-TOI-ratingUnfilledStarColor-rgb: 153, 154, 159;
+  --post-post-list-TOI-ratingUnfilledStarColor-opacity: 1;
+  --post-post-list-TOI-ratingFontColor: 255, 255, 255;
+  --post-post-list-TOI-ratingFontColor-rgb: 255, 255, 255;
+  --post-post-list-TOI-ratingFontColor-opacity: 1;
+  --post-pg-grid-post-list-titleFont: normal normal normal 18px/22px montserrat, sans-serif;
+  --post-pg-grid-post-list-titleFont-style: normal;
+  --post-pg-grid-post-list-titleFont-variant: normal;
+  --post-pg-grid-post-list-titleFont-weight: normal;
+  --post-pg-grid-post-list-titleFont-size: 18px;
+  --post-pg-grid-post-list-titleFont-line-height: 22px;
+  --post-pg-grid-post-list-titleFont-family: montserrat, sans-serif;
+  --post-pg-grid-post-list-titleFont-text-decoration: none;
+  --post-pg-grid-intermediate-post-list-descriptionFont: normal normal normal 16px/20px montserrat, sans-serif;
+  --post-pg-grid-intermediate-post-list-descriptionFont-style: normal;
+  --post-pg-grid-intermediate-post-list-descriptionFont-variant: normal;
+  --post-pg-grid-intermediate-post-list-descriptionFont-weight: normal;
+  --post-pg-grid-intermediate-post-list-descriptionFont-size: 16px;
+  --post-pg-grid-intermediate-post-list-descriptionFont-line-height: 20px;
+  --post-pg-grid-intermediate-post-list-descriptionFont-family: montserrat, sans-serif;
+  --post-pg-grid-intermediate-post-list-descriptionFont-text-decoration: none;
+  --post-pg-grid-post-list-descriptionFont: normal normal normal 14px/17px montserrat, sans-serif;
+  --post-pg-grid-post-list-descriptionFont-style: normal;
+  --post-pg-grid-post-list-descriptionFont-variant: normal;
+  --post-pg-grid-post-list-descriptionFont-weight: normal;
+  --post-pg-grid-post-list-descriptionFont-size: 14px;
+  --post-pg-grid-post-list-descriptionFont-line-height: 17px;
+  --post-pg-grid-post-list-descriptionFont-family: montserrat, sans-serif;
+  --post-pg-grid-post-list-descriptionFont-text-decoration: none;
+  --post-list-medium-post-list-descriptionFont: normal normal normal 14px/17px montserrat, sans-serif;
+  --post-list-medium-post-list-descriptionFont-style: normal;
+  --post-list-medium-post-list-descriptionFont-variant: normal;
+  --post-list-medium-post-list-descriptionFont-weight: normal;
+  --post-list-medium-post-list-descriptionFont-size: 14px;
+  --post-list-medium-post-list-descriptionFont-line-height: 17px;
+  --post-list-medium-post-list-descriptionFont-family: montserrat, sans-serif;
+  --post-list-medium-post-list-descriptionFont-text-decoration: none;
+  --post-list-post-list-titleFont: normal normal normal 14px/17px montserrat, sans-serif;
+  --post-list-post-list-titleFont-style: normal;
+  --post-list-post-list-titleFont-variant: normal;
+  --post-list-post-list-titleFont-weight: normal;
+  --post-list-post-list-titleFont-size: 14px;
+  --post-list-post-list-titleFont-line-height: 17px;
+  --post-list-post-list-titleFont-family: montserrat, sans-serif;
+  --post-list-post-list-titleFont-text-decoration: none;
+  --post-pg-one-column-post-list-descriptionFont: normal normal normal 16px/20px montserrat, sans-serif;
+  --post-pg-one-column-post-list-descriptionFont-style: normal;
+  --post-pg-one-column-post-list-descriptionFont-variant: normal;
+  --post-pg-one-column-post-list-descriptionFont-weight: normal;
+  --post-pg-one-column-post-list-descriptionFont-size: 16px;
+  --post-pg-one-column-post-list-descriptionFont-line-height: 20px;
+  --post-pg-one-column-post-list-descriptionFont-family: montserrat, sans-serif;
+  --post-pg-one-column-post-list-descriptionFont-text-decoration: none;
+  --post-slider-post-list-titleFont: normal normal normal 22px/27px montserrat, sans-serif;
+  --post-slider-post-list-titleFont-style: normal;
+  --post-slider-post-list-titleFont-variant: normal;
+  --post-slider-post-list-titleFont-weight: normal;
+  --post-slider-post-list-titleFont-size: 22px;
+  --post-slider-post-list-titleFont-line-height: 27px;
+  --post-slider-post-list-titleFont-family: montserrat, sans-serif;
+  --post-slider-post-list-titleFont-text-decoration: none;
+  --post-slider-post-list-descriptionFont: normal normal normal 16px/20px montserrat, sans-serif;
+  --post-slider-post-list-descriptionFont-style: normal;
+  --post-slider-post-list-descriptionFont-variant: normal;
+  --post-slider-post-list-descriptionFont-weight: normal;
+  --post-slider-post-list-descriptionFont-size: 16px;
+  --post-slider-post-list-descriptionFont-line-height: 20px;
+  --post-slider-post-list-descriptionFont-family: montserrat, sans-serif;
+  --post-slider-post-list-descriptionFont-text-decoration: none;
+  --post-pg-side-by-side-right-post-list-titleFont: normal normal normal 28px/35px montserrat, sans-serif;
+  --post-pg-side-by-side-right-post-list-titleFont-style: normal;
+  --post-pg-side-by-side-right-post-list-titleFont-variant: normal;
+  --post-pg-side-by-side-right-post-list-titleFont-weight: normal;
+  --post-pg-side-by-side-right-post-list-titleFont-size: 28px;
+  --post-pg-side-by-side-right-post-list-titleFont-line-height: 35px;
+  --post-pg-side-by-side-right-post-list-titleFont-family: montserrat, sans-serif;
+  --post-pg-side-by-side-right-post-list-titleFont-text-decoration: none;
+  --post-pg-medium-post-list-descriptionFont: normal normal normal 16px/20px montserrat, sans-serif;
+  --post-pg-medium-post-list-descriptionFont-style: normal;
+  --post-pg-medium-post-list-descriptionFont-variant: normal;
+  --post-pg-medium-post-list-descriptionFont-weight: normal;
+  --post-pg-medium-post-list-descriptionFont-size: 16px;
+  --post-pg-medium-post-list-descriptionFont-line-height: 20px;
+  --post-pg-medium-post-list-descriptionFont-family: montserrat, sans-serif;
+  --post-pg-medium-post-list-descriptionFont-text-decoration: none;
+  --post-pg-one-column-post-list-titleFont: normal normal normal 28px/35px montserrat, sans-serif;
+  --post-pg-one-column-post-list-titleFont-style: normal;
+  --post-pg-one-column-post-list-titleFont-variant: normal;
+  --post-pg-one-column-post-list-titleFont-weight: normal;
+  --post-pg-one-column-post-list-titleFont-size: 28px;
+  --post-pg-one-column-post-list-titleFont-line-height: 35px;
+  --post-pg-one-column-post-list-titleFont-family: montserrat, sans-serif;
+  --post-pg-one-column-post-list-titleFont-text-decoration: none;
+  --post-post-list-descriptionFont: normal normal normal 14px/17px montserrat, sans-serif;
+  --post-post-list-descriptionFont-style: normal;
+  --post-post-list-descriptionFont-variant: normal;
+  --post-post-list-descriptionFont-weight: normal;
+  --post-post-list-descriptionFont-size: 14px;
+  --post-post-list-descriptionFont-line-height: 17px;
+  --post-post-list-descriptionFont-family: montserrat, sans-serif;
+  --post-post-list-descriptionFont-text-decoration: none;
+  --post-pg-side-by-side-post-list-titleFont: normal normal normal 28px/35px montserrat, sans-serif;
+  --post-pg-side-by-side-post-list-titleFont-style: normal;
+  --post-pg-side-by-side-post-list-titleFont-variant: normal;
+  --post-pg-side-by-side-post-list-titleFont-weight: normal;
+  --post-pg-side-by-side-post-list-titleFont-size: 28px;
+  --post-pg-side-by-side-post-list-titleFont-line-height: 35px;
+  --post-pg-side-by-side-post-list-titleFont-family: montserrat, sans-serif;
+  --post-pg-side-by-side-post-list-titleFont-text-decoration: none;
+  --post-pg-text-on-image-medium-post-list-descriptionFont: normal normal normal 16px/20px montserrat, sans-serif;
+  --post-pg-text-on-image-medium-post-list-descriptionFont-style: normal;
+  --post-pg-text-on-image-medium-post-list-descriptionFont-variant: normal;
+  --post-pg-text-on-image-medium-post-list-descriptionFont-weight: normal;
+  --post-pg-text-on-image-medium-post-list-descriptionFont-size: 16px;
+  --post-pg-text-on-image-medium-post-list-descriptionFont-line-height: 20px;
+  --post-pg-text-on-image-medium-post-list-descriptionFont-family: montserrat, sans-serif;
+  --post-pg-text-on-image-medium-post-list-descriptionFont-text-decoration: none;
+  --post-pg-text-on-image-large-post-list-descriptionFont: normal normal normal 16px/20px montserrat, sans-serif;
+  --post-pg-text-on-image-large-post-list-descriptionFont-style: normal;
+  --post-pg-text-on-image-large-post-list-descriptionFont-variant: normal;
+  --post-pg-text-on-image-large-post-list-descriptionFont-weight: normal;
+  --post-pg-text-on-image-large-post-list-descriptionFont-size: 16px;
+  --post-pg-text-on-image-large-post-list-descriptionFont-line-height: 20px;
+  --post-pg-text-on-image-large-post-list-descriptionFont-family: montserrat, sans-serif;
+  --post-pg-text-on-image-large-post-list-descriptionFont-text-decoration: none;
+  --post-list-post-list-descriptionFont: normal normal normal 14px/17px montserrat, sans-serif;
+  --post-list-post-list-descriptionFont-style: normal;
+  --post-list-post-list-descriptionFont-variant: normal;
+  --post-list-post-list-descriptionFont-weight: normal;
+  --post-list-post-list-descriptionFont-size: 14px;
+  --post-list-post-list-descriptionFont-line-height: 17px;
+  --post-list-post-list-descriptionFont-family: montserrat, sans-serif;
+  --post-list-post-list-descriptionFont-text-decoration: none;
+  --post-list-large-post-list-titleFont: normal normal normal 22px/27px montserrat, sans-serif;
+  --post-list-large-post-list-titleFont-style: normal;
+  --post-list-large-post-list-titleFont-variant: normal;
+  --post-list-large-post-list-titleFont-weight: normal;
+  --post-list-large-post-list-titleFont-size: 22px;
+  --post-list-large-post-list-titleFont-line-height: 27px;
+  --post-list-large-post-list-titleFont-family: montserrat, sans-serif;
+  --post-list-large-post-list-titleFont-text-decoration: none;
+  --post-list-medium-post-list-titleFont: normal normal normal 18px/22px montserrat, sans-serif;
+  --post-list-medium-post-list-titleFont-style: normal;
+  --post-list-medium-post-list-titleFont-variant: normal;
+  --post-list-medium-post-list-titleFont-weight: normal;
+  --post-list-medium-post-list-titleFont-size: 18px;
+  --post-list-medium-post-list-titleFont-line-height: 22px;
+  --post-list-medium-post-list-titleFont-family: montserrat, sans-serif;
+  --post-list-medium-post-list-titleFont-text-decoration: none;
+  --post-pg-grid-large-post-list-descriptionFont: normal normal normal 16px/20px montserrat, sans-serif;
+  --post-pg-grid-large-post-list-descriptionFont-style: normal;
+  --post-pg-grid-large-post-list-descriptionFont-variant: normal;
+  --post-pg-grid-large-post-list-descriptionFont-weight: normal;
+  --post-pg-grid-large-post-list-descriptionFont-size: 16px;
+  --post-pg-grid-large-post-list-descriptionFont-line-height: 20px;
+  --post-pg-grid-large-post-list-descriptionFont-family: montserrat, sans-serif;
+  --post-pg-grid-large-post-list-descriptionFont-text-decoration: none;
+  --post-pg-side-by-side-right-post-list-descriptionFont: normal normal normal 16px/20px montserrat, sans-serif;
+  --post-pg-side-by-side-right-post-list-descriptionFont-style: normal;
+  --post-pg-side-by-side-right-post-list-descriptionFont-variant: normal;
+  --post-pg-side-by-side-right-post-list-descriptionFont-weight: normal;
+  --post-pg-side-by-side-right-post-list-descriptionFont-size: 16px;
+  --post-pg-side-by-side-right-post-list-descriptionFont-line-height: 20px;
+  --post-pg-side-by-side-right-post-list-descriptionFont-family: montserrat, sans-serif;
+  --post-pg-side-by-side-right-post-list-descriptionFont-text-decoration: none;
+  --post-pg-grid-intermediate-post-list-titleFont: normal normal normal 22px/27px montserrat, sans-serif;
+  --post-pg-grid-intermediate-post-list-titleFont-style: normal;
+  --post-pg-grid-intermediate-post-list-titleFont-variant: normal;
+  --post-pg-grid-intermediate-post-list-titleFont-weight: normal;
+  --post-pg-grid-intermediate-post-list-titleFont-size: 22px;
+  --post-pg-grid-intermediate-post-list-titleFont-line-height: 27px;
+  --post-pg-grid-intermediate-post-list-titleFont-family: montserrat, sans-serif;
+  --post-pg-grid-intermediate-post-list-titleFont-text-decoration: none;
+  --post-pg-side-by-side-post-list-descriptionFont: normal normal normal 16px/20px montserrat, sans-serif;
+  --post-pg-side-by-side-post-list-descriptionFont-style: normal;
+  --post-pg-side-by-side-post-list-descriptionFont-variant: normal;
+  --post-pg-side-by-side-post-list-descriptionFont-weight: normal;
+  --post-pg-side-by-side-post-list-descriptionFont-size: 16px;
+  --post-pg-side-by-side-post-list-descriptionFont-line-height: 20px;
+  --post-pg-side-by-side-post-list-descriptionFont-family: montserrat, sans-serif;
+  --post-pg-side-by-side-post-list-descriptionFont-text-decoration: none;
+  --post-pg-text-on-image-small-post-list-titleFont: normal normal normal 22px/27px montserrat, sans-serif;
+  --post-pg-text-on-image-small-post-list-titleFont-style: normal;
+  --post-pg-text-on-image-small-post-list-titleFont-variant: normal;
+  --post-pg-text-on-image-small-post-list-titleFont-weight: normal;
+  --post-pg-text-on-image-small-post-list-titleFont-size: 22px;
+  --post-pg-text-on-image-small-post-list-titleFont-line-height: 27px;
+  --post-pg-text-on-image-small-post-list-titleFont-family: montserrat, sans-serif;
+  --post-pg-text-on-image-small-post-list-titleFont-text-decoration: none;
+  --post-post-list-titleFont: normal normal normal 18px/22px montserrat, sans-serif;
+  --post-post-list-titleFont-style: normal;
+  --post-post-list-titleFont-variant: normal;
+  --post-post-list-titleFont-weight: normal;
+  --post-post-list-titleFont-size: 18px;
+  --post-post-list-titleFont-line-height: 22px;
+  --post-post-list-titleFont-family: montserrat, sans-serif;
+  --post-post-list-titleFont-text-decoration: none;
+  --post-pg-medium-post-list-titleFont: normal normal normal 26px/32px montserrat, sans-serif;
+  --post-pg-medium-post-list-titleFont-style: normal;
+  --post-pg-medium-post-list-titleFont-variant: normal;
+  --post-pg-medium-post-list-titleFont-weight: normal;
+  --post-pg-medium-post-list-titleFont-size: 26px;
+  --post-pg-medium-post-list-titleFont-line-height: 32px;
+  --post-pg-medium-post-list-titleFont-family: montserrat, sans-serif;
+  --post-pg-medium-post-list-titleFont-text-decoration: none;
+  --post-list-large-post-list-descriptionFont: normal normal normal 14px/17px montserrat, sans-serif;
+  --post-list-large-post-list-descriptionFont-style: normal;
+  --post-list-large-post-list-descriptionFont-variant: normal;
+  --post-list-large-post-list-descriptionFont-weight: normal;
+  --post-list-large-post-list-descriptionFont-size: 14px;
+  --post-list-large-post-list-descriptionFont-line-height: 17px;
+  --post-list-large-post-list-descriptionFont-family: montserrat, sans-serif;
+  --post-list-large-post-list-descriptionFont-text-decoration: none;
+  --post-pg-grid-post-list-ratingFont: normal normal normal 14px/17px montserrat, sans-serif;
+  --post-pg-grid-post-list-ratingFont-style: normal;
+  --post-pg-grid-post-list-ratingFont-variant: normal;
+  --post-pg-grid-post-list-ratingFont-weight: normal;
+  --post-pg-grid-post-list-ratingFont-size: 14px;
+  --post-pg-grid-post-list-ratingFont-line-height: 17px;
+  --post-pg-grid-post-list-ratingFont-family: montserrat, sans-serif;
+  --post-pg-grid-post-list-ratingFont-text-decoration: none;
+  --post-pg-text-on-image-large-post-list-titleFont: normal normal normal 28px/35px montserrat, sans-serif;
+  --post-pg-text-on-image-large-post-list-titleFont-style: normal;
+  --post-pg-text-on-image-large-post-list-titleFont-variant: normal;
+  --post-pg-text-on-image-large-post-list-titleFont-weight: normal;
+  --post-pg-text-on-image-large-post-list-titleFont-size: 28px;
+  --post-pg-text-on-image-large-post-list-titleFont-line-height: 35px;
+  --post-pg-text-on-image-large-post-list-titleFont-family: montserrat, sans-serif;
+  --post-pg-text-on-image-large-post-list-titleFont-text-decoration: none;
+  --post-pg-text-on-image-medium-post-list-titleFont: normal normal normal 26px/32px montserrat, sans-serif;
+  --post-pg-text-on-image-medium-post-list-titleFont-style: normal;
+  --post-pg-text-on-image-medium-post-list-titleFont-variant: normal;
+  --post-pg-text-on-image-medium-post-list-titleFont-weight: normal;
+  --post-pg-text-on-image-medium-post-list-titleFont-size: 26px;
+  --post-pg-text-on-image-medium-post-list-titleFont-line-height: 32px;
+  --post-pg-text-on-image-medium-post-list-titleFont-family: montserrat, sans-serif;
+  --post-pg-text-on-image-medium-post-list-titleFont-text-decoration: none;
+  --post-pg-text-on-image-small-post-list-descriptionFont: normal normal normal 16px/20px montserrat, sans-serif;
+  --post-pg-text-on-image-small-post-list-descriptionFont-style: normal;
+  --post-pg-text-on-image-small-post-list-descriptionFont-variant: normal;
+  --post-pg-text-on-image-small-post-list-descriptionFont-weight: normal;
+  --post-pg-text-on-image-small-post-list-descriptionFont-size: 16px;
+  --post-pg-text-on-image-small-post-list-descriptionFont-line-height: 20px;
+  --post-pg-text-on-image-small-post-list-descriptionFont-family: montserrat, sans-serif;
+  --post-pg-text-on-image-small-post-list-descriptionFont-text-decoration: none;
+  --post-pg-grid-large-post-list-titleFont: normal normal normal 22px/27px montserrat, sans-serif;
+  --post-pg-grid-large-post-list-titleFont-style: normal;
+  --post-pg-grid-large-post-list-titleFont-variant: normal;
+  --post-pg-grid-large-post-list-titleFont-weight: normal;
+  --post-pg-grid-large-post-list-titleFont-size: 22px;
+  --post-pg-grid-large-post-list-titleFont-line-height: 27px;
+  --post-pg-grid-large-post-list-titleFont-family: montserrat, sans-serif;
+  --post-pg-grid-large-post-list-titleFont-text-decoration: none;
+  --category-label-text-textFont-style: normal;
+  --category-label-text-textFont-variant: normal;
+  --category-label-text-textFont-weight: normal;
+  --category-label-text-textFont-size: 14px;
+  --category-label-text-textFont-line-height: 19.599999999999998px;
+  --category-label-text-textFont-family: montserrat, sans-serif;
+  --category-label-text-textFont-text-decoration: none;
+  --category-label-button-textFont-style: normal;
+  --category-label-button-textFont-variant: normal;
+  --category-label-button-textFont-weight: normal;
+  --category-label-button-textFont-size: 14px;
+  --category-label-button-textFont-line-height: 19.599999999999998px;
+  --category-label-button-textFont-family: montserrat, sans-serif;
+  --category-label-button-textFont-text-decoration: none;
+  --post-post-list-ratingFont-style: normal;
+  --post-post-list-ratingFont-variant: normal;
+  --post-post-list-ratingFont-weight: normal;
+  --post-post-list-ratingFont-size: 18px;
+  --post-post-list-ratingFont-line-height: 1.4em;
+  --post-post-list-ratingFont-family: montserrat, sans-serif;
+  --post-post-list-ratingFont-text-decoration: none;
+  --post-list-post-list-ratingFont-style: normal;
+  --post-list-post-list-ratingFont-variant: normal;
+  --post-list-post-list-ratingFont-weight: normal;
+  --post-list-post-list-ratingFont-size: 14px;
+  --post-list-post-list-ratingFont-line-height: 19.599999999999998px;
+  --post-list-post-list-ratingFont-family: montserrat, sans-serif;
+  --post-list-post-list-ratingFont-text-decoration: none;
+  --post-pg-one-column-post-list-ratingFont-style: normal;
+  --post-pg-one-column-post-list-ratingFont-variant: normal;
+  --post-pg-one-column-post-list-ratingFont-weight: normal;
+  --post-pg-one-column-post-list-ratingFont-size: 14px;
+  --post-pg-one-column-post-list-ratingFont-line-height: 19.599999999999998px;
+  --post-pg-one-column-post-list-ratingFont-family: montserrat, sans-serif;
+  --post-pg-one-column-post-list-ratingFont-text-decoration: none;
+  --post-pg-side-by-side-post-list-ratingFont-style: normal;
+  --post-pg-side-by-side-post-list-ratingFont-variant: normal;
+  --post-pg-side-by-side-post-list-ratingFont-weight: normal;
+  --post-pg-side-by-side-post-list-ratingFont-size: 14px;
+  --post-pg-side-by-side-post-list-ratingFont-line-height: 19.599999999999998px;
+  --post-pg-side-by-side-post-list-ratingFont-family: montserrat, sans-serif;
+  --post-pg-side-by-side-post-list-ratingFont-text-decoration: none;
+  --post-pg-text-on-image-medium-post-list-ratingFont-style: normal;
+  --post-pg-text-on-image-medium-post-list-ratingFont-variant: normal;
+  --post-pg-text-on-image-medium-post-list-ratingFont-weight: normal;
+  --post-pg-text-on-image-medium-post-list-ratingFont-size: 14px;
+  --post-pg-text-on-image-medium-post-list-ratingFont-line-height: 19.599999999999998px;
+  --post-pg-text-on-image-medium-post-list-ratingFont-family: montserrat, sans-serif;
+  --post-pg-text-on-image-medium-post-list-ratingFont-text-decoration: none;
+  --post-slider-post-list-ratingFont-style: normal;
+  --post-slider-post-list-ratingFont-variant: normal;
+  --post-slider-post-list-ratingFont-weight: normal;
+  --post-slider-post-list-ratingFont-size: 14px;
+  --post-slider-post-list-ratingFont-line-height: 19.599999999999998px;
+  --post-slider-post-list-ratingFont-family: montserrat, sans-serif;
+  --post-slider-post-list-ratingFont-text-decoration: none;
+  --post-list-medium-post-list-ratingFont-style: normal;
+  --post-list-medium-post-list-ratingFont-variant: normal;
+  --post-list-medium-post-list-ratingFont-weight: normal;
+  --post-list-medium-post-list-ratingFont-size: 14px;
+  --post-list-medium-post-list-ratingFont-line-height: 19.599999999999998px;
+  --post-list-medium-post-list-ratingFont-family: montserrat, sans-serif;
+  --post-list-medium-post-list-ratingFont-text-decoration: none;
+  --post-list-large-post-list-ratingFont-style: normal;
+  --post-list-large-post-list-ratingFont-variant: normal;
+  --post-list-large-post-list-ratingFont-weight: normal;
+  --post-list-large-post-list-ratingFont-size: 14px;
+  --post-list-large-post-list-ratingFont-line-height: 19.599999999999998px;
+  --post-list-large-post-list-ratingFont-family: montserrat, sans-serif;
+  --post-list-large-post-list-ratingFont-text-decoration: none;
+  --post-pg-grid-intermediate-post-list-ratingFont-style: normal;
+  --post-pg-grid-intermediate-post-list-ratingFont-variant: normal;
+  --post-pg-grid-intermediate-post-list-ratingFont-weight: normal;
+  --post-pg-grid-intermediate-post-list-ratingFont-size: 14px;
+  --post-pg-grid-intermediate-post-list-ratingFont-line-height: 19.599999999999998px;
+  --post-pg-grid-intermediate-post-list-ratingFont-family: montserrat, sans-serif;
+  --post-pg-grid-intermediate-post-list-ratingFont-text-decoration: none;
+  --post-pg-grid-large-post-list-ratingFont-style: normal;
+  --post-pg-grid-large-post-list-ratingFont-variant: normal;
+  --post-pg-grid-large-post-list-ratingFont-weight: normal;
+  --post-pg-grid-large-post-list-ratingFont-size: 14px;
+  --post-pg-grid-large-post-list-ratingFont-line-height: 19.599999999999998px;
+  --post-pg-grid-large-post-list-ratingFont-family: montserrat, sans-serif;
+  --post-pg-grid-large-post-list-ratingFont-text-decoration: none;
+  --post-pg-medium-post-list-ratingFont-style: normal;
+  --post-pg-medium-post-list-ratingFont-variant: normal;
+  --post-pg-medium-post-list-ratingFont-weight: normal;
+  --post-pg-medium-post-list-ratingFont-size: 14px;
+  --post-pg-medium-post-list-ratingFont-line-height: 19.599999999999998px;
+  --post-pg-medium-post-list-ratingFont-family: montserrat, sans-serif;
+  --post-pg-medium-post-list-ratingFont-text-decoration: none;
+  --post-pg-side-by-side-right-post-list-ratingFont-style: normal;
+  --post-pg-side-by-side-right-post-list-ratingFont-variant: normal;
+  --post-pg-side-by-side-right-post-list-ratingFont-weight: normal;
+  --post-pg-side-by-side-right-post-list-ratingFont-size: 14px;
+  --post-pg-side-by-side-right-post-list-ratingFont-line-height: 19.599999999999998px;
+  --post-pg-side-by-side-right-post-list-ratingFont-family: montserrat, sans-serif;
+  --post-pg-side-by-side-right-post-list-ratingFont-text-decoration: none;
+  --post-pg-text-on-image-large-post-list-ratingFont-style: normal;
+  --post-pg-text-on-image-large-post-list-ratingFont-variant: normal;
+  --post-pg-text-on-image-large-post-list-ratingFont-weight: normal;
+  --post-pg-text-on-image-large-post-list-ratingFont-size: 14px;
+  --post-pg-text-on-image-large-post-list-ratingFont-line-height: 19.599999999999998px;
+  --post-pg-text-on-image-large-post-list-ratingFont-family: montserrat, sans-serif;
+  --post-pg-text-on-image-large-post-list-ratingFont-text-decoration: none;
+  --post-pg-text-on-image-small-post-list-ratingFont-style: normal;
+  --post-pg-text-on-image-small-post-list-ratingFont-variant: normal;
+  --post-pg-text-on-image-small-post-list-ratingFont-weight: normal;
+  --post-pg-text-on-image-small-post-list-ratingFont-size: 14px;
+  --post-pg-text-on-image-small-post-list-ratingFont-line-height: 19.599999999999998px;
+  --post-pg-text-on-image-small-post-list-ratingFont-family: montserrat, sans-serif;
+  --post-pg-text-on-image-small-post-list-ratingFont-text-decoration: none;
+  --wix-color-1: 255, 255, 255;
+  --wix-color-2: 182, 182, 184;
+  --wix-color-3: 153, 154, 159;
+  --wix-color-4: 102, 103, 111;
+  --wix-color-5: 51, 52, 63;
+  --wix-color-6: 182, 183, 196;
+  --wix-color-7: 110, 112, 136;
+  --wix-color-8: 51, 52, 63;
+  --wix-color-9: 34, 35, 42;
+  --wix-color-10: 17, 17, 21;
+  --wix-color-11: 215, 215, 225;
+  --wix-color-12: 174, 175, 194;
+  --wix-color-13: 134, 135, 164;
+  --wix-color-14: 97, 99, 129;
+  --wix-color-15: 102, 103, 111;
+  --wix-color-16: 251, 251, 251;
+  --wix-color-17: 182, 182, 184;
+  --wix-color-18: 185, 185, 185;
+  --wix-color-19: 124, 124, 124;
+  --wix-color-20: 62, 62, 62;
+  --wix-color-21: 252, 222, 147;
+  --wix-color-22: 248, 189, 38;
+  --wix-color-23: 208, 151, 7;
+  --wix-color-24: 139, 101, 4;
+  --wix-color-25: 69, 50, 2;
+  --wix-color-26: 255, 255, 255;
+  --wix-color-27: 51, 52, 63;
+  --wix-color-28: 182, 182, 184;
+  --wix-color-29: 153, 154, 159;
+  --wix-color-30: 102, 103, 111;
+  --wix-color-31: 239, 239, 239;
+  --wix-color-32: 40, 38, 38;
+  --wix-color-33: 233, 226, 215;
+  --wix-color-34: 203, 200, 194;
+  --wix-color-35: 51, 52, 63;
+  --wix-color-36: 51, 52, 63;
+  --wix-color-37: 102, 103, 111;
+  --wix-color-38: 51, 52, 63;
+  --wix-color-39: 51, 52, 63;
+  --wix-color-40: 255, 255, 255;
+  --wix-color-41: 255, 255, 255;
+  --wix-color-42: 51, 52, 63;
+  --wix-color-43: 51, 52, 63;
+  --wix-color-44: 153, 154, 159;
+  --wix-color-45: 153, 154, 159;
+  --wix-color-46: 255, 255, 255;
+  --wix-color-47: 255, 255, 255;
+  --wix-color-48: 51, 52, 63;
+  --wix-color-49: 51, 52, 63;
+  --wix-color-50: 51, 52, 63;
+  --wix-color-51: 51, 52, 63;
+  --wix-color-52: 255, 255, 255;
+  --wix-color-53: 255, 255, 255;
+  --wix-color-54: 153, 154, 159;
+  --wix-color-55: 153, 154, 159;
+  --wix-font-Title: normal normal normal 88px/1.2em montserrat, sans-serif;
+  --wix-font-Title-style: normal;
+  --wix-font-Title-variant: normal;
+  --wix-font-Title-weight: normal;
+  --wix-font-Title-size: 88px;
+  --wix-font-Title-line-height: 1.2em;
+  --wix-font-Title-family: montserrat, sans-serif;
+  --wix-font-Title-text-decoration: none;
+  --wix-font-Menu: normal normal normal 14px/1.79em avenir-lt-w01_35-light1475496, sans-serif;
+  --wix-font-Menu-style: normal;
+  --wix-font-Menu-variant: normal;
+  --wix-font-Menu-weight: normal;
+  --wix-font-Menu-size: 14px;
+  --wix-font-Menu-line-height: 1.79em;
+  --wix-font-Menu-family: avenir-lt-w01_35-light1475496, sans-serif;
+  --wix-font-Menu-text-decoration: none;
+  --wix-font-Page-title: normal normal normal 72px/1.25em montserrat, sans-serif;
+  --wix-font-Page-title-style: normal;
+  --wix-font-Page-title-variant: normal;
+  --wix-font-Page-title-weight: normal;
+  --wix-font-Page-title-size: 72px;
+  --wix-font-Page-title-line-height: 1.25em;
+  --wix-font-Page-title-family: montserrat, sans-serif;
+  --wix-font-Page-title-text-decoration: none;
+  --wix-font-Heading-XL: normal normal normal 50px/1.34em montserrat, sans-serif;
+  --wix-font-Heading-XL-style: normal;
+  --wix-font-Heading-XL-variant: normal;
+  --wix-font-Heading-XL-weight: normal;
+  --wix-font-Heading-XL-size: 50px;
+  --wix-font-Heading-XL-line-height: 1.34em;
+  --wix-font-Heading-XL-family: montserrat, sans-serif;
+  --wix-font-Heading-XL-text-decoration: none;
+  --wix-font-Heading-L: normal normal normal 40px/1.35em montserrat, sans-serif;
+  --wix-font-Heading-L-style: normal;
+  --wix-font-Heading-L-variant: normal;
+  --wix-font-Heading-L-weight: normal;
+  --wix-font-Heading-L-size: 40px;
+  --wix-font-Heading-L-line-height: 1.35em;
+  --wix-font-Heading-L-family: montserrat, sans-serif;
+  --wix-font-Heading-L-text-decoration: none;
+  --wix-font-Heading-M: normal normal normal 28px/1.38em montserrat, sans-serif;
+  --wix-font-Heading-M-style: normal;
+  --wix-font-Heading-M-variant: normal;
+  --wix-font-Heading-M-weight: normal;
+  --wix-font-Heading-M-size: 28px;
+  --wix-font-Heading-M-line-height: 1.38em;
+  --wix-font-Heading-M-family: montserrat, sans-serif;
+  --wix-font-Heading-M-text-decoration: none;
+  --wix-font-Heading-S: normal normal normal 22px/1.41em montserrat, sans-serif;
+  --wix-font-Heading-S-style: normal;
+  --wix-font-Heading-S-variant: normal;
+  --wix-font-Heading-S-weight: normal;
+  --wix-font-Heading-S-size: 22px;
+  --wix-font-Heading-S-line-height: 1.41em;
+  --wix-font-Heading-S-family: montserrat, sans-serif;
+  --wix-font-Heading-S-text-decoration: none;
+  --wix-font-Body-L: normal normal normal 20px/1.67em montserrat, sans-serif;
+  --wix-font-Body-L-style: normal;
+  --wix-font-Body-L-variant: normal;
+  --wix-font-Body-L-weight: normal;
+  --wix-font-Body-L-size: 20px;
+  --wix-font-Body-L-line-height: 1.67em;
+  --wix-font-Body-L-family: montserrat, sans-serif;
+  --wix-font-Body-L-text-decoration: none;
+  --wix-font-Body-M: normal normal normal 18px/1.75em montserrat, sans-serif;
+  --wix-font-Body-M-style: normal;
+  --wix-font-Body-M-variant: normal;
+  --wix-font-Body-M-weight: normal;
+  --wix-font-Body-M-size: 18px;
+  --wix-font-Body-M-line-height: 1.75em;
+  --wix-font-Body-M-family: montserrat, sans-serif;
+  --wix-font-Body-M-text-decoration: none;
+  --wix-font-Body-S: normal normal normal 15px/1.88em montserrat, sans-serif;
+  --wix-font-Body-S-style: normal;
+  --wix-font-Body-S-variant: normal;
+  --wix-font-Body-S-weight: normal;
+  --wix-font-Body-S-size: 15px;
+  --wix-font-Body-S-line-height: 1.88em;
+  --wix-font-Body-S-family: montserrat, sans-serif;
+  --wix-font-Body-S-text-decoration: none;
+  --wix-font-Body-XS: normal normal normal 14px/1.79em avenir-lt-w01_35-light1475496, sans-serif;
+  --wix-font-Body-XS-style: normal;
+  --wix-font-Body-XS-variant: normal;
+  --wix-font-Body-XS-weight: normal;
+  --wix-font-Body-XS-size: 14px;
+  --wix-font-Body-XS-line-height: 1.79em;
+  --wix-font-Body-XS-family: avenir-lt-w01_35-light1475496, sans-serif;
+  --wix-font-Body-XS-text-decoration: none;
+  --wix-font-LIGHT: normal normal normal 12px/1.4em HelveticaNeueW01-45Ligh;
+  --wix-font-LIGHT-style: normal;
+  --wix-font-LIGHT-variant: normal;
+  --wix-font-LIGHT-weight: normal;
+  --wix-font-LIGHT-size: 12px;
+  --wix-font-LIGHT-line-height: 1.4em;
+  --wix-font-LIGHT-family: HelveticaNeueW01-45Ligh;
+  --wix-font-LIGHT-text-decoration: none;
+  --wix-font-MEDIUM: normal normal normal 12px/1.4em HelveticaNeueW01-55Roma;
+  --wix-font-MEDIUM-style: normal;
+  --wix-font-MEDIUM-variant: normal;
+  --wix-font-MEDIUM-weight: normal;
+  --wix-font-MEDIUM-size: 12px;
+  --wix-font-MEDIUM-line-height: 1.4em;
+  --wix-font-MEDIUM-family: HelveticaNeueW01-55Roma;
+  --wix-font-MEDIUM-text-decoration: none;
+  --wix-font-STRONG: normal normal normal 12px/1.4em HelveticaNeueW01-65Medi;
+  --wix-font-STRONG-style: normal;
+  --wix-font-STRONG-variant: normal;
+  --wix-font-STRONG-weight: normal;
+  --wix-font-STRONG-size: 12px;
+  --wix-font-STRONG-line-height: 1.4em;
+  --wix-font-STRONG-family: HelveticaNeueW01-65Medi;
+  --wix-font-STRONG-text-decoration: none;
+}
+
+#comp-mamp9r87 {
+  --text-direction: var(--wix-opt-in-direction);
+}
+
+#comp-m5qnidsd6 {
+  --bg-overlay-color: transparent;
+  --bg-gradient: none;
+  min-width: 980px;
+}
+
+#comp-m5qnidsh4 {
+  --text-direction: var(--wix-opt-in-direction);
+}
+
+#comp-m5qnidsi3 {
+  --shc-mutated-brightness: 128, 128, 128;
+}

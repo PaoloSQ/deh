@@ -1,71 +1,81 @@
 /* END STYLABLE DIRECTIVE RULES */
 
-[id^="comp-lr0qx807__"] .style-lu03rxgs__root{
-    -st-extends: StylableButton;
-    transition: all 0.2s ease, visibility 0s;
-    background: rgba(204, 0, 0, 0);
-    border: 1px solid #CC0000;
-    border-radius: 50px
+[id^="comp-lr0qx807__"] .style-lu03rxgs__root {
+  -st-extends: StylableButton;
+  transition:
+    all 0.2s ease,
+    visibility 0s;
+  background: rgba(204, 0, 0, 0);
+  border: 1px solid #cc0000;
+  border-radius: 50px;
 }
 
 /* START STYLABLE DIRECTIVE RULES */
 
 [id^="comp-lr0qx807__"] .style-lu03rxgs__root:hover {
-    background: rgba(255, 64, 64, 0);
+  background: rgba(255, 64, 64, 0);
 }
 
 [id^="comp-lr0qx807__"] .style-lu03rxgs__root:hover .StylableButton2545352419__label {
-    letter-spacing: 0em; font-family: montserrat,sans-serif; font-size: 15px; font-weight: normal; font-style: normal;
-    font-size: 12px;
+  letter-spacing: 0em;
+  font-family: montserrat, sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 12px;
 }
 
-[id^="comp-lr0qx807__"] .style-lu03rxgs__root:disabled{
-    background: rgba(226, 226, 226, 0)
+[id^="comp-lr0qx807__"] .style-lu03rxgs__root:disabled {
+  background: rgba(226, 226, 226, 0);
 }
 
-[id^="comp-lr0qx807__"] .style-lu03rxgs__root:disabled .StylableButton2545352419__label{
-    color: #B6B6B8
+[id^="comp-lr0qx807__"] .style-lu03rxgs__root:disabled .StylableButton2545352419__label {
+  color: #b6b6b8;
 }
 
-[id^="comp-lr0qx807__"] .style-lu03rxgs__root:disabled .StylableButton2545352419__icon{
-    fill: #8F8F8F
+[id^="comp-lr0qx807__"] .style-lu03rxgs__root:disabled .StylableButton2545352419__icon {
+  fill: #8f8f8f;
 }
 
-[id^="comp-lr0qx807__"] .style-lu03rxgs__root .StylableButton2545352419__container{
-    transition: inherit;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center
+[id^="comp-lr0qx807__"] .style-lu03rxgs__root .StylableButton2545352419__container {
+  transition: inherit;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
-[id^="comp-lr0qx807__"] .style-lu03rxgs__root .StylableButton2545352419__label{
-    transition: inherit;
-    margin: 0px 4px 0px 0px;
-    font-family: bree-w01-thin-oblique,sans-serif;
-    font-weight: normal;
-    font-style: normal;
-    letter-spacing: 0em;
-    color: #CC0000; font-family: montserrat,sans-serif; font-size: 15px; font-weight: normal; font-style: normal;
-    font-size: 12px;
-    text-align: left;
-    margin-left: 0px;
-    margin-right: 4px;
-    display: initial
+[id^="comp-lr0qx807__"] .style-lu03rxgs__root .StylableButton2545352419__label {
+  transition: inherit;
+  margin: 0px 4px 0px 0px;
+  font-family: bree-w01-thin-oblique, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: 0em;
+  color: #cc0000;
+  font-family: montserrat, sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 12px;
+  text-align: left;
+  margin-left: 0px;
+  margin-right: 4px;
+  display: initial;
 }
 
-[id^="comp-lr0qx807__"] .style-lu03rxgs__root .StylableButton2545352419__icon{
-    transition: inherit;
-    margin: 0px 0px 0px 4px;
-    fill: #CC0000;
-    width: 20px;
-    height: 20px;
-    margin-right: 0px;
-    margin-left: 4px;
-    display: none;
+[id^="comp-lr0qx807__"] .style-lu03rxgs__root .StylableButton2545352419__icon {
+  transition: inherit;
+  margin: 0px 0px 0px 4px;
+  fill: #cc0000;
+  width: 20px;
+  height: 20px;
+  margin-right: 0px;
+  margin-left: 4px;
+  display: none;
 }
 
 @media screen and (min-width: 1px) and (max-width: 0px) {
-    [id^="comp-lr0qx807__"] .style-lu03rxgs__root .StylableButton2545352419__label {
-        text-align: center;
-    }
+  [id^="comp-lr0qx807__"] .style-lu03rxgs__root .StylableButton2545352419__label {
+    text-align: center;
+  }
 }

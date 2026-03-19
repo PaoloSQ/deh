@@ -1,6 +1,5 @@
-  
 #group-list-grid .sc8yOyS {
-  -ms-grid-columns: ;
+  -ms-grid-columns:;
 }
 #group-list-grid.o__1paq8F--dividers {
   padding: calc((31px / 2) + 1px) 0;
@@ -9,7 +8,7 @@
   top: calc((31px / -2) - 1px);
 }
 #group-list-grid.o__1paq8F--dividers li::after {
-bottom: calc((31px / -2) - 1px);
+  bottom: calc((31px / -2) - 1px);
 }
 #group-list-grid.o__1paq8F--dividers li::before,
 #group-list-grid.o__1paq8F--dividers li::after,
@@ -21,7 +20,7 @@ bottom: calc((31px / -2) - 1px);
 #group-list-grid.o__1paq8F--dividers li::before {
   left: -31px;
 }
-      
+
 @media (min-width: 0px) {
   #group-list-grid .sc8yOyS {
     -ms-grid-columns: repeat(1, minmax(0px, 100vw));

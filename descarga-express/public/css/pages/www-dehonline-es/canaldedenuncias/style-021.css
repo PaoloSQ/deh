@@ -1,1 +1,20 @@
-#o0l10{width:auto;min-height:40px;}#pageBackground_o0l10{--bg-position:absolute;--bg-overlay-color:rgb(204, 0, 0);--bg-gradient:none;}#comp-lpl1i5hh{--bg-overlay-color:rgb(var(--color_36));--bg-gradient:none;min-width:980px;}#comp-lpl1i5hm{--text-direction:var(--wix-opt-in-direction);}#comp-lpl1i5hq{--text-direction:var(--wix-opt-in-direction);}
+#o0l10 {
+  width: auto;
+  min-height: 40px;
+}
+#pageBackground_o0l10 {
+  --bg-position: absolute;
+  --bg-overlay-color: rgb(204, 0, 0);
+  --bg-gradient: none;
+}
+#comp-lpl1i5hh {
+  --bg-overlay-color: rgb(var(--color_36));
+  --bg-gradient: none;
+  min-width: 980px;
+}
+#comp-lpl1i5hm {
+  --text-direction: var(--wix-opt-in-direction);
+}
+#comp-lpl1i5hq {
+  --text-direction: var(--wix-opt-in-direction);
+}

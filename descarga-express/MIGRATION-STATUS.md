@@ -2,6 +2,13 @@
 
 Ultima actualizacion: 2026-03-17
 
+Nota 2026-03-19:
+
+- Este estado funcional ya no debe leerse aislado.
+- Para el inventario real de rutas actuales usa `../reports/current_routes_actual.txt`.
+- Para el cruce depurado con `../reports/missing_pages_remote.txt` usa `../reports/pending_pages_real.txt`.
+- El resumen operativo actualizado esta en `ROUTE-INVENTORY-SUMMARY.md`.
+
 ## Resumen
 
 - `hecha`: 84 paginas

@@ -1,447 +1,1024 @@
-#tajgd{width:auto;min-height:40px;}#pageBackground_tajgd{--bg-position:absolute;--bg-overlay-color:rgb(var(--color_11));--bg-gradient:none;}#comp-mcu734on{--bg-overlay-color:transparent;--bg-gradient:none;min-width:980px;}#comp-mcu76zlp{--height:109px;--width:288px;}#comp-mcu78r93{--height:109px;--width:221px;}#comp-mct7529a{--fill-layer-image-opacity:1;--bg-overlay-color:transparent;--bg-gradient:none;min-width:980px;}#comp-mcu79vlp{--bg-overlay-color:transparent;--bg-gradient:none;min-width:980px;}#comp-mf5bzli0{--min-height:51px;--text-direction:var(--wix-opt-in-direction);}#comp-mct752c8{--min-height:51px;--text-direction:var(--wix-opt-in-direction);}#comp-mcuepnyf{--min-height:51px;--text-direction:var(--wix-opt-in-direction);}#comp-mf5a15wl{--opacity:1;}#comp-mcuetbv8{--min-height:51px;--text-direction:var(--wix-opt-in-direction);}#comp-mf5a277c{--opacity:1;}#comp-mcueyxsx{--min-height:51px;--text-direction:var(--wix-opt-in-direction);}#comp-mf5a3k68{--opacity:1;}#comp-mcuf2ewf{--min-height:51px;--text-direction:var(--wix-opt-in-direction);}#comp-mf56ynvd{--bg-overlay-color:transparent;--bg-gradient:none;min-width:980px;}#comp-mf56ynvx{--shc-mutated-brightness:128,128,128;}#comp-mf56ynwg{--min-height:40px;--text-direction:var(--wix-opt-in-direction);}#comp-mf56ynx0{--min-height:26px;--text-direction:var(--wix-opt-in-direction);}#comp-mf56ynx14{--min-height:26px;--text-direction:var(--wix-opt-in-direction);}#comp-mf56ynx27{height:auto;--multi-state-wrapper-width:100%;--tabs-list-overflow-x:auto;--tabs-list-overflow-y:visible;--tabs-list-flex-wrap:nowrap;--tabs-list-justify-content:normal;--tabs-list-scroll-buttons-display:flex;--tabs-container-flex-direction:column;--tabs-list-flex-direction:row;--tabs-list-items-col-gap:0px;--tabs-list-items-row-gap:0px;--tabs-list-container-gap:0px;--tabs-list-content-alignment:start;--tabs-list-horizontal-padding:20px;--tabs-list-vertical-padding:20px;--tabs-list-item-flex-grow:0;--tabs-list-orientation:horizontal;--tabs-list-direction:ltr;--tabs-list-width:100%;--tabs-list-height:auto;--tabs-list-position:relative;--tabs-list-first-child-margin-start:auto;--tabs-list-last-child-margin-end:auto;--tabs-list-back-button-inline-end:auto;--tabs-list-back-button-block-end:0;--tabs-list-forward-button-inline-start:auto;--tabs-list-forward-button-block-start:0;--tabs-list-scroll-icons-transform:rotate(0);--tabs-list-scroll-buttons-transform:scaleX(1);--focus-ring:inset 0 0 0 1px#116dff, inset 0 0 0 3px#ffffff;--tab-animation-duration:0.15s;--tab-enter-animation-name:none;--tab-exit-animation-name:none;--bg-gradient:none;}#comp-mf56ynxe{width:100%;--display:initial;height:auto;--bg-gradient:none;}#comp-mf56ynxo{--shc-mutated-brightness:128,128,128;}#comp-mf56ynxr1{--height:62px;--width:61px;}#comp-mf56yny9{--text-direction:var(--wix-opt-in-direction);}#comp-mf56ynyb2{--text-direction:var(--wix-opt-in-direction);}#comp-mf56ynyd1{--fill-opacity:1;--stroke-width:0;--stroke:#5E97FF;--stroke-opacity:1;--fill:#22CB63;}#comp-mf56ynyr2{--shc-mutated-brightness:100,119,123;}#comp-mf56ynzc{--fill-opacity:1;--stroke-width:0;--stroke:#5E97FF;--stroke-opacity:1;--fill:#242323;--flip:scale(-1, 1);}#comp-mf56ynzk2{--min-height:62px;--text-direction:var(--wix-opt-in-direction);}#comp-mf56ynzm7{--opacity:1;}#comp-mf56ynzp2{--fill-opacity:1;--stroke-width:0;--stroke:#5E97FF;--stroke-opacity:1;--fill:#22CB63;}#comp-mf56ynzq5{--text-direction:var(--wix-opt-in-direction);}#comp-mf56ynzr6{--text-direction:var(--wix-opt-in-direction);}#comp-mf56ynzt1{--text-direction:var(--wix-opt-in-direction);}#comp-mf56yo001{--shc-mutated-brightness:100,119,123;}#comp-mf56yo016{--opacity:1;}#comp-mf56yo036{--fill-opacity:1;--stroke-width:0;--stroke:#5E97FF;--stroke-opacity:1;--fill:#242323;--flip:scale(-1, -1);}#comp-mf56yo053{--min-height:66px;--text-direction:var(--wix-opt-in-direction);}#comp-mf56yo092{--text-direction:var(--wix-opt-in-direction);}#comp-mf56yo0b1{--text-direction:var(--wix-opt-in-direction);}#comp-mf56yo0c5{--text-direction:var(--wix-opt-in-direction);}#comp-mf56yo0d6{--text-direction:var(--wix-opt-in-direction);}#comp-mf56yo0f1{--text-direction:var(--wix-opt-in-direction);}#comp-mf56yo0m5{--direction:var(--wix-opt-in-direction);--justify-content:space-between;--item-margin:3px 0px;--margin-top:-3px;--margin-bottom:-3px;--margin-inline-start:0px;--margin-inline-end:0px;}[id^="comp-mf56yo0r5__"]{--bg-gradient:linear-gradient(180deg, #FEF2F2 0%, #FFFFFF 40.155946162709014%);--bg-overlay-color:transparent;border-width:0 0 0 0;border-style:solid solid solid solid;border-color:rgba(176, 169, 134, 1) rgba(176, 169, 134, 1) rgba(176, 169, 134, 1) rgba(176, 169, 134, 1);border-radius:20px 20px 20px 20px;box-shadow:0 0 1px 1px rgba(203, 200, 194, 1);overflow:clip !important;transform:translateZ(0);margin:-0px;}[id="comp-mf56yo0r5__item-j9r9uxns"]{--bg-overlay-color:rgb(var(--color_36));--bg-gradient:none;border-width:0 0 0 0;border-style:solid solid solid solid;border-color:rgba(176, 169, 134, 1) rgba(176, 169, 134, 1) rgba(176, 169, 134, 1) rgba(176, 169, 134, 1);border-radius:20px 20px 20px 20px;box-shadow:0 0 1px 1px rgba(203, 200, 194, 1);overflow:clip !important;transform:translateZ(0);margin:-0px;}[id="comp-mf56yo0r5__item-meqseogy"]{--bg-overlay-color:rgb(var(--color_36));--bg-gradient:none;border-width:0 0 0 0;border-style:solid solid solid solid;border-color:rgba(176, 169, 134, 1) rgba(176, 169, 134, 1) rgba(176, 169, 134, 1) rgba(176, 169, 134, 1);border-radius:20px 20px 20px 20px;box-shadow:0 0 1px 1px rgba(203, 200, 194, 1);overflow:clip !important;transform:translateZ(0);margin:-0px;}[id^="comp-mf56yo113__"]{--height:60px;--width:60px;}[id="comp-mf56yo113__item-meqseogy"]{--height:60px;--width:60px;--mask-image:url("data:image/svg+xml,%3Csvg preserveAspectRatio='none' data-bbox='20 20 160 160' viewBox='20 20 160 160' height='200' width='200' xmlns='http://www.w3.org/2000/svg' data-type='shape'%3E%3Cg%3E%3Cpath d='M180 20v160H20V20h160z'/%3E%3C/g%3E%3C/svg%3E%0A");--mask-position:0% 0%;--mask-size:100% 100%;--mask-repeat:no-repeat;}[id^="comp-mf56yo13__"]{--text-direction:var(--wix-opt-in-direction);}[id^="comp-mf56yo151__"]{--text-direction:var(--wix-opt-in-direction);}[id^="comp-mf56yo161__"]{--shc-mutated-brightness:128,128,128;}[id^="comp-mf56yo18__"]{--text-direction:var(--wix-opt-in-direction);}[id^="comp-mf56yo1a1__"]{--fill-opacity:1;--stroke-width:0;--stroke:#5E97FF;--stroke-opacity:1;--fill:#22CB63;}[id^="comp-mf56yo1b2__"]{--fill-opacity:1;--stroke-width:0;--stroke:#5E97FF;--stroke-opacity:1;--fill:#22CB63;}[id^="comp-mf56yo1c5__"]{--text-direction:var(--wix-opt-in-direction);}[id^="comp-mf56yo1e1__"]{--text-direction:var(--wix-opt-in-direction);}[id^="comp-mf56yo1f1__"]{--text-direction:var(--wix-opt-in-direction);}[id^="comp-mf56yo1g__"]{--shc-mutated-brightness:100,119,123;}[id^="comp-mf56yo1h4__"]{--opacity:1;}[id^="comp-mf56yo1j7__"]{--fill-opacity:1;--stroke-width:0;--stroke:#5E97FF;--stroke-opacity:1;--fill:#242323;--flip:scale(-1, -1);}[id^="comp-mf56yo1m1__"]{--min-height:66px;--text-direction:var(--wix-opt-in-direction);}[id^="comp-mf56yo1p1__"]{--shc-mutated-brightness:100,119,123;}[id^="comp-mf56yo1r__"]{--fill-opacity:1;--stroke-width:0;--stroke:#5E97FF;--stroke-opacity:1;--fill:#242323;--flip:scale(-1, 1);}[id^="comp-mf56yo1s6__"]{--min-height:76px;--text-direction:var(--wix-opt-in-direction);}[id^="comp-mf56yo1u1__"]{--opacity:1;}[id^="comp-mf56yo1v11__"]{--text-direction:var(--wix-opt-in-direction);}[id^="comp-mf56yo1w6__"]{--text-direction:var(--wix-opt-in-direction);}[id^="comp-mf56yo1x6__"]{--text-direction:var(--wix-opt-in-direction);}#comp-mf56yo291{--shc-mutated-brightness:100,119,123;}#comp-mf56yo2b{--fill-opacity:1;--stroke-width:0;--stroke:#5E97FF;--stroke-opacity:1;--fill:#242323;--flip:scale(-1, -1);}#comp-mf56yo2c5{--min-height:62px;--text-direction:var(--wix-opt-in-direction);}#comp-mf56yo2f3{width:100%;--display:initial;height:auto;--bg-gradient:none;}#comp-mf56yo2o1{--shc-mutated-brightness:128,128,128;}#comp-mf56yo2p3{--height:62px;--width:61px;}#comp-mf56yo2r{--text-direction:var(--wix-opt-in-direction);}#comp-mf56yo2s4{--text-direction:var(--wix-opt-in-direction);}#comp-mf56yo2t6{--fill-opacity:1;--stroke-width:0;--stroke:#5E97FF;--stroke-opacity:1;--fill:#22CB63;}#comp-mf56yo2u7{--fill-opacity:1;--stroke-width:0;--stroke:#5E97FF;--stroke-opacity:1;--fill:#22CB63;}#comp-mf56yo2v7{--text-direction:var(--wix-opt-in-direction);}#comp-mf56yo2w6{--text-direction:var(--wix-opt-in-direction);}#comp-mf56yo2x3{--text-direction:var(--wix-opt-in-direction);}#comp-mf56yo301{--text-direction:var(--wix-opt-in-direction);}#comp-mf56yo321{--text-direction:var(--wix-opt-in-direction);}#comp-mf56yo334{--text-direction:var(--wix-opt-in-direction);}#comp-mf56yo351{--text-direction:var(--wix-opt-in-direction);}#comp-mf56yo362{--text-direction:var(--wix-opt-in-direction);}#comp-mf56yo391{--direction:var(--wix-opt-in-direction);--justify-content:space-between;--item-margin:3px 0px;--margin-top:-3px;--margin-bottom:-3px;--margin-inline-start:0px;--margin-inline-end:0px;}[id^="comp-mf56yo3b1__"]{--bg-gradient:linear-gradient(180deg, #FEF2F2 0%, #FFFFFF 40.155946162709014%);--bg-overlay-color:transparent;border-width:0 0 0 0;border-style:solid solid solid solid;border-color:rgba(176, 169, 134, 1) rgba(176, 169, 134, 1) rgba(176, 169, 134, 1) rgba(176, 169, 134, 1);border-radius:20px 20px 20px 20px;box-shadow:0 0 1px 1px rgba(203, 200, 194, 1);overflow:clip !important;transform:translateZ(0);margin:-0px;}[id="comp-mf56yo3b1__item-j9r9uxns"]{--bg-overlay-color:rgb(var(--color_36));--bg-gradient:none;border-width:0 0 0 0;border-style:solid solid solid solid;border-color:rgba(176, 169, 134, 1) rgba(176, 169, 134, 1) rgba(176, 169, 134, 1) rgba(176, 169, 134, 1);border-radius:20px 20px 20px 20px;box-shadow:0 0 1px 1px rgba(203, 200, 194, 1);overflow:clip !important;transform:translateZ(0);margin:-0px;}[id="comp-mf56yo3b1__item-meqseogy"]{--bg-overlay-color:rgb(var(--color_36));--bg-gradient:none;border-width:0 0 0 0;border-style:solid solid solid solid;border-color:rgba(176, 169, 134, 1) rgba(176, 169, 134, 1) rgba(176, 169, 134, 1) rgba(176, 169, 134, 1);border-radius:20px 20px 20px 20px;box-shadow:0 0 1px 1px rgba(203, 200, 194, 1);overflow:clip !important;transform:translateZ(0);margin:-0px;}[id^="comp-mf56yo3f__"]{--height:60px;--width:60px;}[id="comp-mf56yo3f__item-meqseogy"]{--height:60px;--width:60px;--mask-image:url("data:image/svg+xml,%3Csvg preserveAspectRatio='none' data-bbox='20 20 160 160' viewBox='20 20 160 160' height='200' width='200' xmlns='http://www.w3.org/2000/svg' data-type='shape'%3E%3Cg%3E%3Cpath d='M180 20v160H20V20h160z'/%3E%3C/g%3E%3C/svg%3E%0A");--mask-position:0% 0%;--mask-size:100% 100%;--mask-repeat:no-repeat;}[id^="comp-mf56yo3i1__"]{--text-direction:var(--wix-opt-in-direction);}[id^="comp-mf56yo3k1__"]{--text-direction:var(--wix-opt-in-direction);}[id^="comp-mf56yo3l3__"]{--shc-mutated-brightness:128,128,128;}[id^="comp-mf56yo3m2__"]{--text-direction:var(--wix-opt-in-direction);}[id^="comp-mf56yo3n3__"]{--fill-opacity:1;--stroke-width:0;--stroke:#5E97FF;--stroke-opacity:1;--fill:#22CB63;}[id^="comp-mf56yo3p1__"]{--fill-opacity:1;--stroke-width:0;--stroke:#5E97FF;--stroke-opacity:1;--fill:#22CB63;}[id^="comp-mf56yo3q2__"]{--text-direction:var(--wix-opt-in-direction);}[id^="comp-mf56yo3s1__"]{--text-direction:var(--wix-opt-in-direction);}[id^="comp-mf56yo3t3__"]{--text-direction:var(--wix-opt-in-direction);}[id^="comp-mf56yo3v2__"]{--text-direction:var(--wix-opt-in-direction);}[id^="comp-mf56yo3x1__"]{--text-direction:var(--wix-opt-in-direction);}[id^="comp-mf56yo3y1__"]{--text-direction:var(--wix-opt-in-direction);}#comp-mf58c54t{--bg-overlay-color:rgb(var(--color_11));--bg-gradient:none;min-width:980px;}#comp-mf58guk7{--min-height:47px;--text-direction:var(--wix-opt-in-direction);}.comp-mf58jqvm {
-				--wix-direction: ltr;
---buttonsStyle: 1;
---buttonsBorderWidth: 0;
---nextButtonBorderWidth: 2;
---inputBorderWidth: 2;
---nextButtonStyle: 3;
---horizontalPadding: 24;
---submitButtonStyle: 3;
---verticalPadding: 24;
---submitButtonBorderWidth: 0;
---submitButtonBorderRadius: 100;
---previousButtonBorderRadius: 100;
---nextButtonBorderRadius: 100;
---previousButtonBorderWidth: 2;
---previousButtonStyle: 3;
---inputBorderStyle: 2;
---buttonsBorderRadius: 100;
---rowSpacing: 24;
---columnSpacing: 24;
---borderWidth: 0;
---borderRadius: 0;
---shadowAngle: 135;
---shadowDistance: 0;
---shadowSize: 0;
---shadowBlur: 25;
---inputBorderRadius: 0;
---buttonsFontHover: normal normal normal 16px/16px montserrat,sans-serif;
---submitButtonFontHover: normal normal normal 16px/1.4em montserrat,sans-serif;
---nextButtonFontHover: normal normal normal 16px/1.4em montserrat,sans-serif;
---previousButtonFontHover: normal normal normal 16px/1.4em montserrat,sans-serif;
---submitButtonBorderColor: 255,255,255,0;
---submitButtonBorderColor-rgb: 255,255,255;
---submitButtonBorderColor-opacity: 0;
---nextButtonBackgroundColor: 0,0,0;
---nextButtonBackgroundColor-rgb: 0,0,0;
---nextButtonBackgroundColor-opacity: 1;
---previousButtonColorHover: 128,128,128;
---previousButtonColorHover-rgb: 128,128,128;
---previousButtonColorHover-opacity: 1;
---submitButtonColor: 255,255,255;
---submitButtonColor-rgb: 255,255,255;
---submitButtonColor-opacity: 1;
---buttonsBackgroundColorHover: 102,102,102;
---buttonsBackgroundColorHover-rgb: 102,102,102;
---buttonsBackgroundColorHover-opacity: 1;
---paragraphColor: 40,38,38;
---paragraphColor-rgb: 40,38,38;
---paragraphColor-opacity: 1;
---inputLabelColor: 51,52,63;
---inputLabelColor-rgb: 51,52,63;
---inputLabelColor-opacity: 1;
---buttonsColor: 255,255,255;
---buttonsColor-rgb: 255,255,255;
---buttonsColor-opacity: 1;
---inputPlaceholderColor: 89,89,89;
---inputPlaceholderColor-rgb: 89,89,89;
---inputPlaceholderColor-opacity: 1;
---formBackground: 255,255,255;
---formBackground-rgb: 255,255,255;
---formBackground-opacity: 1;
---buttonsBorderColor: 0,0,0;
---buttonsBorderColor-rgb: 0,0,0;
---buttonsBorderColor-opacity: 1;
---previousButtonBackgroundColorHover: 0,0,0,0;
---previousButtonBackgroundColorHover-rgb: 0,0,0;
---previousButtonBackgroundColorHover-opacity: 0;
---nextButtonBorderColor: 255,255,255,0;
---nextButtonBorderColor-rgb: 255,255,255;
---nextButtonBorderColor-opacity: 0;
---buttonsBackgroundColor: 0,0,0;
---buttonsBackgroundColor-rgb: 0,0,0;
---buttonsBackgroundColor-opacity: 1;
---previousButtonBorderColor: 0,0,0;
---previousButtonBorderColor-rgb: 0,0,0;
---previousButtonBorderColor-opacity: 1;
---nextButtonColorHover: 255,255,255;
---nextButtonColorHover-rgb: 255,255,255;
---nextButtonColorHover-opacity: 1;
---inputSelectionColor: 89,89,89;
---inputSelectionColor-rgb: 89,89,89;
---inputSelectionColor-opacity: 1;
---headerTwoColor: 0,0,0;
---headerTwoColor-rgb: 0,0,0;
---headerTwoColor-opacity: 1;
---submitButtonColorHover: 255,255,255;
---submitButtonColorHover-rgb: 255,255,255;
---submitButtonColorHover-opacity: 1;
---inputBackgroundColor: 255,255,255;
---inputBackgroundColor-rgb: 255,255,255;
---inputBackgroundColor-opacity: 1;
---inputValueColor: 0,0,0;
---inputValueColor-rgb: 0,0,0;
---inputValueColor-opacity: 1;
---inputNoteColor: 0,0,0;
---inputNoteColor-rgb: 0,0,0;
---inputNoteColor-opacity: 1;
---headerOneColor: 0,0,0;
---headerOneColor-rgb: 0,0,0;
---headerOneColor-opacity: 1;
---nextButtonBorderColorHover: 0,0,0,0;
---nextButtonBorderColorHover-rgb: 0,0,0;
---nextButtonBorderColorHover-opacity: 0;
---nextButtonColor: 255,255,255;
---nextButtonColor-rgb: 255,255,255;
---nextButtonColor-opacity: 1;
---submitButtonBorderColorHover: 102,102,102;
---submitButtonBorderColorHover-rgb: 102,102,102;
---submitButtonBorderColorHover-opacity: 1;
---nextButtonBackgroundColorHover: 102,102,102;
---nextButtonBackgroundColorHover-rgb: 102,102,102;
---nextButtonBackgroundColorHover-opacity: 1;
---linkColor: 0,0,0;
---linkColor-rgb: 0,0,0;
---linkColor-opacity: 1;
---previousButtonBackgroundColor: 255,255,255,0;
---previousButtonBackgroundColor-rgb: 255,255,255;
---previousButtonBackgroundColor-opacity: 0;
---borderColor: 0,0,0,0;
---borderColor-rgb: 0,0,0;
---borderColor-opacity: 0;
---submitButtonBackgroundColor: 208,2,27;
---submitButtonBackgroundColor-rgb: 208,2,27;
---submitButtonBackgroundColor-opacity: 1;
---inputBorderColor: 102,103,111;
---inputBorderColor-rgb: 102,103,111;
---inputBorderColor-opacity: 1;
---submitButtonBackgroundColorHover: 102,102,102;
---submitButtonBackgroundColorHover-rgb: 102,102,102;
---submitButtonBackgroundColorHover-opacity: 1;
---buttonsColorHover: 255,255,255;
---buttonsColorHover-rgb: 255,255,255;
---buttonsColorHover-opacity: 1;
---previousButtonBorderColorHover: 128,128,128;
---previousButtonBorderColorHover-rgb: 128,128,128;
---previousButtonBorderColorHover-opacity: 1;
---previousButtonColor: 0,0,0;
---previousButtonColor-rgb: 0,0,0;
---previousButtonColor-opacity: 1;
---shadowColor: 51,52,63,0.15;
---shadowColor-rgb: 51,52,63;
---shadowColor-opacity: 0.15;
---inputBackgroundColorHover: 255,255,255;
---inputBackgroundColorHover-rgb: 255,255,255;
---inputBackgroundColorHover-opacity: 1;
---inputBorderColorHover: 51,52,63;
---inputBorderColorHover-rgb: 51,52,63;
---inputBorderColorHover-opacity: 1;
---inputOptionColor: 0,0,0;
---inputOptionColor-rgb: 0,0,0;
---inputOptionColor-opacity: 1;
---thankYouMessageColor: 40,38,38;
---thankYouMessageColor-rgb: 40,38,38;
---thankYouMessageColor-opacity: 1;
---inputErrorColor: 223,49,49;
---inputErrorColor-rgb: 223,49,49;
---inputErrorColor-opacity: 1;
---inputValueFont: normal normal normal 16px/20px helvetica-w01-roman,sans-serif;
---inputValueFont-style: normal;
---inputValueFont-variant: normal;
---inputValueFont-weight: normal;
---inputValueFont-size: 16px;
---inputValueFont-line-height: 20px;
---inputValueFont-family: helvetica-w01-roman,sans-serif;
---inputValueFont-text-decoration: none;
---submitButtonFont: normal normal normal 18px/22px helvetica-w01-roman,sans-serif;
---submitButtonFont-style: normal;
---submitButtonFont-variant: normal;
---submitButtonFont-weight: normal;
---submitButtonFont-size: 18px;
---submitButtonFont-line-height: 22px;
---submitButtonFont-family: helvetica-w01-roman,sans-serif;
---submitButtonFont-text-decoration: none;
---paragraphFont: normal normal normal 18px/22px wfont_a3f637_3f0d4ffb6bdc4c1cb6dc005c9dadbf65,wf_3f0d4ffb6bdc4c1cb6dc005c9,orig_inter_regular;
---paragraphFont-style: normal;
---paragraphFont-variant: normal;
---paragraphFont-weight: normal;
---paragraphFont-size: 18px;
---paragraphFont-line-height: 22px;
---paragraphFont-family: wfont_a3f637_3f0d4ffb6bdc4c1cb6dc005c9dadbf65,wf_3f0d4ffb6bdc4c1cb6dc005c9,orig_inter_regular;
---paragraphFont-text-decoration: none;
---previousButtonFont: normal normal normal 16px/20px helvetica-w01-roman,sans-serif;
---previousButtonFont-style: normal;
---previousButtonFont-variant: normal;
---previousButtonFont-weight: normal;
---previousButtonFont-size: 16px;
---previousButtonFont-line-height: 20px;
---previousButtonFont-family: helvetica-w01-roman,sans-serif;
---previousButtonFont-text-decoration: none;
---inputNoteFont: normal normal normal 14px/17px helvetica-w01-roman,sans-serif;
---inputNoteFont-style: normal;
---inputNoteFont-variant: normal;
---inputNoteFont-weight: normal;
---inputNoteFont-size: 14px;
---inputNoteFont-line-height: 17px;
---inputNoteFont-family: helvetica-w01-roman,sans-serif;
---inputNoteFont-text-decoration: none;
---headerTwoFont: normal normal normal 25px/31px futura-lt-w01-book,sans-serif;
---headerTwoFont-style: normal;
---headerTwoFont-variant: normal;
---headerTwoFont-weight: normal;
---headerTwoFont-size: 25px;
---headerTwoFont-line-height: 31px;
---headerTwoFont-family: futura-lt-w01-book,sans-serif;
---headerTwoFont-text-decoration: none;
---paragraphFont▶︎m: normal normal normal 14px/17px wfont_a3f637_3f0d4ffb6bdc4c1cb6dc005c9dadbf65,wf_3f0d4ffb6bdc4c1cb6dc005c9,orig_inter_regular;
---paragraphFont▶︎m-style: normal;
---paragraphFont▶︎m-variant: normal;
---paragraphFont▶︎m-weight: normal;
---paragraphFont▶︎m-size: 14px;
---paragraphFont▶︎m-line-height: 17px;
---paragraphFont▶︎m-family: wfont_a3f637_3f0d4ffb6bdc4c1cb6dc005c9dadbf65,wf_3f0d4ffb6bdc4c1cb6dc005c9,orig_inter_regular;
---paragraphFont▶︎m-text-decoration: none;
---nextButtonFont: normal normal normal 16px/20px helvetica-w01-roman,sans-serif;
---nextButtonFont-style: normal;
---nextButtonFont-variant: normal;
---nextButtonFont-weight: normal;
---nextButtonFont-size: 16px;
---nextButtonFont-line-height: 20px;
---nextButtonFont-family: helvetica-w01-roman,sans-serif;
---nextButtonFont-text-decoration: none;
---headerOneFont: normal normal normal 30px/37px futura-lt-w01-book,sans-serif;
---headerOneFont-style: normal;
---headerOneFont-variant: normal;
---headerOneFont-weight: normal;
---headerOneFont-size: 30px;
---headerOneFont-line-height: 37px;
---headerOneFont-family: futura-lt-w01-book,sans-serif;
---headerOneFont-text-decoration: none;
---inputLabelFont: normal normal normal 16px/20px helvetica-w01-roman,sans-serif;
---inputLabelFont-style: normal;
---inputLabelFont-variant: normal;
---inputLabelFont-weight: normal;
---inputLabelFont-size: 16px;
---inputLabelFont-line-height: 20px;
---inputLabelFont-family: helvetica-w01-roman,sans-serif;
---inputLabelFont-text-decoration: none;
---buttonsFontHover-style: normal;
---buttonsFontHover-variant: normal;
---buttonsFontHover-weight: normal;
---buttonsFontHover-size: 16px;
---buttonsFontHover-line-height: 16px;
---buttonsFontHover-family: montserrat,sans-serif;
---buttonsFontHover-text-decoration: none;
---submitButtonFontHover-style: normal;
---submitButtonFontHover-variant: normal;
---submitButtonFontHover-weight: normal;
---submitButtonFontHover-size: 16px;
---submitButtonFontHover-line-height: 1.4em;
---submitButtonFontHover-family: montserrat,sans-serif;
---submitButtonFontHover-text-decoration: none;
---nextButtonFontHover-style: normal;
---nextButtonFontHover-variant: normal;
---nextButtonFontHover-weight: normal;
---nextButtonFontHover-size: 16px;
---nextButtonFontHover-line-height: 1.4em;
---nextButtonFontHover-family: montserrat,sans-serif;
---nextButtonFontHover-text-decoration: none;
---previousButtonFontHover-style: normal;
---previousButtonFontHover-variant: normal;
---previousButtonFontHover-weight: normal;
---previousButtonFontHover-size: 16px;
---previousButtonFontHover-line-height: 1.4em;
---previousButtonFontHover-family: montserrat,sans-serif;
---previousButtonFontHover-text-decoration: none;
---thankYouMessageFont: normal normal normal 18px/22px wfont_a3f637_3f0d4ffb6bdc4c1cb6dc005c9dadbf65,wf_3f0d4ffb6bdc4c1cb6dc005c9,orig_inter_regular;
---thankYouMessageFont-style: normal;
---thankYouMessageFont-variant: normal;
---thankYouMessageFont-weight: normal;
---thankYouMessageFont-size: 18px;
---thankYouMessageFont-line-height: 22px;
---thankYouMessageFont-family: wfont_a3f637_3f0d4ffb6bdc4c1cb6dc005c9dadbf65,wf_3f0d4ffb6bdc4c1cb6dc005c9,orig_inter_regular;
---thankYouMessageFont-text-decoration: none;
---inputBorderLeftWidth: 0;
---inputBorderRightWidth: 0;
---inputBorderTopWidth: 0;
---inputBorderBottomWidth: 2;
-				--wix-color-1: 255,255,255;
---wix-color-2: 182,182,184;
---wix-color-3: 153,154,159;
---wix-color-4: 102,103,111;
---wix-color-5: 51,52,63;
---wix-color-6: 182,183,196;
---wix-color-7: 110,112,136;
---wix-color-8: 51,52,63;
---wix-color-9: 34,35,42;
---wix-color-10: 17,17,21;
---wix-color-11: 215,215,225;
---wix-color-12: 174,175,194;
---wix-color-13: 134,135,164;
---wix-color-14: 97,99,129;
---wix-color-15: 102,103,111;
---wix-color-16: 251,251,251;
---wix-color-17: 182,182,184;
---wix-color-18: 185,185,185;
---wix-color-19: 124,124,124;
---wix-color-20: 62,62,62;
---wix-color-21: 252,222,147;
---wix-color-22: 248,189,38;
---wix-color-23: 208,151,7;
---wix-color-24: 139,101,4;
---wix-color-25: 69,50,2;
---wix-color-26: 255,255,255;
---wix-color-27: 51,52,63;
---wix-color-28: 182,182,184;
---wix-color-29: 153,154,159;
---wix-color-30: 102,103,111;
---wix-color-31: 239,239,239;
---wix-color-32: 40,38,38;
---wix-color-33: 233,226,215;
---wix-color-34: 203,200,194;
---wix-color-35: 51,52,63;
---wix-color-36: 51,52,63;
---wix-color-37: 102,103,111;
---wix-color-38: 51,52,63;
---wix-color-39: 51,52,63;
---wix-color-40: 255,255,255;
---wix-color-41: 255,255,255;
---wix-color-42: 51,52,63;
---wix-color-43: 51,52,63;
---wix-color-44: 153,154,159;
---wix-color-45: 153,154,159;
---wix-color-46: 255,255,255;
---wix-color-47: 255,255,255;
---wix-color-48: 51,52,63;
---wix-color-49: 51,52,63;
---wix-color-50: 51,52,63;
---wix-color-51: 51,52,63;
---wix-color-52: 255,255,255;
---wix-color-53: 255,255,255;
---wix-color-54: 153,154,159;
---wix-color-55: 153,154,159;
---wix-font-Title: normal normal normal 88px/1.2em montserrat,sans-serif;
---wix-font-Title-style: normal;
---wix-font-Title-variant: normal;
---wix-font-Title-weight: normal;
---wix-font-Title-size: 88px;
---wix-font-Title-line-height: 1.2em;
---wix-font-Title-family: montserrat,sans-serif;
---wix-font-Title-text-decoration: none;
---wix-font-Menu: normal normal normal 14px/1.79em avenir-lt-w01_35-light1475496,sans-serif;
---wix-font-Menu-style: normal;
---wix-font-Menu-variant: normal;
---wix-font-Menu-weight: normal;
---wix-font-Menu-size: 14px;
---wix-font-Menu-line-height: 1.79em;
---wix-font-Menu-family: avenir-lt-w01_35-light1475496,sans-serif;
---wix-font-Menu-text-decoration: none;
---wix-font-Page-title: normal normal normal 72px/1.25em montserrat,sans-serif;
---wix-font-Page-title-style: normal;
---wix-font-Page-title-variant: normal;
---wix-font-Page-title-weight: normal;
---wix-font-Page-title-size: 72px;
---wix-font-Page-title-line-height: 1.25em;
---wix-font-Page-title-family: montserrat,sans-serif;
---wix-font-Page-title-text-decoration: none;
---wix-font-Heading-XL: normal normal normal 50px/1.34em montserrat,sans-serif;
---wix-font-Heading-XL-style: normal;
---wix-font-Heading-XL-variant: normal;
---wix-font-Heading-XL-weight: normal;
---wix-font-Heading-XL-size: 50px;
---wix-font-Heading-XL-line-height: 1.34em;
---wix-font-Heading-XL-family: montserrat,sans-serif;
---wix-font-Heading-XL-text-decoration: none;
---wix-font-Heading-L: normal normal normal 40px/1.35em montserrat,sans-serif;
---wix-font-Heading-L-style: normal;
---wix-font-Heading-L-variant: normal;
---wix-font-Heading-L-weight: normal;
---wix-font-Heading-L-size: 40px;
---wix-font-Heading-L-line-height: 1.35em;
---wix-font-Heading-L-family: montserrat,sans-serif;
---wix-font-Heading-L-text-decoration: none;
---wix-font-Heading-M: normal normal normal 28px/1.38em montserrat,sans-serif;
---wix-font-Heading-M-style: normal;
---wix-font-Heading-M-variant: normal;
---wix-font-Heading-M-weight: normal;
---wix-font-Heading-M-size: 28px;
---wix-font-Heading-M-line-height: 1.38em;
---wix-font-Heading-M-family: montserrat,sans-serif;
---wix-font-Heading-M-text-decoration: none;
---wix-font-Heading-S: normal normal normal 22px/1.41em montserrat,sans-serif;
---wix-font-Heading-S-style: normal;
---wix-font-Heading-S-variant: normal;
---wix-font-Heading-S-weight: normal;
---wix-font-Heading-S-size: 22px;
---wix-font-Heading-S-line-height: 1.41em;
---wix-font-Heading-S-family: montserrat,sans-serif;
---wix-font-Heading-S-text-decoration: none;
---wix-font-Body-L: normal normal normal 20px/1.67em montserrat,sans-serif;
---wix-font-Body-L-style: normal;
---wix-font-Body-L-variant: normal;
---wix-font-Body-L-weight: normal;
---wix-font-Body-L-size: 20px;
---wix-font-Body-L-line-height: 1.67em;
---wix-font-Body-L-family: montserrat,sans-serif;
---wix-font-Body-L-text-decoration: none;
---wix-font-Body-M: normal normal normal 18px/1.75em montserrat,sans-serif;
---wix-font-Body-M-style: normal;
---wix-font-Body-M-variant: normal;
---wix-font-Body-M-weight: normal;
---wix-font-Body-M-size: 18px;
---wix-font-Body-M-line-height: 1.75em;
---wix-font-Body-M-family: montserrat,sans-serif;
---wix-font-Body-M-text-decoration: none;
---wix-font-Body-S: normal normal normal 15px/1.88em montserrat,sans-serif;
---wix-font-Body-S-style: normal;
---wix-font-Body-S-variant: normal;
---wix-font-Body-S-weight: normal;
---wix-font-Body-S-size: 15px;
---wix-font-Body-S-line-height: 1.88em;
---wix-font-Body-S-family: montserrat,sans-serif;
---wix-font-Body-S-text-decoration: none;
---wix-font-Body-XS: normal normal normal 14px/1.79em avenir-lt-w01_35-light1475496,sans-serif;
---wix-font-Body-XS-style: normal;
---wix-font-Body-XS-variant: normal;
---wix-font-Body-XS-weight: normal;
---wix-font-Body-XS-size: 14px;
---wix-font-Body-XS-line-height: 1.79em;
---wix-font-Body-XS-family: avenir-lt-w01_35-light1475496,sans-serif;
---wix-font-Body-XS-text-decoration: none;
---wix-font-LIGHT: normal normal normal 12px/1.4em HelveticaNeueW01-45Ligh;
---wix-font-LIGHT-style: normal;
---wix-font-LIGHT-variant: normal;
---wix-font-LIGHT-weight: normal;
---wix-font-LIGHT-size: 12px;
---wix-font-LIGHT-line-height: 1.4em;
---wix-font-LIGHT-family: HelveticaNeueW01-45Ligh;
---wix-font-LIGHT-text-decoration: none;
---wix-font-MEDIUM: normal normal normal 12px/1.4em HelveticaNeueW01-55Roma;
---wix-font-MEDIUM-style: normal;
---wix-font-MEDIUM-variant: normal;
---wix-font-MEDIUM-weight: normal;
---wix-font-MEDIUM-size: 12px;
---wix-font-MEDIUM-line-height: 1.4em;
---wix-font-MEDIUM-family: HelveticaNeueW01-55Roma;
---wix-font-MEDIUM-text-decoration: none;
---wix-font-STRONG: normal normal normal 12px/1.4em HelveticaNeueW01-65Medi;
---wix-font-STRONG-style: normal;
---wix-font-STRONG-variant: normal;
---wix-font-STRONG-weight: normal;
---wix-font-STRONG-size: 12px;
---wix-font-STRONG-line-height: 1.4em;
---wix-font-STRONG-family: HelveticaNeueW01-65Medi;
---wix-font-STRONG-text-decoration: none;
-		}
+#tajgd {
+  width: auto;
+  min-height: 40px;
+}
+#pageBackground_tajgd {
+  --bg-position: absolute;
+  --bg-overlay-color: rgb(var(--color_11));
+  --bg-gradient: none;
+}
+#comp-mcu734on {
+  --bg-overlay-color: transparent;
+  --bg-gradient: none;
+  min-width: 980px;
+}
+#comp-mcu76zlp {
+  --height: 109px;
+  --width: 288px;
+}
+#comp-mcu78r93 {
+  --height: 109px;
+  --width: 221px;
+}
+#comp-mct7529a {
+  --fill-layer-image-opacity: 1;
+  --bg-overlay-color: transparent;
+  --bg-gradient: none;
+  min-width: 980px;
+}
+#comp-mcu79vlp {
+  --bg-overlay-color: transparent;
+  --bg-gradient: none;
+  min-width: 980px;
+}
+#comp-mf5bzli0 {
+  --min-height: 51px;
+  --text-direction: var(--wix-opt-in-direction);
+}
+#comp-mct752c8 {
+  --min-height: 51px;
+  --text-direction: var(--wix-opt-in-direction);
+}
+#comp-mcuepnyf {
+  --min-height: 51px;
+  --text-direction: var(--wix-opt-in-direction);
+}
+#comp-mf5a15wl {
+  --opacity: 1;
+}
+#comp-mcuetbv8 {
+  --min-height: 51px;
+  --text-direction: var(--wix-opt-in-direction);
+}
+#comp-mf5a277c {
+  --opacity: 1;
+}
+#comp-mcueyxsx {
+  --min-height: 51px;
+  --text-direction: var(--wix-opt-in-direction);
+}
+#comp-mf5a3k68 {
+  --opacity: 1;
+}
+#comp-mcuf2ewf {
+  --min-height: 51px;
+  --text-direction: var(--wix-opt-in-direction);
+}
+#comp-mf56ynvd {
+  --bg-overlay-color: transparent;
+  --bg-gradient: none;
+  min-width: 980px;
+}
+#comp-mf56ynvx {
+  --shc-mutated-brightness: 128, 128, 128;
+}
+#comp-mf56ynwg {
+  --min-height: 40px;
+  --text-direction: var(--wix-opt-in-direction);
+}
+#comp-mf56ynx0 {
+  --min-height: 26px;
+  --text-direction: var(--wix-opt-in-direction);
+}
+#comp-mf56ynx14 {
+  --min-height: 26px;
+  --text-direction: var(--wix-opt-in-direction);
+}
+#comp-mf56ynx27 {
+  height: auto;
+  --multi-state-wrapper-width: 100%;
+  --tabs-list-overflow-x: auto;
+  --tabs-list-overflow-y: visible;
+  --tabs-list-flex-wrap: nowrap;
+  --tabs-list-justify-content: normal;
+  --tabs-list-scroll-buttons-display: flex;
+  --tabs-container-flex-direction: column;
+  --tabs-list-flex-direction: row;
+  --tabs-list-items-col-gap: 0px;
+  --tabs-list-items-row-gap: 0px;
+  --tabs-list-container-gap: 0px;
+  --tabs-list-content-alignment: start;
+  --tabs-list-horizontal-padding: 20px;
+  --tabs-list-vertical-padding: 20px;
+  --tabs-list-item-flex-grow: 0;
+  --tabs-list-orientation: horizontal;
+  --tabs-list-direction: ltr;
+  --tabs-list-width: 100%;
+  --tabs-list-height: auto;
+  --tabs-list-position: relative;
+  --tabs-list-first-child-margin-start: auto;
+  --tabs-list-last-child-margin-end: auto;
+  --tabs-list-back-button-inline-end: auto;
+  --tabs-list-back-button-block-end: 0;
+  --tabs-list-forward-button-inline-start: auto;
+  --tabs-list-forward-button-block-start: 0;
+  --tabs-list-scroll-icons-transform: rotate(0);
+  --tabs-list-scroll-buttons-transform: scaleX(1);
+  --focus-ring: inset 0 0 0 1px#116dff, inset 0 0 0 3px#ffffff;
+  --tab-animation-duration: 0.15s;
+  --tab-enter-animation-name: none;
+  --tab-exit-animation-name: none;
+  --bg-gradient: none;
+}
+#comp-mf56ynxe {
+  width: 100%;
+  --display: initial;
+  height: auto;
+  --bg-gradient: none;
+}
+#comp-mf56ynxo {
+  --shc-mutated-brightness: 128, 128, 128;
+}
+#comp-mf56ynxr1 {
+  --height: 62px;
+  --width: 61px;
+}
+#comp-mf56yny9 {
+  --text-direction: var(--wix-opt-in-direction);
+}
+#comp-mf56ynyb2 {
+  --text-direction: var(--wix-opt-in-direction);
+}
+#comp-mf56ynyd1 {
+  --fill-opacity: 1;
+  --stroke-width: 0;
+  --stroke: #5e97ff;
+  --stroke-opacity: 1;
+  --fill: #22cb63;
+}
+#comp-mf56ynyr2 {
+  --shc-mutated-brightness: 100, 119, 123;
+}
+#comp-mf56ynzc {
+  --fill-opacity: 1;
+  --stroke-width: 0;
+  --stroke: #5e97ff;
+  --stroke-opacity: 1;
+  --fill: #242323;
+  --flip: scale(-1, 1);
+}
+#comp-mf56ynzk2 {
+  --min-height: 62px;
+  --text-direction: var(--wix-opt-in-direction);
+}
+#comp-mf56ynzm7 {
+  --opacity: 1;
+}
+#comp-mf56ynzp2 {
+  --fill-opacity: 1;
+  --stroke-width: 0;
+  --stroke: #5e97ff;
+  --stroke-opacity: 1;
+  --fill: #22cb63;
+}
+#comp-mf56ynzq5 {
+  --text-direction: var(--wix-opt-in-direction);
+}
+#comp-mf56ynzr6 {
+  --text-direction: var(--wix-opt-in-direction);
+}
+#comp-mf56ynzt1 {
+  --text-direction: var(--wix-opt-in-direction);
+}
+#comp-mf56yo001 {
+  --shc-mutated-brightness: 100, 119, 123;
+}
+#comp-mf56yo016 {
+  --opacity: 1;
+}
+#comp-mf56yo036 {
+  --fill-opacity: 1;
+  --stroke-width: 0;
+  --stroke: #5e97ff;
+  --stroke-opacity: 1;
+  --fill: #242323;
+  --flip: scale(-1, -1);
+}
+#comp-mf56yo053 {
+  --min-height: 66px;
+  --text-direction: var(--wix-opt-in-direction);
+}
+#comp-mf56yo092 {
+  --text-direction: var(--wix-opt-in-direction);
+}
+#comp-mf56yo0b1 {
+  --text-direction: var(--wix-opt-in-direction);
+}
+#comp-mf56yo0c5 {
+  --text-direction: var(--wix-opt-in-direction);
+}
+#comp-mf56yo0d6 {
+  --text-direction: var(--wix-opt-in-direction);
+}
+#comp-mf56yo0f1 {
+  --text-direction: var(--wix-opt-in-direction);
+}
+#comp-mf56yo0m5 {
+  --direction: var(--wix-opt-in-direction);
+  --justify-content: space-between;
+  --item-margin: 3px 0px;
+  --margin-top: -3px;
+  --margin-bottom: -3px;
+  --margin-inline-start: 0px;
+  --margin-inline-end: 0px;
+}
+[id^="comp-mf56yo0r5__"] {
+  --bg-gradient: linear-gradient(180deg, #fef2f2 0%, #ffffff 40.155946162709014%);
+  --bg-overlay-color: transparent;
+  border-width: 0 0 0 0;
+  border-style: solid solid solid solid;
+  border-color: rgba(176, 169, 134, 1) rgba(176, 169, 134, 1) rgba(176, 169, 134, 1) rgba(176, 169, 134, 1);
+  border-radius: 20px 20px 20px 20px;
+  box-shadow: 0 0 1px 1px rgba(203, 200, 194, 1);
+  overflow: clip !important;
+  transform: translateZ(0);
+  margin: -0px;
+}
+[id="comp-mf56yo0r5__item-j9r9uxns"] {
+  --bg-overlay-color: rgb(var(--color_36));
+  --bg-gradient: none;
+  border-width: 0 0 0 0;
+  border-style: solid solid solid solid;
+  border-color: rgba(176, 169, 134, 1) rgba(176, 169, 134, 1) rgba(176, 169, 134, 1) rgba(176, 169, 134, 1);
+  border-radius: 20px 20px 20px 20px;
+  box-shadow: 0 0 1px 1px rgba(203, 200, 194, 1);
+  overflow: clip !important;
+  transform: translateZ(0);
+  margin: -0px;
+}
+[id="comp-mf56yo0r5__item-meqseogy"] {
+  --bg-overlay-color: rgb(var(--color_36));
+  --bg-gradient: none;
+  border-width: 0 0 0 0;
+  border-style: solid solid solid solid;
+  border-color: rgba(176, 169, 134, 1) rgba(176, 169, 134, 1) rgba(176, 169, 134, 1) rgba(176, 169, 134, 1);
+  border-radius: 20px 20px 20px 20px;
+  box-shadow: 0 0 1px 1px rgba(203, 200, 194, 1);
+  overflow: clip !important;
+  transform: translateZ(0);
+  margin: -0px;
+}
+[id^="comp-mf56yo113__"] {
+  --height: 60px;
+  --width: 60px;
+}
+[id="comp-mf56yo113__item-meqseogy"] {
+  --height: 60px;
+  --width: 60px;
+  --mask-image: url("data:image/svg+xml,%3Csvg preserveAspectRatio='none' data-bbox='20 20 160 160' viewBox='20 20 160 160' height='200' width='200' xmlns='http://www.w3.org/2000/svg' data-type='shape'%3E%3Cg%3E%3Cpath d='M180 20v160H20V20h160z'/%3E%3C/g%3E%3C/svg%3E%0A");
+  --mask-position: 0% 0%;
+  --mask-size: 100% 100%;
+  --mask-repeat: no-repeat;
+}
+[id^="comp-mf56yo13__"] {
+  --text-direction: var(--wix-opt-in-direction);
+}
+[id^="comp-mf56yo151__"] {
+  --text-direction: var(--wix-opt-in-direction);
+}
+[id^="comp-mf56yo161__"] {
+  --shc-mutated-brightness: 128, 128, 128;
+}
+[id^="comp-mf56yo18__"] {
+  --text-direction: var(--wix-opt-in-direction);
+}
+[id^="comp-mf56yo1a1__"] {
+  --fill-opacity: 1;
+  --stroke-width: 0;
+  --stroke: #5e97ff;
+  --stroke-opacity: 1;
+  --fill: #22cb63;
+}
+[id^="comp-mf56yo1b2__"] {
+  --fill-opacity: 1;
+  --stroke-width: 0;
+  --stroke: #5e97ff;
+  --stroke-opacity: 1;
+  --fill: #22cb63;
+}
+[id^="comp-mf56yo1c5__"] {
+  --text-direction: var(--wix-opt-in-direction);
+}
+[id^="comp-mf56yo1e1__"] {
+  --text-direction: var(--wix-opt-in-direction);
+}
+[id^="comp-mf56yo1f1__"] {
+  --text-direction: var(--wix-opt-in-direction);
+}
+[id^="comp-mf56yo1g__"] {
+  --shc-mutated-brightness: 100, 119, 123;
+}
+[id^="comp-mf56yo1h4__"] {
+  --opacity: 1;
+}
+[id^="comp-mf56yo1j7__"] {
+  --fill-opacity: 1;
+  --stroke-width: 0;
+  --stroke: #5e97ff;
+  --stroke-opacity: 1;
+  --fill: #242323;
+  --flip: scale(-1, -1);
+}
+[id^="comp-mf56yo1m1__"] {
+  --min-height: 66px;
+  --text-direction: var(--wix-opt-in-direction);
+}
+[id^="comp-mf56yo1p1__"] {
+  --shc-mutated-brightness: 100, 119, 123;
+}
+[id^="comp-mf56yo1r__"] {
+  --fill-opacity: 1;
+  --stroke-width: 0;
+  --stroke: #5e97ff;
+  --stroke-opacity: 1;
+  --fill: #242323;
+  --flip: scale(-1, 1);
+}
+[id^="comp-mf56yo1s6__"] {
+  --min-height: 76px;
+  --text-direction: var(--wix-opt-in-direction);
+}
+[id^="comp-mf56yo1u1__"] {
+  --opacity: 1;
+}
+[id^="comp-mf56yo1v11__"] {
+  --text-direction: var(--wix-opt-in-direction);
+}
+[id^="comp-mf56yo1w6__"] {
+  --text-direction: var(--wix-opt-in-direction);
+}
+[id^="comp-mf56yo1x6__"] {
+  --text-direction: var(--wix-opt-in-direction);
+}
+#comp-mf56yo291 {
+  --shc-mutated-brightness: 100, 119, 123;
+}
+#comp-mf56yo2b {
+  --fill-opacity: 1;
+  --stroke-width: 0;
+  --stroke: #5e97ff;
+  --stroke-opacity: 1;
+  --fill: #242323;
+  --flip: scale(-1, -1);
+}
+#comp-mf56yo2c5 {
+  --min-height: 62px;
+  --text-direction: var(--wix-opt-in-direction);
+}
+#comp-mf56yo2f3 {
+  width: 100%;
+  --display: initial;
+  height: auto;
+  --bg-gradient: none;
+}
+#comp-mf56yo2o1 {
+  --shc-mutated-brightness: 128, 128, 128;
+}
+#comp-mf56yo2p3 {
+  --height: 62px;
+  --width: 61px;
+}
+#comp-mf56yo2r {
+  --text-direction: var(--wix-opt-in-direction);
+}
+#comp-mf56yo2s4 {
+  --text-direction: var(--wix-opt-in-direction);
+}
+#comp-mf56yo2t6 {
+  --fill-opacity: 1;
+  --stroke-width: 0;
+  --stroke: #5e97ff;
+  --stroke-opacity: 1;
+  --fill: #22cb63;
+}
+#comp-mf56yo2u7 {
+  --fill-opacity: 1;
+  --stroke-width: 0;
+  --stroke: #5e97ff;
+  --stroke-opacity: 1;
+  --fill: #22cb63;
+}
+#comp-mf56yo2v7 {
+  --text-direction: var(--wix-opt-in-direction);
+}
+#comp-mf56yo2w6 {
+  --text-direction: var(--wix-opt-in-direction);
+}
+#comp-mf56yo2x3 {
+  --text-direction: var(--wix-opt-in-direction);
+}
+#comp-mf56yo301 {
+  --text-direction: var(--wix-opt-in-direction);
+}
+#comp-mf56yo321 {
+  --text-direction: var(--wix-opt-in-direction);
+}
+#comp-mf56yo334 {
+  --text-direction: var(--wix-opt-in-direction);
+}
+#comp-mf56yo351 {
+  --text-direction: var(--wix-opt-in-direction);
+}
+#comp-mf56yo362 {
+  --text-direction: var(--wix-opt-in-direction);
+}
+#comp-mf56yo391 {
+  --direction: var(--wix-opt-in-direction);
+  --justify-content: space-between;
+  --item-margin: 3px 0px;
+  --margin-top: -3px;
+  --margin-bottom: -3px;
+  --margin-inline-start: 0px;
+  --margin-inline-end: 0px;
+}
+[id^="comp-mf56yo3b1__"] {
+  --bg-gradient: linear-gradient(180deg, #fef2f2 0%, #ffffff 40.155946162709014%);
+  --bg-overlay-color: transparent;
+  border-width: 0 0 0 0;
+  border-style: solid solid solid solid;
+  border-color: rgba(176, 169, 134, 1) rgba(176, 169, 134, 1) rgba(176, 169, 134, 1) rgba(176, 169, 134, 1);
+  border-radius: 20px 20px 20px 20px;
+  box-shadow: 0 0 1px 1px rgba(203, 200, 194, 1);
+  overflow: clip !important;
+  transform: translateZ(0);
+  margin: -0px;
+}
+[id="comp-mf56yo3b1__item-j9r9uxns"] {
+  --bg-overlay-color: rgb(var(--color_36));
+  --bg-gradient: none;
+  border-width: 0 0 0 0;
+  border-style: solid solid solid solid;
+  border-color: rgba(176, 169, 134, 1) rgba(176, 169, 134, 1) rgba(176, 169, 134, 1) rgba(176, 169, 134, 1);
+  border-radius: 20px 20px 20px 20px;
+  box-shadow: 0 0 1px 1px rgba(203, 200, 194, 1);
+  overflow: clip !important;
+  transform: translateZ(0);
+  margin: -0px;
+}
+[id="comp-mf56yo3b1__item-meqseogy"] {
+  --bg-overlay-color: rgb(var(--color_36));
+  --bg-gradient: none;
+  border-width: 0 0 0 0;
+  border-style: solid solid solid solid;
+  border-color: rgba(176, 169, 134, 1) rgba(176, 169, 134, 1) rgba(176, 169, 134, 1) rgba(176, 169, 134, 1);
+  border-radius: 20px 20px 20px 20px;
+  box-shadow: 0 0 1px 1px rgba(203, 200, 194, 1);
+  overflow: clip !important;
+  transform: translateZ(0);
+  margin: -0px;
+}
+[id^="comp-mf56yo3f__"] {
+  --height: 60px;
+  --width: 60px;
+}
+[id="comp-mf56yo3f__item-meqseogy"] {
+  --height: 60px;
+  --width: 60px;
+  --mask-image: url("data:image/svg+xml,%3Csvg preserveAspectRatio='none' data-bbox='20 20 160 160' viewBox='20 20 160 160' height='200' width='200' xmlns='http://www.w3.org/2000/svg' data-type='shape'%3E%3Cg%3E%3Cpath d='M180 20v160H20V20h160z'/%3E%3C/g%3E%3C/svg%3E%0A");
+  --mask-position: 0% 0%;
+  --mask-size: 100% 100%;
+  --mask-repeat: no-repeat;
+}
+[id^="comp-mf56yo3i1__"] {
+  --text-direction: var(--wix-opt-in-direction);
+}
+[id^="comp-mf56yo3k1__"] {
+  --text-direction: var(--wix-opt-in-direction);
+}
+[id^="comp-mf56yo3l3__"] {
+  --shc-mutated-brightness: 128, 128, 128;
+}
+[id^="comp-mf56yo3m2__"] {
+  --text-direction: var(--wix-opt-in-direction);
+}
+[id^="comp-mf56yo3n3__"] {
+  --fill-opacity: 1;
+  --stroke-width: 0;
+  --stroke: #5e97ff;
+  --stroke-opacity: 1;
+  --fill: #22cb63;
+}
+[id^="comp-mf56yo3p1__"] {
+  --fill-opacity: 1;
+  --stroke-width: 0;
+  --stroke: #5e97ff;
+  --stroke-opacity: 1;
+  --fill: #22cb63;
+}
+[id^="comp-mf56yo3q2__"] {
+  --text-direction: var(--wix-opt-in-direction);
+}
+[id^="comp-mf56yo3s1__"] {
+  --text-direction: var(--wix-opt-in-direction);
+}
+[id^="comp-mf56yo3t3__"] {
+  --text-direction: var(--wix-opt-in-direction);
+}
+[id^="comp-mf56yo3v2__"] {
+  --text-direction: var(--wix-opt-in-direction);
+}
+[id^="comp-mf56yo3x1__"] {
+  --text-direction: var(--wix-opt-in-direction);
+}
+[id^="comp-mf56yo3y1__"] {
+  --text-direction: var(--wix-opt-in-direction);
+}
+#comp-mf58c54t {
+  --bg-overlay-color: rgb(var(--color_11));
+  --bg-gradient: none;
+  min-width: 980px;
+}
+#comp-mf58guk7 {
+  --min-height: 47px;
+  --text-direction: var(--wix-opt-in-direction);
+}
+.comp-mf58jqvm {
+  --wix-direction: ltr;
+  --buttonsStyle: 1;
+  --buttonsBorderWidth: 0;
+  --nextButtonBorderWidth: 2;
+  --inputBorderWidth: 2;
+  --nextButtonStyle: 3;
+  --horizontalPadding: 24;
+  --submitButtonStyle: 3;
+  --verticalPadding: 24;
+  --submitButtonBorderWidth: 0;
+  --submitButtonBorderRadius: 100;
+  --previousButtonBorderRadius: 100;
+  --nextButtonBorderRadius: 100;
+  --previousButtonBorderWidth: 2;
+  --previousButtonStyle: 3;
+  --inputBorderStyle: 2;
+  --buttonsBorderRadius: 100;
+  --rowSpacing: 24;
+  --columnSpacing: 24;
+  --borderWidth: 0;
+  --borderRadius: 0;
+  --shadowAngle: 135;
+  --shadowDistance: 0;
+  --shadowSize: 0;
+  --shadowBlur: 25;
+  --inputBorderRadius: 0;
+  --buttonsFontHover: normal normal normal 16px/16px montserrat, sans-serif;
+  --submitButtonFontHover: normal normal normal 16px/1.4em montserrat, sans-serif;
+  --nextButtonFontHover: normal normal normal 16px/1.4em montserrat, sans-serif;
+  --previousButtonFontHover: normal normal normal 16px/1.4em montserrat, sans-serif;
+  --submitButtonBorderColor: 255, 255, 255, 0;
+  --submitButtonBorderColor-rgb: 255, 255, 255;
+  --submitButtonBorderColor-opacity: 0;
+  --nextButtonBackgroundColor: 0, 0, 0;
+  --nextButtonBackgroundColor-rgb: 0, 0, 0;
+  --nextButtonBackgroundColor-opacity: 1;
+  --previousButtonColorHover: 128, 128, 128;
+  --previousButtonColorHover-rgb: 128, 128, 128;
+  --previousButtonColorHover-opacity: 1;
+  --submitButtonColor: 255, 255, 255;
+  --submitButtonColor-rgb: 255, 255, 255;
+  --submitButtonColor-opacity: 1;
+  --buttonsBackgroundColorHover: 102, 102, 102;
+  --buttonsBackgroundColorHover-rgb: 102, 102, 102;
+  --buttonsBackgroundColorHover-opacity: 1;
+  --paragraphColor: 40, 38, 38;
+  --paragraphColor-rgb: 40, 38, 38;
+  --paragraphColor-opacity: 1;
+  --inputLabelColor: 51, 52, 63;
+  --inputLabelColor-rgb: 51, 52, 63;
+  --inputLabelColor-opacity: 1;
+  --buttonsColor: 255, 255, 255;
+  --buttonsColor-rgb: 255, 255, 255;
+  --buttonsColor-opacity: 1;
+  --inputPlaceholderColor: 89, 89, 89;
+  --inputPlaceholderColor-rgb: 89, 89, 89;
+  --inputPlaceholderColor-opacity: 1;
+  --formBackground: 255, 255, 255;
+  --formBackground-rgb: 255, 255, 255;
+  --formBackground-opacity: 1;
+  --buttonsBorderColor: 0, 0, 0;
+  --buttonsBorderColor-rgb: 0, 0, 0;
+  --buttonsBorderColor-opacity: 1;
+  --previousButtonBackgroundColorHover: 0, 0, 0, 0;
+  --previousButtonBackgroundColorHover-rgb: 0, 0, 0;
+  --previousButtonBackgroundColorHover-opacity: 0;
+  --nextButtonBorderColor: 255, 255, 255, 0;
+  --nextButtonBorderColor-rgb: 255, 255, 255;
+  --nextButtonBorderColor-opacity: 0;
+  --buttonsBackgroundColor: 0, 0, 0;
+  --buttonsBackgroundColor-rgb: 0, 0, 0;
+  --buttonsBackgroundColor-opacity: 1;
+  --previousButtonBorderColor: 0, 0, 0;
+  --previousButtonBorderColor-rgb: 0, 0, 0;
+  --previousButtonBorderColor-opacity: 1;
+  --nextButtonColorHover: 255, 255, 255;
+  --nextButtonColorHover-rgb: 255, 255, 255;
+  --nextButtonColorHover-opacity: 1;
+  --inputSelectionColor: 89, 89, 89;
+  --inputSelectionColor-rgb: 89, 89, 89;
+  --inputSelectionColor-opacity: 1;
+  --headerTwoColor: 0, 0, 0;
+  --headerTwoColor-rgb: 0, 0, 0;
+  --headerTwoColor-opacity: 1;
+  --submitButtonColorHover: 255, 255, 255;
+  --submitButtonColorHover-rgb: 255, 255, 255;
+  --submitButtonColorHover-opacity: 1;
+  --inputBackgroundColor: 255, 255, 255;
+  --inputBackgroundColor-rgb: 255, 255, 255;
+  --inputBackgroundColor-opacity: 1;
+  --inputValueColor: 0, 0, 0;
+  --inputValueColor-rgb: 0, 0, 0;
+  --inputValueColor-opacity: 1;
+  --inputNoteColor: 0, 0, 0;
+  --inputNoteColor-rgb: 0, 0, 0;
+  --inputNoteColor-opacity: 1;
+  --headerOneColor: 0, 0, 0;
+  --headerOneColor-rgb: 0, 0, 0;
+  --headerOneColor-opacity: 1;
+  --nextButtonBorderColorHover: 0, 0, 0, 0;
+  --nextButtonBorderColorHover-rgb: 0, 0, 0;
+  --nextButtonBorderColorHover-opacity: 0;
+  --nextButtonColor: 255, 255, 255;
+  --nextButtonColor-rgb: 255, 255, 255;
+  --nextButtonColor-opacity: 1;
+  --submitButtonBorderColorHover: 102, 102, 102;
+  --submitButtonBorderColorHover-rgb: 102, 102, 102;
+  --submitButtonBorderColorHover-opacity: 1;
+  --nextButtonBackgroundColorHover: 102, 102, 102;
+  --nextButtonBackgroundColorHover-rgb: 102, 102, 102;
+  --nextButtonBackgroundColorHover-opacity: 1;
+  --linkColor: 0, 0, 0;
+  --linkColor-rgb: 0, 0, 0;
+  --linkColor-opacity: 1;
+  --previousButtonBackgroundColor: 255, 255, 255, 0;
+  --previousButtonBackgroundColor-rgb: 255, 255, 255;
+  --previousButtonBackgroundColor-opacity: 0;
+  --borderColor: 0, 0, 0, 0;
+  --borderColor-rgb: 0, 0, 0;
+  --borderColor-opacity: 0;
+  --submitButtonBackgroundColor: 208, 2, 27;
+  --submitButtonBackgroundColor-rgb: 208, 2, 27;
+  --submitButtonBackgroundColor-opacity: 1;
+  --inputBorderColor: 102, 103, 111;
+  --inputBorderColor-rgb: 102, 103, 111;
+  --inputBorderColor-opacity: 1;
+  --submitButtonBackgroundColorHover: 102, 102, 102;
+  --submitButtonBackgroundColorHover-rgb: 102, 102, 102;
+  --submitButtonBackgroundColorHover-opacity: 1;
+  --buttonsColorHover: 255, 255, 255;
+  --buttonsColorHover-rgb: 255, 255, 255;
+  --buttonsColorHover-opacity: 1;
+  --previousButtonBorderColorHover: 128, 128, 128;
+  --previousButtonBorderColorHover-rgb: 128, 128, 128;
+  --previousButtonBorderColorHover-opacity: 1;
+  --previousButtonColor: 0, 0, 0;
+  --previousButtonColor-rgb: 0, 0, 0;
+  --previousButtonColor-opacity: 1;
+  --shadowColor: 51, 52, 63, 0.15;
+  --shadowColor-rgb: 51, 52, 63;
+  --shadowColor-opacity: 0.15;
+  --inputBackgroundColorHover: 255, 255, 255;
+  --inputBackgroundColorHover-rgb: 255, 255, 255;
+  --inputBackgroundColorHover-opacity: 1;
+  --inputBorderColorHover: 51, 52, 63;
+  --inputBorderColorHover-rgb: 51, 52, 63;
+  --inputBorderColorHover-opacity: 1;
+  --inputOptionColor: 0, 0, 0;
+  --inputOptionColor-rgb: 0, 0, 0;
+  --inputOptionColor-opacity: 1;
+  --thankYouMessageColor: 40, 38, 38;
+  --thankYouMessageColor-rgb: 40, 38, 38;
+  --thankYouMessageColor-opacity: 1;
+  --inputErrorColor: 223, 49, 49;
+  --inputErrorColor-rgb: 223, 49, 49;
+  --inputErrorColor-opacity: 1;
+  --inputValueFont: normal normal normal 16px/20px helvetica-w01-roman, sans-serif;
+  --inputValueFont-style: normal;
+  --inputValueFont-variant: normal;
+  --inputValueFont-weight: normal;
+  --inputValueFont-size: 16px;
+  --inputValueFont-line-height: 20px;
+  --inputValueFont-family: helvetica-w01-roman, sans-serif;
+  --inputValueFont-text-decoration: none;
+  --submitButtonFont: normal normal normal 18px/22px helvetica-w01-roman, sans-serif;
+  --submitButtonFont-style: normal;
+  --submitButtonFont-variant: normal;
+  --submitButtonFont-weight: normal;
+  --submitButtonFont-size: 18px;
+  --submitButtonFont-line-height: 22px;
+  --submitButtonFont-family: helvetica-w01-roman, sans-serif;
+  --submitButtonFont-text-decoration: none;
+  --paragraphFont:
+    normal normal normal 18px/22px wfont_a3f637_3f0d4ffb6bdc4c1cb6dc005c9dadbf65, wf_3f0d4ffb6bdc4c1cb6dc005c9,
+    orig_inter_regular;
+  --paragraphFont-style: normal;
+  --paragraphFont-variant: normal;
+  --paragraphFont-weight: normal;
+  --paragraphFont-size: 18px;
+  --paragraphFont-line-height: 22px;
+  --paragraphFont-family:
+    wfont_a3f637_3f0d4ffb6bdc4c1cb6dc005c9dadbf65, wf_3f0d4ffb6bdc4c1cb6dc005c9, orig_inter_regular;
+  --paragraphFont-text-decoration: none;
+  --previousButtonFont: normal normal normal 16px/20px helvetica-w01-roman, sans-serif;
+  --previousButtonFont-style: normal;
+  --previousButtonFont-variant: normal;
+  --previousButtonFont-weight: normal;
+  --previousButtonFont-size: 16px;
+  --previousButtonFont-line-height: 20px;
+  --previousButtonFont-family: helvetica-w01-roman, sans-serif;
+  --previousButtonFont-text-decoration: none;
+  --inputNoteFont: normal normal normal 14px/17px helvetica-w01-roman, sans-serif;
+  --inputNoteFont-style: normal;
+  --inputNoteFont-variant: normal;
+  --inputNoteFont-weight: normal;
+  --inputNoteFont-size: 14px;
+  --inputNoteFont-line-height: 17px;
+  --inputNoteFont-family: helvetica-w01-roman, sans-serif;
+  --inputNoteFont-text-decoration: none;
+  --headerTwoFont: normal normal normal 25px/31px futura-lt-w01-book, sans-serif;
+  --headerTwoFont-style: normal;
+  --headerTwoFont-variant: normal;
+  --headerTwoFont-weight: normal;
+  --headerTwoFont-size: 25px;
+  --headerTwoFont-line-height: 31px;
+  --headerTwoFont-family: futura-lt-w01-book, sans-serif;
+  --headerTwoFont-text-decoration: none;
+  --paragraphFont▶︎m:
+    normal normal normal 14px/17px wfont_a3f637_3f0d4ffb6bdc4c1cb6dc005c9dadbf65, wf_3f0d4ffb6bdc4c1cb6dc005c9,
+    orig_inter_regular;
+  --paragraphFont▶︎m-style: normal;
+  --paragraphFont▶︎m-variant: normal;
+  --paragraphFont▶︎m-weight: normal;
+  --paragraphFont▶︎m-size: 14px;
+  --paragraphFont▶︎m-line-height: 17px;
+  --paragraphFont▶︎m-family:
+    wfont_a3f637_3f0d4ffb6bdc4c1cb6dc005c9dadbf65, wf_3f0d4ffb6bdc4c1cb6dc005c9, orig_inter_regular;
+  --paragraphFont▶︎m-text-decoration: none;
+  --nextButtonFont: normal normal normal 16px/20px helvetica-w01-roman, sans-serif;
+  --nextButtonFont-style: normal;
+  --nextButtonFont-variant: normal;
+  --nextButtonFont-weight: normal;
+  --nextButtonFont-size: 16px;
+  --nextButtonFont-line-height: 20px;
+  --nextButtonFont-family: helvetica-w01-roman, sans-serif;
+  --nextButtonFont-text-decoration: none;
+  --headerOneFont: normal normal normal 30px/37px futura-lt-w01-book, sans-serif;
+  --headerOneFont-style: normal;
+  --headerOneFont-variant: normal;
+  --headerOneFont-weight: normal;
+  --headerOneFont-size: 30px;
+  --headerOneFont-line-height: 37px;
+  --headerOneFont-family: futura-lt-w01-book, sans-serif;
+  --headerOneFont-text-decoration: none;
+  --inputLabelFont: normal normal normal 16px/20px helvetica-w01-roman, sans-serif;
+  --inputLabelFont-style: normal;
+  --inputLabelFont-variant: normal;
+  --inputLabelFont-weight: normal;
+  --inputLabelFont-size: 16px;
+  --inputLabelFont-line-height: 20px;
+  --inputLabelFont-family: helvetica-w01-roman, sans-serif;
+  --inputLabelFont-text-decoration: none;
+  --buttonsFontHover-style: normal;
+  --buttonsFontHover-variant: normal;
+  --buttonsFontHover-weight: normal;
+  --buttonsFontHover-size: 16px;
+  --buttonsFontHover-line-height: 16px;
+  --buttonsFontHover-family: montserrat, sans-serif;
+  --buttonsFontHover-text-decoration: none;
+  --submitButtonFontHover-style: normal;
+  --submitButtonFontHover-variant: normal;
+  --submitButtonFontHover-weight: normal;
+  --submitButtonFontHover-size: 16px;
+  --submitButtonFontHover-line-height: 1.4em;
+  --submitButtonFontHover-family: montserrat, sans-serif;
+  --submitButtonFontHover-text-decoration: none;
+  --nextButtonFontHover-style: normal;
+  --nextButtonFontHover-variant: normal;
+  --nextButtonFontHover-weight: normal;
+  --nextButtonFontHover-size: 16px;
+  --nextButtonFontHover-line-height: 1.4em;
+  --nextButtonFontHover-family: montserrat, sans-serif;
+  --nextButtonFontHover-text-decoration: none;
+  --previousButtonFontHover-style: normal;
+  --previousButtonFontHover-variant: normal;
+  --previousButtonFontHover-weight: normal;
+  --previousButtonFontHover-size: 16px;
+  --previousButtonFontHover-line-height: 1.4em;
+  --previousButtonFontHover-family: montserrat, sans-serif;
+  --previousButtonFontHover-text-decoration: none;
+  --thankYouMessageFont:
+    normal normal normal 18px/22px wfont_a3f637_3f0d4ffb6bdc4c1cb6dc005c9dadbf65, wf_3f0d4ffb6bdc4c1cb6dc005c9,
+    orig_inter_regular;
+  --thankYouMessageFont-style: normal;
+  --thankYouMessageFont-variant: normal;
+  --thankYouMessageFont-weight: normal;
+  --thankYouMessageFont-size: 18px;
+  --thankYouMessageFont-line-height: 22px;
+  --thankYouMessageFont-family:
+    wfont_a3f637_3f0d4ffb6bdc4c1cb6dc005c9dadbf65, wf_3f0d4ffb6bdc4c1cb6dc005c9, orig_inter_regular;
+  --thankYouMessageFont-text-decoration: none;
+  --inputBorderLeftWidth: 0;
+  --inputBorderRightWidth: 0;
+  --inputBorderTopWidth: 0;
+  --inputBorderBottomWidth: 2;
+  --wix-color-1: 255, 255, 255;
+  --wix-color-2: 182, 182, 184;
+  --wix-color-3: 153, 154, 159;
+  --wix-color-4: 102, 103, 111;
+  --wix-color-5: 51, 52, 63;
+  --wix-color-6: 182, 183, 196;
+  --wix-color-7: 110, 112, 136;
+  --wix-color-8: 51, 52, 63;
+  --wix-color-9: 34, 35, 42;
+  --wix-color-10: 17, 17, 21;
+  --wix-color-11: 215, 215, 225;
+  --wix-color-12: 174, 175, 194;
+  --wix-color-13: 134, 135, 164;
+  --wix-color-14: 97, 99, 129;
+  --wix-color-15: 102, 103, 111;
+  --wix-color-16: 251, 251, 251;
+  --wix-color-17: 182, 182, 184;
+  --wix-color-18: 185, 185, 185;
+  --wix-color-19: 124, 124, 124;
+  --wix-color-20: 62, 62, 62;
+  --wix-color-21: 252, 222, 147;
+  --wix-color-22: 248, 189, 38;
+  --wix-color-23: 208, 151, 7;
+  --wix-color-24: 139, 101, 4;
+  --wix-color-25: 69, 50, 2;
+  --wix-color-26: 255, 255, 255;
+  --wix-color-27: 51, 52, 63;
+  --wix-color-28: 182, 182, 184;
+  --wix-color-29: 153, 154, 159;
+  --wix-color-30: 102, 103, 111;
+  --wix-color-31: 239, 239, 239;
+  --wix-color-32: 40, 38, 38;
+  --wix-color-33: 233, 226, 215;
+  --wix-color-34: 203, 200, 194;
+  --wix-color-35: 51, 52, 63;
+  --wix-color-36: 51, 52, 63;
+  --wix-color-37: 102, 103, 111;
+  --wix-color-38: 51, 52, 63;
+  --wix-color-39: 51, 52, 63;
+  --wix-color-40: 255, 255, 255;
+  --wix-color-41: 255, 255, 255;
+  --wix-color-42: 51, 52, 63;
+  --wix-color-43: 51, 52, 63;
+  --wix-color-44: 153, 154, 159;
+  --wix-color-45: 153, 154, 159;
+  --wix-color-46: 255, 255, 255;
+  --wix-color-47: 255, 255, 255;
+  --wix-color-48: 51, 52, 63;
+  --wix-color-49: 51, 52, 63;
+  --wix-color-50: 51, 52, 63;
+  --wix-color-51: 51, 52, 63;
+  --wix-color-52: 255, 255, 255;
+  --wix-color-53: 255, 255, 255;
+  --wix-color-54: 153, 154, 159;
+  --wix-color-55: 153, 154, 159;
+  --wix-font-Title: normal normal normal 88px/1.2em montserrat, sans-serif;
+  --wix-font-Title-style: normal;
+  --wix-font-Title-variant: normal;
+  --wix-font-Title-weight: normal;
+  --wix-font-Title-size: 88px;
+  --wix-font-Title-line-height: 1.2em;
+  --wix-font-Title-family: montserrat, sans-serif;
+  --wix-font-Title-text-decoration: none;
+  --wix-font-Menu: normal normal normal 14px/1.79em avenir-lt-w01_35-light1475496, sans-serif;
+  --wix-font-Menu-style: normal;
+  --wix-font-Menu-variant: normal;
+  --wix-font-Menu-weight: normal;
+  --wix-font-Menu-size: 14px;
+  --wix-font-Menu-line-height: 1.79em;
+  --wix-font-Menu-family: avenir-lt-w01_35-light1475496, sans-serif;
+  --wix-font-Menu-text-decoration: none;
+  --wix-font-Page-title: normal normal normal 72px/1.25em montserrat, sans-serif;
+  --wix-font-Page-title-style: normal;
+  --wix-font-Page-title-variant: normal;
+  --wix-font-Page-title-weight: normal;
+  --wix-font-Page-title-size: 72px;
+  --wix-font-Page-title-line-height: 1.25em;
+  --wix-font-Page-title-family: montserrat, sans-serif;
+  --wix-font-Page-title-text-decoration: none;
+  --wix-font-Heading-XL: normal normal normal 50px/1.34em montserrat, sans-serif;
+  --wix-font-Heading-XL-style: normal;
+  --wix-font-Heading-XL-variant: normal;
+  --wix-font-Heading-XL-weight: normal;
+  --wix-font-Heading-XL-size: 50px;
+  --wix-font-Heading-XL-line-height: 1.34em;
+  --wix-font-Heading-XL-family: montserrat, sans-serif;
+  --wix-font-Heading-XL-text-decoration: none;
+  --wix-font-Heading-L: normal normal normal 40px/1.35em montserrat, sans-serif;
+  --wix-font-Heading-L-style: normal;
+  --wix-font-Heading-L-variant: normal;
+  --wix-font-Heading-L-weight: normal;
+  --wix-font-Heading-L-size: 40px;
+  --wix-font-Heading-L-line-height: 1.35em;
+  --wix-font-Heading-L-family: montserrat, sans-serif;
+  --wix-font-Heading-L-text-decoration: none;
+  --wix-font-Heading-M: normal normal normal 28px/1.38em montserrat, sans-serif;
+  --wix-font-Heading-M-style: normal;
+  --wix-font-Heading-M-variant: normal;
+  --wix-font-Heading-M-weight: normal;
+  --wix-font-Heading-M-size: 28px;
+  --wix-font-Heading-M-line-height: 1.38em;
+  --wix-font-Heading-M-family: montserrat, sans-serif;
+  --wix-font-Heading-M-text-decoration: none;
+  --wix-font-Heading-S: normal normal normal 22px/1.41em montserrat, sans-serif;
+  --wix-font-Heading-S-style: normal;
+  --wix-font-Heading-S-variant: normal;
+  --wix-font-Heading-S-weight: normal;
+  --wix-font-Heading-S-size: 22px;
+  --wix-font-Heading-S-line-height: 1.41em;
+  --wix-font-Heading-S-family: montserrat, sans-serif;
+  --wix-font-Heading-S-text-decoration: none;
+  --wix-font-Body-L: normal normal normal 20px/1.67em montserrat, sans-serif;
+  --wix-font-Body-L-style: normal;
+  --wix-font-Body-L-variant: normal;
+  --wix-font-Body-L-weight: normal;
+  --wix-font-Body-L-size: 20px;
+  --wix-font-Body-L-line-height: 1.67em;
+  --wix-font-Body-L-family: montserrat, sans-serif;
+  --wix-font-Body-L-text-decoration: none;
+  --wix-font-Body-M: normal normal normal 18px/1.75em montserrat, sans-serif;
+  --wix-font-Body-M-style: normal;
+  --wix-font-Body-M-variant: normal;
+  --wix-font-Body-M-weight: normal;
+  --wix-font-Body-M-size: 18px;
+  --wix-font-Body-M-line-height: 1.75em;
+  --wix-font-Body-M-family: montserrat, sans-serif;
+  --wix-font-Body-M-text-decoration: none;
+  --wix-font-Body-S: normal normal normal 15px/1.88em montserrat, sans-serif;
+  --wix-font-Body-S-style: normal;
+  --wix-font-Body-S-variant: normal;
+  --wix-font-Body-S-weight: normal;
+  --wix-font-Body-S-size: 15px;
+  --wix-font-Body-S-line-height: 1.88em;
+  --wix-font-Body-S-family: montserrat, sans-serif;
+  --wix-font-Body-S-text-decoration: none;
+  --wix-font-Body-XS: normal normal normal 14px/1.79em avenir-lt-w01_35-light1475496, sans-serif;
+  --wix-font-Body-XS-style: normal;
+  --wix-font-Body-XS-variant: normal;
+  --wix-font-Body-XS-weight: normal;
+  --wix-font-Body-XS-size: 14px;
+  --wix-font-Body-XS-line-height: 1.79em;
+  --wix-font-Body-XS-family: avenir-lt-w01_35-light1475496, sans-serif;
+  --wix-font-Body-XS-text-decoration: none;
+  --wix-font-LIGHT: normal normal normal 12px/1.4em HelveticaNeueW01-45Ligh;
+  --wix-font-LIGHT-style: normal;
+  --wix-font-LIGHT-variant: normal;
+  --wix-font-LIGHT-weight: normal;
+  --wix-font-LIGHT-size: 12px;
+  --wix-font-LIGHT-line-height: 1.4em;
+  --wix-font-LIGHT-family: HelveticaNeueW01-45Ligh;
+  --wix-font-LIGHT-text-decoration: none;
+  --wix-font-MEDIUM: normal normal normal 12px/1.4em HelveticaNeueW01-55Roma;
+  --wix-font-MEDIUM-style: normal;
+  --wix-font-MEDIUM-variant: normal;
+  --wix-font-MEDIUM-weight: normal;
+  --wix-font-MEDIUM-size: 12px;
+  --wix-font-MEDIUM-line-height: 1.4em;
+  --wix-font-MEDIUM-family: HelveticaNeueW01-55Roma;
+  --wix-font-MEDIUM-text-decoration: none;
+  --wix-font-STRONG: normal normal normal 12px/1.4em HelveticaNeueW01-65Medi;
+  --wix-font-STRONG-style: normal;
+  --wix-font-STRONG-variant: normal;
+  --wix-font-STRONG-weight: normal;
+  --wix-font-STRONG-size: 12px;
+  --wix-font-STRONG-line-height: 1.4em;
+  --wix-font-STRONG-family: HelveticaNeueW01-65Medi;
+  --wix-font-STRONG-text-decoration: none;
+}
 
-#comp-mcu974ax{--bg-overlay-color:rgb(204, 0, 0);--bg-gradient:none;min-width:980px;}#comp-mcu974cn{--height:45px;--width:122px;}#comp-mcu974d1{--text-direction:var(--wix-opt-in-direction);}#comp-mcu974db{--text-direction:var(--wix-opt-in-direction);}#comp-mcu974dk{--text-direction:var(--wix-opt-in-direction);}#comp-mcu974du{--item-size:39px;--item-margin-block:0;--item-margin-inline:0px 10px;--item-display:inline-block;--direction:var(--wix-opt-in-direction, ltr);width:186px;height:39px;}#comp-mknuwiel{--height:50px;--width:163px;}#comp-mknuwigk{--height:60px;--width:80px;}
+#comp-mcu974ax {
+  --bg-overlay-color: rgb(204, 0, 0);
+  --bg-gradient: none;
+  min-width: 980px;
+}
+#comp-mcu974cn {
+  --height: 45px;
+  --width: 122px;
+}
+#comp-mcu974d1 {
+  --text-direction: var(--wix-opt-in-direction);
+}
+#comp-mcu974db {
+  --text-direction: var(--wix-opt-in-direction);
+}
+#comp-mcu974dk {
+  --text-direction: var(--wix-opt-in-direction);
+}
+#comp-mcu974du {
+  --item-size: 39px;
+  --item-margin-block: 0;
+  --item-margin-inline: 0px 10px;
+  --item-display: inline-block;
+  --direction: var(--wix-opt-in-direction, ltr);
+  width: 186px;
+  height: 39px;
+}
+#comp-mknuwiel {
+  --height: 50px;
+  --width: 163px;
+}
+#comp-mknuwigk {
+  --height: 60px;
+  --width: 80px;
+}

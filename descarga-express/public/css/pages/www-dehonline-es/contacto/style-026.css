@@ -1,24 +1,64 @@
 /* END STYLABLE DIRECTIVE RULES */
 
-#comp-m7yu5pgo .style-mh3idh5n__root{-st-extends: StylableButton;transition: all 0.2s ease, visibility 0s;border: 0px solid #33343F;border-radius: 20px;background: #D0021B}
+#comp-m7yu5pgo .style-mh3idh5n__root {
+  -st-extends: StylableButton;
+  transition:
+    all 0.2s ease,
+    visibility 0s;
+  border: 0px solid #33343f;
+  border-radius: 20px;
+  background: #d0021b;
+}
 
 /* START STYLABLE DIRECTIVE RULES */
 
-#comp-m7yu5pgo .style-mh3idh5n__root:hover{border: 1px solid #33343F;background: #FFFFFF}
+#comp-m7yu5pgo .style-mh3idh5n__root:hover {
+  border: 1px solid #33343f;
+  background: #ffffff;
+}
 
-#comp-m7yu5pgo .style-mh3idh5n__root:hover .StylableButton2545352419__label{
-    color: #33343F}
+#comp-m7yu5pgo .style-mh3idh5n__root:hover .StylableButton2545352419__label {
+  color: #33343f;
+}
 
-#comp-m7yu5pgo .style-mh3idh5n__root:disabled{background: #E2E2E2}
+#comp-m7yu5pgo .style-mh3idh5n__root:disabled {
+  background: #e2e2e2;
+}
 
-#comp-m7yu5pgo .style-mh3idh5n__root:disabled .StylableButton2545352419__label{color: #8F8F8F}
+#comp-m7yu5pgo .style-mh3idh5n__root:disabled .StylableButton2545352419__label {
+  color: #8f8f8f;
+}
 
-#comp-m7yu5pgo .style-mh3idh5n__root:disabled .StylableButton2545352419__icon{fill: #8F8F8F}
+#comp-m7yu5pgo .style-mh3idh5n__root:disabled .StylableButton2545352419__icon {
+  fill: #8f8f8f;
+}
 
-#comp-m7yu5pgo .style-mh3idh5n__root .StylableButton2545352419__container{transition: inherit}
+#comp-m7yu5pgo .style-mh3idh5n__root .StylableButton2545352419__container {
+  transition: inherit;
+}
 
-#comp-m7yu5pgo .style-mh3idh5n__root .StylableButton2545352419__label{transition: inherit;letter-spacing: 0em;margin: 0px 4px 0px 0px;display: inherited;text-shadow: none;color: #FFFFFF;font-weight: normal;font-style: normal;font-size: 16px;font-family: wfont_a3f637_3f0d4ffb6bdc4c1cb6dc005c9dadbf65,wf_3f0d4ffb6bdc4c1cb6dc005c9,orig_inter_regular}
+#comp-m7yu5pgo .style-mh3idh5n__root .StylableButton2545352419__label {
+  transition: inherit;
+  letter-spacing: 0em;
+  margin: 0px 4px 0px 0px;
+  display: inherited;
+  text-shadow: none;
+  color: #ffffff;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;
+  font-family: wfont_a3f637_3f0d4ffb6bdc4c1cb6dc005c9dadbf65, wf_3f0d4ffb6bdc4c1cb6dc005c9, orig_inter_regular;
+}
 
-#comp-m7yu5pgo .style-mh3idh5n__root .StylableButton2545352419__icon{transition: inherit;fill: #FFFFFF;width: 10px;height: 10px;margin: 0px 0px 0px 4px;display: none}
+#comp-m7yu5pgo .style-mh3idh5n__root .StylableButton2545352419__icon {
+  transition: inherit;
+  fill: #ffffff;
+  width: 10px;
+  height: 10px;
+  margin: 0px 0px 0px 4px;
+  display: none;
+}
 
-#comp-m7yu5pgo .style-mh3idh5n__root:hover .StylableButton2545352419__icon{fill: #000000}
+#comp-m7yu5pgo .style-mh3idh5n__root:hover .StylableButton2545352419__icon {
+  fill: #000000;
+}

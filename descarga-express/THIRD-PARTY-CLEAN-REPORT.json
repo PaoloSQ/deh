@@ -1,10 +1,14 @@
 [
   {
-    "filePath": "C:\\Users\\ben28\\Desktop\\deh\\descarga-express\\sites\\www.dehonline.es\\logs-api-panel.html",
-    "relPath": "sites/www.dehonline.es/logs-api-panel.html",
+    "filePath": "C:\\www\\producción\\deh\\descarga-express\\sites\\www.dehonline.es\\carpetas-financieras.html",
+    "relPath": "sites/www.dehonline.es/carpetas-financieras.html",
     "detected": [],
-    "removed": [],
+    "removed": [
+      "carpetas viewer models",
+      "telemetry guard refresh",
+      "fedops stub"
+    ],
     "pending": [],
-    "modified": false
+    "modified": true
   }
 ]

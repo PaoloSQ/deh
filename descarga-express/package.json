@@ -12,10 +12,19 @@
 		"audit-visible-mismatches": "node scripts/audit-visible-mismatches.js",
 		"audit-interactions": "node scripts/audit-interactions.js",
 		"clean-third-party": "node scripts/clean-third-party.js",
+		"clean-html": "node scripts/clean-html-pages.js",
+		"clean-meta": "node scripts/clean-meta-tags.js",
+		"consolidate-css": "node scripts/consolidate-shared-css.js",
+		"structure-css-pilot": "node scripts/structure-css-pilot.js",
+		"structure-css-all": "node scripts/structure-css-all.js",
 		"extract-inline-assets": "node scripts/extract-inline-page-assets.js",
+		"fix-html-structure": "node scripts/fix-html-structure.js",
+		"format-page-css": "node scripts/format-page-css.js",
+		"inventory-routes": "node scripts/generate-route-inventory.js",
 		"staticize-pages": "node scripts/staticize-legal-pages.js",
 		"staticize-legal": "node scripts/staticize-legal-pages.js",
-		"verify-pages": "node scripts/verify-pages.js"
+		"verify-pages": "node scripts/verify-pages.js",
+		"verify-beta-local": "node scripts/verify-beta-local-routes.js"
 	},
 	"dependencies": {
 		"express": "^4.21.2",

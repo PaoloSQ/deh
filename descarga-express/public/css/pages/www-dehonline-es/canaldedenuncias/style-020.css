@@ -1,51 +1,57 @@
 /* END STYLABLE DIRECTIVE RULES */
 
-#comp-lpl1qu3f .style-lpl1x2ny__root{
-    -st-extends: StylableButton;
-    transition: all 0.2s ease, visibility 0s;
-    background: #CC0000;
-    border-radius: 50px
+#comp-lpl1qu3f .style-lpl1x2ny__root {
+  -st-extends: StylableButton;
+  transition:
+    all 0.2s ease,
+    visibility 0s;
+  background: #cc0000;
+  border-radius: 50px;
 }
 
 /* START STYLABLE DIRECTIVE RULES */
 
 #comp-lpl1qu3f .style-lpl1x2ny__root:hover {
-    background: #6E7088;
+  background: #6e7088;
 }
 
-#comp-lpl1qu3f .style-lpl1x2ny__root:disabled{
-    background: #E2E2E2;
-    border-radius: 50px
+#comp-lpl1qu3f .style-lpl1x2ny__root:disabled {
+  background: #e2e2e2;
+  border-radius: 50px;
 }
 
-#comp-lpl1qu3f .style-lpl1x2ny__root:disabled .StylableButton2545352419__label{
-    color: #8F8F8F
+#comp-lpl1qu3f .style-lpl1x2ny__root:disabled .StylableButton2545352419__label {
+  color: #8f8f8f;
 }
 
-#comp-lpl1qu3f .style-lpl1x2ny__root:disabled .StylableButton2545352419__icon{
-    fill: #8F8F8F
+#comp-lpl1qu3f .style-lpl1x2ny__root:disabled .StylableButton2545352419__icon {
+  fill: #8f8f8f;
 }
 
-#comp-lpl1qu3f .style-lpl1x2ny__root .StylableButton2545352419__container{
-    transition: inherit
+#comp-lpl1qu3f .style-lpl1x2ny__root .StylableButton2545352419__container {
+  transition: inherit;
 }
 
-#comp-lpl1qu3f .style-lpl1x2ny__root .StylableButton2545352419__label{
-    transition: inherit;
-    margin: 0px 4px 0px 0px;
-    font-family: bree-w01-thin-oblique,sans-serif;
-    font-style: normal;
-    color: #FFFFFF;
-    letter-spacing: 0em; font-family: montserrat,sans-serif; font-size: 15px; font-weight: normal; font-style: normal;
-    font-size: 13px;
-    font-weight: 700
+#comp-lpl1qu3f .style-lpl1x2ny__root .StylableButton2545352419__label {
+  transition: inherit;
+  margin: 0px 4px 0px 0px;
+  font-family: bree-w01-thin-oblique, sans-serif;
+  font-style: normal;
+  color: #ffffff;
+  letter-spacing: 0em;
+  font-family: montserrat, sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 13px;
+  font-weight: 700;
 }
 
-#comp-lpl1qu3f .style-lpl1x2ny__root .StylableButton2545352419__icon{
-    transition: inherit;
-    width: 10px;
-    height: 10px;
-    margin: 0px 0px 0px 4px;
-    fill: #FFFFFF;
-    display: none;
+#comp-lpl1qu3f .style-lpl1x2ny__root .StylableButton2545352419__icon {
+  transition: inherit;
+  width: 10px;
+  height: 10px;
+  margin: 0px 0px 0px 4px;
+  fill: #ffffff;
+  display: none;
 }
