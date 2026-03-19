@@ -392,9 +392,18 @@ function sanitizeHtml(text, changes, relPath) {
     return `allow="${`${before};${after}`.split(';').map((item) => item.trim()).filter(Boolean).join(';')}"`;
   });
 
-  next = patchViewerModel(next, changes, relPath);
-  next = injectTelemetryGuard(next, changes);
-  next = injectFedopsStub(next, changes);
+  const hasViewerModel = /<script type="application\/json" id="wix-essential-viewer-model">|<script type="application\/json" id="wix-viewer-model">/i.test(next);
+  const hasThunderboltScripts = /<script\b[^>]*(?:wix-thunderbolt|thunderbolt-platform|thunderbolt-features|thunderbolt\/dist)[^>]*>/i.test(next);
+  const isStaticizedPage = /<!--\s*staticized:/i.test(next)
+    && !hasViewerModel
+    && !hasThunderboltScripts;
+
+  if (!isStaticizedPage) {
+    next = patchViewerModel(next, changes, relPath);
+    next = injectTelemetryGuard(next, changes);
+    next = injectFedopsStub(next, changes);
+  }
+
   return next;
 }
 

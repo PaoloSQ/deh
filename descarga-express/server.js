@@ -11,13 +11,19 @@ const PORT_SEARCH_LIMIT = Number(process.env.PORT_SEARCH_LIMIT || 100);
 const SERVER_STATE_FILE = path.resolve(__dirname, '.server-port.json');
 
 const sitesRoot = path.resolve(__dirname, 'sites');
+const imagesRoot = path.resolve(__dirname, 'public', 'img');
+const cssRoot = path.resolve(__dirname, 'public', 'css');
+const jsRoot = path.resolve(__dirname, 'public', 'js');
 const assetsRoot = path.resolve(__dirname, 'public', 'assets');
 const docsRoot = path.resolve(__dirname, 'public', 'docs');
-const bucketRoots = [sitesRoot, assetsRoot, docsRoot];
+const bucketRoots = [sitesRoot, imagesRoot, cssRoot, jsRoot, assetsRoot, docsRoot];
 const LOCAL_HTML_HELPER_SCRIPTS = [
   '/assets/js/local/popup-restore.js'
 ];
 const RESERVED_HOST_REWRITE_PREFIXES = [
+  '/img',
+  '/css',
+  '/js',
   '/assets',
   '/docs',
   '/_api',
@@ -91,18 +97,42 @@ function findExistingAsset(candidate) {
 function findFirstFileRecursive(dirPath) {
   if (!fs.existsSync(dirPath) || !fs.statSync(dirPath).isDirectory()) return null;
   const stack = [dirPath];
+  const candidates = [];
 
   while (stack.length) {
     const current = stack.pop();
     const entries = fs.readdirSync(current, { withFileTypes: true });
     for (const entry of entries) {
       const abs = path.join(current, entry.name);
-      if (entry.isFile()) return abs;
+      if (entry.isFile()) {
+        candidates.push(abs);
+        continue;
+      }
       if (entry.isDirectory()) stack.push(abs);
     }
   }
 
-  return null;
+  if (!candidates.length) return null;
+
+  const score = (filePath) => {
+    const rel = path.relative(dirPath, filePath).split(path.sep).join('/');
+    let total = 0;
+
+    if (/blur_\d+/i.test(rel)) total -= 1000000;
+    if (/\/v1\/fill\//i.test(`/${rel}`)) total += 10000;
+    if (/enc_avif/i.test(rel)) total += 100000;
+
+    try {
+      total += fs.statSync(filePath).size;
+    } catch {
+      // Conserva la puntuacion acumulada si el stat falla.
+    }
+
+    return total;
+  };
+
+  candidates.sort((left, right) => score(right) - score(left) || left.localeCompare(right));
+  return candidates[0];
 }
 
 function tryRewriteMediaVariant(req) {
@@ -280,7 +310,7 @@ function injectLocalHelperScripts(html) {
 }
 
 app.get('/health', (_req, res) => {
-  res.json({ ok: true, port: activePort, sitesRoot, assetsRoot, docsRoot, bucketRoots });
+  res.json({ ok: true, port: activePort, sitesRoot, imagesRoot, assetsRoot, docsRoot, bucketRoots });
 });
 
 app.get('/favicon.ico', (_req, res) => {
@@ -430,6 +460,36 @@ app.use((req, res, next) => {
 
   return next();
 });
+
+app.use(
+  '/img',
+  express.static(imagesRoot, {
+    extensions: ['html'],
+    index: ['index.html'],
+    fallthrough: true,
+    maxAge: process.env.NODE_ENV === 'development' ? 0 : '1h'
+  })
+);
+
+app.use(
+  '/css',
+  express.static(cssRoot, {
+    extensions: ['html'],
+    index: ['index.html'],
+    fallthrough: true,
+    maxAge: process.env.NODE_ENV === 'development' ? 0 : '1h'
+  })
+);
+
+app.use(
+  '/js',
+  express.static(jsRoot, {
+    extensions: ['html'],
+    index: ['index.html'],
+    fallthrough: true,
+    maxAge: process.env.NODE_ENV === 'development' ? 0 : '1h'
+  })
+);
 
 app.use(
   '/assets',

@@ -1,41 +1,11 @@
 [
   {
-    "filePath": "C:\\www\\producción\\deh\\descarga-express\\sites\\www.dehonline.es\\index.html",
-    "relPath": "sites/www.dehonline.es/index.html",
+    "filePath": "C:\\Users\\ben28\\Desktop\\deh\\descarga-express\\sites\\www.dehonline.es\\logs-api-panel.html",
+    "relPath": "sites/www.dehonline.es/logs-api-panel.html",
     "modified": true,
     "counts": {
-      "script": 56,
-      "preload link": 4,
-      "local image fallback injected": 1
-    }
-  },
-  {
-    "filePath": "C:\\www\\producción\\deh\\descarga-express\\sites\\www.dehonline.es\\book-online.html",
-    "relPath": "sites/www.dehonline.es/book-online.html",
-    "modified": true,
-    "counts": {
-      "script": 53,
-      "preload link": 5,
-      "local image fallback injected": 1
-    }
-  },
-  {
-    "filePath": "C:\\www\\producción\\deh\\descarga-express\\sites\\www.dehonline.es\\contacto.html",
-    "relPath": "sites/www.dehonline.es/contacto.html",
-    "modified": true,
-    "counts": {
-      "script": 67,
-      "preload link": 5,
-      "local image fallback injected": 1
-    }
-  },
-  {
-    "filePath": "C:\\www\\producción\\deh\\descarga-express\\sites\\www.dehonline.es\\documbox-info.html",
-    "relPath": "sites/www.dehonline.es/documbox-info.html",
-    "modified": true,
-    "counts": {
-      "script": 65,
-      "preload link": 4,
+      "script": 60,
+      "preload link": 2,
       "local image fallback injected": 1
     }
   }

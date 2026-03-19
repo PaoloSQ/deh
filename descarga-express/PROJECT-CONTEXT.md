@@ -1,16 +1,65 @@
 # Project Context
 
+Fecha de actualizacion: 2026-03-19
+
 ## Objetivo operativo
 
-Mantener `descarga-express` como un espejo estatico y mantenible de `dehonline.es`, evitando depender del runtime completo de Wix mas de lo necesario.
+Mantener `descarga-express` como un espejo local y mantenible de `dehonline.es`, reduciendo dependencia real de Wix sin perder el look del dominio original.
 
-La estrategia que se ha ido consolidando es esta:
+La estrategia valida a dia de hoy es:
 
-- corregir rutas de assets y errores de carga locales
-- eliminar tracking y monitorizacion de terceros
-- mantener `Thunderbolt` solo como transicion
-- comparar `local` vs `original` en estado renderizado real
-- congelar o corregir bloques visibles concretos, no reemplazar paginas completas a ciegas
+- conservar el render visible
+- limpiar tracking y residuos de terceros
+- mantener runtime Wix solo donde todavia haga falta
+- mover complejidad fuera del HTML cuando sea seguro
+- validar siempre contra remoto con auditorias renderizadas e interactivas
+
+## Punto real del proyecto
+
+### Estado de rutas y paginas
+
+- El lote de `missing_pages_remote.txt` se dio por cerrado operativamente.
+- Se verifico que las rutas de los `.txt` de `reports/` existen dentro del proyecto.
+- La fuente de verdad de paginas es `sites/`.
+
+Documentos clave:
+
+- `AI_PAGE_CLOSURE_RUNBOOK.md`
+- `MISSING-PAGES-CLOSEOUT.md`
+- `HTML-ROUTES.md`
+- `PAGE-GROUPS.md`
+
+### Estado de imagenes
+
+La simplificacion de imagenes ya se aplico.
+
+- La capa publica actual de imagenes es `public/img/`.
+- Los HTML ya usan rutas limpias bajo `/img/...`.
+- La estructura antigua `public/assets/img/` ya no es la fuente publica de runtime.
+
+Documentos clave:
+
+- `IMAGE-CANONICALIZATION.md`
+- `SIMPLE-IMAGE-LIBRARY-REPORT.md`
+
+### Estado de HTML
+
+Se hizo una auditoria global sobre `sites/` y el estado real es este:
+
+- HTML auditados: `201`
+- Paginas con `staticized:`: `172`
+- Paginas runtime-heavy con `viewerModel` real: `28`
+
+La conclusion importante es:
+
+- la mayoria de paginas ya estan en modo snapshot o semiestatico
+- el trabajo de limpieza mas rentable esta en esas paginas staticizadas
+- solo un conjunto pequeno sigue siendo mini app Wix y no conviene podarlo a ciegas
+
+Documentos clave:
+
+- `HTML-CLEANUP-AUDIT.md`
+- `HTML-CLEANUP-AUTOMATION-PLAN.md`
 
 ## Sistema montado
 
@@ -18,192 +67,272 @@ La estrategia que se ha ido consolidando es esta:
 
 Archivo principal:
 
-- [server.js](/workspaces/deh/descarga-express/server.js)
+- `server.js`
 
 Capacidades ya montadas:
 
-- sirve `sites/` y `public/`
+- sirve `sites/`, `public/img`, `public/css`, `public/js`, `public/assets` y `public/docs`
 - fallback automatico de puerto si `8080` esta ocupado
-- guarda el puerto activo en [.server-port.json](/workspaces/deh/descarga-express/.server-port.json)
+- guarda el puerto activo en `.server-port.json`
 - `GET /health` devuelve estado del servidor
+- soporte para servir por `Host` y por prefijo de ruta
 - fallbacks para assets locales rotos
 - redirecciones/fallbacks a `static.parastorage.com` para parte del runtime y assets de Wix
-- soporte para servir por `Host` y por prefijo de ruta
 
-### Scripts de limpieza y verificacion
+Nota importante:
 
-Scripts relevantes:
+- `/css` y `/js` se exponen ya como rutas publicas de primer nivel para la nueva fase de limpieza HTML
 
-- [clean-third-party.js](/workspaces/deh/descarga-express/scripts/clean-third-party.js)
-- [verify-pages.js](/workspaces/deh/descarga-express/scripts/verify-pages.js)
-- [compare-rendered-pages.js](/workspaces/deh/descarga-express/scripts/compare-rendered-pages.js)
-- [audit-render-parity.js](/workspaces/deh/descarga-express/scripts/audit-render-parity.js)
-- [audit-interactions.js](/workspaces/deh/descarga-express/scripts/audit-interactions.js)
-- [audit-visible-mismatches.js](/workspaces/deh/descarga-express/scripts/audit-visible-mismatches.js)
-- [runtime-utils.js](/workspaces/deh/descarga-express/scripts/lib/runtime-utils.js)
+### Scripts clave
 
-Informes generados:
+Scripts de mutacion:
 
-- [THIRD-PARTY-CLEAN-REPORT.md](/workspaces/deh/descarga-express/THIRD-PARTY-CLEAN-REPORT.md)
-- [VERIFY-PAGES-REPORT.md](/workspaces/deh/descarga-express/VERIFY-PAGES-REPORT.md)
-- [RENDER-COMPARE-REPORT.md](/workspaces/deh/descarga-express/RENDER-COMPARE-REPORT.md)
-- [PARITY-AUDIT.md](/workspaces/deh/descarga-express/PARITY-AUDIT.md)
-- [INTERACTION-AUDIT.md](/workspaces/deh/descarga-express/INTERACTION-AUDIT.md)
-- [VISIBLE-MISMATCH-AUDIT.md](/workspaces/deh/descarga-express/VISIBLE-MISMATCH-AUDIT.md)
-- [PAGE-GROUPS.md](/workspaces/deh/descarga-express/PAGE-GROUPS.md)
-- [HTML-ROUTES.md](/workspaces/deh/descarga-express/HTML-ROUTES.md)
-- [ROUTES-CHECK-REPORT.md](/workspaces/deh/descarga-express/ROUTES-CHECK-REPORT.md)
+- `scripts/clean-third-party.js`
+- `scripts/staticize-legal-pages.js`
+- `scripts/build-simple-image-library.js`
+- `scripts/extract-inline-page-assets.js`
 
-## Resumen de la conversacion y del trabajo hecho
+Scripts de validacion:
 
-### Inventario inicial
+- `scripts/verify-pages.js`
+- `scripts/compare-rendered-pages.js`
+- `scripts/audit-render-parity.js`
+- `scripts/audit-interactions.js`
+- `scripts/audit-visible-mismatches.js`
+- `scripts/verify-all-routes.js`
 
-- Se hizo un inventario de los HTML reales del proyecto y se documento en [HTML-ROUTES.md](/workspaces/deh/descarga-express/HTML-ROUTES.md).
-- Se confirmo que hay `50` HTML reales en `descarga-express`.
+Helper compartido:
 
-### Consola y errores de carga
+- `scripts/lib/runtime-utils.js`
 
-- Se monto revision automatizada de consola con `Puppeteer`.
-- Se corrigieron errores de rutas de assets y recursos locales.
-- El resultado importante fue dejar `0` errores de `local-file` en la verificacion global.
+## Lo que ya no hay que redescubrir
 
-### Limpieza de terceros
+### 1. No usar reemplazo completo desde remoto
 
-Se identificaron y se trato de neutralizar:
+Se probo el enfoque de reemplazar paginas locales por HTML renderizado remoto.
 
-- LinkedIn Insight
-- Sentry
-- TWIPLA / Visitor Analytics
-- telemetria tipo `frog.wix.com` y `panorama`
+Resultado:
 
-Se decidio no desmontar `Thunderbolt` de golpe.
+- reintroducia workers
+- reintroducia cookies y tracking
+- reintroducia dependencias de backend
+- rompia el control local del proyecto
 
-### Comparacion con la web real
+Conclusion:
 
-- Se probo el enfoque de reemplazar paginas completas por HTML renderizado remoto.
-- Esa prueba salio mal en paginas Wix complejas: reintroducia workers, cookies, tracking, blobs, dependencias de backend y roturas funcionales.
-- Conclusion: no usar reemplazo completo de paginas como estrategia principal.
+- no usar `compare-rendered-pages --replace` como estrategia base de migracion
 
-### Cambio de estrategia
+### 2. No limpiar todo igual
 
-Se adopto este enfoque:
+Hay dos clases de paginas:
 
-- auditar `local` vs `original` en render real
-- identificar diferencias por seccion
-- corregir o congelar bloques concretos
-- volver a verificar
+1. Paginas staticizadas o semiestaticas
+   - buen terreno para limpieza masiva
+   - mejor retorno con poco riesgo
 
-### Home
+2. Paginas runtime-heavy
+   - booking calendar
+   - profiles
+   - `partners/gigas.html`
+   - `partners/eevidence.html`
+   - `partners/xeoris.html`
+   - soporte avanzado
+   - `search.html`
+   - `carpetas-financieras.html`
+   - `www.connectbox.es.html`
+   - `www.consola.dehonline.es/email-certificado.html`
 
-La home se tomo como pagina piloto.
+Estas ultimas no son "HTML sucio"; son mini migraciones.
 
-Se han hecho ya varias correcciones sobre [index.html](/workspaces/deh/descarga-express/sites/www.dehonline.es/index.html):
+### 3. La home sigue siendo especial
 
-- recuperacion/correccion del hero visible
-- ajuste de wrappers que quedaban en estado inicial de animacion
-- restauracion del movimiento de los dos carruseles horizontales mediante `deh-home-gallery-marquee`
-- auditorias de paridad visual y de interacciones sobre la home
+La home local sigue acumulando diferencias historicas frente a remoto, sobre todo por imagenes y algunas zonas ya conocidas de esa pagina.
 
-Estado de la home antes del punto actual:
+Importante para futuras IAs:
 
-- hero corregido
-- hovers y scroll revisados
-- carruseles horizontales ya se mueven en local
-- seguian faltando piezas en la seccion de imagen central y en el bloque siguiente
+- no asumir que cualquier diff de la home viene de la ultima limpieza aplicada
+- usar la home solo como muestra controlada, no como unico criterio global
 
-## Punto actual exacto
+## Limpieza HTML: estado exacto
 
-Se estaba investigando la home en estas dos zonas:
+### Auditoria
 
-1. `comp-m66dcvli`
-   - seccion de la imagen de oficina con reseñas superpuestas
-   - contiene el `wix-iframe` `comp-mh1ro4f21`
-   - ese `iframe` carga [Carousel.f4b92e4d.html](/workspaces/deh/descarga-express/public/assets/misc/services/editor-elements-library/dist/siteAssets/media/Carousel.f4b92e4d.html)
+El mapa de limpieza quedo documentado en `HTML-CLEANUP-AUDIT.md`.
 
-2. `comp-makvwzc5`
-   - seccion siguiente
-   - el titulo visible esperado es `comp-makvwzcj`
+Hallazgos utiles:
 
-### Resultado del analisis local vs remoto
+- mucho comentario residual de Wix
+- mucho CSS inline repetido
+- fuentes remotas repetidas
+- enlaces absolutos al propio dominio
+- `span.wixui-rich-text__text` muy repetidos
 
-Se confirmo lo siguiente:
+### Estrategia aprobada
 
-- en remoto, `comp-mh1ro4f21` renderiza un carrusel real con varias imagenes de reseñas
-- en local, el `iframe` existe pero el `#sb-slider` queda vacio
-- en remoto, `comp-makvwzcj` esta visible
-- en local, `comp-makvwzcj` existe pero queda con `opacity: 0`
+La estrategia valida para limpiar HTML sin perder diseno es:
 
-### Hipotesis tecnica actual
+1. extraer CSS y JS inline sin reinterpretar la pagina
+2. validar
+3. limpiar terceros y residuos
+4. validar
+5. deduplicar por familias
+6. validar otra vez
 
-Hay dos problemas distintos:
+Esto quedo documentado en:
 
-1. `comp-makvwzcj`
-   - no falta contenido
-   - falta sacar el nodo del estado inicial de animacion
-   - es un caso similar a otros wrappers ya corregidos antes
+- `HTML-CLEANUP-AUTOMATION-PLAN.md`
 
-2. `comp-mh1ro4f21`
-   - el `iframe` carga el HTML del carrusel, pero el widget no termina de montar en local
-   - el archivo [Carousel.f4b92e4d.html](/workspaces/deh/descarga-express/public/assets/misc/services/editor-elements-library/dist/siteAssets/media/Carousel.f4b92e4d.html) es el foco directo
-   - ya se observo que en local el cuerpo del `iframe` se queda sin imagenes montadas, mientras que en remoto el mismo asset muestra varias `img.cloudcarousel`
-   - quedo pendiente cerrar la comprobacion final de por que el widget no inicializa del todo en local
+### Nuevo automatismo
 
-## Ultimo paso en el que se estaba trabajando
+Se anadio:
 
-El ultimo paso activo era este:
+- `scripts/extract-inline-page-assets.js`
 
-- inspeccionar el estado interno del `iframe` `comp-mh1ro4f21` ya cargado en local para distinguir entre:
-  - librerias del widget no cargadas
-  - `postMessage`/datos del widget no recibidos
-  - inicializacion JS incompleta dentro del asset `Carousel.f4b92e4d.html`
+Que hace:
 
-Ese analisis se lanzo pero no se cerro en la conversacion antes de esta nota.
+- extrae `style` y `script` inline a `public/css/pages/...` y `public/js/pages/...`
+- respeta el orden
+- no toca `application/json`
+- no toca `application/ld+json`
+- reescribe `url(...)` relativas dentro del CSS
 
-## Proximos pasos recomendados
+Script npm disponible:
 
-### Inmediatos
+- `npm run extract-inline-assets`
 
-1. Corregir `comp-makvwzcj`
-   - forzar su estado final visible
-   - validar que el titulo vuelve a verse en la home
+## Limpieza HTML ya aplicada
 
-2. Terminar el diagnostico del `iframe` `comp-mh1ro4f21`
-   - confirmar si fallan scripts, datos o inicializacion
-   - corregir [Carousel.f4b92e4d.html](/workspaces/deh/descarga-express/public/assets/misc/services/editor-elements-library/dist/siteAssets/media/Carousel.f4b92e4d.html) o el flujo de datos que necesita
+Se aplico ya la primera fase segura:
 
-3. Verificar la home otra vez con `Puppeteer`
-   - screenshot local vs remoto
-   - comprobar que aparecen las reseñas
-   - comprobar que aparece el titulo inferior
+- extraccion de CSS inline sobre paginas staticizadas
 
-### Despues de cerrar la home
+Resultado:
 
-4. endurecer el auditor
-   - marcar automaticamente nodos que existen pero quedan en `opacity: 0` o sin `data-motion-enter="done"`
+- HTML procesados: `201`
+- HTML reescritos en esta fase: `170`
+- bloques CSS extraidos: `3897`
+- ruta de salida: `public/css/pages/...`
 
-5. aplicar el mismo flujo por familias de pagina
-   - landings/home-like
-   - paginas estaticas
-   - despues listados y paginas con mas runtime
+Informes:
 
-6. seguir reduciendo dependencia de Wix
-   - mantener `Thunderbolt` solo donde todavia haga falta
-   - congelar contenido visible cuando el original ya lo expone
+- `INLINE-ASSET-EXTRACTION-REPORT.md`
+- `INLINE-ASSET-EXTRACTION-REPORT.json`
 
-## Notas de continuidad
+### Validacion de esta fase
 
-- La home es ahora la pagina piloto del flujo de auditoria y correccion.
-- No conviene volver al enfoque de reemplazar HTML completo desde la web real.
-- El estado actual mas fiable se obtiene con:
-  - auditorias renderizadas
-  - correccion selectiva de bloques
-  - revalidacion en navegador
+Se hizo una muestra funcional sobre 8 paginas representativas.
 
-## Archivos clave para retomar
+Resultado:
 
-- [index.html](/workspaces/deh/descarga-express/sites/www.dehonline.es/index.html)
-- [Carousel.f4b92e4d.html](/workspaces/deh/descarga-express/public/assets/misc/services/editor-elements-library/dist/siteAssets/media/Carousel.f4b92e4d.html)
-- [server.js](/workspaces/deh/descarga-express/server.js)
-- [PARITY-AUDIT.md](/workspaces/deh/descarga-express/PARITY-AUDIT.md)
-- [INTERACTION-AUDIT.md](/workspaces/deh/descarga-express/INTERACTION-AUDIT.md)
-- [VISIBLE-MISMATCH-AUDIT.md](/workspaces/deh/descarga-express/VISIBLE-MISMATCH-AUDIT.md)
+- `0` problemas de runtime
+- `0` problemas de terceros
+- quedaron `4` paginas con un 404 residual a `/assets/img/media/img`
+
+Esas paginas fueron:
+
+- `sites/www.dehonline.es/index.html`
+- `sites/www.dehonline.es/post/administradores-de-fincas-guardianes-de-la-seguridad-y-la-excelencia.html`
+- `sites/www.dehonline.es/grupos/energia.html`
+- `sites/www.dehonline.es/partners/app_vecinos.html`
+
+Importante:
+
+- ese 404 residual no se encontro ni en los HTML reescritos ni en `public/css/pages/`
+- tratarlo de momento como deuda previa o ruido heredado, no como regresion clara del extractor
+
+### Muestra visual tras la extraccion
+
+Paridad visual de muestra:
+
+- `/blog` desktop: `mismatchRatio 0.004709`
+- `/grupos/energia` desktop: `mismatchRatio 0.007973`
+- `/` desktop: sigue siendo ruidosa, pero el desfase dominante continua concentrado en imagenes y zonas historicamente problematicas de la home
+
+Interacciones en home:
+
+- `0` diferencias de scroll reveal
+- `1` hover con pequena brecha visual
+
+Carpetas de artefactos:
+
+- `.parity-audit/cleanup-home-desktop/`
+- `.parity-audit/cleanup-blog-desktop/`
+- `.parity-audit/cleanup-grupo-energia-desktop/`
+- `.interaction-audit/cleanup-home-desktop/`
+
+## Gate recomendado antes de dar por bueno un lote
+
+### Gate minimo
+
+- `verify-pages`
+- sin `pageerror`
+- sin nuevos `local-file`
+- sin nuevos `local-api`
+
+### Gate fuerte
+
+- `audit-render-parity`
+- `audit-interactions`
+
+### Criterio practico
+
+No aprobar una limpieza por lote si aparece cualquiera de estos sintomas:
+
+- cambio visible de layout
+- degradacion de header, hero, formularios o footer
+- nuevo error runtime
+- rotura de hover o scroll reveal
+
+## Orden correcto para continuar
+
+Si una IA retoma el proyecto, el orden recomendado ahora es:
+
+1. No tocar runtime-heavy de entrada.
+2. Seguir con limpieza segura sobre staticizados.
+3. Ejecutar `clean-third-party` por familias cuando convenga.
+4. Deduplicar el CSS ya extraido por hashes o por familias.
+5. Dejar JS inline para una fase posterior y mucho mas controlada.
+
+## Siguientes automatizaciones recomendadas
+
+Todavia faltan estas piezas:
+
+1. `dedupe-extracted-assets.js`
+   - agrupar CSS/JS identicos por hash
+   - moverlos a assets compartidos por familia
+
+2. `strip-html-wix-residue.js`
+   - eliminar comentarios Wix
+   - eliminar bloques vacios
+   - normalizar self-links
+   - limpiar residuos que ya no tengan referencia viva
+
+3. `validate-cleanup-batch.js`
+   - wrapper que encadene `verify-pages`, `audit-render-parity` y `audit-interactions`
+
+## Archivos de continuidad mas importantes
+
+- `server.js`
+- `AI_PAGE_CLOSURE_RUNBOOK.md`
+- `MISSING-PAGES-CLOSEOUT.md`
+- `IMAGE-CANONICALIZATION.md`
+- `HTML-CLEANUP-AUDIT.md`
+- `HTML-CLEANUP-AUTOMATION-PLAN.md`
+- `INLINE-ASSET-EXTRACTION-REPORT.md`
+- `scripts/extract-inline-page-assets.js`
+- `scripts/clean-third-party.js`
+- `scripts/verify-pages.js`
+- `scripts/audit-render-parity.js`
+- `scripts/audit-interactions.js`
+
+## Nota final para futuras IAs
+
+El proyecto ya no esta en fase de "rescatar paginas faltantes". Esa parte esta practicamente cerrada.
+
+La fase actual es:
+
+- adelgazar HTML
+- sacar complejidad fuera de los ficheros
+- limpiar Wix sin perder el render del dominio real
+
+La prioridad correcta hoy es el lote staticizado, no las mini apps runtime-heavy.

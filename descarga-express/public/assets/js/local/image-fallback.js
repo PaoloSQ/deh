@@ -52,6 +52,10 @@
       return raw.split('#')[0];
     }
 
+    if (/^\/assets\/misc\/static\.wixstatic\.com\/media\//i.test(raw)) {
+      return raw.split('#')[0];
+    }
+
     if (/^\/media\//i.test(raw)) {
       return ('/assets/img' + raw).split('#')[0];
     }
@@ -60,6 +64,9 @@
       try {
         var url = new URL(raw, window.location.origin);
         if (/\/assets\/img\/media\//i.test(url.pathname)) {
+          return (url.pathname + url.search).split('#')[0];
+        }
+        if (/\/assets\/misc\/static\.wixstatic\.com\/media\//i.test(url.pathname)) {
           return (url.pathname + url.search).split('#')[0];
         }
         var mediaIndex = url.pathname.toLowerCase().indexOf('/media/');
@@ -184,7 +191,11 @@
     nodes.forEach(function (node) {
       var srcset = node.getAttribute('srcset') || '';
       if (!srcset) return;
-      if (!/\/assets\/img\/media\//i.test(srcset) && !/static\.wixstatic\.com\/media\//i.test(srcset)) return;
+      if (
+        !/\/assets\/img\/media\//i.test(srcset) &&
+        !/\/assets\/misc\/static\.wixstatic\.com\/media\//i.test(srcset) &&
+        !/static\.wixstatic\.com\/media\//i.test(srcset)
+      ) return;
 
       var sanitized = sanitizeSrcsetValue(srcset);
       if (sanitized !== srcset) {
@@ -414,6 +425,16 @@
     }
 
     el.style.display = el.style.display || 'block';
+    avatarLocalSrc = resolveAvatarLocalUrl(window.__DEH_AVATAR_MANIFEST__, {
+      sourceUrl: rawUri,
+      profileHref: profileLink && profileLink.getAttribute('href'),
+      authorName: authorName
+    });
+
+    if (avatarLocalSrc) {
+      setLocalImage(avatarLocalSrc, true);
+      return;
+    }
 
     if (preferredCandidates.length > 0) {
       findFirstExistingLocalPath(preferredCandidates).then(function (resolvedPreferredSrc) {
@@ -479,6 +500,13 @@
     if (!img || img.dataset.dehImageFallback === 'done') return;
 
     var src = img.getAttribute('src') || '';
+    var profileLink = img.closest && img.closest('a[href*="/profile/"]');
+    var authorName = normalizeAuthorName(img.getAttribute('alt'));
+    var avatarLocalSrc = resolveAvatarLocalUrl(window.__DEH_AVATAR_MANIFEST__, {
+      sourceUrl: src,
+      profileHref: profileLink && profileLink.getAttribute('href'),
+      authorName: authorName
+    });
     var preferredLocalSrc = normalizeLocalMediaPath(src);
     var basename = normalizeMediaBasename(src);
     var canonicalLocalSrc = buildCanonicalLocalMediaPath(src);
@@ -505,6 +533,11 @@
       }
       markImageAsLoaded(img);
       img.dataset.dehImageFallback = 'done';
+    }
+
+    if (avatarLocalSrc) {
+      applyPromotedSrc(avatarLocalSrc);
+      return;
     }
 
     var optimisticLocalPath = candidateLocalPaths[0] || (basename ? '/assets/img/media/' + encodeURIComponent(basename) : '');

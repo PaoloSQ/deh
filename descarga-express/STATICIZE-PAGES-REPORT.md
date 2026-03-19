@@ -1,33 +1,15 @@
 # Staticizado de paginas
 
-- Fecha: 2026-03-17T11:21:27.964Z
+- Fecha: 2026-03-19T00:17:42.752Z
 - Escritura activada: si
-- Paginas procesadas: 4
+- Paginas procesadas: 1
 
 | Archivo | Modificado | Scripts eliminados | Preloads eliminados |
 |---|---|---:|---:|
-| sites/www.dehonline.es/index.html | si | 56 | 4 |
-| sites/www.dehonline.es/book-online.html | si | 53 | 5 |
-| sites/www.dehonline.es/contacto.html | si | 67 | 5 |
-| sites/www.dehonline.es/documbox-info.html | si | 65 | 4 |
+| sites/www.dehonline.es/logs-api-panel.html | si | 60 | 2 |
 
-## sites/www.dehonline.es/index.html
+## sites/www.dehonline.es/logs-api-panel.html
 
 - Modificado: si
-- Conteo: {"script":56,"preload link":4,"local image fallback injected":1}
-
-## sites/www.dehonline.es/book-online.html
-
-- Modificado: si
-- Conteo: {"script":53,"preload link":5,"local image fallback injected":1}
-
-## sites/www.dehonline.es/contacto.html
-
-- Modificado: si
-- Conteo: {"script":67,"preload link":5,"local image fallback injected":1}
-
-## sites/www.dehonline.es/documbox-info.html
-
-- Modificado: si
-- Conteo: {"script":65,"preload link":4,"local image fallback injected":1}
+- Conteo: {"script":60,"preload link":2,"local image fallback injected":1}
 

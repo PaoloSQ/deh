@@ -1,0 +1,540 @@
+
+                                                                                .comp-m5qnidsj div.pro-gallery-parent-container .gallery-item-wrapper-text .gallery-item-content {
+                                                                                    background-color: #33343F
+                                                                                }
+
+                                                                                .comp-m5qnidsj div.pro-gallery-parent-container .show-more-container i.show-more {
+                                                                                    color: rgba(0, 0, 0, 0.7)
+                                                                                }
+
+                                                                                .comp-m5qnidsj div.pro-gallery-parent-container .show-more-container button.show-more {
+                                                                                    --loadMoreButtonBorderRadius: 0;
+                                                                                    --loadMoreButtonBorderColor: #33343F;
+                                                                                    --loadMoreButtonBorderWidth: 1;
+                                                                                    --loadMoreButtonColor: #FFFFFF;
+                                                                                    --loadMoreButtonFont: normal normal normal 18px/1.75em montserrat, sans-serif;
+                                                                                    --loadMoreButtonFontColor: #33343F;
+                                                                                    color: rgba(51, 52, 63, 0.9);
+                                                                                    font: normal normal normal 18px/1.75em montserrat, sans-serif;
+                                                                                    text-decoration: ;
+                                                                                    background: #FFFFFF;
+                                                                                    border-width: 1px;
+                                                                                    border-color: #33343F;
+                                                                                    border-radius: 0px
+                                                                                }
+
+                                                                                .comp-m5qnidsj div.pro-gallery-parent-container .show-more-container.pro-gallery-mobile-indicator i.show-more {
+                                                                                    color: rgba(0, 0, 0, 0.7)
+                                                                                }
+
+                                                                                .comp-m5qnidsj div.pro-gallery-parent-container .show-more-container.pro-gallery-mobile-indicator button.show-more {
+                                                                                    --loadMoreButtonBorderRadius: 0;
+                                                                                    --loadMoreButtonBorderColor: #33343F;
+                                                                                    --loadMoreButtonBorderWidth: 1;
+                                                                                    --loadMoreButtonColor: #FFFFFF;
+                                                                                    --loadMoreButtonFont: normal normal normal 18px/1.75em montserrat, sans-serif;
+                                                                                    --loadMoreButtonFontColor: #33343F;
+                                                                                    color: rgb(255, 255, 255);
+                                                                                    font: normal normal normal 18px/22px montserrat, sans-serif;
+                                                                                    text-decoration: ;
+                                                                                    background: #FFFFFF;
+                                                                                    border-width: undefinedpx;
+                                                                                    border-color: rgb(255, 255, 255);
+                                                                                    border-radius: undefinedpx
+                                                                                }
+
+                                                                                .comp-m5qnidsj .nav-arrows-container .slideshow-arrow,
+                                                                                .comp-m5qnidsj .nav-arrows-container .custom-nav-arrows svg {
+                                                                                    --arrowsColor: #FFFFFF;
+                                                                                    fill: #FFFFFF
+                                                                                }
+
+                                                                                .comp-m5qnidsj .nav-arrows-container.pro-gallery-mobile-indicator .slideshow-arrow,
+                                                                                .comp-m5qnidsj .nav-arrows-container.pro-gallery-mobile-indicator .custom-nav-arrows svg {
+                                                                                    --arrowsColor: #FFFFFF;
+                                                                                    fill: #FFFFFF
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .auto-slideshow-counter {
+                                                                                    --itemDescriptionFontSlideshow: normal normal normal 15px/1.75em montserrat, sans-serif;
+                                                                                    --itemDescriptionFontColorSlideshow: #33343F;
+                                                                                    color: #33343F !important;
+                                                                                    font: normal normal normal 15px/18px avenir-lt-w01_35-light1475496, sans-serif;
+                                                                                    text-decoration:
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-slideshow-info {
+                                                                                    --itemIconColorSlideshow: #33343F
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-slideshow-info i:not(.pro-gallery-loved):not(.info-element-loved),
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-slideshow-info button:not(.pro-gallery-loved):not(.info-element-loved):not(.info-element-custom-button-button):not(.artstore-add-to-cart-button),
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-slideshow-info a {
+                                                                                    color: #33343F !important
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-slideshow-info svg .gallery-item-svg-foreground {
+                                                                                    fill: #33343F !important
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-slideshow-info .gallery-item-title,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-slideshow-info .info-element-title {
+                                                                                    --itemFontSlideshow: normal normal normal 28px/1.38em montserrat, sans-serif;
+                                                                                    --itemFontColorSlideshow: #33343F;
+                                                                                    color: #33343F !important;
+                                                                                    font: normal normal normal 22px/27px avenir-lt-w01_85-heavy1475544, sans-serif !important;
+                                                                                    text-decoration:
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-slideshow-info .gallery-item-description,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-slideshow-info .info-element-description {
+                                                                                    --itemDescriptionFontSlideshow: normal normal normal 15px/1.75em montserrat, sans-serif;
+                                                                                    --itemDescriptionFontColorSlideshow: #33343F;
+                                                                                    color: #33343F !important;
+                                                                                    font: normal normal normal 15px/18px avenir-lt-w01_35-light1475496, sans-serif !important;
+                                                                                    text-decoration:
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-item-wrapper .gallery-item.load-with-color:not(.image-loaded) {
+                                                                                    --imageLoadingColor: #B6B6B8;
+                                                                                    background-color: #B6B6B8
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-item-wrapper .gallery-item.gallery-item-video i.gallery-item-video-play-triangle {
+                                                                                    --itemFontColor: #FFFFFF;
+                                                                                    color: #FFFFFF
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-item-wrapper .gallery-item.gallery-item-video i.gallery-item-video-play-background {
+                                                                                    --itemOpacity: #33343F;
+                                                                                    color: rgba(51, 52, 63, 0)
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-item-wrapper .gallery-slideshow-info svg .gallery-item-svg-background,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-item-wrapper .gallery-item-hover svg .gallery-item-svg-background {
+                                                                                    --itemOpacity: #33343F;
+                                                                                    fill: rgba(51, 52, 63, 0)
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-item-wrapper .gallery-slideshow-info .gradient-top,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-item-wrapper .gallery-item-hover .gradient-top {
+                                                                                    --itemOpacity: #33343F;
+                                                                                    background: linear-gradient(rgba(51, 52, 63, 0) 0, transparent 140px) !important
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-item-wrapper .gallery-item-hover {
+                                                                                    --itemIconColor: #FFFFFF
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-item-wrapper .gallery-item-hover i:not(.pro-gallery-loved):not(.info-element-loved),
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-item-wrapper .gallery-item-hover button:not(.pro-gallery-loved):not(.info-element-loved):not(.info-element-custom-button-button),
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-item-wrapper .gallery-item-hover a {
+                                                                                    color: #FFFFFF !important
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-item-wrapper .gallery-item-hover svg .gallery-item-svg-foreground {
+                                                                                    fill: #FFFFFF !important
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-item-wrapper .gallery-item-hover .gallery-item-title,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-item-wrapper .gallery-item-hover .info-element-title {
+                                                                                    --itemFont: normal normal normal 28px/1.38em montserrat, sans-serif;
+                                                                                    --itemFontColor: #FFFFFF;
+                                                                                    color: #FFFFFF;
+                                                                                    font: normal normal normal 40px/50px avenir-lt-w01_85-heavy1475544, sans-serif;
+                                                                                    text-decoration:
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-item-wrapper .gallery-item-hover .gallery-item-description,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-item-wrapper .gallery-item-hover .info-element-description {
+                                                                                    --itemDescriptionFont: normal normal normal 15px/1.75em montserrat, sans-serif;
+                                                                                    --itemDescriptionFontColor: #FFFFFF;
+                                                                                    color: #FFFFFF !important;
+                                                                                    font: normal normal normal 15px/18px avenir-lt-w01_35-light1475496, sans-serif;
+                                                                                    text-decoration:
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-item-wrapper .gallery-item-hover .custom-button-wrapper,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-item-wrapper .gallery-item-hover .info-element-custom-button-wrapper {
+                                                                                    --customButtonFontColor: #FFFFFF;
+                                                                                    color: #FFFFFF !important
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-item-wrapper .gallery-item-hover .custom-button-wrapper button,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-item-wrapper .gallery-item-hover .info-element-custom-button-wrapper button {
+                                                                                    --customButtonColor: #33343F;
+                                                                                    --customButtonBorderRadius: 0;
+                                                                                    --customButtonBorderWidth: 1;
+                                                                                    --customButtonBorderColor: #FFFFFF;
+                                                                                    --customButtonFont: normal normal normal 18px/1.75em montserrat, sans-serif;
+                                                                                    color: #FFFFFF !important;
+                                                                                    font: normal normal normal 15px/18px avenir-lt-w01_35-light1475496, sans-serif;
+                                                                                    text-decoration: ;
+                                                                                    background: #FFFFFF !important;
+                                                                                    border-width: 1px;
+                                                                                    border-radius: 0px;
+                                                                                    border-color: #FFFFFF
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container:not(.invert-hover) .gallery-item-hover:before {
+                                                                                    --itemOpacity: #33343F;
+                                                                                    background: rgba(51, 52, 63, 0) !important
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container:not(.invert-hover) .gallery-item-hover.default.force-hover:before,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container:not(.invert-hover):hover .gallery-item-hover.default:not(.hide-hover):before {
+                                                                                    background: #33343F !important
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.invert-hover .gallery-item-hover:before {
+                                                                                    --itemOpacity: #33343F;
+                                                                                    background: rgba(51, 52, 63, 0) !important
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.invert-hover .gallery-item-hover.default.force-hover:before,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.invert-hover:hover .gallery-item-hover.default:not(.hide-hover):before {
+                                                                                    background: #33343F !important
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-item-bottom-info .gallery-item-title,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-item-bottom-info .info-element-title,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-item-top-info .gallery-item-title,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-item-top-info .info-element-title,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-item-left-info .gallery-item-title,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-item-left-info .info-element-title,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-item-right-info .gallery-item-title,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-item-right-info .info-element-title,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-slideshow-info .gallery-item-title,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-slideshow-info .info-element-title {
+                                                                                    --itemFontSlideshow: normal normal normal 22px/1.38em montserrat, sans-serif;
+                                                                                    --itemFontColorSlideshow: #33343F;
+                                                                                    color: #33343F !important;
+                                                                                    font: normal normal normal 22px/27px avenir-lt-w01_85-heavy1475544, sans-serif !important;
+                                                                                    text-decoration:
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-item-bottom-info .gallery-item-description,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-item-bottom-info .info-element-description,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-item-top-info .gallery-item-description,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-item-top-info .info-element-description,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-item-left-info .gallery-item-description,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-item-left-info .info-element-description,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-item-right-info .gallery-item-description,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-item-right-info .info-element-description,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-slideshow-info .gallery-item-description,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-slideshow-info .info-element-description {
+                                                                                    --itemDescriptionFontColorSlideshow: #33343F;
+                                                                                    --itemDescriptionFontSlideshow: normal normal normal 15px/1.75em montserrat, sans-serif;
+                                                                                    color: #33343F !important;
+                                                                                    font: normal normal normal 15px/18px avenir-lt-w01_35-light1475496, sans-serif !important;
+                                                                                    text-decoration:
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-item-text .custom-button-wrapper button,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-item-text .info-element-custom-button-wrapper button,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-item-bottom-info .custom-button-wrapper button,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-item-bottom-info .info-element-custom-button-wrapper button,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-item-top-info .custom-button-wrapper button,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-item-top-info .info-element-custom-button-wrapper button,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-item-left-info .custom-button-wrapper button,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-item-left-info .info-element-custom-button-wrapper button,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-item-right-info .custom-button-wrapper button,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-item-right-info .info-element-custom-button-wrapper button,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-slideshow-info .custom-button-wrapper button,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container .gallery-slideshow-info .info-element-custom-button-wrapper button {
+                                                                                    --customButtonFontForHover: normal normal normal 18px/1.75em montserrat, sans-serif;
+                                                                                    --customButtonFontColorForHover: #33343F;
+                                                                                    --externalCustomButtonBorderWidth: 0;
+                                                                                    --externalCustomButtonBorderRadius: 0;
+                                                                                    font: normal normal normal 15px/18px avenir-lt-w01_35-light1475496, sans-serif;
+                                                                                    color: #33343F !important;
+                                                                                    background: #33343F !important;
+                                                                                    border-color: #33343F;
+                                                                                    border-width: 0px;
+                                                                                    border-radius: 0px
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-wrapper .gallery-item.load-with-color:not(.image-loaded) {
+                                                                                    --imageLoadingColor: #B6B6B8;
+                                                                                    background-color: #B6B6B8
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-wrapper .gallery-item.gallery-item-video i.gallery-item-video-play-triangle {
+                                                                                    --itemFontColor: #FFFFFF;
+                                                                                    color: rgb(255, 255, 255)
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-wrapper .gallery-item.gallery-item-video i.gallery-item-video-play-background {
+                                                                                    --itemOpacity: #33343F;
+                                                                                    color: rgba(255, 255, 255, 0) !important
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-wrapper .gallery-slideshow-info svg .gallery-item-svg-background,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-wrapper .gallery-item-hover svg .gallery-item-svg-background {
+                                                                                    --itemOpacity: #33343F;
+                                                                                    fill: rgba(255, 255, 255, 0) !important
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-wrapper .gallery-slideshow-info .gradient-top,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-wrapper .gallery-item-hover .gradient-top {
+                                                                                    --itemOpacity: #33343F;
+                                                                                    background: linear-gradient(rgba(255, 255, 255, 0) 0, transparent 140px) !important
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-wrapper .gallery-slideshow-info {
+                                                                                    --itemIconColorSlideshow: #33343F
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-wrapper .gallery-slideshow-info i:not(.pro-gallery-loved):not(.info-element-loved),
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-wrapper .gallery-slideshow-info button:not(.pro-gallery-loved):not(.info-element-loved):not(.info-element-custom-button-button):not(.artstore-add-to-cart-button),
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-wrapper .gallery-slideshow-info a {
+                                                                                    color: rgb(255, 255, 255) !important
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-wrapper .gallery-slideshow-info svg .gallery-item-svg-foreground {
+                                                                                    fill: rgb(255, 255, 255) !important
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-wrapper .gallery-slideshow-info .gallery-item-title,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-wrapper .gallery-slideshow-info .info-element-title {
+                                                                                    --itemFontSlideshow: normal normal normal 28px/1.38em montserrat, sans-serif;
+                                                                                    --itemFontColorSlideshow: #33343F;
+                                                                                    color: rgb(255, 255, 255) !important;
+                                                                                    font: normal normal normal 22px/27px avenir-lt-w01_85-heavy1475544, sans-serif !important;
+                                                                                    text-decoration:
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-wrapper .gallery-slideshow-info .gallery-item-description,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-wrapper .gallery-slideshow-info .info-element-description {
+                                                                                    --itemDescriptionFontSlideshow: normal normal normal 15px/1.75em montserrat, sans-serif;
+                                                                                    --itemDescriptionFontColorSlideshow: #33343F;
+                                                                                    color: rgb(255, 255, 255) !important;
+                                                                                    font: normal normal normal 15px/18px avenir-lt-w01_35-light1475496, sans-serif !important;
+                                                                                    text-decoration:
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-wrapper .gallery-item-hover {
+                                                                                    --itemIconColor: #FFFFFF
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-wrapper .gallery-item-hover i:not(.pro-gallery-loved):not(.info-element-loved),
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-wrapper .gallery-item-hover button:not(.pro-gallery-loved):not(.info-element-loved):not(.info-element-custom-button-button),
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-wrapper .gallery-item-hover a {
+                                                                                    color: rgb(255, 255, 255) !important
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-wrapper .gallery-item-hover svg .gallery-item-svg-foreground {
+                                                                                    fill: rgb(255, 255, 255) !important
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-wrapper .gallery-item-hover .gallery-item-title,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-wrapper .gallery-item-hover .info-element-title {
+                                                                                    --itemFont: normal normal normal 28px/1.38em montserrat, sans-serif;
+                                                                                    --itemFontColor: #FFFFFF;
+                                                                                    color: rgb(255, 255, 255);
+                                                                                    font: normal normal normal 40px/50px avenir-lt-w01_85-heavy1475544, sans-serif;
+                                                                                    text-decoration:
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-wrapper .gallery-item-hover .gallery-item-description,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-wrapper .gallery-item-hover .info-element-description {
+                                                                                    --itemDescriptionFont: normal normal normal 15px/1.75em montserrat, sans-serif;
+                                                                                    --itemDescriptionFontColor: #FFFFFF;
+                                                                                    color: rgb(255, 255, 255) !important;
+                                                                                    font: normal normal normal 15px/18px avenir-lt-w01_35-light1475496, sans-serif;
+                                                                                    text-decoration:
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-wrapper .gallery-item-hover .custom-button-wrapper,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-wrapper .gallery-item-hover .info-element-custom-button-wrapper {
+                                                                                    --customButtonFontColor: #FFFFFF;
+                                                                                    color: rgb(255, 255, 255) !important
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-wrapper .gallery-item-hover .custom-button-wrapper button,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-wrapper .gallery-item-hover .info-element-custom-button-wrapper button {
+                                                                                    --customButtonColor: #33343F;
+                                                                                    --customButtonBorderRadius: 0;
+                                                                                    --customButtonBorderWidth: 1;
+                                                                                    --customButtonBorderColor: #FFFFFF;
+                                                                                    --customButtonFont: normal normal normal 18px/1.75em montserrat, sans-serif;
+                                                                                    color: rgb(255, 255, 255) !important;
+                                                                                    font: normal normal normal 15px/18px avenir-lt-w01_35-light1475496, sans-serif;
+                                                                                    text-decoration: ;
+                                                                                    background: #FFFFFF !important;
+                                                                                    border-width: undefinedpx;
+                                                                                    border-radius: undefinedpx;
+                                                                                    border-color: rgb(255, 255, 255)
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator:not(.invert-hover) .gallery-item-hover:not(.hide-hover):before {
+                                                                                    --itemOpacity: #33343F;
+                                                                                    background: rgba(255, 255, 255, 0) !important
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator:not(.invert-hover) .gallery-item-hover.default.force-hover:before,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator:not(.invert-hover):hover .gallery-item-hover.default:not(.hide-hover):before {
+                                                                                    background: #33343F !important
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator.invert-hover .gallery-item-hover:before {
+                                                                                    --itemOpacity: #33343F;
+                                                                                    background: rgba(255, 255, 255, 0) !important
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator.invert-hover .gallery-item-hover.default.force-hover:before,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator.invert-hover:hover .gallery-item-hover.default:not(.hide-hover):before {
+                                                                                    background: #33343F !important
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-bottom-info .gallery-item-title,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-bottom-info .info-element-title,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-top-info .gallery-item-title,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-top-info .info-element-title,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-left-info .gallery-item-title,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-left-info .info-element-title,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-right-info .gallery-item-title,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-right-info .info-element-title,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-slideshow-info .gallery-item-title,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-slideshow-info .info-element-title {
+                                                                                    --itemFontSlideshow: normal normal normal 22px/1.38em montserrat, sans-serif;
+                                                                                    --itemFontColorSlideshow: #33343F;
+                                                                                    color: rgb(255, 255, 255) !important;
+                                                                                    font: normal normal normal 22px/27px avenir-lt-w01_85-heavy1475544, sans-serif !important;
+                                                                                    text-decoration:
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-bottom-info .gallery-item-description,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-bottom-info .info-element-description,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-top-info .gallery-item-description,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-top-info .info-element-description,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-left-info .gallery-item-description,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-left-info .info-element-description,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-right-info .gallery-item-description,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-right-info .info-element-description,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-slideshow-info .gallery-item-description,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-slideshow-info .info-element-description {
+                                                                                    --itemDescriptionFontColorSlideshow: #33343F;
+                                                                                    --itemDescriptionFontSlideshow: normal normal normal 15px/1.75em montserrat, sans-serif;
+                                                                                    color: rgb(255, 255, 255) !important;
+                                                                                    font: normal normal normal 15px/18px avenir-lt-w01_35-light1475496, sans-serif !important;
+                                                                                    text-decoration:
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-text .custom-button-wrapper button,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-text .info-element-custom-button-wrapper button,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-bottom-info .custom-button-wrapper button,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-bottom-info .info-element-custom-button-wrapper button,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-top-info .custom-button-wrapper button,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-top-info .info-element-custom-button-wrapper button,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-left-info .custom-button-wrapper button,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-left-info .info-element-custom-button-wrapper button,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-right-info .custom-button-wrapper button,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-item-right-info .info-element-custom-button-wrapper button,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-slideshow-info .custom-button-wrapper button,
+                                                                                .comp-m5qnidsj .pro-gallery.inline-styles .gallery-item-container.pro-gallery-mobile-indicator .gallery-slideshow-info .info-element-custom-button-wrapper button {
+                                                                                    --customButtonFontForHover: normal normal normal 18px/1.75em montserrat, sans-serif;
+                                                                                    --customButtonFontColorForHover: #33343F;
+                                                                                    --externalCustomButtonBorderWidth: 0;
+                                                                                    --externalCustomButtonBorderRadius: 0;
+                                                                                    font: normal normal normal 15px/18px avenir-lt-w01_35-light1475496, sans-serif;
+                                                                                    text-decoration: ;
+                                                                                    color: rgb(255, 255, 255) !important;
+                                                                                    background: #FFFFFF !important;
+                                                                                    border-color: rgb(255, 255, 255);
+                                                                                    border-width: undefinedpx;
+                                                                                    border-radius: undefinedpx
+                                                                                }
+
+                                                                                .comp-m5qnidsj .te-pro-gallery-text-item {
+                                                                                    font: normal normal normal 15px/1.88em montserrat, sans-serif;
+                                                                                    color: #FFFFFF
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-fullscreen-wrapper .pro-fullscreen-text-item {
+                                                                                    --fullscreen-text-item-bg: #33343F;
+                                                                                    background-color: #33343F
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-fullscreen-wrapper #fullscreen-view.fullscreen-bright.pro-fullscreen-inline-styles {
+                                                                                    --bgColorExpand: #FFFFFF;
+                                                                                    background-color: #FFFFFF
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-fullscreen-wrapper #fullscreen-view.fullscreen-bright.pro-fullscreen-inline-styles .pro-fullscreen-selected-license,
+                                                                                .comp-m5qnidsj .pro-fullscreen-wrapper #fullscreen-view.fullscreen-bright.pro-fullscreen-inline-styles .pro-fullscreen-checkout-link {
+                                                                                    --descriptionColorExpand: #33343F;
+                                                                                    --descriptionFontExpand: normal normal normal 18px/1.75em montserrat, sans-serif;
+                                                                                    color: #33343F;
+                                                                                    font: normal normal normal 18px/1.75em montserrat, sans-serif;
+                                                                                    text-decoration:
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-fullscreen-wrapper #fullscreen-view.fullscreen-bright.pro-fullscreen-inline-styles .fullscreen-side-bar,
+                                                                                .comp-m5qnidsj .pro-fullscreen-wrapper #fullscreen-view.fullscreen-bright.pro-fullscreen-inline-styles .fullscreen-bottom-mobile-info {
+                                                                                    --bgColorExpand: #FFFFFF;
+                                                                                    background-color: #FFFFFF
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-fullscreen-wrapper #fullscreen-view.fullscreen-bright.pro-fullscreen-inline-styles .fullscreen-side-bar-title h1 {
+                                                                                    --titleColorExpand: #33343F;
+                                                                                    --titleFontExpand: normal normal normal 28px/1.38em montserrat, sans-serif;
+                                                                                    color: #33343F;
+                                                                                    font: normal normal normal 72px/1.25em montserrat, sans-serif;
+                                                                                    text-decoration:
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-fullscreen-wrapper #fullscreen-view.fullscreen-bright.pro-fullscreen-inline-styles .fullscreen-side-bar-description,
+                                                                                .comp-m5qnidsj .pro-fullscreen-wrapper #fullscreen-view.fullscreen-bright.pro-fullscreen-inline-styles .fullscreen-side-bar-description .fullscreen-side-bar-description-line,
+                                                                                .comp-m5qnidsj .pro-fullscreen-wrapper #fullscreen-view.fullscreen-bright.pro-fullscreen-inline-styles .fullscreen-side-bar-exif,
+                                                                                .comp-m5qnidsj .pro-fullscreen-wrapper #fullscreen-view.fullscreen-bright.pro-fullscreen-inline-styles .fullscreen-side-bar-link,
+                                                                                .comp-m5qnidsj .pro-fullscreen-wrapper #fullscreen-view.fullscreen-bright.pro-fullscreen-inline-styles .fullscreen-bottom-link {
+                                                                                    --descriptionColorExpand: #33343F;
+                                                                                    --descriptionFontExpand: normal normal normal 18px/1.75em montserrat, sans-serif;
+                                                                                    color: #33343F;
+                                                                                    font: normal normal normal 18px/1.75em montserrat, sans-serif;
+                                                                                    text-decoration:
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-fullscreen-wrapper #fullscreen-view.fullscreen-bright.pro-fullscreen-inline-styles .fullscreen-side-bar-description:after,
+                                                                                .comp-m5qnidsj .pro-fullscreen-wrapper #fullscreen-view.fullscreen-bright.pro-fullscreen-inline-styles .fullscreen-side-bar-description .fullscreen-side-bar-description-line:after,
+                                                                                .comp-m5qnidsj .pro-fullscreen-wrapper #fullscreen-view.fullscreen-bright.pro-fullscreen-inline-styles .fullscreen-side-bar-exif:after,
+                                                                                .comp-m5qnidsj .pro-fullscreen-wrapper #fullscreen-view.fullscreen-bright.pro-fullscreen-inline-styles .fullscreen-side-bar-link:after,
+                                                                                .comp-m5qnidsj .pro-fullscreen-wrapper #fullscreen-view.fullscreen-bright.pro-fullscreen-inline-styles .fullscreen-bottom-link:after {
+                                                                                    --descriptionColorExpand: #33343F;
+                                                                                    border-color: #33343F
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-fullscreen-wrapper #fullscreen-view.fullscreen-bright.pro-fullscreen-inline-styles .fullscreen-side-bar-social i:not(.pro-gallery-loved),
+                                                                                .comp-m5qnidsj .pro-fullscreen-wrapper #fullscreen-view.fullscreen-bright.pro-fullscreen-inline-styles .fullscreen-side-bar-social a,
+                                                                                .comp-m5qnidsj .pro-fullscreen-wrapper #fullscreen-view.fullscreen-bright.pro-fullscreen-inline-styles .fullscreen-side-bar-social button,
+                                                                                .comp-m5qnidsj .pro-fullscreen-wrapper #fullscreen-view.fullscreen-bright.pro-fullscreen-inline-styles .fullscreen-nav i:not(.pro-gallery-loved),
+                                                                                .comp-m5qnidsj .pro-fullscreen-wrapper #fullscreen-view.fullscreen-bright.pro-fullscreen-inline-styles .fullscreen-nav a,
+                                                                                .comp-m5qnidsj .pro-fullscreen-wrapper #fullscreen-view.fullscreen-bright.pro-fullscreen-inline-styles .fullscreen-nav button,
+                                                                                .comp-m5qnidsj .pro-fullscreen-wrapper #fullscreen-view.fullscreen-bright.pro-fullscreen-inline-styles .fullscreen-mobile-bar i:not(.pro-gallery-loved),
+                                                                                .comp-m5qnidsj .pro-fullscreen-wrapper #fullscreen-view.fullscreen-bright.pro-fullscreen-inline-styles .fullscreen-mobile-bar a,
+                                                                                .comp-m5qnidsj .pro-fullscreen-wrapper #fullscreen-view.fullscreen-bright.pro-fullscreen-inline-styles .fullscreen-mobile-bar button,
+                                                                                .comp-m5qnidsj .pro-fullscreen-wrapper #fullscreen-view.fullscreen-bright.pro-fullscreen-inline-styles .fullscreen-social i:not(.pro-gallery-loved),
+                                                                                .comp-m5qnidsj .pro-fullscreen-wrapper #fullscreen-view.fullscreen-bright.pro-fullscreen-inline-styles .fullscreen-social a,
+                                                                                .comp-m5qnidsj .pro-fullscreen-wrapper #fullscreen-view.fullscreen-bright.pro-fullscreen-inline-styles .fullscreen-social button {
+                                                                                    --descriptionColorExpand: #33343F;
+                                                                                    color: #33343F
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-fullscreen-wrapper #fullscreen-view.fullscreen-bright.pro-fullscreen-inline-styles i.fullscreen-item-video-play.progallery-svg-font-icons-play-triangle {
+                                                                                    --descriptionColorExpand: #33343F;
+                                                                                    color: #33343F
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-fullscreen-wrapper #fullscreen-view.fullscreen-bright.pro-fullscreen-inline-styles i.fullscreen-item-video-play.progallery-svg-font-icons-play-background {
+                                                                                    --bgColorExpand: #FFFFFF;
+                                                                                    color: #FFFFFF
+                                                                                }
+
+                                                                                .comp-m5qnidsj .pro-fullscreen-wrapper #fullscreen-view.fullscreen-bright.pro-fullscreen-inline-styles .fullscreen-icon {
+                                                                                    --descriptionColorExpand: #33343F;
+                                                                                    --bgColorExpand: #FFFFFF;
+                                                                                    color: #33343F;
+                                                                                    background: #FFFFFF
+                                                                                }
+                                                                            

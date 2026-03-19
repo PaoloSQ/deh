@@ -1,17 +1,10 @@
 [
   {
-    "filePath": "C:\\www\\producción\\deh\\descarga-express\\sites\\www.dehonline.es\\360homeservice\\index.html",
-    "relPath": "sites/www.dehonline.es/360homeservice/index.html",
-    "detected": [
-      "sentry"
-    ],
-    "removed": [
-      "telemetry guard refresh",
-      "fedops stub"
-    ],
-    "pending": [
-      "sentry"
-    ],
-    "modified": true
+    "filePath": "C:\\Users\\ben28\\Desktop\\deh\\descarga-express\\sites\\www.dehonline.es\\logs-api-panel.html",
+    "relPath": "sites/www.dehonline.es/logs-api-panel.html",
+    "detected": [],
+    "removed": [],
+    "pending": [],
+    "modified": false
   }
 ]

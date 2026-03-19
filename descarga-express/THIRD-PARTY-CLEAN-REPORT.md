@@ -1,17 +1,17 @@
 # Limpieza de terceros
 
-- Fecha: 2026-03-18T17:53:52.686Z
-- Escritura activada: si
+- Fecha: 2026-03-19T00:18:00.428Z
+- Escritura activada: no
 - Archivos procesados: 1
 
 | Archivo | Detectado | Eliminado | Pendiente | Modificado |
 |---|---|---|---|---|
-| sites/www.dehonline.es/360homeservice/index.html | sentry | 2 | 1 | si |
+| sites/www.dehonline.es/logs-api-panel.html | - | 0 | 0 | no |
 
-## sites/www.dehonline.es/360homeservice/index.html
+## sites/www.dehonline.es/logs-api-panel.html
 
-- Detectado: sentry
-- Eliminado: telemetry guard refresh | fedops stub
-- Pendiente: sentry
-- Modificado: si
+- Detectado: -
+- Eliminado: -
+- Pendiente: -
+- Modificado: no
 

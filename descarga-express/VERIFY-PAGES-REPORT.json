@@ -1,33 +1,220 @@
 [
   {
-    "filePath": "C:\\www\\producción\\deh\\descarga-express\\sites\\www.dehonline.es\\360homeservice\\index.html",
-    "relPath": "sites/www.dehonline.es/360homeservice/index.html",
-    "url": "http://www.dehonline.es:8080/360homeservice/",
-    "status": "pageerror",
+    "filePath": "C:\\Users\\ben28\\Desktop\\deh\\descarga-express\\sites\\soporte.dehonline.es\\index.html",
+    "relPath": "sites/soporte.dehonline.es/index.html",
+    "url": "http://soporte.dehonline.es:8083/",
+    "status": "ok",
     "counts": {
       "local-file": 0,
       "local-api": 0,
       "third-party": 0,
-      "runtime": 3,
+      "runtime": 0,
       "other": 0
+    },
+    "issues": []
+  },
+  {
+    "filePath": "C:\\Users\\ben28\\Desktop\\deh\\descarga-express\\sites\\www.consola.dehonline.es\\index.html",
+    "relPath": "sites/www.consola.dehonline.es/index.html",
+    "url": "http://www.consola.dehonline.es:8083/",
+    "status": "ok",
+    "counts": {
+      "local-file": 0,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 0,
+      "other": 0
+    },
+    "issues": []
+  },
+  {
+    "filePath": "C:\\Users\\ben28\\Desktop\\deh\\descarga-express\\sites\\www.dehonline.es\\index.html",
+    "relPath": "sites/www.dehonline.es/index.html",
+    "url": "http://www.dehonline.es:8083/",
+    "status": "local-file-issues",
+    "counts": {
+      "local-file": 2,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 0,
+      "other": 2
     },
     "issues": [
       {
-        "type": "pageerror",
-        "text": "Cannot read properties of undefined (reading 'match')\nm (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/thunderbolt-commons.b0f4162a.bundle.min.js:1:36489)",
-        "category": "runtime"
-      },
-      {
-        "type": "pageerror",
-        "text": "Cannot read properties of undefined (reading 'match')\nm (http://www.dehonline.es:8080/assets/js/services/wix-thunderbolt/dist/thunderbolt-commons.b0f4162a.bundle.min.js:1:36489)",
-        "category": "runtime"
+        "type": "response",
+        "status": 404,
+        "url": "http://www.dehonline.es:8083/assets/img/media/img",
+        "category": "local-file"
       },
       {
         "type": "console",
-        "level": "warn",
-        "text": "The resource http://www.dehonline.es:8080/assets/misc/siteassets.parastorage.com/pages/pages/thunderbolt was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.",
-        "category": "runtime"
+        "level": "error",
+        "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "category": "other"
+      },
+      {
+        "type": "response",
+        "status": 404,
+        "url": "http://www.dehonline.es:8083/assets/img/media/img",
+        "category": "local-file"
+      },
+      {
+        "type": "console",
+        "level": "error",
+        "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "category": "other"
       }
     ]
+  },
+  {
+    "filePath": "C:\\Users\\ben28\\Desktop\\deh\\descarga-express\\sites\\www.dehonline.es\\blog.html",
+    "relPath": "sites/www.dehonline.es/blog.html",
+    "url": "http://www.dehonline.es:8083/blog",
+    "status": "ok",
+    "counts": {
+      "local-file": 0,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 0,
+      "other": 0
+    },
+    "issues": []
+  },
+  {
+    "filePath": "C:\\Users\\ben28\\Desktop\\deh\\descarga-express\\sites\\www.dehonline.es\\post\\administradores-de-fincas-guardianes-de-la-seguridad-y-la-excelencia.html",
+    "relPath": "sites/www.dehonline.es/post/administradores-de-fincas-guardianes-de-la-seguridad-y-la-excelencia.html",
+    "url": "http://www.dehonline.es:8083/post/administradores-de-fincas-guardianes-de-la-seguridad-y-la-excelencia",
+    "status": "local-file-issues",
+    "counts": {
+      "local-file": 2,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 0,
+      "other": 3
+    },
+    "issues": [
+      {
+        "type": "console",
+        "level": "warn",
+        "text": "Unrecognized feature: 'vr'.",
+        "category": "other"
+      },
+      {
+        "type": "console",
+        "level": "error",
+        "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "category": "other"
+      },
+      {
+        "type": "console",
+        "level": "error",
+        "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "category": "other"
+      },
+      {
+        "type": "response",
+        "status": 404,
+        "url": "http://www.dehonline.es:8083/assets/img/media/img",
+        "category": "local-file"
+      },
+      {
+        "type": "response",
+        "status": 404,
+        "url": "http://www.dehonline.es:8083/assets/img/media/img",
+        "category": "local-file"
+      }
+    ]
+  },
+  {
+    "filePath": "C:\\Users\\ben28\\Desktop\\deh\\descarga-express\\sites\\www.dehonline.es\\grupos\\energia.html",
+    "relPath": "sites/www.dehonline.es/grupos/energia.html",
+    "url": "http://www.dehonline.es:8083/grupos/energia",
+    "status": "local-file-issues",
+    "counts": {
+      "local-file": 2,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 0,
+      "other": 2
+    },
+    "issues": [
+      {
+        "type": "response",
+        "status": 404,
+        "url": "http://www.dehonline.es:8083/assets/img/media/img",
+        "category": "local-file"
+      },
+      {
+        "type": "console",
+        "level": "error",
+        "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "category": "other"
+      },
+      {
+        "type": "response",
+        "status": 404,
+        "url": "http://www.dehonline.es:8083/assets/img/media/img",
+        "category": "local-file"
+      },
+      {
+        "type": "console",
+        "level": "error",
+        "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "category": "other"
+      }
+    ]
+  },
+  {
+    "filePath": "C:\\Users\\ben28\\Desktop\\deh\\descarga-express\\sites\\www.dehonline.es\\partners\\app_vecinos.html",
+    "relPath": "sites/www.dehonline.es/partners/app_vecinos.html",
+    "url": "http://www.dehonline.es:8083/partners/app_vecinos",
+    "status": "local-file-issues",
+    "counts": {
+      "local-file": 2,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 0,
+      "other": 2
+    },
+    "issues": [
+      {
+        "type": "response",
+        "status": 404,
+        "url": "http://www.dehonline.es:8083/assets/img/media/img",
+        "category": "local-file"
+      },
+      {
+        "type": "console",
+        "level": "error",
+        "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "category": "other"
+      },
+      {
+        "type": "response",
+        "status": 404,
+        "url": "http://www.dehonline.es:8083/assets/img/media/img",
+        "category": "local-file"
+      },
+      {
+        "type": "console",
+        "level": "error",
+        "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "category": "other"
+      }
+    ]
+  },
+  {
+    "filePath": "C:\\Users\\ben28\\Desktop\\deh\\descarga-express\\sites\\www.dehonline.es\\condiciones-de-uso.html",
+    "relPath": "sites/www.dehonline.es/condiciones-de-uso.html",
+    "url": "http://www.dehonline.es:8083/condiciones-de-uso",
+    "status": "ok",
+    "counts": {
+      "local-file": 0,
+      "local-api": 0,
+      "third-party": 0,
+      "runtime": 0,
+      "other": 0
+    },
+    "issues": []
   }
 ]

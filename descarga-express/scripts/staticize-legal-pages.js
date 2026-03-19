@@ -14,6 +14,12 @@ const DEFAULT_TARGETS = [
 const REPORT_MD = path.resolve(PROJECT_ROOT, 'STATICIZE-PAGES-REPORT.md');
 const REPORT_JSON = path.resolve(PROJECT_ROOT, 'STATICIZE-PAGES-REPORT.json');
 const LOCAL_IMAGE_FALLBACK_TAG = '<script defer src="/assets/js/local/image-fallback.js"></script>';
+const TAG_BUNDLER_FONT_PREFIXES = [
+  '//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/',
+  'https://static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/',
+  'http://static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/'
+];
+const LOCAL_TAG_BUNDLER_FONT_PREFIX = '/assets/fonts/tag-bundler/api/v1/fonts-cache/googlefont/';
 
 function parseArgs(argv) {
   const options = {
@@ -22,6 +28,7 @@ function parseArgs(argv) {
     limit: 0,
     targetDir: '',
     extension: null,
+    marker: 'staticized: legal page',
     paths: []
   };
 
@@ -32,6 +39,7 @@ function parseArgs(argv) {
     else if (arg === '--limit') options.limit = Number(argv[++i] || 0);
     else if (arg === '--target-dir') options.targetDir = String(argv[++i] || '');
     else if (arg === '--extension') options.extension = String(argv[++i] || '');
+    else if (arg === '--marker') options.marker = String(argv[++i] || '').trim() || options.marker;
     else options.paths.push(path.resolve(process.cwd(), arg));
   }
 
@@ -114,6 +122,19 @@ function injectLocalImageFallback(text, changes) {
   return `${LOCAL_IMAGE_FALLBACK_TAG}\n${text}`;
 }
 
+function rewriteLocalFontUrls(text, changes) {
+  let next = text;
+
+  for (const prefix of TAG_BUNDLER_FONT_PREFIXES) {
+    if (next.includes(prefix)) {
+      next = next.split(prefix).join(LOCAL_TAG_BUNDLER_FONT_PREFIX);
+      changes.removed.push('tag-bundler font urls localized');
+    }
+  }
+
+  return next;
+}
+
 function normalizeTargets(options) {
   const explicit = options.paths
     .filter((filePath) => filePath.startsWith(PROJECT_ROOT) && fs.existsSync(filePath))
@@ -148,8 +169,9 @@ function normalizeTargets(options) {
   return unique(targets);
 }
 
-function staticizeHtml(text, changes) {
+function staticizeHtml(text, changes, options) {
   let next = ensureTitle(text, changes);
+  next = rewriteLocalFontUrls(next, changes);
 
   next = next.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, (block) => {
     if (/type=["']application\/ld\+json["']/i.test(block)) {
@@ -177,8 +199,9 @@ function staticizeHtml(text, changes) {
 
   next = next.replace(/\n{3,}/g, '\n\n');
 
-  if (!/staticized: legal page/i.test(next)) {
-    next = next.replace(/<body([^>]*)>/i, `<body$1><!-- staticized: legal page -->`);
+  const markerPattern = new RegExp(options.marker.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i');
+  if (!markerPattern.test(next)) {
+    next = next.replace(/<body([^>]*)>/i, `<body$1><!-- ${options.marker} -->`);
   }
 
   next = injectLocalImageFallback(next, changes);
@@ -228,7 +251,7 @@ function main() {
   for (const filePath of files) {
     const original = fs.readFileSync(filePath, 'utf8');
     const changes = { removed: [] };
-    const staticized = staticizeHtml(original, changes);
+    const staticized = staticizeHtml(original, changes, options);
     const modified = staticized !== original;
 
     if (modified && options.write) {

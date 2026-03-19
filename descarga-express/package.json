@@ -12,7 +12,7 @@
 		"audit-visible-mismatches": "node scripts/audit-visible-mismatches.js",
 		"audit-interactions": "node scripts/audit-interactions.js",
 		"clean-third-party": "node scripts/clean-third-party.js",
-		"sync-author-avatars": "node scripts/sync-author-avatars.js",
+		"extract-inline-assets": "node scripts/extract-inline-page-assets.js",
 		"staticize-pages": "node scripts/staticize-legal-pages.js",
 		"staticize-legal": "node scripts/staticize-legal-pages.js",
 		"verify-pages": "node scripts/verify-pages.js"
@@ -22,8 +22,11 @@
 		"morgan": "^1.10.0"
 	},
 	"devDependencies": {
+		"cheerio": "^1.2.0",
+		"he": "^1.2.0",
 		"pixelmatch": "^7.1.0",
 		"pngjs": "^7.0.0",
-		"puppeteer": "^24.38.0"
+		"puppeteer": "^24.38.0",
+		"sharp": "^0.34.5"
 	}
 }

@@ -1,0 +1,56 @@
+/* END STYLABLE DIRECTIVE RULES */
+
+#comp-m7ksgp43 .style-m7ktl39m__root:hover .StylableButton2545352419__icon {
+    fill: #FFFFFF;
+}
+
+/* START STYLABLE DIRECTIVE RULES */
+
+#comp-m7ksgp43 .style-m7ktl39m__root{
+    -st-extends: StylableButton;
+    transition: all 0.2s ease, visibility 0s;
+    border: 1px solid #33343F;
+    background: #FFFFFF
+}
+
+#comp-m7ksgp43 .style-m7ktl39m__root:hover {
+    background: #33343F;
+}
+
+#comp-m7ksgp43 .style-m7ktl39m__root:hover .StylableButton2545352419__label {
+    color: #FFFFFF;
+}
+
+#comp-m7ksgp43 .style-m7ktl39m__root:disabled{
+    background: #E2E2E2
+}
+
+#comp-m7ksgp43 .style-m7ktl39m__root:disabled .StylableButton2545352419__label{
+    color: #8F8F8F
+}
+
+#comp-m7ksgp43 .style-m7ktl39m__root:disabled .StylableButton2545352419__icon{
+    fill: #8F8F8F
+}
+
+#comp-m7ksgp43 .style-m7ktl39m__root .StylableButton2545352419__container{
+    transition: inherit
+}
+
+#comp-m7ksgp43 .style-m7ktl39m__root .StylableButton2545352419__label{
+    transition: inherit;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    color: #33343F;
+    font-family: poppins-extralight,poppins,sans-serif; font-family: montserrat,sans-serif; font-size: 15px; font-weight: normal; font-style: normal;
+    margin: 0px 2px 0px 0px
+}
+
+#comp-m7ksgp43 .style-m7ktl39m__root .StylableButton2545352419__icon{
+    transition: inherit;
+    display: initial;
+    fill: #33343F;
+    margin: 0px 0px 0px 2px;
+    width: 12px;
+    height: 12px;
+}

@@ -1,0 +1,484 @@
+#m0mic{width:auto;min-height:40px;}#pageBackground_m0mic{--bg-position:absolute;--bg-overlay-color:rgb(var(--color_11));--bg-gradient:none;}#comp-lqco28wj{--bg-overlay-color:transparent;--bg-gradient:none;min-width:980px;}.TPAMultiSection_lqco27vo {
+				--wix-direction: ltr;
+--infoColumnWidth: 30;
+--coverImageHeight: 221;
+--hSpacing: 20;
+--buttonType: 1;
+--buttonBorderRadius: 100;
+--buttonBorderWidth: 1;
+--secondaryButtonType: 1;
+--secondaryButtonBorderRadius: 100;
+--secondaryButtonBorderWidth: 1;
+--cardBorderCornerRadius: 20;
+--textFieldBorderRadius: 20;
+--textFieldBorderWidth: 1;
+--cardBorderWidth: 1;
+--appBorderWidth: 0;
+--mobileButtonTextFontSize: 16;
+--shadowAngle: 180;
+--shadowDistance: 0;
+--shadowBlur: 10;
+--coverImageLayout: 2;
+--dividerTabWidth: 1;
+--mediaImagesPerRow: 5;
+--mediaLayout: 1;
+--layoutSpacing: 20;
+--vSpacing: 20;
+--cardTitleFont: normal normal normal 16px/1.4em montserrat,sans-serif;
+--cardSubtitleFont: normal normal normal 14px/1.4em montserrat,sans-serif;
+--textFieldFont: normal normal normal 14px/1.4em montserrat,sans-serif;
+--postsTitleFont: normal normal normal 20px/1.4em montserrat,sans-serif;
+--postingDateFont: normal normal normal 14px/1.4em montserrat,sans-serif;
+--commentsReactionsCounterFont: normal normal normal 14px/1.4em montserrat,sans-serif;
+--groupTitleFont: normal normal normal 20px/1.4em montserrat,sans-serif;
+--groupSubtitleFont: normal normal normal 14px/1.4em montserrat,sans-serif;
+--tabsColor: 51,52,63;
+--tabsColor-rgb: 51,52,63;
+--tabsColor-opacity: 1;
+--selectedTabColor: 204,0,0;
+--selectedTabColor-rgb: 204,0,0;
+--selectedTabColor-opacity: 1;
+--postsTextColor: 51,52,63;
+--postsTextColor-rgb: 51,52,63;
+--postsTextColor-opacity: 1;
+--memberNameColor: 51,52,63;
+--memberNameColor-rgb: 51,52,63;
+--memberNameColor-opacity: 1;
+--cardBodyTextColor: 51,52,63;
+--cardBodyTextColor-rgb: 51,52,63;
+--cardBodyTextColor-opacity: 1;
+--buttonColor: 204,0,0;
+--buttonColor-rgb: 204,0,0;
+--buttonColor-opacity: 1;
+--buttonTextColor: 255,255,255;
+--buttonTextColor-rgb: 255,255,255;
+--buttonTextColor-opacity: 1;
+--buttonBorderColor: 204,0,0;
+--buttonBorderColor-rgb: 204,0,0;
+--buttonBorderColor-opacity: 1;
+--secondaryButtonColor: 255,255,255;
+--secondaryButtonColor-rgb: 255,255,255;
+--secondaryButtonColor-opacity: 1;
+--secondaryButtonTextColor: 0,0,0;
+--secondaryButtonTextColor-rgb: 0,0,0;
+--secondaryButtonTextColor-opacity: 1;
+--secondaryButtonBorderColor: 204,0,0;
+--secondaryButtonBorderColor-rgb: 204,0,0;
+--secondaryButtonBorderColor-opacity: 1;
+--textButtonColor: 204,0,0;
+--textButtonColor-rgb: 204,0,0;
+--textButtonColor-opacity: 1;
+--postIconsColor: 51,52,63;
+--postIconsColor-rgb: 51,52,63;
+--postIconsColor-opacity: 1;
+--overlayColor: 51,52,63,0.31;
+--overlayColor-rgb: 51,52,63;
+--overlayColor-opacity: 0.31;
+--appBackgroundColor: 255,255,255;
+--appBackgroundColor-rgb: 255,255,255;
+--appBackgroundColor-opacity: 1;
+--appBorderColor: 255,255,255,0.3;
+--appBorderColor-rgb: 255,255,255;
+--appBorderColor-opacity: 0.3;
+--buttonHoverColor: 51,52,63,0.7;
+--buttonHoverColor-rgb: 51,52,63;
+--buttonHoverColor-opacity: 0.7;
+--buttonHoverTextColor: 255,255,255,0.7;
+--buttonHoverTextColor-rgb: 255,255,255;
+--buttonHoverTextColor-opacity: 0.7;
+--buttonHoverBorderColor: 51,52,63,0;
+--buttonHoverBorderColor-rgb: 51,52,63;
+--buttonHoverBorderColor-opacity: 0;
+--secondaryButtonHoverColor: 51,52,63,0.7;
+--secondaryButtonHoverColor-rgb: 51,52,63;
+--secondaryButtonHoverColor-opacity: 0.7;
+--secondaryButtonHoverTextColor: 255,255,255,0.7;
+--secondaryButtonHoverTextColor-rgb: 255,255,255;
+--secondaryButtonHoverTextColor-opacity: 0.7;
+--secondaryButtonHoverBorderColor: 51,52,63,0;
+--secondaryButtonHoverBorderColor-rgb: 51,52,63;
+--secondaryButtonHoverBorderColor-opacity: 0;
+--cardBackgroundColor: 255,255,255;
+--cardBackgroundColor-rgb: 255,255,255;
+--cardBackgroundColor-opacity: 1;
+--cardBorderColor: 51,52,63,0.2;
+--cardBorderColor-rgb: 51,52,63;
+--cardBorderColor-opacity: 0.2;
+--shadowColor: 51,52,63,0.1;
+--shadowColor-rgb: 51,52,63;
+--shadowColor-opacity: 0.1;
+--cardTitleColor: 51,52,63;
+--cardTitleColor-rgb: 51,52,63;
+--cardTitleColor-opacity: 1;
+--cardSubtitleColor: 102,103,111;
+--cardSubtitleColor-rgb: 102,103,111;
+--cardSubtitleColor-opacity: 1;
+--textFieldBackgroundColor: 255,255,255;
+--textFieldBackgroundColor-rgb: 255,255,255;
+--textFieldBackgroundColor-opacity: 1;
+--textFieldBorderColor: 51,52,63,0.2;
+--textFieldBorderColor-rgb: 51,52,63;
+--textFieldBorderColor-opacity: 0.2;
+--textFieldPlaceholderColor: 102,103,111;
+--textFieldPlaceholderColor-rgb: 102,103,111;
+--textFieldPlaceholderColor-opacity: 1;
+--textFieldColor: 51,52,63;
+--textFieldColor-rgb: 51,52,63;
+--textFieldColor-opacity: 1;
+--postsTitleColor: 51,52,63;
+--postsTitleColor-rgb: 51,52,63;
+--postsTitleColor-opacity: 1;
+--postingDateColor: 51,52,63;
+--postingDateColor-rgb: 51,52,63;
+--postingDateColor-opacity: 1;
+--commentsReactionsCounterColor: 51,52,63;
+--commentsReactionsCounterColor-rgb: 51,52,63;
+--commentsReactionsCounterColor-opacity: 1;
+--groupHeaderIconsColor: 51,52,63;
+--groupHeaderIconsColor-rgb: 51,52,63;
+--groupHeaderIconsColor-opacity: 1;
+--groupHeaderBackgroundColor: 255,255,255;
+--groupHeaderBackgroundColor-rgb: 255,255,255;
+--groupHeaderBackgroundColor-opacity: 1;
+--groupTitleColor: 51,52,63;
+--groupTitleColor-rgb: 51,52,63;
+--groupTitleColor-opacity: 1;
+--groupSubtitleColor: 51,52,63;
+--groupSubtitleColor-rgb: 51,52,63;
+--groupSubtitleColor-opacity: 1;
+--groupBreadcrumbsColor: 51,52,63;
+--groupBreadcrumbsColor-rgb: 51,52,63;
+--groupBreadcrumbsColor-opacity: 1;
+--dividerTabColor: 153,154,159;
+--dividerTabColor-rgb: 153,154,159;
+--dividerTabColor-opacity: 1;
+--groupBreadcrumbsFont: normal normal normal 14px/17px montserrat,sans-serif;
+--groupBreadcrumbsFont-style: normal;
+--groupBreadcrumbsFont-variant: normal;
+--groupBreadcrumbsFont-weight: normal;
+--groupBreadcrumbsFont-size: 14px;
+--groupBreadcrumbsFont-line-height: 17px;
+--groupBreadcrumbsFont-family: montserrat,sans-serif;
+--groupBreadcrumbsFont-text-decoration: none;
+--tabsFont: normal normal normal 14px/17px montserrat,sans-serif;
+--tabsFont-style: normal;
+--tabsFont-variant: normal;
+--tabsFont-weight: normal;
+--tabsFont-size: 14px;
+--tabsFont-line-height: 17px;
+--tabsFont-family: montserrat,sans-serif;
+--tabsFont-text-decoration: none;
+--postsTextFont: normal normal normal 14px/17px montserrat,sans-serif;
+--postsTextFont-style: normal;
+--postsTextFont-variant: normal;
+--postsTextFont-weight: normal;
+--postsTextFont-size: 14px;
+--postsTextFont-line-height: 17px;
+--postsTextFont-family: montserrat,sans-serif;
+--postsTextFont-text-decoration: none;
+--memberNameFont: normal normal normal 14px/17px montserrat,sans-serif;
+--memberNameFont-style: normal;
+--memberNameFont-variant: normal;
+--memberNameFont-weight: normal;
+--memberNameFont-size: 14px;
+--memberNameFont-line-height: 17px;
+--memberNameFont-family: montserrat,sans-serif;
+--memberNameFont-text-decoration: none;
+--cardBodyTextFont: normal normal normal 14px/17px montserrat,sans-serif;
+--cardBodyTextFont-style: normal;
+--cardBodyTextFont-variant: normal;
+--cardBodyTextFont-weight: normal;
+--cardBodyTextFont-size: 14px;
+--cardBodyTextFont-line-height: 17px;
+--cardBodyTextFont-family: montserrat,sans-serif;
+--cardBodyTextFont-text-decoration: none;
+--buttonTextFont: normal normal normal 14px/17px montserrat,sans-serif;
+--buttonTextFont-style: normal;
+--buttonTextFont-variant: normal;
+--buttonTextFont-weight: normal;
+--buttonTextFont-size: 14px;
+--buttonTextFont-line-height: 17px;
+--buttonTextFont-family: montserrat,sans-serif;
+--buttonTextFont-text-decoration: none;
+--textButtonFont: normal normal normal 14px/17px montserrat,sans-serif;
+--textButtonFont-style: normal;
+--textButtonFont-variant: normal;
+--textButtonFont-weight: normal;
+--textButtonFont-size: 14px;
+--textButtonFont-line-height: 17px;
+--textButtonFont-family: montserrat,sans-serif;
+--textButtonFont-text-decoration: none;
+--cardTitleFont-style: normal;
+--cardTitleFont-variant: normal;
+--cardTitleFont-weight: normal;
+--cardTitleFont-size: 16px;
+--cardTitleFont-line-height: 1.4em;
+--cardTitleFont-family: montserrat,sans-serif;
+--cardTitleFont-text-decoration: none;
+--cardSubtitleFont-style: normal;
+--cardSubtitleFont-variant: normal;
+--cardSubtitleFont-weight: normal;
+--cardSubtitleFont-size: 14px;
+--cardSubtitleFont-line-height: 1.4em;
+--cardSubtitleFont-family: montserrat,sans-serif;
+--cardSubtitleFont-text-decoration: none;
+--textFieldFont-style: normal;
+--textFieldFont-variant: normal;
+--textFieldFont-weight: normal;
+--textFieldFont-size: 14px;
+--textFieldFont-line-height: 1.4em;
+--textFieldFont-family: montserrat,sans-serif;
+--textFieldFont-text-decoration: none;
+--postsTitleFont-style: normal;
+--postsTitleFont-variant: normal;
+--postsTitleFont-weight: normal;
+--postsTitleFont-size: 20px;
+--postsTitleFont-line-height: 1.4em;
+--postsTitleFont-family: montserrat,sans-serif;
+--postsTitleFont-text-decoration: none;
+--postingDateFont-style: normal;
+--postingDateFont-variant: normal;
+--postingDateFont-weight: normal;
+--postingDateFont-size: 14px;
+--postingDateFont-line-height: 1.4em;
+--postingDateFont-family: montserrat,sans-serif;
+--postingDateFont-text-decoration: none;
+--commentsReactionsCounterFont-style: normal;
+--commentsReactionsCounterFont-variant: normal;
+--commentsReactionsCounterFont-weight: normal;
+--commentsReactionsCounterFont-size: 14px;
+--commentsReactionsCounterFont-line-height: 1.4em;
+--commentsReactionsCounterFont-family: montserrat,sans-serif;
+--commentsReactionsCounterFont-text-decoration: none;
+--groupTitleFont-style: normal;
+--groupTitleFont-variant: normal;
+--groupTitleFont-weight: normal;
+--groupTitleFont-size: 20px;
+--groupTitleFont-line-height: 1.4em;
+--groupTitleFont-family: montserrat,sans-serif;
+--groupTitleFont-text-decoration: none;
+--groupSubtitleFont-style: normal;
+--groupSubtitleFont-variant: normal;
+--groupSubtitleFont-weight: normal;
+--groupSubtitleFont-size: 14px;
+--groupSubtitleFont-line-height: 1.4em;
+--groupSubtitleFont-family: montserrat,sans-serif;
+--groupSubtitleFont-text-decoration: none;
+--breadcrumbs-display: none;
+--follow-button-display: none;
+				--wix-color-1: 255,255,255;
+--wix-color-2: 182,182,184;
+--wix-color-3: 153,154,159;
+--wix-color-4: 102,103,111;
+--wix-color-5: 51,52,63;
+--wix-color-6: 182,183,196;
+--wix-color-7: 110,112,136;
+--wix-color-8: 51,52,63;
+--wix-color-9: 34,35,42;
+--wix-color-10: 17,17,21;
+--wix-color-11: 215,215,225;
+--wix-color-12: 174,175,194;
+--wix-color-13: 134,135,164;
+--wix-color-14: 97,99,129;
+--wix-color-15: 102,103,111;
+--wix-color-16: 251,251,251;
+--wix-color-17: 182,182,184;
+--wix-color-18: 185,185,185;
+--wix-color-19: 124,124,124;
+--wix-color-20: 62,62,62;
+--wix-color-21: 252,222,147;
+--wix-color-22: 248,189,38;
+--wix-color-23: 208,151,7;
+--wix-color-24: 139,101,4;
+--wix-color-25: 69,50,2;
+--wix-color-26: 255,255,255;
+--wix-color-27: 51,52,63;
+--wix-color-28: 182,182,184;
+--wix-color-29: 153,154,159;
+--wix-color-30: 102,103,111;
+--wix-color-31: 239,239,239;
+--wix-color-32: 40,38,38;
+--wix-color-33: 233,226,215;
+--wix-color-34: 203,200,194;
+--wix-color-35: 51,52,63;
+--wix-color-36: 51,52,63;
+--wix-color-37: 102,103,111;
+--wix-color-38: 51,52,63;
+--wix-color-39: 51,52,63;
+--wix-color-40: 255,255,255;
+--wix-color-41: 255,255,255;
+--wix-color-42: 51,52,63;
+--wix-color-43: 51,52,63;
+--wix-color-44: 153,154,159;
+--wix-color-45: 153,154,159;
+--wix-color-46: 255,255,255;
+--wix-color-47: 255,255,255;
+--wix-color-48: 51,52,63;
+--wix-color-49: 51,52,63;
+--wix-color-50: 51,52,63;
+--wix-color-51: 51,52,63;
+--wix-color-52: 255,255,255;
+--wix-color-53: 255,255,255;
+--wix-color-54: 153,154,159;
+--wix-color-55: 153,154,159;
+--wix-font-Title: normal normal normal 88px/1.2em montserrat,sans-serif;
+--wix-font-Title-style: normal;
+--wix-font-Title-variant: normal;
+--wix-font-Title-weight: normal;
+--wix-font-Title-size: 88px;
+--wix-font-Title-line-height: 1.2em;
+--wix-font-Title-family: montserrat,sans-serif;
+--wix-font-Title-text-decoration: none;
+--wix-font-Menu: normal normal normal 14px/1.79em avenir-lt-w01_35-light1475496,sans-serif;
+--wix-font-Menu-style: normal;
+--wix-font-Menu-variant: normal;
+--wix-font-Menu-weight: normal;
+--wix-font-Menu-size: 14px;
+--wix-font-Menu-line-height: 1.79em;
+--wix-font-Menu-family: avenir-lt-w01_35-light1475496,sans-serif;
+--wix-font-Menu-text-decoration: none;
+--wix-font-Page-title: normal normal normal 72px/1.25em montserrat,sans-serif;
+--wix-font-Page-title-style: normal;
+--wix-font-Page-title-variant: normal;
+--wix-font-Page-title-weight: normal;
+--wix-font-Page-title-size: 72px;
+--wix-font-Page-title-line-height: 1.25em;
+--wix-font-Page-title-family: montserrat,sans-serif;
+--wix-font-Page-title-text-decoration: none;
+--wix-font-Heading-XL: normal normal normal 50px/1.34em montserrat,sans-serif;
+--wix-font-Heading-XL-style: normal;
+--wix-font-Heading-XL-variant: normal;
+--wix-font-Heading-XL-weight: normal;
+--wix-font-Heading-XL-size: 50px;
+--wix-font-Heading-XL-line-height: 1.34em;
+--wix-font-Heading-XL-family: montserrat,sans-serif;
+--wix-font-Heading-XL-text-decoration: none;
+--wix-font-Heading-L: normal normal normal 40px/1.35em montserrat,sans-serif;
+--wix-font-Heading-L-style: normal;
+--wix-font-Heading-L-variant: normal;
+--wix-font-Heading-L-weight: normal;
+--wix-font-Heading-L-size: 40px;
+--wix-font-Heading-L-line-height: 1.35em;
+--wix-font-Heading-L-family: montserrat,sans-serif;
+--wix-font-Heading-L-text-decoration: none;
+--wix-font-Heading-M: normal normal normal 28px/1.38em montserrat,sans-serif;
+--wix-font-Heading-M-style: normal;
+--wix-font-Heading-M-variant: normal;
+--wix-font-Heading-M-weight: normal;
+--wix-font-Heading-M-size: 28px;
+--wix-font-Heading-M-line-height: 1.38em;
+--wix-font-Heading-M-family: montserrat,sans-serif;
+--wix-font-Heading-M-text-decoration: none;
+--wix-font-Heading-S: normal normal normal 22px/1.41em montserrat,sans-serif;
+--wix-font-Heading-S-style: normal;
+--wix-font-Heading-S-variant: normal;
+--wix-font-Heading-S-weight: normal;
+--wix-font-Heading-S-size: 22px;
+--wix-font-Heading-S-line-height: 1.41em;
+--wix-font-Heading-S-family: montserrat,sans-serif;
+--wix-font-Heading-S-text-decoration: none;
+--wix-font-Body-L: normal normal normal 20px/1.67em montserrat,sans-serif;
+--wix-font-Body-L-style: normal;
+--wix-font-Body-L-variant: normal;
+--wix-font-Body-L-weight: normal;
+--wix-font-Body-L-size: 20px;
+--wix-font-Body-L-line-height: 1.67em;
+--wix-font-Body-L-family: montserrat,sans-serif;
+--wix-font-Body-L-text-decoration: none;
+--wix-font-Body-M: normal normal normal 18px/1.75em montserrat,sans-serif;
+--wix-font-Body-M-style: normal;
+--wix-font-Body-M-variant: normal;
+--wix-font-Body-M-weight: normal;
+--wix-font-Body-M-size: 18px;
+--wix-font-Body-M-line-height: 1.75em;
+--wix-font-Body-M-family: montserrat,sans-serif;
+--wix-font-Body-M-text-decoration: none;
+--wix-font-Body-S: normal normal normal 15px/1.88em montserrat,sans-serif;
+--wix-font-Body-S-style: normal;
+--wix-font-Body-S-variant: normal;
+--wix-font-Body-S-weight: normal;
+--wix-font-Body-S-size: 15px;
+--wix-font-Body-S-line-height: 1.88em;
+--wix-font-Body-S-family: montserrat,sans-serif;
+--wix-font-Body-S-text-decoration: none;
+--wix-font-Body-XS: normal normal normal 14px/1.79em avenir-lt-w01_35-light1475496,sans-serif;
+--wix-font-Body-XS-style: normal;
+--wix-font-Body-XS-variant: normal;
+--wix-font-Body-XS-weight: normal;
+--wix-font-Body-XS-size: 14px;
+--wix-font-Body-XS-line-height: 1.79em;
+--wix-font-Body-XS-family: avenir-lt-w01_35-light1475496,sans-serif;
+--wix-font-Body-XS-text-decoration: none;
+--wix-font-LIGHT: normal normal normal 12px/1.4em HelveticaNeueW01-45Ligh;
+--wix-font-LIGHT-style: normal;
+--wix-font-LIGHT-variant: normal;
+--wix-font-LIGHT-weight: normal;
+--wix-font-LIGHT-size: 12px;
+--wix-font-LIGHT-line-height: 1.4em;
+--wix-font-LIGHT-family: HelveticaNeueW01-45Ligh;
+--wix-font-LIGHT-text-decoration: none;
+--wix-font-MEDIUM: normal normal normal 12px/1.4em HelveticaNeueW01-55Roma;
+--wix-font-MEDIUM-style: normal;
+--wix-font-MEDIUM-variant: normal;
+--wix-font-MEDIUM-weight: normal;
+--wix-font-MEDIUM-size: 12px;
+--wix-font-MEDIUM-line-height: 1.4em;
+--wix-font-MEDIUM-family: HelveticaNeueW01-55Roma;
+--wix-font-MEDIUM-text-decoration: none;
+--wix-font-STRONG: normal normal normal 12px/1.4em HelveticaNeueW01-65Medi;
+--wix-font-STRONG-style: normal;
+--wix-font-STRONG-variant: normal;
+--wix-font-STRONG-weight: normal;
+--wix-font-STRONG-size: 12px;
+--wix-font-STRONG-line-height: 1.4em;
+--wix-font-STRONG-family: HelveticaNeueW01-65Medi;
+--wix-font-STRONG-text-decoration: none;
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,64 @@
+/* END STYLABLE DIRECTIVE RULES */
+
+#comp-md8l26rq .style-mg9bsico__root{
+    -st-extends: StylableButton;
+    transition: all 0.2s ease, visibility 0s;
+    border-radius: 60px;
+    border: 0px solid rgb(29, 103, 205);
+    background: #CC0000
+}
+
+/* START STYLABLE DIRECTIVE RULES */
+
+#comp-md8l26rq .style-mg9bsico__root:hover{
+    background: #FFFFFF;
+    border: 2px solid rgb(208, 2, 27)
+}
+
+#comp-md8l26rq .style-mg9bsico__root:hover .StylableButton2545352419__label{
+    color: #D0021B
+}
+
+#comp-md8l26rq .style-mg9bsico__root:disabled{
+    background: #E2E2E2
+}
+
+#comp-md8l26rq .style-mg9bsico__root:disabled .StylableButton2545352419__label{
+    color: #8F8F8F
+}
+
+#comp-md8l26rq .style-mg9bsico__root:disabled .StylableButton2545352419__icon{
+    fill: #8F8F8F
+}
+
+#comp-md8l26rq .style-mg9bsico__root .StylableButton2545352419__container{
+    transition: inherit
+}
+
+#comp-md8l26rq .style-mg9bsico__root .StylableButton2545352419__label{
+    transition: inherit;
+    font-style: normal;
+    letter-spacing: 0.05em;
+    font-size: 16px;
+    font-family: raleway-semibold,raleway,sans-serif;
+    font-weight: 700;
+    color: #FFFFFF
+}
+
+#comp-md8l26rq .style-mg9bsico__root .StylableButton2545352419__icon{
+    transition: inherit;
+    width: 10px;
+    height: 10px;
+    fill: #FFFFFF;
+    display: none
+}
+
+#comp-md8l26rq .style-mg9bsico__root:hover .StylableButton2545352419__icon{
+    fill: #33343F
+}
+
+@media screen and (min-width: 1px) and (max-width: 0px) {
+    #comp-md8l26rq .style-mg9bsico__root .StylableButton2545352419__label {
+        font-size: 12px;
+    }
+}
