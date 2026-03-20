@@ -1,0 +1,73 @@
+<html lang="es">
+  <head>
+    <title>
+      {{#if (notnull metaTags.title)}}
+        {{metaTags.title}}
+      {{else}}
+        {{title}}
+      {{/if}}
+    </title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no"
+    />
+
+    {{#each metaTags.stylesheets}}
+      <link rel="stylesheet" href="{{this}}" />
+    {{/each}}
+
+    {{#each metaTags as |v k|}}
+      {{#if (isArray v)}}
+        {{#each v}}
+          {{#if (notnullObj this.name this.property)}}
+            <meta
+              name="{{this.name}}"
+              property="{{this.property}}"
+              content="{{this.content}}"
+            />
+          {{else}}
+            {{#if (isnull this.name)}}<meta
+                property="{{this.property}}"
+                content="{{this.content}}"
+              />{{/if}}
+            {{#if (isnull this.property)}}<meta
+                name="{{this.name}}"
+                content="{{this.content}}"
+              />{{/if}}
+          {{/if}}
+        {{/each}}
+      {{/if}}
+
+      {{#if (isObj v)}}
+        {{#each v}}
+          {{#if (isNotObj this)}}
+            {{#if (notnull this)}}<meta
+                name="{{@key}}"
+                content="{{this}}"
+              />{{/if}}
+          {{/if}}
+        {{/each}}
+      {{/if}}
+
+      {{#if (isNotArray v)}}
+        {{#if (isNotObj v)}}
+          {{#if (notnull v)}}<meta name="{{k}}" content="{{v}}" />{{/if}}
+        {{/if}}
+      {{/if}}
+    {{/each}}
+
+    {{#if metaTags.canonical}}
+      <link rel="canonical" href="{{metaTags.canonical}}" />
+    {{/if}}
+
+    <link rel="shortcut icon" href="#" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  </head>
+  <body>
+    <content>
+      {{{body}}}
+    </content>
+  </body>
+</html>
